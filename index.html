@@ -43,12 +43,10 @@
       width: 40%;
     }
 
-    /* On narrow screens, drop the least essential columns and give
-       the rest more breathing room */
     @media (max-width: 480px) {
-      th:nth-child(4), td:nth-child(4),  /* Won */
-      th:nth-child(5), td:nth-child(5),  /* Drawn */
-      th:nth-child(6), td:nth-child(6) { /* Lost */
+      th:nth-child(4), td:nth-child(4),
+      th:nth-child(5), td:nth-child(5),
+      th:nth-child(6), td:nth-child(6) {
         display: none;
       }
       th, td {
@@ -56,14 +54,76 @@
         font-size: 15px;
       }
     }
+
+    /* Carousel */
+    .carousel {
+      overflow: hidden;
+      position: relative;
+      touch-action: pan-y;
+    }
+    .carousel-track {
+      display: flex;
+      transition: transform 0.3s ease;
+    }
+    .carousel-track > div {
+      flex: 0 0 100%;
+      box-sizing: border-box;
+    }
+    .carousel-nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .carousel-nav button {
+      border: none;
+      background: #f0f0f0;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 16px;
+      line-height: 1;
+    }
+    .carousel-dots {
+      display: flex;
+      gap: 6px;
+      align-items: center;
+    }
+    .carousel-dots span {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #ccc;
+      cursor: pointer;
+      display: inline-block;
+    }
+    .carousel-dots span.active {
+      background: #1e3a8a;
+    }
+    .carousel-count {
+      font-size: 12px;
+      color: #888;
+      min-width: 32px;
+      text-align: center;
+    }
   </style>
 </head>
 <body>
   <h1>Sandbach United</h1>
 
- <div class="card">
-    <h2>Next 3 Fixtures</h2>
-    <div id="next-fixtures">Loading...</div>
+  <div class="card">
+    <h2>Next Fixtures</h2>
+    <div class="carousel" id="fixtures-carousel">
+      <div class="carousel-track" id="fixtures-track"></div>
+    </div>
+    <div class="carousel-nav">
+      <button onclick="fixturesCarousel.prev()">‹</button>
+      <div class="carousel-count" id="fixtures-count"></div>
+      <div class="carousel-dots" id="fixtures-dots"></div>
+      <button onclick="fixturesCarousel.next()">›</button>
+    </div>
     <a href="fixtures.html" style="display: inline-block; margin-top: 10px; font-size: 13px; color: #1e3a8a;">See full fixture list →</a>
   </div>
 
@@ -74,7 +134,15 @@
 
   <div class="card">
     <h2>Latest from @SandbachFC_1st</h2>
-    <div id="x-posts">Loading...</div>
+    <div class="carousel" id="xposts-carousel">
+      <div class="carousel-track" id="xposts-track"></div>
+    </div>
+    <div class="carousel-nav">
+      <button onclick="xPostsCarousel.prev()">‹</button>
+      <div class="carousel-count" id="xposts-count"></div>
+      <div class="carousel-dots" id="xposts-dots"></div>
+      <button onclick="xPostsCarousel.next()">›</button>
+    </div>
   </div>
 
   <div class="card">
@@ -95,6 +163,55 @@
   </div>
 
   <script>
+    // ---------- Reusable carousel ----------
+
+    function createCarousel(trackId, dotsId, countId) {
+      let index = 0;
+      let count = 0;
+      const track = document.getElementById(trackId);
+      const container = track.parentElement;
+
+      function update() {
+        const width = container.clientWidth;
+        track.style.transform = `translateX(${-index * width}px)`;
+
+        const dotsEl = document.getElementById(dotsId);
+        if (dotsEl) {
+          dotsEl.innerHTML = Array.from({ length: count }).map((_, i) =>
+            `<span class="${i === index ? 'active' : ''}" onclick="window['${trackId}_api'].goTo(${i})"></span>`
+          ).join('');
+        }
+        const countEl = document.getElementById(countId);
+        if (countEl) countEl.textContent = count > 0 ? `${index + 1} / ${count}` : '';
+      }
+
+      function goTo(i) {
+        index = Math.max(0, Math.min(count - 1, i));
+        update();
+      }
+
+      const api = {
+        next: () => goTo(index + 1),
+        prev: () => goTo(index - 1),
+        goTo,
+        setCount: (n) => { count = n; index = 0; update(); },
+      };
+
+      let touchStartX = 0;
+      container.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; });
+      container.addEventListener('touchend', e => {
+        const diff = touchStartX - e.changedTouches[0].clientX;
+        if (Math.abs(diff) > 40) { diff > 0 ? api.next() : api.prev(); }
+      });
+
+      window.addEventListener('resize', update);
+      window[`${trackId}_api`] = api;
+      return api;
+    }
+
+    const fixturesCarousel = createCarousel('fixtures-track', 'fixtures-dots', 'fixtures-count');
+    const xPostsCarousel = createCarousel('xposts-track', 'xposts-dots', 'xposts-count');
+
     // ---------- Fixtures & Last Result ----------
 
     function downloadICS(fixture) {
@@ -157,37 +274,37 @@
       return { won, drawn, lost };
     }
 
-    function renderNextFixtures() {
+    function renderFixturesCarousel() {
       const fixtures = window.latestFixtures || [];
       if (fixtures.length === 0) {
-        document.getElementById('next-fixtures').textContent = 'No upcoming fixtures found';
+        document.getElementById('fixtures-track').innerHTML = '<div style="padding: 10px 0;">No upcoming fixtures found</div>';
+        fixturesCarousel.setCount(0);
         return;
       }
 
-      document.getElementById('next-fixtures').innerHTML = fixtures.map((f, i) => {
+      document.getElementById('fixtures-track').innerHTML = fixtures.map((f, i) => {
         const record = getH2HRecord(f.opponentUrl);
         const recordHtml = record
           ? `W${record.won} D${record.drawn} L${record.lost}`
           : `No meetings on record`;
 
         return `
-          <div style="display: flex; justify-content: space-between; align-items: flex-start; padding: 10px 0; border-bottom: 1px solid #eee;">
-            <div>
-              <div class="fixture">${f.homeAway === 'H' ? 'Sandbach United' : f.opposition} vs ${f.homeAway === 'H' ? f.opposition : 'Sandbach United'}</div>
-              <div class="meta">${f.date} — ${f.kickoff} kick off</div>
-              <button onclick="downloadICS(window.latestFixtures[${i}])" style="font-size: 12px; padding: 4px 8px; border-radius: 4px; border: 1px solid #ccc; background: white; cursor: pointer; margin-top: 4px;">📅 Add to calendar</button>
-            </div>
-            <div style="font-size: 12px; color: #666; text-align: right; white-space: nowrap;">${recordHtml}</div>
+          <div style="padding: 4px 2px 0;">
+            <div class="fixture">${f.homeAway === 'H' ? 'Sandbach United' : f.opposition} vs ${f.homeAway === 'H' ? f.opposition : 'Sandbach United'}</div>
+            <div class="meta">${f.date} — ${f.kickoff} kick off</div>
+            <div style="font-size: 12px; color: #666; margin-top: 4px;">${recordHtml}</div>
+            <button onclick="downloadICS(window.latestFixtures[${i}])" style="font-size: 12px; padding: 4px 8px; border-radius: 4px; border: 1px solid #ccc; background: white; cursor: pointer; margin-top: 6px;">📅 Add to calendar</button>
           </div>
         `;
       }).join('');
+      fixturesCarousel.setCount(fixtures.length);
     }
 
     fetch('data.json')
       .then(res => res.json())
       .then(data => {
         window.latestFixtures = data.nextFixtures || (data.nextFixture ? [data.nextFixture] : []);
-        renderNextFixtures();
+        renderFixturesCarousel();
 
         const lr = data.lastResult;
         if (lr) {
@@ -201,7 +318,7 @@
         }
       })
       .catch(err => {
-        document.getElementById('next-fixtures').textContent = 'Failed to load data';
+        document.getElementById('fixtures-track').textContent = 'Failed to load data';
         console.error(err);
       });
 
@@ -209,40 +326,43 @@
       .then(res => res.json())
       .then(historyData => {
         window.h2hMeetings = historyData.meetings || {};
-        renderNextFixtures();
+        renderFixturesCarousel();
       })
       .catch(() => {
         window.h2hMeetings = {};
       });
 
+    // ---------- X posts ----------
+
     fetch('x-posts.json')
       .then(res => res.json())
       .then(data => {
-        const posts = data.posts || [];
+        const posts = (data.posts || []).slice(0, 5);
         if (posts.length === 0) {
-          document.getElementById('x-posts').textContent = 'No recent posts found';
+          document.getElementById('xposts-track').innerHTML = '<div>No recent posts found</div>';
+          xPostsCarousel.setCount(0);
           return;
         }
 
-        document.getElementById('x-posts').innerHTML = posts.slice(0, 5).map(p => {
+        document.getElementById('xposts-track').innerHTML = posts.map(p => {
           const date = new Date(p.createdAt);
           const formatted = date.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' }) + ' ' +
                              date.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' });
-          // Turn a bare link at the end of the text into a clickable link, and preserve line breaks
           const textHtml = p.text
             .replace(/(https?:\/\/\S+)/g, '<a href="$1" target="_blank" rel="noopener">$1</a>')
             .replace(/\n/g, '<br>');
 
           return `
-            <div style="padding: 10px 0; border-bottom: 1px solid #eee;">
+            <div style="padding: 4px 2px 0;">
               <div style="font-size: 14px;">${textHtml}</div>
               <div class="meta" style="font-size: 12px;">${formatted}</div>
             </div>
           `;
         }).join('');
+        xPostsCarousel.setCount(posts.length);
       })
       .catch(err => {
-        document.getElementById('x-posts').textContent = 'Failed to load posts';
+        document.getElementById('xposts-track').textContent = 'Failed to load posts';
         console.error(err);
       });
 
