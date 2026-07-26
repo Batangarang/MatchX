@@ -55,6 +55,9 @@
         <tr><td colspan="8">Loading...</td></tr>
       </tbody>
     </table>
+    <button id="toggle-table-btn" style="margin-top: 10px; padding: 6px 14px; border: 1px solid #ccc; border-radius: 6px; background: #f8f8f8; cursor: pointer; font-size: 13px;">
+      Show full table
+    </button>
   </div>
 
   <script>
@@ -85,25 +88,62 @@
         document.getElementById('next-fixture').textContent = 'Failed to load data';
         console.error(err);
       });
+let leagueStandings = [];
+    let showingFullTable = false;
+
+    function renderLeagueRows(standings) {
+      return standings.map(t => {
+        const highlight = t.team.includes('Sandbach') ? 'font-weight: bold; background: #eef2ff;' : '';
+        return `
+          <tr style="${highlight}">
+            <td>${t.position}</td>
+            <td>${t.team}</td>
+            <td>${t.played}</td>
+            <td>${t.won}</td>
+            <td>${t.drawn}</td>
+            <td>${t.lost}</td>
+            <td>${t.goalDifference}</td>
+            <td>${t.points}</td>
+          </tr>
+        `;
+      }).join('');
+    }
+
+    function updateLeagueTable() {
+      const btn = document.getElementById('toggle-table-btn');
+
+      if (showingFullTable) {
+        document.getElementById('league-body').innerHTML = renderLeagueRows(leagueStandings);
+        btn.textContent = 'Show less';
+        return;
+      }
+
+      const sandbachIndex = leagueStandings.findIndex(t => t.team.includes('Sandbach'));
+      if (sandbachIndex === -1) {
+        // Fallback: if we can't find Sandbach for some reason, just show the full table
+        document.getElementById('league-body').innerHTML = renderLeagueRows(leagueStandings);
+        btn.style.display = 'none';
+        return;
+      }
+
+      const start = Math.max(0, sandbachIndex - 2);
+      const end = Math.min(leagueStandings.length, sandbachIndex + 3); // +3 because slice end is exclusive
+      const trimmed = leagueStandings.slice(start, end);
+
+      document.getElementById('league-body').innerHTML = renderLeagueRows(trimmed);
+      btn.textContent = 'Show full table';
+    }
+
     fetch('league.json')
       .then(res => res.json())
       .then(data => {
-        const rows = data.standings.map(t => {
-          const highlight = t.team.includes('Sandbach') ? 'font-weight: bold; background: #eef2ff;' : '';
-          return `
-            <tr style="${highlight}">
-              <td>${t.position}</td>
-              <td>${t.team}</td>
-              <td>${t.played}</td>
-              <td>${t.won}</td>
-              <td>${t.drawn}</td>
-              <td>${t.lost}</td>
-              <td>${t.goalDifference}</td>
-              <td>${t.points}</td>
-            </tr>
-          `;
-        }).join('');
-        document.getElementById('league-body').innerHTML = rows;
+        leagueStandings = data.standings;
+        updateLeagueTable();
+
+        document.getElementById('toggle-table-btn').addEventListener('click', () => {
+          showingFullTable = !showingFullTable;
+          updateLeagueTable();
+        });
       })
       .catch(err => {
         document.getElementById('league-body').innerHTML = '<tr><td colspan="8">Failed to load table</td></tr>';
