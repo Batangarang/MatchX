@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sandbach United — All Results</title>
+  <style>
+    :root {
+      --navy: #0c2340;
+      --royal: #1c5fae;
+      --amber: #f2a71b;
+      --paper: #eef1f6;
+      --ink: #14202b;
+      --muted: #6b7785;
+      --line: #e3e7ee;
+    }
+    body {
+      font-family: system-ui, sans-serif;
+      max-width: 500px;
+      margin: 40px auto;
+      padding: 0 16px;
+      background: var(--paper);
+      color: var(--ink);
+    }
+    h1 { color: var(--navy); font-size: 22px; }
+    a.back { display: inline-block; margin-bottom: 16px; color: var(--royal); text-decoration: none; }
+    .card {
+      background: white;
+      border-radius: 10px;
+      padding: 16px;
+      margin-bottom: 16px;
+      box-shadow: 0 1px 3px rgba(12,35,64,0.08);
+    }
+    .row { padding: 10px 0; border-bottom: 1px solid var(--line); }
+    .fixture { font-weight: 700; color: var(--navy); }
+    .meta { color: var(--muted); font-size: 14px; margin-top: 2px; }
+    .score { color: var(--royal); font-weight: 700; }
+    .btn {
+      font-size: 12px; padding: 5px 10px; border-radius: 6px;
+      border: 1px solid var(--line); background: white; color: var(--navy);
+      cursor: pointer; font-weight: 600; margin-top: 6px;
+    }
+  </style>
+</head>
+<body>
+  <a class="back" href="index.html">← Back</a>
+  <h1>All Results — 2026/27</h1>
+
+  <div class="card" id="results-list">Loading...</div>
+
+  <script>
+    async function shareResult(result) {
+      const scoreline = `${result.homeAway === 'H' ? 'Sandbach United' : result.opposition} ${result.score} ${result.homeAway === 'H' ? result.opposition : 'Sandbach United'}`;
+      const scorers = result.scorers ? `\n⚽ ${result.scorers}` : '';
+      const text = `${scoreline}${scorers}\n${result.date}`;
+
+      if (navigator.share) {
+        await navigator.share({ text });
+      } else {
+        await navigator.clipboard.writeText(text);
+        alert('Copied to clipboard!');
+      }
+    }
+
+    fetch('data.json')
+      .then(res => res.json())
+      .then(data => {
+        const all = data.allFixtures || [];
+        const played = all.filter(f => f.score).reverse(); // most recent first
+
+        if (played.length === 0) {
+          document.getElementById('results-list').textContent = 'No results yet this season';
+          return;
+        }
+
+        document.getElementById('results-list').innerHTML = played.map((r, i) => `
+          <div class="row">
+            <div class="fixture">${r.homeAway === 'H' ? 'Sandbach United' : r.opposition} <span class="score">${r.score}</span> ${r.homeAway === 'H' ? r.opposition : 'Sandbach United'}</div>
+            <div class="meta">${r.date}${r.competitionNote ? ' — ' + r.competitionNote : ''}</div>
+            ${r.scorers ? `<div class="meta">⚽ ${r.scorers}</div>` : ''}
+            <button class="btn" onclick='shareResult(${JSON.stringify(r)})'>📤 Share</button>
+          </div>
+        `).join('');
+      })
+      .catch(err => {
+        document.getElementById('results-list').textContent = 'Failed to load results';
+        console.error(err);
+      });
+  </script>
+</body>
+</html>
