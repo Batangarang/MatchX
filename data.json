@@ -1,5 +1,5 @@
 {
-  "scrapedAt": "2026-07-26T12:51:45.699Z",
+  "scrapedAt": "2026-07-26T16:46:31.297Z",
   "nextFixture": {
     "date": "Sat 01/08/26",
     "opposition": "Wednesfield Community",
@@ -10,6 +10,38 @@
     "scorers": null,
     "competitionNote": null
   },
+  "nextFixtures": [
+    {
+      "date": "Sat 01/08/26",
+      "opposition": "Wednesfield Community",
+      "opponentUrl": "clubpage.php?id=191",
+      "homeAway": "H",
+      "kickoff": "15:00",
+      "score": null,
+      "scorers": null,
+      "competitionNote": null
+    },
+    {
+      "date": "Tue 04/08/26",
+      "opposition": "Foley Meir",
+      "opponentUrl": "clubpage.php?id=898",
+      "homeAway": "A",
+      "kickoff": "19:45",
+      "score": null,
+      "scorers": null,
+      "competitionNote": null
+    },
+    {
+      "date": "Sat 08/08/26",
+      "opposition": "Stafford Town",
+      "opponentUrl": "clubpage.php?id=182",
+      "homeAway": "H",
+      "kickoff": "15:00",
+      "score": null,
+      "scorers": null,
+      "competitionNote": null
+    }
+  ],
   "lastResult": null,
   "allFixtures": [
     {
