@@ -64,12 +64,13 @@ async function scrape() {
     currentNote = null;
   });
 
-  const played = fixtures.filter(f => f.score);
+const played = fixtures.filter(f => f.score);
   const upcoming = fixtures.filter(f => !f.score);
 
   return {
     scrapedAt: new Date().toISOString(),
     nextFixture: upcoming[0] || null,
+    nextFixtures: upcoming.slice(0, 3),
     lastResult: played[played.length - 1] || null,
     allFixtures: fixtures,
   };
