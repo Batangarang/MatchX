@@ -1,0 +1,416 @@
+{
+  "scrapedAt": "2026-07-26T10:55:05.343Z",
+  "nextFixture": {
+    "date": "Sat 01/08/26",
+    "opposition": "Wednesfield Community",
+    "opponentUrl": "clubpage.php?id=191",
+    "homeAway": "H",
+    "kickoff": "15:00",
+    "score": null,
+    "scorers": null,
+    "competitionNote": null
+  },
+  "lastResult": null,
+  "allFixtures": [
+    {
+      "date": "Sat 01/08/26",
+      "opposition": "Wednesfield Community",
+      "opponentUrl": "clubpage.php?id=191",
+      "homeAway": "H",
+      "kickoff": "15:00",
+      "score": null,
+      "scorers": null,
+      "competitionNote": null
+    },
+    {
+      "date": "Tue 04/08/26",
+      "opposition": "Foley Meir",
+      "opponentUrl": "clubpage.php?id=898",
+      "homeAway": "A",
+      "kickoff": "19:45",
+      "score": null,
+      "scorers": null,
+      "competitionNote": null
+    },
+    {
+      "date": "Sat 08/08/26",
+      "opposition": "Stafford Town",
+      "opponentUrl": "clubpage.php?id=182",
+      "homeAway": "H",
+      "kickoff": "15:00",
+      "score": null,
+      "scorers": null,
+      "competitionNote": null
+    },
+    {
+      "date": "Tue 11/08/26",
+      "opposition": "New Mills",
+      "opponentUrl": "clubpage.php?id=91",
+      "homeAway": "H",
+      "kickoff": "19:45",
+      "score": null,
+      "scorers": null,
+      "competitionNote": null
+    },
+    {
+      "date": "Sat 15/08/26",
+      "opposition": "Ashby Ivanhoe",
+      "opponentUrl": null,
+      "homeAway": "H",
+      "kickoff": "15:00",
+      "score": null,
+      "scorers": null,
+      "competitionNote": null
+    },
+    {
+      "date": "",
+      "opposition": "(The Isuzu FA Vase 1Q)",
+      "opponentUrl": null,
+      "homeAway": "",
+      "kickoff": "",
+      "score": null,
+      "scorers": null,
+      "competitionNote": null
+    },
+    {
+      "date": "Tue 18/08/26",
+      "opposition": "Market Drayton Town",
+      "opponentUrl": "clubpage.php?id=224",
+      "homeAway": "A",
+      "kickoff": "19:45",
+      "score": null,
+      "scorers": null,
+      "competitionNote": null
+    },
+    {
+      "date": "Sat 22/08/26",
+      "opposition": "Wolverhampton Casuals",
+      "opponentUrl": "clubpage.php?id=73",
+      "homeAway": "H",
+      "kickoff": "15:00",
+      "score": null,
+      "scorers": null,
+      "competitionNote": null
+    },
+    {
+      "date": "Sat 29/08/26",
+      "opposition": "Widnes Town",
+      "opponentUrl": "clubpage.php?id=868",
+      "homeAway": "H",
+      "kickoff": "15:00",
+      "score": null,
+      "scorers": null,
+      "competitionNote": null
+    },
+    {
+      "date": "Sat 05/09/26",
+      "opposition": "Brereton Social",
+      "opponentUrl": "clubpage.php?id=459",
+      "homeAway": "A",
+      "kickoff": "15:00",
+      "score": null,
+      "scorers": null,
+      "competitionNote": null
+    },
+    {
+      "date": "Sat 19/09/26",
+      "opposition": "Eccleshall",
+      "opponentUrl": "clubpage.php?id=30",
+      "homeAway": "H",
+      "kickoff": "15:00",
+      "score": null,
+      "scorers": null,
+      "competitionNote": null
+    },
+    {
+      "date": "Sat 03/10/26",
+      "opposition": "Alsager Town",
+      "opponentUrl": "clubpage.php?id=3",
+      "homeAway": "H",
+      "kickoff": "15:00",
+      "score": null,
+      "scorers": null,
+      "competitionNote": null
+    },
+    {
+      "date": "Sat 10/10/26",
+      "opposition": "AFC Bridgnorth",
+      "opponentUrl": "clubpage.php?id=936",
+      "homeAway": "A",
+      "kickoff": "15:00",
+      "score": null,
+      "scorers": null,
+      "competitionNote": null
+    },
+    {
+      "date": "Sat 17/10/26",
+      "opposition": "Bilston Town",
+      "opponentUrl": "clubpage.php?id=355",
+      "homeAway": "H",
+      "kickoff": "15:00",
+      "score": null,
+      "scorers": null,
+      "competitionNote": null
+    },
+    {
+      "date": "Sat 31/10/26",
+      "opposition": "Dawley Town",
+      "opponentUrl": "clubpage.php?id=635",
+      "homeAway": "A",
+      "kickoff": "15:00",
+      "score": null,
+      "scorers": null,
+      "competitionNote": null
+    },
+    {
+      "date": "Sat 07/11/26",
+      "opposition": "Telford Town",
+      "opponentUrl": "clubpage.php?id=881",
+      "homeAway": "A",
+      "kickoff": "15:00",
+      "score": null,
+      "scorers": null,
+      "competitionNote": null
+    },
+    {
+      "date": "Sat 14/11/26",
+      "opposition": "Brereton Social",
+      "opponentUrl": "clubpage.php?id=459",
+      "homeAway": "H",
+      "kickoff": "15:00",
+      "score": null,
+      "scorers": null,
+      "competitionNote": null
+    },
+    {
+      "date": "Sat 21/11/26",
+      "opposition": "Shawbury United",
+      "opponentUrl": "clubpage.php?id=792",
+      "homeAway": "H",
+      "kickoff": "15:00",
+      "score": null,
+      "scorers": null,
+      "competitionNote": null
+    },
+    {
+      "date": "Sat 28/11/26",
+      "opposition": "Stafford Town",
+      "opponentUrl": "clubpage.php?id=182",
+      "homeAway": "A",
+      "kickoff": "15:00",
+      "score": null,
+      "scorers": null,
+      "competitionNote": null
+    },
+    {
+      "date": "Sat 05/12/26",
+      "opposition": "Cheadle Heath Nomads",
+      "opponentUrl": "clubpage.php?id=713",
+      "homeAway": "A",
+      "kickoff": "15:00",
+      "score": null,
+      "scorers": null,
+      "competitionNote": null
+    },
+    {
+      "date": "Sat 12/12/26",
+      "opposition": "Barnton",
+      "opponentUrl": "clubpage.php?id=266",
+      "homeAway": "H",
+      "kickoff": "15:00",
+      "score": null,
+      "scorers": null,
+      "competitionNote": null
+    },
+    {
+      "date": "Sat 19/12/26",
+      "opposition": "Alsager Town",
+      "opponentUrl": "clubpage.php?id=3",
+      "homeAway": "A",
+      "kickoff": "15:00",
+      "score": null,
+      "scorers": null,
+      "competitionNote": null
+    },
+    {
+      "date": "Sat 26/12/26",
+      "opposition": "Crewe",
+      "opponentUrl": "clubpage.php?id=591",
+      "homeAway": "H",
+      "kickoff": "15:00",
+      "score": null,
+      "scorers": null,
+      "competitionNote": null
+    },
+    {
+      "date": "Sat 02/01/27",
+      "opposition": "Allscott Heath",
+      "opponentUrl": "clubpage.php?id=816",
+      "homeAway": "A",
+      "kickoff": "15:00",
+      "score": null,
+      "scorers": null,
+      "competitionNote": null
+    },
+    {
+      "date": "Sat 09/01/27",
+      "opposition": "Bilston Town",
+      "opponentUrl": "clubpage.php?id=355",
+      "homeAway": "A",
+      "kickoff": "15:00",
+      "score": null,
+      "scorers": null,
+      "competitionNote": null
+    },
+    {
+      "date": "Sat 16/01/27",
+      "opposition": "AFC Bridgnorth",
+      "opponentUrl": "clubpage.php?id=936",
+      "homeAway": "H",
+      "kickoff": "15:00",
+      "score": null,
+      "scorers": null,
+      "competitionNote": null
+    },
+    {
+      "date": "Sat 23/01/27",
+      "opposition": "Dawley Town",
+      "opponentUrl": "clubpage.php?id=635",
+      "homeAway": "H",
+      "kickoff": "15:00",
+      "score": null,
+      "scorers": null,
+      "competitionNote": null
+    },
+    {
+      "date": "Sat 30/01/27",
+      "opposition": "Barnton",
+      "opponentUrl": "clubpage.php?id=266",
+      "homeAway": "A",
+      "kickoff": "15:00",
+      "score": null,
+      "scorers": null,
+      "competitionNote": null
+    },
+    {
+      "date": "Sat 06/02/27",
+      "opposition": "Cheadle Heath Nomads",
+      "opponentUrl": "clubpage.php?id=713",
+      "homeAway": "H",
+      "kickoff": "15:00",
+      "score": null,
+      "scorers": null,
+      "competitionNote": null
+    },
+    {
+      "date": "Sat 13/02/27",
+      "opposition": "Foley Meir",
+      "opponentUrl": "clubpage.php?id=898",
+      "homeAway": "H",
+      "kickoff": "15:00",
+      "score": null,
+      "scorers": null,
+      "competitionNote": null
+    },
+    {
+      "date": "Sat 20/02/27",
+      "opposition": "Wednesfield Community",
+      "opponentUrl": "clubpage.php?id=191",
+      "homeAway": "A",
+      "kickoff": "15:00",
+      "score": null,
+      "scorers": null,
+      "competitionNote": null
+    },
+    {
+      "date": "Sat 27/02/27",
+      "opposition": "Shawbury United",
+      "opponentUrl": "clubpage.php?id=792",
+      "homeAway": "A",
+      "kickoff": "15:00",
+      "score": null,
+      "scorers": null,
+      "competitionNote": null
+    },
+    {
+      "date": "Sat 06/03/27",
+      "opposition": "Telford Town",
+      "opponentUrl": "clubpage.php?id=881",
+      "homeAway": "H",
+      "kickoff": "15:00",
+      "score": null,
+      "scorers": null,
+      "competitionNote": null
+    },
+    {
+      "date": "Sat 13/03/27",
+      "opposition": "Wolverhampton Casuals",
+      "opponentUrl": "clubpage.php?id=73",
+      "homeAway": "A",
+      "kickoff": "15:00",
+      "score": null,
+      "scorers": null,
+      "competitionNote": null
+    },
+    {
+      "date": "Sat 20/03/27",
+      "opposition": "Eccleshall",
+      "opponentUrl": "clubpage.php?id=30",
+      "homeAway": "A",
+      "kickoff": "15:00",
+      "score": null,
+      "scorers": null,
+      "competitionNote": null
+    },
+    {
+      "date": "Sat 27/03/27",
+      "opposition": "Allscott Heath",
+      "opponentUrl": "clubpage.php?id=816",
+      "homeAway": "H",
+      "kickoff": "15:00",
+      "score": null,
+      "scorers": null,
+      "competitionNote": null
+    },
+    {
+      "date": "Mon 29/03/27",
+      "opposition": "Crewe",
+      "opponentUrl": "clubpage.php?id=591",
+      "homeAway": "A",
+      "kickoff": "15:00",
+      "score": null,
+      "scorers": null,
+      "competitionNote": null
+    },
+    {
+      "date": "Sat 03/04/27",
+      "opposition": "Market Drayton Town",
+      "opponentUrl": "clubpage.php?id=224",
+      "homeAway": "H",
+      "kickoff": "15:00",
+      "score": null,
+      "scorers": null,
+      "competitionNote": null
+    },
+    {
+      "date": "Sat 10/04/27",
+      "opposition": "Widnes Town",
+      "opponentUrl": "clubpage.php?id=868",
+      "homeAway": "A",
+      "kickoff": "15:00",
+      "score": null,
+      "scorers": null,
+      "competitionNote": null
+    },
+    {
+      "date": "Sat 17/04/27",
+      "opposition": "New Mills",
+      "opponentUrl": "clubpage.php?id=91",
+      "homeAway": "A",
+      "kickoff": "15:00",
+      "score": null,
+      "scorers": null,
+      "competitionNote": null
+    }
+  ]
+}
