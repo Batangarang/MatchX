@@ -72,6 +72,7 @@ const played = fixtures.filter(f => f.score);
     nextFixture: upcoming[0] || null,
     nextFixtures: upcoming.slice(0, 3),
     lastResult: played[played.length - 1] || null,
+    lastResults: played.slice(-3).reverse(),
     allFixtures: fixtures,
   };
 }

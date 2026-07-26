@@ -128,7 +128,7 @@
   </div>
 
   <div class="card">
-    <h2>Last Result</h2>
+    <h2>Last Results</h2>
     <div id="last-result">Loading...</div>
   </div>
 
@@ -210,6 +210,7 @@
     }
 
     const fixturesCarousel = createCarousel('fixtures-track', 'fixtures-dots', 'fixtures-count');
+    const resultsCarousel = createCarousel('results-track', 'results-dots', 'results-count');
     const xPostsCarousel = createCarousel('xposts-track', 'xposts-dots', 'xposts-count');
 
     // ---------- Fixtures & Last Result ----------
@@ -306,15 +307,19 @@
         window.latestFixtures = data.nextFixtures || (data.nextFixture ? [data.nextFixture] : []);
         renderFixturesCarousel();
 
-        const lr = data.lastResult;
-        if (lr) {
-          document.getElementById('last-result').innerHTML = `
-            <div class="fixture">${lr.homeAway === 'H' ? 'Sandbach United' : lr.opposition} ${lr.score} ${lr.homeAway === 'H' ? lr.opposition : 'Sandbach United'}</div>
-            <div class="meta">${lr.date}</div>
-            <button onclick='shareResult(${JSON.stringify(lr)})' style="font-size: 12px; padding: 4px 8px; border-radius: 4px; border: 1px solid #ccc; background: white; cursor: pointer; margin-top: 6px;">📤 Share</button>
-          `;
+        const results = data.lastResults || (data.lastResult ? [data.lastResult] : []);
+        if (results.length > 0) {
+          document.getElementById('results-track').innerHTML = results.map(r => `
+            <div style="padding: 4px 2px 0;">
+              <div class="fixture">${r.homeAway === 'H' ? 'Sandbach United' : r.opposition} ${r.score} ${r.homeAway === 'H' ? r.opposition : 'Sandbach United'}</div>
+              <div class="meta">${r.date}</div>
+              <button onclick='shareResult(${JSON.stringify(r)})' style="font-size: 12px; padding: 4px 8px; border-radius: 4px; border: 1px solid #ccc; background: white; cursor: pointer; margin-top: 6px;">📤 Share</button>
+            </div>
+          `).join('');
+          resultsCarousel.setCount(results.length);
         } else {
-          document.getElementById('last-result').textContent = 'No results yet this season';
+          document.getElementById('results-track').innerHTML = '<div>No results yet this season</div>';
+          resultsCarousel.setCount(0);
         }
       })
       .catch(err => {
