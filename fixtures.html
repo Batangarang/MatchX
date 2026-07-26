@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sandbach United — All Fixtures</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      max-width: 500px;
+      margin: 40px auto;
+      padding: 0 16px;
+      background: #f4f4f4;
+    }
+    h1 { color: #1e3a8a; font-size: 22px; }
+    a.back { display: inline-block; margin-bottom: 16px; color: #1e3a8a; text-decoration: none; }
+    .card {
+      background: white;
+      border-radius: 8px;
+      padding: 16px;
+      margin-bottom: 16px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    .row {
+      padding: 10px 0;
+      border-bottom: 1px solid #eee;
+    }
+    .fixture { font-weight: bold; }
+    .meta { color: #555; font-size: 14px; margin-top: 2px; }
+    .score { color: #1e3a8a; font-weight: bold; }
+    button {
+      font-size: 14px;
+      padding: 8px 14px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      background: white;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <a class="back" href="index.html">← Back</a>
+  <h1>All Fixtures — 2026/27</h1>
+
+  <div class="card">
+    <button id="add-all-btn">📅 Add all upcoming fixtures to calendar</button>
+  </div>
+
+  <div class="card" id="fixture-list">Loading...</div>
+
+  <script>
+    function parseFixtureDate(fixture) {
+      const [, dd, mm, yy] = fixture.date.match(/(\d{2})\/(\d{2})\/(\d{2})/);
+      const [hh, min] = fixture.kickoff.split(':');
+      return new Date(2000 + parseInt(yy), parseInt(mm) - 1, parseInt(dd), parseInt(hh), parseInt(min));
+    }
+
+    function formatICSDate(d) {
+      return d.toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
+    }
+
+    function fixtureTitle(fixture) {
+      return fixture.homeAway === 'H'
+        ? `Sandbach United vs ${fixture.opposition}`
+        : `${fixture.opposition} vs Sandbach United`;
+    }
+
+    function downloadAllICS(fixtures) {
+      const events = fixtures.map(f => {
+        const start = parseFixtureDate(f);
+        const end = new Date(start.getTime() + 2 * 60 * 60 * 1000);
+        return [
+          'BEGIN:VEVENT',
+          `DTSTART:${formatICSDate(start)}`,
+          `DTEND:${formatICSDate(end)}`,
+          `SUMMARY:${fixtureTitle(f)}`,
+          `DESCRIPTION:${f.competitionNote || 'North West Counties League'}`,
+          'END:VEVENT',
+        ].join('\r\n');
+      }).join('\r\n');
+
+      const ics = ['BEGIN:VCALENDAR', 'VERSION:2.0', events, 'END:VCALENDAR'].join('\r\n');
+
+      const blob = new Blob([ics], { type: 'text/calendar' });
+      const link = document.createElement('a');
+      link.href = URL.createObjectURL(blob);
+      link.download = 'Sandbach United Fixtures.ics';
+      link.click();
+    }
+
+    fetch('data.json')
+      .then(res => res.json())
+      .then(data => {
+        const all = data.allFixtures || [];
+        const upcoming = all.filter(f => !f.score);
+
+        document.getElementById('add-all-btn').addEventListener('click', () => {
+          if (upcoming.length === 0) {
+            alert('No upcoming fixtures to add.');
+            return;
+          }
+          downloadAllICS(upcoming);
+        });
+
+        document.getElementById('fixture-list').innerHTML = all.map(f => {
+          const title = fixtureTitle(f);
+          const detail = f.score
+            ? `<span class="score">${f.score}</span>${f.scorers ? ' — ' + f.scorers : ''}`
+            : `${f.kickoff} kick off`;
+          return `
+            <div class="row">
+              <div class="fixture">${title}</div>
+              <div class="meta">${f.date}${f.competitionNote ? ' — ' + f.competitionNote : ''}</div>
+              <div class="meta">${detail}</div>
+            </div>
+          `;
+        }).join('');
+      })
+      .catch(err => {
+        document.getElementById('fixture-list').textContent = 'Failed to load fixtures';
+        console.error(err);
+      });
+  </script>
+</body>
+</html>
