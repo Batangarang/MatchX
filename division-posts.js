@@ -2,18 +2,8 @@ const fs = require('fs');
 const CLUBS = require('./division-clubs.js');
 
 const BEARER_TOKEN = process.env.X_BEARER_TOKEN;
+const { getUserIdCached } = require('./user-id-cache.js');
 const SEVEN_DAYS_AGO = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString();
-
-async function getUserId(username) {
-  const res = await fetch(`https://api.x.com/2/users/by/username/${username}`, {
-    headers: { Authorization: `Bearer ${BEARER_TOKEN}` },
-  });
-  const data = await res.json();
-  if (!data.data) {
-    throw new Error(`user lookup failed: ${JSON.stringify(data)}`);
-  }
-  return data.data.id;
-}
 
 async function getRecentPosts(userId) {
   const params = new URLSearchParams({
@@ -39,7 +29,7 @@ async function run() {
 
   for (const club of CLUBS) {
     try {
-      const userId = await getUserId(club.handle);
+      const userId = await getUserIdCached(club.handle, BEARER_TOKEN);
       const posts = await getRecentPosts(userId);
       results.push({
         name: club.name,

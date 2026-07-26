@@ -1,6 +1,7 @@
 const fs = require('fs');
 
 const USERNAME = 'SandbachFC_1st';
+const { getUserIdCached } = require('./user-id-cache.js');
 const BEARER_TOKEN = process.env.X_BEARER_TOKEN;
 
 function isMatchdayNow() {
@@ -42,17 +43,6 @@ function shouldPollNow() {
 
   // "Night" band: roughly midnight-6am UK
   return minute === 0 && hour % 3 === 0; // every 3 hours
-}
-
-async function getUserId(username) {
-  const res = await fetch(`https://api.x.com/2/users/by/username/${username}`, {
-    headers: { Authorization: `Bearer ${BEARER_TOKEN}` },
-  });
-  const data = await res.json();
-  if (!data.data) {
-    throw new Error(`Could not find user: ${JSON.stringify(data)}`);
-  }
-  return data.data.id;
 }
 
 async function getRecentPosts(userId) {
@@ -97,7 +87,7 @@ async function run() {
     return;
   }
 
-  const userId = await getUserId(USERNAME);
+  const userId = await getUserIdCached(USERNAME, BEARER_TOKEN);
   const posts = await getRecentPosts(userId);
 
   const output = {
