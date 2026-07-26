@@ -60,13 +60,31 @@ async function getRecentPosts(userId) {
     max_results: '10',
     exclude: 'retweets,replies',
     'tweet.fields': 'created_at,text',
+    expansions: 'attachments.media_keys',
+    'media.fields': 'url,preview_image_url,type',
   });
 
   const res = await fetch(`https://api.x.com/2/users/${userId}/tweets?${params}`, {
     headers: { Authorization: `Bearer ${BEARER_TOKEN}` },
   });
   const data = await res.json();
-  return data.data || [];
+
+  // Media comes back separately in `includes.media`, keyed by media_key —
+  // build a lookup so we can attach the right image to each post
+  const mediaLookup = {};
+  (data.includes?.media || []).forEach(m => {
+    mediaLookup[m.media_key] = m;
+  });
+
+  return (data.data || []).map(post => {
+    const mediaKeys = post.attachments?.media_keys || [];
+    const images = mediaKeys
+      .map(key => mediaLookup[key])
+      .filter(m => m && (m.type === 'photo'))
+      .map(m => m.url);
+
+    return { ...post, images };
+  });
 }
 
 async function run() {
@@ -85,10 +103,11 @@ async function run() {
   const output = {
     scrapedAt: new Date().toISOString(),
     username: USERNAME,
-    posts: posts.map(p => ({
+     posts: posts.map(p => ({
       id: p.id,
       text: p.text,
       createdAt: p.created_at,
+      images: p.images || [],
     })),
   };
 

@@ -357,7 +357,7 @@
           return;
         }
 
-        document.getElementById('xposts-track').innerHTML = posts.map(p => {
+           document.getElementById('xposts-track').innerHTML = posts.map(p => {
           const date = new Date(p.createdAt);
           const formatted = date.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' }) + ' ' +
                              date.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' });
@@ -365,9 +365,14 @@
             .replace(/(https?:\/\/\S+)/g, '<a href="$1" target="_blank" rel="noopener">$1</a>')
             .replace(/\n/g, '<br>');
 
+          const imageHtml = (p.images && p.images.length > 0)
+            ? `<img src="${p.images[0]}" style="width: 100%; border-radius: 6px; margin-top: 8px;" alt="Post image">`
+            : '';
+
           return `
             <div style="padding: 4px 2px 0;">
               <div style="font-size: 14px;">${textHtml}</div>
+              ${imageHtml}
               <div class="meta" style="font-size: 12px;">${formatted}</div>
             </div>
           `;
