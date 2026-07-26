@@ -28,6 +28,34 @@
     }
     .fixture { font-size: 18px; font-weight: bold; }
     .meta { color: #555; margin-top: 4px; }
+
+    table {
+      table-layout: fixed;
+      width: 100%;
+    }
+    th, td {
+      padding: 8px 4px;
+      text-align: center;
+      border-bottom: 1px solid #eee;
+    }
+    th:nth-child(2), td:nth-child(2) {
+      text-align: left;
+      width: 40%;
+    }
+
+    /* On narrow screens, drop the least essential columns and give
+       the rest more breathing room */
+    @media (max-width: 480px) {
+      th:nth-child(3), td:nth-child(3),  /* Played */
+      th:nth-child(4), td:nth-child(4),  /* Won */
+      th:nth-child(5), td:nth-child(5) { /* Drawn */
+        display: none;
+      }
+      th, td {
+        padding: 10px 6px;
+        font-size: 15px;
+      }
+    }
   </style>
 </head>
 <body>
