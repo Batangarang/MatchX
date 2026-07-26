@@ -63,3 +63,14 @@ Write a short, friendly 2-3 sentence summary for fans, covering things like rece
   const output = {
     generatedAt: new Date().toISOString(),
     postsConsidered: posts.length,
+    summary,
+  };
+
+  fs.writeFileSync('x-insights.json', JSON.stringify(output, null, 2));
+  console.log('Saved insight:', summary);
+}
+
+run().catch(err => {
+  console.error('Failed:', err.message);
+  process.exit(1);
+});
