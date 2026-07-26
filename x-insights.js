@@ -22,14 +22,20 @@ async function run() {
 
   const postsData = JSON.parse(fs.readFileSync('x-posts.json', 'utf-8'));
   const allPosts = postsData.posts || [];
-  const posts = allPosts.filter(p => isSameUKDay(p.createdAt));
 
-  if (posts.length === 0) {
-    console.log('No posts from today — skipping insight generation, keeping previous summary.');
+  if (allPosts.length === 0) {
+    console.log('No posts at all — skipping insight generation.');
     return;
   }
 
+  const todaysPosts = allPosts.filter(p => isSameUKDay(p.createdAt));
+  const isToday = todaysPosts.length > 0;
+  const posts = isToday ? todaysPosts : allPosts.slice(0, 5);
+
   const postsText = posts.map(p => `[${p.createdAt}] ${p.text}`).join('\n\n');
+  const contextNote = isToday
+    ? "all posted today"
+    : `the most recent available (from ${posts[posts.length - 1].createdAt.slice(0, 10)} to ${posts[0].createdAt.slice(0, 10)}) — there's nothing newer yet`;
 
   const res = await fetch('https://api.anthropic.com/v1/messages', {
     method: 'POST',
@@ -43,7 +49,7 @@ async function run() {
       max_tokens: 300,
       messages: [{
         role: 'user',
-        content: `Here are recent posts from Sandbach United's official 1st team X account, all posted today:
+        content: `Here are recent posts from Sandbach United's official 1st team X account, ${contextNote}:
 
 ${postsText}
 
@@ -62,6 +68,7 @@ Write a short, friendly 2-3 sentence summary for fans, covering things like rece
 
   const output = {
     generatedAt: new Date().toISOString(),
+    isFromToday: isToday,
     postsConsidered: posts.length,
     summary,
   };
