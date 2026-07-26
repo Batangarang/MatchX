@@ -28,21 +28,25 @@ function isMatchdayNow() {
 }
 
 function shouldPollNow() {
+  // Manual runs (clicking "Run workflow") should always actually run,
+  // regardless of the time-of-day gating — useful for testing.
+  if (process.env.GITHUB_EVENT_NAME === 'workflow_dispatch') {
+    return true;
+  }
+
   const now = new Date();
   const hour = now.getUTCHours();
   const minute = now.getUTCMinutes();
 
   if (isMatchdayNow()) {
-    return true; // effectively every 5 minutes, since that's how often this workflow runs
+    return true;
   }
 
-  // "Day" band: roughly 6am-midnight UK, padded in UTC for DST
   if (hour >= 5 && hour <= 23) {
-    return minute % 30 === 0; // every 30 minutes
+    return minute % 30 === 0;
   }
 
-  // "Night" band: roughly midnight-6am UK
-  return minute === 0 && hour % 3 === 0; // every 3 hours
+  return minute === 0 && hour % 3 === 0;
 }
 
 async function getRecentPosts(userId) {
