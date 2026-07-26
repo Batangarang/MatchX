@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sandbach United — Division Round-Up</title>
+  <style>
+    :root {
+      --navy: #0c2340;
+      --royal: #1c5fae;
+      --amber: #f2a71b;
+      --paper: #eef1f6;
+      --ink: #14202b;
+      --muted: #6b7785;
+      --line: #e3e7ee;
+    }
+    body {
+      font-family: system-ui, sans-serif;
+      max-width: 500px;
+      margin: 40px auto;
+      padding: 0 16px;
+      background: var(--paper);
+      color: var(--ink);
+    }
+    h1 { color: var(--navy); font-size: 22px; }
+    a.back { display: inline-block; margin-bottom: 16px; color: var(--royal); text-decoration: none; }
+    .card {
+      background: white;
+      border-radius: 10px;
+      padding: 16px;
+      margin-bottom: 16px;
+      box-shadow: 0 1px 3px rgba(12,35,64,0.08);
+      line-height: 1.6;
+    }
+    .meta { color: var(--muted); font-size: 13px; margin-top: 14px; }
+  </style>
+</head>
+<body>
+  <a class="back" href="index.html">← Back</a>
+  <h1>First Division South — Weekly Round-Up</h1>
+
+  <div class="card" id="division-content">Loading...</div>
+
+  <script>
+    fetch('division-insights.json')
+      .then(res => res.json())
+      .then(data => {
+        const date = new Date(data.generatedAt);
+        const formatted = date.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+        document.getElementById('division-content').innerHTML = `
+          <div>${(data.summary || 'No round-up available yet.').replace(/\n/g, '<br><br>')}</div>
+          <div class="meta">Generated ${formatted}${data.clubsCovered ? ' — ' + data.clubsCovered + ' clubs had activity this week' : ''}</div>
+        `;
+      })
+      .catch(err => {
+        document.getElementById('division-content').textContent = 'Failed to load round-up';
+        console.error(err);
+      });
+  </script>
+</body>
+</html>

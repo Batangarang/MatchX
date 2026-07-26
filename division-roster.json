@@ -1,0 +1,102 @@
+{
+  "generatedAt": "2026-07-26T20:34:20.685Z",
+  "division": "First Division South",
+  "clubCount": 19,
+  "roster": [
+    {
+      "clubId": "936",
+      "name": "AFC Bridgnorth",
+      "clubUrl": "https://www.nwcfl.com/clubpage.php?id=936"
+    },
+    {
+      "clubId": "816",
+      "name": "Allscott Heath",
+      "clubUrl": "https://www.nwcfl.com/clubpage.php?id=816"
+    },
+    {
+      "clubId": "3",
+      "name": "Alsager Town",
+      "clubUrl": "https://www.nwcfl.com/clubpage.php?id=3"
+    },
+    {
+      "clubId": "266",
+      "name": "Barnton",
+      "clubUrl": "https://www.nwcfl.com/clubpage.php?id=266"
+    },
+    {
+      "clubId": "355",
+      "name": "Bilston Town",
+      "clubUrl": "https://www.nwcfl.com/clubpage.php?id=355"
+    },
+    {
+      "clubId": "459",
+      "name": "Brereton Social",
+      "clubUrl": "https://www.nwcfl.com/clubpage.php?id=459"
+    },
+    {
+      "clubId": "713",
+      "name": "Cheadle Heath Nomads",
+      "clubUrl": "https://www.nwcfl.com/clubpage.php?id=713"
+    },
+    {
+      "clubId": "591",
+      "name": "Crewe",
+      "clubUrl": "https://www.nwcfl.com/clubpage.php?id=591"
+    },
+    {
+      "clubId": "635",
+      "name": "Dawley Town",
+      "clubUrl": "https://www.nwcfl.com/clubpage.php?id=635"
+    },
+    {
+      "clubId": "30",
+      "name": "Eccleshall",
+      "clubUrl": "https://www.nwcfl.com/clubpage.php?id=30"
+    },
+    {
+      "clubId": "898",
+      "name": "Foley Meir",
+      "clubUrl": "https://www.nwcfl.com/clubpage.php?id=898"
+    },
+    {
+      "clubId": "224",
+      "name": "Market Drayton Town",
+      "clubUrl": "https://www.nwcfl.com/clubpage.php?id=224"
+    },
+    {
+      "clubId": "91",
+      "name": "New Mills",
+      "clubUrl": "https://www.nwcfl.com/clubpage.php?id=91"
+    },
+    {
+      "clubId": "792",
+      "name": "Shawbury United",
+      "clubUrl": "https://www.nwcfl.com/clubpage.php?id=792"
+    },
+    {
+      "clubId": "182",
+      "name": "Stafford Town",
+      "clubUrl": "https://www.nwcfl.com/clubpage.php?id=182"
+    },
+    {
+      "clubId": "881",
+      "name": "Telford Town",
+      "clubUrl": "https://www.nwcfl.com/clubpage.php?id=881"
+    },
+    {
+      "clubId": "191",
+      "name": "Wednesfield Community",
+      "clubUrl": "https://www.nwcfl.com/clubpage.php?id=191"
+    },
+    {
+      "clubId": "868",
+      "name": "Widnes Town",
+      "clubUrl": "https://www.nwcfl.com/clubpage.php?id=868"
+    },
+    {
+      "clubId": "73",
+      "name": "Wolverhampton Casuals",
+      "clubUrl": "https://www.nwcfl.com/clubpage.php?id=73"
+    }
+  ]
+}
