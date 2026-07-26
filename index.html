@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sandbach United</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      max-width: 500px;
+      margin: 40px auto;
+      padding: 0 16px;
+      background: #f4f4f4;
+    }
+    h1 { color: #1e3a8a; }
+    .card {
+      background: white;
+      border-radius: 8px;
+      padding: 16px;
+      margin-bottom: 16px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    .card h2 {
+      margin: 0 0 8px 0;
+      font-size: 14px;
+      text-transform: uppercase;
+      color: #888;
+    }
+    .fixture { font-size: 18px; font-weight: bold; }
+    .meta { color: #555; margin-top: 4px; }
+  </style>
+</head>
+<body>
+  <h1>Sandbach United</h1>
+
+  <div class="card">
+    <h2>Next Fixture</h2>
+    <div id="next-fixture">Loading...</div>
+  </div>
+
+  <div class="card">
+    <h2>Last Result</h2>
+    <div id="last-result">Loading...</div>
+  </div>
+
+  <script>
+    fetch('data.json')
+      .then(res => res.json())
+      .then(data => {
+        const nf = data.nextFixture;
+        if (nf) {
+          document.getElementById('next-fixture').innerHTML = `
+            <div class="fixture">${nf.homeAway === 'H' ? 'Sandbach United' : nf.opposition} vs ${nf.homeAway === 'H' ? nf.opposition : 'Sandbach United'}</div>
+            <div class="meta">${nf.date} — ${nf.kickoff} kick off</div>
+          `;
+        } else {
+          document.getElementById('next-fixture').textContent = 'No upcoming fixture found';
+        }
+
+        const lr = data.lastResult;
+        if (lr) {
+          document.getElementById('last-result').innerHTML = `
+            <div class="fixture">${lr.homeAway === 'H' ? 'Sandbach United' : lr.opposition} ${lr.score} ${lr.homeAway === 'H' ? lr.opposition : 'Sandbach United'}</div>
+            <div class="meta">${lr.date}</div>
+          `;
+        } else {
+          document.getElementById('last-result').textContent = 'No results yet this season';
+        }
+      })
+      .catch(err => {
+        document.getElementById('next-fixture').textContent = 'Failed to load data';
+        console.error(err);
+      });
+  </script>
+</body>
+</html>
