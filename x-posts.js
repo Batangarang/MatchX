@@ -57,7 +57,7 @@ async function getUserId(username) {
 
 async function getRecentPosts(userId) {
   const params = new URLSearchParams({
-    max_results: '10',
+    max_results: '100',
     exclude: 'retweets,replies',
     'tweet.fields': 'created_at,text',
     expansions: 'attachments.media_keys',

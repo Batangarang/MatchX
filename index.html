@@ -141,6 +141,10 @@
   </div>
 
   <div class="card">
+    <h2>Fan Briefing</h2>
+    <div id="x-insight">Loading...</div>
+  </div>
+  <div class="card">
     <h2>Latest from @SandbachFC_1st</h2>
     <div class="carousel" id="xposts-carousel">
       <div class="carousel-track" id="xposts-track"></div>
@@ -343,6 +347,17 @@
       })
       .catch(() => {
         window.h2hMeetings = {};
+      });
+
+    // --------- AI Summary ---------
+
+    fetch('x-insights.json')
+      .then(res => res.json())
+      .then(data => {
+        document.getElementById('x-insight').textContent = data.summary || 'No insight available yet.';
+      })
+      .catch(() => {
+        document.getElementById('x-insight').textContent = 'No insight available yet.';
       });
 
     // ---------- X posts ----------
