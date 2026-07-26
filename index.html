@@ -73,6 +73,11 @@
   </div>
 
   <div class="card">
+    <h2>Latest from @SandbachFC_1st</h2>
+    <div id="x-posts">Loading...</div>
+  </div>
+
+  <div class="card">
     <h2>League Table — First Division South</h2>
     <table id="league-table" style="width: 100%; border-collapse: collapse; font-size: 14px;">
       <thead>
@@ -208,6 +213,37 @@
       })
       .catch(() => {
         window.h2hMeetings = {};
+      });
+
+    fetch('x-posts.json')
+      .then(res => res.json())
+      .then(data => {
+        const posts = data.posts || [];
+        if (posts.length === 0) {
+          document.getElementById('x-posts').textContent = 'No recent posts found';
+          return;
+        }
+
+        document.getElementById('x-posts').innerHTML = posts.slice(0, 5).map(p => {
+          const date = new Date(p.createdAt);
+          const formatted = date.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' }) + ' ' +
+                             date.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' });
+          // Turn a bare link at the end of the text into a clickable link, and preserve line breaks
+          const textHtml = p.text
+            .replace(/(https?:\/\/\S+)/g, '<a href="$1" target="_blank" rel="noopener">$1</a>')
+            .replace(/\n/g, '<br>');
+
+          return `
+            <div style="padding: 10px 0; border-bottom: 1px solid #eee;">
+              <div style="font-size: 14px;">${textHtml}</div>
+              <div class="meta" style="font-size: 12px;">${formatted}</div>
+            </div>
+          `;
+        }).join('');
+      })
+      .catch(err => {
+        document.getElementById('x-posts').textContent = 'Failed to load posts';
+        console.error(err);
       });
 
     // ---------- League Table ----------
