@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-07-26T21:20:15.194Z",
-  "sinceDate": "2026-07-19T21:20:08.762Z",
+  "generatedAt": "2026-07-26T21:30:38.910Z",
+  "sinceDate": "2026-07-19T21:30:35.158Z",
   "clubs": [
     {
       "name": "Sandbach United",
@@ -976,9 +976,101 @@
     },
     {
       "name": "Foley Meir",
-      "handle": "@foley_fc",
-      "posts": [],
-      "error": "user lookup failed: {\"detail\":\"One or more parameters to your request was invalid.\",\"errors\":[{\"message\":\"The `username` query parameter value [@foley_fc] does not match ^[A-Za-z0-9_]{1,15}$\",\"parameters\":{\"username\":[\"@foley_fc\"]}}],\"title\":\"Invalid Request\",\"type\":\"https://api.x.com/2/problems/invalid-request\"}"
+      "handle": "foley_fc",
+      "posts": [
+        {
+          "text": "✍️ ANOTHER ONE SIGNS FOR FOLEY ✍️\n\nFoley are delighted to announce the signing of Jake Walklett ahead of the 2026/27 season! 🔴⚫\n\nJake joins Foley from Rocester, having attracted interest from several other clubs during the summer.\n\nDespite interest elsewhere, Jake has chosen https://t.co/QoxLubtq2m",
+          "createdAt": "2026-07-26T20:00:19.000Z"
+        },
+        {
+          "text": "✍️ANOTHER ONE! ✍️\n\nFoley are delighted to announce that Marc Grocott will continue with the club for the 2026/27 season — taking on the role of Player-Coach. 🔴⚫\n\nMarc’s experience, leadership and knowledge of the game make him a huge asset to the Foley squad, and we’re https://t.co/RFqLyd7uVp",
+          "createdAt": "2026-07-26T18:58:33.000Z"
+        },
+        {
+          "text": "✍️ BACK FOR MORE ✍️\n\nFoley are delighted to announce that Fin Foote will remain with the club for the 2026/27 season! 🔴⚫\n\nFin joined Foley last season on a dual-registration deal from Macclesfield FC and quickly showed exactly what he could do.\n\nIt didn’t take long for Fin to https://t.co/weTUfKUtVg",
+          "createdAt": "2026-07-26T17:58:48.000Z"
+        },
+        {
+          "text": "✍️ PLAYER RETAINED ✍️\n\nFoley are delighted to announce that Danny Ward will remain with the club for the 2026/27 season! 🔴⚫\n\nWardy picked up an injury towards the end of last season, but we’re delighted to have him staying with the squad as he continues his recovery. \n\nWe’re https://t.co/PvVc04g0Sn",
+          "createdAt": "2026-07-26T16:48:55.000Z"
+        },
+        {
+          "text": "✍️ PLAYER RETAINED ✍️\n\nFoley are delighted to announce that Jake Lloyd will remain with the club for the 2026/27 season! 🔴⚫\n\nJake missed last season through injury, but we’re delighted to see him back with the squad and ready to go again. \n\nAfter a frustrating spell on the https://t.co/j9cfIxGPv9",
+          "createdAt": "2026-07-26T15:54:54.000Z"
+        },
+        {
+          "text": "The 2026/27 fixture list is here. 🔴⚫\n\nWhich game are you looking forward to? 🤔\n\n#UpTheFoley https://t.co/HpgwbUgwPc",
+          "createdAt": "2026-07-26T11:47:30.000Z"
+        },
+        {
+          "text": "Full time at The Trentham Foods Stadium.\n\nThe last preseason fixture before the league begins, plenty of chances during the game but we couldn’t put them away.\n\nThank you to Redgate for the fixture today and we wish you all the best for the season. https://t.co/Hxrk3lxIql",
+          "createdAt": "2026-07-25T15:02:06.000Z"
+        },
+        {
+          "text": "𝗠𝗔𝗧𝗖𝗛𝗗𝗔𝗬 🔴⚫️\n\nOur final pre-season fixture is here!\n\nWe welcome Redgate Clayton to the Trentham Foods Stadium this Saturday for our last test before the 2026/27 campaign gets underway.\n\nCome and get behind the lads as we prepare for the new season!\n\n🆚 @Redgate_C_FC \n🏆 https://t.co/eygfemO4kX",
+          "createdAt": "2026-07-25T08:04:12.000Z"
+        },
+        {
+          "text": "That’s it for tonight I’m turning my phone off and going bed, nothing but ping ping ping.\n\nMake sure you join us tomorrow at The Trentham Foods Stadium as we face Redgate Clayton in our final preseason fixture kick off at 2pm.\n\n#UpTheFoley ❤️🖤",
+          "createdAt": "2026-07-24T20:09:19.000Z"
+        },
+        {
+          "text": "✍️ ONE MORE FOR TONIGHT ✍️\n\nFoley are delighted to announce the signing of Eden Bullock ahead of the 2026/27 season! 🔴⚫\n\nEden was originally set to join Foley last season, but unfortunately missed the entire campaign through injury. \n\nAfter waiting patiently for his https://t.co/UjwzeqDJHO",
+          "createdAt": "2026-07-24T19:59:33.000Z"
+        },
+        {
+          "text": "✍️ WE HAVE ANOTHER ONE! ✍️\n\nFoley are delighted to announce the signing of Connor Lawton ahead of the 2026/27 season! 🔴⚫\n\nConnor joins Foley having previously represented Redgate Clayton and Market Drayton Town, bringing valuable experience and quality to the squad. ⚽\n\nHe now https://t.co/wrPusNnPok",
+          "createdAt": "2026-07-24T19:03:52.000Z"
+        },
+        {
+          "text": "✍️ NEW SIGNING ✍️\n\nFoley are delighted to announce the signing of Tyler Mistry ahead of the 2026/27 season! 🔴⚫\n\nTyler joins Foley after playing a big role in the Macclesfield side that enjoyed a fantastic run in the FA Youth Cup last season. 🏆⚽\n\nHaving gained valuable https://t.co/oiFcl13uYX",
+          "createdAt": "2026-07-24T18:08:31.000Z"
+        },
+        {
+          "text": "✍️ ANOTHER ONE SIGNS FOR FOLEY ✍️\n\nFoley are delighted to announce the signing of Conor Withers ahead of the 2026/27 season! 🔴⚫\n\nConor joins Foley with an impressive footballing background, having previously been part of the setups at both Crewe Alexandra and Oldham Athletic. https://t.co/I6Mh6hChOS",
+          "createdAt": "2026-07-24T17:07:16.000Z"
+        },
+        {
+          "text": "✍️ NEW SIGNING ✍️\n\nFoley are delighted to announce the signing of Nick Woods ahead of the 2026/27 season! 🔴⚫\n\nThe experienced centre-back joins Foley from Market Drayton Town, bringing defensive quality to the heart of our backline. \n\nA commanding presence at the back, Woodsy https://t.co/ar7kBbbpZl",
+          "createdAt": "2026-07-24T15:59:51.000Z"
+        },
+        {
+          "text": "Some more signings at 5 tonight.\n\n❤️🖤",
+          "createdAt": "2026-07-24T15:27:16.000Z"
+        },
+        {
+          "text": "✍️ NEW SIGNING ✍️\n\nFoley are delighted to announce the signing of Freddy Lloyd ahead of the 2026/27 season! 🔴⚫\n\nFreddy joins Foley with an impressive footballing background, having progressed through the ranks at Macclesfield, from Under-18s level all the way through to the https://t.co/vQj1sLkmVl",
+          "createdAt": "2026-07-23T20:03:56.000Z"
+        },
+        {
+          "text": "🚨 NEW SIGNING 🚨\n\nFoley are delighted to announce the signing of Zach Robinson ahead of the 2026/27 season! 🔴⚫\n\nA strong, commanding centre-back, Zach joins Foley with experience at both Market Drayton Town and Wolstanton United.\n\nBringing physicality, composure and a real https://t.co/fm2YQgc50f",
+          "createdAt": "2026-07-23T19:00:30.000Z"
+        },
+        {
+          "text": "✍️ NEW SIGNING ✍️\n\nFoley are delighted to announce the signing of Monty Parks ahead of the 2026/27 season! 🔴⚫\n\nThe 6ft 4in shot-stopper brings a wealth of experience to the squad, having spent last season at Sandbach United, with a spell at Northwich Victoria before that. 🧤 https://t.co/nwCuzEqRlF",
+          "createdAt": "2026-07-23T18:01:18.000Z"
+        },
+        {
+          "text": "🚨 NEW SIGNING ALERT🚨\n\nFoley are delighted to announce the signing of Archie Ellams ahead of the 2026/27 season! 🔴⚫\n\nArchie returns to Trentham Foods Stadium having previously represented Foley during our return to the North West Counties Football League.\n\nAfter leaving the https://t.co/g8uNW1Z55r",
+          "createdAt": "2026-07-23T17:00:00.000Z"
+        },
+        {
+          "text": "👀 NEW SIGNINGS INCOMING…\n\nWe’ve got some new faces joining us ahead of the 2026/27 season…\n\nThe question is…\n\nWho’s first?🤔 🔴⚫\n\nKeep an eye out at 6pm tonight.\n\n#UpTheFoley",
+          "createdAt": "2026-07-23T10:01:55.000Z"
+        },
+        {
+          "text": "𝗡𝗘𝗫𝗧 𝗨𝗣 | 𝗥𝗘𝗗𝗚𝗔𝗧𝗘 𝗖𝗟𝗔𝗬𝗧𝗢𝗡 🔴⚫️\n\nOur final pre-season fixture is here!\n\nWe welcome Redgate Clayton to the Trentham Foods Stadium this Saturday for our last test before the 2026/27 campaign gets underway.\n\nOne final opportunity to build fitness, sharpen up and https://t.co/fhk0yakLKf",
+          "createdAt": "2026-07-22T12:40:40.000Z"
+        },
+        {
+          "text": "Full time here at The Trentham Foods Stadium.\n\nA very competitive fixture tonight, and a good test as our opening game gets ever closer.\n\nOur 5th and final preseason fixture is Saturday against Redgate Clayton in a rearranged fixture at The Trentham Foods Stadium.\n\nThank you https://t.co/gWtNCWlisV",
+          "createdAt": "2026-07-21T20:40:46.000Z"
+        },
+        {
+          "text": "𝗠𝗔𝗧𝗖𝗛𝗗𝗔𝗬 🔴⚫️\n\nAnother summer’s evening of football at the Trentham Foods Stadium as we welcome Stone Old Alleynians for our latest pre-season fixture.\n\n🆚 @stone_OA \n🏆 Pre-Season Friendly\n📍 Trentham Foods Stadium\n🕢 7:30pm\n🎟️ Admission: £3\n\n#UpTheFoley ❤️🖤 https://t.co/iRu6ollsFS",
+          "createdAt": "2026-07-21T09:36:46.000Z"
+        }
+      ]
     }
   ]
 }
