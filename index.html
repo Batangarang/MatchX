@@ -47,8 +47,8 @@
        the rest more breathing room */
     @media (max-width: 480px) {
       th:nth-child(4), td:nth-child(4),  /* Won */
-      th:nth-child(5), td:nth-child(5) { /* Drawn */
-      th:nth-child(6), td:nth-child(3),  /* Lost */
+      th:nth-child(5), td:nth-child(5),  /* Drawn */
+      th:nth-child(6), td:nth-child(6) { /* Lost */
         display: none;
       }
       th, td {
@@ -62,8 +62,8 @@
   <h1>Sandbach United</h1>
 
   <div class="card">
-    <h2>Next Fixture</h2>
-    <div id="next-fixture">Loading...</div>
+    <h2>Next 3 Fixtures</h2>
+    <div id="next-fixtures">Loading...</div>
   </div>
 
   <div class="card">
@@ -71,7 +71,7 @@
     <div id="last-result">Loading...</div>
   </div>
 
-   <div class="card">
+  <div class="card">
     <h2>League Table — First Division South</h2>
     <table id="league-table" style="width: 100%; border-collapse: collapse; font-size: 14px;">
       <thead>
@@ -89,34 +89,129 @@
   </div>
 
   <script>
+    // ---------- Fixtures & Last Result ----------
+
+    function downloadICS(fixture) {
+      const [, dd, mm, yy] = fixture.date.match(/(\d{2})\/(\d{2})\/(\d{2})/);
+      const [hh, min] = fixture.kickoff.split(':');
+      const start = new Date(2000 + parseInt(yy), parseInt(mm) - 1, parseInt(dd), parseInt(hh), parseInt(min));
+      const end = new Date(start.getTime() + 2 * 60 * 60 * 1000);
+
+      const formatICSDate = (d) => d.toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
+
+      const title = fixture.homeAway === 'H'
+        ? `Sandbach United vs ${fixture.opposition}`
+        : `${fixture.opposition} vs Sandbach United`;
+
+      const ics = [
+        'BEGIN:VCALENDAR',
+        'VERSION:2.0',
+        'BEGIN:VEVENT',
+        `DTSTART:${formatICSDate(start)}`,
+        `DTEND:${formatICSDate(end)}`,
+        `SUMMARY:${title}`,
+        `DESCRIPTION:${fixture.competitionNote || 'North West Counties League'}`,
+        'END:VEVENT',
+        'END:VCALENDAR',
+      ].join('\r\n');
+
+      const blob = new Blob([ics], { type: 'text/calendar' });
+      const link = document.createElement('a');
+      link.href = URL.createObjectURL(blob);
+      link.download = `${title}.ics`;
+      link.click();
+    }
+
+    async function shareResult(result) {
+      const scoreline = `${result.homeAway === 'H' ? 'Sandbach United' : result.opposition} ${result.score} ${result.homeAway === 'H' ? result.opposition : 'Sandbach United'}`;
+      const scorers = result.scorers ? `\n⚽ ${result.scorers}` : '';
+      const text = `${scoreline}${scorers}\n${result.date}`;
+
+      if (navigator.share) {
+        await navigator.share({ text });
+      } else {
+        await navigator.clipboard.writeText(text);
+        alert('Copied to clipboard!');
+      }
+    }
+
+    function getH2HRecord(opponentUrl) {
+      const meetings = (window.h2hMeetings || {})[opponentUrl] || [];
+      if (meetings.length === 0) return null;
+
+      let won = 0, drawn = 0, lost = 0;
+      meetings.forEach(m => {
+        const [a, b] = m.score.split('-').map(Number);
+        const sandbachGoals = m.venue === 'H' ? a : b;
+        const oppGoals = m.venue === 'H' ? b : a;
+        if (sandbachGoals > oppGoals) won++;
+        else if (sandbachGoals < oppGoals) lost++;
+        else drawn++;
+      });
+      return { won, drawn, lost };
+    }
+
+    function renderNextFixtures() {
+      const fixtures = window.latestFixtures || [];
+      if (fixtures.length === 0) {
+        document.getElementById('next-fixtures').textContent = 'No upcoming fixtures found';
+        return;
+      }
+
+      document.getElementById('next-fixtures').innerHTML = fixtures.map((f, i) => {
+        const record = getH2HRecord(f.opponentUrl);
+        const recordHtml = record
+          ? `W${record.won} D${record.drawn} L${record.lost}`
+          : `No meetings on record`;
+
+        return `
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; padding: 10px 0; border-bottom: 1px solid #eee;">
+            <div>
+              <div class="fixture">${f.homeAway === 'H' ? 'Sandbach United' : f.opposition} vs ${f.homeAway === 'H' ? f.opposition : 'Sandbach United'}</div>
+              <div class="meta">${f.date} — ${f.kickoff} kick off</div>
+              <button onclick="downloadICS(window.latestFixtures[${i}])" style="font-size: 12px; padding: 4px 8px; border-radius: 4px; border: 1px solid #ccc; background: white; cursor: pointer; margin-top: 4px;">📅 Add to calendar</button>
+            </div>
+            <div style="font-size: 12px; color: #666; text-align: right; white-space: nowrap;">${recordHtml}</div>
+          </div>
+        `;
+      }).join('');
+    }
+
     fetch('data.json')
       .then(res => res.json())
       .then(data => {
-        const nf = data.nextFixture;
-        if (nf) {
-          document.getElementById('next-fixture').innerHTML = `
-            <div class="fixture">${nf.homeAway === 'H' ? 'Sandbach United' : nf.opposition} vs ${nf.homeAway === 'H' ? nf.opposition : 'Sandbach United'}</div>
-            <div class="meta">${nf.date} — ${nf.kickoff} kick off</div>
-          `;
-        } else {
-          document.getElementById('next-fixture').textContent = 'No upcoming fixture found';
-        }
+        window.latestFixtures = data.nextFixtures || (data.nextFixture ? [data.nextFixture] : []);
+        renderNextFixtures();
 
         const lr = data.lastResult;
         if (lr) {
           document.getElementById('last-result').innerHTML = `
             <div class="fixture">${lr.homeAway === 'H' ? 'Sandbach United' : lr.opposition} ${lr.score} ${lr.homeAway === 'H' ? lr.opposition : 'Sandbach United'}</div>
             <div class="meta">${lr.date}</div>
+            <button onclick='shareResult(${JSON.stringify(lr)})' style="font-size: 12px; padding: 4px 8px; border-radius: 4px; border: 1px solid #ccc; background: white; cursor: pointer; margin-top: 6px;">📤 Share</button>
           `;
         } else {
           document.getElementById('last-result').textContent = 'No results yet this season';
         }
       })
       .catch(err => {
-        document.getElementById('next-fixture').textContent = 'Failed to load data';
+        document.getElementById('next-fixtures').textContent = 'Failed to load data';
         console.error(err);
       });
-let leagueStandings = [];
+
+    fetch('history.json')
+      .then(res => res.json())
+      .then(historyData => {
+        window.h2hMeetings = historyData.meetings || {};
+        renderNextFixtures();
+      })
+      .catch(() => {
+        window.h2hMeetings = {};
+      });
+
+    // ---------- League Table ----------
+
+    let leagueStandings = [];
     let showingFullTable = false;
 
     function renderLeagueRows(standings) {
@@ -148,14 +243,13 @@ let leagueStandings = [];
 
       const sandbachIndex = leagueStandings.findIndex(t => t.team.includes('Sandbach'));
       if (sandbachIndex === -1) {
-        // Fallback: if we can't find Sandbach for some reason, just show the full table
         document.getElementById('league-body').innerHTML = renderLeagueRows(leagueStandings);
         btn.style.display = 'none';
         return;
       }
 
       const start = Math.max(0, sandbachIndex - 2);
-      const end = Math.min(leagueStandings.length, sandbachIndex + 3); // +3 because slice end is exclusive
+      const end = Math.min(leagueStandings.length, sandbachIndex + 3);
       const trimmed = leagueStandings.slice(start, end);
 
       document.getElementById('league-body').innerHTML = renderLeagueRows(trimmed);
