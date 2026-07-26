@@ -18,5 +18,5 @@ module.exports = [
   { name: 'Market Drayton Town', handle: 'MDTFC' },
   { name: 'Shawbury United', handle: 'shawburyutd' },
   { name: 'Wolverhampton Casuals', handle: 'WolvesCassies' },
-  { name: 'Foley Meir', handle: '@foley_fc' },
+  { name: 'Foley Meir', handle: 'foley_fc' },
 ];
