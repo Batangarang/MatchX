@@ -22,6 +22,8 @@ jobs:
 
       - run: node scrape.js
 
+      - run: node league.js
+
       - name: Commit updated data
         run: |
           git config user.name "github-actions[bot]"

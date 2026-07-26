@@ -43,6 +43,20 @@
     <div id="last-result">Loading...</div>
   </div>
 
+   <div class="card">
+    <h2>League Table — First Division South</h2>
+    <table id="league-table" style="width: 100%; border-collapse: collapse; font-size: 14px;">
+      <thead>
+        <tr style="text-align: left; color: #888;">
+          <th>#</th><th>Team</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GD</th><th>Pts</th>
+        </tr>
+      </thead>
+      <tbody id="league-body">
+        <tr><td colspan="8">Loading...</td></tr>
+      </tbody>
+    </table>
+  </div>
+
   <script>
     fetch('data.json')
       .then(res => res.json())
@@ -69,6 +83,30 @@
       })
       .catch(err => {
         document.getElementById('next-fixture').textContent = 'Failed to load data';
+        console.error(err);
+      });
+    fetch('league.json')
+      .then(res => res.json())
+      .then(data => {
+        const rows = data.standings.map(t => {
+          const highlight = t.team.includes('Sandbach') ? 'font-weight: bold; background: #eef2ff;' : '';
+          return `
+            <tr style="${highlight}">
+              <td>${t.position}</td>
+              <td>${t.team}</td>
+              <td>${t.played}</td>
+              <td>${t.won}</td>
+              <td>${t.drawn}</td>
+              <td>${t.lost}</td>
+              <td>${t.goalDifference}</td>
+              <td>${t.points}</td>
+            </tr>
+          `;
+        }).join('');
+        document.getElementById('league-body').innerHTML = rows;
+      })
+      .catch(err => {
+        document.getElementById('league-body').innerHTML = '<tr><td colspan="8">Failed to load table</td></tr>';
         console.error(err);
       });
   </script>
