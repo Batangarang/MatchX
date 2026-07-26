@@ -24,10 +24,6 @@ jobs:
 
       - run: node league.js
 
-      - run: node x-posts.js
-        env:
-          X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
-
       - name: Commit updated data
         run: |
           git config user.name "github-actions[bot]"
