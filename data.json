@@ -1,26 +1,16 @@
 {
-  "scrapedAt": "2026-08-01T12:49:15.161Z",
+  "scrapedAt": "2026-08-01T18:48:31.192Z",
   "nextFixture": {
-    "date": "Sat 01/08/26",
-    "opposition": "Wednesfield Community",
-    "opponentUrl": "clubpage.php?id=191",
-    "homeAway": "H",
-    "kickoff": "15:00",
+    "date": "Tue 04/08/26",
+    "opposition": "Foley Meir",
+    "opponentUrl": "clubpage.php?id=898",
+    "homeAway": "A",
+    "kickoff": "19:45",
     "score": null,
     "scorers": null,
     "competitionNote": null
   },
   "nextFixtures": [
-    {
-      "date": "Sat 01/08/26",
-      "opposition": "Wednesfield Community",
-      "opponentUrl": "clubpage.php?id=191",
-      "homeAway": "H",
-      "kickoff": "15:00",
-      "score": null,
-      "scorers": null,
-      "competitionNote": null
-    },
     {
       "date": "Tue 04/08/26",
       "opposition": "Foley Meir",
@@ -40,10 +30,40 @@
       "score": null,
       "scorers": null,
       "competitionNote": null
+    },
+    {
+      "date": "Tue 11/08/26",
+      "opposition": "New Mills",
+      "opponentUrl": "clubpage.php?id=91",
+      "homeAway": "H",
+      "kickoff": "19:45",
+      "score": null,
+      "scorers": null,
+      "competitionNote": null
     }
   ],
-  "lastResult": null,
-  "lastResults": [],
+  "lastResult": {
+    "date": "Sat 01/08/26",
+    "opposition": "Wednesfield Community",
+    "opponentUrl": "clubpage.php?id=191",
+    "homeAway": "H",
+    "kickoff": "15:00",
+    "score": "W 2-1",
+    "scorers": "Joseph Bevan (3) Joseph Bevan (51)",
+    "competitionNote": null
+  },
+  "lastResults": [
+    {
+      "date": "Sat 01/08/26",
+      "opposition": "Wednesfield Community",
+      "opponentUrl": "clubpage.php?id=191",
+      "homeAway": "H",
+      "kickoff": "15:00",
+      "score": "W 2-1",
+      "scorers": "Joseph Bevan (3) Joseph Bevan (51)",
+      "competitionNote": null
+    }
+  ],
   "allFixtures": [
     {
       "date": "Sat 01/08/26",
@@ -51,8 +71,8 @@
       "opponentUrl": "clubpage.php?id=191",
       "homeAway": "H",
       "kickoff": "15:00",
-      "score": null,
-      "scorers": null,
+      "score": "W 2-1",
+      "scorers": "Joseph Bevan (3) Joseph Bevan (51)",
       "competitionNote": null
     },
     {
