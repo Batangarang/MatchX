@@ -4,6 +4,22 @@ const USERNAME = 'SandbachFC_1st';
 const { getUserIdCached } = require('./user-id-cache.js');
 const BEARER_TOKEN = process.env.X_BEARER_TOKEN;
 
+function isMatchdayPost(createdAt) {
+  try {
+    const data = JSON.parse(fs.readFileSync('data.json', 'utf-8'));
+    const postDate = new Date(createdAt);
+    return (data.allFixtures || []).some(f => {
+      const [, dd, mm, yy] = f.date.match(/(\d{2})\/(\d{2})\/(\d{2})/);
+      const fixtureDate = new Date(2000 + parseInt(yy), parseInt(mm) - 1, parseInt(dd));
+      return fixtureDate.getUTCFullYear() === postDate.getUTCFullYear() &&
+             fixtureDate.getUTCMonth() === postDate.getUTCMonth() &&
+             fixtureDate.getUTCDate() === postDate.getUTCDate();
+    });
+  } catch {
+    return false;
+  }
+}
+
 function isMatchdayNow() {
   try {
     const data = JSON.parse(fs.readFileSync('data.json', 'utf-8'));
@@ -97,11 +113,12 @@ async function run() {
   const output = {
     scrapedAt: new Date().toISOString(),
     username: USERNAME,
-     posts: posts.map(p => ({
+    posts: posts.map(p => ({
       id: p.id,
       text: p.text,
       createdAt: p.created_at,
       images: p.images || [],
+      isMatchday: isMatchdayPost(p.created_at),
     })),
   };
 
