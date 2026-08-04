@@ -69,11 +69,6 @@
       margin-top: 2px;
     }
 
-    .form-badges span {
-      display: inline-block; width: 14px; height: 14px; border-radius: 3px;
-      margin-right: 2px; font-size: 0;
-    }
-
     .status-badge {
       font-size: 11px;
       font-weight: 700;
@@ -184,9 +179,9 @@
       }
       th, td { padding: 10px 6px; font-size: 15px; }
     }
-    .carousel-track > div { align-self: flex-start; }
-    .carousel { overflow: hidden; position: relative; touch-action: pan-y; height: auto; }
-    .carousel-track { display: flex; transition: transform 0.3s ease; }
+
+    .carousel { overflow: hidden; position: relative; touch-action: pan-y; }
+    .carousel-track { display: flex; transition: transform 0.3s ease; align-items: flex-start; }
     .carousel-track > div { flex: 0 0 100%; box-sizing: border-box; }
     .carousel-nav { display: flex; align-items: center; justify-content: center; gap: 10px; margin-top: 10px; }
     .carousel-nav button {
@@ -209,8 +204,15 @@
       color: var(--navy);
       cursor: pointer;
       font-weight: 600;
+      text-decoration: none;
+      display: inline-block;
     }
     .btn:hover { border-color: var(--royal); }
+
+    .form-badges span {
+      display: inline-block; width: 14px; height: 14px; border-radius: 3px;
+      margin-right: 2px; font-size: 0;
+    }
 
     a { color: var(--royal); }
   </style>
@@ -296,7 +298,7 @@
         </tr>
       </thead>
       <tbody id="league-body">
-        <tr><td colspan="8">Loading...</td></tr>
+        <tr><td colspan="9">Loading...</td></tr>
       </tbody>
     </table>
     <button id="toggle-table-btn" class="btn" style="margin-top: 10px;">Show full table</button>
@@ -497,11 +499,17 @@
       return fixtureDate === todayStr;
     }
 
+    function isFromToday(createdAt) {
+      const today = new Date();
+      const d = new Date(createdAt);
+      return d.getUTCFullYear() === today.getUTCFullYear() &&
+             d.getUTCMonth() === today.getUTCMonth() &&
+             d.getUTCDate() === today.getUTCDate();
+    }
+
     fetch('matchday-live.json?t=' + Date.now())
       .then(res => res.json())
       .then(data => {
-        // Only show this card if the match data is actually from today —
-        // otherwise a stale file from a past match would wrongly show on a quiet day
         if (!isFixtureToday(data.fixtureDate)) return;
 
         document.getElementById('matchday-card').style.display = 'block';
@@ -513,10 +521,19 @@
         badge.textContent = status.label;
         badge.className = 'status-badge ' + status.className;
       })
-      .catch(() => {
-        // No matchday-live.json, or not today — card stays hidden, which is correct
-      });
-    
+      .catch(() => {});
+
+    let matchdayIndex = [];
+    fetch('matchday-index.json?t=' + Date.now())
+      .then(res => res.json())
+      .then(idx => { matchdayIndex = idx; })
+      .catch(() => {});
+
+    function toISODate(ddmmyy) {
+      const [, dd, mm, yy] = ddmmyy.match(/(\d{2})\/(\d{2})\/(\d{2})/);
+      return `20${yy}-${mm}-${dd}`;
+    }
+
     fetch('data.json?t=' + Date.now())
       .then(res => res.json())
       .then(data => {
@@ -525,13 +542,21 @@
 
         const results = data.lastResults || (data.lastResult ? [data.lastResult] : []);
         if (results.length > 0) {
-          document.getElementById('results-track').innerHTML = results.map(r => `
-            <div style="padding: 4px 2px 0;">
-              <div class="fixture">${r.homeAway === 'H' ? 'Sandbach United' : r.opposition} ${r.score} ${r.homeAway === 'H' ? r.opposition : 'Sandbach United'}</div>
-              <div class="meta">${r.date}</div>
-              <button class="btn" style="margin-top: 6px;" onclick='shareResult(${JSON.stringify(r)})'>📤 Share</button>
-            </div>
-          `).join('');
+          document.getElementById('results-track').innerHTML = results.map(r => {
+            const iso = toISODate(r.date);
+            const hasStats = matchdayIndex.some(e => e.date === iso);
+            const statsLink = hasStats ? `<a href="matchday.html?date=${iso}" class="btn">📊 Match stats</a>` : '';
+            return `
+              <div style="padding: 4px 2px 0;">
+                <div class="fixture">${r.homeAway === 'H' ? 'Sandbach United' : r.opposition} ${r.score} ${r.homeAway === 'H' ? r.opposition : 'Sandbach United'}</div>
+                <div class="meta">${r.date}</div>
+                <div style="margin-top: 6px;">
+                  ${statsLink}
+                  <button class="btn" onclick='shareResult(${JSON.stringify(r)})'>📤 Share</button>
+                </div>
+              </div>
+            `;
+          }).join('');
           resultsCarousel.setCount(results.length);
         } else {
           document.getElementById('results-track').innerHTML = '<div>No results yet this season</div>';
@@ -572,7 +597,9 @@
     fetch('x-posts.json?t=' + Date.now())
       .then(res => res.json())
       .then(data => {
-        const posts = (data.posts || []).filter(p => !p.isMatchday).slice(0, 5);
+        // Only exclude posts made TODAY (avoids hiding every historical matchday post,
+        // which was the earlier bug) — today's live-match posts live in the Matchday card instead
+        const posts = (data.posts || []).filter(p => !isFromToday(p.createdAt)).slice(0, 5);
         if (posts.length === 0) {
           document.getElementById('xposts-track').innerHTML = '<div>No recent posts found</div>';
           xPostsCarousel.setCount(0);
@@ -676,7 +703,7 @@
         });
       })
       .catch(err => {
-        document.getElementById('league-body').innerHTML = '<tr><td colspan="8">Failed to load table</td></tr>';
+        document.getElementById('league-body').innerHTML = '<tr><td colspan="9">Failed to load table</td></tr>';
         console.error(err);
       });
   </script>
