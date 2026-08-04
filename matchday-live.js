@@ -193,6 +193,9 @@ async function run() {
     ...awayPosts.map(p => ({ ...p, side: 'away', handle: awayHandle })),
   ].sort((a, b) => new Date(a.createdAt) - new Date(b.createdAt));
 
+  if (!fs.existsSync('matchday-archive')) fs.mkdirSync('matchday-archive');
+  fs.writeFileSync(`matchday-archive/${dateStr}-raw-posts.json`, JSON.stringify(combined, null, 2));
+
   if (combined.length === 0) {
     console.log('No posts found from either account — skipping AI extraction.');
     return;
@@ -329,7 +332,6 @@ Only populate wentToExtraTime, wentToPenalties, extraTime, penalties, and the ex
     match: mergedMatch,
   };
 
-  if (!fs.existsSync('matchday-archive')) fs.mkdirSync('matchday-archive');
   fs.writeFileSync(archiveFile, JSON.stringify(output, null, 2));
   fs.writeFileSync(seenImagesFile, JSON.stringify([...alreadySeen]));
 
@@ -352,8 +354,6 @@ Only populate wentToExtraTime, wentToPenalties, extraTime, penalties, and the ex
   index.sort((a, b) => new Date(b.date) - new Date(a.date));
   fs.writeFileSync('matchday-index.json', JSON.stringify(index, null, 2));
 
-  // Only update the "latest" file for genuinely live runs — a MATCHDAY_TEST_DATE
-  // backfill of a past match should never overwrite today's real live data.
   if (!process.env.MATCHDAY_TEST_DATE) {
     fs.writeFileSync('matchday-live.json', JSON.stringify(output, null, 2));
   }
