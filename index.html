@@ -475,7 +475,7 @@
     fetch('x-posts.json')
       .then(res => res.json())
       .then(data => {
-        const posts = (data.posts || []).slice(0, 5);
+        const posts = (data.posts || []).filter(p => !p.isMatchday).slice(0, 5);
         if (posts.length === 0) {
           document.getElementById('xposts-track').innerHTML = '<div>No recent posts found</div>';
           xPostsCarousel.setCount(0);
