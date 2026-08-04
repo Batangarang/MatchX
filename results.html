@@ -38,7 +38,8 @@
     .btn {
       font-size: 12px; padding: 5px 10px; border-radius: 6px;
       border: 1px solid var(--line); background: white; color: var(--navy);
-      cursor: pointer; font-weight: 600; margin-top: 6px;
+      cursor: pointer; font-weight: 600; margin-top: 6px; margin-right: 6px;
+      text-decoration: none; display: inline-block;
     }
   </style>
 </head>
@@ -62,30 +63,53 @@
       }
     }
 
-    fetch('data.json')
-      .then(res => res.json())
-      .then(data => {
+    function toISODate(ddmmyy) {
+      const [, dd, mm, yy] = ddmmyy.match(/(\d{2})\/(\d{2})\/(\d{2})/);
+      return `20${yy}-${mm}-${dd}`;
+    }
+
+    async function load() {
+      let matchdayIndex = [];
+      try {
+        const idxRes = await fetch('matchday-index.json?t=' + Date.now());
+        matchdayIndex = await idxRes.json();
+      } catch {}
+
+      try {
+        const res = await fetch('data.json?t=' + Date.now());
+        const data = await res.json();
         const all = data.allFixtures || [];
-        const played = all.filter(f => f.score).reverse(); // most recent first
+        const played = all.filter(f => f.score).reverse();
 
         if (played.length === 0) {
           document.getElementById('results-list').textContent = 'No results yet this season';
           return;
         }
 
-        document.getElementById('results-list').innerHTML = played.map((r, i) => `
-          <div class="row">
-            <div class="fixture">${r.homeAway === 'H' ? 'Sandbach United' : r.opposition} <span class="score">${r.score}</span> ${r.homeAway === 'H' ? r.opposition : 'Sandbach United'}</div>
-            <div class="meta">${r.date}${r.competitionNote ? ' — ' + r.competitionNote : ''}</div>
-            ${r.scorers ? `<div class="meta">⚽ ${r.scorers}</div>` : ''}
-            <button class="btn" onclick='shareResult(${JSON.stringify(r)})'>📤 Share</button>
-          </div>
-        `).join('');
-      })
-      .catch(err => {
+        document.getElementById('results-list').innerHTML = played.map(r => {
+          const iso = toISODate(r.date);
+          const hasStats = matchdayIndex.some(e => e.date === iso);
+          const statsLink = hasStats
+            ? `<a href="matchday.html?date=${iso}" class="btn">📊 Match stats</a>`
+            : '';
+
+          return `
+            <div class="row">
+              <div class="fixture">${r.homeAway === 'H' ? 'Sandbach United' : r.opposition} <span class="score">${r.score}</span> ${r.homeAway === 'H' ? r.opposition : 'Sandbach United'}</div>
+              <div class="meta">${r.date}${r.competitionNote ? ' — ' + r.competitionNote : ''}</div>
+              ${r.scorers ? `<div class="meta">⚽ ${r.scorers}</div>` : ''}
+              ${statsLink}
+              <button class="btn" onclick='shareResult(${JSON.stringify(r)})'>📤 Share</button>
+            </div>
+          `;
+        }).join('');
+      } catch (err) {
         document.getElementById('results-list').textContent = 'Failed to load results';
         console.error(err);
-      });
+      }
+    }
+
+    load();
   </script>
 </body>
 </html>
