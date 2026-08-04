@@ -98,6 +98,21 @@
       cursor: pointer;
       font-weight: 600;
     }
+
+    .carousel { overflow: hidden; position: relative; touch-action: pan-y; transition: height 0.2s ease; }
+    .carousel-track { display: flex; transition: transform 0.3s ease; align-items: flex-start; }
+    .carousel-track > div { flex: 0 0 100%; box-sizing: border-box; max-height: 320px; overflow-y: auto; }
+    .carousel-nav { display: flex; align-items: center; justify-content: center; gap: 10px; margin-top: 10px; }
+    .carousel-nav button {
+      border: none; background: var(--paper); width: 28px; height: 28px;
+      border-radius: 50%; cursor: pointer; font-size: 16px; line-height: 1; color: var(--navy);
+    }
+    .carousel-dots { display: flex; gap: 6px; align-items: center; }
+    .carousel-dots span {
+      width: 8px; height: 8px; border-radius: 50%; background: #ccd3dd; cursor: pointer; display: inline-block;
+    }
+    .carousel-dots span.active { background: var(--royal); }
+    .carousel-count { font-size: 12px; color: var(--muted); min-width: 32px; text-align: center; }
   </style>
 </head>
 <body>
@@ -160,12 +175,61 @@
       const sideLabel = p.side === 'home' ? 'HOME' : 'AWAY';
 
       return `
-        <div style="padding: 8px 0; border-bottom: 1px solid var(--line);">
+        <div style="padding: 4px 2px 0;">
           <div style="font-size: 10px; font-weight: 700; color: var(--muted); letter-spacing: 0.5px;">${sideLabel} · @${p.handle} · ${time}</div>
           <div style="font-size: 13px; margin-top: 3px;">${textHtml}</div>
           ${imageHtml}
         </div>
       `;
+    }
+
+    function createCarousel(trackId, dotsId, countId) {
+      let index = 0;
+      let count = 0;
+      const track = document.getElementById(trackId);
+      const container = track.parentElement;
+
+      function update() {
+        const width = container.clientWidth;
+        track.style.transform = `translateX(${-index * width}px)`;
+
+        const activeSlide = track.children[index];
+        if (activeSlide) {
+          container.style.height = Math.min(activeSlide.scrollHeight, 320) + 'px';
+        }
+
+        const dotsEl = document.getElementById(dotsId);
+        if (dotsEl) {
+          dotsEl.innerHTML = Array.from({ length: count }).map((_, i) =>
+            `<span class="${i === index ? 'active' : ''}" onclick="window['${trackId}_api'].goTo(${i})"></span>`
+          ).join('');
+        }
+        const countEl = document.getElementById(countId);
+        if (countEl) countEl.textContent = count > 0 ? `${index + 1} / ${count}` : '';
+      }
+
+      function goTo(i) {
+        index = Math.max(0, Math.min(count - 1, i));
+        update();
+      }
+
+      const api = {
+        next: () => goTo(index + 1),
+        prev: () => goTo(index - 1),
+        goTo,
+        setCount: (n) => { count = n; index = 0; update(); },
+      };
+
+      let touchStartX = 0;
+      container.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; });
+      container.addEventListener('touchend', e => {
+        const diff = touchStartX - e.changedTouches[0].clientX;
+        if (Math.abs(diff) > 40) { diff > 0 ? api.next() : api.prev(); }
+      });
+
+      window.addEventListener('resize', update);
+      window[`${trackId}_api`] = api;
+      return api;
     }
 
     function getFallbackStatus(fixtureDate, kickoff) {
@@ -222,8 +286,15 @@
 
           <div class="card">
             <h2>Live Updates</h2>
-            <div id="raw-posts-preview"></div>
-            <button id="toggle-posts-btn" class="btn" style="margin-top: 10px; display: none;">Show all posts</button>
+            <div class="carousel" id="posts-carousel">
+              <div class="carousel-track" id="posts-track"></div>
+            </div>
+            <div class="carousel-nav">
+              <button onclick="postsCarousel.prev()">‹</button>
+              <div class="carousel-count" id="posts-count"></div>
+              <div class="carousel-dots" id="posts-dots"></div>
+              <button onclick="postsCarousel.next()">›</button>
+            </div>
           </div>
 
           ${m.wentToExtraTime ? `
@@ -308,30 +379,20 @@
         fetch(`matchday-archive/${iso}-raw-posts.json?t=` + Date.now())
           .then(res => res.json())
           .then(posts => {
-            if (!posts || posts.length === 0) return;
+            const postsCarousel = createCarousel('posts-track', 'posts-dots', 'posts-count');
 
-            let showingAll = false;
-            const preview = posts.slice(-3).reverse();
-
-            function renderPosts() {
-              const toShow = showingAll ? [...posts].reverse() : preview;
-              document.getElementById('raw-posts-preview').innerHTML = toShow.map(renderPost).join('');
+            if (!posts || posts.length === 0) {
+              document.getElementById('posts-track').innerHTML = '<div class="empty" style="padding: 8px 0;">No posts recorded</div>';
+              postsCarousel.setCount(0);
+              return;
             }
-            renderPosts();
 
-            const btn = document.getElementById('toggle-posts-btn');
-            if (posts.length > 3) {
-              btn.style.display = 'inline-block';
-              btn.textContent = `Show all ${posts.length} posts`;
-              btn.addEventListener('click', () => {
-                showingAll = !showingAll;
-                btn.textContent = showingAll ? 'Show less' : `Show all ${posts.length} posts`;
-                renderPosts();
-              });
-            }
+            const newestFirst = [...posts].reverse();
+            document.getElementById('posts-track').innerHTML = newestFirst.map(renderPost).join('');
+            postsCarousel.setCount(newestFirst.length);
           })
           .catch(() => {
-            document.getElementById('raw-posts-preview').innerHTML = '<div class="empty">No posts recorded</div>';
+            document.getElementById('posts-track').innerHTML = '<div class="empty" style="padding: 8px 0;">No posts recorded</div>';
           });
       })
       .catch(err => {
