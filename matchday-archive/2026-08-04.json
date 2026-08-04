@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-08-04T19:33:49.213Z",
+  "generatedAt": "2026-08-04T19:43:49.562Z",
   "fixtureDate": "2026-08-04",
   "kickoff": "19:45",
   "homeTeam": "Foley Meir",
   "awayTeam": "Sandbach United",
-  "postsUsed": 28,
+  "postsUsed": 29,
   "imagesAnalyzedThisRun": 1,
-  "totalImagesAnalyzed": 9,
+  "totalImagesAnalyzed": 10,
   "match": {
-    "score": "3-1",
+    "score": "2-1",
     "matchStage": "half_time",
     "lineups": {
       "home": {
@@ -96,47 +96,49 @@
     },
     "roughXG": {
       "firstHalf": {
-        "home": 0.9,
+        "home": 1.1,
         "away": 0.3,
-        "note": "Foley created several chances including Jake Lovatt's early chance and multiple free-kick opportunities culminating in two goals. Sandbach scored early but had fewer clear-cut chances thereafter."
+        "note": "Foley had multiple chances including early shot at keeper, a corner saved by Hall, and the two goals from set pieces. Sandbach had early free kick goal but otherwise limited clear-cut chances."
       },
       "secondHalf": {
         "home": 0,
         "away": 0,
-        "note": "No second-half play reported; match ended at half-time in posts"
+        "note": "No second half data available; match had only reached half-time."
       },
       "extraTime": {
         "home": 0,
         "away": 0,
-        "note": "No extra time played"
+        "note": "Match did not go to extra time."
       },
       "total": {
-        "home": 0.9,
+        "home": 1.1,
         "away": 0.3,
-        "note": "First-half only; Foley dominated from midway through the half onward, scoring twice from set plays"
-      }
+        "note": "First half only; Foley created more chances and converted two, Sandbach scored from a set piece but had few other clear opportunities."
+      },
+      "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure. Values are illustrative, not calculated from actual shot data."
     },
     "matchControl": {
       "firstHalf": {
         "home": 65,
         "away": 35,
-        "note": "Sandbach scored early but Foley grew into the match, created more chances, and took control through the latter part of the half with two goals from set-piece situations"
+        "note": "Foley dominated after falling behind, creating multiple chances and taking the lead. Sandbach initially broke the deadlock but struggled to maintain possession and create further opportunities."
       },
       "secondHalf": {
         "home": 50,
         "away": 50,
-        "note": "No second-half play reported"
+        "note": "No second half data available; match had only reached half-time."
       },
       "extraTime": {
         "home": 50,
         "away": 50,
-        "note": "No extra time played"
+        "note": "Match did not go to extra time."
       },
       "total": {
         "home": 65,
         "away": 35,
-        "note": "Based on first-half only; Foley dominated after Sandbach's opening goal"
-      }
+        "note": "First half only; Foley clearly controlled play and were happy at the break. Sandbach had early success but faded."
+      },
+      "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
   }
 }
