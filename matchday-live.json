@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-08-04T20:14:38.736Z",
+  "generatedAt": "2026-08-04T20:18:33.427Z",
   "fixtureDate": "2026-08-04",
   "kickoff": "19:45",
   "homeTeam": "Foley Meir",
   "awayTeam": "Sandbach United",
-  "postsUsed": 36,
+  "postsUsed": 37,
   "imagesAnalyzedThisRun": 0,
   "totalImagesAnalyzed": 11,
   "match": {
@@ -127,22 +127,22 @@
       "firstHalf": {
         "home": 1.2,
         "away": 0.4,
-        "note": "Foley created multiple chances from set pieces and open play; Sandbach scored early but created limited opportunities thereafter"
+        "note": "Foley had early chances and dominated from set pieces; Sandbach scored from a free-kick early but created few clear chances thereafter."
       },
       "secondHalf": {
         "home": 1.5,
-        "away": 0.5,
-        "note": "Foley dominated with Lucas Baker's well-struck finish; Sandbach had some chances but appeared increasingly frustrated"
+        "away": 0.6,
+        "note": "Foley extended lead with Baker's well-struck finish; Sandbach had limited meaningful opportunities despite some half-chances."
       },
       "extraTime": {
         "home": 0,
         "away": 0,
-        "note": "No extra time played"
+        "note": "Match did not go to extra time."
       },
       "total": {
         "home": 2.7,
-        "away": 0.9,
-        "note": "Foley significantly outperformed Sandbach in chance creation across both halves, converting 3 of their better opportunities"
+        "away": 1,
+        "note": "Foley dominated overall, converting chances from set pieces; Sandbach relied on early counter but could not sustain threat."
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure. Values are illustrative, not calculated from actual shot data."
     },
@@ -150,22 +150,22 @@
       "firstHalf": {
         "home": 60,
         "away": 40,
-        "note": "Foley took control after Sandbach's early goal, creating chances and ultimately scoring twice to lead 2-1 at half-time"
+        "note": "Foley created multiple chances and looked the more threatening side; Sandbach scored early but then absorbed pressure."
       },
       "secondHalf": {
         "home": 70,
         "away": 30,
-        "note": "Foley dominated the second half, extending their lead to 3-1 by minute 65; Sandbach lacked sustained pressure"
+        "note": "Foley increasingly dominant, extended lead with Baker's goal at 65 mins; Sandbach rarely threatened, missed a gilt-edged chance."
       },
       "extraTime": {
-        "home": 0,
-        "away": 0,
-        "note": "No extra time played"
+        "home": 50,
+        "away": 50,
+        "note": "Match did not go to extra time."
       },
       "total": {
         "home": 65,
         "away": 35,
-        "note": "Foley controlled the match for large periods, particularly after Sandbach's early lead; Foley's superior finishing and set-piece execution proved decisive"
+        "note": "Foley controlled the match for most of the 90 minutes, particularly after going 2-1 up; Sandbach offered little after early goal."
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
