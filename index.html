@@ -446,10 +446,6 @@
 
     function renderFixturesCarousel() {
       const fixtures = window.latestFixtures || [];
-      const record = getH2HRecord(f.opponentUrl);
-      const recordHtml = record
-          ? `W${record.won} D${record.drawn} L${record.lost}<br>Last: ${record.last.result} ${record.last.score} (${record.last.date})`
-          : `No meetings on record`;
       if (fixtures.length === 0) {
         document.getElementById('fixtures-track').innerHTML = '<div style="padding: 10px 0;">No upcoming fixtures found</div>';
         fixturesCarousel.setCount(0);
@@ -461,7 +457,7 @@
       document.getElementById('fixtures-track').innerHTML = fixtures.map((f, i) => {
         const record = getH2HRecord(f.opponentUrl);
         const recordHtml = record
-          ? `W${record.won} D${record.drawn} L${record.lost}`
+          ? `W${record.won} D${record.drawn} L${record.lost}<br>Last: ${record.last.result} ${record.last.score} (${record.last.date})`
           : `No meetings on record`;
 
         return `
