@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-08-04T19:43:49.562Z",
+  "generatedAt": "2026-08-04T20:00:48.967Z",
   "fixtureDate": "2026-08-04",
   "kickoff": "19:45",
   "homeTeam": "Foley Meir",
   "awayTeam": "Sandbach United",
-  "postsUsed": 29,
-  "imagesAnalyzedThisRun": 1,
+  "postsUsed": 32,
+  "imagesAnalyzedThisRun": 0,
   "totalImagesAnalyzed": 10,
   "match": {
     "score": "2-1",
-    "matchStage": "half_time",
+    "matchStage": "second_half",
     "lineups": {
       "home": {
         "players": [
@@ -77,7 +77,20 @@
       }
     ],
     "redCards": [],
-    "substitutions": [],
+    "substitutions": [
+      {
+        "minute": 46,
+        "team": "away",
+        "playerOff": "Kieran Nolan",
+        "playerOn": "Saul Shotton"
+      },
+      {
+        "minute": 46,
+        "team": "away",
+        "playerOff": "Jordan Stafford",
+        "playerOn": "Stan Tatters"
+      }
+    ],
     "sinBins": [],
     "injuries": [],
     "addedTime": {
@@ -96,47 +109,47 @@
     },
     "roughXG": {
       "firstHalf": {
-        "home": 1.1,
-        "away": 0.3,
-        "note": "Foley had multiple chances including early shot at keeper, a corner saved by Hall, and the two goals from set pieces. Sandbach had early free kick goal but otherwise limited clear-cut chances."
+        "home": 0.8,
+        "away": 0.4,
+        "note": "Foley created several chances from set pieces and open play; Sandbach scored early but had fewer clear-cut opportunities. Half-time commentary noted Foley were 'the happier side'."
       },
       "secondHalf": {
-        "home": 0,
-        "away": 0,
-        "note": "No second half data available; match had only reached half-time."
+        "home": 0.3,
+        "away": 0.4,
+        "note": "Limited posts covering second-half action. Sandbach had one early chance over the bar; Foley had one miss inside the box at 52 mins. Insufficient detail to estimate confidently."
       },
       "extraTime": {
         "home": 0,
         "away": 0,
-        "note": "Match did not go to extra time."
+        "note": "No extra time played."
       },
       "total": {
         "home": 1.1,
-        "away": 0.3,
-        "note": "First half only; Foley created more chances and converted two, Sandbach scored from a set piece but had few other clear opportunities."
+        "away": 0.8,
+        "note": "Foley scored twice from set pieces; Sandbach scored once early. Posts describe multiple chances and saves but lack comprehensive second-half coverage."
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure. Values are illustrative, not calculated from actual shot data."
     },
     "matchControl": {
       "firstHalf": {
-        "home": 65,
-        "away": 35,
-        "note": "Foley dominated after falling behind, creating multiple chances and taking the lead. Sandbach initially broke the deadlock but struggled to maintain possession and create further opportunities."
+        "home": 60,
+        "away": 40,
+        "note": "Foley took the lead through set-piece play and created multiple chances. Sandbach scored first but appeared more reactive thereafter. Foley described as 'the happier side' at half-time."
       },
       "secondHalf": {
         "home": 50,
         "away": 50,
-        "note": "No second half data available; match had only reached half-time."
+        "note": "Very limited commentary on second-half play. Only two substantive posts describe chances; insufficient detail to estimate control confidently."
       },
       "extraTime": {
-        "home": 50,
-        "away": 50,
-        "note": "Match did not go to extra time."
+        "home": 0,
+        "away": 0,
+        "note": "No extra time played."
       },
       "total": {
-        "home": 65,
-        "away": 35,
-        "note": "First half only; Foley clearly controlled play and were happy at the break. Sandbach had early success but faded."
+        "home": 55,
+        "away": 45,
+        "note": "Foley took the lead twice and appeared to control the first half. Second-half action poorly documented in posts; final score remained 2-1 to Foley at last update (52 mins)."
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
