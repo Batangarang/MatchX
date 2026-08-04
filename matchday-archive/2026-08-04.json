@@ -8,7 +8,7 @@
   "imagesAnalyzedThisRun": 1,
   "totalImagesAnalyzed": 7,
   "match": {
-    "score": "2-1",
+    "score": "1-1",
     "matchStage": "first_half",
     "lineups": {
       "home": {
@@ -47,11 +47,6 @@
         "minute": 9,
         "team": "away",
         "scorer": "Kieran O'Connell"
-      },
-      {
-        "minute": 30,
-        "team": "home",
-        "scorer": "Unknown"
       },
       {
         "minute": 30,

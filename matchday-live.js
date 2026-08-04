@@ -118,20 +118,81 @@ function mergeArrays(oldArr, newArr, keyFn) {
   return combined;
 }
 
-function dedupeSimilarEvents(events, keyFields) {
+function normalizeIdentity(name) {
+  if (!name) return null;
+  const n = name.toString().trim().toLowerCase();
+  if (n === 'unknown' || n === '') return null;
+  return n;
+}
+
+function dedupeByTeamMinuteAndIdentity(events, identityField) {
   const deduped = [];
   events.forEach(e => {
-    const isDuplicate = deduped.some(existing =>
-      keyFields.every(f => (existing[f] || '').toString().toLowerCase().trim() === (e[f] || '').toString().toLowerCase().trim()) &&
-      Math.abs((existing.minute || 0) - (e.minute || 0)) <= 2
-    );
-    if (!isDuplicate) deduped.push(e);
+    const eIdentity = normalizeIdentity(e[identityField]);
+    const matchIndex = deduped.findIndex(existing => {
+      if (existing.team !== e.team) return false;
+      if (Math.abs((existing.minute || 0) - (e.minute || 0)) > 3) return false;
+      const existingIdentity = normalizeIdentity(existing[identityField]);
+      // If either side is "Unknown"/blank, treat same team+minute as the same event
+      if (!existingIdentity || !eIdentity) return true;
+      return existingIdentity === eIdentity;
+    });
+
+    if (matchIndex === -1) {
+      deduped.push(e);
+    } else {
+      // Prefer whichever version has a real (non-Unknown) name
+      const existing = deduped[matchIndex];
+      const existingIdentity = normalizeIdentity(existing[identityField]);
+      if (!existingIdentity && eIdentity) {
+        deduped[matchIndex] = { ...existing, [identityField]: e[identityField], minute: e.minute ?? existing.minute };
+      }
+    }
+  });
+  return deduped;
+}
+
+function normalizeIdentity(name) {
+  if (!name) return null;
+  const n = name.toString().trim().toLowerCase();
+  if (n === 'unknown' || n === '') return null;
+  return n;
+}
+
+function dedupeByTeamMinuteAndIdentity(events, identityField) {
+  const deduped = [];
+  events.forEach(e => {
+    const eIdentity = normalizeIdentity(e[identityField]);
+    const matchIndex = deduped.findIndex(existing => {
+      if (existing.team !== e.team) return false;
+      if (Math.abs((existing.minute || 0) - (e.minute || 0)) > 3) return false;
+      const existingIdentity = normalizeIdentity(existing[identityField]);
+      // If either side is "Unknown"/blank, treat same team+minute as the same event
+      if (!existingIdentity || !eIdentity) return true;
+      return existingIdentity === eIdentity;
+    });
+
+    if (matchIndex === -1) {
+      deduped.push(e);
+    } else {
+      // Prefer whichever version has a real (non-Unknown) name
+      const existing = deduped[matchIndex];
+      const existingIdentity = normalizeIdentity(existing[identityField]);
+      if (!existingIdentity && eIdentity) {
+        deduped[matchIndex] = { ...existing, [identityField]: e[identityField], minute: e.minute ?? existing.minute };
+      }
+    }
   });
   return deduped;
 }
 
 function dedupeSimilarGoals(goals) {
-  return dedupeSimilarEvents(goals, ['team', 'scorer']);
+  return dedupeByTeamMinuteAndIdentity(goals, 'scorer');
+}
+
+function dedupeSimilarEvents(events, keyFields) {
+  const identityField = keyFields.includes('player') ? 'player' : keyFields[keyFields.length - 1];
+  return dedupeByTeamMinuteAndIdentity(events, identityField);
 }
 
 function deriveScoreFromGoals(goals) {
