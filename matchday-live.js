@@ -105,13 +105,6 @@ function selectRelevantImages(combined, alreadySeen, maxImages = 15) {
   return pairs.slice(0, maxImages);
 }
 
-function deriveScoreFromGoals(goals) {
-  if (!goals || goals.length === 0) return null;
-  const home = goals.filter(g => g.team === 'home').length;
-  const away = goals.filter(g => g.team === 'away').length;
-  return `${home}-${away}`;
-}
-
 function mergeArrays(oldArr, newArr, keyFn) {
   const combined = [...(oldArr || [])];
   const existingKeys = new Set(combined.map(keyFn));
@@ -125,11 +118,55 @@ function mergeArrays(oldArr, newArr, keyFn) {
   return combined;
 }
 
+function dedupeSimilarEvents(events, keyFields) {
+  const deduped = [];
+  events.forEach(e => {
+    const isDuplicate = deduped.some(existing =>
+      keyFields.every(f => (existing[f] || '').toString().toLowerCase().trim() === (e[f] || '').toString().toLowerCase().trim()) &&
+      Math.abs((existing.minute || 0) - (e.minute || 0)) <= 2
+    );
+    if (!isDuplicate) deduped.push(e);
+  });
+  return deduped;
+}
+
+function dedupeSimilarGoals(goals) {
+  return dedupeSimilarEvents(goals, ['team', 'scorer']);
+}
+
+function deriveScoreFromGoals(goals) {
+  if (!goals || goals.length === 0) return null;
+  const home = goals.filter(g => g.team === 'home').length;
+  const away = goals.filter(g => g.team === 'away').length;
+  return `${home}-${away}`;
+}
+
 function mergeMatchData(previous, incoming) {
-  if (!previous) return incoming;
+  if (!previous) {
+    const dedupedGoals = dedupeSimilarGoals(incoming.goals || []);
+    return {
+      ...incoming,
+      goals: dedupedGoals,
+      score: deriveScoreFromGoals(dedupedGoals) || incoming.score,
+      yellowCards: dedupeSimilarEvents(incoming.yellowCards || [], ['team', 'player']),
+      redCards: dedupeSimilarEvents(incoming.redCards || [], ['team', 'player']),
+    };
+  }
+
+  const mergedGoals = dedupeSimilarGoals(
+    mergeArrays(previous.goals, incoming.goals, g => `${g.minute}-${g.scorer}-${g.team}`)
+  );
+  const mergedYellowCards = dedupeSimilarEvents(
+    mergeArrays(previous.yellowCards, incoming.yellowCards, c => `${c.minute}-${c.player}-${c.team}`),
+    ['team', 'player']
+  );
+  const mergedRedCards = dedupeSimilarEvents(
+    mergeArrays(previous.redCards, incoming.redCards, c => `${c.minute}-${c.player}-${c.team}`),
+    ['team', 'player']
+  );
 
   return {
-    score: deriveScoreFromGoals(mergeArrays(previous.goals, incoming.goals, g => `${g.minute}-${g.scorer}-${g.team}`)) || incoming.score || previous.score,
+    score: deriveScoreFromGoals(mergedGoals) || incoming.score || previous.score,
     matchStage: incoming.matchStage && incoming.matchStage !== 'scheduled' ? incoming.matchStage : previous.matchStage,
     lineups: {
       home: {
@@ -145,9 +182,9 @@ function mergeMatchData(previous, incoming) {
         officials: incoming.lineups?.away?.officials?.length ? incoming.lineups.away.officials : previous.lineups?.away?.officials || [],
       },
     },
-    goals: mergeArrays(previous.goals, incoming.goals, g => `${g.minute}-${g.scorer}-${g.team}`),
-    yellowCards: mergeArrays(previous.yellowCards, incoming.yellowCards, c => `${c.minute}-${c.player}-${c.team}`),
-    redCards: mergeArrays(previous.redCards, incoming.redCards, c => `${c.minute}-${c.player}-${c.team}`),
+    goals: mergedGoals,
+    yellowCards: mergedYellowCards,
+    redCards: mergedRedCards,
     substitutions: mergeArrays(previous.substitutions, incoming.substitutions, s => `${s.minute}-${s.playerOff}-${s.playerOn}`),
     sinBins: mergeArrays(previous.sinBins, incoming.sinBins, s => `${s.minute}-${s.player}-${s.team}`),
     injuries: mergeArrays(previous.injuries, incoming.injuries, i => `${i.minute}-${i.player}-${i.team}`),
@@ -233,6 +270,8 @@ async function run() {
 
   const prompt = `Below are X posts (and some attached images) from the home and away teams' official accounts on the day of a football match: ${fixture.homeAway === 'H' ? 'Sandbach United' : fixture.opposition} vs ${fixture.homeAway === 'H' ? fixture.opposition : 'Sandbach United'}, played ${fixture.date}${isCup ? ` (a cup competition: ${fixture.competitionNote} — this match could go to extra time and penalties)` : ' (a league match — normally 90 minutes, no extra time)'}.
 
+IMPORTANT: Both the home and away clubs may separately post about the SAME goal, card, or event (e.g. one posts "0-1" and the other posts "9' Kieran O'Connell" for the exact same goal). Do NOT report the same real-world event twice just because both clubs mentioned it — treat matching or clearly-corroborating mentions from each side as ONE event, not two.
+
 Posts:
 ${postsText}
 
@@ -278,7 +317,9 @@ Using information present in these posts AND any attached images (e.g. graphics 
   }
 }
 
-Be conservative with roughXG and matchControl when there is little material to base them on. If only a small number of posts are available (e.g. fewer than 3-4 substantive posts about actual play, excluding lineup/team-news graphics), keep the values close to neutral (e.g. xG near 0.0-0.3 for both sides, control near 50/50) and say so explicitly in "note" (e.g. "Too little commentary yet to estimate confidently"). Only move further from neutral once there is genuine descriptive commentary about chances, pressure, or dominance to base it on — do not infer confident numbers from a single vague post. Only populate wentToExtraTime, wentToPenalties, extraTime, penalties, and the extraTime period of roughXG/matchControl if there is clear evidence in the posts or images that the match actually went beyond 90 minutes. Otherwise set wentToExtraTime and wentToPenalties to false, and omit or leave extraTime periods as null/zero. Leave fields as empty arrays, null, or "unknown" if not mentioned. Do not invent details not present in the posts or images. For matchControl, "home" and "away" should be numbers that sum to 100 (a rough relative split). For roughXG, "home" and "away" should be small decimal numbers in the style of real Expected Goals figures (e.g. 0.3, 0.8, 1.4, 2.1) — a rough qualitative impression of good-chance volume/quality per side, not a real calculated statistic. If a period isn't covered by any posts, use 0.0 for xG and 50/50 for matchControl, and say so in "note".`;
+Be conservative with roughXG and matchControl when there is little material to base them on. If only a small number of posts are available (e.g. fewer than 3-4 substantive posts about actual play, excluding lineup/team-news graphics), keep the values close to neutral (e.g. xG near 0.0-0.3 for both sides, control near 50/50) and say so explicitly in "note" (e.g. "Too little commentary yet to estimate confidently"). Only move further from neutral once there is genuine descriptive commentary about chances, pressure, or dominance to base it on — do not infer confident numbers from a single vague post.
+
+Only populate wentToExtraTime, wentToPenalties, extraTime, penalties, and the extraTime period of roughXG/matchControl if there is clear evidence in the posts or images that the match actually went beyond 90 minutes. Otherwise set wentToExtraTime and wentToPenalties to false, and omit or leave extraTime periods as null/zero. Leave fields as empty arrays, null, or "unknown" if not mentioned. Do not invent details not present in the posts or images. For matchControl, "home" and "away" should be numbers that sum to 100 (a rough relative split). For roughXG, "home" and "away" should be small decimal numbers in the style of real Expected Goals figures (e.g. 0.3, 0.8, 1.4, 2.1) — a rough qualitative impression of good-chance volume/quality per side, not a real calculated statistic. If a period isn't covered by any posts, use 0.0 for xG and 50/50 for matchControl, and say so in "note".`;
 
   const imageBlocks = [];
   for (const { post, imgUrl } of newImagePairs) {
