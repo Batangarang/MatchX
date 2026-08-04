@@ -53,7 +53,7 @@ async function run() {
 
 ${postsText}
 
-Write a short, friendly 2-3 sentence summary for fans, covering things like recent form, team news, or anything notable. Do not use the word "today" or "this morning" anywhere in the summary, since it may be read days later — use durable phrasing instead (e.g. "in their last match," "recently," or the actual date). Plain text only, no markdown, no headers.`,
+Write a short, friendly 2-3 sentence summary for fans, covering things like recent form, team news, or anything notable. Use player and club names exactly as spelled in the posts — do not guess, expand, or alter any name. Do not use the word "today" or "this morning" anywhere in the summary, since it may be read days later — use durable phrasing instead (e.g. "in their last match," "recently," or the actual date). Plain text only, no markdown, no headers.`,
       }],
     }),
   });
