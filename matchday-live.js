@@ -34,6 +34,7 @@ function findHandle(clubName) {
 
 function withinMatchWindow(kickoff, competitionNote) {
   if (process.env.GITHUB_EVENT_NAME === 'workflow_dispatch') return true;
+  if (process.env.MATCHDAY_TEST_DATE) return true; // testing a specific past match — always proceed
   if (!kickoff) return false;
 
   const isCup = competitionNote && /cup|vase|trophy/i.test(competitionNote);
