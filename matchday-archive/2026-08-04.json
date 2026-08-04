@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-08-04T19:07:00.915Z",
+  "generatedAt": "2026-08-04T19:14:53.953Z",
   "fixtureDate": "2026-08-04",
   "kickoff": "19:45",
   "homeTeam": "Foley Meir",
   "awayTeam": "Sandbach United",
-  "postsUsed": 13,
+  "postsUsed": 17,
   "imagesAnalyzedThisRun": 0,
   "totalImagesAnalyzed": 6,
   "match": {
-    "score": "0-1",
+    "score": "1-1",
     "matchStage": "first_half",
     "lineups": {
       "home": {
@@ -47,10 +47,20 @@
         "minute": 9,
         "team": "away",
         "scorer": "Kieran O'Connell"
+      },
+      {
+        "minute": 30,
+        "team": "home",
+        "scorer": "Unknown"
       }
-    
     ],
-    "yellowCards": [],
+    "yellowCards": [
+      {
+        "minute": 24,
+        "team": "home",
+        "player": "Robinson"
+      }
+    ],
     "redCards": [],
     "substitutions": [],
     "sinBins": [],
@@ -72,30 +82,31 @@
     "roughXG": {
       "firstHalf": {
         "home": 0.4,
-        "away": 0.3,
-        "note": "Foley had an early chance (shot straight at keeper at 3 mins) and another chance tipped over at 22 mins. Sandbach scored from a corner at 8 mins and had a Bevan effort blocked at 18 mins. Limited material but Foley slightly more threatening."
+        "away": 0.2,
+        "note": "Foley had an early chance with a direct shot at keeper (3'), and later a free kick finish (30'). Sandbach scored from a set piece but limited open play chances shown."
       },
       "secondHalf": {
         "home": 0,
         "away": 0,
-        "note": "No second half posts available."
+        "note": "No second half posts available; match stage stops at 30 minutes into first half."
       },
       "extraTime": {
         "home": 0,
         "away": 0,
-        "note": "No extra time played."
+        "note": "Not applicable; match did not go to extra time."
       },
       "total": {
         "home": 0.4,
-        "away": 0.3,
-        "note": "Match only covered through 22 mins of first half. Foley slightly more active in chance creation despite going behind."
-      }
+        "away": 0.2,
+        "note": "Based on first 30 minutes only. Foley showed more attacking intent with chances; Sandbach clinical from set play. Incomplete match data."
+      },
+      "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure. Values are illustrative, not calculated from actual shot data."
     },
     "matchControl": {
       "firstHalf": {
         "home": 55,
         "away": 45,
-        "note": "Foley had early chances and seemed to press; Sandbach clinical on the counter from a corner. Limited commentary but suggests Foley marginally dominant before falling behind."
+        "note": "Foley created more chances and scored an equalizing free kick; Sandbach defended and scored from set play."
       },
       "secondHalf": {
         "home": 50,
@@ -105,13 +116,14 @@
       "extraTime": {
         "home": 50,
         "away": 50,
-        "note": "No extra time played."
+        "note": "Not applicable; match did not go to extra time."
       },
       "total": {
-        "home": 55,
-        "away": 45,
-        "note": "Match only covered through 22 mins. Estimate based on early phase only; Foley appeared to have slightly more initiative before Sandbach's corner goal."
-      }
+        "home": 50,
+        "away": 50,
+        "note": "Match incomplete; only first 30 minutes covered by posts. Cannot confidently assess full-match control."
+      },
+      "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
   }
 }
