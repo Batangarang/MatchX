@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-08-04T20:00:48.967Z",
+  "generatedAt": "2026-08-04T20:06:02.252Z",
   "fixtureDate": "2026-08-04",
   "kickoff": "19:45",
   "homeTeam": "Foley Meir",
   "awayTeam": "Sandbach United",
-  "postsUsed": 32,
+  "postsUsed": 33,
   "imagesAnalyzedThisRun": 0,
   "totalImagesAnalyzed": 10,
   "match": {
-    "score": "2-1",
+    "score": "3-1",
     "matchStage": "second_half",
     "lineups": {
       "home": {
@@ -57,6 +57,11 @@
         "minute": 38,
         "team": "home",
         "scorer": "Archie Ellams"
+      },
+      {
+        "minute": 65,
+        "team": "home",
+        "scorer": "Unknown"
       }
     ],
     "yellowCards": [
@@ -74,6 +79,11 @@
         "minute": 44,
         "team": "away",
         "player": "Robbie Hatton"
+      },
+      {
+        "minute": 43,
+        "team": "away",
+        "player": "Sandbach number 10"
       }
     ],
     "redCards": [],
@@ -111,45 +121,45 @@
       "firstHalf": {
         "home": 0.8,
         "away": 0.4,
-        "note": "Foley created several chances from set pieces and open play; Sandbach scored early but had fewer clear-cut opportunities. Half-time commentary noted Foley were 'the happier side'."
+        "note": "Foley created multiple chances and went 2-1 up by half-time. Sandbach scored early from a set-piece but had fewer clear opportunities."
       },
       "secondHalf": {
-        "home": 0.3,
-        "away": 0.4,
-        "note": "Limited posts covering second-half action. Sandbach had one early chance over the bar; Foley had one miss inside the box at 52 mins. Insufficient detail to estimate confidently."
+        "home": 0.6,
+        "away": 0.3,
+        "note": "Foley extended lead to 3-1 by 65 minutes. Sandbach had one early second-half chance that went over the bar but created little else."
       },
       "extraTime": {
         "home": 0,
         "away": 0,
-        "note": "No extra time played."
+        "note": "Match did not go to extra time."
       },
       "total": {
-        "home": 1.1,
-        "away": 0.8,
-        "note": "Foley scored twice from set pieces; Sandbach scored once early. Posts describe multiple chances and saves but lack comprehensive second-half coverage."
+        "home": 1.4,
+        "away": 0.7,
+        "note": "Foley dominated, particularly in the first half and early second half, scoring 3 goals. Sandbach's goal came from a set-piece early on but they struggled to create consistent chances."
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure. Values are illustrative, not calculated from actual shot data."
     },
     "matchControl": {
       "firstHalf": {
-        "home": 60,
-        "away": 40,
-        "note": "Foley took the lead through set-piece play and created multiple chances. Sandbach scored first but appeared more reactive thereafter. Foley described as 'the happier side' at half-time."
+        "home": 65,
+        "away": 35,
+        "note": "Foley created more chances and took the lead twice, though Sandbach scored first. Foley went in 2-1 up."
       },
       "secondHalf": {
-        "home": 50,
-        "away": 50,
-        "note": "Very limited commentary on second-half play. Only two substantive posts describe chances; insufficient detail to estimate control confidently."
+        "home": 70,
+        "away": 30,
+        "note": "Foley maintained control and extended their lead to 3-1 by 65 minutes. Sandbach made substitutions and attempted to respond but created limited chances."
       },
       "extraTime": {
         "home": 0,
         "away": 0,
-        "note": "No extra time played."
+        "note": "Match did not go to extra time."
       },
       "total": {
-        "home": 55,
-        "away": 45,
-        "note": "Foley took the lead twice and appeared to control the first half. Second-half action poorly documented in posts; final score remained 2-1 to Foley at last update (52 mins)."
+        "home": 67,
+        "away": 33,
+        "note": "Foley dominated overall, especially in the second half. They were the more dangerous team throughout and converted their chances more effectively."
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
