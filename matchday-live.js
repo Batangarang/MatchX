@@ -105,6 +105,13 @@ function selectRelevantImages(combined, alreadySeen, maxImages = 15) {
   return pairs.slice(0, maxImages);
 }
 
+function deriveScoreFromGoals(goals) {
+  if (!goals || goals.length === 0) return null;
+  const home = goals.filter(g => g.team === 'home').length;
+  const away = goals.filter(g => g.team === 'away').length;
+  return `${home}-${away}`;
+}
+
 function mergeArrays(oldArr, newArr, keyFn) {
   const combined = [...(oldArr || [])];
   const existingKeys = new Set(combined.map(keyFn));
@@ -122,7 +129,7 @@ function mergeMatchData(previous, incoming) {
   if (!previous) return incoming;
 
   return {
-    score: incoming.score || previous.score,
+    score: deriveScoreFromGoals(mergeArrays(previous.goals, incoming.goals, g => `${g.minute}-${g.scorer}-${g.team}`)) || incoming.score || previous.score,
     matchStage: incoming.matchStage && incoming.matchStage !== 'scheduled' ? incoming.matchStage : previous.matchStage,
     lineups: {
       home: {
