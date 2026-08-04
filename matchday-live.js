@@ -110,11 +110,11 @@ Using ONLY information present in these posts, build a structured match summary.
   "sinBins": [{ "minute": null, "team": "home or away", "player": "string" }],
   "injuries": [{ "minute": null, "team": "home or away", "player": "string", "note": "string" }],
   "addedTime": { "firstHalf": null, "secondHalf": null },
- "roughXG": {
+"roughXG": {
     "firstHalf": { "home": number, "away": number, "note": "string" },
     "secondHalf": { "home": number, "away": number, "note": "string" },
     "total": { "home": number, "away": number, "note": "string" },
-    "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
+    "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure. Values are illustrative, not calculated from actual shot data."
   },
   "matchControl": {
     "firstHalf": { "home": number, "away": number, "note": "string" },
@@ -124,9 +124,8 @@ Using ONLY information present in these posts, build a structured match summary.
   }
 }
 
-Leave fields as empty arrays, null, or "unknown" if not mentioned. Do not invent details not present in the posts.`;
-For roughXG and matchControl, "home" and "away" should be numbers that sum to 100 (a rough relative split, not literal xG or possession values), representing your best estimate of which side had the edge based on the commentary. If a half isn't covered by any posts, estimate 50/50 and say so in "note".
-  
+Leave fields as empty arrays, null, or "unknown" if not mentioned. Do not invent details not present in the posts. For matchControl, "home" and "away" should be numbers that sum to 100 (a rough relative split), representing your best estimate of which side had the edge based on the commentary. For roughXG, "home" and "away" should instead be small decimal numbers in the style of real Expected Goals figures (e.g. 0.3, 0.8, 1.4, 2.1) — a rough qualitative impression of good-chance volume/quality per side based on how the posts describe the play, not a real calculated statistic. If a half isn't covered by any posts, use 0.0 for xG and 50/50 for matchControl, and say so in "note".`;
+
 const res = await fetch('https://api.anthropic.com/v1/messages', {
     method: 'POST',
     headers: {
@@ -157,6 +156,7 @@ const res = await fetch('https://api.anthropic.com/v1/messages', {
   const output = {
     generatedAt: new Date().toISOString(),
     fixtureDate: dateStr,
+    kickoff: fixture.kickoff,
     homeTeam: fixture.homeAway === 'H' ? 'Sandbach United' : fixture.opposition,
     awayTeam: fixture.homeAway === 'H' ? fixture.opposition : 'Sandbach United',
     postsUsed: combined.length,

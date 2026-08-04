@@ -38,6 +38,35 @@
       letter-spacing: 0.5px;
       color: var(--navy);
     }
+
+    .header-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 8px;
+    }
+    .status-badge {
+      font-size: 11px;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 20px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .status-live {
+      background: rgba(242,167,27,0.15);
+      border: 1px solid var(--amber);
+      color: #b57a00;
+    }
+    .status-upcoming {
+      background: var(--paper);
+      color: var(--muted);
+    }
+    .status-finished {
+      background: var(--paper);
+      color: var(--muted);
+    }
+
     .score { font-size: 28px; font-weight: 700; color: var(--navy); text-align: center; }
     .teams { display: flex; justify-content: space-between; font-size: 13px; color: var(--muted); }
     .disclaimer { font-size: 11px; color: var(--muted); margin-top: 8px; font-style: italic; }
@@ -68,11 +97,42 @@
 </head>
 <body>
   <a class="back" href="index.html">← Back</a>
-  <h1 id="page-title">Matchday Live</h1>
+  <div class="header-row">
+    <h1 id="page-title">Matchday Live</h1>
+    <span class="status-badge" id="status-badge"></span>
+  </div>
 
   <div id="content">Loading...</div>
 
   <script>
+    function getMatchStatus(fixtureDate, kickoff) {
+      if (!fixtureDate || !kickoff) return { label: '', className: '' };
+
+      const [hh, min] = kickoff.split(':');
+      const kickoffTime = new Date(`${fixtureDate}T${hh}:${min}:00Z`);
+      // Convert from UK local kickoff to a real timestamp — kickoff times on
+      // nwcfl.com are UK local, so adjust for BST (UTC+1) during summer months.
+      const isBST = kickoffTime.getUTCMonth() > 2 && kickoffTime.getUTCMonth() < 9;
+      const kickoffUTC = new Date(kickoffTime.getTime() - (isBST ? 60 * 60 * 1000 : 0));
+
+      const now = new Date();
+      const minutesSinceKickoff = (now - kickoffUTC) / 60000;
+
+      if (minutesSinceKickoff < 0) {
+        return { label: 'Upcoming', className: 'status-upcoming' };
+      }
+      if (minutesSinceKickoff <= 45) {
+        return { label: `Live — ${Math.floor(minutesSinceKickoff)}'`, className: 'status-live' };
+      }
+      if (minutesSinceKickoff <= 60) {
+        return { label: 'Half Time', className: 'status-live' };
+      }
+      if (minutesSinceKickoff <= 105) {
+        return { label: `Live — ${Math.floor(minutesSinceKickoff - 15)}'`, className: 'status-live' };
+      }
+      return { label: 'Full Time', className: 'status-finished' };
+    }
+
     function donut(homePct, awayPct, homeColor, awayColor) {
       const homeDeg = (homePct / 100) * 360;
       return `background: conic-gradient(${homeColor} 0deg ${homeDeg}deg, ${awayColor} ${homeDeg}deg 360deg);`;
