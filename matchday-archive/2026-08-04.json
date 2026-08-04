@@ -57,11 +57,6 @@
         "minute": 38,
         "team": "home",
         "scorer": "Archie Ellams"
-      },
-      {
-        "minute": 38,
-        "team": "home",
-        "scorer": "Archie"
       }
     ],
     "yellowCards": [
@@ -73,22 +68,12 @@
       {
         "minute": 28,
         "team": "home",
-        "player": "Unknown (FM 8)"
-      },
-      {
-        "minute": 28,
-        "team": "home",
         "player": "FM 8"
       },
       {
         "minute": 44,
         "team": "away",
         "player": "Robbie Hatton"
-      },
-      {
-        "minute": 43,
-        "team": "away",
-        "player": "Sandbach number 10"
       }
     ],
     "redCards": [],

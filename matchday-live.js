@@ -120,9 +120,31 @@ function mergeArrays(oldArr, newArr, keyFn) {
 
 function normalizeIdentity(name) {
   if (!name) return null;
-  const n = name.toString().trim().toLowerCase();
+  let n = name.toString().trim().toLowerCase();
   if (n === 'unknown' || n === '') return null;
-  return n;
+  // Strip bracketed asides like "(FM 8)" down to just the core content when that's ALL there is
+  n = n.replace(/^unknown\s*\(([^)]+)\)$/i, '$1').trim();
+  // Strip generic role/number phrasing like "sandbach number 10", "player 10", "#10"
+  n = n.replace(/\b(number|no\.?|#)\s*(\d+)/i, 'shirt$2').trim();
+  return n || null;
+}
+
+function namesLikelyMatch(a, b) {
+  if (!a || !b) return false;
+  if (a === b) return true;
+
+  // One name is a prefix/substring of the other (e.g. "archie" vs "archie ellams")
+  if (a.includes(b) || b.includes(a)) return true;
+
+  // Compare individual words — if any word overlaps (e.g. shared first name, or
+  // shared shirt number token like "shirt10" appearing in both), treat as a match
+  const wordsA = new Set(a.split(/\s+/));
+  const wordsB = new Set(b.split(/\s+/));
+  for (const w of wordsA) {
+    if (w.length > 2 && wordsB.has(w)) return true;
+  }
+
+  return false;
 }
 
 function dedupeByTeamMinuteAndIdentity(events, identityField) {
@@ -133,52 +155,17 @@ function dedupeByTeamMinuteAndIdentity(events, identityField) {
       if (existing.team !== e.team) return false;
       if (Math.abs((existing.minute || 0) - (e.minute || 0)) > 3) return false;
       const existingIdentity = normalizeIdentity(existing[identityField]);
-      // If either side is "Unknown"/blank, treat same team+minute as the same event
-      if (!existingIdentity || !eIdentity) return true;
-      return existingIdentity === eIdentity;
+      if (!existingIdentity || !eIdentity) return true; // either side vague/unknown — assume same event
+      return namesLikelyMatch(existingIdentity, eIdentity);
     });
 
     if (matchIndex === -1) {
       deduped.push(e);
     } else {
-      // Prefer whichever version has a real (non-Unknown) name
       const existing = deduped[matchIndex];
       const existingIdentity = normalizeIdentity(existing[identityField]);
-      if (!existingIdentity && eIdentity) {
-        deduped[matchIndex] = { ...existing, [identityField]: e[identityField], minute: e.minute ?? existing.minute };
-      }
-    }
-  });
-  return deduped;
-}
-
-function normalizeIdentity(name) {
-  if (!name) return null;
-  const n = name.toString().trim().toLowerCase();
-  if (n === 'unknown' || n === '') return null;
-  return n;
-}
-
-function dedupeByTeamMinuteAndIdentity(events, identityField) {
-  const deduped = [];
-  events.forEach(e => {
-    const eIdentity = normalizeIdentity(e[identityField]);
-    const matchIndex = deduped.findIndex(existing => {
-      if (existing.team !== e.team) return false;
-      if (Math.abs((existing.minute || 0) - (e.minute || 0)) > 3) return false;
-      const existingIdentity = normalizeIdentity(existing[identityField]);
-      // If either side is "Unknown"/blank, treat same team+minute as the same event
-      if (!existingIdentity || !eIdentity) return true;
-      return existingIdentity === eIdentity;
-    });
-
-    if (matchIndex === -1) {
-      deduped.push(e);
-    } else {
-      // Prefer whichever version has a real (non-Unknown) name
-      const existing = deduped[matchIndex];
-      const existingIdentity = normalizeIdentity(existing[identityField]);
-      if (!existingIdentity && eIdentity) {
+      const eIsMoreSpecific = eIdentity && (!existingIdentity || eIdentity.length > existingIdentity.length);
+      if (eIsMoreSpecific) {
         deduped[matchIndex] = { ...existing, [identityField]: e[identityField], minute: e.minute ?? existing.minute };
       }
     }
