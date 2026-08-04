@@ -5,6 +5,23 @@ const { getUserIdCached } = require('./user-id-cache.js');
 const BEARER_TOKEN = process.env.X_BEARER_TOKEN;
 const ANTHROPIC_KEY = process.env.ANTHROPIC_API_KEY;
 
+function withinMatchWindow(kickoff) {
+  if (process.env.GITHUB_EVENT_NAME === 'workflow_dispatch') return true; // manual runs always proceed
+  if (!kickoff) return false;
+
+  const [hh, min] = kickoff.split(':');
+  const now = new Date();
+  const kickoffToday = new Date();
+  kickoffToday.setUTCHours(parseInt(hh), parseInt(min), 0, 0);
+
+  // UK kickoff times are local — adjust roughly for BST
+  const isBST = now.getUTCMonth() > 2 && now.getUTCMonth() < 9;
+  if (isBST) kickoffToday.setUTCHours(kickoffToday.getUTCHours() - 1);
+
+  const minutesFromKickoff = (now - kickoffToday) / 60000;
+  return minutesFromKickoff >= -30 && minutesFromKickoff <= 150; // 30 min before to 2.5hrs after
+}
+
 // For testing against a past date: set MATCHDAY_TEST_DATE="2026-08-01"
 function getTargetFixture() {
   const data = JSON.parse(fs.readFileSync('data.json', 'utf-8'));
@@ -57,6 +74,11 @@ async function run() {
   const fixture = getTargetFixture();
   if (!fixture) {
     console.log('No matchday fixture found — skipping.');
+    return;
+  }
+
+  if (!withinMatchWindow(fixture.kickoff)) {
+    console.log('Outside the matchday window — skipping.');
     return;
   }
 
@@ -153,7 +175,7 @@ const res = await fetch('https://api.anthropic.com/v1/messages', {
     throw new Error(`Failed to parse AI response as JSON: ${err.message}\nRaw: ${raw}`);
   }
 
-  const output = {
+  cconst output = {
     generatedAt: new Date().toISOString(),
     fixtureDate: dateStr,
     kickoff: fixture.kickoff,
@@ -163,8 +185,34 @@ const res = await fetch('https://api.anthropic.com/v1/messages', {
     match: parsed,
   };
 
+  // Archive this match permanently, keyed by date — never overwritten by future matches
+  if (!fs.existsSync('matchday-archive')) fs.mkdirSync('matchday-archive');
+  fs.writeFileSync(`matchday-archive/${dateStr}.json`, JSON.stringify(output, null, 2));
+
+  // Maintain an index of every archived match, so pages can link to past ones
+  let index = [];
+  if (fs.existsSync('matchday-index.json')) {
+    index = JSON.parse(fs.readFileSync('matchday-index.json', 'utf-8'));
+  }
+  const entry = {
+    date: dateStr,
+    homeTeam: output.homeTeam,
+    awayTeam: output.awayTeam,
+    score: parsed.score || null,
+  };
+  const existing = index.find(e => e.date === dateStr);
+  if (existing) {
+    Object.assign(existing, entry);
+  } else {
+    index.push(entry);
+  }
+  index.sort((a, b) => new Date(b.date) - new Date(a.date));
+  fs.writeFileSync('matchday-index.json', JSON.stringify(index, null, 2));
+
+  // Also keep as "latest" — what the homepage snapshot card reads
   fs.writeFileSync('matchday-live.json', JSON.stringify(output, null, 2));
-  console.log(`Saved matchday-live.json (${combined.length} posts used)`);
+
+  console.log(`Saved matchday-archive/${dateStr}.json (${combined.length} posts used)`);
 }
 
 run().catch(err => {
