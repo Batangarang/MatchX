@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-08-04T20:25:24.424Z",
+  "generatedAt": "2026-08-04T20:30:34.527Z",
   "fixtureDate": "2026-08-04",
   "kickoff": "19:45",
   "homeTeam": "Foley Meir",
   "awayTeam": "Sandbach United",
-  "postsUsed": 39,
+  "postsUsed": 40,
   "imagesAnalyzedThisRun": 0,
   "totalImagesAnalyzed": 11,
   "match": {
@@ -73,7 +73,7 @@
       {
         "minute": 28,
         "team": "home",
-        "player": "FM 8"
+        "player": "FM 8 (Cope)"
       },
       {
         "minute": 44,
@@ -115,6 +115,12 @@
         "team": "away",
         "playerOff": "Cope",
         "playerOn": "Cain"
+      },
+      {
+        "minute": 86,
+        "team": "home",
+        "playerOff": "Kyle Foley",
+        "playerOn": "Callum Hamnett"
       }
     ],
     "sinBins": [],
@@ -135,47 +141,47 @@
     },
     "roughXG": {
       "firstHalf": {
-        "home": 0.8,
-        "away": 0.5,
-        "note": "Foley had early chances and converted 2 set-piece goals. Sandbach scored from a free kick but had limited clear openings in first half."
+        "home": 1.2,
+        "away": 0.3,
+        "note": "Foley created multiple chances including a clear header from a free kick that went in; Sandbach limited to their early free kick goal"
       },
       "secondHalf": {
-        "home": 1.1,
-        "away": 0.4,
-        "note": "Foley added a third goal from a well-struck shot outside the box. Sandbach had one good header miss and some chances but were largely under pressure."
+        "home": 1.8,
+        "away": 0.5,
+        "note": "Foley dominated with Lucas Baker's well-struck shot from outside the box and other chances; Sandbach created limited opportunities despite Hatton's chances"
       },
       "extraTime": {
         "home": 0,
         "away": 0,
-        "note": "Match did not go to extra time."
+        "note": "No extra time played"
       },
       "total": {
-        "home": 1.9,
-        "away": 0.9,
-        "note": "Foley dominated with more and better chances overall, converting 3 goals. Sandbach had occasional openings but were outplayed, particularly in the second half."
+        "home": 3,
+        "away": 0.8,
+        "note": "Foley created substantially more quality chances across the match, reflected in the 3-1 final scoreline"
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure. Values are illustrative, not calculated from actual shot data."
     },
     "matchControl": {
       "firstHalf": {
-        "home": 55,
-        "away": 45,
-        "note": "Foley had early chances and came from behind to lead 2-1 by half-time. Sandbach took the lead early but Foley responded with two set-piece goals."
+        "home": 60,
+        "away": 40,
+        "note": "Foley recovered from Sandbach's early goal to dominate set piece opportunities and score twice; Sandbach rode their early lead but were pressed back"
       },
       "secondHalf": {
-        "home": 70,
-        "away": 30,
-        "note": "Foley dominated the second half, added a third goal early on, and Sandbach struggled to create chances or mount a comeback."
+        "home": 75,
+        "away": 25,
+        "note": "Foley controlled the match after the break, scored again early in the half, and created sustained pressure; Sandbach offered only sporadic chances"
       },
       "extraTime": {
-        "home": 0,
-        "away": 0,
-        "note": "Match did not go to extra time."
+        "home": 50,
+        "away": 50,
+        "note": "No extra time played"
       },
       "total": {
-        "home": 62,
-        "away": 38,
-        "note": "Foley controlled the match overall, especially after going ahead. Sandbach showed some threat early but were outplayed for most of the game."
+        "home": 68,
+        "away": 32,
+        "note": "Foley dominated overall, particularly in the second half, though Sandbach's early goal briefly gave them momentum"
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
