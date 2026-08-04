@@ -68,6 +68,23 @@
       color: rgba(255,255,255,0.65);
       margin-top: 2px;
     }
+
+    .status-badge {
+      font-size: 11px;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 20px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .status-live {
+      background: rgba(242,167,27,0.15);
+      border: 1px solid var(--amber);
+      color: #b57a00;
+    }
+    .status-upcoming { background: var(--paper); color: var(--muted); }
+    .status-finished { background: var(--paper); color: var(--muted); }
+
     .live-badge {
       display: none;
       align-items: center;
@@ -203,6 +220,20 @@
       </div>
     </div>
     <div class="live-badge" id="live-badge"><span class="live-dot"></span> Matchday</div>
+  </div>
+
+  <div class="card" id="matchday-card" style="display: none;">
+    <h2>Matchday</h2>
+    <a href="matchday.html" style="text-decoration: none; color: inherit; display: block;">
+      <div class="header-row" style="display: flex; justify-content: space-between; align-items: center;">
+        <div>
+          <div class="fixture" id="matchday-teams"></div>
+          <div class="score" id="matchday-score" style="font-size: 24px; font-weight: 700; color: var(--navy); margin-top: 4px;"></div>
+        </div>
+        <span class="status-badge" id="matchday-status-badge"></span>
+      </div>
+      <div style="font-size: 12px; color: var(--royal); margin-top: 8px;">Tap for full match stats →</div>
+    </a>
   </div>
 
   <div class="card">
@@ -420,6 +451,51 @@
       fixturesCarousel.setCount(fixtures.length);
     }
 
+    function getMatchStatus(fixtureDate, kickoff) {
+      if (!fixtureDate || !kickoff) return { label: '', className: '' };
+
+      const [hh, min] = kickoff.split(':');
+      const kickoffTime = new Date(`${fixtureDate}T${hh}:${min}:00Z`);
+      const isBST = kickoffTime.getUTCMonth() > 2 && kickoffTime.getUTCMonth() < 9;
+      const kickoffUTC = new Date(kickoffTime.getTime() - (isBST ? 60 * 60 * 1000 : 0));
+
+      const now = new Date();
+      const minutesSinceKickoff = (now - kickoffUTC) / 60000;
+
+      if (minutesSinceKickoff < 0) return { label: 'Upcoming', className: 'status-upcoming' };
+      if (minutesSinceKickoff <= 45) return { label: `Live — ${Math.floor(minutesSinceKickoff)}'`, className: 'status-live' };
+      if (minutesSinceKickoff <= 60) return { label: 'Half Time', className: 'status-live' };
+      if (minutesSinceKickoff <= 105) return { label: `Live — ${Math.floor(minutesSinceKickoff - 15)}'`, className: 'status-live' };
+      return { label: 'Full Time', className: 'status-finished' };
+    }
+
+    function isFixtureToday(fixtureDate) {
+      if (!fixtureDate) return false;
+      const today = new Date();
+      const todayStr = today.getFullYear() + '-' + String(today.getMonth() + 1).padStart(2, '0') + '-' + String(today.getDate()).padStart(2, '0');
+      return fixtureDate === todayStr;
+    }
+
+    fetch('matchday-live.json?t=' + Date.now())
+      .then(res => res.json())
+      .then(data => {
+        // Only show this card if the match data is actually from today —
+        // otherwise a stale file from a past match would wrongly show on a quiet day
+        if (!isFixtureToday(data.fixtureDate)) return;
+
+        document.getElementById('matchday-card').style.display = 'block';
+        document.getElementById('matchday-teams').textContent = `${data.homeTeam} vs ${data.awayTeam}`;
+        document.getElementById('matchday-score').textContent = data.match?.score || 'vs';
+
+        const status = getMatchStatus(data.fixtureDate, data.kickoff);
+        const badge = document.getElementById('matchday-status-badge');
+        badge.textContent = status.label;
+        badge.className = 'status-badge ' + status.className;
+      })
+      .catch(() => {
+        // No matchday-live.json, or not today — card stays hidden, which is correct
+      });
+    
     fetch('data.json')
       .then(res => res.json())
       .then(data => {
