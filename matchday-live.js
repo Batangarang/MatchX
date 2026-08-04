@@ -34,7 +34,7 @@ function findHandle(clubName) {
 
 function withinMatchWindow(kickoff, competitionNote) {
   if (process.env.GITHUB_EVENT_NAME === 'workflow_dispatch') return true;
-  if (process.env.MATCHDAY_TEST_DATE) return true; // testing a specific past match — always proceed
+  if (process.env.MATCHDAY_TEST_DATE) return true;
   if (!kickoff) return false;
 
   const isCup = competitionNote && /cup|vase|trophy/i.test(competitionNote);
@@ -352,7 +352,11 @@ Only populate wentToExtraTime, wentToPenalties, extraTime, penalties, and the ex
   index.sort((a, b) => new Date(b.date) - new Date(a.date));
   fs.writeFileSync('matchday-index.json', JSON.stringify(index, null, 2));
 
-  fs.writeFileSync('matchday-live.json', JSON.stringify(output, null, 2));
+  // Only update the "latest" file for genuinely live runs — a MATCHDAY_TEST_DATE
+  // backfill of a past match should never overwrite today's real live data.
+  if (!process.env.MATCHDAY_TEST_DATE) {
+    fs.writeFileSync('matchday-live.json', JSON.stringify(output, null, 2));
+  }
 
   console.log(`Saved ${archiveFile} (${combined.length} posts, ${imageBlocks.length / 2} new images this run, ${alreadySeen.size} total)`);
 }
