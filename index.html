@@ -361,7 +361,7 @@
     const resultsCarousel = createCarousel('results-track', 'results-dots', 'results-count');
     const xPostsCarousel = createCarousel('xposts-track', 'xposts-dots', 'xposts-count');
 
-    // ---------- Fixtures & Last Results ----------
+    // ---------- Helpers ----------
 
     function downloadICS(fixture) {
       const [, dd, mm, yy] = fixture.date.match(/(\d{2})\/(\d{2})\/(\d{2})/);
@@ -507,6 +507,13 @@
              d.getUTCDate() === today.getUTCDate();
     }
 
+    function toISODate(ddmmyy) {
+      const [, dd, mm, yy] = ddmmyy.match(/(\d{2})\/(\d{2})\/(\d{2})/);
+      return `20${yy}-${mm}-${dd}`;
+    }
+
+    // ---------- Matchday snapshot card ----------
+
     fetch('matchday-live.json?t=' + Date.now())
       .then(res => res.json())
       .then(data => {
@@ -523,49 +530,45 @@
       })
       .catch(() => {});
 
-    let matchdayIndex = [];
+    // ---------- Fixtures & Last Results (index loaded first, so stats links are reliable) ----------
+
     fetch('matchday-index.json?t=' + Date.now())
       .then(res => res.json())
-      .then(idx => { matchdayIndex = idx; })
-      .catch(() => {});
+      .catch(() => [])
+      .then(matchdayIndex => {
+        fetch('data.json?t=' + Date.now())
+          .then(res => res.json())
+          .then(data => {
+            window.latestFixtures = data.nextFixtures || (data.nextFixture ? [data.nextFixture] : []);
+            renderFixturesCarousel();
 
-    function toISODate(ddmmyy) {
-      const [, dd, mm, yy] = ddmmyy.match(/(\d{2})\/(\d{2})\/(\d{2})/);
-      return `20${yy}-${mm}-${dd}`;
-    }
-
-    fetch('data.json?t=' + Date.now())
-      .then(res => res.json())
-      .then(data => {
-        window.latestFixtures = data.nextFixtures || (data.nextFixture ? [data.nextFixture] : []);
-        renderFixturesCarousel();
-
-        const results = data.lastResults || (data.lastResult ? [data.lastResult] : []);
-        if (results.length > 0) {
-          document.getElementById('results-track').innerHTML = results.map(r => {
-            const iso = toISODate(r.date);
-            const hasStats = matchdayIndex.some(e => e.date === iso);
-            const statsLink = hasStats ? `<a href="matchday.html?date=${iso}" class="btn">📊 Match stats</a>` : '';
-            return `
-              <div style="padding: 4px 2px 0;">
-                <div class="fixture">${r.homeAway === 'H' ? 'Sandbach United' : r.opposition} ${r.score} ${r.homeAway === 'H' ? r.opposition : 'Sandbach United'}</div>
-                <div class="meta">${r.date}</div>
-                <div style="margin-top: 6px;">
-                  ${statsLink}
-                  <button class="btn" onclick='shareResult(${JSON.stringify(r)})'>📤 Share</button>
-                </div>
-              </div>
-            `;
-          }).join('');
-          resultsCarousel.setCount(results.length);
-        } else {
-          document.getElementById('results-track').innerHTML = '<div>No results yet this season</div>';
-          resultsCarousel.setCount(0);
-        }
-      })
-      .catch(err => {
-        document.getElementById('fixtures-track').textContent = 'Failed to load data';
-        console.error(err);
+            const results = data.lastResults || (data.lastResult ? [data.lastResult] : []);
+            if (results.length > 0) {
+              document.getElementById('results-track').innerHTML = results.map(r => {
+                const iso = toISODate(r.date);
+                const hasStats = matchdayIndex.some(e => e.date === iso);
+                const statsLink = hasStats ? `<a href="matchday.html?date=${iso}" class="btn">📊 Match stats</a>` : '';
+                return `
+                  <div style="padding: 4px 2px 0;">
+                    <div class="fixture">${r.homeAway === 'H' ? 'Sandbach United' : r.opposition} ${r.score} ${r.homeAway === 'H' ? r.opposition : 'Sandbach United'}</div>
+                    <div class="meta">${r.date}</div>
+                    <div style="margin-top: 6px;">
+                      ${statsLink}
+                      <button class="btn" onclick='shareResult(${JSON.stringify(r)})'>📤 Share</button>
+                    </div>
+                  </div>
+                `;
+              }).join('');
+              resultsCarousel.setCount(results.length);
+            } else {
+              document.getElementById('results-track').innerHTML = '<div>No results yet this season</div>';
+              resultsCarousel.setCount(0);
+            }
+          })
+          .catch(err => {
+            document.getElementById('fixtures-track').textContent = 'Failed to load data';
+            console.error(err);
+          });
       });
 
     fetch('history.json?t=' + Date.now())
@@ -597,8 +600,6 @@
     fetch('x-posts.json?t=' + Date.now())
       .then(res => res.json())
       .then(data => {
-        // Only exclude posts made TODAY (avoids hiding every historical matchday post,
-        // which was the earlier bug) — today's live-match posts live in the Matchday card instead
         const posts = (data.posts || []).filter(p => !isFromToday(p.createdAt)).slice(0, 5);
         if (posts.length === 0) {
           document.getElementById('xposts-track').innerHTML = '<div>No recent posts found</div>';
@@ -631,6 +632,8 @@
         document.getElementById('xposts-track').textContent = 'Failed to load posts';
         console.error(err);
       });
+
+    // ---------- Division Round-Up ----------
 
     fetch('division-insights.json?t=' + Date.now())
       .then(res => res.json())
