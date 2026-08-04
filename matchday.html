@@ -170,7 +170,11 @@
       return { label: 'Full Time', className: 'status-finished' };
     }
 
-    fetch('matchday-live.json')
+    const params = new URLSearchParams(window.location.search);
+    const dateParam = params.get('date');
+    const fileToLoad = dateParam ? `matchday-archive/${dateParam}.json` : 'matchday-live.json';
+
+    fetch(fileToLoad + '?t=' + Date.now())
       .then(res => res.json())
       .then(data => {
         const m = data.match;
