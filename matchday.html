@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sandbach United — Matchday Live</title>
+  <style>
+    :root {
+      --navy: #0c2340;
+      --royal: #1c5fae;
+      --amber: #f2a71b;
+      --paper: #eef1f6;
+      --ink: #14202b;
+      --muted: #6b7785;
+      --line: #e3e7ee;
+    }
+    body {
+      font-family: system-ui, sans-serif;
+      max-width: 500px;
+      margin: 40px auto;
+      padding: 0 16px;
+      background: var(--paper);
+      color: var(--ink);
+    }
+    h1 { color: var(--navy); font-size: 20px; }
+    a.back { display: inline-block; margin-bottom: 16px; color: var(--royal); text-decoration: none; }
+    .card {
+      background: white;
+      border-radius: 10px;
+      padding: 16px;
+      margin-bottom: 16px;
+      box-shadow: 0 1px 3px rgba(12,35,64,0.08);
+    }
+    .card h2 {
+      margin: 0 0 12px 0;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--navy);
+    }
+    .score { font-size: 28px; font-weight: 700; color: var(--navy); text-align: center; }
+    .teams { display: flex; justify-content: space-between; font-size: 13px; color: var(--muted); }
+    .disclaimer { font-size: 11px; color: var(--muted); margin-top: 8px; font-style: italic; }
+
+    .donut-row { display: flex; justify-content: space-between; gap: 8px; }
+    .donut-wrap { text-align: center; flex: 1; }
+    .donut {
+      width: 70px; height: 70px;
+      border-radius: 50%;
+      margin: 0 auto 6px;
+      position: relative;
+    }
+    .donut::after {
+      content: '';
+      position: absolute;
+      top: 12px; left: 12px;
+      width: 46px; height: 46px;
+      border-radius: 50%;
+      background: white;
+    }
+    .donut-label { font-size: 11px; color: var(--muted); }
+    .donut-split { font-size: 10px; color: var(--ink); margin-top: 2px; }
+
+    ul { margin: 0; padding-left: 18px; font-size: 14px; }
+    li { margin-bottom: 4px; }
+    .empty { color: var(--muted); font-size: 13px; }
+  </style>
+</head>
+<body>
+  <a class="back" href="index.html">← Back</a>
+  <h1 id="page-title">Matchday Live</h1>
+
+  <div id="content">Loading...</div>
+
+  <script>
+    function donut(homePct, awayPct, homeColor, awayColor) {
+      const homeDeg = (homePct / 100) * 360;
+      return `background: conic-gradient(${homeColor} 0deg ${homeDeg}deg, ${awayColor} ${homeDeg}deg 360deg);`;
+    }
+
+    function renderDonut(label, homePct, awayPct) {
+      const h = Math.round(homePct ?? 50);
+      const a = Math.round(awayPct ?? 50);
+      return `
+        <div class="donut-wrap">
+          <div class="donut" style="${donut(h, a, 'var(--royal)', 'var(--amber)')}"></div>
+          <div class="donut-label">${label}</div>
+          <div class="donut-split">${h}% / ${a}%</div>
+        </div>
+      `;
+    }
+
+    function renderXGDonut(label, homeXG, awayXG) {
+      const h = homeXG ?? 0;
+      const a = awayXG ?? 0;
+      const total = h + a;
+      const homePct = total > 0 ? (h / total) * 100 : 50;
+      const awayPct = 100 - homePct;
+
+      return `
+        <div class="donut-wrap">
+          <div class="donut" style="${donut(homePct, awayPct, 'var(--royal)', 'var(--amber)')}"></div>
+          <div class="donut-label">${label}</div>
+          <div class="donut-split">${h.toFixed(1)} / ${a.toFixed(1)}</div>
+        </div>
+      `;
+    }
+
+    function listOrEmpty(items, formatter) {
+      if (!items || items.length === 0) return '<div class="empty">None recorded</div>';
+      return '<ul>' + items.map(formatter).join('') + '</ul>';
+    }
+
+    fetch('matchday-live.json')
+      .then(res => res.json())
+      .then(data => {
+        const m = data.match;
+        document.getElementById('page-title').textContent = `${data.homeTeam} vs ${data.awayTeam}`;
+
+        const html = `
+          <div class="card">
+            <div class="score">${m.score || 'Score unknown'}</div>
+            <div class="teams"><span>${data.homeTeam}</span><span>${data.awayTeam}</span></div>
+          </div>
+
+          <div class="card">
+            <h2>Rough xG (estimated)</h2>
+            <div class="donut-row">
+              ${renderXGDonut('1st Half', m.roughXG?.firstHalf?.home, m.roughXG?.firstHalf?.away)}
+              ${renderXGDonut('2nd Half', m.roughXG?.secondHalf?.home, m.roughXG?.secondHalf?.away)}
+              ${renderXGDonut('Total', m.roughXG?.total?.home, m.roughXG?.total?.away)}
+            </div>
+            <div class="disclaimer">${m.roughXG?.disclaimer || ''}</div>
+          </div>
+
+          <div class="card">
+            <h2>Match Control (estimated)</h2>
+            <div class="donut-row">
+              ${renderDonut('1st Half', m.matchControl?.firstHalf?.home, m.matchControl?.firstHalf?.away)}
+              ${renderDonut('2nd Half', m.matchControl?.secondHalf?.home, m.matchControl?.secondHalf?.away)}
+              ${renderDonut('Total', m.matchControl?.total?.home, m.matchControl?.total?.away)}
+            </div>
+            <div class="disclaimer">${m.matchControl?.disclaimer || ''}</div>
+          </div>
+
+          <div class="card">
+            <h2>Goals</h2>
+            ${listOrEmpty(m.goals, g => `<li>${g.minute ? g.minute + "' " : ''}${g.scorer} (${g.team})</li>`)}
+          </div>
+
+          <div class="card">
+            <h2>Cards</h2>
+            ${listOrEmpty([...(m.yellowCards || []).map(c => ({...c, type: 'Yellow'})), ...(m.redCards || []).map(c => ({...c, type: 'Red'}))],
+              c => `<li>${c.type} — ${c.minute ? c.minute + "' " : ''}${c.player} (${c.team})</li>`)}
+          </div>
+
+          <div class="card">
+            <h2>Substitutions</h2>
+            ${listOrEmpty(m.substitutions, s => `<li>${s.minute ? s.minute + "' " : ''}${s.playerOff} → ${s.playerOn} (${s.team})</li>`)}
+          </div>
+
+          <div class="card">
+            <h2>Sin Bins</h2>
+            ${listOrEmpty(m.sinBins, s => `<li>${s.minute ? s.minute + "' " : ''}${s.player} (${s.team})</li>`)}
+          </div>
+
+          <div class="card">
+            <h2>Injuries</h2>
+            ${listOrEmpty(m.injuries, i => `<li>${i.player} (${i.team})${i.note ? ' — ' + i.note : ''}</li>`)}
+          </div>
+
+          <div class="card">
+            <h2>Added Time</h2>
+            <div>1st half: ${m.addedTime?.firstHalf ?? 'unknown'} | 2nd half: ${m.addedTime?.secondHalf ?? 'unknown'}</div>
+          </div>
+
+          <div class="card">
+            <h2>Lineups</h2>
+            <div style="font-weight: 600; margin-bottom: 4px;">${data.homeTeam}</div>
+            ${listOrEmpty(m.lineups?.home?.players, p => `<li>${p}</li>`)}
+            <div style="font-weight: 600; margin: 10px 0 4px;">${data.awayTeam}</div>
+            ${listOrEmpty(m.lineups?.away?.players, p => `<li>${p}</li>`)}
+          </div>
+        `;
+
+        document.getElementById('content').innerHTML = html;
+      })
+      .catch(err => {
+        document.getElementById('content').textContent = 'Failed to load matchday data';
+        console.error(err);
+      });
+  </script>
+</body>
+</html>
