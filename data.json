@@ -1,26 +1,16 @@
 {
-  "scrapedAt": "2026-08-04T19:15:48.224Z",
+  "scrapedAt": "2026-08-04T20:53:00.039Z",
   "nextFixture": {
-    "date": "Tue 04/08/26",
-    "opposition": "Foley Meir",
-    "opponentUrl": "clubpage.php?id=898",
-    "homeAway": "A",
-    "kickoff": "19:45",
+    "date": "Sat 08/08/26",
+    "opposition": "Stafford Town",
+    "opponentUrl": "clubpage.php?id=182",
+    "homeAway": "H",
+    "kickoff": "15:00",
     "score": null,
     "scorers": null,
     "competitionNote": null
   },
   "nextFixtures": [
-    {
-      "date": "Tue 04/08/26",
-      "opposition": "Foley Meir",
-      "opponentUrl": "clubpage.php?id=898",
-      "homeAway": "A",
-      "kickoff": "19:45",
-      "score": null,
-      "scorers": null,
-      "competitionNote": null
-    },
     {
       "date": "Sat 08/08/26",
       "opposition": "Stafford Town",
@@ -40,19 +30,39 @@
       "score": null,
       "scorers": null,
       "competitionNote": null
+    },
+    {
+      "date": "Sat 15/08/26",
+      "opposition": "Ashby Ivanhoe",
+      "opponentUrl": null,
+      "homeAway": "H",
+      "kickoff": "15:00",
+      "score": null,
+      "scorers": null,
+      "competitionNote": null
     }
   ],
   "lastResult": {
-    "date": "Sat 01/08/26",
-    "opposition": "Wednesfield Community",
-    "opponentUrl": "clubpage.php?id=191",
-    "homeAway": "H",
-    "kickoff": "15:00",
-    "score": "W 2-1",
-    "scorers": "Joseph Bevan (3) Joseph Bevan (51)",
+    "date": "Tue 04/08/26",
+    "opposition": "Foley Meir",
+    "opponentUrl": "clubpage.php?id=898",
+    "homeAway": "A",
+    "kickoff": "19:45",
+    "score": "L 2-3",
+    "scorers": "Kieran OConnell (8) Saul Shotton (90+1)",
     "competitionNote": null
   },
   "lastResults": [
+    {
+      "date": "Tue 04/08/26",
+      "opposition": "Foley Meir",
+      "opponentUrl": "clubpage.php?id=898",
+      "homeAway": "A",
+      "kickoff": "19:45",
+      "score": "L 2-3",
+      "scorers": "Kieran OConnell (8) Saul Shotton (90+1)",
+      "competitionNote": null
+    },
     {
       "date": "Sat 01/08/26",
       "opposition": "Wednesfield Community",
@@ -81,8 +91,8 @@
       "opponentUrl": "clubpage.php?id=898",
       "homeAway": "A",
       "kickoff": "19:45",
-      "score": null,
-      "scorers": null,
+      "score": "L 2-3",
+      "scorers": "Kieran OConnell (8) Saul Shotton (90+1)",
       "competitionNote": null
     },
     {
