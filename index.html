@@ -69,6 +69,11 @@
       margin-top: 2px;
     }
 
+    .form-badges span {
+      display: inline-block; width: 14px; height: 14px; border-radius: 3px;
+      margin-right: 2px; font-size: 0;
+    }
+
     .status-badge {
       font-size: 11px;
       font-weight: 700;
@@ -287,7 +292,7 @@
     <table id="league-table">
       <thead>
         <tr>
-          <th>#</th><th>Team</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GD</th><th>Pts</th>
+          <th>#</th><th>Team</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GD</th><th>Pts</th><th>Form</th>
         </tr>
       </thead>
       <tbody id="league-body">
@@ -397,12 +402,21 @@
       }
     }
 
+    function formBadges(form) {
+      if (!form) return '';
+      const colors = { W: '#22c55e', D: '#eab308', L: '#ef4444' };
+      return '<div class="form-badges">' + form.split('').map(r =>
+        `<span style="background:${colors[r] || '#ccc'};" title="${r}"></span>`
+      ).join('') + '</div>';
+    }
+
     function getH2HRecord(opponentUrl) {
       const meetings = (window.h2hMeetings || {})[opponentUrl] || [];
       if (meetings.length === 0) return null;
 
       let won = 0, drawn = 0, lost = 0;
-      meetings.forEach(m => {
+      const sorted = [...meetings].sort((a, b) => new Date(b.date) - new Date(a.date));
+      sorted.forEach(m => {
         const [a, b] = m.score.split('-').map(Number);
         const sandbachGoals = m.venue === 'H' ? a : b;
         const oppGoals = m.venue === 'H' ? b : a;
@@ -410,7 +424,14 @@
         else if (sandbachGoals < oppGoals) lost++;
         else drawn++;
       });
-      return { won, drawn, lost };
+
+      const last = sorted[0];
+      const [la, lb] = last.score.split('-').map(Number);
+      const lastSandbach = last.venue === 'H' ? la : lb;
+      const lastOpp = last.venue === 'H' ? lb : la;
+      const lastResult = lastSandbach > lastOpp ? 'W' : lastSandbach < lastOpp ? 'L' : 'D';
+
+      return { won, drawn, lost, last: { result: lastResult, score: last.score, date: last.date } };
     }
 
     function checkMatchdayBadge(fixtures) {
@@ -425,6 +446,10 @@
 
     function renderFixturesCarousel() {
       const fixtures = window.latestFixtures || [];
+      const record = getH2HRecord(f.opponentUrl);
+      const recordHtml = record
+          ? `W${record.won} D${record.drawn} L${record.lost}<br>Last: ${record.last.result} ${record.last.score} (${record.last.date})`
+          : `No meetings on record`;
       if (fixtures.length === 0) {
         document.getElementById('fixtures-track').innerHTML = '<div style="padding: 10px 0;">No upcoming fixtures found</div>';
         fixturesCarousel.setCount(0);
@@ -496,7 +521,7 @@
         // No matchday-live.json, or not today — card stays hidden, which is correct
       });
     
-    fetch('data.json')
+    fetch('data.json?t=' + Date.now())
       .then(res => res.json())
       .then(data => {
         window.latestFixtures = data.nextFixtures || (data.nextFixture ? [data.nextFixture] : []);
@@ -522,7 +547,7 @@
         console.error(err);
       });
 
-    fetch('history.json')
+    fetch('history.json?t=' + Date.now())
       .then(res => res.json())
       .then(historyData => {
         window.h2hMeetings = historyData.meetings || {};
@@ -532,7 +557,7 @@
 
     // ---------- Fan Briefing ----------
 
-    fetch('x-insights.json')
+    fetch('x-insights.json?t=' + Date.now())
       .then(res => res.json())
       .then(data => {
         const date = new Date(data.generatedAt);
@@ -548,7 +573,7 @@
 
     // ---------- X posts ----------
 
-    fetch('x-posts.json')
+    fetch('x-posts.json?t=' + Date.now())
       .then(res => res.json())
       .then(data => {
         const posts = (data.posts || []).filter(p => !p.isMatchday).slice(0, 5);
@@ -584,7 +609,7 @@
         console.error(err);
       });
 
-    fetch('division-insights.json')
+    fetch('division-insights.json?t=' + Date.now())
       .then(res => res.json())
       .then(data => {
         const summary = data.summary || '';
@@ -613,6 +638,7 @@
             <td>${t.lost}</td>
             <td>${t.goalDifference}</td>
             <td>${t.points}</td>
+            <td>${formBadges(t.form)}</td>
           </tr>
         `;
       }).join('');
@@ -642,7 +668,7 @@
       btn.textContent = 'Show full table';
     }
 
-    fetch('league.json')
+    fetch('league.json?t=' + Date.now())
       .then(res => res.json())
       .then(data => {
         leagueStandings = data.standings;

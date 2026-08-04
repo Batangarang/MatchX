@@ -1,24 +1,8 @@
 const fs = require('fs');
+const { getUserIdCached } = require('./user-id-cache.js');
 
 const USERNAME = 'SandbachFC_1st';
-const { getUserIdCached } = require('./user-id-cache.js');
 const BEARER_TOKEN = process.env.X_BEARER_TOKEN;
-
-function isMatchdayPost(createdAt) {
-  try {
-    const data = JSON.parse(fs.readFileSync('data.json', 'utf-8'));
-    const postDate = new Date(createdAt);
-    return (data.allFixtures || []).some(f => {
-      const [, dd, mm, yy] = f.date.match(/(\d{2})\/(\d{2})\/(\d{2})/);
-      const fixtureDate = new Date(2000 + parseInt(yy), parseInt(mm) - 1, parseInt(dd));
-      return fixtureDate.getUTCFullYear() === postDate.getUTCFullYear() &&
-             fixtureDate.getUTCMonth() === postDate.getUTCMonth() &&
-             fixtureDate.getUTCDate() === postDate.getUTCDate();
-    });
-  } catch {
-    return false;
-  }
-}
 
 function isMatchdayNow() {
   try {
@@ -34,8 +18,6 @@ function isMatchdayNow() {
                      fixtureDate.getMonth() === now.getMonth() &&
                      fixtureDate.getDate() === now.getDate();
 
-    // Padded 13:00-18:00 UTC window to safely cover 2pm-6pm UK time
-    // across both BST and GMT without needing manual adjustment
     const hour = now.getUTCHours();
     return isToday && hour >= 13 && hour < 18;
   } catch {
@@ -44,8 +26,6 @@ function isMatchdayNow() {
 }
 
 function shouldPollNow() {
-  // Manual runs (clicking "Run workflow") should always actually run,
-  // regardless of the time-of-day gating — useful for testing.
   if (process.env.GITHUB_EVENT_NAME === 'workflow_dispatch') {
     return true;
   }
@@ -65,9 +45,25 @@ function shouldPollNow() {
   return minute === 0 && hour % 3 === 0;
 }
 
+function isMatchdayPost(createdAt) {
+  try {
+    const data = JSON.parse(fs.readFileSync('data.json', 'utf-8'));
+    const postDate = new Date(createdAt);
+    return (data.allFixtures || []).some(f => {
+      const [, dd, mm, yy] = f.date.match(/(\d{2})\/(\d{2})\/(\d{2})/);
+      const fixtureDate = new Date(2000 + parseInt(yy), parseInt(mm) - 1, parseInt(dd));
+      return fixtureDate.getUTCFullYear() === postDate.getUTCFullYear() &&
+             fixtureDate.getUTCMonth() === postDate.getUTCMonth() &&
+             fixtureDate.getUTCDate() === postDate.getUTCDate();
+    });
+  } catch {
+    return false;
+  }
+}
+
 async function getRecentPosts(userId) {
   const params = new URLSearchParams({
-    max_results: '100',
+    max_results: '10',
     exclude: 'retweets,replies',
     'tweet.fields': 'created_at,text',
     expansions: 'attachments.media_keys',
@@ -79,8 +75,6 @@ async function getRecentPosts(userId) {
   });
   const data = await res.json();
 
-  // Media comes back separately in `includes.media`, keyed by media_key —
-  // build a lookup so we can attach the right image to each post
   const mediaLookup = {};
   (data.includes?.media || []).forEach(m => {
     mediaLookup[m.media_key] = m;
@@ -90,7 +84,7 @@ async function getRecentPosts(userId) {
     const mediaKeys = post.attachments?.media_keys || [];
     const images = mediaKeys
       .map(key => mediaLookup[key])
-      .filter(m => m && (m.type === 'photo'))
+      .filter(m => m && m.type === 'photo')
       .map(m => m.url);
 
     return { ...post, images };

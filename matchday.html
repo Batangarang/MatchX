@@ -62,14 +62,8 @@
       border: 1px solid var(--amber);
       color: #b57a00;
     }
-    .status-upcoming {
-      background: var(--paper);
-      color: var(--muted);
-    }
-    .status-finished {
-      background: var(--paper);
-      color: var(--muted);
-    }
+    .status-upcoming { background: var(--paper); color: var(--muted); }
+    .status-finished { background: var(--paper); color: var(--muted); }
 
     .donut-row { display: flex; justify-content: space-between; gap: 8px; }
     .donut-wrap { text-align: center; flex: 1; }
@@ -144,30 +138,35 @@
       return '<ul>' + items.map(formatter).join('') + '</ul>';
     }
 
-    function getMatchStatus(fixtureDate, kickoff) {
+    function getFallbackStatus(fixtureDate, kickoff) {
       if (!fixtureDate || !kickoff) return { label: '', className: '' };
-
       const [hh, min] = kickoff.split(':');
       const kickoffTime = new Date(`${fixtureDate}T${hh}:${min}:00Z`);
       const isBST = kickoffTime.getUTCMonth() > 2 && kickoffTime.getUTCMonth() < 9;
       const kickoffUTC = new Date(kickoffTime.getTime() - (isBST ? 60 * 60 * 1000 : 0));
-
       const now = new Date();
       const minutesSinceKickoff = (now - kickoffUTC) / 60000;
 
-      if (minutesSinceKickoff < 0) {
-        return { label: 'Upcoming', className: 'status-upcoming' };
-      }
-      if (minutesSinceKickoff <= 45) {
-        return { label: `Live — ${Math.floor(minutesSinceKickoff)}'`, className: 'status-live' };
-      }
-      if (minutesSinceKickoff <= 60) {
-        return { label: 'Half Time', className: 'status-live' };
-      }
-      if (minutesSinceKickoff <= 105) {
-        return { label: `Live — ${Math.floor(minutesSinceKickoff - 15)}'`, className: 'status-live' };
-      }
+      if (minutesSinceKickoff < 0) return { label: 'Upcoming', className: 'status-upcoming' };
+      if (minutesSinceKickoff <= 45) return { label: `Live — ${Math.floor(minutesSinceKickoff)}'`, className: 'status-live' };
+      if (minutesSinceKickoff <= 60) return { label: 'Half Time', className: 'status-live' };
+      if (minutesSinceKickoff <= 105) return { label: `Live — ${Math.floor(minutesSinceKickoff - 15)}'`, className: 'status-live' };
       return { label: 'Full Time', className: 'status-finished' };
+    }
+
+    function getDisplayStatus(data) {
+      const stageLabels = {
+        scheduled: { label: 'Upcoming', className: 'status-upcoming' },
+        first_half: { label: 'Live — 1st Half', className: 'status-live' },
+        half_time: { label: 'Half Time', className: 'status-live' },
+        second_half: { label: 'Live — 2nd Half', className: 'status-live' },
+        extra_time: { label: 'Extra Time', className: 'status-live' },
+        penalties: { label: 'Penalties', className: 'status-live' },
+        full_time: { label: 'Full Time', className: 'status-finished' },
+      };
+      const stage = data.match?.matchStage;
+      if (stage && stageLabels[stage]) return stageLabels[stage];
+      return getFallbackStatus(data.fixtureDate, data.kickoff);
     }
 
     const params = new URLSearchParams(window.location.search);
@@ -180,7 +179,7 @@
         const m = data.match;
         document.getElementById('page-title').textContent = `${data.homeTeam} vs ${data.awayTeam}`;
 
-        const status = getMatchStatus(data.fixtureDate, data.kickoff);
+        const status = getDisplayStatus(data);
         const badge = document.getElementById('status-badge');
         badge.textContent = status.label;
         badge.className = 'status-badge ' + status.className;
@@ -191,12 +190,28 @@
             <div class="teams"><span>${data.homeTeam}</span><span>${data.awayTeam}</span></div>
           </div>
 
+          ${m.wentToExtraTime ? `
+          <div class="card">
+            <h2>Extra Time</h2>
+            <div class="score">${m.extraTime?.score || 'Score unknown'}</div>
+            ${listOrEmpty(m.extraTime?.goals, g => `<li>${g.minute ? g.minute + "' " : ''}${g.scorer} (${g.team})</li>`)}
+          </div>
+          ` : ''}
+
+          ${m.wentToPenalties ? `
+          <div class="card">
+            <h2>Penalties</h2>
+            <div class="score">${m.penalties?.finalScore || 'Unknown'}</div>
+            ${listOrEmpty(m.penalties?.takers, t => `<li>${t.player} (${t.team}) — ${t.scored ? 'Scored' : 'Missed'}</li>`)}
+          </div>
+          ` : ''}
+
           <div class="card">
             <h2>Rough xG (estimated)</h2>
             <div class="donut-row">
               ${renderXGDonut('1st Half', m.roughXG?.firstHalf?.home, m.roughXG?.firstHalf?.away)}
               ${renderXGDonut('2nd Half', m.roughXG?.secondHalf?.home, m.roughXG?.secondHalf?.away)}
-              ${renderXGDonut('Total', m.roughXG?.total?.home, m.roughXG?.total?.away)}
+              ${m.wentToExtraTime ? renderXGDonut('Extra Time', m.roughXG?.extraTime?.home, m.roughXG?.extraTime?.away) : renderXGDonut('Total', m.roughXG?.total?.home, m.roughXG?.total?.away)}
             </div>
             <div class="disclaimer">${m.roughXG?.disclaimer || ''}</div>
           </div>
@@ -206,7 +221,7 @@
             <div class="donut-row">
               ${renderDonut('1st Half', m.matchControl?.firstHalf?.home, m.matchControl?.firstHalf?.away)}
               ${renderDonut('2nd Half', m.matchControl?.secondHalf?.home, m.matchControl?.secondHalf?.away)}
-              ${renderDonut('Total', m.matchControl?.total?.home, m.matchControl?.total?.away)}
+              ${m.wentToExtraTime ? renderDonut('Extra Time', m.matchControl?.extraTime?.home, m.matchControl?.extraTime?.away) : renderDonut('Total', m.matchControl?.total?.home, m.matchControl?.total?.away)}
             </div>
             <div class="disclaimer">${m.matchControl?.disclaimer || ''}</div>
           </div>

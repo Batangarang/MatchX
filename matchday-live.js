@@ -5,24 +5,6 @@ const { getUserIdCached } = require('./user-id-cache.js');
 const BEARER_TOKEN = process.env.X_BEARER_TOKEN;
 const ANTHROPIC_KEY = process.env.ANTHROPIC_API_KEY;
 
-function withinMatchWindow(kickoff) {
-  if (process.env.GITHUB_EVENT_NAME === 'workflow_dispatch') return true; // manual runs always proceed
-  if (!kickoff) return false;
-
-  const [hh, min] = kickoff.split(':');
-  const now = new Date();
-  const kickoffToday = new Date();
-  kickoffToday.setUTCHours(parseInt(hh), parseInt(min), 0, 0);
-
-  // UK kickoff times are local — adjust roughly for BST
-  const isBST = now.getUTCMonth() > 2 && now.getUTCMonth() < 9;
-  if (isBST) kickoffToday.setUTCHours(kickoffToday.getUTCHours() - 1);
-
-  const minutesFromKickoff = (now - kickoffToday) / 60000;
-  return minutesFromKickoff >= -30 && minutesFromKickoff <= 150; // 30 min before to 2.5hrs after
-}
-
-// For testing against a past date: set MATCHDAY_TEST_DATE="2026-08-01"
 function getTargetFixture() {
   const data = JSON.parse(fs.readFileSync('data.json', 'utf-8'));
   const testDate = process.env.MATCHDAY_TEST_DATE;
@@ -50,12 +32,33 @@ function findHandle(clubName) {
   return found ? found.handle : null;
 }
 
+function withinMatchWindow(kickoff, competitionNote) {
+  if (process.env.GITHUB_EVENT_NAME === 'workflow_dispatch') return true;
+  if (!kickoff) return false;
+
+  const isCup = competitionNote && /cup|vase|trophy/i.test(competitionNote);
+  const maxMinutesAfter = isCup ? 240 : 150;
+
+  const [hh, min] = kickoff.split(':');
+  const now = new Date();
+  const kickoffToday = new Date();
+  kickoffToday.setUTCHours(parseInt(hh), parseInt(min), 0, 0);
+
+  const isBST = now.getUTCMonth() > 2 && now.getUTCMonth() < 9;
+  if (isBST) kickoffToday.setUTCHours(kickoffToday.getUTCHours() - 1);
+
+  const minutesFromKickoff = (now - kickoffToday) / 60000;
+  return minutesFromKickoff >= -30 && minutesFromKickoff <= maxMinutesAfter;
+}
+
 async function getPostsForHandle(handle, dateStr) {
   const userId = await getUserIdCached(handle, BEARER_TOKEN);
   const params = new URLSearchParams({
     max_results: '100',
     exclude: 'retweets,replies',
     'tweet.fields': 'created_at,text',
+    expansions: 'attachments.media_keys',
+    'media.fields': 'url,type',
     start_time: new Date(`${dateStr}T00:00:00Z`).toISOString(),
     end_time: new Date(`${dateStr}T23:59:59Z`).toISOString(),
   });
@@ -64,7 +67,34 @@ async function getPostsForHandle(handle, dateStr) {
     headers: { Authorization: `Bearer ${BEARER_TOKEN}` },
   });
   const data = await res.json();
-  return (data.data || []).map(p => ({ text: p.text, createdAt: p.created_at }));
+
+  const mediaLookup = {};
+  (data.includes?.media || []).forEach(m => { mediaLookup[m.media_key] = m; });
+
+  return (data.data || []).map(p => {
+    const mediaKeys = p.attachments?.media_keys || [];
+    const images = mediaKeys.map(k => mediaLookup[k]).filter(m => m && m.type === 'photo').map(m => m.url);
+    return { text: p.text, createdAt: p.created_at, images };
+  });
+}
+
+async function fetchImageAsBase64(url) {
+  const res = await fetch(url);
+  const buffer = await res.arrayBuffer();
+  return {
+    base64: Buffer.from(buffer).toString('base64'),
+    mediaType: res.headers.get('content-type') || 'image/jpeg',
+  };
+}
+
+function selectRelevantImages(combined, maxImages = 15) {
+  const keywords = /line[\s-]?up|team\s?sheet|full[\s-]?time|half[\s-]?time|\bft\b|\bht\b|kick[\s-]?off|extra\s?time|penalt/i;
+  const withImages = combined.filter(p => p.images && p.images.length > 0);
+
+  const keyworded = withImages.filter(p => keywords.test(p.text));
+  const rest = withImages.filter(p => !keywords.test(p.text));
+
+  return [...keyworded, ...rest].slice(0, maxImages);
 }
 
 async function run() {
@@ -77,7 +107,7 @@ async function run() {
     return;
   }
 
-  if (!withinMatchWindow(fixture.kickoff)) {
+  if (!withinMatchWindow(fixture.kickoff, fixture.competitionNote)) {
     console.log('Outside the matchday window — skipping.');
     return;
   }
@@ -111,16 +141,18 @@ async function run() {
   }
 
   const postsText = combined.map(p => `[${p.createdAt}] (@${p.handle}, ${p.side} team) ${p.text}`).join('\n');
+  const isCup = fixture.competitionNote && /cup|vase|trophy/i.test(fixture.competitionNote);
 
-  const prompt = `Below are X posts from the home and away teams' official accounts on the day of a football match: ${fixture.homeAway === 'H' ? 'Sandbach United' : fixture.opposition} vs ${fixture.homeAway === 'H' ? fixture.opposition : 'Sandbach United'}, played ${fixture.date}.
+  const prompt = `Below are X posts (and some attached images) from the home and away teams' official accounts on the day of a football match: ${fixture.homeAway === 'H' ? 'Sandbach United' : fixture.opposition} vs ${fixture.homeAway === 'H' ? fixture.opposition : 'Sandbach United'}, played ${fixture.date}${isCup ? ` (a cup competition: ${fixture.competitionNote} — this match could go to extra time and penalties)` : ' (a league match — normally 90 minutes, no extra time)'}.
 
 Posts:
 ${postsText}
 
-Using ONLY information present in these posts, build a structured match summary. Respond with ONLY a JSON object, no other text, no markdown fences, in exactly this shape:
+Using information present in these posts AND any attached images (e.g. graphics that say "Full Time" with a score, "Half Time" with a score, or team sheet images), build a structured match summary. Respond with ONLY a JSON object, no other text, no markdown fences, in exactly this shape:
 
 {
-  "score": "string or null",
+  "score": "string or null — the current or final score after 90 minutes",
+  "matchStage": "one of: scheduled, first_half, half_time, second_half, extra_time, penalties, full_time — base this on explicit mentions or images of kick-off, half-time, full-time, extra time, or penalties, not on guessing from elapsed time",
   "lineups": {
     "home": { "players": [], "substitutes": [], "manager": null, "officials": [] },
     "away": { "players": [], "substitutes": [], "manager": null, "officials": [] }
@@ -132,23 +164,49 @@ Using ONLY information present in these posts, build a structured match summary.
   "sinBins": [{ "minute": null, "team": "home or away", "player": "string" }],
   "injuries": [{ "minute": null, "team": "home or away", "player": "string", "note": "string" }],
   "addedTime": { "firstHalf": null, "secondHalf": null },
-"roughXG": {
-    "firstHalf": { "home": number, "away": number, "note": "string" },
-    "secondHalf": { "home": number, "away": number, "note": "string" },
-    "total": { "home": number, "away": number, "note": "string" },
+  "wentToExtraTime": false,
+  "wentToPenalties": false,
+  "extraTime": {
+    "score": "string or null — score after extra time",
+    "goals": [{ "minute": null, "team": "home or away", "scorer": "string" }]
+  },
+  "penalties": {
+    "finalScore": "string or null, e.g. '4-3'",
+    "takers": [{ "team": "home or away", "player": "string", "scored": true }]
+  },
+  "roughXG": {
+    "firstHalf": { "home": 0.0, "away": 0.0, "note": "string" },
+    "secondHalf": { "home": 0.0, "away": 0.0, "note": "string" },
+    "extraTime": { "home": 0.0, "away": 0.0, "note": "string" },
+    "total": { "home": 0.0, "away": 0.0, "note": "string" },
     "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure. Values are illustrative, not calculated from actual shot data."
   },
   "matchControl": {
-    "firstHalf": { "home": number, "away": number, "note": "string" },
-    "secondHalf": { "home": number, "away": number, "note": "string" },
-    "total": { "home": number, "away": number, "note": "string" },
+    "firstHalf": { "home": 50, "away": 50, "note": "string" },
+    "secondHalf": { "home": 50, "away": 50, "note": "string" },
+    "extraTime": { "home": 50, "away": 50, "note": "string" },
+    "total": { "home": 50, "away": 50, "note": "string" },
     "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
   }
 }
 
-Leave fields as empty arrays, null, or "unknown" if not mentioned. Do not invent details not present in the posts. For matchControl, "home" and "away" should be numbers that sum to 100 (a rough relative split), representing your best estimate of which side had the edge based on the commentary. For roughXG, "home" and "away" should instead be small decimal numbers in the style of real Expected Goals figures (e.g. 0.3, 0.8, 1.4, 2.1) — a rough qualitative impression of good-chance volume/quality per side based on how the posts describe the play, not a real calculated statistic. If a half isn't covered by any posts, use 0.0 for xG and 50/50 for matchControl, and say so in "note".`;
+Only populate wentToExtraTime, wentToPenalties, extraTime, penalties, and the extraTime period of roughXG/matchControl if there is clear evidence in the posts or images that the match actually went beyond 90 minutes. Otherwise set wentToExtraTime and wentToPenalties to false, and omit or leave extraTime periods as null/zero. Leave fields as empty arrays, null, or "unknown" if not mentioned. Do not invent details not present in the posts or images. For matchControl, "home" and "away" should be numbers that sum to 100 (a rough relative split). For roughXG, "home" and "away" should be small decimal numbers in the style of real Expected Goals figures (e.g. 0.3, 0.8, 1.4, 2.1) — a rough qualitative impression of good-chance volume/quality per side, not a real calculated statistic. If a period isn't covered by any posts, use 0.0 for xG and 50/50 for matchControl, and say so in "note".`;
 
-const res = await fetch('https://api.anthropic.com/v1/messages', {
+  const relevantImages = selectRelevantImages(combined);
+  const imageBlocks = [];
+  for (const post of relevantImages) {
+    for (const imgUrl of post.images) {
+      try {
+        const { base64, mediaType } = await fetchImageAsBase64(imgUrl);
+        imageBlocks.push({ type: 'text', text: `[Image posted by @${post.handle}, ${post.side} team, at ${post.createdAt}]` });
+        imageBlocks.push({ type: 'image', source: { type: 'base64', media_type: mediaType, data: base64 } });
+      } catch (err) {
+        console.warn(`Skipping image ${imgUrl}: ${err.message}`);
+      }
+    }
+  }
+
+  const res = await fetch('https://api.anthropic.com/v1/messages', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -157,8 +215,14 @@ const res = await fetch('https://api.anthropic.com/v1/messages', {
     },
     body: JSON.stringify({
       model: 'claude-haiku-4-5-20251001',
-      max_tokens: 2000,
-      messages: [{ role: 'user', content: prompt }],
+      max_tokens: 2500,
+      messages: [{
+        role: 'user',
+        content: [
+          { type: 'text', text: prompt },
+          ...imageBlocks,
+        ],
+      }],
     }),
   });
 
@@ -175,21 +239,20 @@ const res = await fetch('https://api.anthropic.com/v1/messages', {
     throw new Error(`Failed to parse AI response as JSON: ${err.message}\nRaw: ${raw}`);
   }
 
-  cconst output = {
+  const output = {
     generatedAt: new Date().toISOString(),
     fixtureDate: dateStr,
     kickoff: fixture.kickoff,
     homeTeam: fixture.homeAway === 'H' ? 'Sandbach United' : fixture.opposition,
     awayTeam: fixture.homeAway === 'H' ? fixture.opposition : 'Sandbach United',
     postsUsed: combined.length,
+    imagesAnalyzed: imageBlocks.length / 2,
     match: parsed,
   };
 
-  // Archive this match permanently, keyed by date — never overwritten by future matches
   if (!fs.existsSync('matchday-archive')) fs.mkdirSync('matchday-archive');
   fs.writeFileSync(`matchday-archive/${dateStr}.json`, JSON.stringify(output, null, 2));
 
-  // Maintain an index of every archived match, so pages can link to past ones
   let index = [];
   if (fs.existsSync('matchday-index.json')) {
     index = JSON.parse(fs.readFileSync('matchday-index.json', 'utf-8'));
@@ -209,10 +272,9 @@ const res = await fetch('https://api.anthropic.com/v1/messages', {
   index.sort((a, b) => new Date(b.date) - new Date(a.date));
   fs.writeFileSync('matchday-index.json', JSON.stringify(index, null, 2));
 
-  // Also keep as "latest" — what the homepage snapshot card reads
   fs.writeFileSync('matchday-live.json', JSON.stringify(output, null, 2));
 
-  console.log(`Saved matchday-archive/${dateStr}.json (${combined.length} posts used)`);
+  console.log(`Saved matchday-archive/${dateStr}.json (${combined.length} posts, ${imageBlocks.length / 2} images used)`);
 }
 
 run().catch(err => {

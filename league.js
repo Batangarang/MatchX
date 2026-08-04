@@ -9,10 +9,6 @@ async function scrape() {
   const html = await res.text();
   const $ = cheerio.load(html);
 
-  // Several tables on this page are titled "First Division South" (full stats,
-  // condensed, home/away split, form, discipline). We want the one whose header
-  // row has the FULL set of columns — spotted by checking for "W" as a header,
-  // which the condensed and other variants don't have.
   let targetTable = null;
   $('table').each((i, table) => {
     const headerRow = $(table).find('tr').first();
@@ -40,7 +36,7 @@ async function scrape() {
     if (cells.length === 0) return;
 
     const position = $(cells[0]).text().trim();
-    if (!position || isNaN(parseInt(position))) return; // skip blank spacer rows
+    if (!position || isNaN(parseInt(position))) return;
 
     const teamCell = $(cells[1]);
     const teamName = teamCell.text().trim();
@@ -59,6 +55,31 @@ async function scrape() {
       points: $(cells[9]).text().trim(),
       clubUrl,
     });
+  });
+
+  // Find the "Last Six" form table — same division name, different table on the same page
+  let formTable = null;
+  $('table').each((i, table) => {
+    const headerText = $(table).find('tr').first().text();
+    if (headerText.includes(DIVISION_NAME) && headerText.includes('Last Six')) {
+      formTable = table;
+      return false;
+    }
+  });
+
+  const formGuide = {};
+  if (formTable) {
+    $(formTable).find('tr').slice(1).each((i, row) => {
+      const cells = $(row).find('td');
+      if (cells.length < 2) return;
+      const teamName = $(cells[1]).text().trim();
+      const lastSix = $(cells[cells.length - 1]).text().trim();
+      if (teamName && lastSix) formGuide[teamName] = lastSix;
+    });
+  }
+
+  standings.forEach(team => {
+    team.form = formGuide[team.team] || null;
   });
 
   return {
