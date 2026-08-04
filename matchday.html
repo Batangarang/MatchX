@@ -22,7 +22,7 @@
       background: var(--paper);
       color: var(--ink);
     }
-    h1 { color: var(--navy); font-size: 20px; }
+    h1 { color: var(--navy); font-size: 20px; margin: 0; }
     a.back { display: inline-block; margin-bottom: 16px; color: var(--royal); text-decoration: none; }
     .card {
       background: white;
@@ -38,12 +38,16 @@
       letter-spacing: 0.5px;
       color: var(--navy);
     }
+    .score { font-size: 28px; font-weight: 700; color: var(--navy); text-align: center; }
+    .teams { display: flex; justify-content: space-between; font-size: 13px; color: var(--muted); }
+    .disclaimer { font-size: 11px; color: var(--muted); margin-top: 8px; font-style: italic; }
 
     .header-row {
       display: flex;
       justify-content: space-between;
       align-items: baseline;
       gap: 8px;
+      margin-bottom: 16px;
     }
     .status-badge {
       font-size: 11px;
@@ -66,10 +70,6 @@
       background: var(--paper);
       color: var(--muted);
     }
-
-    .score { font-size: 28px; font-weight: 700; color: var(--navy); text-align: center; }
-    .teams { display: flex; justify-content: space-between; font-size: 13px; color: var(--muted); }
-    .disclaimer { font-size: 11px; color: var(--muted); margin-top: 8px; font-style: italic; }
 
     .donut-row { display: flex; justify-content: space-between; gap: 8px; }
     .donut-wrap { text-align: center; flex: 1; }
@@ -97,6 +97,7 @@
 </head>
 <body>
   <a class="back" href="index.html">← Back</a>
+
   <div class="header-row">
     <h1 id="page-title">Matchday Live</h1>
     <span class="status-badge" id="status-badge"></span>
@@ -105,34 +106,6 @@
   <div id="content">Loading...</div>
 
   <script>
-    function getMatchStatus(fixtureDate, kickoff) {
-      if (!fixtureDate || !kickoff) return { label: '', className: '' };
-
-      const [hh, min] = kickoff.split(':');
-      const kickoffTime = new Date(`${fixtureDate}T${hh}:${min}:00Z`);
-      // Convert from UK local kickoff to a real timestamp — kickoff times on
-      // nwcfl.com are UK local, so adjust for BST (UTC+1) during summer months.
-      const isBST = kickoffTime.getUTCMonth() > 2 && kickoffTime.getUTCMonth() < 9;
-      const kickoffUTC = new Date(kickoffTime.getTime() - (isBST ? 60 * 60 * 1000 : 0));
-
-      const now = new Date();
-      const minutesSinceKickoff = (now - kickoffUTC) / 60000;
-
-      if (minutesSinceKickoff < 0) {
-        return { label: 'Upcoming', className: 'status-upcoming' };
-      }
-      if (minutesSinceKickoff <= 45) {
-        return { label: `Live — ${Math.floor(minutesSinceKickoff)}'`, className: 'status-live' };
-      }
-      if (minutesSinceKickoff <= 60) {
-        return { label: 'Half Time', className: 'status-live' };
-      }
-      if (minutesSinceKickoff <= 105) {
-        return { label: `Live — ${Math.floor(minutesSinceKickoff - 15)}'`, className: 'status-live' };
-      }
-      return { label: 'Full Time', className: 'status-finished' };
-    }
-
     function donut(homePct, awayPct, homeColor, awayColor) {
       const homeDeg = (homePct / 100) * 360;
       return `background: conic-gradient(${homeColor} 0deg ${homeDeg}deg, ${awayColor} ${homeDeg}deg 360deg);`;
@@ -171,11 +144,42 @@
       return '<ul>' + items.map(formatter).join('') + '</ul>';
     }
 
+    function getMatchStatus(fixtureDate, kickoff) {
+      if (!fixtureDate || !kickoff) return { label: '', className: '' };
+
+      const [hh, min] = kickoff.split(':');
+      const kickoffTime = new Date(`${fixtureDate}T${hh}:${min}:00Z`);
+      const isBST = kickoffTime.getUTCMonth() > 2 && kickoffTime.getUTCMonth() < 9;
+      const kickoffUTC = new Date(kickoffTime.getTime() - (isBST ? 60 * 60 * 1000 : 0));
+
+      const now = new Date();
+      const minutesSinceKickoff = (now - kickoffUTC) / 60000;
+
+      if (minutesSinceKickoff < 0) {
+        return { label: 'Upcoming', className: 'status-upcoming' };
+      }
+      if (minutesSinceKickoff <= 45) {
+        return { label: `Live — ${Math.floor(minutesSinceKickoff)}'`, className: 'status-live' };
+      }
+      if (minutesSinceKickoff <= 60) {
+        return { label: 'Half Time', className: 'status-live' };
+      }
+      if (minutesSinceKickoff <= 105) {
+        return { label: `Live — ${Math.floor(minutesSinceKickoff - 15)}'`, className: 'status-live' };
+      }
+      return { label: 'Full Time', className: 'status-finished' };
+    }
+
     fetch('matchday-live.json')
       .then(res => res.json())
       .then(data => {
         const m = data.match;
         document.getElementById('page-title').textContent = `${data.homeTeam} vs ${data.awayTeam}`;
+
+        const status = getMatchStatus(data.fixtureDate, data.kickoff);
+        const badge = document.getElementById('status-badge');
+        badge.textContent = status.label;
+        badge.className = 'status-badge ' + status.className;
 
         const html = `
           <div class="card">
