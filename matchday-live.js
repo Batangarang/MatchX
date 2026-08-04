@@ -87,197 +87,51 @@ async function fetchImageAsBase64(url) {
   };
 }
 
-function selectRelevantImages(combined, maxImages = 15) {
+function selectRelevantImages(combined, alreadySeen, maxImages = 15) {
   const keywords = /line[\s-]?up|team\s?sheet|full[\s-]?time|half[\s-]?time|\bft\b|\bht\b|kick[\s-]?off|extra\s?time|penalt/i;
   const withImages = combined.filter(p => p.images && p.images.length > 0);
 
-  const keyworded = withImages.filter(p => keywords.test(p.text));
-  const rest = withImages.filter(p => !keywords.test(p.text));
-
-  return [...keyworded, ...rest].slice(0, maxImages);
-}
-
-async function run() {
-  if (!BEARER_TOKEN) throw new Error('X_BEARER_TOKEN not set');
-  if (!ANTHROPIC_KEY) throw new Error('ANTHROPIC_API_KEY not set');
-
-  const fixture = getTargetFixture();
-  if (!fixture) {
-    console.log('No matchday fixture found — skipping.');
-    return;
-  }
-
-  if (!withinMatchWindow(fixture.kickoff, fixture.competitionNote)) {
-    console.log('Outside the matchday window — skipping.');
-    return;
-  }
-
-  const [, dd, mm, yy] = fixture.date.match(/(\d{2})\/(\d{2})\/(\d{2})/);
-  const dateStr = `20${yy}-${mm}-${dd}`;
-
-  const homeHandle = fixture.homeAway === 'H' ? 'SandbachFC_1st' : findHandle(fixture.opposition);
-  const awayHandle = fixture.homeAway === 'H' ? findHandle(fixture.opposition) : 'SandbachFC_1st';
-
-  if (!homeHandle || !awayHandle) {
-    console.log(`Could not resolve both handles (home=${homeHandle}, away=${awayHandle}) — skipping.`);
-    return;
-  }
-
-  console.log(`Pulling matchday posts for ${dateStr}: home=@${homeHandle}, away=@${awayHandle}`);
-
-  const [homePosts, awayPosts] = await Promise.all([
-    getPostsForHandle(homeHandle, dateStr),
-    getPostsForHandle(awayHandle, dateStr),
-  ]);
-
-  const combined = [
-    ...homePosts.map(p => ({ ...p, side: 'home', handle: homeHandle })),
-    ...awayPosts.map(p => ({ ...p, side: 'away', handle: awayHandle })),
-  ].sort((a, b) => new Date(a.createdAt) - new Date(b.createdAt));
-
-  if (combined.length === 0) {
-    console.log('No posts found from either account — skipping AI extraction.');
-    return;
-  }
-
-  const postsText = combined.map(p => `[${p.createdAt}] (@${p.handle}, ${p.side} team) ${p.text}`).join('\n');
-  const isCup = fixture.competitionNote && /cup|vase|trophy/i.test(fixture.competitionNote);
-
-  const prompt = `Below are X posts (and some attached images) from the home and away teams' official accounts on the day of a football match: ${fixture.homeAway === 'H' ? 'Sandbach United' : fixture.opposition} vs ${fixture.homeAway === 'H' ? fixture.opposition : 'Sandbach United'}, played ${fixture.date}${isCup ? ` (a cup competition: ${fixture.competitionNote} — this match could go to extra time and penalties)` : ' (a league match — normally 90 minutes, no extra time)'}.
-
-Posts:
-${postsText}
-
-Using information present in these posts AND any attached images (e.g. graphics that say "Full Time" with a score, "Half Time" with a score, or team sheet images), build a structured match summary. Respond with ONLY a JSON object, no other text, no markdown fences, in exactly this shape:
-
-{
-  "score": "string or null — the current or final score after 90 minutes",
-  "matchStage": "one of: scheduled, first_half, half_time, second_half, extra_time, penalties, full_time — base this on explicit mentions or images of kick-off, half-time, full-time, extra time, or penalties, not on guessing from elapsed time",
-  "lineups": {
-    "home": { "players": [], "substitutes": [], "manager": null, "officials": [] },
-    "away": { "players": [], "substitutes": [], "manager": null, "officials": [] }
-  },
-  "goals": [{ "minute": null, "team": "home or away", "scorer": "string" }],
-  "yellowCards": [{ "minute": null, "team": "home or away", "player": "string" }],
-  "redCards": [{ "minute": null, "team": "home or away", "player": "string" }],
-  "substitutions": [{ "minute": null, "team": "home or away", "playerOff": "string", "playerOn": "string" }],
-  "sinBins": [{ "minute": null, "team": "home or away", "player": "string" }],
-  "injuries": [{ "minute": null, "team": "home or away", "player": "string", "note": "string" }],
-  "addedTime": { "firstHalf": null, "secondHalf": null },
-  "wentToExtraTime": false,
-  "wentToPenalties": false,
-  "extraTime": {
-    "score": "string or null — score after extra time",
-    "goals": [{ "minute": null, "team": "home or away", "scorer": "string" }]
-  },
-  "penalties": {
-    "finalScore": "string or null, e.g. '4-3'",
-    "takers": [{ "team": "home or away", "player": "string", "scored": true }]
-  },
-  "roughXG": {
-    "firstHalf": { "home": 0.0, "away": 0.0, "note": "string" },
-    "secondHalf": { "home": 0.0, "away": 0.0, "note": "string" },
-    "extraTime": { "home": 0.0, "away": 0.0, "note": "string" },
-    "total": { "home": 0.0, "away": 0.0, "note": "string" },
-    "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure. Values are illustrative, not calculated from actual shot data."
-  },
-  "matchControl": {
-    "firstHalf": { "home": 50, "away": 50, "note": "string" },
-    "secondHalf": { "home": 50, "away": 50, "note": "string" },
-    "extraTime": { "home": 50, "away": 50, "note": "string" },
-    "total": { "home": 50, "away": 50, "note": "string" },
-    "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
-  }
-}
-
-Only populate wentToExtraTime, wentToPenalties, extraTime, penalties, and the extraTime period of roughXG/matchControl if there is clear evidence in the posts or images that the match actually went beyond 90 minutes. Otherwise set wentToExtraTime and wentToPenalties to false, and omit or leave extraTime periods as null/zero. Leave fields as empty arrays, null, or "unknown" if not mentioned. Do not invent details not present in the posts or images. For matchControl, "home" and "away" should be numbers that sum to 100 (a rough relative split). For roughXG, "home" and "away" should be small decimal numbers in the style of real Expected Goals figures (e.g. 0.3, 0.8, 1.4, 2.1) — a rough qualitative impression of good-chance volume/quality per side, not a real calculated statistic. If a period isn't covered by any posts, use 0.0 for xG and 50/50 for matchControl, and say so in "note".`;
-
-  const relevantImages = selectRelevantImages(combined);
-  const imageBlocks = [];
-  for (const post of relevantImages) {
-    for (const imgUrl of post.images) {
-      try {
-        const { base64, mediaType } = await fetchImageAsBase64(imgUrl);
-        imageBlocks.push({ type: 'text', text: `[Image posted by @${post.handle}, ${post.side} team, at ${post.createdAt}]` });
-        imageBlocks.push({ type: 'image', source: { type: 'base64', media_type: mediaType, data: base64 } });
-      } catch (err) {
-        console.warn(`Skipping image ${imgUrl}: ${err.message}`);
+  // Flatten to individual (post, imageUrl) pairs, excluding already-analyzed URLs
+  const pairs = [];
+  withImages.forEach(p => {
+    p.images.forEach(imgUrl => {
+      if (!alreadySeen.has(imgUrl)) {
+        pairs.push({ post: p, imgUrl, isKeyword: keywords.test(p.text) });
       }
-    }
-  }
-
-  const res = await fetch('https://api.anthropic.com/v1/messages', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'x-api-key': ANTHROPIC_KEY,
-      'anthropic-version': '2023-06-01',
-    },
-    body: JSON.stringify({
-      model: 'claude-haiku-4-5-20251001',
-      max_tokens: 2500,
-      messages: [{
-        role: 'user',
-        content: [
-          { type: 'text', text: prompt },
-          ...imageBlocks,
-        ],
-      }],
-    }),
+    });
   });
 
-  const data = await res.json();
-  if (!data.content) throw new Error(`Unexpected API response: ${JSON.stringify(data)}`);
-
-  const raw = data.content.map(b => b.text || '').join('').trim();
-  const cleaned = raw.replace(/```json|```/g, '').trim();
-
-  let parsed;
-  try {
-    parsed = JSON.parse(cleaned);
-  } catch (err) {
-    throw new Error(`Failed to parse AI response as JSON: ${err.message}\nRaw: ${raw}`);
-  }
-
-  const output = {
-    generatedAt: new Date().toISOString(),
-    fixtureDate: dateStr,
-    kickoff: fixture.kickoff,
-    homeTeam: fixture.homeAway === 'H' ? 'Sandbach United' : fixture.opposition,
-    awayTeam: fixture.homeAway === 'H' ? fixture.opposition : 'Sandbach United',
-    postsUsed: combined.length,
-    imagesAnalyzed: imageBlocks.length / 2,
-    match: parsed,
-  };
-
-  if (!fs.existsSync('matchday-archive')) fs.mkdirSync('matchday-archive');
-  fs.writeFileSync(`matchday-archive/${dateStr}.json`, JSON.stringify(output, null, 2));
-
-  let index = [];
-  if (fs.existsSync('matchday-index.json')) {
-    index = JSON.parse(fs.readFileSync('matchday-index.json', 'utf-8'));
-  }
-  const entry = {
-    date: dateStr,
-    homeTeam: output.homeTeam,
-    awayTeam: output.awayTeam,
-    score: parsed.score || null,
-  };
-  const existing = index.find(e => e.date === dateStr);
-  if (existing) {
-    Object.assign(existing, entry);
-  } else {
-    index.push(entry);
-  }
-  index.sort((a, b) => new Date(b.date) - new Date(a.date));
-  fs.writeFileSync('matchday-index.json', JSON.stringify(index, null, 2));
-
-  fs.writeFileSync('matchday-live.json', JSON.stringify(output, null, 2));
-
-  console.log(`Saved matchday-archive/${dateStr}.json (${combined.length} posts, ${imageBlocks.length / 2} images used)`);
+  pairs.sort((a, b) => (b.isKeyword ? 1 : 0) - (a.isKeyword ? 1 : 0));
+  return pairs.slice(0, maxImages);
 }
 
-run().catch(err => {
-  console.error('Failed:', err.message);
-  process.exit(1);
-});
+function mergeArrays(oldArr, newArr, keyFn) {
+  const combined = [...(oldArr || [])];
+  const existingKeys = new Set(combined.map(keyFn));
+  (newArr || []).forEach(item => {
+    const key = keyFn(item);
+    if (!existingKeys.has(key)) {
+      combined.push(item);
+      existingKeys.add(key);
+    }
+  });
+  return combined;
+}
+
+function mergeMatchData(previous, incoming) {
+  if (!previous) return incoming;
+
+  return {
+    score: incoming.score || previous.score,
+    matchStage: incoming.matchStage && incoming.matchStage !== 'scheduled' ? incoming.matchStage : previous.matchStage,
+    lineups: {
+      home: {
+        players: incoming.lineups?.home?.players?.length ? incoming.lineups.home.players : previous.lineups?.home?.players || [],
+        substitutes: incoming.lineups?.home?.substitutes?.length ? incoming.lineups.home.substitutes : previous.lineups?.home?.substitutes || [],
+        manager: incoming.lineups?.home?.manager || previous.lineups?.home?.manager || null,
+        officials: incoming.lineups?.home?.officials?.length ? incoming.lineups.home.officials : previous.lineups?.home?.officials || [],
+      },
+      away: {
+        players: incoming.lineups?.away?.players?.length ? incoming.lineups.away.players : previous.lineups?.away?.players || [],
+        substitutes: incoming.lineups?.away?.substitutes?.length ? incoming.lineups.away.substitutes : previous.lineups?.away?.substitutes || [],
+        manager: incoming.lineups?.away?.manager || previous.lineups?.away?.manager ||
