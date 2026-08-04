@@ -1,9 +1,43 @@
 const fs = require('fs');
 const CLUBS = require('./division-clubs.js');
+const { getUserIdCached } = require('./user-id-cache.js');
 
 const BEARER_TOKEN = process.env.X_BEARER_TOKEN;
-const { getUserIdCached } = require('./user-id-cache.js');
 const SEVEN_DAYS_AGO = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString();
+
+function shouldRunPostMatch() {
+  if (process.env.GITHUB_EVENT_NAME === 'workflow_dispatch') return true;
+
+  const data = JSON.parse(fs.readFileSync('data.json', 'utf-8'));
+  const lastResult = data.lastResult;
+  if (!lastResult) return false;
+
+  const today = new Date();
+  const todayStr = today.getFullYear() + '-' + String(today.getMonth() + 1).padStart(2, '0') + '-' + String(today.getDate()).padStart(2, '0');
+
+  const [, dd, mm, yy] = lastResult.date.match(/(\d{2})\/(\d{2})\/(\d{2})/);
+  const resultDateStr = `20${yy}-${mm}-${dd}`;
+  if (resultDateStr !== todayStr) return false;
+
+  const [hh, min] = lastResult.kickoff.split(':');
+  const kickoffToday = new Date();
+  kickoffToday.setUTCHours(parseInt(hh), parseInt(min), 0, 0);
+  const isBST = today.getUTCMonth() > 2 && today.getUTCMonth() < 9;
+  if (isBST) kickoffToday.setUTCHours(kickoffToday.getUTCHours() - 1);
+
+  const targetTime = new Date(kickoffToday.getTime() + 165 * 60000);
+  const minutesFromTarget = Math.abs(today - targetTime) / 60000;
+  if (minutesFromTarget > 15) return false;
+
+  const lastRunFile = 'division-roundup-lastrun.json';
+  if (fs.existsSync(lastRunFile)) {
+    const lastRun = JSON.parse(fs.readFileSync(lastRunFile, 'utf-8'));
+    if (lastRun.date === todayStr) return false;
+  }
+
+  fs.writeFileSync(lastRunFile, JSON.stringify({ date: todayStr, ranAt: new Date().toISOString() }));
+  return true;
+}
 
 async function getRecentPosts(userId) {
   const params = new URLSearchParams({
@@ -23,6 +57,11 @@ async function getRecentPosts(userId) {
 async function run() {
   if (!BEARER_TOKEN) {
     throw new Error('X_BEARER_TOKEN environment variable not set');
+  }
+
+  if (!shouldRunPostMatch()) {
+    console.log('Not the post-match trigger window — skipping.');
+    return;
   }
 
   const results = [];
