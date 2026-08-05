@@ -125,6 +125,11 @@ async function getRecentPosts(userId) {
   });
   const data = await res.json();
 
+  console.log('HTTP status:', res.status);
+  console.log('Rate limit remaining:', res.headers.get('x-rate-limit-remaining'));
+  console.log('Rate limit reset:', res.headers.get('x-rate-limit-reset'));
+  console.log('Raw response:', JSON.stringify(data));
+
   const mediaLookup = {};
   (data.includes?.media || []).forEach(m => {
     mediaLookup[m.media_key] = m;
