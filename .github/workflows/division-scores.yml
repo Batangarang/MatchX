@@ -1,0 +1,33 @@
+name: Division scores
+
+on:
+  schedule:
+    - cron: '*/10 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  scores:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+      - run: npm install
+      - run: node division-fixtures.js
+      - run: node division-scores.js
+        env:
+          GETXAPI_KEY: ${{ secrets.GETXAPI_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      - name: Commit updated data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          for f in division-fixtures.json division-scores.json; do
+            [ -f "$f" ] && git add "$f"
+          done
+          git diff --staged --quiet || git commit -m "Update division scores"
+          git push
