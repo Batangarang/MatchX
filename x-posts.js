@@ -1,8 +1,8 @@
 const fs = require('fs');
-const { getUserIdCached } = require('./user-id-cache.js');
+const { getUserTweets } = require('./getxapi-client.js');
 
 const USERNAME = 'SandbachFC_1st';
-const BEARER_TOKEN = process.env.X_BEARER_TOKEN;
+const API_KEY = process.env.GETXAPI_KEY;
 
 function getTodayFixtureWindow() {
   try {
@@ -37,9 +37,7 @@ function shouldPollNow() {
 
   const now = new Date();
   const window = getTodayFixtureWindow();
-  if (window && now >= window.start && now <= window.end) {
-    return true; // real matchday window, based on the actual fixture's kickoff time
-  }
+  if (window && now >= window.start && now <= window.end) return true;
 
   const stateFile = 'x-posts-lastpoll.json';
   let lastPoll = null;
@@ -58,43 +56,6 @@ function shouldPollNow() {
   return true;
 }
 
-
-async function getRecentPosts(userId) {
-  const params = new URLSearchParams({
-    max_results: '10',
-    exclude: 'retweets,replies',
-    'tweet.fields': 'created_at,text',
-    expansions: 'attachments.media_keys',
-    'media.fields': 'url,preview_image_url,type',
-  });
-
-  const res = await fetch(`https://api.x.com/2/users/${userId}/tweets?${params}`, {
-    headers: { Authorization: `Bearer ${BEARER_TOKEN}` },
-  });
-  const data = await res.json();
-
-  console.log('HTTP status:', res.status);
-  console.log('Rate limit remaining:', res.headers.get('x-rate-limit-remaining'));
-  console.log('Rate limit reset:', res.headers.get('x-rate-limit-reset'));
-  console.log('Raw response:', JSON.stringify(data));
-
-  const mediaLookup = {};
-  (data.includes?.media || []).forEach(m => {
-    mediaLookup[m.media_key] = m;
-  });
-
-  return (data.data || []).map(post => {
-    const mediaKeys = post.attachments?.media_keys || [];
-    const images = mediaKeys
-      .map(key => mediaLookup[key])
-      .filter(m => m && m.type === 'photo')
-      .map(m => m.url);
-
-    return { ...post, images };
-  });
-}
-
-
 function isMatchdayPost(createdAt) {
   try {
     const data = JSON.parse(fs.readFileSync('data.json', 'utf-8'));
@@ -111,69 +72,30 @@ function isMatchdayPost(createdAt) {
   }
 }
 
-async function getRecentPosts(userId) {
-  const params = new URLSearchParams({
-    max_results: '10',
-    exclude: 'retweets,replies',
-    'tweet.fields': 'created_at,text',
-    expansions: 'attachments.media_keys',
-    'media.fields': 'url,preview_image_url,type',
-  });
-
-  const res = await fetch(`https://api.x.com/2/users/${userId}/tweets?${params}`, {
-    headers: { Authorization: `Bearer ${BEARER_TOKEN}` },
-  });
-  const data = await res.json();
-
-  console.log('HTTP status:', res.status);
-  console.log('Rate limit remaining:', res.headers.get('x-rate-limit-remaining'));
-  console.log('Rate limit reset:', res.headers.get('x-rate-limit-reset'));
-  console.log('Raw response:', JSON.stringify(data));
-
-  const mediaLookup = {};
-  (data.includes?.media || []).forEach(m => {
-    mediaLookup[m.media_key] = m;
-  });
-
-  return (data.data || []).map(post => {
-    const mediaKeys = post.attachments?.media_keys || [];
-    const images = mediaKeys
-      .map(key => mediaLookup[key])
-      .filter(m => m && m.type === 'photo')
-      .map(m => m.url);
-
-    return { ...post, images };
-  });
-}
-
 async function run() {
-  if (!BEARER_TOKEN) {
-    throw new Error('X_BEARER_TOKEN environment variable not set');
-  }
+  if (!API_KEY) throw new Error('GETXAPI_KEY environment variable not set');
 
   if (!shouldPollNow()) {
     console.log('Not a scheduled polling moment — skipping.');
     return;
   }
 
-  const userId = await getUserIdCached(USERNAME, BEARER_TOKEN);
-  const posts = await getRecentPosts(userId);
+  const tweets = await getUserTweets(USERNAME, API_KEY, { maxPages: 1 });
+  const posts = tweets.slice(0, 10);
 
   const output = {
     scrapedAt: new Date().toISOString(),
     username: USERNAME,
     posts: posts.map(p => ({
-      id: p.id,
       text: p.text,
-      createdAt: p.created_at,
-      images: p.images || [],
-      isMatchday: isMatchdayPost(p.created_at),
+      createdAt: p.createdAt,
+      images: p.images,
+      isMatchday: isMatchdayPost(p.createdAt),
     })),
   };
 
   fs.writeFileSync('x-posts.json', JSON.stringify(output, null, 2));
   console.log(`Saved ${posts.length} posts from @${USERNAME}`);
-  console.log(output.posts[0]);
 }
 
 run().catch(err => {
