@@ -410,7 +410,7 @@
         fetch(`matchday-archive/${iso}-raw-posts.json?t=` + Date.now())
           .then(res => res.json())
           .then(posts => {
-            const postsCarousel = createCarousel('posts-track', 'posts-dots', 'posts-count');
+            window.postsCarousel = createCarousel('posts-track', 'posts-dots', 'posts-count');
 
             if (!posts || posts.length === 0) {
               document.getElementById('posts-track').innerHTML = '<div class="empty" style="padding: 8px 0;">No posts recorded</div>';
