@@ -4,45 +4,58 @@ const { getUserIdCached } = require('./user-id-cache.js');
 const USERNAME = 'SandbachFC_1st';
 const BEARER_TOKEN = process.env.X_BEARER_TOKEN;
 
-function isMatchdayNow() {
+function getTodayFixtureWindow() {
   try {
     const data = JSON.parse(fs.readFileSync('data.json', 'utf-8'));
     const next = data.nextFixture;
-    if (!next) return false;
+    if (!next) return null;
 
     const [, dd, mm, yy] = next.date.match(/(\d{2})\/(\d{2})\/(\d{2})/);
+    const [hh, min] = next.kickoff.split(':');
+    const today = new Date();
     const fixtureDate = new Date(2000 + parseInt(yy), parseInt(mm) - 1, parseInt(dd));
-    const now = new Date();
+    const isToday = fixtureDate.getFullYear() === today.getFullYear() &&
+                     fixtureDate.getMonth() === today.getMonth() &&
+                     fixtureDate.getDate() === today.getDate();
+    if (!isToday) return null;
 
-    const isToday = fixtureDate.getFullYear() === now.getFullYear() &&
-                     fixtureDate.getMonth() === now.getMonth() &&
-                     fixtureDate.getDate() === now.getDate();
+    const kickoffUTC = new Date(Date.UTC(2000 + parseInt(yy), parseInt(mm) - 1, parseInt(dd), parseInt(hh), parseInt(min)));
+    const isBST = kickoffUTC.getUTCMonth() > 2 && kickoffUTC.getUTCMonth() < 9;
+    if (isBST) kickoffUTC.setUTCHours(kickoffUTC.getUTCHours() - 1);
 
-    const hour = now.getUTCHours();
-    return isToday && hour >= 13 && hour < 18;
+    return {
+      start: new Date(kickoffUTC.getTime() - 30 * 60000),
+      end: new Date(kickoffUTC.getTime() + 150 * 60000),
+    };
   } catch {
-    return false;
+    return null;
   }
 }
 
 function shouldPollNow() {
-  if (process.env.GITHUB_EVENT_NAME === 'workflow_dispatch') {
-    return true;
-  }
+  if (process.env.GITHUB_EVENT_NAME === 'workflow_dispatch') return true;
 
   const now = new Date();
+  const window = getTodayFixtureWindow();
+  if (window && now >= window.start && now <= window.end) {
+    return true; // real matchday window, based on the actual fixture's kickoff time
+  }
+
+  const stateFile = 'x-posts-lastpoll.json';
+  let lastPoll = null;
+  if (fs.existsSync(stateFile)) {
+    try { lastPoll = new Date(JSON.parse(fs.readFileSync(stateFile, 'utf-8')).lastPoll); } catch {}
+  }
+
   const hour = now.getUTCHours();
-  const minute = now.getUTCMinutes();
+  const isNight = hour < 5 || hour > 23;
+  const targetIntervalMinutes = isNight ? 180 : 30;
+  const minutesSinceLastPoll = lastPoll ? (now - lastPoll) / 60000 : Infinity;
 
-  if (isMatchdayNow()) {
-    return true;
-  }
+  if (minutesSinceLastPoll < targetIntervalMinutes) return false;
 
-  if (hour >= 5 && hour <= 23) {
-    return minute % 30 === 0;
-  }
-
-  return minute === 0 && hour % 3 === 0;
+  fs.writeFileSync(stateFile, JSON.stringify({ lastPoll: now.toISOString() }));
+  return true;
 }
 
 function isMatchdayPost(createdAt) {
