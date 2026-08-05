@@ -2,50 +2,39 @@ const cheerio = require('cheerio');
 const fs = require('fs');
 
 const URL = 'https://www.nwcfl.com/fixtures.php?comp=47';
+const DIVISION_NAME = 'First Division South';
 
 async function scrape() {
   const res = await fetch(URL);
   const html = await res.text();
   const $ = cheerio.load(html);
 
-  let targetTable = null;
-  $('table').each((i, table) => {
-    const text = $(table).text();
-    if (text.includes('No Format') || (text.includes(' v ') && /\d{2}:\d{2}/.test(text))) {
-      targetTable = table;
-      return false;
-    }
-  });
-
-  if (!targetTable) {
-    console.log('Could not find the plain fixtures table. Headers found on the page:');
-    $('table').each((i, table) => {
-      console.log(`  Table ${i}: "${$(table).find('tr').first().text().trim().slice(0, 100)}"`);
-    });
-    throw new Error('Fixtures table not found — see list above to help fix the selector.');
-  }
-
   const fixtures = [];
-  let currentDate = null;
 
-  $(targetTable).find('tr').each((i, row) => {
-    const text = $(row).text().trim();
-    if (!text) return;
+  $('table').each((i, table) => {
+    const headerText = $(table).find('tr').first().text().trim();
 
-    if (!text.includes(' v ') && /\d{4}/.test(text)) {
-      currentDate = text;
-      return;
-    }
+    // A genuine fixture-date table's header combines a date and the division
+    // name, e.g. "Saturday 8th August 2026 First Division South First Division South"
+    const dateMatch = headerText.match(/(\w+day)\s+(\d{1,2})\w*\s+(\w+)\s+(\d{4})/);
+    if (!dateMatch || !headerText.includes(DIVISION_NAME)) return;
 
-    const match = text.match(/^(.+?)\s+v\s+(.+?)\s*\((\d{2}:\d{2})\)/);
-    if (match && currentDate) {
-      fixtures.push({
-        date: currentDate,
-        home: match[1].trim(),
-        away: match[2].trim(),
-        kickoff: match[3].trim(),
-      });
-    }
+    const dateStr = `${dateMatch[1]} ${dateMatch[2]} ${dateMatch[3]} ${dateMatch[4]}`;
+
+    $(table).find('tr').slice(1).each((j, row) => {
+      const text = $(row).text().trim();
+      if (!text) return;
+
+      const match = text.match(/^(.+?)\s+v\s+(.+?)\s*\((\d{2}:\d{2})\)/);
+      if (match) {
+        fixtures.push({
+          date: dateStr,
+          home: match[1].trim(),
+          away: match[2].trim(),
+          kickoff: match[3].trim(),
+        });
+      }
+    });
   });
 
   fs.writeFileSync('division-fixtures.json', JSON.stringify({ generatedAt: new Date().toISOString(), fixtures }, null, 2));
