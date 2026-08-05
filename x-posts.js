@@ -58,6 +58,41 @@ function shouldPollNow() {
   return true;
 }
 
+
+async function getRecentPosts(userId) {
+  const params = new URLSearchParams({
+    max_results: '10',
+    exclude: 'retweets,replies',
+    'tweet.fields': 'created_at,text',
+    expansions: 'attachments.media_keys',
+    'media.fields': 'url,preview_image_url,type',
+  });
+
+  const res = await fetch(`https://api.x.com/2/users/${userId}/tweets?${params}`, {
+    headers: { Authorization: `Bearer ${BEARER_TOKEN}` },
+  });
+  const data = await res.json();
+
+  if (!data.data) {
+    console.log('No data.data in response — raw response:', JSON.stringify(data));
+  }
+
+  const mediaLookup = {};
+  (data.includes?.media || []).forEach(m => {
+    mediaLookup[m.media_key] = m;
+  });
+
+  return (data.data || []).map(post => {
+    const mediaKeys = post.attachments?.media_keys || [];
+    const images = mediaKeys
+      .map(key => mediaLookup[key])
+      .filter(m => m && m.type === 'photo')
+      .map(m => m.url);
+
+    return { ...post, images };
+  });
+}
+
 function isMatchdayPost(createdAt) {
   try {
     const data = JSON.parse(fs.readFileSync('data.json', 'utf-8'));
