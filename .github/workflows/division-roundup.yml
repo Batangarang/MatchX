@@ -19,7 +19,7 @@ jobs:
       - run: npm install
       - run: node division-posts.js
         env:
-          X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
+          GETXAPI_KEY: ${{ secrets.GETXAPI_KEY }}
       - run: node division-insight.js
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
