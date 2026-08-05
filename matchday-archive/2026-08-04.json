@@ -1,37 +1,20 @@
 {
-  "generatedAt": "2026-08-05T20:58:59.762Z",
+  "generatedAt": "2026-08-05T21:47:35.971Z",
   "fixtureDate": "2026-08-04",
   "kickoff": "19:45",
   "homeTeam": "Foley Meir",
   "awayTeam": "Sandbach United",
   "postsUsed": 48,
-  "imagesAnalyzedThisRun": 3,
+  "imagesAnalyzedThisRun": 0,
   "totalImagesAnalyzed": 14,
   "match": {
-    "score": "4-2",
+    "score": "3-2",
+    "finalScoreAnnounced": "3-2",
     "matchStage": "full_time",
     "lineups": {
       "home": {
-        "players": [
-          "Parkes",
-          "Lawton",
-          "Clayton",
-          "Livingstone (C)",
-          "Tams",
-          "Dollochin",
-          "Ellams",
-          "Robinson",
-          "Lovett",
-          "Foote",
-          "Lloyd"
-        ],
-        "substitutes": [
-          "Mistry",
-          "Cullen",
-          "Quinn",
-          "Connolly",
-          "Baker"
-        ],
+        "players": [],
+        "substitutes": [],
         "manager": null,
         "officials": []
       },
@@ -56,7 +39,7 @@
       {
         "minute": 38,
         "team": "home",
-        "scorer": "Archie Ellams"
+        "scorer": "Will Tams"
       },
       {
         "minute": 65,
@@ -64,14 +47,9 @@
         "scorer": "Lucas Baker"
       },
       {
-        "minute": 92,
+        "minute": 90,
         "team": "away",
         "scorer": "Saul Shotton"
-      },
-      {
-        "minute": 38,
-        "team": "home",
-        "scorer": "Will Tams"
       }
     ],
     "yellowCards": [
@@ -81,29 +59,14 @@
         "player": "Robinson"
       },
       {
-        "minute": 28,
-        "team": "home",
-        "player": "FM 8 (Cope)"
-      },
-      {
         "minute": 44,
         "team": "away",
         "player": "Robbie Hatton"
       },
       {
-        "minute": 43,
-        "team": "away",
-        "player": "Sandbach number 10"
-      },
-      {
-        "minute": 84,
-        "team": "away",
-        "player": "Kieran O'Connell"
-      },
-      {
         "minute": 82,
         "team": "away",
-        "player": "Sandbach number 2"
+        "player": "Kieron O'Connell"
       }
     ],
     "redCards": [],
@@ -128,7 +91,7 @@
       },
       {
         "minute": 86,
-        "team": "home",
+        "team": "away",
         "playerOff": "Kyle Foley",
         "playerOn": "Callum Hamnett"
       }
@@ -137,7 +100,7 @@
     "injuries": [],
     "addedTime": {
       "firstHalf": null,
-      "secondHalf": 2
+      "secondHalf": null
     },
     "wentToExtraTime": false,
     "wentToPenalties": false,
@@ -151,46 +114,46 @@
     },
     "roughXG": {
       "firstHalf": {
-        "home": 0.8,
-        "away": 0.4,
-        "note": "Foley had early chances and took 2 goals from set pieces; Sandbach scored from a corner but had fewer clear openings"
+        "home": 0.6,
+        "away": 0.3,
+        "note": "Foley had early chances and scored twice from set pieces; Sandbach scored early but had limited clear-cut chances in the half."
       },
       "secondHalf": {
         "home": 1.2,
-        "away": 0.6,
-        "note": "Foley dominated with a third goal; Sandbach had multiple missed chances (Foley blazed over from 6 yards, Hatton screwed wide) and a late consolation"
+        "away": 0.8,
+        "note": "Foley dominated and added a third goal from open play; Sandbach had several chances including close-range misses and a late consolation goal."
       },
       "extraTime": {
         "home": 0,
         "away": 0,
-        "note": "No extra time played"
+        "note": "Match did not go to extra time."
       },
       "total": {
-        "home": 2,
-        "away": 1,
-        "note": "Foley created and converted more chances; Sandbach had opportunities but squandered them. Estimate based on descriptive commentary of shots, saves, and chances."
+        "home": 1.8,
+        "away": 1.1,
+        "note": "Foley were the more dominant side with better conversion efficiency, scoring 3 goals from their clear-cut chances. Sandbach created decent opportunities but lacked clinical finishing until the final stages."
       }
     },
     "matchControl": {
       "firstHalf": {
-        "home": 60,
-        "away": 40,
-        "note": "Foley created early chances and took a 2-1 lead into half-time; Sandbach scored first but were described as being punished for poor set-piece marking"
+        "home": 55,
+        "away": 45,
+        "note": "Foley started well with an early chance and took control after conceding, scoring twice from set pieces to lead 2-1 at half-time. Sandbach scored early but did not maintain pressure."
       },
       "secondHalf": {
-        "home": 70,
-        "away": 30,
-        "note": "Foley extended lead to 3-1; Sandbach mounted late pressure with a goal and several chances but were outcontrolled for most of the second half"
-      },
-      "extraTime": {
-        "home": 0,
-        "away": 0,
-        "note": "No extra time played"
-      },
-      "total": {
         "home": 65,
         "away": 35,
-        "note": "Foley dominated overall, scoring 3 goals and controlling proceedings. Sandbach had moments but Foley were the stronger team throughout."
+        "note": "Foley dominated the second half, extending their lead to 3-1. Sandbach struggled to create clear chances until late pressure resulted in a consolation goal."
+      },
+      "extraTime": {
+        "home": 50,
+        "away": 50,
+        "note": "Match did not go to extra time."
+      },
+      "total": {
+        "home": 60,
+        "away": 40,
+        "note": "Foley Meir controlled most of the match, particularly the second half. They were more clinical in front of goal and managed the game well despite Sandbach's late attempts."
       }
     }
   }
