@@ -211,7 +211,7 @@
     .btn:hover { border-color: var(--royal); }
 
     .form-badges span {
-      display: inline-block; width: 14px; height: 14px; border-radius: 3px;
+      display: inline-block; width: 11px; height: 11px; border-radius: 2px;
       margin-right: 2px; font-size: 0;
     }
 
@@ -421,7 +421,8 @@
     function formBadges(form) {
       if (!form) return '';
       const colors = { W: '#22c55e', D: '#eab308', L: '#ef4444' };
-      return '<div class="form-badges">' + form.split('').map(r =>
+      const lastFive = form.slice(-5); // keep the 5 most recent, already oldest-to-newest in order
+      return '<div class="form-badges">' + lastFive.split('').map(r =>
         `<span style="background:${colors[r] || '#ccc'};" title="${r}"></span>`
       ).join('') + '</div>';
     }
