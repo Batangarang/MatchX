@@ -1,8 +1,8 @@
 const fs = require('fs');
 const CLUBS = require('./division-clubs.js');
-const { getUserIdCached } = require('./user-id-cache.js');
+const { getUserTweets } = require('./getxapi-client.js');
 
-const BEARER_TOKEN = process.env.X_BEARER_TOKEN;
+const API_KEY = process.env.GETXAPI_KEY;
 const ANTHROPIC_KEY = process.env.ANTHROPIC_API_KEY;
 
 function getTargetFixture() {
@@ -53,29 +53,12 @@ function withinMatchWindow(kickoff, competitionNote) {
 }
 
 async function getPostsForHandle(handle, dateStr) {
-  const userId = await getUserIdCached(handle, BEARER_TOKEN);
-  const params = new URLSearchParams({
-    max_results: '100',
-    exclude: 'retweets,replies',
-    'tweet.fields': 'created_at,text',
-    expansions: 'attachments.media_keys',
-    'media.fields': 'url,type',
-    start_time: new Date(`${dateStr}T00:00:00Z`).toISOString(),
-    end_time: new Date(`${dateStr}T23:59:59Z`).toISOString(),
-  });
-
-  const res = await fetch(`https://api.x.com/2/users/${userId}/tweets?${params}`, {
-    headers: { Authorization: `Bearer ${BEARER_TOKEN}` },
-  });
-  const data = await res.json();
-
-  const mediaLookup = {};
-  (data.includes?.media || []).forEach(m => { mediaLookup[m.media_key] = m; });
-
-  return (data.data || []).map(p => {
-    const mediaKeys = p.attachments?.media_keys || [];
-    const images = mediaKeys.map(k => mediaLookup[k]).filter(m => m && m.type === 'photo').map(m => m.url);
-    return { text: p.text, createdAt: p.created_at, images };
+  const dayStart = new Date(`${dateStr}T00:00:00Z`);
+  const dayEnd = new Date(`${dateStr}T23:59:59Z`);
+  const tweets = await getUserTweets(handle, API_KEY, { maxPages: 5, sinceDate: dayStart });
+  return tweets.filter(t => {
+    const d = new Date(t.createdAt);
+    return d >= dayStart && d <= dayEnd;
   });
 }
 
@@ -122,9 +105,7 @@ function normalizeIdentity(name) {
   if (!name) return null;
   let n = name.toString().trim().toLowerCase();
   if (n === 'unknown' || n === '') return null;
-  // Strip bracketed asides like "(FM 8)" down to just the core content when that's ALL there is
   n = n.replace(/^unknown\s*\(([^)]+)\)$/i, '$1').trim();
-  // Strip generic role/number phrasing like "sandbach number 10", "player 10", "#10"
   n = n.replace(/\b(number|no\.?|#)\s*(\d+)/i, 'shirt$2').trim();
   return n || null;
 }
@@ -132,18 +113,13 @@ function normalizeIdentity(name) {
 function namesLikelyMatch(a, b) {
   if (!a || !b) return false;
   if (a === b) return true;
-
-  // One name is a prefix/substring of the other (e.g. "archie" vs "archie ellams")
   if (a.includes(b) || b.includes(a)) return true;
 
-  // Compare individual words — if any word overlaps (e.g. shared first name, or
-  // shared shirt number token like "shirt10" appearing in both), treat as a match
   const wordsA = new Set(a.split(/\s+/));
   const wordsB = new Set(b.split(/\s+/));
   for (const w of wordsA) {
     if (w.length > 2 && wordsB.has(w)) return true;
   }
-
   return false;
 }
 
@@ -155,7 +131,7 @@ function dedupeByTeamMinuteAndIdentity(events, identityField) {
       if (existing.team !== e.team) return false;
       if (Math.abs((existing.minute || 0) - (e.minute || 0)) > 3) return false;
       const existingIdentity = normalizeIdentity(existing[identityField]);
-      if (!existingIdentity || !eIdentity) return true; // either side vague/unknown — assume same event
+      if (!existingIdentity || !eIdentity) return true;
       return namesLikelyMatch(existingIdentity, eIdentity);
     });
 
@@ -250,7 +226,7 @@ function mergeMatchData(previous, incoming) {
 }
 
 async function run() {
-  if (!BEARER_TOKEN) throw new Error('X_BEARER_TOKEN not set');
+  if (!API_KEY) throw new Error('GETXAPI_KEY not set');
   if (!ANTHROPIC_KEY) throw new Error('ANTHROPIC_API_KEY not set');
 
   const fixture = getTargetFixture();
@@ -318,6 +294,8 @@ async function run() {
 
   const prompt = `Below are X posts (and some attached images) from the home and away teams' official accounts on the day of a football match: ${fixture.homeAway === 'H' ? 'Sandbach United' : fixture.opposition} vs ${fixture.homeAway === 'H' ? fixture.opposition : 'Sandbach United'}, played ${fixture.date}${isCup ? ` (a cup competition: ${fixture.competitionNote} — this match could go to extra time and penalties)` : ' (a league match — normally 90 minutes, no extra time)'}.
 
+IMPORTANT: Sandbach United have a player with the surname "Foley" — when a post mentions "Foley" as a player or goalscorer (not as "Foley Meir" the club name), this refers to the Sandbach player, not the opposing club. Use context to tell the two apart: a bare "Foley" scoring, being carded, or being substituted refers to the player; "Foley Meir," "Foley FC," or "the Foley defence" refers to the club.
+
 IMPORTANT: Both the home and away clubs may separately post about the SAME goal, card, or event (e.g. one posts "0-1" and the other posts "9' Kieran O'Connell" for the exact same goal). Do NOT report the same real-world event twice just because both clubs mentioned it — treat matching or clearly-corroborating mentions from each side as ONE event, not two.
 
 Posts:
@@ -327,7 +305,7 @@ Using information present in these posts AND any attached images (e.g. graphics 
 
 {
   "score": "string or null — the current or final score after 90 minutes",
-  "matchStage": "one of: scheduled, first_half, half_time, second_half, extra_time, penalties, full_time — base this on explicit mentions or images of kick-off, half-time, full-time, extra time, or penalties, not on guessing from elapsed time",
+  "matchStage": "one of: scheduled, first_half, half_time, second_half, extra_time, penalties, full_time — base this on explicit mentions or images of kick-off, half-time (including abbreviations like 'HT'), full-time (including 'FT'), extra time, or penalties, not on guessing from elapsed time",
   "lineups": {
     "home": { "players": [], "substitutes": [], "manager": null, "officials": [] },
     "away": { "players": [], "substitutes": [], "manager": null, "officials": [] }
