@@ -322,7 +322,7 @@ Using information present in these posts AND any attached images (e.g. graphics 
 {
   "score": "string or null — the current or final score after 90 minutes",
   "finalScoreAnnounced": "string or null — ONLY fill this in if a post explicitly states the full-time or half-time score as a direct statement (e.g. 'FT 3-2', a full-time graphic, 'match ends 3-2') — not inferred from goals, the literal announced score",
-  "matchStage": "one of: scheduled, first_half, half_time, second_half, extra_time, penalties, full_time — base this on explicit mentions or images of kick-off, half-time (including abbreviations like 'HT'), full-time (including 'FT'), extra time, or penalties, not on guessing from elapsed time",
+  "matchStage": "one of: scheduled, first_half, half_time, second_half, extra_time, penalties, full_time — ONLY set to half_time or full_time when a post EXPLICITLY ANNOUNCES it as a standalone statement or with a score (e.g. 'HT', 'HT 1-2', 'Half time score:', a half-time graphic, 'FT', 'FT 2-3', 'Full time:', a full-time graphic). Do NOT set half_time/full_time just because a post MENTIONS the concept in passing (e.g. 'coming up to half time', 'not long until the break', 'approaching full time') — that kind of mention means the match is still in first_half or second_half respectively, just close to the interval/end.",
   "lineups": {
     "home": { "players": [], "substitutes": [], "manager": null, "officials": [] },
     "away": { "players": [], "substitutes": [], "manager": null, "officials": [] }
