@@ -13,8 +13,26 @@
     "matchStage": "full_time",
     "lineups": {
       "home": {
-        "players": [],
-        "substitutes": [],
+        "players": [
+          "Parkes",
+          "Lawton",
+          "Clayton",
+          "Livingstone (C)",
+          "Tams",
+          "Dollochin",
+          "Ellams",
+          "Robinson",
+          "Lovett",
+          "Foote",
+          "Lloyd"
+        ],
+        "substitutes": [
+          "Mistry",
+          "Cullen",
+          "Quinn",
+          "Connolly",
+          "Baker"
+        ],
         "manager": null,
         "officials": []
       },
