@@ -180,9 +180,8 @@
       th, td { padding: 10px 6px; font-size: 15px; }
     }
 
-    .carousel { overflow: hidden; position: relative; touch-action: pan-y; }
+    .carousel { overflow: hidden; position: relative; touch-action: pan-y; transition: height 0.2s ease; }
     .carousel-track { display: flex; transition: transform 0.3s ease; align-items: flex-start; }
-    .carousel { transition: height 0.2s ease; }
     .carousel-track > div { flex: 0 0 100%; box-sizing: border-box; }
     .carousel-nav { display: flex; align-items: center; justify-content: center; gap: 10px; margin-top: 10px; }
     .carousel-nav button {
@@ -214,6 +213,8 @@
       display: inline-block; width: 11px; height: 11px; border-radius: 2px;
       margin-right: 2px; font-size: 0;
     }
+
+    .empty { color: var(--muted); font-size: 13px; }
 
     a { color: var(--royal); }
   </style>
@@ -275,6 +276,13 @@
       <button onclick="resultsCarousel.next()">›</button>
     </div>
     <a href="results.html" style="display: inline-block; margin-top: 10px; font-size: 13px;">See all results →</a>
+  </div>
+
+  <div class="card">
+    <h2>Around the Division</h2>
+    <div id="division-ticker" style="font-size: 12px; color: var(--royal); font-style: italic; margin-bottom: 10px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></div>
+    <div id="division-scores-list">Loading...</div>
+    <div class="meta" id="division-scores-updated" style="margin-top: 8px;"></div>
   </div>
 
   <div class="card">
@@ -398,13 +406,13 @@
     }
 
     function parseScoreWithResult(rawScore) {
-    const match = rawScore.match(/^([WDL])\s+(.+)$/);
-    if (match) {
-      return { result: match[1], score: match[2] };
+      const match = rawScore.match(/^([WDL])\s+(.+)$/);
+      if (match) {
+        return { result: match[1], score: match[2] };
+      }
+      return { result: null, score: rawScore };
     }
-    return { result: null, score: rawScore };
-  }
-    
+
     async function shareResult(result) {
       const scoreline = `${result.homeAway === 'H' ? 'Sandbach United' : result.opposition} ${result.score} ${result.homeAway === 'H' ? result.opposition : 'Sandbach United'}`;
       const scorers = result.scorers ? `\n⚽ ${result.scorers}` : '';
@@ -421,7 +429,7 @@
     function formBadges(form) {
       if (!form) return '';
       const colors = { W: '#22c55e', D: '#eab308', L: '#ef4444' };
-      const lastFive = form.slice(-5); // keep the 5 most recent, already oldest-to-newest in order
+      const lastFive = form.slice(-5);
       return '<div class="form-badges">' + lastFive.split('').map(r =>
         `<span style="background:${colors[r] || '#ccc'};" title="${r}"></span>`
       ).join('') + '</div>';
@@ -455,7 +463,7 @@
       const [, dd, mm, yy] = dateStr.match(/(\d{2})\/(\d{2})\/(\d{2})/);
       const [hh, min] = kickoff.split(':');
       const kickoffLocal = new Date(2000 + parseInt(yy), parseInt(mm) - 1, parseInt(dd), parseInt(hh), parseInt(min));
-      return kickoffLocal; // already effectively local/UTC-ish for display-diff purposes
+      return kickoffLocal;
     }
 
     function formatCountdown(ms) {
@@ -579,7 +587,6 @@
         badge.textContent = status.label;
         badge.className = 'status-badge ' + status.className;
 
-        // Before kickoff: show a countdown instead of a fake "0 - 0" on this card
         if (status.className === 'status-upcoming') {
           document.getElementById('matchday-score').textContent = '';
         } else {
@@ -693,6 +700,44 @@
       .catch(err => {
         document.getElementById('xposts-track').textContent = 'Failed to load posts';
         console.error(err);
+      });
+
+    // ---------- Division Scores ----------
+
+    fetch('division-scores.json?t=' + Date.now())
+      .then(res => res.json())
+      .then(data => {
+        const today = new Date().toISOString().slice(0, 10);
+        if (data.date !== today) {
+          document.getElementById('division-scores-list').innerHTML = '<div class="empty">No fixtures today</div>';
+          return;
+        }
+
+        if (data.ticker) {
+          document.getElementById('division-ticker').textContent = '📰 ' + data.ticker;
+        }
+
+        if (!data.fixtures || data.fixtures.length === 0) {
+          document.getElementById('division-scores-list').innerHTML = '<div class="empty">No division fixtures today</div>';
+        } else {
+          document.getElementById('division-scores-list').innerHTML = data.fixtures.map(f => {
+            const redCardHtml = (f.redCards || []).map(r => `🟥${r.player ? ' ' + r.player : ''} (${r.team})`).join(' ');
+            return `
+              <div style="display:flex; justify-content:space-between; padding:6px 0; border-bottom:1px solid var(--line); font-size:14px;">
+                <span>${f.home} v ${f.away}</span>
+                <span style="font-weight:700;">${f.score || f.kickoff}</span>
+              </div>
+              ${redCardHtml ? `<div style="font-size:12px; color:var(--muted);">${redCardHtml}</div>` : ''}
+            `;
+          }).join('');
+        }
+
+        const updated = new Date(data.generatedAt);
+        document.getElementById('division-scores-updated').textContent =
+          'Last updated: ' + updated.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' });
+      })
+      .catch(() => {
+        document.getElementById('division-scores-list').innerHTML = '<div class="empty">No data available</div>';
       });
 
     // ---------- Division Round-Up ----------
