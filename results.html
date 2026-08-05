@@ -50,6 +50,15 @@
   <div class="card" id="results-list">Loading...</div>
 
   <script>
+
+    function parseScoreWithResult(rawScore) {
+      const match = rawScore.match(/^([WDL])\s+(.+)$/);
+      if (match) {
+        return { result: match[1], score: match[2] };
+      }
+      return { result: null, score: rawScore };
+    }
+    
     async function shareResult(result) {
       const scoreline = `${result.homeAway === 'H' ? 'Sandbach United' : result.opposition} ${result.score} ${result.homeAway === 'H' ? result.opposition : 'Sandbach United'}`;
       const scorers = result.scorers ? `\n⚽ ${result.scorers}` : '';
@@ -95,7 +104,8 @@
 
           return `
             <div class="row">
-              <div class="fixture">${r.homeAway === 'H' ? 'Sandbach United' : r.opposition} <span class="score">${r.score}</span> ${r.homeAway === 'H' ? r.opposition : 'Sandbach United'}</div>
+              <div class="fixture">${r.homeAway === 'H' ? 'Sandbach United' : r.opposition} ${parseScoreWithResult(r.score).score} ${r.homeAway === 'H' ? r.opposition : 'Sandbach United'}</div>
+              <div class="meta" style="font-weight:700; color:${parseScoreWithResult(r.score).result === 'W' ? '#22c55e' : parseScoreWithResult(r.score).result === 'L' ? '#ef4444' : '#eab308'};">${{W:'Win', D:'Draw', L:'Loss'}[parseScoreWithResult(r.score).result] || ''}</div>
               <div class="meta">${r.date}${r.competitionNote ? ' — ' + r.competitionNote : ''}</div>
               ${r.scorers ? `<div class="meta">⚽ ${r.scorers}</div>` : ''}
               ${statsLink}
