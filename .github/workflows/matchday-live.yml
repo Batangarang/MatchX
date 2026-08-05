@@ -16,7 +16,7 @@ jobs:
       - run: npm install
       - run: node matchday-live.js
         env:
-          X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
+          GETXAPI_KEY: ${{ secrets.GETXAPI_KEY }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
       - name: Commit updated data
         run: |
