@@ -73,9 +73,10 @@ async function getRecentPosts(userId) {
   });
   const data = await res.json();
 
-  if (!data.data) {
-    console.log('No data.data in response — raw response:', JSON.stringify(data));
-  }
+  console.log('HTTP status:', res.status);
+  console.log('Rate limit remaining:', res.headers.get('x-rate-limit-remaining'));
+  console.log('Rate limit reset:', res.headers.get('x-rate-limit-reset'));
+  console.log('Raw response:', JSON.stringify(data));
 
   const mediaLookup = {};
   (data.includes?.media || []).forEach(m => {
@@ -92,6 +93,7 @@ async function getRecentPosts(userId) {
     return { ...post, images };
   });
 }
+
 
 function isMatchdayPost(createdAt) {
   try {
