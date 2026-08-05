@@ -171,7 +171,9 @@ function mergeMatchData(previous, incoming) {
     return {
       ...incoming,
       goals: dedupedGoals,
-      score: deriveScoreFromGoals(dedupedGoals) || incoming.score,
+      score: (incoming.matchStage === 'full_time' && incoming.finalScoreAnnounced)
+        ? incoming.finalScoreAnnounced
+        : (deriveScoreFromGoals(dedupedGoals) || incoming.score),
       yellowCards: dedupeSimilarEvents(incoming.yellowCards || [], ['team', 'player']),
       redCards: dedupeSimilarEvents(incoming.redCards || [], ['team', 'player']),
     };
@@ -190,7 +192,9 @@ function mergeMatchData(previous, incoming) {
   );
 
   return {
-    score: deriveScoreFromGoals(mergedGoals) || incoming.score || previous.score,
+    score: (incoming.matchStage === 'full_time' && incoming.finalScoreAnnounced)
+      ? incoming.finalScoreAnnounced
+      : (deriveScoreFromGoals(mergedGoals) || incoming.score || previous.score),
     matchStage: incoming.matchStage && incoming.matchStage !== 'scheduled' ? incoming.matchStage : previous.matchStage,
     lineups: {
       home: {
@@ -294,9 +298,11 @@ async function run() {
 
   const prompt = `Below are X posts (and some attached images) from the home and away teams' official accounts on the day of a football match: ${fixture.homeAway === 'H' ? 'Sandbach United' : fixture.opposition} vs ${fixture.homeAway === 'H' ? fixture.opposition : 'Sandbach United'}, played ${fixture.date}${isCup ? ` (a cup competition: ${fixture.competitionNote} — this match could go to extra time and penalties)` : ' (a league match — normally 90 minutes, no extra time)'}.
 
-IMPORTANT: Sandbach United have a player with the surname "Foley" — when a post mentions "Foley" as a player or goalscorer (not as "Foley Meir" the club name), this refers to the Sandbach player, not the opposing club. Use context to tell the two apart: a bare "Foley" scoring, being carded, or being substituted refers to the player; "Foley Meir," "Foley FC," or "the Foley defence" refers to the club.
+IMPORTANT: Sandbach United specifically have ONE player with the surname "Foley" (not to be confused with the opposing club "Foley Meir"). This distinction ONLY matters when it's ambiguous whether "Foley" refers to that Sandbach player or to the club Foley Meir. If a post clearly names a different, specific player (e.g. "Kyle Foley", "Jack Foley") who is NOT further identified as Sandbach's player, do not assume they must be that Sandbach player — trust the team/side the post itself indicates (which account posted it, and any home/away context), and record the goal/sub/card for whichever team is actually accurate based on that context.
 
 IMPORTANT: Both the home and away clubs may separately post about the SAME goal, card, or event (e.g. one posts "0-1" and the other posts "9' Kieran O'Connell" for the exact same goal). Do NOT report the same real-world event twice just because both clubs mentioned it — treat matching or clearly-corroborating mentions from each side as ONE event, not two.
+
+IMPORTANT: If a post is a CORRECTION to an earlier goal (e.g. "Correction: that goal was actually scored by X, not Y" or "apologies, the scorer was actually..."), do NOT add this as a new goal — it replaces the earlier reported goal, so the total goal count should not increase.
 
 Posts:
 ${postsText}
@@ -305,6 +311,7 @@ Using information present in these posts AND any attached images (e.g. graphics 
 
 {
   "score": "string or null — the current or final score after 90 minutes",
+  "finalScoreAnnounced": "string or null — ONLY fill this in if a post explicitly states the full-time or half-time score as a direct statement (e.g. 'FT 3-2', a full-time graphic, 'match ends 3-2') — not inferred from goals, the literal announced score",
   "matchStage": "one of: scheduled, first_half, half_time, second_half, extra_time, penalties, full_time — base this on explicit mentions or images of kick-off, half-time (including abbreviations like 'HT'), full-time (including 'FT'), extra time, or penalties, not on guessing from elapsed time",
   "lineups": {
     "home": { "players": [], "substitutes": [], "manager": null, "officials": [] },
@@ -342,6 +349,8 @@ Using information present in these posts AND any attached images (e.g. graphics 
     "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
   }
 }
+
+For substitutions: "playerOff" is the player being TAKEN OFF the pitch (leaving), "playerOn" is the player COMING ON (entering). If a post says "X comes on for Y" or "Y makes way for X", then playerOff="Y", playerOn="X". Read the direction carefully — do not assume the first name mentioned is the one leaving.
 
 Be conservative with roughXG and matchControl when there is little material to base them on. If only a small number of posts are available (e.g. fewer than 3-4 substantive posts about actual play, excluding lineup/team-news graphics), keep the values close to neutral (e.g. xG near 0.0-0.3 for both sides, control near 50/50) and say so explicitly in "note" (e.g. "Too little commentary yet to estimate confidently"). Only move further from neutral once there is genuine descriptive commentary about chances, pressure, or dominance to base it on — do not infer confident numbers from a single vague post.
 
