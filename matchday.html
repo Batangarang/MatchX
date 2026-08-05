@@ -227,9 +227,13 @@
 
         const dotsEl = document.getElementById(dotsId);
         if (dotsEl) {
-          dotsEl.innerHTML = Array.from({ length: count }).map((_, i) =>
-            `<span class="${i === index ? 'active' : ''}" onclick="window['${trackId}_api'].goTo(${i})"></span>`
-          ).join('');
+          if (count <= 10) {
+            dotsEl.innerHTML = Array.from({ length: count }).map((_, i) =>
+              `<span class="${i === index ? 'active' : ''}" onclick="window['${trackId}_api'].goTo(${i})"></span>`
+            ).join('');
+          } else {
+            dotsEl.innerHTML = ''; // too many slides for individual dots — rely on the count text instead
+          }
         }
         const countEl = document.getElementById(countId);
         if (countEl) countEl.textContent = count > 0 ? `${index + 1} / ${count}` : '';
