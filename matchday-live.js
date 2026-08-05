@@ -106,7 +106,13 @@ function normalizeIdentity(name) {
   let n = name.toString().trim().toLowerCase();
   if (n === 'unknown' || n === '') return null;
   n = n.replace(/^unknown\s*\(([^)]+)\)$/i, '$1').trim();
-  n = n.replace(/\b(number|no\.?|#)\s*(\d+)/i, 'shirt$2').trim();
+
+  // A reference that's ONLY a shirt number (e.g. "Sandbach number 10", "player 10",
+  // "#10", "FM 8") carries no real identity of its own — treat it the same as
+  // "Unknown" so a later post naming the actual player can upgrade it, rather than
+  // two separately-numbered references failing to match a later named one.
+  if (/^([a-z\s]*)?(number|no\.?|#)\s*\d+$/i.test(n)) return null;
+
   return n || null;
 }
 
@@ -174,6 +180,7 @@ function mergeMatchData(previous, incoming) {
       score: (incoming.matchStage === 'full_time' && incoming.finalScoreAnnounced)
         ? incoming.finalScoreAnnounced
         : (deriveScoreFromGoals(dedupedGoals) || incoming.score),
+      finalScoreAnnounced: incoming.finalScoreAnnounced || null,
       yellowCards: dedupeSimilarEvents(incoming.yellowCards || [], ['team', 'player']),
       redCards: dedupeSimilarEvents(incoming.redCards || [], ['team', 'player']),
     };
@@ -192,9 +199,10 @@ function mergeMatchData(previous, incoming) {
   );
 
   return {
-    score: (incoming.matchStage === 'full_time' && incoming.finalScoreAnnounced)
-      ? incoming.finalScoreAnnounced
+    score: (incoming.matchStage === 'full_time' && (incoming.finalScoreAnnounced || previous.finalScoreAnnounced))
+      ? (incoming.finalScoreAnnounced || previous.finalScoreAnnounced)
       : (deriveScoreFromGoals(mergedGoals) || incoming.score || previous.score),
+    finalScoreAnnounced: incoming.finalScoreAnnounced || previous.finalScoreAnnounced || null,
     matchStage: incoming.matchStage && incoming.matchStage !== 'scheduled' ? incoming.matchStage : previous.matchStage,
     lineups: {
       home: {
@@ -303,6 +311,8 @@ IMPORTANT: Sandbach United specifically have ONE player with the surname "Foley"
 IMPORTANT: Both the home and away clubs may separately post about the SAME goal, card, or event (e.g. one posts "0-1" and the other posts "9' Kieran O'Connell" for the exact same goal). Do NOT report the same real-world event twice just because both clubs mentioned it — treat matching or clearly-corroborating mentions from each side as ONE event, not two.
 
 IMPORTANT: If a post is a CORRECTION to an earlier goal (e.g. "Correction: that goal was actually scored by X, not Y" or "apologies, the scorer was actually..."), do NOT add this as a new goal — it replaces the earlier reported goal, so the total goal count should not increase.
+
+IMPORTANT: When a post describes a foul or clash between two players before mentioning a card (e.g. "X catches Y late, ref shows yellow"), the card belongs to the player who COMMITTED the foul, not the player who was fouled. Record only the carded player's name in the "player" field — do not combine both players' names into one entry (e.g. write "Cope", not "FM 8 (Cope)" if Cope is actually the player who was fouled and someone else was carded — read carefully which player the card was actually shown to).
 
 Posts:
 ${postsText}
