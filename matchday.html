@@ -99,10 +99,37 @@
       font-weight: 600;
     }
 
-    .carousel { overflow: hidden; position: relative; touch-action: pan-y; transition: height 0.2s ease; }
-    .carousel-track { display: flex; transition: transform 0.3s ease; align-items: flex-start; }
-    .carousel-track > div { flex: 0 0 100%; box-sizing: border-box; max-height: 320px; overflow-y: auto; }
-    .carousel-nav { display: flex; align-items: center; justify-content: center; gap: 10px; margin-top: 10px; }
+    .carousel {
+      overflow: hidden;
+      position: relative;
+      touch-action: pan-y;
+      transition: height 0.2s ease;
+      width: 100%;
+      max-width: 100%;
+    }
+    .carousel-track {
+      display: flex;
+      transition: transform 0.3s ease;
+      align-items: flex-start;
+      width: 100%;
+    }
+    .carousel-track > div {
+      flex: 0 0 100%;
+      min-width: 0;
+      box-sizing: border-box;
+      max-height: 320px;
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+    .carousel-nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 10px;
+      width: 100%;
+      flex-wrap: nowrap;
+    }
     .carousel-nav button {
       border: none; background: var(--paper); width: 28px; height: 28px;
       border-radius: 50%; cursor: pointer; font-size: 16px; line-height: 1; color: var(--navy);
