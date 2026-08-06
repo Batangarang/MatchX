@@ -389,18 +389,21 @@
             <h2>Injuries</h2>
             ${listOrEmpty(m.injuries, i => `<li>${i.player} (${i.team})${i.note ? ' — ' + i.note : ''}</li>`)}
           </div>
-
-          <div class="card">
-            <h2>Added Time</h2>
-            <div>1st half: ${m.addedTime?.firstHalf ?? 'unknown'} | 2nd half: ${m.addedTime?.secondHalf ?? 'unknown'}</div>
-          </div>
-
+          
           <div class="card">
             <h2>Lineups</h2>
-            <div style="font-weight: 600; margin-bottom: 4px;">${data.homeTeam}</div>
+            <div style="font-weight: 600; margin-bottom: 4px;">${data.homeTeam}${m.lineups?.home?.manager ? ` — Manager: ${m.lineups.home.manager}` : ''}</div>
             ${listOrEmpty(m.lineups?.home?.players, p => `<li>${p}</li>`)}
-            <div style="font-weight: 600; margin: 10px 0 4px;">${data.awayTeam}</div>
+            ${m.lineups?.home?.substitutes?.length ? `
+              <div style="font-size: 12px; color: var(--muted); margin-top: 8px;">Substitutes</div>
+              ${listOrEmpty(m.lineups?.home?.substitutes, p => `<li>${p}</li>`)}
+            ` : ''}
+            <div style="font-weight: 600; margin: 14px 0 4px;">${data.awayTeam}${m.lineups?.away?.manager ? ` — Manager: ${m.lineups.away.manager}` : ''}</div>
             ${listOrEmpty(m.lineups?.away?.players, p => `<li>${p}</li>`)}
+            ${m.lineups?.away?.substitutes?.length ? `
+              <div style="font-size: 12px; color: var(--muted); margin-top: 8px;">Substitutes</div>
+              ${listOrEmpty(m.lineups?.away?.substitutes, p => `<li>${p}</li>`)}
+            ` : ''}
           </div>
         `;
 
