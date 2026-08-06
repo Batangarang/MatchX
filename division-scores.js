@@ -60,10 +60,17 @@ async function run() {
   }
 
   const { fixtures } = JSON.parse(fs.readFileSync('division-fixtures.json', 'utf-8'));
-  const todaysFixtures = fixtures.filter(f => isToday(parseFixtureDate(f.date)));
+  const testDate = process.env.DIVISION_SCORES_TEST_DATE; // e.g. "2026-08-08"
+
+  const todaysFixtures = testDate
+    ? fixtures.filter(f => {
+        const d = parseFixtureDate(f.date);
+        return d && d.toISOString().slice(0, 10) === testDate;
+      })
+    : fixtures.filter(f => isToday(parseFixtureDate(f.date)));
 
   const now = new Date();
-  const isManual = process.env.GITHUB_EVENT_NAME === 'workflow_dispatch';
+  const isManual = process.env.GITHUB_EVENT_NAME === 'workflow_dispatch' || !!testDate;
   const nowUK = now.getUTCHours() + (isBST() ? 1 : 0);
 
   if (nowUK < 11 && !isManual) {
