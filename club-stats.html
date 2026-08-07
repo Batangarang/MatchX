@@ -150,32 +150,43 @@
         svg.innerHTML = '<text x="10" y="70" font-size="12" fill="#8b96a8">Not enough data yet</text>';
         return;
       }
-      const w = 320, h = 140, padL = 30, padB = 20, padT = 10;
-      const allValues = history.flatMap(g => [g.cumGoalsFor, g.cumGoalsAgainst, Math.abs(g.cumGoalDifference)]);
-      const maxV = Math.max(...allValues, 1);
-      const maxStepX = (w - padL - 10) / Math.max(history.length - 1, 1);
+      const w = 320, h = 140, padL = 26, padR = 10, padB = 20, padT = 14;
+      const maxStepX = (w - padL - padR) / Math.max(history.length - 1, 1);
       const stepX = Math.min(maxStepX, 40);
-      const midY = padT + (h - padT - padB) / 2;
+
+      // One shared domain across all three values, so "0" and every value
+      // lines up consistently regardless of which line it belongs to.
+      const allValues = history.flatMap(g => [g.cumGoalsFor, g.cumGoalsAgainst, g.cumGoalDifference]);
+      const minV = Math.min(...allValues, 0);
+      const maxV = Math.max(...allValues, 1);
+      const range = maxV - minV || 1;
+
+      const valueToY = (v) => padT + (h - padT - padB) * (1 - (v - minV) / range);
 
       function lineFor(key, color) {
-        const coords = history.map((g, i) => {
-          const x = padL + i * stepX;
-          const y = key === 'cumGoalDifference'
-            ? midY - (g[key] / maxV) * (h - padT - padB) / 2
-            : padT + (h - padT - padB) * (1 - g[key] / maxV);
-          return { x, y };
-        });
+        const coords = history.map((g, i) => ({
+          x: padL + i * stepX,
+          y: valueToY(g[key]),
+        }));
         const path = coords.map((c, i) => `${i === 0 ? 'M' : 'L'}${c.x},${c.y}`).join(' ');
         const dots = coords.map((c, i) => `<circle cx="${c.x}" cy="${c.y}" r="2.5" fill="${color}"><title>Game ${history[i].gamesPlayed}: ${history[i][key]}</title></circle>`).join('');
         return `<path d="${path}" fill="none" stroke="${color}" stroke-width="2"/>${dots}`;
       }
 
+      // A reference line at 0, so it's clear where the "zero" baseline sits
+      // for all three series (useful given goal difference can go negative)
+      const zeroY = valueToY(0);
+      const zeroLine = (minV < 0)
+        ? `<line x1="${padL}" y1="${zeroY}" x2="${w - padR}" y2="${zeroY}" stroke="#dde2ec" stroke-width="1" stroke-dasharray="3,2"/>`
+        : '';
+
       svg.innerHTML = `
+        ${zeroLine}
         ${lineFor('cumGoalsFor', '#22c55e')}
         ${lineFor('cumGoalsAgainst', '#ef4444')}
         ${lineFor('cumGoalDifference', '#1c5fae')}
         <text x="2" y="${padT + 4}" font-size="8" fill="#8b96a8">${maxV}</text>
-        <text x="2" y="${h - padB}" font-size="8" fill="#8b96a8">0</text>
+        <text x="2" y="${h - padB}" font-size="8" fill="#8b96a8">${minV}</text>
       `;
     }
 
