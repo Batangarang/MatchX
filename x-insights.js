@@ -20,6 +20,18 @@ async function run() {
     return;
   }
 
+  let nwcflContext = '';
+  if (fs.existsSync('nwcfl-news.json')) {
+    const news = JSON.parse(fs.readFileSync('nwcfl-news.json', 'utf-8'));
+    const recentSandbachMentions = (news.articles || [])
+      .filter(a => a.body.toLowerCase().includes('sandbach'))
+      .slice(0, 2);
+    if (recentSandbachMentions.length > 0) {
+      nwcflContext = '\n\nRelevant league news mentioning Sandbach:\n' +
+        recentSandbachMentions.map(a => `[${a.title}] ${a.body.slice(0, 500)}`).join('\n\n');
+    }
+  }
+
   const postsData = JSON.parse(fs.readFileSync('x-posts.json', 'utf-8'));
   const allPosts = postsData.posts || [];
 
@@ -53,7 +65,7 @@ async function run() {
 
 ${postsText}
 
-Write a short, friendly 2-3 sentence summary for fans, covering things like recent form, team news, or anything notable. Use player and club names exactly as they'd normally be written in football reporting — if a name in the source posts includes emoji, numbers, hashtags, or decorative styling (e.g. "Joe Bev97" or "J.Bevan⚽"), extract just the real underlying name and ignore the decoration. Do not use the word "today" or "this morning" anywhere in the summary, since it may be read days later — use durable phrasing instead (e.g. "in their last match," "recently," or the actual date). Plain text only, no markdown, no headers.`,
+${nwcflContext} Write a short, friendly 2-3 sentence summary for fans, covering things like recent form, team news, or anything notable. Use player and club names exactly as they'd normally be written in football reporting — if a name in the source posts includes emoji, numbers, hashtags, or decorative styling (e.g. "Joe Bev97" or "J.Bevan⚽"), extract just the real underlying name and ignore the decoration. Do not use the word "today" or "this morning" anywhere in the summary, since it may be read days later — use durable phrasing instead (e.g. "in their last match," "recently," or the actual date). Plain text only, no markdown, no headers.`,
       }],
     }),
   });

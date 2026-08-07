@@ -14,6 +14,16 @@ async function run() {
     return;
   }
 
+  let nwcflContext = '';
+  if (fs.existsSync('nwcfl-news.json')) {
+    const news = JSON.parse(fs.readFileSync('nwcfl-news.json', 'utf-8'));
+    const recent = (news.articles || []).slice(0, 3);
+    if (recent.length > 0) {
+      nwcflContext = '\n\nRecent official NWCFL news articles:\n' +
+        recent.map(a => `[${a.title}] ${a.body.slice(0, 800)}`).join('\n\n');
+    }
+  }
+
   const postsData = JSON.parse(fs.readFileSync('division-posts.json', 'utf-8'));
   const clubs = postsData.clubs || [];
 

@@ -25,6 +25,7 @@ jobs:
           GETXAPI_KEY: ${{ secrets.GETXAPI_KEY }}
 
       - run: node x-insights.js
+      - run: node nwcfl-news.js
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
 
@@ -32,7 +33,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          for f in x-posts.json x-posts-lastpoll.json x-insights.json user-ids.json; do
+          for f in x-posts.json x-posts-lastpoll.json x-insights.json user-ids.json nwcfl-news.json nwcfl-news-seen.json; do
             [ -f "$f" ] && git add "$f"
           done
           git diff --staged --quiet || git commit -m "Update X posts and insights"
