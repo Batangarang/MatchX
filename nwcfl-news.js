@@ -16,7 +16,7 @@ async function getArticleList() {
     if (!idMatch) return;
     const id = idMatch[1];
     if (articles.find(a => a.id === id)) return; // page repeats the list twice in the markup
-    articles.push({ id, title: $(el).text().trim().split('\n')[0].trim() });
+    articles.push({ id });
   });
   return articles;
 }
@@ -26,20 +26,16 @@ async function getArticleBody(id) {
   const html = await res.text();
   const $ = cheerio.load(html);
 
-  const title = $('h1').first().text().trim();
-  const meta = $('h1').first().nextAll('h4, .meta, p').first().text().trim();
+  const container = $('.col-lg-8.hidden-xs').first();
+  const title = container.find('h1.news-headline-box').first().text().trim();
+  const meta = container.find('h4.news-headline-box').first().text().trim();
 
-  // Grab the main article paragraphs — everything between the h1/meta line
-  // and the "More ... News" related-articles section
   const paragraphs = [];
-  let started = false;
-  $('body').find('p, h4').each((i, el) => {
+  container.find('p').each((i, el) => {
     const text = $(el).text().trim();
-    if (!text) return;
-    if (text.includes(title.slice(0, 15))) return;
-    if (text.match(/\d{4}\s*\|/) && !started) { started = true; return; } // the date/category line
-    if (text.startsWith('More ') && text.includes('News')) started = false;
-    if (started) paragraphs.push(text);
+    if (text && text !== '&nbsp;' && text.length > 1) {
+      paragraphs.push(text);
+    }
   });
 
   return { title, meta, body: paragraphs.join('\n\n') };
@@ -70,7 +66,7 @@ async function run() {
       const full = await getArticleBody(article.id);
       existing.unshift({
         id: article.id,
-        title: full.title || article.title,
+        title: full.title,
         meta: full.meta,
         body: full.body,
         url: `https://www.nwcfl.com/news-articles.php?id=${article.id}`,
@@ -83,11 +79,10 @@ async function run() {
     }
   }
 
-  // Keep only the most recent 20 articles in the working file
   existing = existing.slice(0, 20);
 
   fs.writeFileSync('nwcfl-news.json', JSON.stringify({ generatedAt: new Date().toISOString(), articles: existing }, null, 2));
-  fs.writeFileSync('nwcfl-news-seen.json', JSON.stringify(seen.slice(-200), null, 2)); // cap seen-list growth
+  fs.writeFileSync('nwcfl-news-seen.json', JSON.stringify(seen.slice(-200), null, 2));
 
   console.log(`Saved ${newArticles.length} new articles.`);
 }

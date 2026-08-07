@@ -16,11 +16,13 @@ jobs:
       - run: npm install
       - run: node scrape.js
       - run: node league.js
+        run: node position-history.js
       - run: node player-tables.js
+      - run: node attendance-stats.js
       - name: Commit updated data
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data.json league.json player-tables.json
+          git add data.json league.json player-tables.json position-history.json attendance-stats.json
           git diff --staged --quiet || git commit -m "Update fixture and league data"
           git push
