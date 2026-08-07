@@ -5,6 +5,8 @@ const { getUserTweets } = require('./getxapi-client.js');
 const API_KEY = process.env.GETXAPI_KEY;
 const ANTHROPIC_KEY = process.env.ANTHROPIC_API_KEY;
 
+const { getUKNow, getUKDateString } = require('./uk-time.js');
+
 function findHandle(clubName) {
   if (clubName.includes('Sandbach')) return 'SandbachFC_1st';
   const found = CLUBS.find(c => clubName.includes(c.name) || c.name.includes(clubName));
@@ -22,14 +24,14 @@ function parseFixtureDate(dateStr) {
 }
 
 function isToday(date) {
-  const today = new Date();
+  const today = getUKNow();
   return date && date.getFullYear() === today.getFullYear() &&
          date.getMonth() === today.getMonth() &&
          date.getDate() === today.getDate();
 }
 
 function isBST() {
-  const m = new Date().getUTCMonth();
+  const m = getUKNow().getUTCMonth();
   return m > 2 && m < 9;
 }
 
@@ -37,7 +39,7 @@ function getTodaysWindow(fixtures) {
   if (fixtures.length === 0) return null;
   const kickoffs = fixtures.map(f => {
     const [hh, min] = f.kickoff.split(':');
-    const d = new Date();
+    const d = getUKNow();
     d.setUTCHours(parseInt(hh), parseInt(min), 0, 0);
     if (isBST()) d.setUTCHours(d.getUTCHours() - 1);
     return d;
@@ -69,9 +71,9 @@ async function run() {
       })
     : fixtures.filter(f => isToday(parseFixtureDate(f.date)));
 
-  const now = new Date();
+  const now = getUKNow();
   const isManual = process.env.GITHUB_EVENT_NAME === 'workflow_dispatch' || !!testDate;
-  const nowUK = now.getUTCHours() + (isBST() ? 1 : 0);
+  const nowUK = now.getUTCHours();
 
   if (nowUK < 11 && !isManual) {
     fs.writeFileSync('division-scores.json', JSON.stringify({
