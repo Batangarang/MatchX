@@ -333,11 +333,11 @@
     </a>
   </div>
 
-   <div class="card" id="briefing-card" onclick="toggleBriefingCard()" style="cursor:pointer;">
+  <div class="card" id="briefing-card" onclick="toggleBriefingCard()" style="cursor:pointer;">
     <div class="briefing-title-row">
-      <span id="briefing-title-active" class="briefing-title-active">Fan Briefing</span>
+      <span id="briefing-title-fan" class="briefing-title-active">Fan Briefing</span>
       <span class="briefing-title-sep">|</span>
-      <span id="briefing-title-inactive" class="briefing-title-inactive">Division Round-Up</span>
+      <span id="briefing-title-division" class="briefing-title-inactive">Division Round-Up</span>
     </div>
     <div id="briefing-content" style="margin-top:8px;">Loading...</div>
   </div>
@@ -776,13 +776,13 @@
     let divisionBriefingData = null;
 
     function renderBriefingCard() {
-      const activeEl = document.getElementById('briefing-title-active');
-      const inactiveEl = document.getElementById('briefing-title-inactive');
+      const fanTitleEl = document.getElementById('briefing-title-fan');
+      const divisionTitleEl = document.getElementById('briefing-title-division');
       const contentEl = document.getElementById('briefing-content');
 
       if (briefingMode === 'fan') {
-        activeEl.textContent = 'Fan Briefing';
-        inactiveEl.textContent = 'Division Round-Up';
+        fanTitleEl.className = 'briefing-title-active';
+        divisionTitleEl.className = 'briefing-title-inactive';
         if (fanBriefingData) {
           const date = new Date(fanBriefingData.generatedAt);
           const formatted = date.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' });
@@ -794,8 +794,8 @@
           contentEl.textContent = 'Loading...';
         }
       } else {
-        activeEl.textContent = 'Division Round-Up';
-        inactiveEl.textContent = 'Fan Briefing';
+        fanTitleEl.className = 'briefing-title-inactive';
+        divisionTitleEl.className = 'briefing-title-active';
         if (divisionBriefingData) {
           const summary = divisionBriefingData.summary || '';
           const teaser = summary.length > 160 ? summary.slice(0, 160).trim() + '…' : summary;
