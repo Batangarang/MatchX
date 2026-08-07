@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sandbach United — Club Stats</title>
+  <style>
+    :root {
+      --navy: #0c2340;
+      --royal: #1c5fae;
+      --amber: #f2a71b;
+      --paper: #eef1f6;
+      --ink: #14202b;
+      --muted: #6b7785;
+      --line: #e3e7ee;
+    }
+    body {
+      font-family: system-ui, sans-serif;
+      max-width: 500px;
+      margin: 40px auto;
+      padding: 0 16px;
+      background: var(--paper);
+      color: var(--ink);
+    }
+    h1 { color: var(--navy); font-size: 22px; }
+    a.back { display: inline-block; margin-bottom: 16px; color: var(--royal); text-decoration: none; }
+    .card {
+      background: white;
+      border-radius: 10px;
+      padding: 16px;
+      margin-bottom: 16px;
+      box-shadow: 0 1px 3px rgba(12,35,64,0.08);
+    }
+    .card h2 {
+      margin: 0 0 12px 0;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--navy);
+    }
+    .empty { color: var(--muted); font-size: 13px; }
+    .meta { color: var(--muted); font-size: 11px; margin-top: 6px; }
+    a { color: var(--royal); }
+  </style>
+</head>
+<body>
+  <a class="back" href="index.html">← Back</a>
+  <h1>Club Stats</h1>
+
+  <div class="card">
+    <h2>Home Attendances</h2>
+    <div id="attendance-summary" style="display:flex; justify-content:space-between; text-align:center; margin-bottom:14px;"></div>
+    <svg id="attendance-chart" viewBox="0 0 320 140" style="width:100%; height:auto;"></svg>
+    <a href="https://www.nwcfl.com/attendance-grid.php" target="_blank" rel="noopener" style="display:inline-block; margin-top:10px; font-size:12px;">See attendances for all clubs on NWCFL.com →</a>
+  </div>
+
+  <div class="card">
+    <h2>League Position Over Time</h2>
+    <svg id="position-chart" viewBox="0 0 320 160" style="width:100%; height:auto;"></svg>
+    <div class="meta" style="margin-top:6px;">Blue line: league points. Bars: goals for (green) / against (red) per game.</div>
+  </div>
+
+  <script>
+    function drawLineChart(svgId, points, valueKey, color) {
+      const svg = document.getElementById(svgId);
+      if (points.length === 0) {
+        svg.innerHTML = '<text x="10" y="70" font-size="12" fill="#8b96a8">Not enough data yet</text>';
+        return;
+      }
+      const w = 320, h = 140, padL = 30, padB = 20, padT = 10;
+      const values = points.map(p => p[valueKey]);
+      const maxV = Math.max(...values, 1);
+      const stepX = (w - padL - 10) / Math.max(points.length - 1, 1);
+
+      const coords = points.map((p, i) => {
+        const x = padL + i * stepX;
+        const y = padT + (h - padT - padB) * (1 - p[valueKey] / maxV);
+        return { x, y, p };
+      });
+
+      const path = coords.map((c, i) => `${i === 0 ? 'M' : 'L'}${c.x},${c.y}`).join(' ');
+      const dots = coords.map(c => `<circle cx="${c.x}" cy="${c.y}" r="3" fill="${color}"><title>${c.p.opponent || ''}: ${c.p[valueKey]}</title></circle>`).join('');
+      const labels = coords.map((c, i) => i % Math.ceil(points.length / 6 || 1) === 0
+        ? `<text x="${c.x}" y="${h - 4}" font-size="8" fill="#8b96a8" text-anchor="middle">${i + 1}</text>` : '').join('');
+
+      svg.innerHTML = `
+        <path d="${path}" fill="none" stroke="${color}" stroke-width="2"/>
+        ${dots}
+        ${labels}
+        <text x="2" y="${padT + 4}" font-size="8" fill="#8b96a8">${maxV}</text>
+        <text x="2" y="${h - padB}" font-size="8" fill="#8b96a8">0</text>
+      `;
+    }
+
+    function drawPositionChart(history) {
+      const svg = document.getElementById('position-chart');
+      if (!history || history.length === 0) {
+        svg.innerHTML = '<text x="10" y="70" font-size="12" fill="#8b96a8">Not enough data yet</text>';
+        return;
+      }
+      const w = 320, h = 160, padL = 30, padB = 20, padT = 10;
+      const maxPts = Math.max(...history.map(g => g.points), 1);
+      const maxGoals = Math.max(...history.map(g => Math.max(g.goalsFor, g.goalsAgainst)), 1);
+      const stepX = (w - padL - 10) / Math.max(history.length - 1, 1);
+      const barW = Math.min(stepX * 0.3, 8);
+
+      const bars = history.map((g, i) => {
+        const x = padL + i * stepX;
+        const forH = (g.goalsFor / maxGoals) * 30;
+        const againstH = (g.goalsAgainst / maxGoals) * 30;
+        return `
+          <rect x="${x - barW - 1}" y="${h - padB - forH}" width="${barW}" height="${forH}" fill="#22c55e"><title>${g.opponent}: ${g.goalsFor} for</title></rect>
+          <rect x="${x + 1}" y="${h - padB - againstH}" width="${barW}" height="${againstH}" fill="#ef4444"><title>${g.opponent}: ${g.goalsAgainst} against</title></rect>
+        `;
+      }).join('');
+
+      const coords = history.map((g, i) => {
+        const x = padL + i * stepX;
+        const y = padT + (h - padT - padB - 35) * (1 - g.points / maxPts);
+        return { x, y, g };
+      });
+      const path = coords.map((c, i) => `${i === 0 ? 'M' : 'L'}${c.x},${c.y}`).join(' ');
+      const dots = coords.map(c => `<circle cx="${c.x}" cy="${c.y}" r="3" fill="#1c5fae"><title>Game ${c.g.gamesPlayed} vs ${c.g.opponent}: ${c.g.points}pts, pos ${c.g.position}</title></circle>`).join('');
+
+      svg.innerHTML = `${bars}<path d="${path}" fill="none" stroke="#1c5fae" stroke-width="2"/>${dots}`;
+    }
+
+    fetch('attendance-stats.json?t=' + Date.now())
+      .then(res => res.json())
+      .then(data => {
+        document.getElementById('attendance-summary').innerHTML = `
+          <div><div style="font-size:18px; font-weight:700; color:var(--navy);">${data.average ?? '—'}</div><div style="font-size:11px; color:var(--muted);">Average</div></div>
+          <div><div style="font-size:18px; font-weight:700; color:var(--navy);">${data.lowest?.attendance ?? '—'}</div><div style="font-size:11px; color:var(--muted);">Lowest${data.lowest ? ` (v ${data.lowest.opponent})` : ''}</div></div>
+          <div><div style="font-size:18px; font-weight:700; color:var(--navy);">${data.highest?.attendance ?? '—'}</div><div style="font-size:11px; color:var(--muted);">Highest${data.highest ? ` (v ${data.highest.opponent})` : ''}</div></div>
+        `;
+        drawLineChart('attendance-chart', data.games, 'attendance', '#f2a71b');
+      })
+      .catch(() => {
+        document.getElementById('attendance-summary').innerHTML = '<div class="empty">No attendance data yet</div>';
+      });
+
+    fetch('position-history.json?t=' + Date.now())
+      .then(res => res.json())
+      .then(data => drawPositionChart(data.history))
+      .catch(() => {
+        document.getElementById('position-chart').innerHTML = '<text x="10" y="70" font-size="12" fill="#8b96a8">No history yet</text>';
+      });
+  </script>
+</body>
+</html>
