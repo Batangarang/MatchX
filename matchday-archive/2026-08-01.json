@@ -13,17 +13,17 @@
     "lineups": {
       "home": {
         "players": [
-          "Greg Hall",
-          "Kieran O'Connell",
-          "Mitch Nolan",
-          "Jordan Stafford",
-          "Saul Shotton",
-          "Kieran Nolan",
-          "Joe Bevan",
-          "Niall Cope",
-          "Nathan Barry",
-          "Robbie Hatton",
-          "Kyle Foley"
+          "1. Greg Hall",
+          "2. Kieran OConnell",
+          "3. Mitch Nolan",
+          "4. Jordan Stafford",
+          "5. Saul Shotton",
+          "6. Kieran Nolan",
+          "7. Joe Bevan",
+          "8. Niall Cope",
+          "9. Nathan Barry",
+          "10. Robbie Hatton (C)",
+          "11. Kyle Foley"
         ],
         "substitutes": [
           "Max Williams",
