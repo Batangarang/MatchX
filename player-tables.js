@@ -3,25 +3,28 @@ const fs = require('fs');
 
 const URL = 'https://www.nwcfl.com/player-tables.php';
 const DIVISION_NAME = 'First Division South';
-const CATEGORIES = [
-  { key: 'appearances', label: 'Appearances' },
-  { key: 'goalscorers', label: 'Goalscorers' },
-  { key: 'manOfTheMatch', label: 'Man of the Match' },
-];
 
-function findNearbyHeading($, table) {
-  // Look at preceding siblings for a heading or bold text containing both
-  // the category and division — same pattern used for league.js's
-  // "Last Six" form table detection.
-  let text = '';
-  let el = $(table).prev();
-  let hops = 0;
-  while (el.length && hops < 5) {
-    text += ' ' + el.text();
-    el = el.prev();
-    hops++;
-  }
-  return text;
+// Only need the "hidden-xs" (desktop) copy of each table — the visible-xs
+// version is an identical duplicate for mobile layout.
+const TABLE_CLASSES = {
+  appearances: 'appstable',
+  goalscorers: 'goalstable', // best guess, based on the appstable/momtable pattern — confirmed or corrected below
+  manOfTheMatch: 'momtable',
+};
+
+function parseTable($, table) {
+  const rows = [];
+  $(table).find('tr').slice(1).each((j, row) => {
+    const cells = $(row).find('td');
+    if (cells.length < 3) return;
+    const rank = $(cells[0]).text().trim();
+    const player = $(cells[1]).text().trim();
+    const club = $(cells[2]).text().trim();
+    const total = cells.length > 3 ? $(cells[3]).text().trim() : '';
+    if (!player) return;
+    rows.push({ rank: rank || null, player, club, total });
+  });
+  return rows;
 }
 
 async function scrape() {
@@ -30,39 +33,29 @@ async function scrape() {
   const $ = cheerio.load(html);
 
   const result = {};
+  const foundTableClasses = new Set();
 
+  // Log every table class actually present, so we can confirm/correct
+  // the goalscorers guess in one pass if it's wrong.
   $('table').each((i, table) => {
-    const nearbyText = findNearbyHeading($, table);
-    const tableOwnFirstRowText = $(table).find('tr').first().text();
-    const combinedContext = nearbyText + ' ' + tableOwnFirstRowText;
-
-    const matchedCategory = CATEGORIES.find(c => combinedContext.includes(c.label));
-    const isSouthDivision = combinedContext.includes(DIVISION_NAME);
-
-    if (matchedCategory && isSouthDivision && !result[matchedCategory.key]) {
-      const rows = [];
-      $(table).find('tr').slice(1).each((j, row) => {
-        const cells = $(row).find('td');
-        if (cells.length < 3) return;
-        const rank = $(cells[0]).text().trim();
-        const player = $(cells[1]).text().trim();
-        const club = $(cells[2]).text().trim();
-        const total = cells.length > 3 ? $(cells[3]).text().trim() : $(cells[2]).text().trim();
-        if (!player) return;
-        rows.push({ rank: rank || null, player, club, total });
-      });
-      result[matchedCategory.key] = rows;
-    }
+    const cls = $(table).attr('class');
+    if (cls) foundTableClasses.add(cls);
   });
+  console.log('Table classes found on the page:', [...foundTableClasses].join(', '));
 
-  const foundCategories = Object.keys(result);
-  if (foundCategories.length < 3) {
-    console.log(`Only found ${foundCategories.length}/3 categories via heading detection: ${foundCategories.join(', ')}`);
-    console.log('Table headers found on the page, for debugging:');
-    $('table').each((i, table) => {
-      console.log(`  Table ${i}: "${$(table).find('tr').first().text().trim().slice(0, 100)}"`);
+  Object.entries(TABLE_CLASSES).forEach(([key, className]) => {
+    $(`table.${className}`).each((i, table) => {
+      // Only take the desktop ("hidden-xs" container) copy, and confirm
+      // the preceding <h3> matches our target division.
+      const inHiddenXs = $(table).closest('.hidden-xs').length > 0;
+      if (!inHiddenXs) return;
+
+      const heading = $(table).prevAll('h3').first().text().trim();
+      if (heading === DIVISION_NAME && !result[key]) {
+        result[key] = parseTable($, table);
+      }
     });
-  }
+  });
 
   const output = {
     generatedAt: new Date().toISOString(),
@@ -71,10 +64,12 @@ async function scrape() {
   };
 
   fs.writeFileSync('player-tables.json', JSON.stringify(output, null, 2));
+
+  const foundCategories = Object.keys(result);
   console.log(`Saved player-tables.json with categories: ${foundCategories.join(', ')}`);
   Object.entries(result).forEach(([key, rows]) => {
     console.log(`${key}: ${rows.length} players`);
-    console.log(rows.find(r => r.player.toLowerCase().includes('bevan') || r.club === 'SAN'));
+    if (rows.length > 0) console.log('  Sample:', rows[0]);
   });
 }
 
