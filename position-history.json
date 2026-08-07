@@ -2,6 +2,15 @@
   "generatedAt": "2026-08-07T19:59:31.043Z",
   "history": [
     {
+      "gamesPlayed": 1,
+      "date": "Sat 01/08/26",
+      "opponent": "Wednesfield Community",
+      "position": 7,
+      "points": 3,
+      "goalsFor": 2,
+      "goalsAgainst": 1
+    },
+    {
       "gamesPlayed": 2,
       "date": "Tue 04/08/26",
       "opponent": "Foley Meir",
