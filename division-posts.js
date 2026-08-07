@@ -25,7 +25,7 @@ function shouldRunPostMatch() {
   const isBST = today.getUTCMonth() > 2 && today.getUTCMonth() < 9;
   if (isBST) kickoffToday.setUTCHours(kickoffToday.getUTCHours() - 1);
 
-  const targetTime = new Date(kickoffToday.getTime() + 165 * 60000);
+  const targetTime = new Date(kickoffToday.getTime() + 180 * 60000); // kickoff + 180 min (~6pm for a 3pm kickoff)
   const minutesFromTarget = Math.abs(today - targetTime) / 60000;
   if (minutesFromTarget > 15) return false;
 

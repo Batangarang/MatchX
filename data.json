@@ -1,5 +1,5 @@
 {
-  "scrapedAt": "2026-08-07T23:27:20.628Z",
+  "scrapedAt": "2026-08-07T23:34:49.851Z",
   "nextFixture": {
     "date": "Sat 08/08/26",
     "opposition": "Stafford Town",
@@ -37,6 +37,26 @@
       "opponentUrl": null,
       "homeAway": "H",
       "kickoff": "15:00",
+      "score": null,
+      "scorers": null,
+      "competitionNote": null
+    },
+    {
+      "date": "",
+      "opposition": "(The Isuzu FA Vase 1Q)",
+      "opponentUrl": null,
+      "homeAway": "",
+      "kickoff": "",
+      "score": null,
+      "scorers": null,
+      "competitionNote": null
+    },
+    {
+      "date": "Tue 18/08/26",
+      "opposition": "Market Drayton Town",
+      "opponentUrl": "clubpage.php?id=224",
+      "homeAway": "A",
+      "kickoff": "19:45",
       "score": null,
       "scorers": null,
       "competitionNote": null
