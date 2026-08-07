@@ -34,6 +34,10 @@ async function getUserTweets(userName, apiKey, opts = {}) {
     const res = await fetch(`${BASE_URL}/twitter/user/tweets?${params}`, {
       headers: { Authorization: `Bearer ${apiKey}` },
     });
+
+    const data = await res.json();
+    console.log('Raw GetXAPI response for', userName, ':', JSON.stringify(data).slice(0, 500));
+    
     const data = await res.json();
 
     if (data.error) {
