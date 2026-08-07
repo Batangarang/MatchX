@@ -285,9 +285,12 @@
     </a>
   </div>
 
-  <div class="card">
-    <h2>Fan Briefing</h2>
-    <div id="x-insight">Loading...</div>
+  <div class="card" id="briefing-card" onclick="toggleBriefingCard()" style="cursor:pointer;">
+    <div style="display:flex; justify-content:space-between; align-items:center;">
+      <h2 id="briefing-title" style="margin-bottom:0;">Fan Briefing</h2>
+      <span style="font-size:11px; color:var(--muted);">Tap to switch ⇄</span>
+    </div>
+    <div id="briefing-content" style="margin-top:8px;">Loading...</div>
   </div>
 
   <div class="card">
@@ -719,18 +722,55 @@
 
     // ---------- Fan Briefing ----------
 
+    let briefingMode = 'fan';
+    let fanBriefingData = null;
+    let divisionBriefingData = null;
+
+    function renderBriefingCard() {
+      const titleEl = document.getElementById('briefing-title');
+      const contentEl = document.getElementById('briefing-content');
+
+      if (briefingMode === 'fan') {
+        titleEl.textContent = 'Fan Briefing';
+        if (fanBriefingData) {
+          const date = new Date(fanBriefingData.generatedAt);
+          const formatted = date.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' });
+          contentEl.innerHTML = `
+            <div>${fanBriefingData.summary || 'No insight available yet.'}</div>
+            <div class="meta">Updated ${formatted}</div>
+          `;
+        } else {
+          contentEl.textContent = 'Loading...';
+        }
+      } else {
+        titleEl.textContent = 'Division Round-Up';
+        if (divisionBriefingData) {
+          const summary = divisionBriefingData.summary || '';
+          const teaser = summary.length > 160 ? summary.slice(0, 160).trim() + '…' : summary;
+          contentEl.innerHTML = `
+            <div>${teaser || 'No round-up available yet.'}</div>
+            <a href="division.html" style="display:inline-block; margin-top:10px; font-size:13px;" onclick="event.stopPropagation()">Read the full round-up →</a>
+          `;
+        } else {
+          contentEl.textContent = 'Loading...';
+        }
+      }
+    }
+
+    function toggleBriefingCard() {
+      briefingMode = briefingMode === 'fan' ? 'division' : 'fan';
+      renderBriefingCard();
+    }
+
     fetch('x-insights.json?t=' + Date.now())
       .then(res => res.json())
       .then(data => {
-        const date = new Date(data.generatedAt);
-        const formatted = date.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' });
-        document.getElementById('x-insight').innerHTML = `
-          <div>${data.summary || 'No insight available yet.'}</div>
-          <div class="meta">Updated ${formatted}</div>
-        `;
+        fanBriefingData = data;
+        renderBriefingCard();
       })
       .catch(() => {
-        document.getElementById('x-insight').textContent = 'No insight available yet.';
+        fanBriefingData = { summary: 'No insight available yet.' };
+        renderBriefingCard();
       });
 
     // ---------- X posts ----------
@@ -814,12 +854,12 @@
     fetch('division-insights.json?t=' + Date.now())
       .then(res => res.json())
       .then(data => {
-        const summary = data.summary || '';
-        const teaser = summary.length > 160 ? summary.slice(0, 160).trim() + '…' : summary;
-        document.getElementById('division-teaser').textContent = teaser || 'No round-up available yet.';
+        divisionBriefingData = data;
+        renderBriefingCard();
       })
       .catch(() => {
-        document.getElementById('division-teaser').textContent = 'No round-up available yet.';
+        divisionBriefingData = { summary: 'No round-up available yet.' };
+        renderBriefingCard();
       });
 
     // ---------- League Table ----------
