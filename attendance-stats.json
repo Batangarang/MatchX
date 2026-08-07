@@ -1,0 +1,21 @@
+{
+  "generatedAt": "2026-08-07T19:53:23.419Z",
+  "games": [
+    {
+      "opponent": "Wednesfield Community",
+      "score": "2-1",
+      "attendance": 132
+    }
+  ],
+  "average": 132,
+  "lowest": {
+    "opponent": "Wednesfield Community",
+    "score": "2-1",
+    "attendance": 132
+  },
+  "highest": {
+    "opponent": "Wednesfield Community",
+    "score": "2-1",
+    "attendance": 132
+  }
+}
