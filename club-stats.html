@@ -114,16 +114,16 @@
       // Fixed 1-to-20 position scale, 1 at top
       const posToY = (pos) => padT + ((pos - 1) / 19) * (h - padT - padB - 30);
 
-      const bars = history.map((g, i) => {
+     const bars = history.map((g, i) => {
         const x = padL + i * stepX;
         const forH = ((g.gameGoalsFor || 0) / maxGoals) * 30;
         const againstH = ((g.gameGoalsAgainst || 0) / maxGoals) * 30;
         const barsBaseY = h - padB;
         return `
           <rect x="${x - barW - 1}" y="${barsBaseY - forH}" width="${barW}" height="${forH}" fill="#22c55e"><title>${g.opponent}: ${g.gameGoalsFor} for (this game)</title></rect>
-          <text x="${x - barW/2 - 1}" y="${barsBaseY - forH - 3}" font-size="8" fill="#22c55e" text-anchor="middle">${g.gameGoalsFor ?? ''}</text>
+          <text x="${x - barW/2 - 1}" y="${barsBaseY + 10}" font-size="8" fill="#22c55e" text-anchor="middle">${g.gameGoalsFor ?? ''}</text>
           <rect x="${x + 1}" y="${barsBaseY - againstH}" width="${barW}" height="${againstH}" fill="#ef4444"><title>${g.opponent}: ${g.gameGoalsAgainst} against (this game)</title></rect>
-          <text x="${x + barW/2 + 1}" y="${barsBaseY - againstH - 3}" font-size="8" fill="#ef4444" text-anchor="middle">${g.gameGoalsAgainst ?? ''}</text>
+          <text x="${x + barW/2 + 1}" y="${barsBaseY + 10}" font-size="8" fill="#ef4444" text-anchor="middle">${g.gameGoalsAgainst ?? ''}</text>
         `;
       }).join('');
 
