@@ -427,11 +427,11 @@
       }
     }
 
-    function formBadges(form) {
+  function formBadges(form) {
       if (!form) return '';
       const colors = { W: '#22c55e', D: '#eab308', L: '#ef4444' };
-      const lastFive = form.slice(-5);
-      return '<div class="form-badges">' + lastFive.split('').map(r =>
+      const latestFive = form.slice(0, 5).split('').reverse(); // newest-first source → reverse so newest ends up on the right
+      return '<div class="form-badges">' + latestFive.map(r =>
         `<span style="background:${colors[r] || '#ccc'};" title="${r}"></span>`
       ).join('') + '</div>';
     }

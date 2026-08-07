@@ -391,22 +391,27 @@
             ${listOrEmpty(m.injuries, i => `<li>${i.player} (${i.team})${i.note ? ' — ' + i.note : ''}</li>`)}
           </div>
           
-          <div class="card">
+         <div class="card">
             <h2>Lineups</h2>
-            <div style="font-weight: 600; margin-bottom: 4px;">${data.homeTeam}${m.lineups?.home?.manager ? ` — Manager: ${m.lineups.home.manager}` : ''}</div>
-            ${listOrEmpty(m.lineups?.home?.players, p => `<li>${p}</li>`)}
-            ${m.lineups?.home?.substitutes?.length ? `
-              <div style="font-size: 12px; color: var(--muted); margin-top: 8px;">Substitutes</div>
-              ${listOrEmpty(m.lineups?.home?.substitutes, p => `<li>${p}</li>`)}
-            ` : ''}
-            <div style="font-weight: 600; margin: 14px 0 4px;">${data.awayTeam}${m.lineups?.away?.manager ? ` — Manager: ${m.lineups.away.manager}` : ''}</div>
-            ${listOrEmpty(m.lineups?.away?.players, p => `<li>${p}</li>`)}
-            ${m.lineups?.away?.substitutes?.length ? `
-              <div style="font-size: 12px; color: var(--muted); margin-top: 8px;">Substitutes</div>
-              ${listOrEmpty(m.lineups?.away?.substitutes, p => `<li>${p}</li>`)}
-            ` : ''}
+            <div style="display:flex; gap:12px;">
+              <div style="flex:1; min-width:0;">
+                <div style="font-weight: 600; margin-bottom: 4px; font-size:13px;">${data.homeTeam}${m.lineups?.home?.manager ? `<br><span style="font-weight:400; color:var(--muted); font-size:11px;">Mgr: ${m.lineups.home.manager}</span>` : ''}</div>
+                <ul style="font-size:12px; padding-left:16px;">${(m.lineups?.home?.players || []).map(p => `<li>${p}</li>`).join('') || '<li class="empty">None recorded</li>'}</ul>
+                ${m.lineups?.home?.substitutes?.length ? `
+                  <div style="font-size: 11px; color: var(--muted); margin-top: 6px;">Subs</div>
+                  <ul style="font-size:12px; padding-left:16px;">${m.lineups.home.substitutes.map(p => `<li>${p}</li>`).join('')}</ul>
+                ` : ''}
+              </div>
+              <div style="flex:1; min-width:0;">
+                <div style="font-weight: 600; margin-bottom: 4px; font-size:13px;">${data.awayTeam}${m.lineups?.away?.manager ? `<br><span style="font-weight:400; color:var(--muted); font-size:11px;">Mgr: ${m.lineups.away.manager}</span>` : ''}</div>
+                <ul style="font-size:12px; padding-left:16px;">${(m.lineups?.away?.players || []).map(p => `<li>${p}</li>`).join('') || '<li class="empty">None recorded</li>'}</ul>
+                ${m.lineups?.away?.substitutes?.length ? `
+                  <div style="font-size: 11px; color: var(--muted); margin-top: 6px;">Subs</div>
+                  <ul style="font-size:12px; padding-left:16px;">${m.lineups.away.substitutes.map(p => `<li>${p}</li>`).join('')}</ul>
+                ` : ''}
+              </div>
+            </div>
           </div>
-        `;
 
         document.getElementById('content').innerHTML = html;
 
