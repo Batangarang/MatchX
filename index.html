@@ -70,6 +70,33 @@
       color: var(--ink);
     }
 
+    .briefing-stack {
+      position: relative;
+      margin-bottom: 28px;
+      cursor: pointer;
+    }
+    .briefing-back {
+      position: absolute;
+      top: 10px;
+      left: 8px;
+      right: 8px;
+      bottom: -10px;
+      background: #dde2ec;
+      filter: grayscale(0.5);
+      opacity: 0.7;
+      z-index: 1;
+      pointer-events: none;
+      overflow: hidden;
+    }
+    .briefing-front {
+      position: relative;
+      z-index: 2;
+      transition: transform 0.12s ease;
+    }
+    .briefing-stack:active .briefing-front {
+      transform: scale(0.98);
+    }
+
     .hero {
       position: relative;
       overflow: hidden;
@@ -285,12 +312,17 @@
     </a>
   </div>
 
-  <div class="card" id="briefing-card" onclick="toggleBriefingCard()" style="cursor:pointer;">
-    <div style="display:flex; justify-content:space-between; align-items:center;">
-      <h2 id="briefing-title" style="margin-bottom:0;">Fan Briefing</h2>
-      <span style="font-size:11px; color:var(--muted);">Tap to switch ⇄</span>
+   <div class="briefing-stack" onclick="toggleBriefingCard()">
+    <div class="card briefing-back" id="briefing-back">
+      <h2 id="briefing-back-title" style="margin-bottom:0; opacity:0.6;">Division Round-Up</h2>
     </div>
-    <div id="briefing-content" style="margin-top:8px;">Loading...</div>
+    <div class="card briefing-front" id="briefing-front">
+      <div style="display:flex; justify-content:space-between; align-items:center;">
+        <h2 id="briefing-title" style="margin-bottom:0;">Fan Briefing</h2>
+        <span style="font-size:11px; color:var(--muted);">Tap to switch ⇄</span>
+      </div>
+      <div id="briefing-content" style="margin-top:8px;">Loading...</div>
+    </div>
   </div>
 
   <div class="card">
@@ -728,7 +760,10 @@
 
     function renderBriefingCard() {
       const titleEl = document.getElementById('briefing-title');
+      const backTitleEl = document.getElementById('briefing-back-title');
       const contentEl = document.getElementById('briefing-content');
+
+      backTitleEl.textContent = briefingMode === 'fan' ? 'Division Round-Up' : 'Fan Briefing';
 
       if (briefingMode === 'fan') {
         titleEl.textContent = 'Fan Briefing';
