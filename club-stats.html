@@ -108,7 +108,8 @@
       const w = 320, h = 160, padL = 30, padB = 20, padT = 10;
       const maxPts = Math.max(...history.map(g => g.points), 1);
       const maxGoals = Math.max(...history.map(g => Math.max(g.gameGoalsFor || 0, g.gameGoalsAgainst || 0)), 1);
-      const stepX = (w - padL - 10) / Math.max(history.length - 1, 1);
+      const maxStepX = (w - padL - 10) / Math.max(history.length - 1, 1);
+      const stepX = Math.min(maxStepX, 40); // fixed 40px spacing, so early season clusters left rather than stretching
       const barW = Math.min(stepX * 0.3, 8);
 
       const bars = history.map((g, i) => {
@@ -141,7 +142,8 @@
       const w = 320, h = 140, padL = 30, padB = 20, padT = 10;
       const allValues = history.flatMap(g => [g.cumGoalsFor, g.cumGoalsAgainst, Math.abs(g.cumGoalDifference)]);
       const maxV = Math.max(...allValues, 1);
-      const stepX = (w - padL - 10) / Math.max(history.length - 1, 1);
+      const maxStepX = (w - padL - 10) / Math.max(history.length - 1, 1);
+      const stepX = Math.min(maxStepX, 40);
       const midY = padT + (h - padT - padB) / 2;
 
       function lineFor(key, color) {
