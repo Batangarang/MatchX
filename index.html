@@ -575,6 +575,21 @@
 
     // ---------- Matchday snapshot card ----------
 
+    function getDisplayStatus(data) {
+      const stageLabels = {
+        scheduled: { label: 'Upcoming', className: 'status-upcoming' },
+        first_half: { label: 'Live — 1st Half', className: 'status-live' },
+        half_time: { label: 'Half Time', className: 'status-live' },
+        second_half: { label: 'Live — 2nd Half', className: 'status-live' },
+        extra_time: { label: 'Extra Time', className: 'status-live' },
+        penalties: { label: 'Penalties', className: 'status-live' },
+        full_time: { label: 'Full Time', className: 'status-finished' },
+      };
+      const stage = data.match?.matchStage;
+      if (stage && stageLabels[stage]) return stageLabels[stage];
+      return getMatchStatus(data.fixtureDate, data.kickoff); // fallback to time-based guess
+    }
+
     fetch('matchday-live.json?t=' + Date.now())
       .then(res => res.json())
       .then(data => {
@@ -583,7 +598,7 @@
         document.getElementById('matchday-card').style.display = 'block';
         document.getElementById('matchday-teams').textContent = `${data.homeTeam} vs ${data.awayTeam}`;
 
-        const status = getMatchStatus(data.fixtureDate, data.kickoff);
+        const status = getDisplayStatus(data);
         const badge = document.getElementById('matchday-status-badge');
         badge.textContent = status.label;
         badge.className = 'status-badge ' + status.className;
