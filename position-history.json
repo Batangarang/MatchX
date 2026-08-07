@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-07T19:59:31.043Z",
+  "generatedAt": "2026-08-07T22:32:09.942Z",
   "history": [
     {
       "gamesPlayed": 1,
@@ -7,8 +7,11 @@
       "opponent": "Wednesfield Community",
       "position": 7,
       "points": 3,
-      "goalsFor": 2,
-      "goalsAgainst": 1
+      "gameGoalsFor": 2,
+      "gameGoalsAgainst": 1,
+      "cumGoalsFor": 2,
+      "cumGoalsAgainst": 1,
+      "cumGoalDifference": 1
     },
     {
       "gamesPlayed": 2,
@@ -16,8 +19,11 @@
       "opponent": "Foley Meir",
       "position": 7,
       "points": 3,
-      "goalsFor": 4,
-      "goalsAgainst": 4
+      "gameGoalsFor": 3,
+      "gameGoalsAgainst": 2,
+      "cumGoalsFor": 4,
+      "cumGoalsAgainst": 4,
+      "cumGoalDifference": 0
     }
   ]
 }

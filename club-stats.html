@@ -61,6 +61,12 @@
     <div class="meta" style="margin-top:6px;">Blue line: league points. Bars: goals for (green) / against (red) per game.</div>
   </div>
 
+  <div class="card">
+    <h2>Season Goals Over Time (Cumulative)</h2>
+    <svg id="cumulative-chart" viewBox="0 0 320 140" style="width:100%; height:auto;"></svg>
+    <div class="meta" style="margin-top:6px;">Green: goals for. Red: goals against. Blue: goal difference.</div>
+  </div>
+
   <script>
     function drawLineChart(svgId, points, valueKey, color) {
       const svg = document.getElementById(svgId);
@@ -101,17 +107,17 @@
       }
       const w = 320, h = 160, padL = 30, padB = 20, padT = 10;
       const maxPts = Math.max(...history.map(g => g.points), 1);
-      const maxGoals = Math.max(...history.map(g => Math.max(g.goalsFor, g.goalsAgainst)), 1);
+      const maxGoals = Math.max(...history.map(g => Math.max(g.gameGoalsFor || 0, g.gameGoalsAgainst || 0)), 1);
       const stepX = (w - padL - 10) / Math.max(history.length - 1, 1);
       const barW = Math.min(stepX * 0.3, 8);
 
       const bars = history.map((g, i) => {
         const x = padL + i * stepX;
-        const forH = (g.goalsFor / maxGoals) * 30;
-        const againstH = (g.goalsAgainst / maxGoals) * 30;
+        const forH = ((g.gameGoalsFor || 0) / maxGoals) * 30;
+        const againstH = ((g.gameGoalsAgainst || 0) / maxGoals) * 30;
         return `
-          <rect x="${x - barW - 1}" y="${h - padB - forH}" width="${barW}" height="${forH}" fill="#22c55e"><title>${g.opponent}: ${g.goalsFor} for</title></rect>
-          <rect x="${x + 1}" y="${h - padB - againstH}" width="${barW}" height="${againstH}" fill="#ef4444"><title>${g.opponent}: ${g.goalsAgainst} against</title></rect>
+          <rect x="${x - barW - 1}" y="${h - padB - forH}" width="${barW}" height="${forH}" fill="#22c55e"><title>${g.opponent}: ${g.gameGoalsFor} for (this game)</title></rect>
+          <rect x="${x + 1}" y="${h - padB - againstH}" width="${barW}" height="${againstH}" fill="#ef4444"><title>${g.opponent}: ${g.gameGoalsAgainst} against (this game)</title></rect>
         `;
       }).join('');
 
@@ -124,6 +130,40 @@
       const dots = coords.map(c => `<circle cx="${c.x}" cy="${c.y}" r="3" fill="#1c5fae"><title>Game ${c.g.gamesPlayed} vs ${c.g.opponent}: ${c.g.points}pts, pos ${c.g.position}</title></circle>`).join('');
 
       svg.innerHTML = `${bars}<path d="${path}" fill="none" stroke="#1c5fae" stroke-width="2"/>${dots}`;
+    }
+
+    function drawCumulativeChart(history) {
+      const svg = document.getElementById('cumulative-chart');
+      if (!history || history.length === 0) {
+        svg.innerHTML = '<text x="10" y="70" font-size="12" fill="#8b96a8">Not enough data yet</text>';
+        return;
+      }
+      const w = 320, h = 140, padL = 30, padB = 20, padT = 10;
+      const allValues = history.flatMap(g => [g.cumGoalsFor, g.cumGoalsAgainst, Math.abs(g.cumGoalDifference)]);
+      const maxV = Math.max(...allValues, 1);
+      const stepX = (w - padL - 10) / Math.max(history.length - 1, 1);
+      const midY = padT + (h - padT - padB) / 2;
+
+      function lineFor(key, color) {
+        const coords = history.map((g, i) => {
+          const x = padL + i * stepX;
+          const y = key === 'cumGoalDifference'
+            ? midY - (g[key] / maxV) * (h - padT - padB) / 2
+            : padT + (h - padT - padB) * (1 - g[key] / maxV);
+          return { x, y };
+        });
+        const path = coords.map((c, i) => `${i === 0 ? 'M' : 'L'}${c.x},${c.y}`).join(' ');
+        const dots = coords.map((c, i) => `<circle cx="${c.x}" cy="${c.y}" r="2.5" fill="${color}"><title>Game ${history[i].gamesPlayed}: ${history[i][key]}</title></circle>`).join('');
+        return `<path d="${path}" fill="none" stroke="${color}" stroke-width="2"/>${dots}`;
+      }
+
+      svg.innerHTML = `
+        ${lineFor('cumGoalsFor', '#22c55e')}
+        ${lineFor('cumGoalsAgainst', '#ef4444')}
+        ${lineFor('cumGoalDifference', '#1c5fae')}
+        <text x="2" y="${padT + 4}" font-size="8" fill="#8b96a8">${maxV}</text>
+        <text x="2" y="${h - padB}" font-size="8" fill="#8b96a8">0</text>
+      `;
     }
 
     fetch('attendance-stats.json?t=' + Date.now())
