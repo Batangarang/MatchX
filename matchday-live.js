@@ -49,7 +49,7 @@ function withinMatchWindow(kickoff, competitionNote) {
   if (isBST) kickoffToday.setUTCHours(kickoffToday.getUTCHours() - 1);
 
   const minutesFromKickoff = (now - kickoffToday) / 60000;
-  return minutesFromKickoff >= -30 && minutesFromKickoff <= maxMinutesAfter;
+  return minutesFromKickoff >= -90 && minutesFromKickoff <= maxMinutesAfter;
 }
 
 async function getPostsForHandle(handle, dateStr) {
@@ -408,6 +408,8 @@ Using information present in these posts AND any attached images (e.g. graphics 
     "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
   }
 }
+
+For lineups: if shirt numbers are visible (e.g. in a numbered team sheet graphic), format each player as "N. Player Name" (e.g. "1. Parkes", "10. Lovett"). If no number is visible for a player, just use their name alone.
 
 For substitutions: "playerOff" is the player being TAKEN OFF the pitch (leaving), "playerOn" is the player COMING ON (entering). If a post says "X comes on for Y" or "Y makes way for X", then playerOff="Y", playerOn="X". Read the direction carefully — do not assume the first name mentioned is the one leaving.
 

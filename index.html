@@ -665,24 +665,42 @@
       return getMatchStatus(data.fixtureDate, data.kickoff); // fallback to time-based guess
     }
 
-    fetch('matchday-live.json?t=' + Date.now())
+    fetch('data.json?t=' + Date.now())
       .then(res => res.json())
       .then(data => {
-        if (!isFixtureToday(data.fixtureDate)) return;
+        const next = data.nextFixture;
+        if (!next) return;
+        const [, dd, mm, yy] = next.date.match(/(\d{2})\/(\d{2})\/(\d{2})/);
+        const fixtureDate = new Date(2000 + parseInt(yy), parseInt(mm) - 1, parseInt(dd));
+        const today = new Date();
+        const isToday = fixtureDate.getFullYear() === today.getFullYear() &&
+                         fixtureDate.getMonth() === today.getMonth() &&
+                         fixtureDate.getDate() === today.getDate();
+        if (!isToday) return;
 
         document.getElementById('matchday-card').style.display = 'block';
-        document.getElementById('matchday-teams').textContent = `${data.homeTeam} vs ${data.awayTeam}`;
+        const homeTeam = next.homeAway === 'H' ? 'Sandbach United' : next.opposition;
+        const awayTeam = next.homeAway === 'H' ? next.opposition : 'Sandbach United';
+        document.getElementById('matchday-teams').textContent = `${homeTeam} vs ${awayTeam}`;
+        document.getElementById('matchday-status-badge').textContent = 'Upcoming';
+        document.getElementById('matchday-status-badge').className = 'status-badge status-upcoming';
+        document.getElementById('matchday-score').textContent = '';
 
-        const status = getDisplayStatus(data);
-        const badge = document.getElementById('matchday-status-badge');
-        badge.textContent = status.label;
-        badge.className = 'status-badge ' + status.className;
-
-        if (status.className === 'status-upcoming') {
-          document.getElementById('matchday-score').textContent = '';
-        } else {
-          document.getElementById('matchday-score').textContent = data.match?.score || '0 - 0';
-        }
+        // Once real live data exists for today, it overrides the placeholder above
+        fetch('matchday-live.json?t=' + Date.now())
+          .then(res => res.json())
+          .then(liveData => {
+            if (!isFixtureToday(liveData.fixtureDate)) return;
+            document.getElementById('matchday-teams').textContent = `${liveData.homeTeam} vs ${liveData.awayTeam}`;
+            const status = getDisplayStatus(liveData);
+            const badge = document.getElementById('matchday-status-badge');
+            badge.textContent = status.label;
+            badge.className = 'status-badge ' + status.className;
+            if (status.className !== 'status-upcoming') {
+              document.getElementById('matchday-score').textContent = liveData.match?.score || '0 - 0';
+            }
+          })
+          .catch(() => {});
       })
       .catch(() => {});
 
