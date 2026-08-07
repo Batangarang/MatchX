@@ -55,7 +55,7 @@ function withinMatchWindow(kickoff, competitionNote) {
 async function getPostsForHandle(handle, dateStr) {
   const dayStart = new Date(`${dateStr}T00:00:00Z`);
   const dayEnd = new Date(`${dateStr}T23:59:59Z`);
-  const tweets = await getUserTweets(handle, API_KEY, { maxPages: 5, sinceDate: dayStart });
+  const tweets = await getUserTweets(handle, API_KEY, { maxPages: 8, sinceDate: dayStart });
   return tweets.filter(t => {
     const d = new Date(t.createdAt);
     return d >= dayStart && d <= dayEnd;
