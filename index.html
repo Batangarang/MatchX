@@ -70,28 +70,34 @@
       color: var(--ink);
     }
 
-    .briefing-stack {
-      position: relative;
-      margin-bottom: 28px;
-      cursor: pointer;
+    .briefing-title-row {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
     }
-    .briefing-back {
-      position: absolute;
-      top: 10px;
-      left: 8px;
-      right: 8px;
-      bottom: -10px;
-      background: #dde2ec;
-      filter: grayscale(0.5);
-      opacity: 0.7;
-      z-index: 1;
-      pointer-events: none;
-      overflow: hidden;
+    .briefing-title-active {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--navy);
+      padding-bottom: 6px;
+      border-bottom: 3px solid var(--amber);
     }
-    .briefing-front {
-      position: relative;
-      z-index: 2;
-      transition: transform 0.12s ease;
+    .briefing-title-sep {
+      color: var(--line);
+      font-size: 14px;
+    }
+    .briefing-title-inactive {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #c3cad6;
+    }
+    
     }
     .briefing-stack:active .briefing-front {
       transform: scale(0.98);
@@ -327,17 +333,13 @@
     </a>
   </div>
 
-   <div class="briefing-stack" onclick="toggleBriefingCard()">
-    <div class="briefing-back" id="briefing-back">
-      <h2 id="briefing-back-title" style="margin-bottom:0; opacity:0.6;">Division Round-Up</h2>
+   <div class="card" id="briefing-card" onclick="toggleBriefingCard()" style="cursor:pointer;">
+    <div class="briefing-title-row">
+      <span id="briefing-title-active" class="briefing-title-active">Fan Briefing</span>
+      <span class="briefing-title-sep">|</span>
+      <span id="briefing-title-inactive" class="briefing-title-inactive">Division Round-Up</span>
     </div>
-    <div class="card briefing-front" id="briefing-front">
-      <div style="display:flex; justify-content:space-between; align-items:center;">
-        <h2 id="briefing-title" style="margin-bottom:0;">Fan Briefing</h2>
-        <span style="font-size:11px; color:var(--muted);">Tap to switch ⇄</span>
-      </div>
-      <div id="briefing-content" style="margin-top:8px;">Loading...</div>
-    </div>
+    <div id="briefing-content" style="margin-top:8px;">Loading...</div>
   </div>
 
   <div class="card">
@@ -774,14 +776,13 @@
     let divisionBriefingData = null;
 
     function renderBriefingCard() {
-      const titleEl = document.getElementById('briefing-title');
-      const backTitleEl = document.getElementById('briefing-back-title');
+      const activeEl = document.getElementById('briefing-title-active');
+      const inactiveEl = document.getElementById('briefing-title-inactive');
       const contentEl = document.getElementById('briefing-content');
 
-      backTitleEl.textContent = briefingMode === 'fan' ? 'Division Round-Up' : 'Fan Briefing';
-
       if (briefingMode === 'fan') {
-        titleEl.textContent = 'Fan Briefing';
+        activeEl.textContent = 'Fan Briefing';
+        inactiveEl.textContent = 'Division Round-Up';
         if (fanBriefingData) {
           const date = new Date(fanBriefingData.generatedAt);
           const formatted = date.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' });
@@ -793,7 +794,8 @@
           contentEl.textContent = 'Loading...';
         }
       } else {
-        titleEl.textContent = 'Division Round-Up';
+        activeEl.textContent = 'Division Round-Up';
+        inactiveEl.textContent = 'Fan Briefing';
         if (divisionBriefingData) {
           const summary = divisionBriefingData.summary || '';
           const teaser = summary.length > 160 ? summary.slice(0, 160).trim() + '…' : summary;
