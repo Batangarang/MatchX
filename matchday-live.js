@@ -174,13 +174,21 @@ function deriveScoreFromGoals(goals) {
 function mergeMatchData(previous, incoming) {
   if (!previous) {
     const dedupedGoals = dedupeSimilarGoals(incoming.goals || []);
+    const derivedScore = deriveScoreFromGoals(dedupedGoals);
+    const announcedScore = incoming.finalScoreAnnounced || null;
+    const finalScore = (incoming.matchStage === 'full_time' && announcedScore)
+      ? announcedScore
+      : (derivedScore || incoming.score);
+    const scoreDiscrepancy = (announcedScore && derivedScore && announcedScore !== derivedScore)
+      ? `Goals count suggests ${derivedScore}, but an announced score of ${announcedScore} was also seen — showing ${finalScore}.`
+      : null;
+
     return {
       ...incoming,
       goals: dedupedGoals,
-      score: (incoming.matchStage === 'full_time' && incoming.finalScoreAnnounced)
-        ? incoming.finalScoreAnnounced
-        : (deriveScoreFromGoals(dedupedGoals) || incoming.score),
-      finalScoreAnnounced: incoming.finalScoreAnnounced || null,
+      score: finalScore,
+      scoreDiscrepancy,
+      finalScoreAnnounced: announcedScore,
       yellowCards: dedupeSimilarEvents(incoming.yellowCards || [], ['team', 'player']),
       redCards: dedupeSimilarEvents(incoming.redCards || [], ['team', 'player']),
     };
@@ -198,11 +206,21 @@ function mergeMatchData(previous, incoming) {
     ['team', 'player']
   );
 
+  const derivedScore = deriveScoreFromGoals(mergedGoals);
+  const announcedScore = incoming.finalScoreAnnounced || previous.finalScoreAnnounced || null;
+  const finalScore = (incoming.matchStage === 'full_time' && announcedScore)
+    ? announcedScore
+    : (derivedScore || incoming.score || previous.score);
+
+  const scoreDiscrepancy = (announcedScore && derivedScore && announcedScore !== derivedScore)
+    ? `Goals count suggests ${derivedScore}, but an announced score of ${announcedScore} was also seen — showing ${finalScore}.`
+    : null;
+
   return {
-    score: (incoming.matchStage === 'full_time' && (incoming.finalScoreAnnounced || previous.finalScoreAnnounced))
-      ? (incoming.finalScoreAnnounced || previous.finalScoreAnnounced)
-      : (deriveScoreFromGoals(mergedGoals) || incoming.score || previous.score),
-    finalScoreAnnounced: incoming.finalScoreAnnounced || previous.finalScoreAnnounced || null,
+    score: finalScore,
+    scoreDiscrepancy,
+    finalScoreAnnounced: announcedScore,
+
     matchStage: incoming.matchStage && incoming.matchStage !== 'scheduled' ? incoming.matchStage : previous.matchStage,
     lineups: {
       home: {

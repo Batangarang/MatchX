@@ -314,6 +314,7 @@
           <div class="card">
             <div class="score">${m.score || '0 - 0'}</div>
             <div class="teams"><span>${data.homeTeam}</span><span>${data.awayTeam}</span></div>
+            ${m.scoreDiscrepancy ? `<div style="font-size:11px; color:#b57a00; margin-top:8px; text-align:center;">⚠️ ${m.scoreDiscrepancy}</div>` : ''}
           </div>
 
           <div class="card">
@@ -412,7 +413,7 @@
               </div>
             </div>
           </div>
-           `;
+        `;
 
         document.getElementById('content').innerHTML = html;
 
