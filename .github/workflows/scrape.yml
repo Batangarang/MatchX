@@ -16,7 +16,7 @@ jobs:
       - run: npm install
       - run: node scrape.js
       - run: node league.js
-        run: node position-history.js
+      - run: node position-history.js
       - run: node player-tables.js
       - run: node attendance-stats.js
       - name: Commit updated data
