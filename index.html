@@ -303,7 +303,7 @@
 
   <div class="card" id="matchday-card" style="display: none;">
     <h2>Matchday</h2>
-    <a href="matchday.html" style="text-decoration: none; color: inherit; display: block;">
+    <div id="matchday-link-wrapper" style="text-decoration: none; color: inherit; display: block;">
       <div class="header-row" style="display: flex; justify-content: space-between; align-items: center;">
         <div>
           <div class="fixture" id="matchday-teams"></div>
@@ -685,6 +685,7 @@
         const awayTeam = next.homeAway === 'H' ? next.opposition : 'Sandbach United';
         document.getElementById('matchday-teams').textContent = `${homeTeam} vs ${awayTeam}`;
         document.getElementById('matchday-status-badge').textContent = 'Upcoming';
+        document.getElementById('matchday-tap-hint').style.display = 'none';
         document.getElementById('matchday-status-badge').className = 'status-badge status-upcoming';
         document.getElementById('matchday-score').textContent = '';
 
@@ -694,6 +695,9 @@
           .then(liveData => {
             if (!isFixtureToday(liveData.fixtureDate)) return;
             document.getElementById('matchday-teams').textContent = `${liveData.homeTeam} vs ${liveData.awayTeam}`;
+            document.getElementById('matchday-link-wrapper').outerHTML =
+              `<a href="matchday.html?date=${liveData.fixtureDate}" id="matchday-link-wrapper" style="text-decoration:none; color:inherit; display:block;">` +
+              document.getElementById('matchday-link-wrapper').innerHTML + `</a>`;
             const status = getDisplayStatus(liveData);
             const badge = document.getElementById('matchday-status-badge');
             badge.textContent = status.label;
@@ -715,7 +719,14 @@
         fetch('data.json?t=' + Date.now())
           .then(res => res.json())
           .then(data => {
-            window.latestFixtures = data.nextFixtures || (data.nextFixture ? [data.nextFixture] : []);
+            const today = new Date();
+            const isFixtureDateToday = (dateStr) => {
+              const [, dd, mm, yy] = dateStr.match(/(\d{2})\/(\d{2})\/(\d{2})/);
+              const d = new Date(2000 + parseInt(yy), parseInt(mm) - 1, parseInt(dd));
+              return d.getFullYear() === today.getFullYear() && d.getMonth() === today.getMonth() && d.getDate() === today.getDate();
+            };
+            const allUpcoming = data.nextFixtures || (data.nextFixture ? [data.nextFixture] : []);
+            window.latestFixtures = allUpcoming.filter(f => !isFixtureDateToday(f.date)).slice(0, 3);
             renderFixturesCarousel();
 
             const results = data.lastResults || (data.lastResult ? [data.lastResult] : []);

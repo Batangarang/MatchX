@@ -70,7 +70,7 @@ const played = fixtures.filter(f => f.score);
   return {
     scrapedAt: new Date().toISOString(),
     nextFixture: upcoming[0] || null,
-    nextFixtures: upcoming.slice(0, 3),
+    nextFixtures: upcoming.slice(0, 5),
     lastResult: played[played.length - 1] || null,
     lastResults: played.slice(-3).reverse(),
     allFixtures: fixtures,
