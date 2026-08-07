@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-07T22:06:51.249Z",
+  "generatedAt": "2026-08-07T22:10:50.066Z",
   "fixtureDate": "2026-08-04",
   "kickoff": "19:45",
   "homeTeam": "Foley Meir",
@@ -62,7 +62,7 @@
       {
         "minute": 28,
         "team": "home",
-        "player": "FM 8"
+        "player": "Robinson"
       },
       {
         "minute": 44,
@@ -82,18 +82,6 @@
         "team": "away",
         "playerOff": "Cope",
         "playerOn": "Cain"
-      },
-      {
-        "minute": 46,
-        "team": "away",
-        "playerOff": "Kieran Nolan",
-        "playerOn": "Saul Shotton"
-      },
-      {
-        "minute": 46,
-        "team": "away",
-        "playerOff": "Jordan Stafford",
-        "playerOn": "Stan Tatters"
       },
       {
         "minute": 86,
@@ -120,14 +108,14 @@
     },
     "roughXG": {
       "firstHalf": {
-        "home": 0.6,
-        "away": 0.3,
-        "note": "Foley had early chances and set-piece opportunities; Sandbach scored from a free-kick delivery but otherwise limited clear-cut chances."
+        "home": 0.4,
+        "away": 0.2,
+        "note": "Foley created several chances from set pieces and open play; Sandbach took early lead but had limited chances. Foley scored twice by half-time."
       },
       "secondHalf": {
-        "home": 1.2,
-        "away": 0.5,
-        "note": "Foley dominated with a well-taken goal from outside the box (Baker 65') and maintained control. Sandbach had limited chances, with a late goal from Shotton being their main effort of note."
+        "home": 0.5,
+        "away": 0.6,
+        "note": "Foley extended lead early in second half (65'); Sandbach had multiple chances including a very good opportunity at 52' but couldn't convert until 90'. Foley's Baker score was emphatic from distance."
       },
       "extraTime": {
         "home": 0,
@@ -135,22 +123,22 @@
         "note": null
       },
       "total": {
-        "home": 1.8,
+        "home": 0.9,
         "away": 0.8,
-        "note": "Foley had the clearer chances overall and converted more effectively from limited opportunities. Sandbach's goal-scoring was largely restricted to set-pieces."
+        "note": "Foley were more clinical, converting 4 of their chances. Sandbach had numerous opportunities but only scored twice, with posts/bar hits and missed sitters limiting their return."
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure. Values are illustrative, not calculated from actual shot data."
     },
     "matchControl": {
       "firstHalf": {
-        "home": 55,
-        "away": 45,
-        "note": "Foley created more chances and had more attacking intent, though Sandbach scored first from a set-piece. Foley recovered to lead 2-1 at the break."
+        "home": 60,
+        "away": 40,
+        "note": "Foley began brightly with an early chance; Sandbach scored from a set piece at 9' but Foley dominated after that, scoring twice by half-time and creating clear chances."
       },
       "secondHalf": {
-        "home": 70,
-        "away": 30,
-        "note": "Foley dominated the second half with a third goal (Baker 65') and controlled the game. Sandbach struggled to create meaningful chances until a late consolation goal."
+        "home": 55,
+        "away": 45,
+        "note": "Foley extended their advantage at 65' to 3-1, appearing to control the game, but Sandbach pressed hard late on with numerous chances. Foley saw out the match despite late pressure."
       },
       "extraTime": {
         "home": 0,
@@ -158,9 +146,9 @@
         "note": null
       },
       "total": {
-        "home": 62,
-        "away": 38,
-        "note": "Foley controlled much of the match, particularly in the second half. Sandbach were competitive in the first half but faded as the match progressed, managing only a late goal."
+        "home": 58,
+        "away": 42,
+        "note": "Foley controlled the match overall, converting their chances effectively. Sandbach created good opportunities especially in the second half but lacked clinical finishing until the 90th minute."
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     },
