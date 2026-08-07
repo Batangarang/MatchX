@@ -74,6 +74,8 @@
       display: flex;
       align-items: baseline;
       gap: 8px;
+      flex-wrap: wrap;
+      row-gap: 4px;
     }
     .briefing-title-active {
       font-family: 'Barlow Condensed', sans-serif;
@@ -98,26 +100,6 @@
       color: #c3cad6;
     }
     
-    }
-    .briefing-stack:active .briefing-front {
-      transform: scale(0.98);
-    }
-    .briefing-back {
-      position: absolute;
-      top: 10px;
-      left: 8px;
-      right: 8px;
-      bottom: -10px;
-      background: #dde2ec;
-      border-radius: 10px;
-      padding: 16px;
-      filter: grayscale(0.5);
-      opacity: 0.7;
-      z-index: 1;
-      pointer-events: none;
-      overflow: hidden;
-    }
-
     .hero {
       position: relative;
       overflow: hidden;
@@ -333,11 +315,13 @@
     </a>
   </div>
 
-  <div class="card" id="briefing-card" onclick="toggleBriefingCard()" style="cursor:pointer;">
+  <div class="card" id="briefing-card" onclick="cycleBriefingCard()" style="cursor:pointer;">
     <div class="briefing-title-row">
       <span id="briefing-title-fan" class="briefing-title-active">Fan Briefing</span>
       <span class="briefing-title-sep">|</span>
       <span id="briefing-title-division" class="briefing-title-inactive">Division Round-Up</span>
+      <span class="briefing-title-sep">|</span>
+      <span id="briefing-title-x" class="briefing-title-inactive">Latest from @SandbachFC_1st</span>
     </div>
     <div id="briefing-content" style="margin-top:8px;">Loading...</div>
   </div>
@@ -375,19 +359,6 @@
     <div id="division-ticker" style="font-size: 12px; color: var(--royal); font-style: italic; margin-bottom: 10px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></div>
     <div id="division-scores-list">Loading...</div>
     <div class="meta" id="division-scores-updated" style="margin-top: 8px;"></div>
-  </div>
-
-  <div class="card">
-    <h2>Latest from @SandbachFC_1st</h2>
-    <div class="carousel" id="xposts-carousel">
-      <div class="carousel-track" id="xposts-track"></div>
-    </div>
-    <div class="carousel-nav">
-      <button onclick="xPostsCarousel.prev()">‹</button>
-      <div class="carousel-count" id="xposts-count"></div>
-      <div class="carousel-dots" id="xposts-dots"></div>
-      <button onclick="xPostsCarousel.next()">›</button>
-    </div>
   </div>
 
   <div class="card">
@@ -479,8 +450,7 @@
 
     const fixturesCarousel = createCarousel('fixtures-track', 'fixtures-dots', 'fixtures-count');
     const resultsCarousel = createCarousel('results-track', 'results-dots', 'results-count');
-    const xPostsCarousel = createCarousel('xposts-track', 'xposts-dots', 'xposts-count');
-
+   
     // ---------- Helpers ----------
 
     function downloadICS(fixture) {
@@ -774,15 +744,47 @@
     let briefingMode = 'fan';
     let fanBriefingData = null;
     let divisionBriefingData = null;
+    let xPostsData = null;
+
+    function cycleBriefingCard() {
+      briefingMode = briefingMode === 'fan' ? 'division' : briefingMode === 'division' ? 'x' : 'fan';
+      renderBriefingCard();
+    }
+
+    function renderXPostsContent() {
+      const posts = (xPostsData?.posts || []).filter(p => !isFromToday(p.createdAt)).slice(0, 5);
+      if (posts.length === 0) return '<div class="empty">No recent posts found</div>';
+
+      return posts.map(p => {
+        const date = new Date(p.createdAt);
+        const formatted = date.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' }) + ' ' +
+                           date.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' });
+        const textHtml = p.text
+          .replace(/(https?:\/\/\S+)/g, '<a href="$1" target="_blank" rel="noopener" onclick="event.stopPropagation()">$1</a>')
+          .replace(/\n/g, '<br>');
+        const imageHtml = (p.images && p.images.length > 0)
+          ? `<img src="${p.images[0]}" style="width: 100%; border-radius: 8px; margin-top: 8px;" alt="Post image">`
+          : '';
+        return `
+          <div style="padding: 8px 0; border-bottom: 1px solid var(--line);">
+            <div style="font-size: 14px;">${textHtml}</div>
+            ${imageHtml}
+            <div class="meta">${formatted}</div>
+          </div>
+        `;
+      }).join('');
+    }
 
     function renderBriefingCard() {
       const fanTitleEl = document.getElementById('briefing-title-fan');
       const divisionTitleEl = document.getElementById('briefing-title-division');
+      const xTitleEl = document.getElementById('briefing-title-x');
       const contentEl = document.getElementById('briefing-content');
+
+      [fanTitleEl, divisionTitleEl, xTitleEl].forEach(el => el.className = 'briefing-title-inactive');
 
       if (briefingMode === 'fan') {
         fanTitleEl.className = 'briefing-title-active';
-        divisionTitleEl.className = 'briefing-title-inactive';
         if (fanBriefingData) {
           const date = new Date(fanBriefingData.generatedAt);
           const formatted = date.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' });
@@ -793,8 +795,7 @@
         } else {
           contentEl.textContent = 'Loading...';
         }
-      } else {
-        fanTitleEl.className = 'briefing-title-inactive';
+      } else if (briefingMode === 'division') {
         divisionTitleEl.className = 'briefing-title-active';
         if (divisionBriefingData) {
           const summary = divisionBriefingData.summary || '';
@@ -806,15 +807,14 @@
         } else {
           contentEl.textContent = 'Loading...';
         }
+      } else {
+        xTitleEl.className = 'briefing-title-active';
+        contentEl.innerHTML = xPostsData ? renderXPostsContent() : 'Loading...';
       }
     }
+        // ---------- X Posts ----------
 
-    function toggleBriefingCard() {
-      briefingMode = briefingMode === 'fan' ? 'division' : 'fan';
-      renderBriefingCard();
-    }
-
-    fetch('x-insights.json?t=' + Date.now())
+      fetch('x-insights.json?t=' + Date.now())
       .then(res => res.json())
       .then(data => {
         fanBriefingData = data;
@@ -825,45 +825,30 @@
         renderBriefingCard();
       });
 
-    // ---------- X posts ----------
+    fetch('division-insights.json?t=' + Date.now())
+      .then(res => res.json())
+      .then(data => {
+        divisionBriefingData = data;
+        renderBriefingCard();
+      })
+      .catch(() => {
+        divisionBriefingData = { summary: 'No round-up available yet.' };
+        renderBriefingCard();
+      });
 
     fetch('x-posts.json?t=' + Date.now())
       .then(res => res.json())
       .then(data => {
-        const posts = (data.posts || []).filter(p => !isFromToday(p.createdAt)).slice(0, 5);
-        if (posts.length === 0) {
-          document.getElementById('xposts-track').innerHTML = '<div>No recent posts found</div>';
-          xPostsCarousel.setCount(0);
-          return;
-        }
-
-        document.getElementById('xposts-track').innerHTML = posts.map(p => {
-          const date = new Date(p.createdAt);
-          const formatted = date.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' }) + ' ' +
-                             date.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' });
-          const textHtml = p.text
-            .replace(/(https?:\/\/\S+)/g, '<a href="$1" target="_blank" rel="noopener">$1</a>')
-            .replace(/\n/g, '<br>');
-          const imageHtml = (p.images && p.images.length > 0)
-            ? `<img src="${p.images[0]}" style="width: 100%; border-radius: 8px; margin-top: 8px;" alt="Post image">`
-            : '';
-
-          return `
-            <div style="padding: 4px 2px 0;">
-              <div style="font-size: 14px;">${textHtml}</div>
-              ${imageHtml}
-              <div class="meta">${formatted}</div>
-            </div>
-          `;
-        }).join('');
-        xPostsCarousel.setCount(posts.length);
+        xPostsData = data;
+        renderBriefingCard();
       })
-      .catch(err => {
-        document.getElementById('xposts-track').textContent = 'Failed to load posts';
-        console.error(err);
+      .catch(() => {
+        xPostsData = { posts: [] };
+        renderBriefingCard();
       });
 
-    // ---------- Division Scores ----------
+
+        // ---------- Division Scores ----------
 
     fetch('division-scores.json?t=' + Date.now())
       .then(res => res.json())
@@ -901,18 +886,7 @@
         document.getElementById('division-scores-list').innerHTML = '<div class="empty">No data available</div>';
       });
 
-    // ---------- Division Round-Up ----------
-
-    fetch('division-insights.json?t=' + Date.now())
-      .then(res => res.json())
-      .then(data => {
-        divisionBriefingData = data;
-        renderBriefingCard();
-      })
-      .catch(() => {
-        divisionBriefingData = { summary: 'No round-up available yet.' };
-        renderBriefingCard();
-      });
+  
 
     // ---------- League Table ----------
 
