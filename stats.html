@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sandbach United — Player Stats</title>
+  <style>
+    :root {
+      --navy: #0c2340;
+      --royal: #1c5fae;
+      --amber: #f2a71b;
+      --paper: #eef1f6;
+      --ink: #14202b;
+      --muted: #6b7785;
+      --line: #e3e7ee;
+    }
+    body {
+      font-family: system-ui, sans-serif;
+      max-width: 500px;
+      margin: 40px auto;
+      padding: 0 16px;
+      background: var(--paper);
+      color: var(--ink);
+    }
+    h1 { color: var(--navy); font-size: 22px; }
+    a.back { display: inline-block; margin-bottom: 16px; color: var(--royal); text-decoration: none; }
+    .card {
+      background: white;
+      border-radius: 10px;
+      padding: 16px;
+      margin-bottom: 16px;
+      box-shadow: 0 1px 3px rgba(12,35,64,0.08);
+    }
+    .card h2 {
+      margin: 0 0 12px 0;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--navy);
+    }
+    .toggle-row { display: flex; gap: 8px; margin-bottom: 10px; }
+    .toggle-btn {
+      flex: 1;
+      padding: 8px;
+      border-radius: 6px;
+      border: 1px solid var(--line);
+      background: white;
+      color: var(--navy);
+      font-weight: 600;
+      font-size: 13px;
+      cursor: pointer;
+    }
+    .toggle-btn.active {
+      background: var(--navy);
+      color: white;
+      border-color: var(--navy);
+    }
+    table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    th, td { padding: 6px 4px; text-align: left; border-bottom: 1px solid var(--line); }
+    th:last-child, td:last-child { text-align: right; }
+    th { color: var(--muted); font-weight: 600; font-size: 11px; text-transform: uppercase; }
+    tr.sandbach { background: #eef3fb; font-weight: 700; }
+    .empty { color: var(--muted); font-size: 13px; padding: 10px 0; }
+    .tab-row { display: flex; gap: 6px; margin-bottom: 14px; flex-wrap: wrap; }
+    .tab-btn {
+      padding: 6px 12px;
+      border-radius: 20px;
+      border: 1px solid var(--line);
+      background: white;
+      color: var(--navy);
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .tab-btn.active { background: var(--amber); border-color: var(--amber); color: var(--navy); }
+    .meta { color: var(--muted); font-size: 11px; margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <a class="back" href="index.html">← Back</a>
+  <h1>Player Stats — First Division South</h1>
+
+  <div class="tab-row">
+    <button class="tab-btn active" data-cat="appearances" onclick="setCategory('appearances')">Appearances</button>
+    <button class="tab-btn" data-cat="goalscorers" onclick="setCategory('goalscorers')">Goalscorers</button>
+    <button class="tab-btn" data-cat="manOfTheMatch" onclick="setCategory('manOfTheMatch')">Man of the Match</button>
+  </div>
+
+  <div class="card">
+    <div class="toggle-row">
+      <button class="toggle-btn active" id="btn-all" onclick="setView('all')">Whole Division</button>
+      <button class="toggle-btn" id="btn-sandbach" onclick="setView('sandbach')">Sandbach Only</button>
+    </div>
+    <table>
+      <thead>
+        <tr><th>#</th><th>Player</th><th>Club</th><th>Total</th></tr>
+      </thead>
+      <tbody id="stats-body"><tr><td colspan="4">Loading...</td></tr></tbody>
+    </table>
+    <div class="meta" id="stats-updated"></div>
+  </div>
+
+  <script>
+    let allData = null;
+    let currentCategory = 'appearances';
+    let currentView = 'all';
+
+    function setCategory(cat) {
+      currentCategory = cat;
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.toggle('active', b.dataset.cat === cat));
+      render();
+    }
+
+    function setView(view) {
+      currentView = view;
+      document.getElementById('btn-all').classList.toggle('active', view === 'all');
+      document.getElementById('btn-sandbach').classList.toggle('active', view === 'sandbach');
+      render();
+    }
+
+    function render() {
+      if (!allData) return;
+      const rows = allData[currentCategory] || [];
+      const filtered = currentView === 'sandbach'
+        ? rows.filter(r => r.club.toLowerCase().includes('sandbach'))
+        : rows;
+
+      if (filtered.length === 0) {
+        document.getElementById('stats-body').innerHTML = `<tr><td colspan="4"><div class="empty">${currentView === 'sandbach' ? 'No Sandbach players in this table yet' : 'No data available'}</div></td></tr>`;
+        return;
+      }
+
+      document.getElementById('stats-body').innerHTML = filtered.map((r, i) => {
+        const isSandbach = r.club.toLowerCase().includes('sandbach');
+        return `
+          <tr class="${isSandbach ? 'sandbach' : ''}">
+            <td>${r.rank || i + 1}</td>
+            <td>${r.player}</td>
+            <td>${r.club}</td>
+            <td>${r.total}</td>
+          </tr>
+        `;
+      }).join('');
+    }
+
+    fetch('player-tables.json?t=' + Date.now())
+      .then(res => res.json())
+      .then(data => {
+        allData = data;
+        render();
+        const updated = new Date(data.generatedAt);
+        document.getElementById('stats-updated').textContent =
+          'Last updated: ' + updated.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' }) +
+          ' — data is based on lineups clubs have submitted to NWCFL, so may not match every game played.';
+      })
+      .catch(() => {
+        document.getElementById('stats-body').innerHTML = '<tr><td colspan="4">Failed to load stats</td></tr>';
+      });
+  </script>
+</body>
+</html>
