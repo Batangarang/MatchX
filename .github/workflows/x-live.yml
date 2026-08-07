@@ -13,22 +13,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
-
       - uses: actions/setup-node@v5
         with:
           node-version: 24
-
       - run: npm install
-
       - run: node x-posts.js
         env:
           GETXAPI_KEY: ${{ secrets.GETXAPI_KEY }}
-
-      - run: node x-insights.js
       - run: node nwcfl-news.js
+      - run: node x-insights.js
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-
       - name: Commit updated data
         run: |
           git config user.name "github-actions[bot]"
