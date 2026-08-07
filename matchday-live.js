@@ -129,6 +129,34 @@ function namesLikelyMatch(a, b) {
   return false;
 }
 
+function normalizeText(text) {
+  return text.toLowerCase().replace(/https?:\/\/\S+/g, '').replace(/[^\w\s]/g, '').trim();
+}
+
+function textSimilarity(a, b) {
+  const wordsA = new Set(normalizeText(a).split(/\s+/).filter(w => w.length > 3));
+  const wordsB = new Set(normalizeText(b).split(/\s+/).filter(w => w.length > 3));
+  if (wordsA.size === 0 || wordsB.size === 0) return 0;
+
+  let shared = 0;
+  wordsA.forEach(w => { if (wordsB.has(w)) shared++; });
+  return shared / Math.min(wordsA.size, wordsB.size);
+}
+
+function tagDuplicateCommentary(combined, threshold = 0.6, minutesWindow = 5) {
+  return combined.map((post, i) => {
+    const isDuplicate = combined.some((other, j) => {
+      if (i === j || post.side === other.side) return false;
+      const minutesApart = Math.abs(new Date(post.createdAt) - new Date(other.createdAt)) / 60000;
+      if (minutesApart > minutesWindow) return false;
+      // Only the later post gets flagged, so one canonical copy survives
+      if (new Date(post.createdAt) <= new Date(other.createdAt)) return false;
+      return textSimilarity(post.text, other.text) >= threshold;
+    });
+    return { ...post, isDuplicateCommentary: isDuplicate };
+  });
+}
+
 function dedupeByTeamMinuteAndIdentity(events, identityField) {
   const deduped = [];
   events.forEach(e => {
@@ -286,10 +314,12 @@ async function run() {
     getPostsForHandle(awayHandle, dateStr),
   ]);
 
-  const combined = [
+  const combinedRaw = [
     ...homePosts.map(p => ({ ...p, side: 'home', handle: homeHandle })),
     ...awayPosts.map(p => ({ ...p, side: 'away', handle: awayHandle })),
   ].sort((a, b) => new Date(a.createdAt) - new Date(b.createdAt));
+
+  const combined = tagDuplicateCommentary(combinedRaw);
 
   if (!fs.existsSync('matchday-archive')) fs.mkdirSync('matchday-archive');
   fs.writeFileSync(`matchday-archive/${dateStr}-raw-posts.json`, JSON.stringify(combined, null, 2));
@@ -319,7 +349,8 @@ async function run() {
     return;
   }
 
-  const postsText = combined.map(p => `[${p.createdAt}] (@${p.handle}, ${p.side} team) ${p.text}`).join('\n');
+  const postsForPrompt = combined.filter(p => !p.isDuplicateCommentary);
+  const postsText = postsForPrompt.map(p => `[${p.createdAt}] (@${p.handle}, ${p.side} team) ${p.text}`).join('\n');
   const isCup = fixture.competitionNote && /cup|vase|trophy/i.test(fixture.competitionNote);
 
   const prompt = `Below are X posts (and some attached images) from the home and away teams' official accounts on the day of a football match: ${fixture.homeAway === 'H' ? 'Sandbach United' : fixture.opposition} vs ${fixture.homeAway === 'H' ? fixture.opposition : 'Sandbach United'}, played ${fixture.date}${isCup ? ` (a cup competition: ${fixture.competitionNote} — this match could go to extra time and penalties)` : ' (a league match — normally 90 minutes, no extra time)'}.
