@@ -155,6 +155,8 @@ ${postsText}
 
 For each fixture above, determine ONLY if a score has been EXPLICITLY stated in a post (e.g. "2-1", "FT 3-0", a clear scoreline) — do not guess or infer from goal mentions alone. Also note any red card sent-offs explicitly mentioned, with team and player if given.
 
+Scorelines in these posts may be written without a dash, e.g. "2 1" instead of "2-1" (sometimes with team colour emojis nearby). Recognise these as valid scorelines too, and normalise whatever format you see into standard "X-Y" form when filling in "score".
+
 Respond with ONLY a JSON object, no other text, no markdown fences:
 {
   "fixtures": [
