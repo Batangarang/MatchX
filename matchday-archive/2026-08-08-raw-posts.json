@@ -38,5 +38,15 @@
     "side": "away",
     "handle": "StaffordTown1st",
     "isDuplicateCommentary": false
+  },
+  {
+    "text": "Today’s Team News for the 3pm kick off this afternoon at The Bach as we take on Stafford Town https://t.co/yb1tQg5ljW",
+    "createdAt": "2026-08-08T13:16:54.000Z",
+    "images": [
+      "https://pbs.twimg.com/media/HPM9-WMXcAAxUHD.jpg"
+    ],
+    "side": "home",
+    "handle": "SandbachFC_1st",
+    "isDuplicateCommentary": false
   }
 ]
