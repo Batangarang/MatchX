@@ -726,8 +726,8 @@
               const d = new Date(2000 + parseInt(yy), parseInt(mm) - 1, parseInt(dd));
               return d.getFullYear() === today.getFullYear() && d.getMonth() === today.getMonth() && d.getDate() === today.getDate();
             };
-            const allUpcoming = data.nextFixtures || (data.nextFixture ? [data.nextFixture] : []);
-            window.latestFixtures = allUpcoming.filter(f => !isFixtureDateToday(f.date)).slice(0, 3);
+            const allUpcoming = Array.isArray(data.nextFixtures) ? data.nextFixtures : (data.nextFixture ? [data.nextFixture] : []);
+            window.latestFixtures = allUpcoming.filter(f => f && f.date && !isFixtureDateToday(f.date)).slice(0, 3);
             renderFixturesCarousel();
 
             const results = data.lastResults || (data.lastResult ? [data.lastResult] : []);
