@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-08T14:52:50.810Z",
+  "generatedAt": "2026-08-08T15:05:55.877Z",
   "fixtureDate": "2026-08-08",
   "kickoff": "15:00",
   "homeTeam": "Sandbach United",
   "awayTeam": "Stafford Town",
-  "postsUsed": 21,
-  "imagesAnalyzedThisRun": 1,
+  "postsUsed": 23,
+  "imagesAnalyzedThisRun": 0,
   "totalImagesAnalyzed": 7,
   "match": {
     "score": "1-0",
@@ -13,7 +13,7 @@
     "finalScoreAnnounced": null,
     "halfTimeScoreAnnounced": "1-0",
     "htDiscrepancy": null,
-    "matchStage": "half_time",
+    "matchStage": "second_half",
     "lineups": {
       "home": {
         "players": [
@@ -30,11 +30,7 @@
           "11. Harry Cain"
         ],
         "substitutes": [
-          "Williams",
-          "Foley",
-          "Stafford",
-          "Cope",
-          "Pollard"
+          "Jake Pollard"
         ],
         "manager": null,
         "officials": []
@@ -54,11 +50,7 @@
           "11. Eshan Greer"
         ],
         "substitutes": [
-          "12. Lewis Satchwell",
-          "14. Callum Parker",
-          "15. Soms Sibanda",
-          "16. Doug Hughes",
-          "17. Joe Perry"
+          "Doug Hughes"
         ],
         "manager": null,
         "officials": []
@@ -117,24 +109,24 @@
     },
     "roughXG": {
       "firstHalf": {
-        "home": 0.35,
-        "away": 0.8,
-        "note": "Stafford had majority of chances including a close-range effort, an early powerful shot from Lynch, and a shot that hit the post. Sandbach scored a scrappy goal. Control reflects Stafford's dominance in chances."
+        "home": 0.3,
+        "away": 0.6,
+        "note": "Stafford had multiple chances including Lynch's save and post; Sandbach scored from a keeper error on a bouncing shot"
       },
       "secondHalf": {
         "home": 0,
         "away": 0,
-        "note": "No second-half data available"
+        "note": "No information provided; match appears to be ongoing"
       },
       "extraTime": {
         "home": 0,
         "away": 0,
-        "note": "No extra time played"
+        "note": null
       },
       "total": {
-        "home": 0.35,
-        "away": 0.8,
-        "note": "Based on first-half commentary only. Stafford created more clear-cut chances but Sandbach converted their opportunity."
+        "home": 0.3,
+        "away": 0.6,
+        "note": "Limited data; based on first half only"
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure. Values are illustrative, not calculated from actual shot data."
     },
@@ -142,22 +134,22 @@
       "firstHalf": {
         "home": 35,
         "away": 65,
-        "note": "Stafford Town had the majority of chances and possession according to away team commentary ('Despite having the majority of chances, Town are behind at the break')"
+        "note": "Stafford had majority of chances and chances; Sandbach scored against the run of play via keeper error"
       },
       "secondHalf": {
         "home": 50,
         "away": 50,
-        "note": "No second-half data available"
+        "note": "No detailed information provided; neutral estimate"
       },
       "extraTime": {
-        "home": 0,
-        "away": 0,
-        "note": "No extra time played"
+        "home": 50,
+        "away": 50,
+        "note": null
       },
       "total": {
-        "home": 35,
-        "away": 65,
-        "note": "Based on first-half commentary only. Stafford dominated possession and chances but Sandbach took their opportunity to go ahead."
+        "home": 42,
+        "away": 58,
+        "note": "Stafford dominated first half but Sandbach led at half-time; second half control unknown"
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
