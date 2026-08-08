@@ -6,6 +6,7 @@ const API_KEY = process.env.GETXAPI_KEY;
 const ANTHROPIC_KEY = process.env.ANTHROPIC_API_KEY;
 
 const { getUKNow, getUKDateString } = require('./uk-time.js');
+const REAL_NOW = new Date(); // genuine, unshifted UTC timestamp — use this for anything stored/displayed as a timestamp
 
 function findHandle(clubName) {
   if (clubName.includes('Sandbach')) return 'SandbachFC_1st';
@@ -77,8 +78,8 @@ async function run() {
 
   if (nowUK < 11 && !isManual) {
     fs.writeFileSync('division-scores.json', JSON.stringify({
-      generatedAt: now.toISOString(),
-      date: now.toISOString().slice(0, 10),
+      generatedAt: REAL_NOW.toISOString(),
+      date: getUKDateString(now),
       fixtures: todaysFixtures.map(f => ({ home: f.home, away: f.away, kickoff: f.kickoff, score: null, redCards: [] })),
       ticker: null,
     }, null, 2));
@@ -88,8 +89,8 @@ async function run() {
 
   if (todaysFixtures.length === 0) {
     fs.writeFileSync('division-scores.json', JSON.stringify({
-      generatedAt: now.toISOString(),
-      date: now.toISOString().slice(0, 10),
+      generatedAt: REAL_NOW.toISOString(),
+      date: getUKDateString(now),
       fixtures: [],
       ticker: null,
     }, null, 2));
@@ -133,7 +134,7 @@ async function run() {
   if (fs.existsSync('division-scores.json')) {
     previous = JSON.parse(fs.readFileSync('division-scores.json', 'utf-8'));
   }
-  if (previous && previous.postCount === totalPostCount && previous.date === now.toISOString().slice(0, 10)) {
+  if (previous && previous.postCount === totalPostCount && previous.date === getUKDateString(now)) {
     console.log('Nothing new since last check — skipping AI call.');
     return;
   }
@@ -188,8 +189,8 @@ Only include a score if explicitly stated in the posts. Leave as null if not men
   const ticker = latestPost ? `@${latestPost.handle}: ${latestPost.text}` : null;
 
   const output = {
-    generatedAt: now.toISOString(),
-    date: now.toISOString().slice(0, 10),
+    generatedAt: REAL_NOW.toISOString(),
+    date: getUKDateString(now),
     postCount: totalPostCount,
     fixtures: parsed.fixtures || [],
     ticker,
