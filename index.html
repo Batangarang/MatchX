@@ -686,7 +686,6 @@
         const awayTeam = next.homeAway === 'H' ? next.opposition : 'Sandbach United';
         document.getElementById('matchday-teams').textContent = `${homeTeam} vs ${awayTeam}`;
         document.getElementById('matchday-status-badge').textContent = 'Upcoming';
-        document.getElementById('matchday-tap-hint').style.display = 'none';
         document.getElementById('matchday-status-badge').className = 'status-badge status-upcoming';
         document.getElementById('matchday-score').textContent = '';
 
