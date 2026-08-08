@@ -1,9 +1,23 @@
 {
-  "scrapedAt": "2026-08-08T16:24:04.612Z",
+  "scrapedAt": "2026-08-08T17:22:47.427Z",
   "division": "First Division South",
   "standings": [
     {
       "position": 1,
+      "team": "Wolverhampton Casuals",
+      "played": "3",
+      "won": "3",
+      "drawn": "0",
+      "lost": "0",
+      "for": "8",
+      "against": "0",
+      "goalDifference": "8",
+      "points": "9",
+      "clubUrl": "clubpage.php?id=73",
+      "form": "WWW"
+    },
+    {
+      "position": 2,
       "team": "AFC Bridgnorth",
       "played": "2",
       "won": "2",
@@ -14,49 +28,35 @@
       "goalDifference": "6",
       "points": "6",
       "clubUrl": "clubpage.php?id=936",
-      "form": "WW"
-    },
-    {
-      "position": 2,
-      "team": "Eccleshall",
-      "played": "2",
-      "won": "2",
-      "drawn": "0",
-      "lost": "0",
-      "for": "7",
-      "against": "1",
-      "goalDifference": "6",
-      "points": "6",
-      "clubUrl": "clubpage.php?id=30",
-      "form": "WW"
+      "form": "WWW"
     },
     {
       "position": 3,
-      "team": "Stafford Town",
-      "played": "2",
+      "team": "Eccleshall",
+      "played": "3",
       "won": "2",
       "drawn": "0",
-      "lost": "0",
-      "for": "7",
-      "against": "1",
-      "goalDifference": "6",
+      "lost": "1",
+      "for": "8",
+      "against": "3",
+      "goalDifference": "5",
       "points": "6",
-      "clubUrl": "clubpage.php?id=182",
-      "form": "WW"
+      "clubUrl": "clubpage.php?id=30",
+      "form": "LWW"
     },
     {
       "position": 4,
-      "team": "Wolverhampton Casuals",
-      "played": "2",
+      "team": "Stafford Town",
+      "played": "3",
       "won": "2",
       "drawn": "0",
-      "lost": "0",
-      "for": "5",
-      "against": "0",
+      "lost": "1",
+      "for": "7",
+      "against": "2",
       "goalDifference": "5",
       "points": "6",
-      "clubUrl": "clubpage.php?id=73",
-      "form": "WW"
+      "clubUrl": "clubpage.php?id=182",
+      "form": "LWW"
     },
     {
       "position": 5,
@@ -70,38 +70,66 @@
       "goalDifference": "4",
       "points": "6",
       "clubUrl": "clubpage.php?id=459",
-      "form": "WW"
+      "form": "WWW"
     },
     {
       "position": 6,
       "team": "New Mills",
-      "played": "2",
-      "won": "1",
+      "played": "3",
+      "won": "2",
       "drawn": "0",
       "lost": "1",
-      "for": "6",
-      "against": "5",
-      "goalDifference": "1",
-      "points": "3",
+      "for": "8",
+      "against": "6",
+      "goalDifference": "2",
+      "points": "6",
       "clubUrl": "clubpage.php?id=91",
-      "form": "LW"
+      "form": "WLW"
     },
     {
       "position": 7,
       "team": "Sandbach United",
-      "played": "2",
-      "won": "1",
+      "played": "3",
+      "won": "2",
       "drawn": "0",
       "lost": "1",
-      "for": "4",
+      "for": "5",
       "against": "4",
-      "goalDifference": "0",
-      "points": "3",
+      "goalDifference": "1",
+      "points": "6",
       "clubUrl": "clubpage.php?id=803",
-      "form": "LW"
+      "form": "WLW"
     },
     {
       "position": 8,
+      "team": "Shawbury United",
+      "played": "3",
+      "won": "1",
+      "drawn": "1",
+      "lost": "1",
+      "for": "3",
+      "against": "3",
+      "goalDifference": "0",
+      "points": "4",
+      "clubUrl": "clubpage.php?id=792",
+      "form": "WDL"
+    },
+    {
+      "position": 9,
+      "team": "Telford Town",
+      "played": "3",
+      "won": "1",
+      "drawn": "1",
+      "lost": "1",
+      "for": "4",
+      "against": "9",
+      "goalDifference": "-5",
+      "points": "4",
+      "clubUrl": "clubpage.php?id=881",
+      "form": "WDL"
+    },
+    {
+      "position": 10,
       "team": "Wednesfield Community",
       "played": "2",
       "won": "1",
@@ -112,24 +140,24 @@
       "goalDifference": "0",
       "points": "3",
       "clubUrl": "clubpage.php?id=191",
-      "form": "WL"
+      "form": "WWL"
     },
     {
-      "position": 9,
-      "team": "Foley Meir",
-      "played": "2",
+      "position": 11,
+      "team": "Barnton",
+      "played": "3",
       "won": "1",
       "drawn": "0",
-      "lost": "1",
-      "for": "4",
-      "against": "5",
+      "lost": "2",
+      "for": "5",
+      "against": "6",
       "goalDifference": "-1",
       "points": "3",
-      "clubUrl": "clubpage.php?id=898",
-      "form": "WL"
+      "clubUrl": "clubpage.php?id=266",
+      "form": "WLL"
     },
     {
-      "position": 10,
+      "position": 12,
       "team": "Crewe",
       "played": "2",
       "won": "1",
@@ -140,10 +168,10 @@
       "goalDifference": "-2",
       "points": "3",
       "clubUrl": "clubpage.php?id=591",
-      "form": "WL"
+      "form": "LWL"
     },
     {
-      "position": 11,
+      "position": 13,
       "team": "Bilston Town",
       "played": "2",
       "won": "1",
@@ -154,24 +182,38 @@
       "goalDifference": "-2",
       "points": "3",
       "clubUrl": "clubpage.php?id=355",
-      "form": "LW"
+      "form": "LLW"
     },
     {
-      "position": 12,
+      "position": 14,
+      "team": "Foley Meir",
+      "played": "3",
+      "won": "1",
+      "drawn": "0",
+      "lost": "2",
+      "for": "4",
+      "against": "7",
+      "goalDifference": "-3",
+      "points": "3",
+      "clubUrl": "clubpage.php?id=898",
+      "form": "LWL"
+    },
+    {
+      "position": 15,
       "team": "Cheadle Heath Nomads",
-      "played": "2",
+      "played": "3",
       "won": "0",
       "drawn": "2",
-      "lost": "0",
+      "lost": "1",
       "for": "4",
-      "against": "4",
-      "goalDifference": "0",
+      "against": "7",
+      "goalDifference": "-3",
       "points": "2",
       "clubUrl": "clubpage.php?id=713",
-      "form": "DD"
+      "form": "LDD"
     },
     {
-      "position": 13,
+      "position": 16,
       "team": "Dawley Town",
       "played": "2",
       "won": "0",
@@ -182,10 +224,10 @@
       "goalDifference": "-1",
       "points": "1",
       "clubUrl": "clubpage.php?id=635",
-      "form": "LD"
+      "form": "LLD"
     },
     {
-      "position": 14,
+      "position": 17,
       "team": "Widnes Town",
       "played": "2",
       "won": "0",
@@ -196,77 +238,35 @@
       "goalDifference": "-2",
       "points": "1",
       "clubUrl": "clubpage.php?id=868",
-      "form": "DL"
-    },
-    {
-      "position": 15,
-      "team": "Alsager Town",
-      "played": "2",
-      "won": "0",
-      "drawn": "1",
-      "lost": "1",
-      "for": "2",
-      "against": "4",
-      "goalDifference": "-2",
-      "points": "1",
-      "clubUrl": "clubpage.php?id=3",
-      "form": "LD"
-    },
-    {
-      "position": 16,
-      "team": "Shawbury United",
-      "played": "2",
-      "won": "0",
-      "drawn": "1",
-      "lost": "1",
-      "for": "1",
-      "against": "3",
-      "goalDifference": "-2",
-      "points": "1",
-      "clubUrl": "clubpage.php?id=792",
-      "form": "DL"
-    },
-    {
-      "position": 17,
-      "team": "Allscott Heath",
-      "played": "2",
-      "won": "0",
-      "drawn": "1",
-      "lost": "1",
-      "for": "2",
-      "against": "6",
-      "goalDifference": "-4",
-      "points": "1",
-      "clubUrl": "clubpage.php?id=816",
-      "form": "LD"
+      "form": "LDL"
     },
     {
       "position": 18,
-      "team": "Telford Town",
-      "played": "2",
+      "team": "Alsager Town",
+      "played": "3",
       "won": "0",
       "drawn": "1",
-      "lost": "1",
-      "for": "1",
+      "lost": "2",
+      "for": "4",
       "against": "7",
-      "goalDifference": "-6",
+      "goalDifference": "-3",
       "points": "1",
-      "clubUrl": "clubpage.php?id=881",
-      "form": "DL"
+      "clubUrl": "clubpage.php?id=3",
+      "form": "LLD"
     },
     {
       "position": 19,
-      "team": "Barnton",
-      "played": "2",
+      "team": "Allscott Heath",
+      "played": "3",
       "won": "0",
-      "drawn": "0",
+      "drawn": "1",
       "lost": "2",
       "for": "3",
-      "against": "5",
-      "goalDifference": "-2",
-      "points": "0",
-      "clubUrl": "clubpage.php?id=266",
-      "form": "LL"
+      "against": "8",
+      "goalDifference": "-5",
+      "points": "1",
+      "clubUrl": "clubpage.php?id=816",
+      "form": "LLD"
     },
     {
       "position": 20,
@@ -280,7 +280,7 @@
       "goalDifference": "-4",
       "points": "0",
       "clubUrl": "clubpage.php?id=224",
-      "form": "LL"
+      "form": "WLL"
     }
   ]
 }
