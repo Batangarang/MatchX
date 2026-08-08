@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-08T14:10:21.667Z",
+  "generatedAt": "2026-08-08T14:19:35.336Z",
   "fixtureDate": "2026-08-08",
   "kickoff": "15:00",
   "homeTeam": "Sandbach United",
   "awayTeam": "Stafford Town",
-  "postsUsed": 13,
-  "imagesAnalyzedThisRun": 1,
+  "postsUsed": 15,
+  "imagesAnalyzedThisRun": 0,
   "totalImagesAnalyzed": 6,
   "match": {
     "score": "0-0",
@@ -65,7 +65,13 @@
       }
     },
     "goals": [],
-    "yellowCards": [],
+    "yellowCards": [
+      {
+        "minute": 14,
+        "team": "home",
+        "player": "Mitch Nolan"
+      }
+    ],
     "redCards": [],
     "substitutions": [],
     "sinBins": [],
@@ -75,6 +81,12 @@
         "team": "home",
         "player": "Hall",
         "note": "Down injured after contact with Stafford Town player, got to feet and match resumed"
+      },
+      {
+        "minute": 18,
+        "team": "home",
+        "player": "Mitch Nolan",
+        "note": "Head injury treatment"
       }
     ],
     "addedTime": {
@@ -93,24 +105,24 @@
     },
     "roughXG": {
       "firstHalf": {
-        "home": 0,
+        "home": 0.1,
         "away": 0.3,
-        "note": "Only early minutes covered. Stafford had one notable early attempt (Lynch shot from close range, well saved). Minimal information for reliable estimate."
+        "note": "Stafford had an early close-range chance from Lynch that was well saved; limited information available. Estimate based on sparse commentary."
       },
       "secondHalf": {
         "home": 0,
         "away": 0,
-        "note": "No second half posts available."
+        "note": "No second half data available in posts."
       },
       "extraTime": {
         "home": 0,
         "away": 0,
-        "note": null
+        "note": "Match did not go to extra time."
       },
       "total": {
-        "home": 0,
+        "home": 0.1,
         "away": 0.3,
-        "note": "Very limited match coverage in posts. Only first 5 minutes documented. Not a reliable representation of full match xG."
+        "note": "Only first 18 minutes covered in posts. Very limited sample. Conservative estimate based on one notable Stafford chance."
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure. Values are illustrative, not calculated from actual shot data."
     },
@@ -118,22 +130,22 @@
       "firstHalf": {
         "home": 45,
         "away": 55,
-        "note": "Stafford created early pressure with Lynch's shot; Sandbach keeper made a good save. Limited minutes covered (5 mins only)."
+        "note": "Stafford created an early dangerous chance and pressed Sandbach; Sandbach attempting to counter. Only 18 minutes of commentary available."
       },
       "secondHalf": {
         "home": 50,
         "away": 50,
-        "note": "No second half posts available."
+        "note": "No second half data available in posts."
       },
       "extraTime": {
         "home": 50,
         "away": 50,
-        "note": null
+        "note": "Match did not go to extra time."
       },
       "total": {
-        "home": 48,
-        "away": 52,
-        "note": "Only first 5 minutes documented. Very limited basis for match control assessment. Held close to neutral given minimal data."
+        "home": 45,
+        "away": 55,
+        "note": "Only first 18 minutes covered. Very limited sample; early impression suggests slight Stafford dominance in this opening period."
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
