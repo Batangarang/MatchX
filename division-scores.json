@@ -1,50 +1,6 @@
 {
-  "generatedAt": "2026-08-08T13:40:39.348Z",
+  "generatedAt": "2026-08-08T14:00:43.528Z",
   "date": "2026-08-08",
-  "postCount": 31,
-  "fixtures": [
-    {
-      "home": "Cheadle Heath Nomads",
-      "away": "Wolverhampton Casuals",
-      "kickoff": "15:00",
-      "score": null,
-      "redCards": []
-    },
-    {
-      "home": "Eccleshall",
-      "away": "Barnton",
-      "kickoff": "15:00",
-      "score": null,
-      "redCards": []
-    },
-    {
-      "home": "Foley Meir",
-      "away": "Shawbury United",
-      "kickoff": "15:00",
-      "score": null,
-      "redCards": []
-    },
-    {
-      "home": "New Mills",
-      "away": "Allscott Heath",
-      "kickoff": "15:00",
-      "score": null,
-      "redCards": []
-    },
-    {
-      "home": "Sandbach United",
-      "away": "Stafford Town",
-      "kickoff": "15:00",
-      "score": null,
-      "redCards": []
-    },
-    {
-      "home": "Telford Town",
-      "away": "Alsager Town",
-      "kickoff": "15:00",
-      "score": null,
-      "redCards": []
-    }
-  ],
-  "ticker": "@NewMillsFC: https://t.co/oLu2fKmi9E"
+  "fixtures": [],
+  "ticker": null
 }
