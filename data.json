@@ -1,26 +1,16 @@
 {
-  "scrapedAt": "2026-08-08T15:22:07.279Z",
+  "scrapedAt": "2026-08-08T16:24:03.400Z",
   "nextFixture": {
-    "date": "Sat 08/08/26",
-    "opposition": "Stafford Town",
-    "opponentUrl": "clubpage.php?id=182",
+    "date": "Tue 11/08/26",
+    "opposition": "New Mills",
+    "opponentUrl": "clubpage.php?id=91",
     "homeAway": "H",
-    "kickoff": "15:00",
+    "kickoff": "19:45",
     "score": null,
     "scorers": null,
     "competitionNote": null
   },
   "nextFixtures": [
-    {
-      "date": "Sat 08/08/26",
-      "opposition": "Stafford Town",
-      "opponentUrl": "clubpage.php?id=182",
-      "homeAway": "H",
-      "kickoff": "15:00",
-      "score": null,
-      "scorers": null,
-      "competitionNote": null
-    },
     {
       "date": "Tue 11/08/26",
       "opposition": "New Mills",
@@ -60,19 +50,39 @@
       "score": null,
       "scorers": null,
       "competitionNote": null
+    },
+    {
+      "date": "Sat 22/08/26",
+      "opposition": "Wolverhampton Casuals",
+      "opponentUrl": "clubpage.php?id=73",
+      "homeAway": "H",
+      "kickoff": "15:00",
+      "score": null,
+      "scorers": null,
+      "competitionNote": null
     }
   ],
   "lastResult": {
-    "date": "Tue 04/08/26",
-    "opposition": "Foley Meir",
-    "opponentUrl": "clubpage.php?id=898",
-    "homeAway": "A",
-    "kickoff": "19:45",
-    "score": "L 2-3",
-    "scorers": "Kieran OConnell (8) Saul Shotton (90+1)",
+    "date": "Sat 08/08/26",
+    "opposition": "Stafford Town",
+    "opponentUrl": "clubpage.php?id=182",
+    "homeAway": "H",
+    "kickoff": "15:00",
+    "score": "W 1-0",
+    "scorers": "Stanley Tatters (30)",
     "competitionNote": null
   },
   "lastResults": [
+    {
+      "date": "Sat 08/08/26",
+      "opposition": "Stafford Town",
+      "opponentUrl": "clubpage.php?id=182",
+      "homeAway": "H",
+      "kickoff": "15:00",
+      "score": "W 1-0",
+      "scorers": "Stanley Tatters (30)",
+      "competitionNote": null
+    },
     {
       "date": "Tue 04/08/26",
       "opposition": "Foley Meir",
@@ -121,8 +131,8 @@
       "opponentUrl": "clubpage.php?id=182",
       "homeAway": "H",
       "kickoff": "15:00",
-      "score": null,
-      "scorers": null,
+      "score": "W 1-0",
+      "scorers": "Stanley Tatters (30)",
       "competitionNote": null
     },
     {
