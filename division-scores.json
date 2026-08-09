@@ -1,50 +1,81 @@
 {
-  "generatedAt": "2026-08-09T19:35:31.441Z",
-  "date": "2026-08-11",
-  "isToday": false,
+  "generatedAt": "2026-08-09T19:39:49.088Z",
+  "date": "2026-08-08",
+  "isToday": true,
+  "postCount": 200,
   "fixtures": [
     {
-      "home": "Allscott Heath",
-      "away": "Shawbury United",
-      "kickoff": "19:45",
-      "score": null,
+      "home": "New Mills",
+      "away": "Allscott Heath",
+      "kickoff": "15:00",
+      "score": "2-1",
+      "goals": [],
       "redCards": []
     },
     {
-      "home": "Alsager Town",
-      "away": "Stafford Town",
-      "kickoff": "19:45",
-      "score": null,
+      "home": "Foley Meir",
+      "away": "Shawbury United",
+      "kickoff": "15:00",
+      "score": "0-2",
+      "goals": [],
+      "redCards": []
+    },
+    {
+      "home": "Eccleshall",
+      "away": "Barnton",
+      "kickoff": "15:00",
+      "score": "1-2",
+      "goals": [],
+      "redCards": []
+    },
+    {
+      "home": "Bilston Town",
+      "away": "AFC Bridgnorth",
+      "kickoff": "15:00",
+      "score": "2-2",
+      "goals": [],
       "redCards": []
     },
     {
       "home": "Market Drayton Town",
-      "away": "Telford Town",
-      "kickoff": "19:45",
-      "score": null,
+      "away": "Crewe",
+      "kickoff": "15:00",
+      "score": "3-0",
+      "goals": [],
+      "redCards": []
+    },
+    {
+      "home": "Telford Town",
+      "away": "Alsager Town",
+      "kickoff": "15:00",
+      "score": "3-2",
+      "goals": [],
+      "redCards": []
+    },
+    {
+      "home": "Cheadle Heath Nomads",
+      "away": "Wolverhampton Casuals",
+      "kickoff": "15:00",
+      "score": "0-3",
+      "goals": [],
       "redCards": []
     },
     {
       "home": "Sandbach United",
-      "away": "New Mills",
-      "kickoff": "19:45",
-      "score": null,
+      "away": "Stafford Town",
+      "kickoff": "15:00",
+      "score": "1-0",
+      "goals": [],
       "redCards": []
     },
     {
-      "home": "Wednesfield Community",
-      "away": "AFC Bridgnorth",
-      "kickoff": "19:45",
-      "score": null,
-      "redCards": []
-    },
-    {
-      "home": "Crewe",
-      "away": "Foley Meir",
-      "kickoff": "20:00",
-      "score": null,
+      "home": "Dawley Town",
+      "away": "Brereton Social",
+      "kickoff": "15:00",
+      "score": "1-3",
+      "goals": [],
       "redCards": []
     }
   ],
-  "ticker": null
+  "ticker": "Test data — simulating a live matchday for display checking purposes."
 }
