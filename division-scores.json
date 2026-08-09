@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-09T19:52:30.622Z",
+  "generatedAt": "2026-08-09T19:52:45.568Z",
   "date": "2026-08-08",
   "isToday": true,
   "postCount": 200,
@@ -21,7 +21,7 @@
           "scorer": null
         },
         {
-          "minute": "75",
+          "minute": "80",
           "team": "home",
           "scorer": "Sol Richards"
         }
@@ -72,25 +72,15 @@
       "redCards": []
     },
     {
-      "home": "Bilston Town",
-      "away": "AFC Bridgnorth",
+      "home": "Sandbach United",
+      "away": "Stafford Town",
       "kickoff": "15:00",
-      "score": "2-2",
+      "score": "1-0",
       "goals": [
         {
-          "minute": "3",
-          "team": "away",
-          "scorer": "Mitch Evans"
-        },
-        {
-          "minute": null,
+          "minute": "30",
           "team": "home",
-          "scorer": null
-        },
-        {
-          "minute": null,
-          "team": "home",
-          "scorer": null
+          "scorer": "Tatters"
         }
       ],
       "redCards": []
@@ -126,22 +116,22 @@
       "score": "3-2",
       "goals": [
         {
-          "minute": "7",
+          "minute": "4",
           "team": "home",
           "scorer": "Rhyce Brown"
         },
         {
-          "minute": "32",
+          "minute": "35",
           "team": "home",
           "scorer": "David Anani"
         },
         {
-          "minute": "53",
+          "minute": "60",
           "team": "away",
           "scorer": "L.J. Moran"
         },
         {
-          "minute": "68",
+          "minute": "70",
           "team": "away",
           "scorer": null
         },
@@ -149,6 +139,25 @@
           "minute": "79",
           "team": "home",
           "scorer": "Georgie Dawes"
+        }
+      ],
+      "redCards": []
+    },
+    {
+      "home": "AFC Bridgnorth",
+      "away": "Bilston Town",
+      "kickoff": "15:00",
+      "score": "2-2",
+      "goals": [
+        {
+          "minute": "3",
+          "team": "home",
+          "scorer": "Mitch Evans"
+        },
+        {
+          "minute": null,
+          "team": "away",
+          "scorer": null
         }
       ],
       "redCards": []
@@ -178,47 +187,28 @@
       "redCards": []
     },
     {
-      "home": "Sandbach United",
-      "away": "Stafford Town",
-      "kickoff": "15:00",
-      "score": "1-0",
-      "goals": [
-        {
-          "minute": "30",
-          "team": "home",
-          "scorer": null
-        }
-      ],
-      "redCards": []
-    },
-    {
       "home": "Dawley Town",
       "away": "Brereton Social",
       "kickoff": "15:00",
-      "score": "3-1",
+      "score": "3-3",
       "goals": [
         {
-          "minute": null,
+          "minute": "31",
           "team": "home",
           "scorer": null
         },
         {
-          "minute": null,
-          "team": "away",
-          "scorer": null
-        },
-        {
-          "minute": null,
+          "minute": "45",
           "team": "away",
           "scorer": "Kizza"
         },
         {
-          "minute": null,
+          "minute": "46",
           "team": "away",
           "scorer": "Max"
         },
         {
-          "minute": null,
+          "minute": "58",
           "team": "away",
           "scorer": "Kizza"
         }
