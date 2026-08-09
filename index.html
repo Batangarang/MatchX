@@ -493,7 +493,8 @@
     }
 
     async function shareResult(result) {
-      const scoreline = `${result.homeAway === 'H' ? 'Sandbach United' : result.opposition} ${result.score} ${result.homeAway === 'H' ? result.opposition : 'Sandbach United'}`;
+      const cleanScore = parseScoreWithResult(result.score).score;
+      const scoreline = `${result.homeAway === 'H' ? 'Sandbach United' : result.opposition} ${cleanScore} ${result.homeAway === 'H' ? result.opposition : 'Sandbach United'}`;
       const scorers = result.scorers ? `\n⚽ ${result.scorers}` : '';
       const text = `${scoreline}${scorers}\n${result.date}`;
 
