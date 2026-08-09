@@ -208,7 +208,13 @@ ${leagueContext}
 Here are recent X posts from clubs in the division:
 ${postsText || '(No recent posts.)'}
 
-Write a round-up of ${periodLabel}'s results for Sandbach United fans. If a club played more than one match in this period, mention both results. Only discuss teams with genuinely notable news or results — skip anyone with nothing interesting to report. Plain text only, no markdown, no headers.`;
+Respond with ONLY a JSON object, no other text, no markdown fences, in exactly this shape:
+{
+  "sandbachFocus": "2-4 sentences specifically about Sandbach United's own result(s) this period — what happened, the scoreline, any standout performances or incidents",
+  "divisionWide": "A separate round-up covering the REST of the division — teams in unusually good or bad form, notable results, table movement, player signings or squad news. Group by theme, not club-by-club. Only discuss teams with genuinely notable news or results — skip anyone with nothing interesting to report. Do NOT repeat Sandbach's own result here, that's covered separately above."
+}
+
+Plain text only within each field, no markdown, no headers.`;
 
   const res = await fetch('https://api.anthropic.com/v1/messages', {
     method: 'POST',
@@ -227,12 +233,22 @@ Write a round-up of ${periodLabel}'s results for Sandbach United fans. If a club
   const data = await res.json();
   if (!data.content) throw new Error(`Unexpected API response: ${JSON.stringify(data)}`);
 
-  const summary = data.content.map(b => b.text || '').join('').trim();
+  const raw = data.content.map(b => b.text || '').join('').trim();
+  const cleaned = raw.replace(/```json|```/g, '').trim();
+
+  let parsed;
+  try {
+    parsed = JSON.parse(cleaned);
+  } catch (err) {
+    // Fall back gracefully if parsing fails, rather than losing the whole run
+    parsed = { sandbachFocus: raw, divisionWide: '' };
+  }
 
   const output = {
     generatedAt: new Date().toISOString(),
     mode: MODE,
-    summary,
+    sandbachFocus: parsed.sandbachFocus || '',
+    divisionWide: parsed.divisionWide || '',
   };
 
   fs.writeFileSync(`division-insights-${MODE}.json`, JSON.stringify(output, null, 2));
