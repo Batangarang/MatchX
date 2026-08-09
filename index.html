@@ -357,6 +357,7 @@
 
   <div class="card">
     <h2>Around the Division</h2>
+    <div id="division-day-label" style="font-size: 12px; font-weight: 700; color: var(--navy); margin-bottom: 6px;"></div>
     <div id="division-ticker" style="font-size: 12px; color: var(--royal); font-style: italic; margin-bottom: 10px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></div>
     <div id="division-scores-list">Loading...</div>
     <div class="meta" id="division-scores-updated" style="margin-top: 8px;"></div>
@@ -922,18 +923,28 @@
     fetch('division-scores.json?t=' + Date.now())
       .then(res => res.json())
       .then(data => {
-        const today = new Date().toISOString().slice(0, 10);
-        if (data.date !== today) {
-          document.getElementById('division-scores-list').innerHTML = '<div class="empty">No fixtures today</div>';
-          return;
-        }
-
         if (data.ticker) {
           document.getElementById('division-ticker').textContent = '📰 ' + data.ticker;
         }
 
+        // Show a label indicating whether these are today's live fixtures
+        // or a preview of the next upcoming matchday
+        const labelEl = document.getElementById('division-day-label');
+        if (labelEl) {
+          if (!data.date) {
+            labelEl.textContent = '';
+          } else if (data.isToday) {
+            labelEl.textContent = '';
+          } else {
+            const d = new Date(data.date + 'T12:00:00');
+            const formatted = d.toLocaleDateString('en-GB', { weekday: 'long', day: 'numeric', month: 'long' });
+            labelEl.textContent = `Upcoming: ${formatted}`;
+          }
+        }
+
         if (!data.fixtures || data.fixtures.length === 0) {
-          document.getElementById('division-scores-list').innerHTML = '<div class="empty">No division fixtures today</div>';
+          document.getElementById('division-scores-list').innerHTML = '<div class="empty">No upcoming division fixtures found</div>';
+        } else {.getElementById('division-scores-list').innerHTML = '<div class="empty">No division fixtures today</div>';
         } else {
           document.getElementById('division-scores-list').innerHTML = data.fixtures.map(f => {
             const goalsHtml = (f.goals || []).map(g =>
