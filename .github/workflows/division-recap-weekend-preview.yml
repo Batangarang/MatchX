@@ -1,0 +1,30 @@
+name: Division recap - weekend preview
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  recap:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+      - run: npm install
+      - run: node division-posts.js
+        env:
+          GETXAPI_KEY: ${{ secrets.GETXAPI_KEY }}
+      - run: node division-recap-engine.js
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          RECAP_MODE: weekend-preview
+      - name: Commit updated data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          for f in division-posts.json division-insights-weekend-preview.json .recap-state-weekend-preview.json; do
+            [ -f "$f" ] && git add "$f"
+          done
+          git diff --staged --quiet || git commit -m "Weekend preview"
+          git push
