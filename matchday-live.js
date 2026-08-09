@@ -284,7 +284,10 @@ function mergeMatchData(previous, incoming) {
     redCards: mergedRedCards,
     substitutions: mergeArrays(previous.substitutions, incoming.substitutions, s => `${s.minute}-${s.playerOff}-${s.playerOn}`),
     sinBins: mergeArrays(previous.sinBins, incoming.sinBins, s => `${s.minute}-${s.player}-${s.team}`),
-    injuries: mergeArrays(previous.injuries, incoming.injuries, i => `${i.minute}-${i.player}-${i.team}`),
+    injuries: dedupeSimilarEvents(
+      mergeArrays(previous.injuries, incoming.injuries, i => `${i.minute}-${i.player}-${i.team}`),
+      ['team', 'player']
+    ),
     addedTime: {
       firstHalf: incoming.addedTime?.firstHalf ?? previous.addedTime?.firstHalf ?? null,
       secondHalf: incoming.addedTime?.secondHalf ?? previous.addedTime?.secondHalf ?? null,
