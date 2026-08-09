@@ -1,12 +1,10 @@
 const fs = require('fs');
 const CLUBS = require('./division-clubs.js');
 const { getUserTweets } = require('./getxapi-client.js');
-
 const API_KEY = process.env.GETXAPI_KEY;
 const ANTHROPIC_KEY = process.env.ANTHROPIC_API_KEY;
-
 const { getUKNow, getUKDateString } = require('./uk-time.js');
-const REAL_NOW = new Date(); // genuine, unshifted UTC timestamp — use this for anything stored/displayed as a timestamp
+const REAL_NOW = new Date();
 
 function findHandle(clubName) {
   if (clubName.includes('Sandbach')) return 'SandbachFC_1st';
@@ -15,7 +13,6 @@ function findHandle(clubName) {
 }
 
 function parseFixtureDate(dateStr) {
-  // e.g. "Saturday 8 August 2026"
   const match = dateStr.match(/(\d{1,2})\s+(\w+)\s+(\d{4})/);
   if (!match) return null;
   const months = ['january','february','march','april','may','june','july','august','september','october','november','december'];
@@ -24,11 +21,12 @@ function parseFixtureDate(dateStr) {
   return new Date(parseInt(match[3]), monthIndex, parseInt(match[1]));
 }
 
+function isSameDate(a, b) {
+  return a.getFullYear() === b.getFullYear() && a.getMonth() === b.getMonth() && a.getDate() === b.getDate();
+}
+
 function isToday(date) {
-  const today = getUKNow();
-  return date && date.getFullYear() === today.getFullYear() &&
-         date.getMonth() === today.getMonth() &&
-         date.getDate() === today.getDate();
+  return date && isSameDate(date, getUKNow());
 }
 
 function isBST() {
@@ -53,33 +51,66 @@ function getTodaysWindow(fixtures) {
   };
 }
 
+// Finds today's fixtures if there are any; otherwise finds the nearest
+// upcoming matchday so the card can show it in a "ready" state ahead of time.
+function findTargetFixtures(fixtures, testDate) {
+  if (testDate) {
+    const dayFixtures = fixtures.filter(f => {
+      const d = parseFixtureDate(f.date);
+      return d && d.toISOString().slice(0, 10) === testDate;
+    });
+    return { fixtures: dayFixtures, isToday: false, targetDate: testDate };
+  }
+
+  const now = getUKNow();
+  const todaysFixtures = fixtures.filter(f => isToday(parseFixtureDate(f.date)));
+  if (todaysFixtures.length > 0) {
+    return { fixtures: todaysFixtures, isToday: true, targetDate: getUKDateString(now) };
+  }
+
+  const futureDates = [...new Set(fixtures
+    .map(f => parseFixtureDate(f.date))
+    .filter(d => d && d >= now)
+    .map(d => d.toISOString().slice(0, 10)))]
+    .sort();
+
+  if (futureDates.length === 0) {
+    return { fixtures: [], isToday: false, targetDate: null };
+  }
+
+  const nextDateStr = futureDates[0];
+  const nextDayFixtures = fixtures.filter(f => {
+    const d = parseFixtureDate(f.date);
+    return d && d.toISOString().slice(0, 10) === nextDateStr;
+  });
+  return { fixtures: nextDayFixtures, isToday: false, targetDate: nextDateStr };
+}
+
 async function run() {
   if (!API_KEY) throw new Error('GETXAPI_KEY not set');
   if (!ANTHROPIC_KEY) throw new Error('ANTHROPIC_API_KEY not set');
-
   if (!fs.existsSync('division-fixtures.json')) {
     console.log('No division-fixtures.json — run division-fixtures.js first.');
     return;
   }
 
   const { fixtures } = JSON.parse(fs.readFileSync('division-fixtures.json', 'utf-8'));
-  const testDate = process.env.DIVISION_SCORES_TEST_DATE; // e.g. "2026-08-08"
+  const testDate = process.env.DIVISION_SCORES_TEST_DATE;
 
-  const todaysFixtures = testDate
-    ? fixtures.filter(f => {
-        const d = parseFixtureDate(f.date);
-        return d && d.toISOString().slice(0, 10) === testDate;
-      })
-    : fixtures.filter(f => isToday(parseFixtureDate(f.date)));
+  const target = findTargetFixtures(fixtures, testDate);
+  const todaysFixtures = target.fixtures;
 
   const now = getUKNow();
   const isManual = process.env.GITHUB_EVENT_NAME === 'workflow_dispatch' || !!testDate;
   const nowUK = now.getUTCHours();
 
-  if (nowUK < 11 && !isManual) {
+  // Only apply the "before 11am, no scores yet" state on a genuine today —
+  // a preview of a future matchday should just show fixtures regardless of time.
+  if (target.isToday && nowUK < 11 && !isManual) {
     fs.writeFileSync('division-scores.json', JSON.stringify({
       generatedAt: REAL_NOW.toISOString(),
-      date: getUKDateString(now),
+      date: target.targetDate,
+      isToday: target.isToday,
       fixtures: todaysFixtures.map(f => ({ home: f.home, away: f.away, kickoff: f.kickoff, score: null, redCards: [] })),
       ticker: null,
     }, null, 2));
@@ -90,11 +121,26 @@ async function run() {
   if (todaysFixtures.length === 0) {
     fs.writeFileSync('division-scores.json', JSON.stringify({
       generatedAt: REAL_NOW.toISOString(),
-      date: getUKDateString(now),
+      date: null,
+      isToday: false,
       fixtures: [],
       ticker: null,
     }, null, 2));
-    console.log('No division fixtures today.');
+    console.log('No division fixtures today or upcoming.');
+    return;
+  }
+
+  // If we're showing a future matchday (not today), just publish the plain
+  // fixture list — no point polling for scores on a day that hasn't happened.
+  if (!target.isToday) {
+    fs.writeFileSync('division-scores.json', JSON.stringify({
+      generatedAt: REAL_NOW.toISOString(),
+      date: target.targetDate,
+      isToday: false,
+      fixtures: todaysFixtures.map(f => ({ home: f.home, away: f.away, kickoff: f.kickoff, score: null, redCards: [] })),
+      ticker: null,
+    }, null, 2));
+    console.log(`Showing next matchday (${target.targetDate}) — ${todaysFixtures.length} fixtures, ready ahead of time.`);
     return;
   }
 
@@ -134,7 +180,7 @@ async function run() {
   if (fs.existsSync('division-scores.json')) {
     previous = JSON.parse(fs.readFileSync('division-scores.json', 'utf-8'));
   }
-  if (previous && previous.postCount === totalPostCount && previous.date === getUKDateString(now)) {
+  if (previous && previous.postCount === totalPostCount && previous.date === target.targetDate) {
     console.log('Nothing new since last check — skipping AI call.');
     return;
   }
@@ -153,13 +199,11 @@ ${fixtureList}
 Here are today's X posts from clubs playing today:
 ${postsText}
 
-For each fixture above, determine ONLY if a score has been EXPLICITLY stated in a post (e.g. "2-1", "FT 3-0", a clear scoreline) — do not guess or infer from goal mentions alone. Also note any red card sent-offs explicitly mentioned, with team and player if given.
-
-Scorelines in these posts may be written without a dash, e.g. "2 1" instead of "2-1" (sometimes with team colour emojis nearby). Recognise these as valid scorelines too, and normalise whatever format you see into standard "X-Y" form when filling in "score".
-
-Also extract individual goals with minute and scorer where explicitly mentioned in posts, matching each goal to the correct fixture.
+Scorelines in these posts may be written without a dash, e.g. "2 1" instead of "2-1". Recognise these as valid too, and normalise to "X-Y" form.
 
 IMPORTANT: A club's score can change multiple times as goals are scored throughout the match. Always use the MOST RECENT scoreline mentioned for each fixture — do not use an early or outdated scoreline just because it was clearly stated, if a later post shows a different, more current score for the same fixture.
+
+For each fixture above, determine ONLY if a score has been EXPLICITLY stated in a post (e.g. "2-1", "FT 3-0", a clear scoreline) — do not guess or infer from goal mentions alone, but always prefer the LATEST such mention. Also extract individual goals with minute and scorer where explicitly mentioned, matching each goal to the correct fixture. Also note any red card sent-offs explicitly mentioned, with team and player if given.
 
 Respond with ONLY a JSON object, no other text, no markdown fences:
 {
@@ -196,7 +240,8 @@ Only include a score if explicitly stated in the posts. Leave as null if not men
 
   const output = {
     generatedAt: REAL_NOW.toISOString(),
-    date: getUKDateString(now),
+    date: target.targetDate,
+    isToday: true,
     postCount: totalPostCount,
     fixtures: parsed.fixtures || [],
     ticker,
