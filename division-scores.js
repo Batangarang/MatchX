@@ -157,12 +157,14 @@ For each fixture above, determine ONLY if a score has been EXPLICITLY stated in 
 
 Scorelines in these posts may be written without a dash, e.g. "2 1" instead of "2-1" (sometimes with team colour emojis nearby). Recognise these as valid scorelines too, and normalise whatever format you see into standard "X-Y" form when filling in "score".
 
+Also extract individual goals with minute and scorer where explicitly mentioned in posts, matching each goal to the correct fixture.
+
 IMPORTANT: A club's score can change multiple times as goals are scored throughout the match. Always use the MOST RECENT scoreline mentioned for each fixture — do not use an early or outdated scoreline just because it was clearly stated, if a later post shows a different, more current score for the same fixture.
 
 Respond with ONLY a JSON object, no other text, no markdown fences:
 {
   "fixtures": [
-    { "home": "string", "away": "string", "kickoff": "string", "score": "string or null", "redCards": [{ "team": "home or away", "player": "string or null" }] }
+    { "home": "string", "away": "string", "kickoff": "string", "score": "string or null", "goals": [{ "minute": null, "team": "home or away", "scorer": "string" }], "redCards": [{ "team": "home or away", "player": "string or null" }] }
   ]
 }
 
