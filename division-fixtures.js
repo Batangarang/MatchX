@@ -19,6 +19,12 @@ async function scrape() {
     const dateMatch = headerText.match(/(\w+day)\s+(\d{1,2})\w*\s+(\w+)\s+(\d{4})/);
     if (!dateMatch || !headerText.includes(DIVISION_NAME)) return;
 
+    // Reject tables that are actually cup competitions, even if they also
+    // mention the division name somewhere in the header (the site shows a
+    // persistent division badge regardless of which competition is displayed).
+    const isCupFixture = /cup|vase|trophy/i.test(headerText);
+    if (isCupFixture) return;
+
     const dateStr = `${dateMatch[1]} ${dateMatch[2]} ${dateMatch[3]} ${dateMatch[4]}`;
 
     $(table).find('tr').slice(1).each((j, row) => {
