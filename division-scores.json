@@ -1,220 +1,50 @@
 {
-  "generatedAt": "2026-08-09T19:52:45.568Z",
-  "date": "2026-08-08",
-  "isToday": true,
-  "postCount": 200,
+  "generatedAt": "2026-08-09T19:55:32.439Z",
+  "date": "2026-08-11",
+  "isToday": false,
   "fixtures": [
     {
-      "home": "New Mills",
-      "away": "Allscott Heath",
-      "kickoff": "15:00",
-      "score": "2-1",
-      "goals": [
-        {
-          "minute": "20",
-          "team": "home",
-          "scorer": "Luc Ferry"
-        },
-        {
-          "minute": "45",
-          "team": "away",
-          "scorer": null
-        },
-        {
-          "minute": "80",
-          "team": "home",
-          "scorer": "Sol Richards"
-        }
-      ],
-      "redCards": []
-    },
-    {
-      "home": "Foley Meir",
+      "home": "Allscott Heath",
       "away": "Shawbury United",
-      "kickoff": "15:00",
-      "score": "0-2",
-      "goals": [
-        {
-          "minute": "5",
-          "team": "away",
-          "scorer": "Ablay Sowe"
-        },
-        {
-          "minute": "45",
-          "team": "away",
-          "scorer": "Copper"
-        }
-      ],
+      "kickoff": "19:45",
+      "score": null,
       "redCards": []
     },
     {
-      "home": "Eccleshall",
-      "away": "Barnton",
-      "kickoff": "15:00",
-      "score": "1-2",
-      "goals": [
-        {
-          "minute": "1",
-          "team": "home",
-          "scorer": null
-        },
-        {
-          "minute": "36",
-          "team": "away",
-          "scorer": "Keyworth"
-        },
-        {
-          "minute": "84",
-          "team": "away",
-          "scorer": "Josh Obamwongi"
-        }
-      ],
-      "redCards": []
-    },
-    {
-      "home": "Sandbach United",
+      "home": "Alsager Town",
       "away": "Stafford Town",
-      "kickoff": "15:00",
-      "score": "1-0",
-      "goals": [
-        {
-          "minute": "30",
-          "team": "home",
-          "scorer": "Tatters"
-        }
-      ],
+      "kickoff": "19:45",
+      "score": null,
       "redCards": []
     },
     {
       "home": "Market Drayton Town",
-      "away": "Crewe",
-      "kickoff": "15:00",
-      "score": "3-0",
-      "goals": [
-        {
-          "minute": "45",
-          "team": "home",
-          "scorer": "George Handley"
-        },
-        {
-          "minute": "45",
-          "team": "home",
-          "scorer": "Durrell Manhertz"
-        },
-        {
-          "minute": "57",
-          "team": "home",
-          "scorer": "Armando Wood"
-        }
-      ],
+      "away": "Telford Town",
+      "kickoff": "19:45",
+      "score": null,
       "redCards": []
     },
     {
-      "home": "Telford Town",
-      "away": "Alsager Town",
-      "kickoff": "15:00",
-      "score": "3-2",
-      "goals": [
-        {
-          "minute": "4",
-          "team": "home",
-          "scorer": "Rhyce Brown"
-        },
-        {
-          "minute": "35",
-          "team": "home",
-          "scorer": "David Anani"
-        },
-        {
-          "minute": "60",
-          "team": "away",
-          "scorer": "L.J. Moran"
-        },
-        {
-          "minute": "70",
-          "team": "away",
-          "scorer": null
-        },
-        {
-          "minute": "79",
-          "team": "home",
-          "scorer": "Georgie Dawes"
-        }
-      ],
+      "home": "Sandbach United",
+      "away": "New Mills",
+      "kickoff": "19:45",
+      "score": null,
       "redCards": []
     },
     {
-      "home": "AFC Bridgnorth",
-      "away": "Bilston Town",
-      "kickoff": "15:00",
-      "score": "2-2",
-      "goals": [
-        {
-          "minute": "3",
-          "team": "home",
-          "scorer": "Mitch Evans"
-        },
-        {
-          "minute": null,
-          "team": "away",
-          "scorer": null
-        }
-      ],
+      "home": "Wednesfield Community",
+      "away": "AFC Bridgnorth",
+      "kickoff": "19:45",
+      "score": null,
       "redCards": []
     },
     {
-      "home": "Cheadle Heath Nomads",
-      "away": "Wolverhampton Casuals",
-      "kickoff": "15:00",
-      "score": "0-3",
-      "goals": [
-        {
-          "minute": "12",
-          "team": "away",
-          "scorer": null
-        },
-        {
-          "minute": "18",
-          "team": "away",
-          "scorer": null
-        },
-        {
-          "minute": "22",
-          "team": "away",
-          "scorer": null
-        }
-      ],
-      "redCards": []
-    },
-    {
-      "home": "Dawley Town",
-      "away": "Brereton Social",
-      "kickoff": "15:00",
-      "score": "3-3",
-      "goals": [
-        {
-          "minute": "31",
-          "team": "home",
-          "scorer": null
-        },
-        {
-          "minute": "45",
-          "team": "away",
-          "scorer": "Kizza"
-        },
-        {
-          "minute": "46",
-          "team": "away",
-          "scorer": "Max"
-        },
-        {
-          "minute": "58",
-          "team": "away",
-          "scorer": "Kizza"
-        }
-      ],
+      "home": "Crewe",
+      "away": "Foley Meir",
+      "kickoff": "20:00",
+      "score": null,
       "redCards": []
     }
   ],
-  "ticker": "Test data — simulating a live matchday for display checking purposes."
+  "ticker": null
 }
