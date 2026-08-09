@@ -1,6 +1,50 @@
 {
-  "generatedAt": "2026-08-09T19:20:43.772Z",
-  "date": "2026-08-09",
-  "fixtures": [],
+  "generatedAt": "2026-08-09T19:25:30.667Z",
+  "date": "2026-08-11",
+  "isToday": false,
+  "fixtures": [
+    {
+      "home": "Allscott Heath",
+      "away": "Shawbury United",
+      "kickoff": "19:45",
+      "score": null,
+      "redCards": []
+    },
+    {
+      "home": "Alsager Town",
+      "away": "Stafford Town",
+      "kickoff": "19:45",
+      "score": null,
+      "redCards": []
+    },
+    {
+      "home": "Market Drayton Town",
+      "away": "Telford Town",
+      "kickoff": "19:45",
+      "score": null,
+      "redCards": []
+    },
+    {
+      "home": "Sandbach United",
+      "away": "New Mills",
+      "kickoff": "19:45",
+      "score": null,
+      "redCards": []
+    },
+    {
+      "home": "Wednesfield Community",
+      "away": "AFC Bridgnorth",
+      "kickoff": "19:45",
+      "score": null,
+      "redCards": []
+    },
+    {
+      "home": "Crewe",
+      "away": "Foley Meir",
+      "kickoff": "20:00",
+      "score": null,
+      "redCards": []
+    }
+  ],
   "ticker": null
 }
