@@ -1,5 +1,5 @@
 {
-  "scrapedAt": "2026-08-09T18:30:52.865Z",
+  "scrapedAt": "2026-08-09T18:35:36.335Z",
   "nextFixture": {
     "date": "Tue 11/08/26",
     "opposition": "New Mills",
@@ -221,6 +221,26 @@
       "opponentUrl": "clubpage.php?id=3",
       "homeAway": "H",
       "kickoff": "15:00",
+      "score": null,
+      "scorers": null,
+      "competitionNote": null
+    },
+    {
+      "date": "Tue 06/10/26",
+      "opposition": "Foley Meir",
+      "opponentUrl": "clubpage.php?id=898",
+      "homeAway": "H",
+      "kickoff": "19:45",
+      "score": null,
+      "scorers": null,
+      "competitionNote": null
+    },
+    {
+      "date": "",
+      "opposition": "(The Edward Case Cup 1 S)",
+      "opponentUrl": null,
+      "homeAway": "",
+      "kickoff": "",
       "score": null,
       "scorers": null,
       "competitionNote": null
