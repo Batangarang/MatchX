@@ -187,6 +187,8 @@ async function run() {
     ? `Here are the upcoming First Division South fixtures for ${periodLabel}:
 ${fixtureList}
 
+IMPORTANT: In the fixture list above, the format is always "Home Team v Away Team" — the first team named is always playing at home, the second team is always the visitor. Do not reverse this or infer venue/direction from anything else in the posts — always trust this explicit home/away order from the fixture list.
+
 Here is the current league table:
 ${leagueContext}
 
@@ -197,7 +199,10 @@ Write a preview for Sandbach United fans covering ${periodLabel}'s fixtures — 
     : `Here are the First Division South fixtures that were played ${periodLabel}:
 ${fixtureList}
 
+IMPORTANT: In the fixture list above, the format is always "Home Team v Away Team" — the first team named is always playing at home, the second team is always the visitor. Do not reverse this or infer venue/direction from anything else in the posts — always trust this explicit home/away order from the fixture list.
+
 Here is the current league table:
+
 ${leagueContext}
 
 Here are recent X posts from clubs in the division:
