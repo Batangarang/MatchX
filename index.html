@@ -947,7 +947,7 @@
         } else {
           document.getElementById('division-scores-list').innerHTML = data.fixtures.map(f => {
             const goalsHtml = (f.goals || []).map(g =>
-              `${g.minute ? g.minute + "' " : ''}${g.scorer} (${g.team === 'home' ? f.home : f.away})`
+              `${g.minute ? g.minute + "' " : ''}${g.scorer && g.scorer !== 'null' ? g.scorer : 'Scorer unconfirmed'} (${g.team === 'home' ? f.home : f.away})`
             ).join(', ');
             const redCardHtml = (f.redCards || []).map(r => `🟥${r.player ? ' ' + r.player : ''} (${r.team === 'home' ? f.home : f.away})`).join(' ');
             return `
