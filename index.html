@@ -882,16 +882,24 @@
         renderBriefingCard();
       });
 
-    fetch('division-insights.json?t=' + Date.now())
-      .then(res => res.json())
-      .then(data => {
-        divisionBriefingData = data;
-        renderBriefingCard();
-      })
-      .catch(() => {
+    const divisionModes = ['weekend-preview', 'weekend-recap', 'midweek-preview', 'midweek-recap'];
+    Promise.allSettled(
+      divisionModes.map(mode =>
+        fetch(`division-insights-${mode}.json?t=` + Date.now()).then(res => res.json())
+      )
+    ).then(results => {
+      const successful = results
+        .filter(r => r.status === 'fulfilled' && r.value?.summary)
+        .map(r => r.value);
+
+      if (successful.length === 0) {
         divisionBriefingData = { summary: 'No round-up available yet.' };
-        renderBriefingCard();
-      });
+      } else {
+        successful.sort((a, b) => new Date(b.generatedAt) - new Date(a.generatedAt));
+        divisionBriefingData = successful[0];
+      }
+      renderBriefingCard();
+    });
 
     fetch('x-posts.json?t=' + Date.now())
       .then(res => res.json())

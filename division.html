@@ -31,32 +31,70 @@
       padding: 16px;
       margin-bottom: 16px;
       box-shadow: 0 1px 3px rgba(12,35,64,0.08);
-      line-height: 1.6;
     }
-    .meta { color: var(--muted); font-size: 13px; margin-top: 14px; }
+    .card h2 {
+      margin: 0 0 12px 0;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--navy);
+      display: inline-block;
+      padding-bottom: 6px;
+      border-bottom: 3px solid var(--amber);
+    }
+    .summary { line-height: 1.6; white-space: pre-wrap; }
+    .meta { color: var(--muted); font-size: 13px; margin-top: 12px; }
+    .empty { color: var(--muted); font-size: 13px; font-style: italic; }
   </style>
 </head>
 <body>
   <a class="back" href="index.html">← Back</a>
-  <h1>First Division South — Weekly Round-Up</h1>
+  <h1>First Division South — Round-Up</h1>
 
-  <div class="card" id="division-content">Loading...</div>
+  <div class="card">
+    <h2>Weekend Preview</h2>
+    <div id="weekend-preview" class="summary">Loading...</div>
+    <div class="meta" id="weekend-preview-updated"></div>
+  </div>
+
+  <div class="card">
+    <h2>Weekend Recap</h2>
+    <div id="weekend-recap" class="summary">Loading...</div>
+    <div class="meta" id="weekend-recap-updated"></div>
+  </div>
+
+  <div class="card">
+    <h2>Midweek Preview</h2>
+    <div id="midweek-preview" class="summary">Loading...</div>
+    <div class="meta" id="midweek-preview-updated"></div>
+  </div>
+
+  <div class="card">
+    <h2>Midweek Recap</h2>
+    <div id="midweek-recap" class="summary">Loading...</div>
+    <div class="meta" id="midweek-recap-updated"></div>
+  </div>
 
   <script>
-    fetch('division-insights.json')
-      .then(res => res.json())
-      .then(data => {
-        const date = new Date(data.generatedAt);
-        const formatted = date.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
-        document.getElementById('division-content').innerHTML = `
-          <div>${(data.summary || 'No round-up available yet.').replace(/\n/g, '<br><br>')}</div>
-          <div class="meta">Generated ${formatted}${data.clubsCovered ? ' — ' + data.clubsCovered + ' clubs had activity this week' : ''}</div>
-        `;
-      })
-      .catch(err => {
-        document.getElementById('division-content').textContent = 'Failed to load round-up';
-        console.error(err);
-      });
+    function loadSection(mode, contentId, metaId) {
+      fetch(`division-insights-${mode}.json?t=` + Date.now())
+        .then(res => res.json())
+        .then(data => {
+          document.getElementById(contentId).textContent = data.summary || 'Not available yet.';
+          const date = new Date(data.generatedAt);
+          document.getElementById(metaId).textContent =
+            'Updated ' + date.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' }) +
+            ' at ' + date.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' });
+        })
+        .catch(() => {
+          document.getElementById(contentId).innerHTML = '<span class="empty">Not available yet — check back after the next preview/recap window.</span>';
+        });
+    }
+
+    loadSection('weekend-preview', 'weekend-preview', 'weekend-preview-updated');
+    loadSection('weekend-recap', 'weekend-recap', 'weekend-recap-updated');
+    loadSection('midweek-preview', 'midweek-preview', 'midweek-preview-updated');
+    loadSection('midweek-recap', 'midweek-recap', 'midweek-recap-updated');
   </script>
 </body>
 </html>
