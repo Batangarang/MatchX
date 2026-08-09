@@ -1,26 +1,30 @@
 {
-  "generatedAt": "2026-08-09T15:23:29.059Z",
+  "generatedAt": "2026-08-09T17:08:03.503Z",
   "games": [
-    {
-      "opponent": "Stafford Town",
-      "score": "1-0",
-      "attendance": 162
-    },
     {
       "opponent": "Wednesfield Community",
       "score": "2-1",
-      "attendance": 132
+      "attendance": 132,
+      "date": "Sat 01/08/26"
+    },
+    {
+      "opponent": "Stafford Town",
+      "score": "1-0",
+      "attendance": 162,
+      "date": "Sat 08/08/26"
     }
   ],
   "average": 147,
   "lowest": {
     "opponent": "Wednesfield Community",
     "score": "2-1",
-    "attendance": 132
+    "attendance": 132,
+    "date": "Sat 01/08/26"
   },
   "highest": {
     "opponent": "Stafford Town",
     "score": "1-0",
-    "attendance": 162
+    "attendance": 162,
+    "date": "Sat 08/08/26"
   }
 }
