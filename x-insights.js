@@ -1,5 +1,4 @@
 const fs = require('fs');
-
 const API_KEY = process.env.ANTHROPIC_API_KEY;
 
 function isSameUKDay(isoString) {
@@ -14,9 +13,28 @@ async function run() {
   if (!API_KEY) {
     throw new Error('ANTHROPIC_API_KEY environment variable not set');
   }
-
   if (!fs.existsSync('x-posts.json')) {
     console.log('No x-posts.json found yet — skipping insight generation.');
+    return;
+  }
+
+  const postsData = JSON.parse(fs.readFileSync('x-posts.json', 'utf-8'));
+  const allPosts = postsData.posts || [];
+  if (allPosts.length === 0) {
+    console.log('No posts at all — skipping insight generation.');
+    return;
+  }
+
+  // Skip the whole thing (and the paid AI call) if the underlying posts
+  // haven't actually changed since the last summary was generated.
+  const stateFile = 'x-insights-lastrun.json';
+  const currentSignature = JSON.stringify(allPosts.map(p => p.id || p.createdAt));
+  let lastPostSignature = null;
+  if (fs.existsSync(stateFile)) {
+    try { lastPostSignature = JSON.parse(fs.readFileSync(stateFile, 'utf-8')).signature; } catch {}
+  }
+  if (currentSignature === lastPostSignature) {
+    console.log('No new posts since last summary — skipping AI call.');
     return;
   }
 
@@ -32,18 +50,9 @@ async function run() {
     }
   }
 
-  const postsData = JSON.parse(fs.readFileSync('x-posts.json', 'utf-8'));
-  const allPosts = postsData.posts || [];
-
-  if (allPosts.length === 0) {
-    console.log('No posts at all — skipping insight generation.');
-    return;
-  }
-
   const todaysPosts = allPosts.filter(p => isSameUKDay(p.createdAt));
   const isToday = todaysPosts.length > 0;
   const posts = isToday ? todaysPosts : allPosts.slice(0, 5);
-
   const postsText = posts.map(p => `[${p.createdAt}] ${p.text}`).join('\n\n');
   const contextNote = isToday
     ? "all posted today"
@@ -62,22 +71,18 @@ async function run() {
       messages: [{
         role: 'user',
         content: `Here are recent posts from Sandbach United's official 1st team X account, ${contextNote}:
-
 ${postsText}
-
 ${nwcflContext} Write a short, friendly 2-3 sentence summary for fans, covering things like recent form, team news, or anything notable. Use player and club names exactly as they'd normally be written in football reporting — if a name in the source posts includes emoji, numbers, hashtags, or decorative styling (e.g. "Joe Bev97" or "J.Bevan⚽"), extract just the real underlying name and ignore the decoration. Do not use the word "today" or "this morning" anywhere in the summary, since it may be read days later — use durable phrasing instead (e.g. "in their last match," "recently," or the actual date). Plain text only, no markdown, no headers.`,
       }],
     }),
   });
 
   const data = await res.json();
-
   if (!data.content) {
     throw new Error(`Unexpected API response: ${JSON.stringify(data)}`);
   }
 
   const summary = data.content.map(b => b.text || '').join('').trim();
-
   const output = {
     generatedAt: new Date().toISOString(),
     isFromToday: isToday,
@@ -86,6 +91,7 @@ ${nwcflContext} Write a short, friendly 2-3 sentence summary for fans, covering 
   };
 
   fs.writeFileSync('x-insights.json', JSON.stringify(output, null, 2));
+  fs.writeFileSync(stateFile, JSON.stringify({ signature: currentSignature }));
   console.log('Saved insight:', summary);
 }
 
