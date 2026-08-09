@@ -889,14 +889,18 @@
       )
     ).then(results => {
       const successful = results
-        .filter(r => r.status === 'fulfilled' && r.value?.summary)
+        .filter(r => r.status === 'fulfilled' && (r.value?.summary || r.value?.sandbachFocus))
         .map(r => r.value);
 
       if (successful.length === 0) {
         divisionBriefingData = { summary: 'No round-up available yet.' };
       } else {
         successful.sort((a, b) => new Date(b.generatedAt) - new Date(a.generatedAt));
-        divisionBriefingData = successful[0];
+        const latest = successful[0];
+        // Recaps have sandbachFocus/divisionWide; previews have a single summary
+        divisionBriefingData = latest.sandbachFocus
+          ? { ...latest, summary: latest.sandbachFocus }
+          : latest;
       }
       renderBriefingCard();
     });
