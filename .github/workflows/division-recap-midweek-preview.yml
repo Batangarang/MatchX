@@ -26,5 +26,6 @@ jobs:
           for f in division-posts.json division-insights-midweek-preview.json .recap-state-midweek-preview.json; do
             [ -f "$f" ] && git add "$f"
           done
-          git diff --staged --quiet || git commit -m "Midweek preview"
+          git diff --staged --quiet || git commit -m "..."
+          git pull --rebase --autostash origin main
           git push

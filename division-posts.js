@@ -4,46 +4,25 @@ const { getUserTweets } = require('./getxapi-client.js');
 
 const API_KEY = process.env.GETXAPI_KEY;
 const SEVEN_DAYS_AGO = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000);
+const FRESHNESS_MINUTES = 20; // reuse existing data if it's newer than this
 
-function shouldRunPostMatch() {
-  if (process.env.GITHUB_EVENT_NAME === 'workflow_dispatch') return true;
-
-  const data = JSON.parse(fs.readFileSync('data.json', 'utf-8'));
-  const lastResult = data.lastResult;
-  if (!lastResult) return false;
-
-  const today = new Date();
-  const todayStr = today.getFullYear() + '-' + String(today.getMonth() + 1).padStart(2, '0') + '-' + String(today.getDate()).padStart(2, '0');
-
-  const [, dd, mm, yy] = lastResult.date.match(/(\d{2})\/(\d{2})\/(\d{2})/);
-  const resultDateStr = `20${yy}-${mm}-${dd}`;
-  if (resultDateStr !== todayStr) return false;
-
-  const [hh, min] = lastResult.kickoff.split(':');
-  const kickoffToday = new Date();
-  kickoffToday.setUTCHours(parseInt(hh), parseInt(min), 0, 0);
-  const isBST = today.getUTCMonth() > 2 && today.getUTCMonth() < 9;
-  if (isBST) kickoffToday.setUTCHours(kickoffToday.getUTCHours() - 1);
-
-  const targetTime = new Date(kickoffToday.getTime() + 180 * 60000); // kickoff + 180 min (~6pm for a 3pm kickoff)
-  const minutesFromTarget = Math.abs(today - targetTime) / 60000;
-  if (minutesFromTarget > 15) return false;
-
-  const lastRunFile = 'division-roundup-lastrun.json';
-  if (fs.existsSync(lastRunFile)) {
-    const lastRun = JSON.parse(fs.readFileSync(lastRunFile, 'utf-8'));
-    if (lastRun.date === todayStr) return false;
+function isDataFreshEnough() {
+  if (process.env.GITHUB_EVENT_NAME === 'workflow_dispatch') return false; // manual runs always fetch fresh
+  if (!fs.existsSync('division-posts.json')) return false;
+  try {
+    const existing = JSON.parse(fs.readFileSync('division-posts.json', 'utf-8'));
+    const age = (new Date() - new Date(existing.generatedAt)) / 60000;
+    return age < FRESHNESS_MINUTES;
+  } catch {
+    return false;
   }
-
-  fs.writeFileSync(lastRunFile, JSON.stringify({ date: todayStr, ranAt: new Date().toISOString() }));
-  return true;
 }
 
 async function run() {
   if (!API_KEY) throw new Error('GETXAPI_KEY environment variable not set');
 
-  if (!shouldRunPostMatch()) {
-    console.log('Not the post-match trigger window — skipping.');
+  if (isDataFreshEnough()) {
+    console.log('division-posts.json is still fresh — skipping refetch to save API calls.');
     return;
   }
 
