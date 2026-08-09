@@ -1,75 +1,139 @@
 {
-  "generatedAt": "2026-08-08T13:20:50.485Z",
+  "generatedAt": "2026-08-08T15:46:46.375Z",
   "fixtureDate": "2026-08-08",
   "kickoff": "15:00",
   "homeTeam": "Sandbach United",
   "awayTeam": "Stafford Town",
-  "postsUsed": 5,
-  "imagesAnalyzedThisRun": 1,
-  "totalImagesAnalyzed": 5,
+  "postsUsed": 34,
+  "imagesAnalyzedThisRun": 0,
+  "totalImagesAnalyzed": 7,
   "match": {
-    "score": null,
+    "score": "1-0",
     "scoreDiscrepancy": null,
     "finalScoreAnnounced": null,
-    "halfTimeScoreAnnounced": null,
+    "halfTimeScoreAnnounced": "1-0",
     "htDiscrepancy": null,
-    "matchStage": "scheduled",
+    "matchStage": "second_half",
     "lineups": {
       "home": {
         "players": [
-          "1. Greg Hall",
-          "2. Kieran O'Connell",
-          "3. Mitch Nolan",
-          "4. Saul Shotton",
-          "5. Jack Finney",
-          "6. Stan Tatters",
-          "7. Joe Bevan",
-          "8. Kieran Nolan",
-          "9. Nathan Barry",
-          "10. Robbie Hatton (C)",
-          "11. Harry Cain"
+          "Hall",
+          "Hatton",
+          "Mitch Nolan",
+          "Kieran Nolan",
+          "Saul Shotton",
+          "Harry Cain",
+          "Joe Bevan"
         ],
         "substitutes": [
-          "Williams",
-          "Foley",
-          "Stafford",
-          "Cope",
-          "Pollard"
+          "Jake Pollard",
+          "Max Williams",
+          "Kyle Foley"
         ],
         "manager": null,
         "officials": []
       },
       "away": {
         "players": [
-          "1. Dan Cooper",
-          "2. Tom Efford",
-          "3. Jordan Darlington",
-          "4. Dan Clarkson",
-          "5. Matt Beech",
-          "6. Kris Taylor",
-          "7. Sam Lynch",
-          "8. Taylor Draper",
-          "9. Patryk Mazurkiewicz",
-          "10. Josh Wilson",
-          "11. Eshan Greer"
+          "Cooper",
+          "Tom Efford",
+          "Sam Lynch",
+          "Patryk Mazurkiewicz",
+          "Matt Beech",
+          "Dan Clarkson",
+          "Greer"
         ],
         "substitutes": [
-          "12. Lewis Satchwell",
-          "14. Callum Parker",
-          "15. Soms Sibanda",
-          "16. Doug Hughes",
-          "17. Joe Perry"
+          "Doug Hughes",
+          "Soms Sibanda",
+          "Callum Parker",
+          "Joe Perry",
+          "Lewis Satchwell"
         ],
         "manager": null,
         "officials": []
       }
     },
-    "goals": [],
-    "yellowCards": [],
+    "goals": [
+      {
+        "minute": 30,
+        "team": "home",
+        "scorer": "Tatters"
+      }
+    ],
+    "yellowCards": [
+      {
+        "minute": 14,
+        "team": "home",
+        "player": "Mitch Nolan"
+      }
+    ],
     "redCards": [],
-    "substitutions": [],
+    "substitutions": [
+      {
+        "minute": 58,
+        "team": "away",
+        "playerOff": "Sam Lynch",
+        "playerOn": "Soms Sibanda"
+      },
+      {
+        "minute": 64,
+        "team": "home",
+        "playerOff": "Saul Shotton",
+        "playerOn": "Jake Pollard"
+      },
+      {
+        "minute": 68,
+        "team": "away",
+        "playerOff": "Patryk Mazurkiewicz",
+        "playerOn": "Callum Parker"
+      },
+      {
+        "minute": 79,
+        "team": "away",
+        "playerOff": "Matt Beech",
+        "playerOn": "Joe Perry"
+      },
+      {
+        "minute": 84,
+        "team": "away",
+        "playerOff": "Dan Clarkson",
+        "playerOn": "Lewis Satchwell"
+      },
+      {
+        "minute": 87,
+        "team": "home",
+        "playerOff": "Joe Bevan",
+        "playerOn": "Max Williams"
+      },
+      {
+        "minute": 87,
+        "team": "home",
+        "playerOff": "Kieran Nolan",
+        "playerOn": "Kyle Foley"
+      }
+    ],
     "sinBins": [],
-    "injuries": [],
+    "injuries": [
+      {
+        "minute": 5,
+        "team": "home",
+        "player": "Hall",
+        "note": "Down injured after contact with Stafford Town player, got to feet and match resumed"
+      },
+      {
+        "minute": 18,
+        "team": "home",
+        "player": "Mitch Nolan",
+        "note": "Head injury treatment"
+      },
+      {
+        "minute": 19,
+        "team": "home",
+        "player": "Mitch Nolan",
+        "note": "Treated for head injury"
+      }
+    ],
     "addedTime": {
       "firstHalf": null,
       "secondHalf": null
@@ -86,47 +150,47 @@
     },
     "roughXG": {
       "firstHalf": {
-        "home": 0,
-        "away": 0,
-        "note": "Match not yet played; no commentary available"
+        "home": 0.4,
+        "away": 0.8,
+        "note": "Stafford had early save, close-range shot from Lynch, and hit the post. Sandbach scored from a bobbling shot."
       },
       "secondHalf": {
-        "home": 0,
-        "away": 0,
-        "note": "Match not yet played; no commentary available"
+        "home": 0.3,
+        "away": 0.5,
+        "note": "Stafford's Sibanda had headed chance early in second half. Sandbach had free kick attempt from Hatton. Limited clear chances reported."
       },
       "extraTime": {
         "home": 0,
         "away": 0,
-        "note": "Match not yet played; no commentary available"
+        "note": null
       },
       "total": {
-        "home": 0,
-        "away": 0,
-        "note": "Match not yet played; no commentary available"
+        "home": 0.7,
+        "away": 1.3,
+        "note": "Stafford Town had the majority of chances but conceded to a fortunate Sandbach goal. Limited data; estimates are conservative."
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure. Values are illustrative, not calculated from actual shot data."
     },
     "matchControl": {
       "firstHalf": {
-        "home": 50,
-        "away": 50,
-        "note": "Match not yet played; neutral assumption"
+        "home": 40,
+        "away": 60,
+        "note": "Stafford had early chances and dominant play; Sandbach rode their luck and scored against the run of play."
       },
       "secondHalf": {
-        "home": 50,
-        "away": 50,
-        "note": "Match not yet played; neutral assumption"
+        "home": 55,
+        "away": 45,
+        "note": "Sandbach held their lead and limited Stafford's opportunities; defensive discipline improved."
       },
       "extraTime": {
-        "home": 50,
-        "away": 50,
-        "note": "Match not yet played; neutral assumption"
+        "home": 0,
+        "away": 0,
+        "note": null
       },
       "total": {
-        "home": 50,
-        "away": 50,
-        "note": "Match not yet played; neutral assumption"
+        "home": 48,
+        "away": 52,
+        "note": "Stafford had more possession and chances overall but Sandbach's clinical finish and defensive resilience secured the win."
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }

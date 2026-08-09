@@ -1,50 +1,6 @@
 {
-  "generatedAt": "2026-08-08T14:16:21.959Z",
-  "date": "2026-08-08",
-  "postCount": 3,
-  "fixtures": [
-    {
-      "home": "Cheadle Heath Nomads",
-      "away": "Wolverhampton Casuals",
-      "kickoff": "15:00",
-      "score": null,
-      "redCards": []
-    },
-    {
-      "home": "Eccleshall",
-      "away": "Barnton",
-      "kickoff": "15:00",
-      "score": null,
-      "redCards": []
-    },
-    {
-      "home": "Foley Meir",
-      "away": "Shawbury United",
-      "kickoff": "15:00",
-      "score": null,
-      "redCards": []
-    },
-    {
-      "home": "New Mills",
-      "away": "Allscott Heath",
-      "kickoff": "15:00",
-      "score": null,
-      "redCards": []
-    },
-    {
-      "home": "Sandbach United",
-      "away": "Stafford Town",
-      "kickoff": "15:00",
-      "score": null,
-      "redCards": []
-    },
-    {
-      "home": "Telford Town",
-      "away": "Alsager Town",
-      "kickoff": "15:00",
-      "score": null,
-      "redCards": []
-    }
-  ],
-  "ticker": "@SandbachFC_1st: Today’s Team News for the 3pm kick off this afternoon at The Bach as we take on Stafford Town https://t.co/yb1tQg5ljW"
+  "generatedAt": "2026-08-09T11:56:18.903Z",
+  "date": "2026-08-09",
+  "fixtures": [],
+  "ticker": null
 }

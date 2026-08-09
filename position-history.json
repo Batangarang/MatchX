@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-07T22:32:09.942Z",
+  "generatedAt": "2026-08-08T17:22:47.481Z",
   "history": [
     {
       "gamesPlayed": 1,
@@ -24,6 +24,18 @@
       "cumGoalsFor": 4,
       "cumGoalsAgainst": 4,
       "cumGoalDifference": 0
+    },
+    {
+      "gamesPlayed": 3,
+      "date": "Sat 08/08/26",
+      "opponent": "Stafford Town",
+      "position": 7,
+      "points": 6,
+      "gameGoalsFor": 1,
+      "gameGoalsAgainst": 0,
+      "cumGoalsFor": 5,
+      "cumGoalsAgainst": 4,
+      "cumGoalDifference": 1
     }
   ]
 }
