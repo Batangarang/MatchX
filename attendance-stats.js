@@ -9,8 +9,10 @@ function addDatesAndSort(games) {
   const data = JSON.parse(fs.readFileSync('data.json', 'utf-8'));
   const allResults = (data.allFixtures || []).filter(f => f.score && f.homeAway === 'H');
 
+  const normalize = (s) => (s || '').toLowerCase().trim();
+
   const withDates = games.map(g => {
-    const match = allResults.find(f => f.opposition === g.opponent);
+    const match = allResults.find(f => normalize(f.opposition) === normalize(g.opponent));
     return { ...g, date: match ? match.date : null };
   });
 
