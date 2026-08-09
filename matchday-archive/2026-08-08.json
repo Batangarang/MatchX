@@ -17,38 +17,48 @@
     "lineups": {
       "home": {
         "players": [
-          "Hall",
-          "Hatton",
-          "Mitch Nolan",
-          "Kieran Nolan",
-          "Saul Shotton",
-          "Harry Cain",
-          "Joe Bevan"
+          "1. Greg Hall",
+          "2. Kieran OConnell",
+          "3. Mitch Nolan",
+          "4. Saul Shotton",
+          "5. Jack Finney",
+          "6. Stan Tatters",
+          "7. Joe Bevan",
+          "8. Kieran Nolan",
+          "9. Nathan Barry",
+          "10. Robbie Hatton (C)",
+          "11. Harry Cain"
         ],
         "substitutes": [
-          "Jake Pollard",
-          "Max Williams",
-          "Kyle Foley"
+          "Williams",
+          "Foley",
+          "Stafford",
+          "Cope",
+          "Pollard"
         ],
         "manager": null,
         "officials": []
       },
       "away": {
         "players": [
-          "Cooper",
-          "Tom Efford",
-          "Sam Lynch",
-          "Patryk Mazurkiewicz",
-          "Matt Beech",
-          "Dan Clarkson",
-          "Greer"
+          "1. Dan Cooper",
+          "2. Tom Efford",
+          "3. Jordan Darlington",
+          "4. Dan Clarkson",
+          "5. Matt Beech",
+          "6. Kris Taylor",
+          "7. Sam Lynch",
+          "8. Taylor Draper",
+          "9. Patryk Mazurkiewicz",
+          "10. Josh Wilson",
+          "11. Eshan Greer (C)"
         ],
         "substitutes": [
-          "Doug Hughes",
-          "Soms Sibanda",
+          "Lewis Satchwell",
           "Callum Parker",
-          "Joe Perry",
-          "Lewis Satchwell"
+          "Soms Sibanda",
+          "Doug Hughes",
+          "Joe Perry"
         ],
         "manager": null,
         "officials": []
@@ -120,12 +130,6 @@
         "team": "home",
         "player": "Hall",
         "note": "Down injured after contact with Stafford Town player, got to feet and match resumed"
-      },
-      {
-        "minute": 18,
-        "team": "home",
-        "player": "Mitch Nolan",
-        "note": "Head injury treatment"
       },
       {
         "minute": 19,
