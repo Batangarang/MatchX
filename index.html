@@ -694,6 +694,7 @@
           .then(res => res.json())
           .then(liveData => {
             if (!isFixtureToday(liveData.fixtureDate)) return;
+            window.todaysMatchIsLive = isFixtureToday(liveData.fixtureDate) && liveData.match?.matchStage !== 'full_time';
             document.getElementById('matchday-teams').textContent = `${liveData.homeTeam} vs ${liveData.awayTeam}`;
             document.getElementById('matchday-link-wrapper').outerHTML =
               `<a href="matchday.html?date=${liveData.fixtureDate}" id="matchday-link-wrapper" style="text-decoration:none; color:inherit; display:block;">` +
@@ -783,7 +784,8 @@
     }
 
     function renderXPostsCarousel(contentEl) {
-      const posts = (xPostsData?.posts || []).filter(p => !isFromToday(p.createdAt)).slice(0, 5);
+      const shouldHideToday = window.todaysMatchIsLive === true;
+      const posts = (xPostsData?.posts || []).filter(p => !shouldHideToday || !isFromToday(p.createdAt)).slice(0, 5);
 
       if (posts.length === 0) {
         contentEl.innerHTML = '<div class="empty">No recent posts found</div>';
