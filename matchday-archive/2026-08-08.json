@@ -13,7 +13,7 @@
     "finalScoreAnnounced": null,
     "halfTimeScoreAnnounced": "1-0",
     "htDiscrepancy": null,
-    "matchStage": "second_half",
+    "matchStage": "full_time",
     "lineups": {
       "home": {
         "players": [
