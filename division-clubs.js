@@ -19,4 +19,5 @@ module.exports = [
   { name: 'Shawbury United', handle: 'shawburyutd' },
   { name: 'Wolverhampton Casuals', handle: 'WolvesCassies' },
   { name: 'Foley Meir', handle: 'foley_fc' },
+  { name: 'NWCFL (League Official)', handle: 'nwcfl' },
 ];
