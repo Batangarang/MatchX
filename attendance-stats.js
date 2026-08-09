@@ -4,6 +4,24 @@ const fs = require('fs');
 const URL = 'https://www.nwcfl.com/results.php?comp=47';
 const SANDBACH_URL = 'clubpage.php?id=803';
 
+function addDatesAndSort(games) {
+  if (!fs.existsSync('data.json')) return games;
+  const data = JSON.parse(fs.readFileSync('data.json', 'utf-8'));
+  const allResults = (data.allFixtures || []).filter(f => f.score && f.homeAway === 'H');
+
+  const withDates = games.map(g => {
+    const match = allResults.find(f => f.opposition === g.opponent);
+    return { ...g, date: match ? match.date : null };
+  });
+
+  return withDates.sort((a, b) => {
+    if (!a.date || !b.date) return 0;
+    const [, aDD, aMM, aYY] = a.date.match(/(\d{2})\/(\d{2})\/(\d{2})/);
+    const [, bDD, bMM, bYY] = b.date.match(/(\d{2})\/(\d{2})\/(\d{2})/);
+    return new Date(2000 + aYY, aMM - 1, aDD) - new Date(2000 + bYY, bMM - 1, bDD);
+  });
+}
+
 async function scrape() {
   const res = await fetch(URL);
   const html = await res.text();
@@ -46,26 +64,28 @@ async function scrape() {
     return true;
   });
 
-  if (deduped.length === 0) {
+  const sortedGames = addDatesAndSort(deduped);
+
+  if (sortedGames.length === 0) {
     console.log('No Sandbach home matches with attendance found. Check the page structure — may need adjusting.');
     fs.writeFileSync('attendance-stats.json', JSON.stringify({ generatedAt: new Date().toISOString(), games: [], average: null, lowest: null, highest: null }, null, 2));
     return;
   }
 
-  const average = Math.round(deduped.reduce((sum, g) => sum + g.attendance, 0) / deduped.length);
-  const lowest = deduped.reduce((min, g) => g.attendance < min.attendance ? g : min);
-  const highest = deduped.reduce((max, g) => g.attendance > max.attendance ? g : max);
+  const average = Math.round(sortedGames.reduce((sum, g) => sum + g.attendance, 0) / sortedGames.length);
+  const lowest = sortedGames.reduce((min, g) => g.attendance < min.attendance ? g : min);
+  const highest = sortedGames.reduce((max, g) => g.attendance > max.attendance ? g : max);
 
   fs.writeFileSync('attendance-stats.json', JSON.stringify({
     generatedAt: new Date().toISOString(),
-    games: deduped,
+    games: sortedGames,
     average,
     lowest,
     highest,
   }, null, 2));
 
-  console.log(`Saved attendance-stats.json — ${deduped.length} home games, avg ${average}`);
-  console.log(deduped);
+  console.log(`Saved attendance-stats.json — ${sortedGames.length} home games, avg ${average}`);
+  console.log(sortedGames);
 }
 
 scrape().catch(err => {
