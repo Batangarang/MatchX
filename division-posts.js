@@ -4,7 +4,7 @@ const { getUserTweets } = require('./getxapi-client.js');
 
 const API_KEY = process.env.GETXAPI_KEY;
 const SEVEN_DAYS_AGO = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000);
-const FRESHNESS_MINUTES = 20; // reuse existing data if it's newer than this
+const FRESHNESS_MINUTES = 60; // reuse existing data if it's newer than this
 
 function isDataFreshEnough() {
   if (process.env.GITHUB_EVENT_NAME === 'workflow_dispatch') return false; // manual runs always fetch fresh
