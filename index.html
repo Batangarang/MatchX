@@ -944,7 +944,6 @@
 
         if (!data.fixtures || data.fixtures.length === 0) {
           document.getElementById('division-scores-list').innerHTML = '<div class="empty">No upcoming division fixtures found</div>';
-        } else {.getElementById('division-scores-list').innerHTML = '<div class="empty">No division fixtures today</div>';
         } else {
           document.getElementById('division-scores-list').innerHTML = data.fixtures.map(f => {
             const goalsHtml = (f.goals || []).map(g =>
