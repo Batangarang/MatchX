@@ -11,20 +11,22 @@ async function run() {
   const fixtureList = [...new Set(posts.map(p => p.club))].join(', ');
   const postsText = posts.map(p => `[${p.createdAt}] (@${p.handle} — ${p.club}) ${p.text}`).join('\n');
 
-  const prompt = `Here are today's First Division South clubs with recent posts: ${fixtureList}
+  const prompt = `Here are today's First Division South fixtures:
+${fixtureList}
 
-Here are their X posts so far today, in chronological order:
+Here are their X posts so far today:
 ${postsText}
 
 Scorelines in these posts may be written without a dash, e.g. "2 1" instead of "2-1". Recognise these as valid too, and normalise to "X-Y" form.
 
-IMPORTANT: A club's score can change multiple times as goals are scored throughout the match. Always use the MOST RECENT scoreline mentioned for each fixture — do not use an early or outdated scoreline just because it was clearly stated, if a later post shows a different, more current score for the same fixture. Read through ALL posts for a given fixture and identify the latest one before deciding the score.
+IMPORTANT: A club's score can change multiple times as goals are scored throughout the match. Always use the MOST RECENT scoreline mentioned for each fixture — do not use an early or outdated scoreline just because it was clearly stated, if a later post shows a different, more current score for the same fixture.
 
-For each club above, determine ONLY if a score has been EXPLICITLY stated in a post (e.g. "2-1", a clear scoreline mention) — do not guess or infer, but always prefer the LATEST such mention over an earlier one. Also note any red card sent-offs explicitly mentioned.
+For each club above, determine ONLY if a score has been EXPLICITLY stated in a post (e.g. "2-1", a clear scoreline mention) — do not guess or infer, but always prefer the LATEST such mention. Also extract individual goals with minute and scorer where explicitly mentioned, matching each goal to the correct fixture. Also note any red card sent-offs explicitly mentioned.
+
 Respond with ONLY a JSON object, no other text, no markdown fences:
 {
   "fixtures": [
-    { "clubsInvolved": "e.g. Sandbach United v Stafford Town", "score": "string or null", "redCards": [{ "club": "string", "player": "string or null" }] }
+    { "clubsInvolved": "e.g. Sandbach United v Stafford Town", "score": "string or null", "goals": [{ "minute": null, "team": "home or away", "scorer": "string" }], "redCards": [{ "club": "string", "player": "string or null" }] }
   ]
 }`;
 
