@@ -222,14 +222,14 @@
     // Rough proportional split of the blended total across workflows —
     // approximated from relative call volume, not independently measured
     const WORKFLOWS = [
-      { file: 'scrape.yml', name: 'Scrape Sandbach Fixtures', pulls: 'nwcfl.com: fixtures, league table, player stats, attendance, position history', skipLogic: 'Hourly gate — real work only ~once/hour even though triggered every 5 min', shareOfDay: 0 },
-      { file: 'matchday-live.yml', name: 'Matchday Live Tracker', pulls: 'X posts (home + away club) + vision analysis of new images, on Sandbach\'s own match day', skipLogic: 'Only active kickoff-90min to kickoff+150/240min; skips if no new posts/images since last check', shareOfDay: 0.55, matchdayOnly: true },
-      { file: 'division-scores.yml', name: 'Division Scores', pulls: 'X posts from ~19 division clubs, on any day with First Division South fixtures', skipLogic: 'Resets to fixture-only before 11am; polls only within the whole division\'s match window; skips if nothing new', shareOfDay: 0.45, matchdayOnly: true },
-      { file: 'x-live.yml', name: 'Poll X (Fan Briefing)', pulls: 'Sandbach\'s own X posts + NWCFL news articles + Fan Briefing regeneration', skipLogic: 'x-posts.js gated to 30min/3hr/matchday tiers; x-insights.js skips if underlying posts unchanged since last summary', shareOfDay: 0.35, nonMatchday: true },
-      { file: 'division-recap-weekend-preview.yml', name: 'Weekend Preview', pulls: 'Next weekend\'s division fixtures + recent club posts + league table', skipLogic: 'Runs once, always regenerates fresh (Friday-scheduled)', shareOfDay: 0.15, nonMatchday: true },
-      { file: 'division-recap-weekend-recap.yml', name: 'Weekend Recap', pulls: 'Weekend\'s played fixtures + club posts + league table', skipLogic: 'Only proceeds once, ~3hrs after the latest weekend kickoff; skips outside a real weekend', shareOfDay: 0.2, nonMatchday: true },
-      { file: 'division-recap-midweek-preview.yml', name: 'Midweek Preview', pulls: 'Tomorrow\'s midweek fixtures (if any) + club posts + league table', skipLogic: 'Skips entirely if no midweek fixtures tomorrow', shareOfDay: 0.15, nonMatchday: true },
-      { file: 'division-recap-midweek-recap.yml', name: 'Midweek Recap', pulls: 'Today\'s midweek fixtures (if any) + club posts + league table', skipLogic: 'Skips if no midweek fixtures today; only proceeds ~3hrs after latest kickoff', shareOfDay: 0.15, nonMatchday: true },
+      { file: 'scrape.yml', name: 'Scrape Sandbach Fixtures', pulls: 'nwcfl.com: fixtures, league table, player stats, attendance, position history', skipLogic: 'Hourly gate — real work only ~once/hour even though triggered every 5 min', shareOfDay: 0, staleAfterMinutes: 75 },
+      { file: 'matchday-live.yml', name: 'Matchday Live Tracker', pulls: 'X posts (home + away club) + vision analysis of new images, on Sandbach\'s own match day', skipLogic: 'Only active kickoff-90min to kickoff+150/240min; skips if no new posts/images since last check', shareOfDay: 0.55, matchdayOnly: true, staleAfterMinutes: 15 },
+      { file: 'division-scores.yml', name: 'Division Scores', pulls: 'X posts from ~19 division clubs, on any day with First Division South fixtures', skipLogic: 'Resets to fixture-only before 11am; polls only within the whole division\'s match window; skips if nothing new', shareOfDay: 0.45, matchdayOnly: true, staleAfterMinutes: 15 },
+      { file: 'x-live.yml', name: 'Poll X (Fan Briefing)', pulls: 'Sandbach\'s own X posts + NWCFL news articles + Fan Briefing regeneration', skipLogic: 'x-posts.js gated to 30min/3hr/matchday tiers; x-insights.js skips if underlying posts unchanged since last summary', shareOfDay: 0.35, nonMatchday: true, staleAfterMinutes: 15 },
+      { file: 'division-recap-weekend-preview.yml', name: 'Weekend Preview', pulls: 'Next weekend\'s division fixtures + recent club posts + league table', skipLogic: 'Runs once, always regenerates fresh (Friday-scheduled)', shareOfDay: 0.15, nonMatchday: true, staleAfterMinutes: 60 * 24 * 8 }, // ~weekly
+      { file: 'division-recap-weekend-recap.yml', name: 'Weekend Recap', pulls: 'Weekend\'s played fixtures + club posts + league table', skipLogic: 'Only proceeds once, ~3hrs after the latest weekend kickoff; skips outside a real weekend', shareOfDay: 0.2, nonMatchday: true, staleAfterMinutes: 60 * 24 * 8 },
+      { file: 'division-recap-midweek-preview.yml', name: 'Midweek Preview', pulls: 'Tomorrow\'s midweek fixtures (if any) + club posts + league table', skipLogic: 'Skips entirely if no midweek fixtures tomorrow', shareOfDay: 0.15, nonMatchday: true, staleAfterMinutes: 60 * 24 * 4 },
+      { file: 'division-recap-midweek-recap.yml', name: 'Midweek Recap', pulls: 'Today\'s midweek fixtures (if any) + club posts + league table', skipLogic: 'Skips if no midweek fixtures today; only proceeds ~3hrs after latest kickoff', shareOfDay: 0.15, nonMatchday: true, staleAfterMinutes: 60 * 24 * 4 },
     ];
 
     let isMatchdayToday = false;
@@ -380,10 +380,14 @@
         const failures = runs.filter(r => r.conclusion === 'failure').length;
         const successRate = runs.filter(r => r.conclusion === 'success').length;
 
+        const minutesSinceLastRun = (Date.now() - new Date(lastRun.created_at).getTime()) / 60000;
+        const isStale = minutesSinceLastRun > wf.staleAfterMinutes;
+
         let badgeClass = 'ok';
         let badgeText = 'Healthy';
         if (failures >= 5) { badgeClass = 'bad'; badgeText = `${failures}/10 failed`; }
         else if (failures >= 2) { badgeClass = 'warn'; badgeText = `${failures}/10 failed`; }
+        else if (isStale) { badgeClass = 'bad'; badgeText = `Stale (expected within ${wf.staleAfterMinutes < 120 ? wf.staleAfterMinutes + 'm' : Math.round(wf.staleAfterMinutes / 60) + 'h'})`; }
 
         const dots = [...runs].reverse().map(r =>
           `<span class="dot ${r.conclusion === 'success' ? 'success' : r.conclusion === 'failure' ? 'failure' : 'unknown'}" title="${r.conclusion || 'in progress'} — ${new Date(r.created_at).toLocaleString('en-GB')}"></span>`
