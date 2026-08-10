@@ -210,7 +210,7 @@ async function run() {
             .some(t => t.team === sandbachFixture.opposition);
 
         if (!opponentInLeagueTable) {
-          levelWarning = ` IMPORTANT: ${sandbachFixture.opposition} do NOT play in Sandbach's league (First Division South) — they are a cup opponent from a different league/tier. Do NOT compare league points, form, or table position between the two teams, as this is misleading when they play at different levels. If you don't know ${sandbachFixture.opposition}'s actual league/level, simply don't speculate about it — focus on the cup occasion itself, the round, and any genuine team news instead.`;
+          levelWarning = ` IMPORTANT: ${sandbachFixture.opposition} do NOT play in Sandbach's league (First Division South) — they are a cup opponent from a different league/tier. Do NOT compare league points, form, or table position between the two teams, as this is misleading when they play at different levels. If you don't know ${sandbachFixture.opposition}'s actual league/level, simply don't speculate about it — focus on the cup occasion itself, the round, and any genuine team news instead. Do NOT explain this reasoning to the reader (e.g. do not write things like "direct league comparisons don't apply") — simply write the preview naturally without ever mentioning that a comparison was considered or avoided.`;
         }
       }
 
