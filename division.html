@@ -89,7 +89,18 @@
       fetch(`division-insights-${mode}.json?t=` + Date.now())
         .then(res => res.json())
         .then(data => {
-          document.getElementById(contentId).textContent = data.summary || 'Not available yet.';
+          if (!data.sandbachFocus && !data.divisionWide && !data.summary) {
+            document.getElementById(contentId).innerHTML = '<span class="empty">Not available yet.</span>';
+            return;
+          }
+          if (data.sandbachFocus || data.divisionWide) {
+            document.getElementById(contentId).innerHTML = `
+              ${data.sandbachFocus ? `<div class="subhead">Sandbach United</div><div class="summary">${data.sandbachFocus}</div>` : ''}
+              ${data.divisionWide ? `<div class="subhead">Around the Division</div><div class="summary">${data.divisionWide}</div>` : ''}
+            `;
+          } else {
+            document.getElementById(contentId).textContent = data.summary;
+          }
           const date = new Date(data.generatedAt);
           document.getElementById(metaId).textContent =
             'Updated ' + date.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' }) +
