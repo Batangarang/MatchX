@@ -197,6 +197,7 @@ async function run() {
     ? `Here are the upcoming First Division South fixtures for ${periodLabel}:
 ${fixtureList}
 ${sandbachOverrideNote}
+IMPORTANT: You MUST reference every single fixture listed above at least briefly — do not skip or omit any fixture from the list, even if it seems minor. If there isn't much to say about a fixture, a single short sentence is fine, but every fixture must be mentioned somewhere in your response.
 IMPORTANT: In the fixture list above, the format is always "Home Team v Away Team" — the first team named is always playing at home, the second team is always the visitor. Do not reverse this or infer venue/direction from anything else in the posts — always trust this explicit home/away order from the fixture list.
 Here is the current league table:
 ${leagueContext}
@@ -210,6 +211,7 @@ Respond with ONLY a JSON object, no other text, no markdown fences, in exactly t
     : `Here are the First Division South fixtures that were played ${periodLabel}:
 ${fixtureList}
 ${sandbachOverrideNote}
+IMPORTANT: You MUST reference every single fixture listed above at least briefly — do not skip or omit any fixture from the list, even if it seems minor. If there isn't much to say about a fixture, a single short sentence is fine, but every fixture must be mentioned somewhere in your response.
 IMPORTANT: In the fixture list above, the format is always "Home Team v Away Team" — the first team named is always playing at home, the second team is always the visitor. Do not reverse this or infer venue/direction from anything else in the posts — always trust this explicit home/away order from the fixture list.
 Here is the current league table:
 ${leagueContext}
