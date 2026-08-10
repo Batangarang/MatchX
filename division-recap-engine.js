@@ -254,7 +254,7 @@ Plain text only within each field, no markdown, no headers.`;
   fs.writeFileSync(`division-insights-${MODE}.json`, JSON.stringify(output, null, 2));
   if (decision.periodKey) markRunForPeriod(decision.periodKey);
 
-  console.log(`[${MODE}] Saved:`, summary.slice(0, 150));
+  console.log(`[${MODE}] Saved. Sandbach focus:`, (output.sandbachFocus || output.summary || '').slice(0, 150));
 }
 
 run().catch(err => {
