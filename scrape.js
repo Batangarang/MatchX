@@ -28,7 +28,6 @@ async function scrape() {
   }
 
   const fixtures = [];
-  let currentNote = null;
 
   $(targetTable).find('tr').slice(1).each((i, row) => {
     const cells = $(row).find('td');
@@ -37,14 +36,17 @@ async function scrape() {
     const firstCellText = $(cells[0]).text().trim();
     const secondCellText = cells.length > 1 ? $(cells[1]).text().trim() : '';
 
-    // A competition-note row has an empty date and a parenthetical note,
-    // which can land in either the first or second cell depending on layout
+    // A competition-note row (e.g. "(The Isuzu FA Vase 1Q)") describes the
+    // fixture immediately ABOVE it, not the one that follows — attach it
+    // retroactively to the last fixture already pushed.
     const noteText = firstCellText.startsWith('(') ? firstCellText
       : (secondCellText.startsWith('(') && !firstCellText) ? secondCellText
       : null;
 
     if (noteText) {
-      currentNote = noteText.replace(/[()]/g, '');
+      if (fixtures.length > 0) {
+        fixtures[fixtures.length - 1].competitionNote = noteText.replace(/[()]/g, '');
+      }
       return;
     }
 
@@ -65,10 +67,8 @@ async function scrape() {
       kickoff,
       score: score || null,
       scorers: scorers || null,
-      competitionNote: currentNote,
+      competitionNote: null,
     });
-
-    currentNote = null;
   });
 
   const played = fixtures.filter(f => f.score);
