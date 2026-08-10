@@ -208,9 +208,6 @@ Respond with ONLY a JSON object, no other text, no markdown fences, in exactly t
   "sandbachFocus": "2-4 sentences specifically about Sandbach United's own result(s) this period — what happened, the scoreline, any standout performances or incidents",
   "divisionWide": "A separate round-up covering the REST of the division — teams in unusually good or bad form, notable results, table movement, player signings or squad news. Group by theme, not club-by-club. Only discuss teams with genuinely notable news or results — skip anyone with nothing interesting to report. Do NOT repeat Sandbach's own result here, that's covered separately above."
 }`;
-
-Plain text only within each field, no markdown, no headers.`;
-
   const res = await fetch('https://api.anthropic.com/v1/messages', {
     method: 'POST',
     headers: {
