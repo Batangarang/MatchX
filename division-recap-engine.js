@@ -172,6 +172,16 @@ async function run() {
       .map(t => `${t.position}. ${t.team} — P${t.played} W${t.won} D${t.drawn} L${t.lost} GD${t.goalDifference} Pts${t.points}${t.form ? ' — form: ' + t.form : ''}`)
       .join('\n');
   }
+  let sandbachOverrideNote = '';
+  if (fs.existsSync('data.json')) {
+    const mainData = JSON.parse(fs.readFileSync('data.json', 'utf-8'));
+    const next = mainData.nextFixture;
+    if (next && next.competitionNote) {
+      const homeTeam = next.homeAway === 'H' ? 'Sandbach United' : next.opposition;
+      const awayTeam = next.homeAway === 'H' ? next.opposition : 'Sandbach United';
+      sandbachOverrideNote = `\n\nIMPORTANT: Sandbach United's actual next fixture is a CUP match, not a league fixture: ${homeTeam} v ${awayTeam} (${next.date}, KO ${next.kickoff}, ${next.competitionNote}). This is NOT in the league fixture list above (cup games are tracked separately) — use this real fixture when describing Sandbach's own upcoming match, do not substitute a different league fixture for Sandbach.`;
+    }
+  }
 
   const fixtureList = decision.relevantFixtures.map(f => `${f.home} v ${f.away} (${f.date}, KO ${f.kickoff})`).join('\n');
 
@@ -186,6 +196,7 @@ async function run() {
   const prompt = isPreview
     ? `Here are the upcoming First Division South fixtures for ${periodLabel}:
 ${fixtureList}
+${sandbachOverrideNote}
 IMPORTANT: In the fixture list above, the format is always "Home Team v Away Team" — the first team named is always playing at home, the second team is always the visitor. Do not reverse this or infer venue/direction from anything else in the posts — always trust this explicit home/away order from the fixture list.
 Here is the current league table:
 ${leagueContext}
@@ -198,6 +209,7 @@ Respond with ONLY a JSON object, no other text, no markdown fences, in exactly t
 }`
     : `Here are the First Division South fixtures that were played ${periodLabel}:
 ${fixtureList}
+${sandbachOverrideNote}
 IMPORTANT: In the fixture list above, the format is always "Home Team v Away Team" — the first team named is always playing at home, the second team is always the visitor. Do not reverse this or infer venue/direction from anything else in the posts — always trust this explicit home/away order from the fixture list.
 Here is the current league table:
 ${leagueContext}
