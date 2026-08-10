@@ -144,7 +144,7 @@
   <div id="login-screen">
     <h1 style="text-align:center;">MatchX Admin</h1>
     <div class="card">
-      <div class="sub" style="margin-bottom:12px;">--- No unauthorised access ---</div>
+      <div class="sub" style="margin-bottom:12px;"></div>
       <input type="password" id="password-input" placeholder="Admin password">
       <button class="btn primary" style="width:100%;" onclick="attemptLogin()">Enter</button>
       <div class="login-error" id="login-error">Incorrect password.</div>
@@ -154,7 +154,7 @@
   <div id="dashboard">
     <a class="back" href="index.html">← Back to site</a>
     <h1>MatchX Admin</h1>
-    <div class="sub">Live data pulled from GitHub Actions. Cost figures are estimates — see note below.</div>
+    <div class="sub">Live data pulled from GitHub Actions. Cost figures are estimates.</div>
 
     <div class="card">
       <h2>Workflows</h2>
@@ -170,8 +170,7 @@
       </div>
       <div class="cost-total" id="cost-total">—</div>
       <div class="cost-caveat">
-        These are rough estimates based on typical usage patterns observed during testing, not real metered billing —
-        GetXAPI and Anthropic don't expose a per-workflow cost breakdown. Check their own dashboards for actual spend.
+        These are rough estimates based on typical usage patterns observed during testing, not real metered billing.
       </div>
       <div id="cost-breakdown" style="margin-top:14px;"></div>
     </div>
@@ -351,7 +350,7 @@
         if (failures >= 5) { badgeClass = 'bad'; badgeText = `${failures}/10 failed`; }
         else if (failures >= 2) { badgeClass = 'warn'; badgeText = `${failures}/10 failed`; }
 
-        const dots = runs.map(r =>
+        const dots = [...runs].reverse().map(r =>
           `<span class="dot ${r.conclusion === 'success' ? 'success' : r.conclusion === 'failure' ? 'failure' : 'unknown'}" title="${r.conclusion || 'in progress'} — ${new Date(r.created_at).toLocaleString('en-GB')}"></span>`
         ).join('');
 
