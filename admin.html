@@ -315,6 +315,7 @@
 
         const lastRun = runs[0];
         const failures = runs.filter(r => r.conclusion === 'failure').length;
+        const successCount = runs.filter(r => r.conclusion === 'success').length;
 
         const minutesSinceLastRun = (Date.now() - new Date(lastRun.created_at).getTime()) / 60000;
         const isStale = minutesSinceLastRun > wf.staleAfterMinutes;
@@ -334,6 +335,13 @@
           ? (minutesUntilNext < 120 ? `~${Math.round(minutesUntilNext)}m` : `~${Math.round(minutesUntilNext / 60)}h`)
           : 'due now';
 
+        const avgMinutesBetweenRuns = runs.length > 1
+          ? (new Date(runs[0].created_at) - new Date(runs[runs.length - 1].created_at)) / 60000 / (runs.length - 1)
+          : null;
+        const avgGapText = avgMinutesBetweenRuns
+          ? (avgMinutesBetweenRuns < 120 ? `~${Math.round(avgMinutesBetweenRuns)}m` : `~${Math.round(avgMinutesBetweenRuns / 60)}h`)
+          : '—';
+
         row.innerHTML = `
           <div class="workflow-head">
             <span class="workflow-name">${wf.name}</span>
@@ -342,7 +350,17 @@
           <div class="workflow-meta">Last run: ${timeAgo(lastRun.created_at)} — ${lastRun.conclusion || lastRun.status}</div>
           <div class="workflow-meta">Next expected: ${nextRefreshText}</div>
           <div class="dot-row">${dots}</div>
-          <button class="btn small" onclick="triggerWorkflow('${wf.file}', this)">Run now</button>
+          <table style="width:100%; font-size:11px; margin-top:8px; border-collapse:collapse;">
+            <tr>
+              <td style="padding:3px 6px 3px 0; color:var(--muted);">Runs (last 10)</td>
+              <td style="padding:3px 0; font-weight:600;">${successCount} success / ${runs.length}</td>
+            </tr>
+            <tr>
+              <td style="padding:3px 6px 3px 0; color:var(--muted);">Avg gap between runs</td>
+              <td style="padding:3px 0; font-weight:600;">${avgGapText}</td>
+            </tr>
+          </table>
+          <button class="btn small" style="margin-top:8px;" onclick="triggerWorkflow('${wf.file}', this)">Run now</button>
         `;
         container.appendChild(row);
       }
