@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MatchX Admin</title>
+  <style>
+    :root {
+      --navy: #0c2340;
+      --royal: #1c5fae;
+      --amber: #f2a71b;
+      --paper: #eef1f6;
+      --ink: #14202b;
+      --muted: #6b7785;
+      --line: #e3e7ee;
+      --green: #22c55e;
+      --red: #ef4444;
+      --yellow: #eab308;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: system-ui, sans-serif;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 20px 16px 60px;
+      background: var(--paper);
+      color: var(--ink);
+    }
+    h1 { color: var(--navy); font-size: 22px; margin-bottom: 4px; }
+    .sub { color: var(--muted); font-size: 13px; margin-bottom: 20px; }
+    .card {
+      background: white;
+      border-radius: 10px;
+      padding: 16px;
+      margin-bottom: 16px;
+      box-shadow: 0 1px 3px rgba(12,35,64,0.08);
+    }
+    .card h2 {
+      margin: 0 0 12px 0;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--navy);
+      display: inline-block;
+      padding-bottom: 6px;
+      border-bottom: 3px solid var(--amber);
+    }
+    .btn {
+      font-size: 12px;
+      padding: 6px 12px;
+      border-radius: 6px;
+      border: 1px solid var(--line);
+      background: white;
+      color: var(--navy);
+      cursor: pointer;
+      font-weight: 600;
+    }
+    .btn:hover { border-color: var(--royal); }
+    .btn.primary { background: var(--navy); color: white; border-color: var(--navy); }
+    .btn.small { font-size: 11px; padding: 4px 8px; }
+    input[type="password"], input[type="text"] {
+      font-size: 14px;
+      padding: 8px 10px;
+      border-radius: 6px;
+      border: 1px solid var(--line);
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+    /* --- Login gate --- */
+    #login-screen { max-width: 320px; margin: 80px auto; text-align: center; }
+    #login-screen .card { text-align: left; }
+    .login-error { color: var(--red); font-size: 12px; margin-top: 6px; display: none; }
+
+    /* --- Dashboard --- */
+    #dashboard { display: none; }
+
+    .workflow-row {
+      padding: 12px 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .workflow-row:last-child { border-bottom: none; }
+    .workflow-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 6px;
+    }
+    .workflow-name { font-weight: 700; font-size: 14px; color: var(--navy); }
+    .workflow-meta { font-size: 12px; color: var(--muted); margin-top: 2px; }
+    .dot-row { display: flex; gap: 4px; margin: 6px 0; }
+    .dot {
+      width: 12px; height: 12px; border-radius: 50%;
+      display: inline-block;
+    }
+    .dot.success { background: var(--green); }
+    .dot.failure { background: var(--red); }
+    .dot.unknown { background: var(--line); }
+    .status-badge {
+      font-size: 11px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 10px;
+    }
+    .status-badge.ok { background: rgba(34,197,94,0.15); color: #15803d; }
+    .status-badge.warn { background: rgba(234,179,8,0.15); color: #a16207; }
+    .status-badge.bad { background: rgba(239,68,68,0.15); color: #b91c1c; }
+
+    .toggle-row { display: flex; gap: 8px; margin-bottom: 14px; }
+    .toggle-btn {
+      flex: 1;
+      padding: 8px;
+      border-radius: 6px;
+      border: 1px solid var(--line);
+      background: white;
+      color: var(--navy);
+      font-weight: 600;
+      font-size: 13px;
+      cursor: pointer;
+    }
+    .toggle-btn.active { background: var(--navy); color: white; border-color: var(--navy); }
+
+    .cost-total { font-size: 28px; font-weight: 700; color: var(--navy); }
+    .cost-caveat { font-size: 11px; color: var(--muted); font-style: italic; margin-top: 4px; }
+    .cost-breakdown-row {
+      display: flex; justify-content: space-between; padding: 6px 0;
+      border-bottom: 1px solid var(--line); font-size: 13px;
+    }
+    .cost-bar-bg { background: var(--paper); border-radius: 4px; height: 6px; margin-top: 4px; overflow: hidden; }
+    .cost-bar-fill { background: var(--amber); height: 100%; }
+
+    table.efficiency { width: 100%; border-collapse: collapse; font-size: 12px; }
+    table.efficiency th, table.efficiency td { padding: 6px 4px; text-align: left; border-bottom: 1px solid var(--line); vertical-align: top; }
+    table.efficiency th { color: var(--muted); font-weight: 600; }
+
+    .empty { color: var(--muted); font-size: 13px; }
+    .loading { color: var(--muted); font-size: 13px; }
+    a.back { color: var(--royal); text-decoration: none; font-size: 13px; display: inline-block; margin-bottom: 12px; }
+  </style>
+</head>
+<body>
+
+  <div id="login-screen">
+    <h1 style="text-align:center;">MatchX Admin</h1>
+    <div class="card">
+      <div class="sub" style="margin-bottom:12px;">This page only prevents casual access — it is not real security. Never enter anything here you wouldn't be comfortable being technically viewable by a determined visitor.</div>
+      <input type="password" id="password-input" placeholder="Admin password">
+      <button class="btn primary" style="width:100%;" onclick="attemptLogin()">Enter</button>
+      <div class="login-error" id="login-error">Incorrect password.</div>
+    </div>
+  </div>
+
+  <div id="dashboard">
+    <a class="back" href="index.html">← Back to site</a>
+    <h1>MatchX Admin</h1>
+    <div class="sub">Live data pulled from GitHub Actions. Cost figures are estimates — see note below.</div>
+
+    <div class="card">
+      <h2>Workflows</h2>
+      <div id="workflows-list" class="loading">Loading workflow data from GitHub…</div>
+    </div>
+
+    <div class="card">
+      <h2>Estimated Cost</h2>
+      <div class="toggle-row">
+        <button class="toggle-btn active" data-period="day" onclick="setCostPeriod('day')">Day</button>
+        <button class="toggle-btn" data-period="month" onclick="setCostPeriod('month')">Month</button>
+        <button class="toggle-btn" data-period="year" onclick="setCostPeriod('year')">Year</button>
+      </div>
+      <div class="cost-total" id="cost-total">—</div>
+      <div class="cost-caveat">
+        These are rough estimates based on typical usage patterns observed during testing, not real metered billing —
+        GetXAPI and Anthropic don't expose a per-workflow cost breakdown. Check their own dashboards for actual spend.
+      </div>
+      <div id="cost-breakdown" style="margin-top:14px;"></div>
+    </div>
+
+    <div class="card">
+      <h2>Refresh Schedule &amp; Efficiency Logic</h2>
+      <table class="efficiency">
+        <thead>
+          <tr><th>Workflow</th><th>Trigger</th><th>What it pulls</th><th>Skip logic</th></tr>
+        </thead>
+        <tbody id="efficiency-table"></tbody>
+      </table>
+    </div>
+
+    <div class="card">
+      <h2>Quick Links</h2>
+      <div style="display:flex; flex-direction:column; gap:8px; font-size:13px;">
+        <a href="https://github.com/Batangarang/MatchX/actions" target="_blank" rel="noopener">GitHub Actions (full history) →</a>
+        <a href="https://dashboard.getxapi.com" target="_blank" rel="noopener">GetXAPI billing dashboard →</a>
+        <a href="https://console.anthropic.com" target="_blank" rel="noopener">Anthropic console →</a>
+        <a href="https://console.cron-job.org" target="_blank" rel="noopener">cron-job.org dashboard →</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // ---------- Config ----------
+    const REPO = 'Batangarang/MatchX';
+    const ADMIN_PASSWORD_HASH = '17a3c1cc9792d6bbf28d8092e88c15953c73fb42f0e6a9499b6b7dc978e48954'; // sha256 of your chosen password — see note below
+
+    const WORKFLOWS = [
+      {
+        file: 'scrape.yml',
+        name: 'Scrape Sandbach Fixtures',
+        pulls: 'nwcfl.com: fixtures, league table, player stats, attendance, position history',
+        skipLogic: 'Hourly gate — real work only ~once/hour even though triggered every 5 min',
+        costPerRealRun: 0, // no paid API involved
+        realRunsPerDay: 24,
+      },
+      {
+        file: 'matchday-live.yml',
+        name: 'Matchday Live Tracker',
+        pulls: 'X posts (home + away club) + vision analysis of new images, on Sandbach\'s own match day',
+        skipLogic: 'Only active kickoff-90min to kickoff+150/240min; skips if no new posts/images since last check',
+        costPerRealRun: 0.03,
+        realRunsPerDay: 0, // only active on matchdays — see note
+      },
+      {
+        file: 'division-scores.yml',
+        name: 'Division Scores',
+        pulls: 'X posts from ~19 division clubs, on any day with First Division South fixtures',
+        skipLogic: 'Resets to fixture-only before 11am; polls only within the whole division\'s match window; skips if nothing new',
+        costPerRealRun: 0.08,
+        realRunsPerDay: 0, // only active on fixture days
+      },
+      {
+        file: 'x-live.yml',
+        name: 'Poll X (Fan Briefing)',
+        pulls: 'Sandbach\'s own X posts + NWCFL news articles + Fan Briefing regeneration',
+        skipLogic: 'x-posts.js gated to 30min/3hr/matchday tiers; x-insights.js skips if underlying posts unchanged since last summary',
+        costPerRealRun: 0.005,
+        realRunsPerDay: 6,
+      },
+      {
+        file: 'division-recap-weekend-preview.yml',
+        name: 'Weekend Preview',
+        pulls: 'Next weekend\'s division fixtures + recent club posts + league table',
+        skipLogic: 'Runs once, always regenerates fresh (Friday-scheduled)',
+        costPerRealRun: 0.06,
+        realRunsPerDay: 0.14, // ~once/week
+      },
+      {
+        file: 'division-recap-weekend-recap.yml',
+        name: 'Weekend Recap',
+        pulls: 'Weekend\'s played fixtures + club posts + league table',
+        skipLogic: 'Only proceeds once, ~3hrs after the latest weekend kickoff; skips outside a real weekend',
+        costPerRealRun: 0.06,
+        realRunsPerDay: 0.29, // ~twice/week (Sat+Sun coverage)
+      },
+      {
+        file: 'division-recap-midweek-preview.yml',
+        name: 'Midweek Preview',
+        pulls: 'Tomorrow\'s midweek fixtures (if any) + club posts + league table',
+        skipLogic: 'Skips entirely if no midweek fixtures tomorrow',
+        costPerRealRun: 0.05,
+        realRunsPerDay: 0.14,
+      },
+      {
+        file: 'division-recap-midweek-recap.yml',
+        name: 'Midweek Recap',
+        pulls: 'Today\'s midweek fixtures (if any) + club posts + league table',
+        skipLogic: 'Skips if no midweek fixtures today; only proceeds ~3hrs after latest kickoff',
+        costPerRealRun: 0.05,
+        realRunsPerDay: 0.14,
+      },
+    ];
+
+    // ---------- Simple password gate (soft deterrent only, not real security) ----------
+    async function sha256(text) {
+      const enc = new TextEncoder().encode(text);
+      const hash = await crypto.subtle.digest('SHA-256', enc);
+      return [...new Uint8Array(hash)].map(b => b.toString(16).padStart(2, '0')).join('');
+    }
+
+    async function attemptLogin() {
+      const input = document.getElementById('password-input').value;
+      const hash = await sha256(input);
+      if (hash === ADMIN_PASSWORD_HASH) {
+        sessionStorage.setItem('matchx_admin_ok', 'true');
+        showDashboard();
+      } else {
+        document.getElementById('login-error').style.display = 'block';
+      }
+    }
+
+    document.getElementById('password-input').addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') attemptLogin();
+    });
+
+    function showDashboard() {
+      document.getElementById('login-screen').style.display = 'none';
+      document.getElementById('dashboard').style.display = 'block';
+      loadWorkflows();
+      renderEfficiencyTable();
+      setCostPeriod('day');
+    }
+
+    if (sessionStorage.getItem('matchx_admin_ok') === 'true') {
+      showDashboard();
+    }
+
+    // ---------- GitHub Actions data (real, live) ----------
+    async function fetchWorkflowRuns(workflowFile) {
+      const url = `https://api.github.com/repos/${REPO}/actions/workflows/${workflowFile}/runs?per_page=10`;
+      const res = await fetch(url);
+      if (!res.ok) return null;
+      const data = await res.json();
+      return data.workflow_runs || [];
+    }
+
+    function timeAgo(dateStr) {
+      const diffMs = Date.now() - new Date(dateStr).getTime();
+      const mins = Math.floor(diffMs / 60000);
+      if (mins < 60) return `${mins}m ago`;
+      const hrs = Math.floor(mins / 60);
+      if (hrs < 24) return `${hrs}h ago`;
+      return `${Math.floor(hrs / 24)}d ago`;
+    }
+
+    async function loadWorkflows() {
+      const container = document.getElementById('workflows-list');
+      container.innerHTML = '';
+
+      for (const wf of WORKFLOWS) {
+        const runs = await fetchWorkflowRuns(wf.file);
+        const row = document.createElement('div');
+        row.className = 'workflow-row';
+
+        if (!runs || runs.length === 0) {
+          row.innerHTML = `
+            <div class="workflow-head">
+              <span class="workflow-name">${wf.name}</span>
+              <span class="status-badge warn">No data</span>
+            </div>
+            <div class="workflow-meta">Could not load run history (rate-limited or workflow not found).</div>
+          `;
+          container.appendChild(row);
+          continue;
+        }
+
+        const lastRun = runs[0];
+        const failures = runs.filter(r => r.conclusion === 'failure').length;
+        const successRate = runs.filter(r => r.conclusion === 'success').length;
+
+        let badgeClass = 'ok';
+        let badgeText = 'Healthy';
+        if (failures >= 5) { badgeClass = 'bad'; badgeText = `${failures}/10 failed`; }
+        else if (failures >= 2) { badgeClass = 'warn'; badgeText = `${failures}/10 failed`; }
+
+        const dots = runs.map(r =>
+          `<span class="dot ${r.conclusion === 'success' ? 'success' : r.conclusion === 'failure' ? 'failure' : 'unknown'}" title="${r.conclusion || 'in progress'} — ${new Date(r.created_at).toLocaleString('en-GB')}"></span>`
+        ).join('');
+
+        row.innerHTML = `
+          <div class="workflow-head">
+            <span class="workflow-name">${wf.name}</span>
+            <span class="status-badge ${badgeClass}">${badgeText}</span>
+          </div>
+          <div class="workflow-meta">Last run: ${timeAgo(lastRun.created_at)} — ${lastRun.conclusion || lastRun.status}</div>
+          <div class="dot-row">${dots}</div>
+          <button class="btn small" onclick="triggerWorkflow('${wf.file}', this)">Run now</button>
+        `;
+        container.appendChild(row);
+      }
+    }
+
+    // ---------- Manual trigger ----------
+    async function triggerWorkflow(workflowFile, btnEl) {
+      let token = sessionStorage.getItem('matchx_gh_token');
+      if (!token) {
+        token = prompt('Paste your GitHub token (the same one used for cron-job.org). This is only stored for this browser tab session, never saved.');
+        if (!token) return;
+        sessionStorage.setItem('matchx_gh_token', token);
+      }
+
+      btnEl.textContent = 'Triggering…';
+      btnEl.disabled = true;
+
+      try {
+        const res = await fetch(`https://api.github.com/repos/${REPO}/actions/workflows/${workflowFile}/dispatches`, {
+          method: 'POST',
+          headers: {
+            'Authorization': `Bearer ${token}`,
+            'Accept': 'application/vnd.github+json',
+          },
+          body: JSON.stringify({ ref: 'main' }),
+        });
+
+        if (res.status === 204) {
+          btnEl.textContent = 'Triggered ✓';
+          setTimeout(() => loadWorkflows(), 3000);
+        } else {
+          btnEl.textContent = 'Failed — check token';
+          sessionStorage.removeItem('matchx_gh_token');
+        }
+      } catch (err) {
+        btnEl.textContent = 'Failed';
+      }
+      setTimeout(() => { btnEl.textContent = 'Run now'; btnEl.disabled = false; }, 3000);
+    }
+
+    // ---------- Cost estimate ----------
+    function setCostPeriod(period) {
+      document.querySelectorAll('.toggle-btn').forEach(b => b.classList.toggle('active', b.dataset.period === period));
+
+      const multiplier = period === 'day' ? 1 : period === 'month' ? 30 : 365;
+      let total = 0;
+      const rows = WORKFLOWS.map(wf => {
+        const dailyCost = wf.costPerRealRun * wf.realRunsPerDay;
+        const cost = dailyCost * multiplier;
+        total += cost;
+        return { name: wf.name, cost };
+      });
+
+      document.getElementById('cost-total').textContent = `£${total.toFixed(2)} / ${period}`;
+
+      const maxCost = Math.max(...rows.map(r => r.cost), 0.01);
+      document.getElementById('cost-breakdown').innerHTML = rows
+        .sort((a, b) => b.cost - a.cost)
+        .map(r => `
+          <div class="cost-breakdown-row">
+            <span>${r.name}</span>
+            <span>£${r.cost.toFixed(2)}</span>
+          </div>
+          <div class="cost-bar-bg"><div class="cost-bar-fill" style="width:${(r.cost / maxCost) * 100}%"></div></div>
+        `).join('');
+    }
+
+    // ---------- Efficiency table ----------
+    function renderEfficiencyTable() {
+      document.getElementById('efficiency-table').innerHTML = WORKFLOWS.map(wf => `
+        <tr>
+          <td><strong>${wf.name}</strong></td>
+          <td>Every 5 min (cron-job.org)</td>
+          <td>${wf.pulls}</td>
+          <td>${wf.skipLogic}</td>
+        </tr>
+      `).join('');
+    }
+  </script>
+</body>
+</html>
