@@ -68,48 +68,30 @@
       margin-bottom: 10px;
     }
 
-    /* --- Login gate --- */
     #login-screen { max-width: 320px; margin: 80px auto; text-align: center; }
     #login-screen .card { text-align: left; }
     .login-error { color: var(--red); font-size: 12px; margin-top: 6px; display: none; }
 
-    /* --- Dashboard --- */
     #dashboard { display: none; }
 
-    .workflow-row {
-      padding: 12px 0;
-      border-bottom: 1px solid var(--line);
-    }
+    .workflow-row { padding: 12px 0; border-bottom: 1px solid var(--line); }
     .workflow-row:last-child { border-bottom: none; }
-    .workflow-head {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 6px;
-    }
+    .workflow-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
     .workflow-name { font-weight: 700; font-size: 14px; color: var(--navy); }
     .workflow-meta { font-size: 12px; color: var(--muted); margin-top: 2px; }
     .dot-row { display: flex; gap: 4px; margin: 6px 0; }
-    .dot {
-      width: 12px; height: 12px; border-radius: 50%;
-      display: inline-block;
-    }
+    .dot { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
     .dot.success { background: var(--green); }
     .dot.failure { background: var(--red); }
     .dot.unknown { background: var(--line); }
-    .status-badge {
-      font-size: 11px;
-      font-weight: 700;
-      padding: 2px 8px;
-      border-radius: 10px;
-    }
+    .status-badge { font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 10px; }
     .status-badge.ok { background: rgba(34,197,94,0.15); color: #15803d; }
     .status-badge.warn { background: rgba(234,179,8,0.15); color: #a16207; }
     .status-badge.bad { background: rgba(239,68,68,0.15); color: #b91c1c; }
 
-    .toggle-row { display: flex; gap: 8px; margin-bottom: 14px; }
+    .toggle-row { display: flex; gap: 8px; margin-bottom: 14px; flex-wrap: wrap; }
     .toggle-btn {
-      flex: 1;
+      flex: 1; min-width: 70px;
       padding: 8px;
       border-radius: 6px;
       border: 1px solid var(--line);
@@ -144,7 +126,7 @@
   <div id="login-screen">
     <h1 style="text-align:center;">MatchX Admin</h1>
     <div class="card">
-      <div class="sub" style="margin-bottom:12px;"></div>
+      <div class="sub" style="margin-bottom:12px;">This page only prevents casual access — it is not real security. Never enter anything here you wouldn't be comfortable being technically viewable by a determined visitor.</div>
       <input type="password" id="password-input" placeholder="Admin password">
       <button class="btn primary" style="width:100%;" onclick="attemptLogin()">Enter</button>
       <div class="login-error" id="login-error">Incorrect password.</div>
@@ -154,7 +136,12 @@
   <div id="dashboard">
     <a class="back" href="index.html">← Back to site</a>
     <h1>MatchX Admin</h1>
-    <div class="sub">Live data pulled from GitHub Actions. Cost figures are estimates.</div>
+    <div class="sub">Live data pulled from GitHub Actions. Cost figures are estimates — see note below.</div>
+
+    <div class="card" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
+      <span style="font-size:12px; color:var(--muted);" id="token-status">Checking token status…</span>
+      <button class="btn small" onclick="setToken()">Set GitHub token</button>
+    </div>
 
     <div class="card">
       <h2>Workflows</h2>
@@ -165,12 +152,14 @@
       <h2>Estimated Cost</h2>
       <label style="display:flex; align-items:center; gap:8px; font-size:13px; margin-bottom:12px;">
         <input type="checkbox" id="matchday-toggle" onchange="toggleMatchday()">
-        Today is a matchday (include Matchday Live / Division Scores in the estimate)
+        Today is a matchday (use matchday rate for Day/Month/Year)
       </label>
       <div class="toggle-row">
         <button class="toggle-btn active" data-period="day" onclick="setCostPeriod('day')">Day</button>
         <button class="toggle-btn" data-period="month" onclick="setCostPeriod('month')">Month</button>
         <button class="toggle-btn" data-period="year" onclick="setCostPeriod('year')">Year</button>
+        <button class="toggle-btn" data-period="avg-month" onclick="setCostPeriod('avg-month')">Avg Month</button>
+        <button class="toggle-btn" data-period="avg-year" onclick="setCostPeriod('avg-year')">Avg Year</button>
       </div>
       <div class="cost-total" id="cost-total">—</div>
       <div class="cost-caveat">
@@ -206,27 +195,22 @@
   <script>
     // ---------- Config ----------
     const REPO = 'Batangarang/MatchX';
-    const ADMIN_PASSWORD_HASH = '17a3c1cc9792d6bbf28d8092e88c15953c73fb42f0e6a9499b6b7dc978e48954'; // sha256 of your chosen password — see note below
+    const ADMIN_PASSWORD_HASH = '17a3c1cc9792d6bbf28d8092e88c15953c73fb42f0e6a9499b6b7dc978e48954';
 
-    // Real measured whole-day totals (USD), converted to GBP at ~0.79
     const USD_TO_GBP = 0.75;
-    const MATCHDAY_TOTAL_USD = (0.44 + 0.44 + 0.65) / 3; // last 3 known matchdays
-    const NONMATCHDAY_TOTAL_USD = (0.334 + 0.860 + 0.501) / 3; // recent non-matchdays (GetXAPI shown; Anthropic non-matchday portion assumed proportionally similar ratio to matchday)
+    const MATCHDAY_TOTAL_USD = (0.44 + 0.44 + 0.65) / 3;
+    const NONMATCHDAY_TOTAL_USD = (0.334 + 0.860 + 0.501) / 3;
     const MATCHDAY_TOTAL_GBP = MATCHDAY_TOTAL_USD * USD_TO_GBP;
     const NONMATCHDAY_TOTAL_GBP = NONMATCHDAY_TOTAL_USD * USD_TO_GBP;
-
-    const DOMAIN_YEARLY_GBP = 5.30 * USD_TO_GBP; // Cloudflare charge is in USD
-    document.getElementById('domain-cost-note').textContent = `£${DOMAIN_YEARLY_GBP.toFixed(2)}`;
+    const DOMAIN_YEARLY_GBP = 5.30 * USD_TO_GBP;
     const DOMAIN_DAILY_GBP = DOMAIN_YEARLY_GBP / 365;
 
-    // Rough proportional split of the blended total across workflows —
-    // approximated from relative call volume, not independently measured
     const WORKFLOWS = [
       { file: 'scrape.yml', name: 'Scrape Sandbach Fixtures', pulls: 'nwcfl.com: fixtures, league table, player stats, attendance, position history', skipLogic: 'Hourly gate — real work only ~once/hour even though triggered every 5 min', shareOfDay: 0, staleAfterMinutes: 75 },
       { file: 'matchday-live.yml', name: 'Matchday Live Tracker', pulls: 'X posts (home + away club) + vision analysis of new images, on Sandbach\'s own match day', skipLogic: 'Only active kickoff-90min to kickoff+150/240min; skips if no new posts/images since last check', shareOfDay: 0.55, matchdayOnly: true, staleAfterMinutes: 15 },
       { file: 'division-scores.yml', name: 'Division Scores', pulls: 'X posts from ~19 division clubs, on any day with First Division South fixtures', skipLogic: 'Resets to fixture-only before 11am; polls only within the whole division\'s match window; skips if nothing new', shareOfDay: 0.45, matchdayOnly: true, staleAfterMinutes: 15 },
       { file: 'x-live.yml', name: 'Poll X (Fan Briefing)', pulls: 'Sandbach\'s own X posts + NWCFL news articles + Fan Briefing regeneration', skipLogic: 'x-posts.js gated to 30min/3hr/matchday tiers; x-insights.js skips if underlying posts unchanged since last summary', shareOfDay: 0.35, nonMatchday: true, staleAfterMinutes: 15 },
-      { file: 'division-recap-weekend-preview.yml', name: 'Weekend Preview', pulls: 'Next weekend\'s division fixtures + recent club posts + league table', skipLogic: 'Runs once, always regenerates fresh (Friday-scheduled)', shareOfDay: 0.15, nonMatchday: true, staleAfterMinutes: 60 * 24 * 8 }, // ~weekly
+      { file: 'division-recap-weekend-preview.yml', name: 'Weekend Preview', pulls: 'Next weekend\'s division fixtures + recent club posts + league table', skipLogic: 'Runs once, always regenerates fresh (Friday-scheduled)', shareOfDay: 0.15, nonMatchday: true, staleAfterMinutes: 60 * 24 * 8 },
       { file: 'division-recap-weekend-recap.yml', name: 'Weekend Recap', pulls: 'Weekend\'s played fixtures + club posts + league table', skipLogic: 'Only proceeds once, ~3hrs after the latest weekend kickoff; skips outside a real weekend', shareOfDay: 0.2, nonMatchday: true, staleAfterMinutes: 60 * 24 * 8 },
       { file: 'division-recap-midweek-preview.yml', name: 'Midweek Preview', pulls: 'Tomorrow\'s midweek fixtures (if any) + club posts + league table', skipLogic: 'Skips entirely if no midweek fixtures tomorrow', shareOfDay: 0.15, nonMatchday: true, staleAfterMinutes: 60 * 24 * 4 },
       { file: 'division-recap-midweek-recap.yml', name: 'Midweek Recap', pulls: 'Today\'s midweek fixtures (if any) + club posts + league table', skipLogic: 'Skips if no midweek fixtures today; only proceeds ~3hrs after latest kickoff', shareOfDay: 0.15, nonMatchday: true, staleAfterMinutes: 60 * 24 * 4 },
@@ -234,76 +218,7 @@
 
     let isMatchdayToday = false;
 
-    function toggleMatchday() {
-      isMatchdayToday = document.getElementById('matchday-toggle').checked;
-      const activePeriod = document.querySelector('.toggle-btn.active').dataset.period;
-      setCostPeriod(activePeriod);
-    }
-
-    function setCostPeriod(period) {
-      document.querySelectorAll('.toggle-btn').forEach(b => b.classList.toggle('active', b.dataset.period === period));
-
-      let dayTotal, label;
-
-      if (period === 'avg-month') {
-        // 6 games/month average, rest non-matchday, plus domain cost
-        const gamesInMonth = 6;
-        const nonMatchdayDays = 30 - gamesInMonth;
-        dayTotal = (gamesInMonth * MATCHDAY_TOTAL_GBP) + (nonMatchdayDays * NONMATCHDAY_TOTAL_GBP) + (DOMAIN_DAILY_GBP * 30);
-        label = 'avg month (6 games)';
-        renderBlendedBreakdown(gamesInMonth * MATCHDAY_TOTAL_GBP, nonMatchdayDays * NONMATCHDAY_TOTAL_GBP, DOMAIN_DAILY_GBP * 30, dayTotal);
-      } else if (period === 'avg-year') {
-        // 50 games/year average (incl. friendlies/cups), rest non-matchday, plus domain cost
-        const gamesInYear = 50;
-        const nonMatchdayDays = 365 - gamesInYear;
-        dayTotal = (gamesInYear * MATCHDAY_TOTAL_GBP) + (nonMatchdayDays * NONMATCHDAY_TOTAL_GBP) + DOMAIN_YEARLY_GBP;
-        label = 'avg year (50 games)';
-        renderBlendedBreakdown(gamesInYear * MATCHDAY_TOTAL_GBP, nonMatchdayDays * NONMATCHDAY_TOTAL_GBP, DOMAIN_YEARLY_GBP, dayTotal);
-      } else {
-        const multiplier = period === 'day' ? 1 : period === 'month' ? 30 : 365;
-        const baseDaily = isMatchdayToday ? MATCHDAY_TOTAL_GBP : NONMATCHDAY_TOTAL_GBP;
-        const domainCost = DOMAIN_DAILY_GBP * multiplier;
-        dayTotal = (baseDaily * multiplier) + domainCost;
-        label = period;
-        renderWorkflowBreakdown(baseDaily * multiplier, domainCost, dayTotal);
-      }
-
-      document.getElementById('cost-total').textContent = `£${dayTotal.toFixed(2)} / ${label}`;
-    }
-
-    function renderWorkflowBreakdown(activityTotal, domainCost, grandTotal) {
-      const relevant = WORKFLOWS.filter(w => isMatchdayToday ? w.matchdayOnly : w.nonMatchday || w.shareOfDay === 0);
-      const shareSum = relevant.reduce((s, w) => s + w.shareOfDay, 0) || 1;
-      const maxShare = Math.max(...relevant.map(w => w.shareOfDay), 0.01);
-
-      document.getElementById('cost-breakdown').innerHTML = relevant
-        .sort((a, b) => b.shareOfDay - a.shareOfDay)
-        .map(w => {
-          const cost = activityTotal * (w.shareOfDay / shareSum);
-          return `
-            <div class="cost-breakdown-row"><span>${w.name}</span><span>£${cost.toFixed(3)}</span></div>
-            <div class="cost-bar-bg"><div class="cost-bar-fill" style="width:${(w.shareOfDay / maxShare) * 100}%"></div></div>
-          `;
-        }).join('') + `
-          <div class="cost-breakdown-row" style="color:var(--muted);"><span>Domain / DNS (Cloudflare)</span><span>£${domainCost.toFixed(3)}</span></div>
-          <div style="margin-top:10px; padding-top:10px; border-top:2px solid var(--navy); display:flex; justify-content:space-between; font-weight:700;">
-            <span>Total</span><span>£${grandTotal.toFixed(2)}</span>
-          </div>
-        `;
-    }
-
-    function renderBlendedBreakdown(matchdayTotal, nonMatchdayTotal, domainTotal, grandTotal) {
-      document.getElementById('cost-breakdown').innerHTML = `
-        <div class="cost-breakdown-row"><span>Matchday activity</span><span>£${matchdayTotal.toFixed(2)}</span></div>
-        <div class="cost-breakdown-row"><span>Non-matchday activity</span><span>£${nonMatchdayTotal.toFixed(2)}</span></div>
-        <div class="cost-breakdown-row" style="color:var(--muted);"><span>Domain / DNS (Cloudflare)</span><span>£${domainTotal.toFixed(2)}</span></div>
-        <div style="margin-top:10px; padding-top:10px; border-top:2px solid var(--navy); display:flex; justify-content:space-between; font-weight:700;">
-          <span>Total</span><span>£${grandTotal.toFixed(2)}</span>
-        </div>
-      `;
-    }
-
-    // ---------- Simple password gate (soft deterrent only, not real security) ----------
+    // ---------- Login ----------
     async function sha256(text) {
       const enc = new TextEncoder().encode(text);
       const hash = await crypto.subtle.digest('SHA-256', enc);
@@ -328,8 +243,10 @@
     function showDashboard() {
       document.getElementById('login-screen').style.display = 'none';
       document.getElementById('dashboard').style.display = 'block';
+      updateTokenStatus();
       loadWorkflows();
       renderEfficiencyTable();
+      document.getElementById('domain-cost-note').textContent = `£${DOMAIN_YEARLY_GBP.toFixed(2)}`;
       setCostPeriod('day');
     }
 
@@ -337,7 +254,25 @@
       showDashboard();
     }
 
-    // ---------- GitHub Actions data (real, live) ----------
+    // ---------- Token management ----------
+    function setToken() {
+      const existing = localStorage.getItem('matchx_gh_token');
+      const token = prompt(existing ? 'Replace the saved GitHub token:' : 'Paste your GitHub token (same one used for cron-job.org). Saved on this device only.', '');
+      if (token) {
+        localStorage.setItem('matchx_gh_token', token);
+        updateTokenStatus();
+        loadWorkflows();
+      }
+    }
+
+    function updateTokenStatus() {
+      const hasToken = !!localStorage.getItem('matchx_gh_token');
+      document.getElementById('token-status').textContent = hasToken
+        ? '✓ GitHub token saved on this device'
+        : 'No token saved — status reads may be rate-limited, and manual triggers won\'t work';
+    }
+
+    // ---------- Workflow status (real, live data) ----------
     async function fetchWorkflowRuns(workflowFile) {
       const url = `https://api.github.com/repos/${REPO}/actions/workflows/${workflowFile}/runs?per_page=10`;
       const token = localStorage.getItem('matchx_gh_token');
@@ -380,7 +315,6 @@
 
         const lastRun = runs[0];
         const failures = runs.filter(r => r.conclusion === 'failure').length;
-        const successRate = runs.filter(r => r.conclusion === 'success').length;
 
         const minutesSinceLastRun = (Date.now() - new Date(lastRun.created_at).getTime()) / 60000;
         const isStale = minutesSinceLastRun > wf.staleAfterMinutes;
@@ -395,12 +329,18 @@
           `<span class="dot ${r.conclusion === 'success' ? 'success' : r.conclusion === 'failure' ? 'failure' : 'unknown'}" title="${r.conclusion || 'in progress'} — ${new Date(r.created_at).toLocaleString('en-GB')}"></span>`
         ).join('');
 
+        const minutesUntilNext = wf.staleAfterMinutes - minutesSinceLastRun;
+        const nextRefreshText = minutesUntilNext > 0
+          ? (minutesUntilNext < 120 ? `~${Math.round(minutesUntilNext)}m` : `~${Math.round(minutesUntilNext / 60)}h`)
+          : 'due now';
+
         row.innerHTML = `
           <div class="workflow-head">
             <span class="workflow-name">${wf.name}</span>
             <span class="status-badge ${badgeClass}">${badgeText}</span>
           </div>
           <div class="workflow-meta">Last run: ${timeAgo(lastRun.created_at)} — ${lastRun.conclusion || lastRun.status}</div>
+          <div class="workflow-meta">Next expected: ${nextRefreshText}</div>
           <div class="dot-row">${dots}</div>
           <button class="btn small" onclick="triggerWorkflow('${wf.file}', this)">Run now</button>
         `;
@@ -415,6 +355,7 @@
         token = prompt('Paste your GitHub token (the same one used for cron-job.org). This will be saved on this device so you only need to enter it once.');
         if (!token) return;
         localStorage.setItem('matchx_gh_token', token);
+        updateTokenStatus();
       }
 
       btnEl.textContent = 'Triggering…';
@@ -435,12 +376,86 @@
           setTimeout(() => loadWorkflows(), 3000);
         } else {
           btnEl.textContent = 'Failed — check token';
-          localStorage.removeItem('matchx_gh_token'); // clear only on genuine auth failure, will re-prompt next time
+          localStorage.removeItem('matchx_gh_token');
+          updateTokenStatus();
         }
       } catch (err) {
         btnEl.textContent = 'Failed';
       }
       setTimeout(() => { btnEl.textContent = 'Run now'; btnEl.disabled = false; }, 3000);
+    }
+
+    // ---------- Cost estimate ----------
+    function toggleMatchday() {
+      isMatchdayToday = document.getElementById('matchday-toggle').checked;
+      const activePeriod = document.querySelector('.toggle-btn.active').dataset.period;
+      setCostPeriod(activePeriod);
+    }
+
+    function setCostPeriod(period) {
+      document.querySelectorAll('.toggle-btn').forEach(b => b.classList.toggle('active', b.dataset.period === period));
+
+      let dayTotal, label;
+
+      if (period === 'avg-month') {
+        const gamesInMonth = 6;
+        const nonMatchdayDays = 30 - gamesInMonth;
+        const matchdayTotal = gamesInMonth * MATCHDAY_TOTAL_GBP;
+        const nonMatchdayTotal = nonMatchdayDays * NONMATCHDAY_TOTAL_GBP;
+        const domainTotal = DOMAIN_DAILY_GBP * 30;
+        dayTotal = matchdayTotal + nonMatchdayTotal + domainTotal;
+        label = 'avg month (6 games)';
+        renderBlendedBreakdown(matchdayTotal, nonMatchdayTotal, domainTotal, dayTotal);
+      } else if (period === 'avg-year') {
+        const gamesInYear = 50;
+        const nonMatchdayDays = 365 - gamesInYear;
+        const matchdayTotal = gamesInYear * MATCHDAY_TOTAL_GBP;
+        const nonMatchdayTotal = nonMatchdayDays * NONMATCHDAY_TOTAL_GBP;
+        dayTotal = matchdayTotal + nonMatchdayTotal + DOMAIN_YEARLY_GBP;
+        label = 'avg year (50 games)';
+        renderBlendedBreakdown(matchdayTotal, nonMatchdayTotal, DOMAIN_YEARLY_GBP, dayTotal);
+      } else {
+        const multiplier = period === 'day' ? 1 : period === 'month' ? 30 : 365;
+        const baseDaily = isMatchdayToday ? MATCHDAY_TOTAL_GBP : NONMATCHDAY_TOTAL_GBP;
+        const domainCost = DOMAIN_DAILY_GBP * multiplier;
+        dayTotal = (baseDaily * multiplier) + domainCost;
+        label = period;
+        renderWorkflowBreakdown(baseDaily * multiplier, domainCost, dayTotal);
+      }
+
+      document.getElementById('cost-total').textContent = `£${dayTotal.toFixed(2)} / ${label}`;
+    }
+
+    function renderWorkflowBreakdown(activityTotal, domainCost, grandTotal) {
+      const relevant = WORKFLOWS.filter(w => isMatchdayToday ? w.matchdayOnly : w.nonMatchday || w.shareOfDay === 0);
+      const shareSum = relevant.reduce((s, w) => s + w.shareOfDay, 0) || 1;
+      const maxShare = Math.max(...relevant.map(w => w.shareOfDay), 0.01);
+
+      document.getElementById('cost-breakdown').innerHTML = relevant
+        .sort((a, b) => b.shareOfDay - a.shareOfDay)
+        .map(w => {
+          const cost = activityTotal * (w.shareOfDay / shareSum);
+          return `
+            <div class="cost-breakdown-row"><span>${w.name}</span><span>£${cost.toFixed(3)}</span></div>
+            <div class="cost-bar-bg"><div class="cost-bar-fill" style="width:${(w.shareOfDay / maxShare) * 100}%"></div></div>
+          `;
+        }).join('') + `
+          <div class="cost-breakdown-row" style="color:var(--muted);"><span>Domain / DNS (Cloudflare)</span><span>£${domainCost.toFixed(3)}</span></div>
+          <div style="margin-top:10px; padding-top:10px; border-top:2px solid var(--navy); display:flex; justify-content:space-between; font-weight:700;">
+            <span>Total</span><span>£${grandTotal.toFixed(2)}</span>
+          </div>
+        `;
+    }
+
+    function renderBlendedBreakdown(matchdayTotal, nonMatchdayTotal, domainTotal, grandTotal) {
+      document.getElementById('cost-breakdown').innerHTML = `
+        <div class="cost-breakdown-row"><span>Matchday activity</span><span>£${matchdayTotal.toFixed(2)}</span></div>
+        <div class="cost-breakdown-row"><span>Non-matchday activity</span><span>£${nonMatchdayTotal.toFixed(2)}</span></div>
+        <div class="cost-breakdown-row" style="color:var(--muted);"><span>Domain / DNS (Cloudflare)</span><span>£${domainTotal.toFixed(2)}</span></div>
+        <div style="margin-top:10px; padding-top:10px; border-top:2px solid var(--navy); display:flex; justify-content:space-between; font-weight:700;">
+          <span>Total</span><span>£${grandTotal.toFixed(2)}</span>
+        </div>
+      `;
     }
 
     // ---------- Efficiency table ----------
