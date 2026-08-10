@@ -1,5 +1,5 @@
 {
-  "scrapedAt": "2026-08-10T19:25:46.235Z",
+  "scrapedAt": "2026-08-10T19:28:14.897Z",
   "nextFixture": {
     "date": "Tue 11/08/26",
     "opposition": "New Mills",
@@ -29,17 +29,7 @@
       "kickoff": "15:00",
       "score": null,
       "scorers": null,
-      "competitionNote": null
-    },
-    {
-      "date": "",
-      "opposition": "(The Isuzu FA Vase 1Q)",
-      "opponentUrl": null,
-      "homeAway": "",
-      "kickoff": "",
-      "score": null,
-      "scorers": null,
-      "competitionNote": null
+      "competitionNote": "The Isuzu FA Vase 1Q"
     },
     {
       "date": "Tue 18/08/26",
@@ -55,6 +45,16 @@
       "date": "Sat 22/08/26",
       "opposition": "Wolverhampton Casuals",
       "opponentUrl": "clubpage.php?id=73",
+      "homeAway": "H",
+      "kickoff": "15:00",
+      "score": null,
+      "scorers": null,
+      "competitionNote": null
+    },
+    {
+      "date": "Sat 29/08/26",
+      "opposition": "Widnes Town",
+      "opponentUrl": "clubpage.php?id=868",
       "homeAway": "H",
       "kickoff": "15:00",
       "score": null,
@@ -153,17 +153,7 @@
       "kickoff": "15:00",
       "score": null,
       "scorers": null,
-      "competitionNote": null
-    },
-    {
-      "date": "",
-      "opposition": "(The Isuzu FA Vase 1Q)",
-      "opponentUrl": null,
-      "homeAway": "",
-      "kickoff": "",
-      "score": null,
-      "scorers": null,
-      "competitionNote": null
+      "competitionNote": "The Isuzu FA Vase 1Q"
     },
     {
       "date": "Tue 18/08/26",
@@ -233,17 +223,7 @@
       "kickoff": "19:45",
       "score": null,
       "scorers": null,
-      "competitionNote": null
-    },
-    {
-      "date": "",
-      "opposition": "(The Edward Case Cup 1 S)",
-      "opponentUrl": null,
-      "homeAway": "",
-      "kickoff": "",
-      "score": null,
-      "scorers": null,
-      "competitionNote": null
+      "competitionNote": "The Edward Case Cup 1 S"
     },
     {
       "date": "Sat 10/10/26",
