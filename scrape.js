@@ -34,10 +34,17 @@ async function scrape() {
     const cells = $(row).find('td');
     if (cells.length === 0) return;
 
-    // Rows like "(The Isuzu FA Vase 1Q)" are a note about the row above, not a fixture
     const firstCellText = $(cells[0]).text().trim();
-    if (firstCellText.startsWith('(')) {
-      currentNote = firstCellText.replace(/[()]/g, '');
+    const secondCellText = cells.length > 1 ? $(cells[1]).text().trim() : '';
+
+    // A competition-note row has an empty date and a parenthetical note,
+    // which can land in either the first or second cell depending on layout
+    const noteText = firstCellText.startsWith('(') ? firstCellText
+      : (secondCellText.startsWith('(') && !firstCellText) ? secondCellText
+      : null;
+
+    if (noteText) {
+      currentNote = noteText.replace(/[()]/g, '');
       return;
     }
 
@@ -64,7 +71,7 @@ async function scrape() {
     currentNote = null;
   });
 
-const played = fixtures.filter(f => f.score);
+  const played = fixtures.filter(f => f.score);
   const upcoming = fixtures.filter(f => !f.score);
 
   return {
