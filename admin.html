@@ -409,15 +409,10 @@
       const activePeriod = document.querySelector('.toggle-btn.active').dataset.period;
       setCostPeriod(activePeriod === 'day' ? 'day' : activePeriod);
     }
-
-    // Rough estimated split of the real combined total — not independently
+// Rough estimated split of the real combined total — not independently
     // measured, since GetXAPI/Anthropic don't expose this breakdown themselves
     const X_SHARE = 0.45;
     const AI_SHARE = 0.55;
-
-    fconst X_SHARE = 0.45;
-    const AI_SHARE = 0.55;
-
     function setCostPeriod(period) {
       document.querySelectorAll('.toggle-btn').forEach(b => b.classList.toggle('active', b.dataset.period === period));
 
