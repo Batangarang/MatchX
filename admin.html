@@ -415,20 +415,31 @@
     const X_SHARE = 0.45;
     const AI_SHARE = 0.55;
 
+    fconst X_SHARE = 0.45;
+    const AI_SHARE = 0.55;
+
     function setCostPeriod(period) {
       document.querySelectorAll('.toggle-btn').forEach(b => b.classList.toggle('active', b.dataset.period === period));
 
       if (period === 'day') {
-        const baseDaily = isMatchdayToday ? MATCHDAY_TOTAL_GBP : NONMATCHDAY_TOTAL_GBP;
         const domainCost = DOMAIN_DAILY_GBP;
-        const total = baseDaily + domainCost;
-        document.getElementById('cost-total').textContent = `£${total.toFixed(2)} / day${isMatchdayToday ? ' (matchday)' : ''}`;
-        renderSplitBreakdown(baseDaily, domainCost, total);
+        if (isMatchdayToday) {
+          const total = MATCHDAY_TOTAL_GBP + NONMATCHDAY_TOTAL_GBP + domainCost;
+          document.getElementById('cost-total').textContent = `£${total.toFixed(2)} / day (matchday)`;
+          renderGroupedBreakdown([
+            { label: 'Matchday activity', total: MATCHDAY_TOTAL_GBP },
+            { label: 'Non-matchday activity', total: NONMATCHDAY_TOTAL_GBP },
+          ], domainCost, total);
+        } else {
+          const total = NONMATCHDAY_TOTAL_GBP + domainCost;
+          document.getElementById('cost-total').textContent = `£${total.toFixed(2)} / day`;
+          renderGroupedBreakdown([
+            { label: 'Non-matchday activity', total: NONMATCHDAY_TOTAL_GBP },
+          ], domainCost, total);
+        }
         return;
       }
 
-      // Month, Year, Avg Month, Avg Year all use the same realistic blend —
-      // the matchday toggle only affects the single "Day" view
       let gamesCount, totalDays, domainCost, label;
       if (period === 'month' || period === 'avg-month') {
         gamesCount = 6; totalDays = 30; domainCost = DOMAIN_DAILY_GBP * 30;
@@ -444,20 +455,31 @@
       const grandTotal = matchdayTotal + nonMatchdayTotal + domainCost;
 
       document.getElementById('cost-total').textContent = `£${grandTotal.toFixed(2)} / ${label}`;
-      renderBlendedBreakdown(matchdayTotal, nonMatchdayTotal, domainCost, grandTotal);
+      renderGroupedBreakdown([
+        { label: 'Matchday activity', total: matchdayTotal },
+        { label: 'Non-matchday activity', total: nonMatchdayTotal },
+      ], domainCost, grandTotal);
     }
 
-    function renderSplitBreakdown(activityTotal, domainCost, grandTotal) {
-      const xCost = activityTotal * X_SHARE;
-      const aiCost = activityTotal * AI_SHARE;
-      const maxCost = Math.max(xCost, aiCost, 0.01);
+    function renderGroupedBreakdown(groups, domainCost, grandTotal) {
+      const allValues = groups.flatMap(g => [g.total, g.total * X_SHARE, g.total * AI_SHARE]);
+      const maxCost = Math.max(...allValues, domainCost, 0.01);
 
-      document.getElementById('cost-breakdown').innerHTML = `
-        <div class="cost-breakdown-row"><span>GetXAPI (est.)</span><span>£${xCost.toFixed(3)}</span></div>
-        <div class="cost-bar-bg"><div class="cost-bar-fill" style="background:var(--royal); width:${(xCost / maxCost) * 100}%"></div></div>
-        <div class="cost-breakdown-row"><span>Anthropic (est.)</span><span>£${aiCost.toFixed(3)}</span></div>
-        <div class="cost-bar-bg"><div class="cost-bar-fill" style="background:var(--amber); width:${(aiCost / maxCost) * 100}%"></div></div>
-        <div class="cost-breakdown-row" style="color:var(--muted);"><span>Domain / DNS (Cloudflare)</span><span>£${domainCost.toFixed(3)}</span></div>
+      const groupsHtml = groups.map(g => {
+        const xCost = g.total * X_SHARE;
+        const aiCost = g.total * AI_SHARE;
+        return `
+          <div class="cost-breakdown-row" style="font-weight:700;"><span>${g.label}</span><span>£${g.total.toFixed(3)}</span></div>
+          <div class="cost-bar-bg"><div class="cost-bar-fill" style="width:${(g.total / maxCost) * 100}%"></div></div>
+          <div class="cost-breakdown-row" style="padding-left:12px; font-size:12px;"><span>— GetXAPI (est.)</span><span>£${xCost.toFixed(3)}</span></div>
+          <div class="cost-bar-bg"><div class="cost-bar-fill" style="background:var(--royal); width:${(xCost / maxCost) * 100}%"></div></div>
+          <div class="cost-breakdown-row" style="padding-left:12px; font-size:12px;"><span>— Anthropic (est.)</span><span>£${aiCost.toFixed(3)}</span></div>
+          <div class="cost-bar-bg"><div class="cost-bar-fill" style="background:var(--amber); width:${(aiCost / maxCost) * 100}%"></div></div>
+        `;
+      }).join('<div style="height:8px;"></div>');
+
+      document.getElementById('cost-breakdown').innerHTML = groupsHtml + `
+        <div class="cost-breakdown-row" style="color:var(--muted); margin-top:8px;"><span>Domain / DNS (Cloudflare)</span><span>£${domainCost.toFixed(3)}</span></div>
         <div style="margin-top:10px; padding-top:10px; border-top:2px solid var(--navy); display:flex; justify-content:space-between; font-weight:700;">
           <span>Total</span><span>£${grandTotal.toFixed(2)}</span>
         </div>
