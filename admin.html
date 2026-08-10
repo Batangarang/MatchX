@@ -174,7 +174,10 @@
       </div>
       <div class="cost-total" id="cost-total">—</div>
       <div class="cost-caveat">
-        These are rough estimates based on typical usage patterns observed during testing, not real metered billing.
+        Day/Month/Year use real measured whole-day totals (last 3 matchdays and last 3 non-matchdays averaged),
+        not per-workflow guesses. The workflow breakdown below is an approximate proportional split of that real
+        total, not independently metered. Avg Month/Year model 6 games/month or 50 games/year against the rest of
+        the year as non-matchdays. Includes the £${DOMAIN_YEARLY_GBP.toFixed(2)}/year Cloudflare domain cost.
       </div>
       <div id="cost-breakdown" style="margin-top:14px;"></div>
     </div>
@@ -205,74 +208,106 @@
     const REPO = 'Batangarang/MatchX';
     const ADMIN_PASSWORD_HASH = '17a3c1cc9792d6bbf28d8092e88c15953c73fb42f0e6a9499b6b7dc978e48954'; // sha256 of your chosen password — see note below
 
+    // Real measured whole-day totals (USD), converted to GBP at ~0.79
+    const USD_TO_GBP = 0.79;
+    const MATCHDAY_TOTAL_USD = (0.44 + 0.44 + 0.65) / 3; // last 3 known matchdays
+    const NONMATCHDAY_TOTAL_USD = (0.334 + 0.860 + 0.501) / 3; // recent non-matchdays (GetXAPI shown; Anthropic non-matchday portion assumed proportionally similar ratio to matchday)
+    const MATCHDAY_TOTAL_GBP = MATCHDAY_TOTAL_USD * USD_TO_GBP;
+    const NONMATCHDAY_TOTAL_GBP = NONMATCHDAY_TOTAL_USD * USD_TO_GBP;
+
+    const DOMAIN_YEARLY_GBP = 5.30 * USD_TO_GBP; // Cloudflare charge is in USD
+    const DOMAIN_DAILY_GBP = DOMAIN_YEARLY_GBP / 365;
+
+    // Rough proportional split of the blended total across workflows —
+    // approximated from relative call volume, not independently measured
     const WORKFLOWS = [
-      {
-        file: 'scrape.yml',
-        name: 'Scrape Sandbach Fixtures',
-        pulls: 'nwcfl.com: fixtures, league table, player stats, attendance, position history',
-        skipLogic: 'Hourly gate — real work only ~once/hour even though triggered every 5 min',
-        xCost: 0, aiCost: 0,
-        realRunsPerDay: 24,
-      },
-      {
-        file: 'matchday-live.yml',
-        name: 'Matchday Live Tracker',
-        pulls: 'X posts (home + away club) + vision analysis of new images, on Sandbach\'s own match day',
-        skipLogic: 'Only active kickoff-90min to kickoff+150/240min; skips if no new posts/images since last check',
-        xCost: 0.008, aiCost: 0.022,
-        realRunsPerDay: 0, // see matchday toggle below
-      },
-      {
-        file: 'division-scores.yml',
-        name: 'Division Scores',
-        pulls: 'X posts from ~19 division clubs, on any day with First Division South fixtures',
-        skipLogic: 'Resets to fixture-only before 11am; polls only within the whole division\'s match window; skips if nothing new',
-        xCost: 0.02, aiCost: 0.06,
-        realRunsPerDay: 0, // see matchday toggle below
-      },
-      {
-        file: 'x-live.yml',
-        name: 'Poll X (Fan Briefing)',
-        pulls: 'Sandbach\'s own X posts + NWCFL news articles + Fan Briefing regeneration',
-        skipLogic: 'x-posts.js gated to 30min/3hr/matchday tiers; x-insights.js skips if underlying posts unchanged since last summary',
-        xCost: 0.003, aiCost: 0.002,
-        realRunsPerDay: 6,
-      },
-      {
-        file: 'division-recap-weekend-preview.yml',
-        name: 'Weekend Preview',
-        pulls: 'Next weekend\'s division fixtures + recent club posts + league table',
-        skipLogic: 'Runs once, always regenerates fresh (Friday-scheduled)',
-        xCost: 0.02, aiCost: 0.04,
-        realRunsPerDay: 0.14,
-      },
-      {
-        file: 'division-recap-weekend-recap.yml',
-        name: 'Weekend Recap',
-        pulls: 'Weekend\'s played fixtures + club posts + league table',
-        skipLogic: 'Only proceeds once, ~3hrs after the latest weekend kickoff; skips outside a real weekend',
-        xCost: 0.02, aiCost: 0.04,
-        realRunsPerDay: 0.29,
-      },
-      {
-        file: 'division-recap-midweek-preview.yml',
-        name: 'Midweek Preview',
-        pulls: 'Tomorrow\'s midweek fixtures (if any) + club posts + league table',
-        skipLogic: 'Skips entirely if no midweek fixtures tomorrow',
-        xCost: 0.015, aiCost: 0.035,
-        realRunsPerDay: 0.14,
-      },
-      {
-        file: 'division-recap-midweek-recap.yml',
-        name: 'Midweek Recap',
-        pulls: 'Today\'s midweek fixtures (if any) + club posts + league table',
-        skipLogic: 'Skips if no midweek fixtures today; only proceeds ~3hrs after latest kickoff',
-        xCost: 0.015, aiCost: 0.035,
-        realRunsPerDay: 0.14,
-      },
+      { file: 'scrape.yml', name: 'Scrape Sandbach Fixtures', pulls: 'nwcfl.com: fixtures, league table, player stats, attendance, position history', skipLogic: 'Hourly gate — real work only ~once/hour even though triggered every 5 min', shareOfDay: 0 },
+      { file: 'matchday-live.yml', name: 'Matchday Live Tracker', pulls: 'X posts (home + away club) + vision analysis of new images, on Sandbach\'s own match day', skipLogic: 'Only active kickoff-90min to kickoff+150/240min; skips if no new posts/images since last check', shareOfDay: 0.55, matchdayOnly: true },
+      { file: 'division-scores.yml', name: 'Division Scores', pulls: 'X posts from ~19 division clubs, on any day with First Division South fixtures', skipLogic: 'Resets to fixture-only before 11am; polls only within the whole division\'s match window; skips if nothing new', shareOfDay: 0.45, matchdayOnly: true },
+      { file: 'x-live.yml', name: 'Poll X (Fan Briefing)', pulls: 'Sandbach\'s own X posts + NWCFL news articles + Fan Briefing regeneration', skipLogic: 'x-posts.js gated to 30min/3hr/matchday tiers; x-insights.js skips if underlying posts unchanged since last summary', shareOfDay: 0.35, nonMatchday: true },
+      { file: 'division-recap-weekend-preview.yml', name: 'Weekend Preview', pulls: 'Next weekend\'s division fixtures + recent club posts + league table', skipLogic: 'Runs once, always regenerates fresh (Friday-scheduled)', shareOfDay: 0.15, nonMatchday: true },
+      { file: 'division-recap-weekend-recap.yml', name: 'Weekend Recap', pulls: 'Weekend\'s played fixtures + club posts + league table', skipLogic: 'Only proceeds once, ~3hrs after the latest weekend kickoff; skips outside a real weekend', shareOfDay: 0.2, nonMatchday: true },
+      { file: 'division-recap-midweek-preview.yml', name: 'Midweek Preview', pulls: 'Tomorrow\'s midweek fixtures (if any) + club posts + league table', skipLogic: 'Skips entirely if no midweek fixtures tomorrow', shareOfDay: 0.15, nonMatchday: true },
+      { file: 'division-recap-midweek-recap.yml', name: 'Midweek Recap', pulls: 'Today\'s midweek fixtures (if any) + club posts + league table', skipLogic: 'Skips if no midweek fixtures today; only proceeds ~3hrs after latest kickoff', shareOfDay: 0.15, nonMatchday: true },
     ];
 
-    let isMatchdayToday = false; // toggle below lets you flip this on manually
+    let isMatchdayToday = false;
+
+    function toggleMatchday() {
+      isMatchdayToday = document.getElementById('matchday-toggle').checked;
+      const activePeriod = document.querySelector('.toggle-btn.active').dataset.period;
+      setCostPeriod(activePeriod);
+    }
+
+    function setCostPeriod(period) {
+      document.querySelectorAll('.toggle-btn').forEach(b => b.classList.toggle('active', b.dataset.period === period));
+
+      let dayTotal, label;
+
+      if (period === 'avg-month') {
+        // 6 games/month average, rest non-matchday, plus domain cost
+        const gamesInMonth = 6;
+        const nonMatchdayDays = 30 - gamesInMonth;
+        dayTotal = (gamesInMonth * MATCHDAY_TOTAL_GBP) + (nonMatchdayDays * NONMATCHDAY_TOTAL_GBP) + (DOMAIN_DAILY_GBP * 30);
+        label = 'avg month (6 games)';
+        renderBlendedBreakdown(gamesInMonth * MATCHDAY_TOTAL_GBP, nonMatchdayDays * NONMATCHDAY_TOTAL_GBP, DOMAIN_DAILY_GBP * 30, dayTotal);
+      } else if (period === 'avg-year') {
+        // 50 games/year average (incl. friendlies/cups), rest non-matchday, plus domain cost
+        const gamesInYear = 50;
+        const nonMatchdayDays = 365 - gamesInYear;
+        dayTotal = (gamesInYear * MATCHDAY_TOTAL_GBP) + (nonMatchdayDays * NONMATCHDAY_TOTAL_GBP) + DOMAIN_YEARLY_GBP;
+        label = 'avg year (50 games)';
+        renderBlendedBreakdown(gamesInYear * MATCHDAY_TOTAL_GBP, nonMatchdayDays * NONMATCHDAY_TOTAL_GBP, DOMAIN_YEARLY_GBP, dayTotal);
+      } else {
+        const multiplier = period === 'day' ? 1 : period === 'month' ? 30 : 365;
+        const baseDaily = isMatchdayToday ? MATCHDAY_TOTAL_GBP : NONMATCHDAY_TOTAL_GBP;
+        const domainCost = DOMAIN_DAILY_GBP * multiplier;
+        dayTotal = (baseDaily * multiplier) + domainCost;
+        label = period;
+        renderWorkflowBreakdown(baseDaily * multiplier, domainCost, dayTotal);
+      }
+
+      document.getElementById('cost-total').textContent = `£${dayTotal.toFixed(2)} / ${label}`;
+    }
+
+    function renderWorkflowBreakdown(activityTotal, domainCost, grandTotal) {
+      const relevant = WORKFLOWS.filter(w => isMatchdayToday ? w.matchdayOnly : w.nonMatchday || w.shareOfDay === 0);
+      const shareSum = relevant.reduce((s, w) => s + w.shareOfDay, 0) || 1;
+      const maxShare = Math.max(...relevant.map(w => w.shareOfDay), 0.01);
+
+      document.getElementById('cost-breakdown').innerHTML = relevant
+        .sort((a, b) => b.shareOfDay - a.shareOfDay)
+        .map(w => {
+          const cost = activityTotal * (w.shareOfDay / shareSum);
+          return `
+            <div class="cost-breakdown-row"><span>${w.name}</span><span>£${cost.toFixed(3)}</span></div>
+            <div class="cost-bar-bg"><div class="cost-bar-fill" style="width:${(w.shareOfDay / maxShare) * 100}%"></div></div>
+          `;
+        }).join('') + `
+          <div class="cost-breakdown-row" style="color:var(--muted);"><span>Domain / DNS (Cloudflare)</span><span>£${domainCost.toFixed(3)}</span></div>
+          <div style="margin-top:10px; padding-top:10px; border-top:2px solid var(--navy); display:flex; justify-content:space-between; font-weight:700;">
+            <span>Total</span><span>£${grandTotal.toFixed(2)}</span>
+          </div>
+        `;
+    }
+
+    function renderBlendedBreakdown(matchdayTotal, nonMatchdayTotal, domainTotal, grandTotal) {
+      document.getElementById('cost-breakdown').innerHTML = `
+        <div class="cost-breakdown-row"><span>Matchday activity</span><span>£${matchdayTotal.toFixed(2)}</span></div>
+        <div class="cost-breakdown-row"><span>Non-matchday activity</span><span>£${nonMatchdayTotal.toFixed(2)}</span></div>
+        <div class="cost-breakdown-row" style="color:var(--muted);"><span>Domain / DNS (Cloudflare)</span><span>£${domainTotal.toFixed(2)}</span></div>
+        <div style="margin-top:10px; padding-top:10px; border-top:2px solid var(--navy); display:flex; justify-content:space-between; font-weight:700;">
+          <span>Total</span><span>£${grandTotal.toFixed(2)}</span>
+        </div>
+      `;
+    }
+    <div class="toggle-row">
+        <button class="toggle-btn active" data-period="day" onclick="setCostPeriod('day')">Day</button>
+        <button class="toggle-btn" data-period="month" onclick="setCostPeriod('month')">Month</button>
+        <button class="toggle-btn" data-period="year" onclick="setCostPeriod('year')">Year</button>
+        <button class="toggle-btn" data-period="avg-month" onclick="setCostPeriod('avg-month')">Avg Month</button>
+        <button class="toggle-btn" data-period="avg-year" onclick="setCostPeriod('avg-year')">Avg Year</button>
+      </div>
 
     // ---------- Simple password gate (soft deterrent only, not real security) ----------
     async function sha256(text) {
@@ -407,80 +442,6 @@
       }
       setTimeout(() => { btnEl.textContent = 'Run now'; btnEl.disabled = false; }, 3000);
     }
-
-    // ---------- Cost estimate ----------
-    function toggleMatchday() {
-      isMatchdayToday = document.getElementById('matchday-toggle').checked;
-      const activePeriod = document.querySelector('.toggle-btn.active').dataset.period;
-      setCostPeriod(activePeriod);
-    }
-
-    function effectiveRunsPerDay(wf) {
-      if ((wf.file === 'matchday-live.yml' || wf.file === 'division-scores.yml') && isMatchdayToday) {
-        return 1; // assume one real matchday's worth of activity
-      }
-      return wf.realRunsPerDay;
-    }
-
-    function setCostPeriod(period) {
-      document.querySelectorAll('.toggle-btn').forEach(b => b.classList.toggle('active', b.dataset.period === period));
-
-      const multiplier = period === 'day' ? 1 : period === 'month' ? 30 : 365;
-      let totalX = 0, totalAI = 0;
-
-      const rows = WORKFLOWS.map(wf => {
-        const runs = effectiveRunsPerDay(wf);
-        const xCost = wf.xCost * runs * multiplier;
-        const aiCost = wf.aiCost * runs * multiplier;
-        totalX += xCost;
-        totalAI += aiCost;
-        return { name: wf.name, xCost, aiCost, total: xCost + aiCost };
-      });
-
-      const grandTotal = totalX + totalAI;
-      document.getElementById('cost-total').textContent = `£${grandTotal.toFixed(2)} / ${period}`;
-
-      const maxCost = Math.max(...rows.map(r => r.total), 0.01);
-      document.getElementById('cost-breakdown').innerHTML = rows
-        .sort((a, b) => b.total - a.total)
-        .map(r => `
-          <div class="cost-breakdown-row">
-            <span>${r.name}</span>
-            <span>£${r.total.toFixed(3)} <span style="color:var(--muted); font-weight:400;">(X £${r.xCost.toFixed(3)} · AI £${r.aiCost.toFixed(3)})</span></span>
-          </div>
-          <div class="cost-bar-bg" style="display:flex;">
-            <div style="background:var(--royal); height:100%; width:${(r.xCost / maxCost) * 100}%"></div>
-            <div style="background:var(--amber); height:100%; width:${(r.aiCost / maxCost) * 100}%"></div>
-          </div>
-        `).join('') + `
-          <div style="margin-top:14px; padding-top:10px; border-top:2px solid var(--navy); display:flex; justify-content:space-between; font-weight:700;">
-            <span>Total</span>
-            <span>£${grandTotal.toFixed(2)} <span style="color:var(--muted); font-weight:400; font-size:12px;">(<span style="color:var(--royal);">■</span> X £${totalX.toFixed(2)} · <span style="color:var(--amber);">■</span> AI £${totalAI.toFixed(2)})</span></span>
-          </div>
-        `;
-    }
-
-      const multiplier = period === 'day' ? 1 : period === 'month' ? 30 : 365;
-      let total = 0;
-      const rows = WORKFLOWS.map(wf => {
-        const dailyCost = wf.costPerRealRun * wf.realRunsPerDay;
-        const cost = dailyCost * multiplier;
-        total += cost;
-        return { name: wf.name, cost };
-      });
-
-      document.getElementById('cost-total').textContent = `£${total.toFixed(2)} / ${period}`;
-
-      const maxCost = Math.max(...rows.map(r => r.cost), 0.01);
-      document.getElementById('cost-breakdown').innerHTML = rows
-        .sort((a, b) => b.cost - a.cost)
-        .map(r => `
-          <div class="cost-breakdown-row">
-            <span>${r.name}</span>
-            <span>£${r.cost.toFixed(2)}</span>
-          </div>
-          <div class="cost-bar-bg"><div class="cost-bar-fill" style="width:${(r.cost / maxCost) * 100}%"></div></div>
-        `).join('');
 
     // ---------- Efficiency table ----------
     function renderEfficiencyTable() {
