@@ -1,11 +1,16 @@
 {
-  "generatedAt": "2026-08-10T18:23:10.350Z",
-  "sinceDate": "2026-08-03T18:21:54.788Z",
+  "generatedAt": "2026-08-10T20:04:19.814Z",
+  "sinceDate": "2026-08-03T20:03:14.652Z",
   "clubs": [
     {
       "name": "Sandbach United",
       "handle": "SandbachFC_1st",
       "posts": [
+        {
+          "text": "7.45pm kick off Tuesday at Hind Heath Road, The Bach take on New Mills @NewMillsFC\n\nThis is likely to be a cracker between two teams who have battled it out at in  or around the top 6 in recent seasons. Come down and enjoy some local football.\n\nAdults £6, Concessions £5, U16 £2",
+          "createdAt": "2026-08-10T19:00:45.000Z",
+          "images": []
+        },
         {
           "text": "Congratulations to our very own @cain_harry who became only the 14th player in our history to clock up 100 competitive games at Sandbach United! Here’s to the next 100 Harry!! https://t.co/vqsGCJ8xYd",
           "createdAt": "2026-08-10T09:57:07.000Z",
@@ -644,6 +649,13 @@
       "name": "Stafford Town",
       "handle": "StaffordTown1st",
       "posts": [
+        {
+          "text": "🚨 Player Sponsor! 🚨\n\nLuke Crowther has been sponsored by Lancers Automotive! \n\nThey specialize in sourcing high-quality vehicles from reputable dealers and trusted retailers, ensuring every car we offer meets the highest standards. Whether you’re looking for your dream car or simply exploring options, their team is here to guide you through the entire process. From choosing the perfect vehicle to exploring insurance and financing options, we’re committed to helping you make a confident and informed decision.\n\nWith over 60 years of combined expertise, they truly understand the needs of our customers. Whether you’re buying your first car or upgrading to a newer model, you can trust them to deliver exceptional service tailored to your requirements. Even if you’re just browsing, feel free to reach out to us for advice or guidance. They’re here to make your car-buying journey smooth, enjoyable, and rewarding. \n\nFor more information and to find your next used car, please visit http://lancersautomotive.com\n\nA huge thank you to Lancers for sponsoring Luke and supporting the club! \n\n#UpTheTown",
+          "createdAt": "2026-08-10T19:06:58.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HPYhSC8XgAAZhjA.jpg"
+          ]
+        },
         {
           "text": "🎉 6 Days to go! 🎉\n\nWe are less than a week away from our big 50th anniversary! We have a day full of fun and football. \n\nStarting off with a visit from Newtownbreda FC all the way from Belfast (also celebrating their 50th) who will take on our Development Team in the Hyundai Cup at 11am. \n\nThat is followed by our first team in action in the 1st qualifying round of the FA Vase vs Abbey Hulton United at 3pm\n\nWe can’t wait to welcome you all on this fantastic occasion. A special, printed edition of the Town Times match programme will be available to mark the day. \n\nPay for one game, stay for both! \n🎟️ £7 adults, £5 concessions, u16’s Free\n\nDon’t miss it!\n\n#UpTheTown",
           "createdAt": "2026-08-09T15:27:59.000Z",
@@ -1406,13 +1418,6 @@
           "createdAt": "2026-08-04T07:21:49.000Z",
           "images": [
             "https://pbs.twimg.com/media/HO3GVEuWUAAYnWT.jpg"
-          ]
-        },
-        {
-          "text": "Home under the lights.💡 https://t.co/hObF8eXG7V",
-          "createdAt": "2026-08-03T19:38:27.000Z",
-          "images": [
-            "https://pbs.twimg.com/media/HO0lW92X0AEHKBX.jpg"
           ]
         }
       ]
@@ -2210,13 +2215,6 @@
           "images": [
             "https://pbs.twimg.com/media/HO5WOJDWAAAQ5_q.jpg"
           ]
-        },
-        {
-          "text": "🏆 MAN OF THE MATCH\n\nMan of the Match on Saturday, voted for by the opposition, was Conor Phillips 👏🏼🔴⚪️\n\nA fantastic performance from Conor to help us secure all three points away at Market Drayton, capped off with a goal of the season contender! 🚀⚽️\n\n⭐ Conor is currently available for player sponsorship.\n\nIf you or your business would like to sponsor Conor for the season, please get in touch with the club.\n\n🤝🔴⚪️",
-          "createdAt": "2026-08-03T18:24:22.000Z",
-          "images": [
-            "https://pbs.twimg.com/media/HO0UZ5YWQAAkl3G.jpg"
-          ]
         }
       ]
     },
@@ -2316,7 +2314,7 @@
           ]
         },
         {
-          "text": "MATCH DAY\n\nWe’re back in action this afternoon as we host @WolvesCassies in our third league game of the season.\n\n🕒 15:00 PM KO\n🆚 @WolvesCassies \n📍 Ideal Building Systems Stadium, SK8 2ET\n🎟️ Adults ��6 | Concessions £3\n\n#Wearenomads | @nwcfl | @NWCFLScores https://t.co/6fkWLmCUYq",
+          "text": "MATCH DAY\n\nWe’re back in action this afternoon as we host @WolvesCassies in our third league game of the season.\n\n🕒 15:00 PM KO\n🆚 @WolvesCassies \n📍 Ideal Building Systems Stadium, SK8 2ET\n🎟️ Adults £6 | Concessions £3\n\n#Wearenomads | @nwcfl | @NWCFLScores https://t.co/6fkWLmCUYq",
           "createdAt": "2026-08-08T10:31:49.000Z",
           "images": [
             "https://pbs.twimg.com/media/HPMYMdRXYAA5500.jpg"
@@ -2406,47 +2404,6 @@
         {
           "text": "59’ | GOAL\n\nThe visitors pull one back after capitalising on a Nomads mistake.\n\n@CheadleNomads 2-1 @WidnesTownFC \n\n#WeAreNomads | @nwcfl | @NWCFLScores",
           "createdAt": "2026-08-03T20:04:18.000Z",
-          "images": []
-        },
-        {
-          "text": "45’ | KICK-OFF\n\nWe’re back underway for the second half, and the Nomads make one change.\n\n➡️ 12. D. Byrnes\n⬅️ 9. D. Lewis\n\n@CheadleNomads 2-0 @WidnesTownFC \n\n#WeAreNomads | @nwcfl | @NWCFLScores",
-          "createdAt": "2026-08-03T19:47:01.000Z",
-          "images": []
-        },
-        {
-          "text": "45’ | HALF-TIME\n\nA strong first-half performance from the Nomads sees us head into the break with a deserved two-goal lead.\n\n@CheadleNomads 2-0 @WidnesTownFC \n\n#WeAreNomads | @nwcfl | @NWCFLScores https://t.co/qsBQWIvnCJ",
-          "createdAt": "2026-08-03T19:36:09.000Z",
-          "images": [
-            "https://pbs.twimg.com/media/HO0k1LkX0AAx77B.jpg"
-          ]
-        },
-        {
-          "text": "39’ | GOAL\n\nDan Lewis is at it again! A brilliant delivery from Colville’s set-piece finds Dan, who is there to smash it home!\n\n@CheadleNomads 2-0 @WidnesTownFC \n\n#WeAreNomads | @nwcfl | @NWCFLScores",
-          "createdAt": "2026-08-03T19:29:05.000Z",
-          "images": []
-        },
-        {
-          "text": "39’ | GGOOOOAAALLL\n\n@CheadleNomads 2-0 @WidnesTownFC \n\n#WeAreNomads | @nwcfl | @NWCFLScores https://t.co/Dim5Devqvu",
-          "createdAt": "2026-08-03T19:26:38.000Z",
-          "images": [
-            "https://pbs.twimg.com/media/HO0ipeGXcAAbKH0.jpg"
-          ]
-        },
-        {
-          "text": "22’ | GOAL\n\nLewis threads a brilliant pass through to Ewelike, who brings it down superbly before firing home!\n\n@CheadleNomads 1-0 @WidnesTownFC \n\n#WeAreNomads | @nwcfl | @NWCFLScores",
-          "createdAt": "2026-08-03T19:11:01.000Z",
-          "images": []
-        },
-        {
-          "text": "22’ | GGGOOOAAAL\n\n@CheadleNomads 1-0 @WidnesTownFC \n\n#WeAreNomads | @nwcfl | @NWCFLScores https://t.co/yjJBOKepme",
-          "createdAt": "2026-08-03T19:09:23.000Z",
-          "images": [
-            "https://pbs.twimg.com/media/HO0etP_XkAA_oNQ.jpg"
-          ]
-        },
-        {
-          "text": "1’ | KICK-OFF\n\nLETS GO NOMADS!\n\n@CheadleNomads 0-0 @WidnesTownFC \n\n#WeAreNomads | @nwcfl | @NWCFLScores",
-          "createdAt": "2026-08-03T18:46:53.000Z",
           "images": []
         }
       ]
