@@ -301,14 +301,7 @@
         </div>
       `;
     }
-    <div class="toggle-row">
-        <button class="toggle-btn active" data-period="day" onclick="setCostPeriod('day')">Day</button>
-        <button class="toggle-btn" data-period="month" onclick="setCostPeriod('month')">Month</button>
-        <button class="toggle-btn" data-period="year" onclick="setCostPeriod('year')">Year</button>
-        <button class="toggle-btn" data-period="avg-month" onclick="setCostPeriod('avg-month')">Avg Month</button>
-        <button class="toggle-btn" data-period="avg-year" onclick="setCostPeriod('avg-year')">Avg Year</button>
-      </div>
-
+    
     // ---------- Simple password gate (soft deterrent only, not real security) ----------
     async function sha256(text) {
       const enc = new TextEncoder().encode(text);
