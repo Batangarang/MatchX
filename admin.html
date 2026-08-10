@@ -177,7 +177,7 @@
         Day/Month/Year use real measured whole-day totals (last 3 matchdays and last 3 non-matchdays averaged),
         not per-workflow guesses. The workflow breakdown below is an approximate proportional split of that real
         total, not independently metered. Avg Month/Year model 6 games/month or 50 games/year against the rest of
-        the year as non-matchdays. Includes the £${DOMAIN_YEARLY_GBP.toFixed(2)}/year Cloudflare domain cost.
+        the year as non-matchdays. Includes the <span id="domain-cost-note">—</span>/year Cloudflare domain cost.
       </div>
       <div id="cost-breakdown" style="margin-top:14px;"></div>
     </div>
@@ -209,13 +209,14 @@
     const ADMIN_PASSWORD_HASH = '17a3c1cc9792d6bbf28d8092e88c15953c73fb42f0e6a9499b6b7dc978e48954'; // sha256 of your chosen password — see note below
 
     // Real measured whole-day totals (USD), converted to GBP at ~0.79
-    const USD_TO_GBP = 0.79;
+    const USD_TO_GBP = 0.75;
     const MATCHDAY_TOTAL_USD = (0.44 + 0.44 + 0.65) / 3; // last 3 known matchdays
     const NONMATCHDAY_TOTAL_USD = (0.334 + 0.860 + 0.501) / 3; // recent non-matchdays (GetXAPI shown; Anthropic non-matchday portion assumed proportionally similar ratio to matchday)
     const MATCHDAY_TOTAL_GBP = MATCHDAY_TOTAL_USD * USD_TO_GBP;
     const NONMATCHDAY_TOTAL_GBP = NONMATCHDAY_TOTAL_USD * USD_TO_GBP;
 
     const DOMAIN_YEARLY_GBP = 5.30 * USD_TO_GBP; // Cloudflare charge is in USD
+    document.getElementById('domain-cost-note').textContent = `£${DOMAIN_YEARLY_GBP.toFixed(2)}`;
     const DOMAIN_DAILY_GBP = DOMAIN_YEARLY_GBP / 365;
 
     // Rough proportional split of the blended total across workflows —
@@ -301,7 +302,7 @@
         </div>
       `;
     }
-    
+
     // ---------- Simple password gate (soft deterrent only, not real security) ----------
     async function sha256(text) {
       const enc = new TextEncoder().encode(text);
