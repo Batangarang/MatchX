@@ -163,6 +163,10 @@
 
     <div class="card">
       <h2>Estimated Cost</h2>
+      label style="display:flex; align-items:center; gap:8px; font-size:13px; margin-bottom:12px;">
+        <input type="checkbox" id="matchday-toggle" onchange="toggleMatchday()">
+        Today is a matchday (include Matchday Live / Division Scores in the estimate)
+      </label>
       <div class="toggle-row">
         <button class="toggle-btn active" data-period="day" onclick="setCostPeriod('day')">Day</button>
         <button class="toggle-btn" data-period="month" onclick="setCostPeriod('month')">Month</button>
@@ -207,7 +211,7 @@
         name: 'Scrape Sandbach Fixtures',
         pulls: 'nwcfl.com: fixtures, league table, player stats, attendance, position history',
         skipLogic: 'Hourly gate — real work only ~once/hour even though triggered every 5 min',
-        costPerRealRun: 0, // no paid API involved
+        xCost: 0, aiCost: 0,
         realRunsPerDay: 24,
       },
       {
@@ -215,23 +219,23 @@
         name: 'Matchday Live Tracker',
         pulls: 'X posts (home + away club) + vision analysis of new images, on Sandbach\'s own match day',
         skipLogic: 'Only active kickoff-90min to kickoff+150/240min; skips if no new posts/images since last check',
-        costPerRealRun: 0.03,
-        realRunsPerDay: 0, // only active on matchdays — see note
+        xCost: 0.008, aiCost: 0.022,
+        realRunsPerDay: 0, // see matchday toggle below
       },
       {
         file: 'division-scores.yml',
         name: 'Division Scores',
         pulls: 'X posts from ~19 division clubs, on any day with First Division South fixtures',
         skipLogic: 'Resets to fixture-only before 11am; polls only within the whole division\'s match window; skips if nothing new',
-        costPerRealRun: 0.08,
-        realRunsPerDay: 0, // only active on fixture days
+        xCost: 0.02, aiCost: 0.06,
+        realRunsPerDay: 0, // see matchday toggle below
       },
       {
         file: 'x-live.yml',
         name: 'Poll X (Fan Briefing)',
         pulls: 'Sandbach\'s own X posts + NWCFL news articles + Fan Briefing regeneration',
         skipLogic: 'x-posts.js gated to 30min/3hr/matchday tiers; x-insights.js skips if underlying posts unchanged since last summary',
-        costPerRealRun: 0.005,
+        xCost: 0.003, aiCost: 0.002,
         realRunsPerDay: 6,
       },
       {
@@ -239,23 +243,23 @@
         name: 'Weekend Preview',
         pulls: 'Next weekend\'s division fixtures + recent club posts + league table',
         skipLogic: 'Runs once, always regenerates fresh (Friday-scheduled)',
-        costPerRealRun: 0.06,
-        realRunsPerDay: 0.14, // ~once/week
+        xCost: 0.02, aiCost: 0.04,
+        realRunsPerDay: 0.14,
       },
       {
         file: 'division-recap-weekend-recap.yml',
         name: 'Weekend Recap',
         pulls: 'Weekend\'s played fixtures + club posts + league table',
         skipLogic: 'Only proceeds once, ~3hrs after the latest weekend kickoff; skips outside a real weekend',
-        costPerRealRun: 0.06,
-        realRunsPerDay: 0.29, // ~twice/week (Sat+Sun coverage)
+        xCost: 0.02, aiCost: 0.04,
+        realRunsPerDay: 0.29,
       },
       {
         file: 'division-recap-midweek-preview.yml',
         name: 'Midweek Preview',
         pulls: 'Tomorrow\'s midweek fixtures (if any) + club posts + league table',
         skipLogic: 'Skips entirely if no midweek fixtures tomorrow',
-        costPerRealRun: 0.05,
+        xCost: 0.015, aiCost: 0.035,
         realRunsPerDay: 0.14,
       },
       {
@@ -263,10 +267,12 @@
         name: 'Midweek Recap',
         pulls: 'Today\'s midweek fixtures (if any) + club posts + league table',
         skipLogic: 'Skips if no midweek fixtures today; only proceeds ~3hrs after latest kickoff',
-        costPerRealRun: 0.05,
+        xCost: 0.015, aiCost: 0.035,
         realRunsPerDay: 0.14,
       },
     ];
+
+    let isMatchdayToday = false; // toggle below lets you flip this on manually
 
     // ---------- Simple password gate (soft deterrent only, not real security) ----------
     async function sha256(text) {
@@ -403,8 +409,56 @@
     }
 
     // ---------- Cost estimate ----------
+    function toggleMatchday() {
+      isMatchdayToday = document.getElementById('matchday-toggle').checked;
+      const activePeriod = document.querySelector('.toggle-btn.active').dataset.period;
+      setCostPeriod(activePeriod);
+    }
+
+    function effectiveRunsPerDay(wf) {
+      if ((wf.file === 'matchday-live.yml' || wf.file === 'division-scores.yml') && isMatchdayToday) {
+        return 1; // assume one real matchday's worth of activity
+      }
+      return wf.realRunsPerDay;
+    }
+
     function setCostPeriod(period) {
       document.querySelectorAll('.toggle-btn').forEach(b => b.classList.toggle('active', b.dataset.period === period));
+
+      const multiplier = period === 'day' ? 1 : period === 'month' ? 30 : 365;
+      let totalX = 0, totalAI = 0;
+
+      const rows = WORKFLOWS.map(wf => {
+        const runs = effectiveRunsPerDay(wf);
+        const xCost = wf.xCost * runs * multiplier;
+        const aiCost = wf.aiCost * runs * multiplier;
+        totalX += xCost;
+        totalAI += aiCost;
+        return { name: wf.name, xCost, aiCost, total: xCost + aiCost };
+      });
+
+      const grandTotal = totalX + totalAI;
+      document.getElementById('cost-total').textContent = `£${grandTotal.toFixed(2)} / ${period}`;
+
+      const maxCost = Math.max(...rows.map(r => r.total), 0.01);
+      document.getElementById('cost-breakdown').innerHTML = rows
+        .sort((a, b) => b.total - a.total)
+        .map(r => `
+          <div class="cost-breakdown-row">
+            <span>${r.name}</span>
+            <span>£${r.total.toFixed(3)} <span style="color:var(--muted); font-weight:400;">(X £${r.xCost.toFixed(3)} · AI £${r.aiCost.toFixed(3)})</span></span>
+          </div>
+          <div class="cost-bar-bg" style="display:flex;">
+            <div style="background:var(--royal); height:100%; width:${(r.xCost / maxCost) * 100}%"></div>
+            <div style="background:var(--amber); height:100%; width:${(r.aiCost / maxCost) * 100}%"></div>
+          </div>
+        `).join('') + `
+          <div style="margin-top:14px; padding-top:10px; border-top:2px solid var(--navy); display:flex; justify-content:space-between; font-weight:700;">
+            <span>Total</span>
+            <span>£${grandTotal.toFixed(2)} <span style="color:var(--muted); font-weight:400; font-size:12px;">(<span style="color:var(--royal);">■</span> X £${totalX.toFixed(2)} · <span style="color:var(--amber);">■</span> AI £${totalAI.toFixed(2)})</span></span>
+          </div>
+        `;
+    }
 
       const multiplier = period === 'day' ? 1 : period === 'month' ? 30 : 365;
       let total = 0;
