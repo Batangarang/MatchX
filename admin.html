@@ -340,7 +340,9 @@
     // ---------- GitHub Actions data (real, live) ----------
     async function fetchWorkflowRuns(workflowFile) {
       const url = `https://api.github.com/repos/${REPO}/actions/workflows/${workflowFile}/runs?per_page=10`;
-      const res = await fetch(url);
+      const token = localStorage.getItem('matchx_gh_token');
+      const headers = token ? { 'Authorization': `Bearer ${token}`, 'Accept': 'application/vnd.github+json' } : {};
+      const res = await fetch(url, { headers });
       if (!res.ok) return null;
       const data = await res.json();
       return data.workflow_runs || [];
