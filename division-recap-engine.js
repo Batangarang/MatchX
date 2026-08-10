@@ -186,33 +186,28 @@ async function run() {
   const prompt = isPreview
     ? `Here are the upcoming First Division South fixtures for ${periodLabel}:
 ${fixtureList}
-
 IMPORTANT: In the fixture list above, the format is always "Home Team v Away Team" — the first team named is always playing at home, the second team is always the visitor. Do not reverse this or infer venue/direction from anything else in the posts — always trust this explicit home/away order from the fixture list.
-
 Here is the current league table:
 ${leagueContext}
-
 Here are recent X posts from clubs in the division:
 ${postsText || '(No recent posts.)'}
-
-Write a preview for Sandbach United fans covering ${periodLabel}'s fixtures — highlight anything notable (title-race relevance, in-form teams, key clashes). Plain text only, no markdown, no headers.`
+Respond with ONLY a JSON object, no other text, no markdown fences, in exactly this shape:
+{
+  "sandbachFocus": "2-4 sentences specifically previewing Sandbach United's own upcoming fixture(s) this period — opponent, venue (remember: trust the home/away order given above), and anything notable about the matchup",
+  "divisionWide": "A separate preview covering the REST of the division's upcoming fixtures this period — highlight anything notable (title-race relevance, in-form teams, key clashes). Group by theme, not club-by-club. Do NOT repeat Sandbach's own fixture here, that's covered separately above."
+}`
     : `Here are the First Division South fixtures that were played ${periodLabel}:
 ${fixtureList}
-
 IMPORTANT: In the fixture list above, the format is always "Home Team v Away Team" — the first team named is always playing at home, the second team is always the visitor. Do not reverse this or infer venue/direction from anything else in the posts — always trust this explicit home/away order from the fixture list.
-
 Here is the current league table:
-
 ${leagueContext}
-
 Here are recent X posts from clubs in the division:
 ${postsText || '(No recent posts.)'}
-
 Respond with ONLY a JSON object, no other text, no markdown fences, in exactly this shape:
 {
   "sandbachFocus": "2-4 sentences specifically about Sandbach United's own result(s) this period — what happened, the scoreline, any standout performances or incidents",
   "divisionWide": "A separate round-up covering the REST of the division — teams in unusually good or bad form, notable results, table movement, player signings or squad news. Group by theme, not club-by-club. Only discuss teams with genuinely notable news or results — skip anyone with nothing interesting to report. Do NOT repeat Sandbach's own result here, that's covered separately above."
-}
+}`;
 
 Plain text only within each field, no markdown, no headers.`;
 
