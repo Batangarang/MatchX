@@ -407,62 +407,81 @@
     function toggleMatchday() {
       isMatchdayToday = document.getElementById('matchday-toggle').checked;
       const activePeriod = document.querySelector('.toggle-btn.active').dataset.period;
-      setCostPeriod(activePeriod);
+      setCostPeriod(activePeriod === 'day' ? 'day' : activePeriod);
     }
+
+    // Rough estimated split of the real combined total — not independently
+    // measured, since GetXAPI/Anthropic don't expose this breakdown themselves
+    const X_SHARE = 0.45;
+    const AI_SHARE = 0.55;
 
     function setCostPeriod(period) {
       document.querySelectorAll('.toggle-btn').forEach(b => b.classList.toggle('active', b.dataset.period === period));
 
-      let dayTotal, label;
-
-      if (period === 'avg-month') {
-        const gamesInMonth = 6;
-        const nonMatchdayDays = 30 - gamesInMonth;
-        const matchdayTotal = gamesInMonth * MATCHDAY_TOTAL_GBP;
-        const nonMatchdayTotal = nonMatchdayDays * NONMATCHDAY_TOTAL_GBP;
-        const domainTotal = DOMAIN_DAILY_GBP * 30;
-        dayTotal = matchdayTotal + nonMatchdayTotal + domainTotal;
-        label = 'avg month (6 games)';
-        renderBlendedBreakdown(matchdayTotal, nonMatchdayTotal, domainTotal, dayTotal);
-      } else if (period === 'avg-year') {
-        const gamesInYear = 50;
-        const nonMatchdayDays = 365 - gamesInYear;
-        const matchdayTotal = gamesInYear * MATCHDAY_TOTAL_GBP;
-        const nonMatchdayTotal = nonMatchdayDays * NONMATCHDAY_TOTAL_GBP;
-        dayTotal = matchdayTotal + nonMatchdayTotal + DOMAIN_YEARLY_GBP;
-        label = 'avg year (50 games)';
-        renderBlendedBreakdown(matchdayTotal, nonMatchdayTotal, DOMAIN_YEARLY_GBP, dayTotal);
-      } else {
-        const multiplier = period === 'day' ? 1 : period === 'month' ? 30 : 365;
+      if (period === 'day') {
         const baseDaily = isMatchdayToday ? MATCHDAY_TOTAL_GBP : NONMATCHDAY_TOTAL_GBP;
-        const domainCost = DOMAIN_DAILY_GBP * multiplier;
-        dayTotal = (baseDaily * multiplier) + domainCost;
-        label = period;
-        renderWorkflowBreakdown(baseDaily * multiplier, domainCost, dayTotal);
+        const domainCost = DOMAIN_DAILY_GBP;
+        const total = baseDaily + domainCost;
+        document.getElementById('cost-total').textContent = `£${total.toFixed(2)} / day${isMatchdayToday ? ' (matchday)' : ''}`;
+        renderSplitBreakdown(baseDaily, domainCost, total);
+        return;
       }
 
-      document.getElementById('cost-total').textContent = `£${dayTotal.toFixed(2)} / ${label}`;
+      // Month, Year, Avg Month, Avg Year all use the same realistic blend —
+      // the matchday toggle only affects the single "Day" view
+      let gamesCount, totalDays, domainCost, label;
+      if (period === 'month' || period === 'avg-month') {
+        gamesCount = 6; totalDays = 30; domainCost = DOMAIN_DAILY_GBP * 30;
+        label = period === 'month' ? 'month' : 'avg month (6 games)';
+      } else {
+        gamesCount = 50; totalDays = 365; domainCost = DOMAIN_YEARLY_GBP;
+        label = period === 'year' ? 'year' : 'avg year (50 games)';
+      }
+
+      const nonMatchdayDays = totalDays - gamesCount;
+      const matchdayTotal = gamesCount * MATCHDAY_TOTAL_GBP;
+      const nonMatchdayTotal = nonMatchdayDays * NONMATCHDAY_TOTAL_GBP;
+      const grandTotal = matchdayTotal + nonMatchdayTotal + domainCost;
+
+      document.getElementById('cost-total').textContent = `£${grandTotal.toFixed(2)} / ${label}`;
+      renderBlendedBreakdown(matchdayTotal, nonMatchdayTotal, domainCost, grandTotal);
     }
 
-    function renderWorkflowBreakdown(activityTotal, domainCost, grandTotal) {
-      const relevant = WORKFLOWS.filter(w => isMatchdayToday ? w.matchdayOnly : w.nonMatchday || w.shareOfDay === 0);
-      const shareSum = relevant.reduce((s, w) => s + w.shareOfDay, 0) || 1;
-      const maxShare = Math.max(...relevant.map(w => w.shareOfDay), 0.01);
+    function renderSplitBreakdown(activityTotal, domainCost, grandTotal) {
+      const xCost = activityTotal * X_SHARE;
+      const aiCost = activityTotal * AI_SHARE;
+      const maxCost = Math.max(xCost, aiCost, 0.01);
 
-      document.getElementById('cost-breakdown').innerHTML = relevant
-        .sort((a, b) => b.shareOfDay - a.shareOfDay)
-        .map(w => {
-          const cost = activityTotal * (w.shareOfDay / shareSum);
-          return `
-            <div class="cost-breakdown-row"><span>${w.name}</span><span>£${cost.toFixed(3)}</span></div>
-            <div class="cost-bar-bg"><div class="cost-bar-fill" style="width:${(w.shareOfDay / maxShare) * 100}%"></div></div>
-          `;
-        }).join('') + `
-          <div class="cost-breakdown-row" style="color:var(--muted);"><span>Domain / DNS (Cloudflare)</span><span>£${domainCost.toFixed(3)}</span></div>
-          <div style="margin-top:10px; padding-top:10px; border-top:2px solid var(--navy); display:flex; justify-content:space-between; font-weight:700;">
-            <span>Total</span><span>£${grandTotal.toFixed(2)}</span>
-          </div>
-        `;
+      document.getElementById('cost-breakdown').innerHTML = `
+        <div class="cost-breakdown-row"><span>GetXAPI (est.)</span><span>£${xCost.toFixed(3)}</span></div>
+        <div class="cost-bar-bg"><div class="cost-bar-fill" style="background:var(--royal); width:${(xCost / maxCost) * 100}%"></div></div>
+        <div class="cost-breakdown-row"><span>Anthropic (est.)</span><span>£${aiCost.toFixed(3)}</span></div>
+        <div class="cost-bar-bg"><div class="cost-bar-fill" style="background:var(--amber); width:${(aiCost / maxCost) * 100}%"></div></div>
+        <div class="cost-breakdown-row" style="color:var(--muted);"><span>Domain / DNS (Cloudflare)</span><span>£${domainCost.toFixed(3)}</span></div>
+        <div style="margin-top:10px; padding-top:10px; border-top:2px solid var(--navy); display:flex; justify-content:space-between; font-weight:700;">
+          <span>Total</span><span>£${grandTotal.toFixed(2)}</span>
+        </div>
+      `;
+    }
+
+    function renderBlendedBreakdown(matchdayTotal, nonMatchdayTotal, domainTotal, grandTotal) {
+      const xTotal = (matchdayTotal + nonMatchdayTotal) * X_SHARE;
+      const aiTotal = (matchdayTotal + nonMatchdayTotal) * AI_SHARE;
+      const maxCost = Math.max(matchdayTotal, nonMatchdayTotal, xTotal, aiTotal, 0.01);
+
+      document.getElementById('cost-breakdown').innerHTML = `
+        <div class="cost-breakdown-row"><span>Matchday activity</span><span>£${matchdayTotal.toFixed(2)}</span></div>
+        <div class="cost-breakdown-row"><span>Non-matchday activity</span><span>£${nonMatchdayTotal.toFixed(2)}</span></div>
+        <div style="margin:10px 0; border-top:1px dashed var(--line);"></div>
+        <div class="cost-breakdown-row"><span>— of which GetXAPI (est.)</span><span>£${xTotal.toFixed(2)}</span></div>
+        <div class="cost-bar-bg"><div class="cost-bar-fill" style="background:var(--royal); width:${(xTotal / maxCost) * 100}%"></div></div>
+        <div class="cost-breakdown-row"><span>— of which Anthropic (est.)</span><span>£${aiTotal.toFixed(2)}</span></div>
+        <div class="cost-bar-bg"><div class="cost-bar-fill" style="background:var(--amber); width:${(aiTotal / maxCost) * 100}%"></div></div>
+        <div class="cost-breakdown-row" style="color:var(--muted);"><span>Domain / DNS (Cloudflare)</span><span>£${domainTotal.toFixed(2)}</span></div>
+        <div style="margin-top:10px; padding-top:10px; border-top:2px solid var(--navy); display:flex; justify-content:space-between; font-weight:700;">
+          <span>Total</span><span>£${grandTotal.toFixed(2)}</span>
+        </div>
+      `;
     }
 
     function renderBlendedBreakdown(matchdayTotal, nonMatchdayTotal, domainTotal, grandTotal) {
