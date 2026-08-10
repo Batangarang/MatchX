@@ -481,6 +481,31 @@
       `;
     }
 
+    function renderGroupedBreakdown(groups, domainCost, grandTotal) {
+      const allValues = groups.flatMap(g => [g.total, g.total * X_SHARE, g.total * AI_SHARE]);
+      const maxCost = Math.max(...allValues, domainCost, 0.01);
+
+      const groupsHtml = groups.map(g => {
+        const xCost = g.total * X_SHARE;
+        const aiCost = g.total * AI_SHARE;
+        return `
+          <div class="cost-breakdown-row" style="font-weight:700;"><span>${g.label}</span><span>£${g.total.toFixed(3)}</span></div>
+          <div class="cost-bar-bg"><div class="cost-bar-fill" style="width:${(g.total / maxCost) * 100}%"></div></div>
+          <div class="cost-breakdown-row" style="padding-left:12px; font-size:12px;"><span>— GetXAPI (est.)</span><span>£${xCost.toFixed(3)}</span></div>
+          <div class="cost-bar-bg"><div class="cost-bar-fill" style="background:var(--royal); width:${(xCost / maxCost) * 100}%"></div></div>
+          <div class="cost-breakdown-row" style="padding-left:12px; font-size:12px;"><span>— Anthropic (est.)</span><span>£${aiCost.toFixed(3)}</span></div>
+          <div class="cost-bar-bg"><div class="cost-bar-fill" style="background:var(--amber); width:${(aiCost / maxCost) * 100}%"></div></div>
+        `;
+      }).join('<div style="height:8px;"></div>');
+
+      document.getElementById('cost-breakdown').innerHTML = groupsHtml + `
+        <div class="cost-breakdown-row" style="color:var(--muted); margin-top:8px;"><span>Domain / DNS (Cloudflare)</span><span>£${domainCost.toFixed(3)}</span></div>
+        <div style="margin-top:10px; padding-top:10px; border-top:2px solid var(--navy); display:flex; justify-content:space-between; font-weight:700;">
+          <span>Total</span><span>£${grandTotal.toFixed(2)}</span>
+        </div>
+      `;
+    }
+
     function renderBlendedBreakdown(matchdayTotal, nonMatchdayTotal, domainTotal, grandTotal) {
       const xTotal = (matchdayTotal + nonMatchdayTotal) * X_SHARE;
       const aiTotal = (matchdayTotal + nonMatchdayTotal) * AI_SHARE;
