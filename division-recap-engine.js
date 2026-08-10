@@ -55,10 +55,10 @@ function getWeekendRange(today) {
 function getNextWeekendRange(now) {
   // The NEXT upcoming Saturday-Sunday pair, regardless of what day it is today
   // (used by weekend-preview, which can run any day of the week)
-  const day = now.getDay(); // 0 = Sunday, 6 = Saturday
+  const day = now.getDay();
   let daysUntilSaturday;
   if (day === 6) daysUntilSaturday = 0;
-  else if (day === 0) daysUntilSaturday = -1; // yesterday was Saturday, still "this weekend"
+  else if (day === 0) daysUntilSaturday = -1;
   else daysUntilSaturday = 6 - day;
 
   const saturday = new Date(now);
@@ -202,7 +202,19 @@ async function run() {
       const homeTeam = sandbachFixture.homeAway === 'H' ? 'Sandbach United' : sandbachFixture.opposition;
       const awayTeam = sandbachFixture.homeAway === 'H' ? sandbachFixture.opposition : 'Sandbach United';
       const competitionText = sandbachFixture.competitionNote ? ` (${sandbachFixture.competitionNote})` : '';
-      sandbachOverrideNote = `\n\nIMPORTANT: Sandbach United's actual fixture in this period is: ${homeTeam} v ${awayTeam} (${sandbachFixture.date}, KO ${sandbachFixture.kickoff}${competitionText}). Use this REAL fixture when describing Sandbach's own match this period — do not substitute a different fixture or date for Sandbach.`;
+
+      let levelWarning = '';
+      if (sandbachFixture.competitionNote) {
+        const opponentInLeagueTable = fs.existsSync('league.json') &&
+          JSON.parse(fs.readFileSync('league.json', 'utf-8')).standings
+            .some(t => t.team === sandbachFixture.opposition);
+
+        if (!opponentInLeagueTable) {
+          levelWarning = ` IMPORTANT: ${sandbachFixture.opposition} do NOT play in Sandbach's league (First Division South) — they are a cup opponent from a different league/tier. Do NOT compare league points, form, or table position between the two teams, as this is misleading when they play at different levels. If you don't know ${sandbachFixture.opposition}'s actual league/level, simply don't speculate about it — focus on the cup occasion itself, the round, and any genuine team news instead.`;
+        }
+      }
+
+      sandbachOverrideNote = `\n\nIMPORTANT: Sandbach United's actual fixture in this period is: ${homeTeam} v ${awayTeam} (${sandbachFixture.date}, KO ${sandbachFixture.kickoff}${competitionText}). Use this REAL fixture when describing Sandbach's own match this period — do not substitute a different fixture or date for Sandbach.${levelWarning}`;
     }
   }
 
