@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-08-11T19:20:58.031Z",
+  "generatedAt": "2026-08-11T19:31:08.567Z",
   "fixtureDate": "2026-08-11",
   "kickoff": "19:45",
   "homeTeam": "Sandbach United",
   "awayTeam": "New Mills",
-  "postsUsed": 13,
+  "postsUsed": 14,
   "imagesAnalyzedThisRun": 0,
   "totalImagesAnalyzed": 4,
   "match": {
@@ -80,24 +80,24 @@
     },
     "roughXG": {
       "firstHalf": {
-        "home": 0.4,
-        "away": 0.5,
-        "note": "Home side created chances (Bev volley over, Saul side volley saved, Hatton header on bar), away side had a great effort from outside the box that flashed wide and a low cross cleared. Match competitive with chances at both ends."
+        "home": 0.3,
+        "away": 0.4,
+        "note": "Limited descriptive detail; home team had chances (Bev volley over, Saul volley saved, Hatton header on bar), away team produced dangerous efforts (outside-box shot wide, low cross cleared, scrambled goal). Estimate reflects home dominance but away clinical finish."
       },
       "secondHalf": {
         "home": 0,
         "away": 0,
-        "note": "No second-half data available in posts."
+        "note": "Match posts end at 41 minutes; no second-half data available."
       },
       "extraTime": {
         "home": 0,
         "away": 0,
-        "note": null
+        "note": "No extra time played."
       },
       "total": {
-        "home": 0.4,
-        "away": 0.5,
-        "note": "Rough estimate based on first-half play only. Both sides had clear-cut chances."
+        "home": 0.3,
+        "away": 0.4,
+        "note": "Data covers only first 41 minutes of 90-minute match. Rough estimate based on described chances only."
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure. Values are illustrative, not calculated from actual shot data."
     },
@@ -105,22 +105,22 @@
       "firstHalf": {
         "home": 55,
         "away": 45,
-        "note": "Sandbach created several chances and appeared to be on top for much of the first half ('against the run of play' indicates New Mills' goal was somewhat against the flow), but New Mills scored despite being second best."
+        "note": "Sandbach dominating early play (Barry, Bev, Saul creating chances), but New Mills scored 'against the run of play' and created dangerous moments (outside-box effort, low cross). Home team slightly on top but away clinical."
       },
       "secondHalf": {
         "home": 50,
         "away": 50,
-        "note": "No second-half data available in posts."
+        "note": "Match posts end at 41 minutes; no second-half data available."
       },
       "extraTime": {
         "home": 50,
         "away": 50,
-        "note": null
+        "note": "No extra time played."
       },
       "total": {
         "home": 55,
         "away": 45,
-        "note": "Based on first-half commentary only. Limited data for match control assessment."
+        "note": "Data covers only first 41 minutes of 90-minute match. Home team had territorial dominance and more early chances, but away team scored and created key opportunities."
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
