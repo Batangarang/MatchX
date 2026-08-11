@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-11T20:55:44.609Z",
+  "generatedAt": "2026-08-11T21:01:08.600Z",
   "games": [
     {
       "opponent": "Wednesfield Community",
@@ -12,9 +12,15 @@
       "score": "1-0",
       "attendance": 162,
       "date": "Sat 08/08/26"
+    },
+    {
+      "opponent": "New Mills",
+      "score": "1-3",
+      "attendance": 140,
+      "date": "Tue 11/08/26"
     }
   ],
-  "average": 147,
+  "average": 145,
   "lowest": {
     "opponent": "Wednesfield Community",
     "score": "2-1",
