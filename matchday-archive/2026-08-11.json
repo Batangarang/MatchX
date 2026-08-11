@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-08-11T20:31:02.126Z",
+  "generatedAt": "2026-08-11T20:35:54.168Z",
   "fixtureDate": "2026-08-11",
   "kickoff": "19:45",
   "homeTeam": "Sandbach United",
   "awayTeam": "New Mills",
-  "postsUsed": 28,
+  "postsUsed": 29,
   "imagesAnalyzedThisRun": 0,
   "totalImagesAnalyzed": 6,
   "match": {
-    "score": "1-1",
+    "score": "1-2",
     "scoreDiscrepancy": null,
     "finalScoreAnnounced": null,
     "halfTimeScoreAnnounced": "0-1",
@@ -56,6 +56,11 @@
         "minute": 52,
         "team": "home",
         "scorer": "own goal"
+      },
+      {
+        "minute": 85,
+        "team": "away",
+        "scorer": "Unknown"
       }
     ],
     "yellowCards": [
@@ -96,6 +101,12 @@
         "team": "away",
         "playerOff": "10",
         "playerOn": "15"
+      },
+      {
+        "minute": 62,
+        "team": "away",
+        "playerOff": "Number 10",
+        "playerOn": "Number 15"
       }
     ],
     "sinBins": [
@@ -108,6 +119,11 @@
         "minute": 56,
         "team": "home",
         "player": "4"
+      },
+      {
+        "minute": 56,
+        "team": "home",
+        "player": "Number 4"
       }
     ],
     "injuries": [],
@@ -129,12 +145,12 @@
       "firstHalf": {
         "home": 0.3,
         "away": 0.4,
-        "note": "New Mills had early chances and dominated first ball; Sandbach had efforts from Bev and Saul but New Mills broke through. New Mills slightly more threatening before goal."
+        "note": "New Mills dominated early exchanges and won majority of first ball; Sandbach had chances (Bev volley over, Saul header saved, Hatton header on bar) but New Mills broke through on counter for scrambled goal. Slight edge to away team."
       },
       "secondHalf": {
         "home": 0.5,
-        "away": 0.2,
-        "note": "Sandbach improved significantly after the break, creating multiple chances (Barry, Mitch Nolan, Bev); New Mills made defensive substitution and appeared to retreat. Sandbach getting on top by 80 mins."
+        "away": 0.3,
+        "note": "Sandbach improved significantly after equaliser, got on top, created chances (Barry volley/shot wide, Bev blocked on line), but New Mills scored second on counter-attack with header from free kick. Sandbach pressing late but unable to finish."
       },
       "extraTime": {
         "home": 0,
@@ -143,31 +159,31 @@
       },
       "total": {
         "home": 0.8,
-        "away": 0.6,
-        "note": "New Mills more dangerous in first half but scraped through on counter-attack; Sandbach dominated second half with better chances but could not find winner."
+        "away": 0.7,
+        "note": "Balanced match with both sides creating chances. Sandbach had more shots in second half but New Mills clinical on breaks. Final score 1-2 to away team."
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure. Values are illustrative, not calculated from actual shot data."
     },
     "matchControl": {
       "firstHalf": {
-        "home": 45,
-        "away": 55,
-        "note": "New Mills 'winning the majority of the first ball' and dangerous on the counter; Sandbach had chances but were less dominant."
+        "home": 40,
+        "away": 60,
+        "note": "New Mills won majority of first ball and dangerous on counter-attack despite Sandbach having chances. Away team controlled tempo."
       },
       "secondHalf": {
         "home": 65,
         "away": 35,
-        "note": "Sandbach 'getting on top now' by 80 mins; multiple chances created; New Mills retreated after substitution."
+        "note": "Sandbach improved significantly after equaliser, got on top, pressing and creating chances. New Mills defended but struck on counter for second goal late on."
       },
       "extraTime": {
-        "home": 0,
-        "away": 0,
+        "home": 50,
+        "away": 50,
         "note": null
       },
       "total": {
-        "home": 55,
-        "away": 45,
-        "note": "New Mills stronger in first half, Sandbach stronger in second. Match ended 1-1 at 80 mins with Sandbach pushing for winner."
+        "home": 52,
+        "away": 48,
+        "note": "Fairly balanced overall. New Mills started well and scored twice on breaks; Sandbach dominated large portions of second half but couldn't convert pressure into goals."
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
