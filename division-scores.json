@@ -1,17 +1,22 @@
 {
-  "generatedAt": "2026-08-11T18:45:40.245Z",
-  "date": "2026-08-11",
-  "isToday": true,
-  "postCount": 3,
+  "generatedAt": "2026-08-11T19:01:05.542Z",
+  "date": "2026-08-12",
+  "isToday": false,
   "fixtures": [
     {
-      "home": "Crewe",
-      "away": "Foley Meir",
-      "kickoff": "20:00",
+      "home": "Barnton",
+      "away": "Cheadle Heath Nomads",
+      "kickoff": "19:45",
       "score": null,
-      "goals": [],
+      "redCards": []
+    },
+    {
+      "home": "Wolverhampton Casuals",
+      "away": "Eccleshall",
+      "kickoff": "19:45",
+      "score": null,
       "redCards": []
     }
   ],
-  "ticker": "@foley_fc: 𝗧𝗘𝗔𝗠 𝗡𝗘𝗪𝗦 | 𝗖𝗥𝗘𝗪𝗘 𝗙𝗖 (𝗔) 💛🩶\n\nHere’s how Foley line up for tonight’s trip to Crewe FC in the North West Counties League.\n\nThe lads will be looking for a response tonight as we get back on the road for another league test.\n\n#UpTheFoley | #TeamNews | #Since1947 https://t.co/OsFOrUasAg"
+  "ticker": null
 }
