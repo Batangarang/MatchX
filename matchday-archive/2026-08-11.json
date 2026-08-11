@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-11T18:15:54.708Z",
+  "generatedAt": "2026-08-11T18:30:55.893Z",
   "fixtureDate": "2026-08-11",
   "kickoff": "19:45",
   "homeTeam": "Sandbach United",
   "awayTeam": "New Mills",
-  "postsUsed": 3,
-  "imagesAnalyzedThisRun": 1,
+  "postsUsed": 4,
+  "imagesAnalyzedThisRun": 0,
   "totalImagesAnalyzed": 3,
   "match": {
     "score": null,
@@ -70,22 +70,22 @@
       "firstHalf": {
         "home": 0,
         "away": 0,
-        "note": "No match events reported yet"
+        "note": "No match commentary available; match had not been played at time of final post"
       },
       "secondHalf": {
         "home": 0,
         "away": 0,
-        "note": "No match events reported yet"
+        "note": "No match commentary available"
       },
       "extraTime": {
         "home": 0,
         "away": 0,
-        "note": "No extra time"
+        "note": "Not applicable"
       },
       "total": {
         "home": 0,
         "away": 0,
-        "note": "No match events reported yet"
+        "note": "No match commentary available; match had not been played at time of final post"
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure. Values are illustrative, not calculated from actual shot data."
     },
@@ -93,22 +93,22 @@
       "firstHalf": {
         "home": 50,
         "away": 50,
-        "note": "Match not yet started; no data to assess control"
+        "note": "No match commentary available; match had not been played at time of final post"
       },
       "secondHalf": {
         "home": 50,
         "away": 50,
-        "note": "Match not yet started; no data to assess control"
+        "note": "No match commentary available"
       },
       "extraTime": {
         "home": 50,
         "away": 50,
-        "note": "No extra time"
+        "note": "Not applicable"
       },
       "total": {
         "home": 50,
         "away": 50,
-        "note": "Match not yet started; no data to assess control"
+        "note": "No match commentary available; match had not been played at time of final post"
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
