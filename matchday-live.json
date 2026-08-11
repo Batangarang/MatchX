@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-08-11T20:45:51.973Z",
+  "generatedAt": "2026-08-11T20:50:47.837Z",
   "fixtureDate": "2026-08-11",
   "kickoff": "19:45",
   "homeTeam": "Sandbach United",
   "awayTeam": "New Mills",
-  "postsUsed": 31,
+  "postsUsed": 32,
   "imagesAnalyzedThisRun": 0,
   "totalImagesAnalyzed": 6,
   "match": {
     "score": "1-3",
     "scoreDiscrepancy": null,
-    "finalScoreAnnounced": null,
+    "finalScoreAnnounced": "1-3",
     "halfTimeScoreAnnounced": "0-1",
     "htDiscrepancy": null,
     "matchStage": "full_time",
@@ -149,13 +149,13 @@
     "roughXG": {
       "firstHalf": {
         "home": 0.35,
-        "away": 0.45,
-        "note": "Sandbach had efforts including a header hitting the bar and a volley over; New Mills had a dangerous effort from outside the box going wide and created the scrambled goal. New Mills appeared more dangerous on the counter despite Sandbach creating chances."
+        "away": 0.5,
+        "note": "Sandbach had chances (volley, header on bar) but New Mills created dangerous counter-attacks and won the first-ball battle; goal came from goalmouth scramble against the run of play."
       },
       "secondHalf": {
-        "home": 0.4,
-        "away": 0.6,
-        "note": "Sandbach pressed harder in second half with multiple efforts (Barry's shot wide, Bev's blocked shot, header hitting the post) but New Mills scored twice more on the counter-attack. Home side dominated possession but lacked finishing."
+        "home": 0.6,
+        "away": 0.8,
+        "note": "Sandbach dominated possession in latter stages with multiple chances (shot, block on line, header on post) but New Mills scored twice more on counters/from set piece and awkward bounce; own goal made it 1-1."
       },
       "extraTime": {
         "home": 0,
@@ -163,22 +163,22 @@
         "note": null
       },
       "total": {
-        "home": 0.75,
-        "away": 1.05,
-        "note": "Sandbach created more than the scoreline suggests but New Mills were clinical on the break. The own goal and two late counter-attacking goals decided the match despite Sandbach's improved second-half possession."
+        "home": 0.95,
+        "away": 1.3,
+        "note": "Sandbach created more overall but clinical finishing and set-piece/counter control won it for New Mills. Own goal distorts defensive xG narrative."
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure. Values are illustrative, not calculated from actual shot data."
     },
     "matchControl": {
       "firstHalf": {
-        "home": 40,
-        "away": 60,
-        "note": "New Mills won majority of first ball and were dangerous on the counter despite Sandbach creating several chances. Described as scrappy and sandy with New Mills winning the half territorially."
+        "home": 45,
+        "away": 55,
+        "note": "Sandbach had early chances but New Mills 'won the majority of the first ball' and were dangerous on the counter; commentator noted goal came 'against the run of play' for New Mills."
       },
       "secondHalf": {
         "home": 65,
         "away": 35,
-        "note": "Sandbach got on top, pressing hard and creating chances, but New Mills remained dangerous on the break and capitalized with two quick goals to seal the match."
+        "note": "Sandbach 'getting on top now' with better effort required after poor first half; however, New Mills scored twice more to seal victory, suggesting they maintained dangerous counter-threat despite reduced possession."
       },
       "extraTime": {
         "home": 0,
@@ -186,9 +186,9 @@
         "note": null
       },
       "total": {
-        "home": 52,
-        "away": 48,
-        "note": "Sandbach edged overall possession and chances, particularly in the second half, but New Mills' efficiency and counter-attacking threat proved decisive."
+        "home": 55,
+        "away": 45,
+        "note": "Sandbach created more chances overall and dominated second half, but New Mills' clinical finishing and set-piece/counter efficiency proved decisive."
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
