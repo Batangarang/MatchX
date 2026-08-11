@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-08-11T19:05:43.150Z",
+  "generatedAt": "2026-08-11T19:10:48.650Z",
   "fixtureDate": "2026-08-11",
   "kickoff": "19:45",
   "homeTeam": "Sandbach United",
   "awayTeam": "New Mills",
-  "postsUsed": 9,
+  "postsUsed": 10,
   "imagesAnalyzedThisRun": 0,
   "totalImagesAnalyzed": 4,
   "match": {
@@ -68,24 +68,24 @@
     },
     "roughXG": {
       "firstHalf": {
-        "home": 0.1,
-        "away": 0.2,
-        "note": "Minimal descriptive commentary available. New Mills had a dangerous low cross and an effort from outside the box that went wide; Sandbach had a volley over the bar. Very limited material to base estimates on; values kept close to neutral."
+        "home": 0.2,
+        "away": 0.3,
+        "note": "Early chances mentioned: New Mills had a low cross cleared at 3 mins and a shot wide at 15 mins; Sandbach had a volley saved at 11 mins and a side volley tipped wide at 20 mins. Very limited information from first 20 minutes of play."
       },
       "secondHalf": {
         "home": 0,
         "away": 0,
-        "note": "No second half commentary provided"
+        "note": "No second half posts available."
       },
       "extraTime": {
         "home": 0,
         "away": 0,
-        "note": "Not applicable"
+        "note": null
       },
       "total": {
-        "home": 0.1,
-        "away": 0.2,
-        "note": "Only early first-half actions described. Match had progressed to minute 15 when posts ended. Rough estimate based on limited data only."
+        "home": 0.2,
+        "away": 0.3,
+        "note": "Rough estimate from first 20 minutes only; match coverage ends early in first half."
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure. Values are illustrative, not calculated from actual shot data."
     },
@@ -93,22 +93,22 @@
       "firstHalf": {
         "home": 50,
         "away": 50,
-        "note": "Minimal commentary from early match (0-15 mins). New Mills showed early attacking intent; Sandbach created a volley. Insufficient data to assign meaningful control split."
+        "note": "Both teams created early chances; balanced play in opening 20 minutes with no clear dominance."
       },
       "secondHalf": {
         "home": 50,
         "away": 50,
-        "note": "No second half commentary provided"
+        "note": "No second half commentary available."
       },
       "extraTime": {
-        "home": 0,
-        "away": 0,
-        "note": "Not applicable"
+        "home": 50,
+        "away": 50,
+        "note": null
       },
       "total": {
         "home": 50,
         "away": 50,
-        "note": "Only first 15 minutes of match documented. Too little material for meaningful control assessment."
+        "note": "Match control estimate based on first 20 minutes only; insufficient data to determine overall pattern."
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
