@@ -1,13 +1,15 @@
 {
-  "generatedAt": "2026-08-10T22:55:27.766Z",
+  "generatedAt": "2026-08-11T06:30:52.962Z",
   "date": "2026-08-11",
-  "isToday": false,
+  "isToday": true,
+  "postCount": 1,
   "fixtures": [
     {
       "home": "Allscott Heath",
       "away": "Shawbury United",
       "kickoff": "19:45",
       "score": null,
+      "goals": [],
       "redCards": []
     },
     {
@@ -15,6 +17,7 @@
       "away": "Stafford Town",
       "kickoff": "19:45",
       "score": null,
+      "goals": [],
       "redCards": []
     },
     {
@@ -22,6 +25,7 @@
       "away": "Telford Town",
       "kickoff": "19:45",
       "score": null,
+      "goals": [],
       "redCards": []
     },
     {
@@ -29,6 +33,7 @@
       "away": "New Mills",
       "kickoff": "19:45",
       "score": null,
+      "goals": [],
       "redCards": []
     },
     {
@@ -36,6 +41,7 @@
       "away": "AFC Bridgnorth",
       "kickoff": "19:45",
       "score": null,
+      "goals": [],
       "redCards": []
     },
     {
@@ -43,8 +49,9 @@
       "away": "Foley Meir",
       "kickoff": "20:00",
       "score": null,
+      "goals": [],
       "redCards": []
     }
   ],
-  "ticker": null
+  "ticker": "@NewMillsFC: MATCHDAY⚽️\n\nAnother tough away trip this evening \nThe lads are looking to build on their good result at the weekend ⚽️\n\n🆚 @SandbachFC_1st \n🤝 @nwcfl \n🏟️ Hind Heath Road \n📍 CW11 3LZ\n🗓️ Tuesday 11th Aug\n⏰ 7:45pm Kick Off\n🎫 Adults £6 Concessions £5 Under 16’s  £2 \n\n#Upthemillers https://t.co/KZbycPOzVM"
 }
