@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-08-11T20:05:40.783Z",
+  "generatedAt": "2026-08-11T20:10:53.155Z",
   "fixtureDate": "2026-08-11",
   "kickoff": "19:45",
   "homeTeam": "Sandbach United",
   "awayTeam": "New Mills",
-  "postsUsed": 21,
+  "postsUsed": 22,
   "imagesAnalyzedThisRun": 0,
   "totalImagesAnalyzed": 5,
   "match": {
@@ -91,14 +91,14 @@
     },
     "roughXG": {
       "firstHalf": {
-        "home": 0.3,
-        "away": 0.4,
-        "note": "New Mills appeared more dangerous on the counter and had a close effort from outside the box; Sandbach had chances but were less clinical"
+        "home": 0.25,
+        "away": 0.35,
+        "note": "New Mills had more dangerous chances and clearer opportunities before their goal; Sandbach had some efforts but less clear-cut"
       },
       "secondHalf": {
         "home": 0.2,
-        "away": 0.1,
-        "note": "Limited description of second half action up to minute 57; Sandbach pressing but few clear chances recorded"
+        "away": 0.15,
+        "note": "Limited detail provided in available posts; match appeared tighter after Sandbach equalized"
       },
       "extraTime": {
         "home": 0,
@@ -106,22 +106,22 @@
         "note": null
       },
       "total": {
-        "home": 0.5,
+        "home": 0.45,
         "away": 0.5,
-        "note": "Rough estimate based on limited match commentary; New Mills were described as dominant in first half on the counter, Sandbach pushing after the break"
+        "note": "Rough estimate based on commentary; New Mills slightly more threatening overall but Sandbach equalized"
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure. Values are illustrative, not calculated from actual shot data."
     },
     "matchControl": {
       "firstHalf": {
-        "home": 45,
-        "away": 55,
-        "note": "New Mills won majority of first ball and were dangerous on the counter despite Sandbach creating chances"
+        "home": 40,
+        "away": 60,
+        "note": "New Mills won majority of first ball and were dangerous on counter; Sandbach had chances but less dominant"
       },
       "secondHalf": {
-        "home": 60,
-        "away": 40,
-        "note": "Sandbach pushing to find goals after going behind, though limited detailed commentary available"
+        "home": 55,
+        "away": 45,
+        "note": "Sandbach improved after equalizing but limited detail provided; both sides had moments"
       },
       "extraTime": {
         "home": 0,
@@ -129,9 +129,9 @@
         "note": null
       },
       "total": {
-        "home": 52,
-        "away": 48,
-        "note": "Match was competitive throughout; New Mills controlled first half but Sandbach responded in second half"
+        "home": 48,
+        "away": 52,
+        "note": "New Mills slightly more dominant overall but Sandbach responded well in second half"
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
