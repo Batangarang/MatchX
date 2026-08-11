@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-08-11T18:53:28.554Z",
+  "generatedAt": "2026-08-11T19:01:09.393Z",
   "fixtureDate": "2026-08-11",
   "kickoff": "19:45",
   "homeTeam": "Sandbach United",
   "awayTeam": "New Mills",
-  "postsUsed": 7,
+  "postsUsed": 8,
   "imagesAnalyzedThisRun": 0,
   "totalImagesAnalyzed": 4,
   "match": {
@@ -68,14 +68,14 @@
     },
     "roughXG": {
       "firstHalf": {
-        "home": 0.1,
-        "away": 0.1,
-        "note": "Minimal information available. Only 3 minutes of play reported with one chance for each side."
+        "home": 0.2,
+        "away": 0.15,
+        "note": "Very limited material: only two attacking moments mentioned by minute 11 (Bev volley over bar for home, New Mills low cross cleared). Match still in early stages."
       },
       "secondHalf": {
         "home": 0,
         "away": 0,
-        "note": "No second half data available."
+        "note": "No second half posts available."
       },
       "extraTime": {
         "home": 0,
@@ -83,32 +83,32 @@
         "note": "Match did not go to extra time."
       },
       "total": {
-        "home": 0.1,
-        "away": 0.1,
-        "note": "Extremely limited data. Only early play reported."
+        "home": 0.2,
+        "away": 0.15,
+        "note": "Based on two isolated early-match incidents only; highly incomplete data as posts end at 11 minutes."
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure. Values are illustrative, not calculated from actual shot data."
     },
     "matchControl": {
       "firstHalf": {
-        "home": 50,
-        "away": 50,
-        "note": "No clear control information available from posts. Maintaining neutral 50/50 split."
+        "home": 55,
+        "away": 45,
+        "note": "Slight home advantage suggested by early play descriptions (Barry's attack, Bev's volley attempt), but very limited data from only the first 11 minutes."
       },
       "secondHalf": {
         "home": 50,
         "away": 50,
-        "note": "No second half data available."
+        "note": "No second half posts available."
       },
       "extraTime": {
-        "home": 0,
-        "away": 0,
+        "home": 50,
+        "away": 50,
         "note": "Match did not go to extra time."
       },
       "total": {
-        "home": 50,
-        "away": 50,
-        "note": "Insufficient data to determine match control. Posts only cover first 3 minutes."
+        "home": 55,
+        "away": 45,
+        "note": "Inferred from tone/content of posts only, not real possession or shot data. Based on minimal early-match commentary only."
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
