@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-08-12T19:55:37.175Z",
+  "generatedAt": "2026-08-12T20:05:32.746Z",
   "date": "2026-08-12",
   "isToday": true,
-  "postCount": 22,
+  "postCount": 26,
   "fixtures": [
     {
       "home": "Wolverhampton Casuals",
       "away": "Eccleshall",
       "kickoff": "19:45",
-      "score": "0-2",
+      "score": "1-2",
       "goals": [
         {
           "minute": 9,
@@ -19,10 +19,15 @@
           "minute": 46,
           "team": "away",
           "scorer": "Morgan Russell"
+        },
+        {
+          "minute": 55,
+          "team": "home",
+          "scorer": "Kieran Cook"
         }
       ],
       "redCards": []
     }
   ],
-  "ticker": "@WolvesCassies: 46': Morgan Russell scores for Eccleshall\n#WOLECC #Pitchero\nhttps://www.wolverhamptoncasualsfc.co.uk/teams/294420/match-centre/1-19876184?utm_campaign=match_event&utm_medium=post&utm_source=twitter&utm_content=goal https://t.co/34XA8eWgqn"
+  "ticker": "@EccleshallFC: 60' Cassies shoot and over the top it goes\n\n💙🦅\n\n#EccleshallFC"
 }
