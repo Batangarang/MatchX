@@ -1,5 +1,6 @@
 const fs = require('fs');
 const API_KEY = process.env.ANTHROPIC_API_KEY;
+const { logCost } = require('./cost-tracker.js');
 
 function isSameUKDay(isoString) {
   const postDate = new Date(isoString);
@@ -89,7 +90,7 @@ ${nwcflContext} Write a short, friendly 2-3 sentence summary for fans, covering 
     postsConsidered: posts.length,
     summary,
   };
-
+  logCost('x-insights', { getxapiCalls: 0, claudeCalls: 1 });
   fs.writeFileSync('x-insights.json', JSON.stringify(output, null, 2));
   fs.writeFileSync(stateFile, JSON.stringify({ signature: currentSignature }));
   console.log('Saved insight:', summary);

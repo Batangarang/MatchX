@@ -29,7 +29,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          for f in division-posts.json division-insights-weekend-preview.json .recap-state-weekend-preview.json; do
+          for f in division-posts.json division-insights-weekend-preview.json .recap-state-weekend-preview.json cost-log.json; do
             [ -f "$f" ] && git add "$f"
           done
           git diff --staged --quiet || git commit -m "Weekend preview"

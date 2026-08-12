@@ -3,6 +3,7 @@ const CLUBS = require('./division-clubs.js');
 const API_KEY = process.env.ANTHROPIC_API_KEY;
 const MODE = process.env.RECAP_MODE; // 'weekend-preview', 'weekend-recap', 'midweek-preview', 'midweek-recap'
 const CURRENT_CLUB_NAMES = new Set(CLUBS.map(c => c.name));
+const { logCost } = require('./cost-tracker.js');
 
 function parseFixtureDate(dateStr) {
   const match = dateStr.match(/(\d{1,2})\s+(\w+)\s+(\d{4})/);
@@ -296,6 +297,7 @@ Respond with ONLY a JSON object, no other text, no markdown fences, in exactly t
   fs.writeFileSync(outputFile, JSON.stringify(output, null, 2));
   if (decision.periodKey) markRunForPeriod(decision.periodKey);
 
+  logCost(`recap-${MODE}`, { getxapiCalls: 0, claudeCalls: 1 });
   console.log(`[${MODE}] Saved. Sandbach focus:`, (output.sandbachFocus || output.summary || '').slice(0, 150));
 }
 

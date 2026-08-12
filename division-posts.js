@@ -1,6 +1,7 @@
 const fs = require('fs');
 const CLUBS = require('./division-clubs.js');
 const { getUserTweets } = require('./getxapi-client.js');
+const { logCost } = require('./cost-tracker.js');
 
 const API_KEY = process.env.GETXAPI_KEY;
 const SEVEN_DAYS_AGO = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000);
@@ -47,6 +48,7 @@ async function run() {
   };
 
   fs.writeFileSync('division-posts.json', JSON.stringify(output, null, 2));
+  logCost('division-posts', { getxapiCalls: CLUBS.length, claudeCalls: 0 });
   console.log('Saved division-posts.json');
 }
 

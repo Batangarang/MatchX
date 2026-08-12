@@ -5,6 +5,7 @@ const API_KEY = process.env.GETXAPI_KEY;
 const ANTHROPIC_KEY = process.env.ANTHROPIC_API_KEY;
 const { getUKNow, getUKDateString } = require('./uk-time.js');
 const REAL_NOW = new Date();
+const { logCost } = require('./cost-tracker.js');
 
 function findHandle(clubName) {
   if (clubName.includes('Sandbach')) return 'SandbachFC_1st';
@@ -256,6 +257,7 @@ Only include a score if explicitly stated in the posts. Leave as null if not men
   };
 
   fs.writeFileSync('division-scores.json', JSON.stringify(output, null, 2));
+  logCost('division-scores', { getxapiCalls: handlesNeeded.size, claudeCalls: 1 });
   console.log(`Saved division-scores.json with ${output.fixtures.length} fixtures`);
 }
 

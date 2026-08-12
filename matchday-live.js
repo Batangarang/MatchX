@@ -1,6 +1,7 @@
 const fs = require('fs');
 const CLUBS = require('./division-clubs.js');
 const { getUserTweets } = require('./getxapi-client.js');
+const { logCost } = require('./cost-tracker.js');
 
 const API_KEY = process.env.GETXAPI_KEY;
 const ANTHROPIC_KEY = process.env.ANTHROPIC_API_KEY;
@@ -531,7 +532,7 @@ For lineups: if shirt numbers are visible, format each player as "N. Player Name
   if (!process.env.MATCHDAY_TEST_DATE) {
     fs.writeFileSync('matchday-live.json', JSON.stringify(output, null, 2));
   }
-
+  logCost('matchday-live', { getxapiCalls: 2, claudeCalls: 1 });
   console.log(`Saved ${archiveFile} (${combined.length} posts, ${imageBlocks.length / 2} new images this run, ${alreadySeen.size} total)`);
 }
 
