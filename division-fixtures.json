@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-12T20:10:47.079Z",
+  "generatedAt": "2026-08-12T20:15:39.307Z",
   "fixtures": [
     {
       "date": "Saturday 15 August 2026",
@@ -279,6 +279,13 @@
       "home": "Wolverhampton Casuals",
       "away": "Bilston Town",
       "kickoff": "15:00",
+      "postponed": false
+    },
+    {
+      "date": "Wednesday 9 September 2026",
+      "home": "Barnton",
+      "away": "Cheadle Heath Nomads",
+      "kickoff": "19:45",
       "postponed": false
     },
     {
