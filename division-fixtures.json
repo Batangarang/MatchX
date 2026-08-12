@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-12T18:56:47.479Z",
+  "generatedAt": "2026-08-12T19:02:10.359Z",
   "fixtures": [
     {
       "date": "Saturday 15 August 2026",
@@ -2421,6 +2421,13 @@
       "home": "Wolverhampton Casuals",
       "away": "Cheadle Heath Nomads",
       "kickoff": "15:00",
+      "postponed": false
+    },
+    {
+      "date": "Wednesday 12 August 2026",
+      "home": "Wolverhampton Casuals",
+      "away": "Eccleshall",
+      "kickoff": "19:45",
       "postponed": false
     }
   ]
