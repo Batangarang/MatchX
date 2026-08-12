@@ -1,17 +1,9 @@
 {
-  "generatedAt": "2026-08-12T16:40:38.476Z",
+  "generatedAt": "2026-08-12T16:50:42.375Z",
   "date": "2026-08-12",
   "isToday": true,
-  "postCount": 8,
+  "postCount": 2,
   "fixtures": [
-    {
-      "home": "Barnton",
-      "away": "Cheadle Heath Nomads",
-      "kickoff": "19:45",
-      "score": null,
-      "goals": [],
-      "redCards": []
-    },
     {
       "home": "Wolverhampton Casuals",
       "away": "Eccleshall",
@@ -21,5 +13,5 @@
       "redCards": []
     }
   ],
-  "ticker": "@CheadleNomads: GAME OFF ❌\n\nTonight’s fixture against @barntonfc has been called off.\n\nThe game will be rescheduled, and we’ll let youse know as soon as the new date is confirmed.\n\n#WeAreNomads | @nwcfl | @NWCFLScores https://t.co/2a4HVuPzJY"
+  "ticker": "@WolvesCassies: 🟢🟢 MATCHDAY 🟢🟢\n\nTonight Casuals welcome Eccleshall to Brinsford Stadium for a big league fixture.\n\nKick off 7.45 pm\n\n Adults £7, Concessions £4, U12’s free\n\nProgramme £2\n\nWhy not bring the family to watch the eclipse\non a very warm summer’s evening. https://t.co/XJEWBPkSI7"
 }
