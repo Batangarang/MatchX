@@ -1,23 +1,28 @@
 {
-  "generatedAt": "2026-08-12T19:40:37.732Z",
+  "generatedAt": "2026-08-12T19:55:37.175Z",
   "date": "2026-08-12",
   "isToday": true,
-  "postCount": 19,
+  "postCount": 22,
   "fixtures": [
     {
       "home": "Wolverhampton Casuals",
       "away": "Eccleshall",
       "kickoff": "19:45",
-      "score": "0-1",
+      "score": "0-2",
       "goals": [
         {
           "minute": 9,
           "team": "away",
           "scorer": "Max Chimenes"
+        },
+        {
+          "minute": 46,
+          "team": "away",
+          "scorer": "Morgan Russell"
         }
       ],
       "redCards": []
     }
   ],
-  "ticker": "@WolvesCassies: HALF TIME: Wolverhampton Casuals 0 - 1 Eccleshall\n#WOLECC #Pitchero\nhttps://www.wolverhamptoncasualsfc.co.uk/teams/294420/match-centre/1-19876184?utm_campaign=score_update&utm_medium=post&utm_source=twitter&utm_content=E1 https://t.co/qxUzLCpif2"
+  "ticker": "@WolvesCassies: 46': Morgan Russell scores for Eccleshall\n#WOLECC #Pitchero\nhttps://www.wolverhamptoncasualsfc.co.uk/teams/294420/match-centre/1-19876184?utm_campaign=match_event&utm_medium=post&utm_source=twitter&utm_content=goal https://t.co/34XA8eWgqn"
 }
