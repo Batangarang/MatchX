@@ -226,6 +226,7 @@ function mergeMatchData(previous, incoming) {
       halfTimeScoreAnnounced: announcedHT,
       htDiscrepancy,
       finalScoreAnnounced: announcedScore,
+      sinBins: dedupeSimilarEvents(incoming.sinBins || [], ['team', 'player']),
       yellowCards: dedupeSimilarEvents(incoming.yellowCards || [], ['team', 'player']),
       redCards: dedupeSimilarEvents(incoming.redCards || [], ['team', 'player']),
     };
@@ -283,7 +284,10 @@ function mergeMatchData(previous, incoming) {
     yellowCards: mergedYellowCards,
     redCards: mergedRedCards,
     substitutions: mergeArrays(previous.substitutions, incoming.substitutions, s => `${s.minute}-${s.playerOff}-${s.playerOn}`),
-    sinBins: mergeArrays(previous.sinBins, incoming.sinBins, s => `${s.minute}-${s.player}-${s.team}`),
+    sinBins: dedupeSimilarEvents(
+      mergeArrays(previous.sinBins, incoming.sinBins, s => `${s.minute}-${s.player}-${s.team}`),
+      ['team', 'player']
+    ),
     injuries: dedupeSimilarEvents(
       mergeArrays(previous.injuries, incoming.injuries, i => `${i.minute}-${i.player}-${i.team}`),
       ['team', 'player']

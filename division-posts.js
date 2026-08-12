@@ -4,10 +4,10 @@ const { getUserTweets } = require('./getxapi-client.js');
 
 const API_KEY = process.env.GETXAPI_KEY;
 const SEVEN_DAYS_AGO = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000);
-const FRESHNESS_MINUTES = 60; // reuse existing data if it's newer than this
+const FRESHNESS_MINUTES = 120; // widened from 60 given real-world evidence of overlapping-workflow cost
 
 function isDataFreshEnough() {
-  if (process.env.GITHUB_EVENT_NAME === 'workflow_dispatch') return false; // manual runs always fetch fresh
+  if (process.env.GITHUB_EVENT_NAME === 'workflow_dispatch') return false;
   if (!fs.existsSync('division-posts.json')) return false;
   try {
     const existing = JSON.parse(fs.readFileSync('division-posts.json', 'utf-8'));

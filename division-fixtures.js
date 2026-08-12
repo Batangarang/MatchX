@@ -14,14 +14,9 @@ async function scrape() {
   $('table').each((i, table) => {
     const headerText = $(table).find('tr').first().text().trim();
 
-    // A genuine fixture-date table's header combines a date and the division
-    // name, e.g. "Saturday 8th August 2026 First Division South First Division South"
     const dateMatch = headerText.match(/(\w+day)\s+(\d{1,2})\w*\s+(\w+)\s+(\d{4})/);
     if (!dateMatch || !headerText.includes(DIVISION_NAME)) return;
 
-    // Reject tables that are actually cup competitions, even if they also
-    // mention the division name somewhere in the header (the site shows a
-    // persistent division badge regardless of which competition is displayed).
     const isCupFixture = /cup|vase|trophy/i.test(headerText);
     if (isCupFixture) return;
 
@@ -38,6 +33,20 @@ async function scrape() {
           home: match[1].trim(),
           away: match[2].trim(),
           kickoff: match[3].trim(),
+          postponed: false,
+        });
+        return;
+      }
+
+      // A postponed fixture reads like "Barnton P-P Cheadle Heath Nomads"
+      const ppMatch = text.match(/^(.+?)\s+P-P\s+(.+)$/);
+      if (ppMatch) {
+        fixtures.push({
+          date: dateStr,
+          home: ppMatch[1].trim(),
+          away: ppMatch[2].trim(),
+          kickoff: null,
+          postponed: true,
         });
       }
     });
