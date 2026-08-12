@@ -233,19 +233,29 @@ Only include a score if explicitly stated in the posts. Leave as null if not men
   const data = await res.json();
   if (!data.content) throw new Error(`Unexpected API response: ${JSON.stringify(data)}`);
 
-  const raw = data.content.map(b => b.text || '').join('').trim();
+ const raw = data.content.map(b => b.text || '').join('').trim();
   const cleaned = raw.replace(/```json|```/g, '').trim();
   const parsed = JSON.parse(cleaned);
-
   const latestPost = allPosts[0];
   const ticker = latestPost ? `@${latestPost.handle}: ${latestPost.text}` : null;
+
+  // If no explicit scoreline was stated but goals were extracted, derive a
+  // score from the goals count rather than showing nothing at all.
+  const fixturesWithDerivedScores = (parsed.fixtures || []).map(f => {
+    if (f.score) return f;
+    const goals = f.goals || [];
+    if (goals.length === 0) return f;
+    const home = goals.filter(g => g.team === 'home').length;
+    const away = goals.filter(g => g.team === 'away').length;
+    return { ...f, score: `${home}-${away}` };
+  });
 
   const output = {
     generatedAt: REAL_NOW.toISOString(),
     date: target.targetDate,
     isToday: true,
     postCount: totalPostCount,
-    fixtures: parsed.fixtures || [],
+    fixtures: fixturesWithDerivedScores,
     ticker,
   };
 
