@@ -47,7 +47,9 @@ function shouldPollNow() {
 
   const hour = now.getUTCHours();
   const isNight = hour < 5 || hour > 23;
-  const targetIntervalMinutes = isNight ? 180 : 30;
+  // Widened from 30 to 60 minutes — a single club's own account rarely
+  // needs checking more often than hourly outside its own matchday
+  const targetIntervalMinutes = isNight ? 180 : 60;
   const minutesSinceLastPoll = lastPoll ? (now - lastPoll) / 60000 : Infinity;
 
   if (minutesSinceLastPoll < targetIntervalMinutes) return false;
