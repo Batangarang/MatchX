@@ -1,4 +1,3 @@
-cat > cost-tracker.js << 'EOF'
 const fs = require('fs');
 
 const COST_PER_GETXAPI_CALL_USD = 0.001;
@@ -31,4 +30,3 @@ function logCost(scriptName, { getxapiCalls = 0, claudeCalls = 0 }) {
 }
 
 module.exports = { logCost };
-EOF
