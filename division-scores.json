@@ -1,17 +1,36 @@
 {
-  "generatedAt": "2026-08-12T18:35:32.891Z",
-  "date": "2026-08-12",
-  "isToday": true,
-  "postCount": 4,
+  "generatedAt": "2026-08-12T18:45:42.306Z",
+  "date": "2026-08-15",
+  "isToday": false,
   "fixtures": [
     {
-      "home": "Wolverhampton Casuals",
-      "away": "Eccleshall",
-      "kickoff": "19:45",
+      "home": "AFC Bridgnorth",
+      "away": "Crewe",
+      "kickoff": "15:00",
       "score": null,
-      "goals": [],
+      "redCards": []
+    },
+    {
+      "home": "Brereton Social",
+      "away": "Bilston Town",
+      "kickoff": "15:00",
+      "score": null,
+      "redCards": []
+    },
+    {
+      "home": "Dawley Town",
+      "away": "Wolverhampton Casuals",
+      "kickoff": "15:00",
+      "score": null,
+      "redCards": []
+    },
+    {
+      "home": "Shawbury United",
+      "away": "Widnes Town",
+      "kickoff": "15:00",
+      "score": null,
       "redCards": []
     }
   ],
-  "ticker": "@EccleshallFC: A warm evening in Wolverhampton.\n\n💙🦅\n\n#EccleshallFC https://t.co/MXGvFdYJIt"
+  "ticker": null
 }
