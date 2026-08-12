@@ -228,6 +228,22 @@
       { file: 'division-recap-midweek-recap.yml', name: 'Midweek Recap', pulls: 'Today\'s midweek fixtures (if any) + club posts + league table', skipLogic: 'Skips if no midweek fixtures today; only proceeds ~3hrs after latest kickoff', shareOfDay: 0.15, nonMatchday: true, staleAfterMinutes: 60 * 24 * 4 },
     ];
 
+    const SCRIPT_DISPLAY_NAMES = {
+      'matchday-live': 'Matchday Live Tracker',
+      'division-scores': 'Division Scores',
+      'x-posts': 'Poll X (own posts)',
+      'x-insights': 'Fan Briefing',
+      'division-posts': 'Division Posts (recap data)',
+      'recap-weekend-preview': 'Weekend Preview',
+      'recap-weekend-recap': 'Weekend Recap',
+      'recap-midweek-preview': 'Midweek Preview',
+      'recap-midweek-recap': 'Midweek Recap',
+    };
+
+    function displayName(script) {
+      return SCRIPT_DISPLAY_NAMES[script] || script;
+    }
+
     let isMatchdayToday = false;
 
     // ---------- Login ----------
@@ -457,7 +473,7 @@
             const barWidth = (scriptTotal / maxScriptCost) * 100;
             return `
               <div style="display:flex; justify-content:space-between; font-size:11px; margin-top:4px;">
-                <span>${script}</span><span>£${scriptTotal.toFixed(4)}</span>
+                <span>${displayName(script)}</span><span>£${scriptTotal.toFixed(4)}</span>
               </div>
               <div style="background:var(--paper); border-radius:4px; height:10px; overflow:hidden; display:flex; width:${barWidth}%; min-width:2px;">
                 <div style="background:var(--royal); height:100%; width:${scriptTotal > 0 ? (cost.x / scriptTotal) * 100 : 0}%;" title="GetXAPI: £${cost.x.toFixed(4)}"></div>
