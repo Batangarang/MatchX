@@ -1,0 +1,12 @@
+{
+  "entries": [
+    {
+      "script": "x-posts",
+      "timestamp": "2026-08-12T20:34:32.809Z",
+      "getxapiCalls": 1,
+      "claudeCalls": 0,
+      "xCostGBP": 0.0008,
+      "aiCostGBP": 0
+    }
+  ]
+}
