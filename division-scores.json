@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-08-12T22:20:39.513Z",
+  "generatedAt": "2026-08-12T22:31:04.103Z",
   "date": "2026-08-12",
   "isToday": true,
-  "postCount": 20,
+  "postCount": 38,
   "fixtures": [
     {
       "home": "Wolverhampton Casuals",
@@ -11,6 +11,11 @@
       "score": "1-2",
       "goals": [
         {
+          "minute": 9,
+          "team": "away",
+          "scorer": "Max Chimenes"
+        },
+        {
           "minute": 46,
           "team": "away",
           "scorer": "Morgan Russell"
@@ -18,18 +23,13 @@
         {
           "minute": 55,
           "team": "home",
-          "scorer": null
-        },
-        {
-          "minute": null,
-          "team": "away",
-          "scorer": "Max Chimenes"
+          "scorer": "Kieran Cook"
         }
       ],
       "redCards": [
         {
           "team": "away",
-          "player": null
+          "player": "Jamie Turner"
         }
       ]
     }
