@@ -32,9 +32,12 @@ function findHandle(clubName) {
   return found ? found.handle : null;
 }
 
+function isManualRun() {
+  return process.env.GITHUB_EVENT_NAME === 'workflow_dispatch' || !!process.env.MATCHDAY_TEST_DATE;
+}
+
 function withinMatchWindow(kickoff, competitionNote) {
-  if (process.env.GITHUB_EVENT_NAME === 'workflow_dispatch') return true;
-  if (process.env.MATCHDAY_TEST_DATE) return true;
+  if (isManualRun()) return true;
   if (!kickoff) return false;
 
   const isCup = competitionNote && /cup|vase|trophy/i.test(competitionNote);
@@ -208,10 +211,6 @@ function mergeMatchData(previous, incoming) {
     const finalScore = (incoming.matchStage === 'full_time' && announcedScore)
       ? announcedScore
       : (derivedScore || incoming.score);
-    const scoreDiscrepancy = (announcedScore && derivedScore && announcedScore !== derivedScore)
-      ? `Goals count suggests ${derivedScore}, but an announced score of ${announcedScore} was also seen — showing ${finalScore}.`
-      : null;
-
     const derivedHT = deriveHalfTimeScoreFromGoals(dedupedGoals);
     const announcedHT = incoming.halfTimeScoreAnnounced || null;
     const htDiscrepancy = (announcedHT && derivedHT && announcedHT !== derivedHT)
@@ -222,13 +221,13 @@ function mergeMatchData(previous, incoming) {
       ...incoming,
       goals: dedupedGoals,
       score: finalScore,
-      scoreDiscrepancy,
+      scoreDiscrepancy: null,
       halfTimeScoreAnnounced: announcedHT,
       htDiscrepancy,
       finalScoreAnnounced: announcedScore,
-      sinBins: dedupeSimilarEvents(incoming.sinBins || [], ['team', 'player']),
       yellowCards: dedupeSimilarEvents(incoming.yellowCards || [], ['team', 'player']),
       redCards: dedupeSimilarEvents(incoming.redCards || [], ['team', 'player']),
+      sinBins: dedupeSimilarEvents(incoming.sinBins || [], ['team', 'player']),
     };
   }
 
@@ -241,6 +240,10 @@ function mergeMatchData(previous, incoming) {
   );
   const mergedRedCards = dedupeSimilarEvents(
     mergeArrays(previous.redCards, incoming.redCards, c => `${c.minute}-${c.player}-${c.team}`),
+    ['team', 'player']
+  );
+  const mergedSinBins = dedupeSimilarEvents(
+    mergeArrays(previous.sinBins, incoming.sinBins, s => `${s.minute}-${s.player}-${s.team}`),
     ['team', 'player']
   );
 
@@ -284,14 +287,8 @@ function mergeMatchData(previous, incoming) {
     yellowCards: mergedYellowCards,
     redCards: mergedRedCards,
     substitutions: mergeArrays(previous.substitutions, incoming.substitutions, s => `${s.minute}-${s.playerOff}-${s.playerOn}`),
-    sinBins: dedupeSimilarEvents(
-      mergeArrays(previous.sinBins, incoming.sinBins, s => `${s.minute}-${s.player}-${s.team}`),
-      ['team', 'player']
-    ),
-    injuries: dedupeSimilarEvents(
-      mergeArrays(previous.injuries, incoming.injuries, i => `${i.minute}-${i.player}-${i.team}`),
-      ['team', 'player']
-    ),
+    sinBins: mergedSinBins,
+    injuries: mergeArrays(previous.injuries, incoming.injuries, i => `${i.minute}-${i.player}-${i.team}`),
     addedTime: {
       firstHalf: incoming.addedTime?.firstHalf ?? previous.addedTime?.firstHalf ?? null,
       secondHalf: incoming.addedTime?.secondHalf ?? previous.addedTime?.secondHalf ?? null,
@@ -323,6 +320,30 @@ async function run() {
   const [, dd, mm, yy] = fixture.date.match(/(\d{2})\/(\d{2})\/(\d{2})/);
   const dateStr = `20${yy}-${mm}-${dd}`;
 
+  const archiveFile = `matchday-archive/${dateStr}.json`;
+  let previousOutput = null;
+  if (fs.existsSync(archiveFile)) {
+    previousOutput = JSON.parse(fs.readFileSync(archiveFile, 'utf-8'));
+  }
+
+  // ---------- Full-time early-exit ----------
+  // Once full-time is confirmed, stop polling — except for a short window
+  // afterward in case of extra time/penalties, which get their own longer allowance.
+  if (previousOutput?.match?.matchStage === 'full_time' && !isManualRun()) {
+    const lastUpdate = new Date(previousOutput.generatedAt);
+    const minutesSinceUpdate = (new Date() - lastUpdate) / 60000;
+
+    if (previousOutput.match.wentToExtraTime) {
+      if (minutesSinceUpdate > 90) {
+        console.log('Extra time confirmed a while ago — assuming match fully concluded, stopping polling.');
+        return;
+      }
+    } else if (minutesSinceUpdate > 20) {
+      console.log('Full-time confirmed 20+ minutes ago with no extra time detected — stopping polling.');
+      return;
+    }
+  }
+
   const homeHandle = fixture.homeAway === 'H' ? 'SandbachFC_1st' : findHandle(fixture.opposition);
   const awayHandle = fixture.homeAway === 'H' ? findHandle(fixture.opposition) : 'SandbachFC_1st';
 
@@ -351,12 +372,6 @@ async function run() {
     return;
   }
 
-  const archiveFile = `matchday-archive/${dateStr}.json`;
-  let previousOutput = null;
-  if (fs.existsSync(archiveFile)) {
-    previousOutput = JSON.parse(fs.readFileSync(archiveFile, 'utf-8'));
-  }
-
   const seenImagesFile = `matchday-archive/${dateStr}-images-seen.json`;
   let alreadySeen = new Set();
   if (fs.existsSync(seenImagesFile)) {
@@ -377,28 +392,28 @@ async function run() {
 
   const prompt = `Below are X posts (and some attached images) from the home and away teams' official accounts on the day of a football match: ${fixture.homeAway === 'H' ? 'Sandbach United' : fixture.opposition} vs ${fixture.homeAway === 'H' ? fixture.opposition : 'Sandbach United'}, played ${fixture.date}${isCup ? ` (a cup competition: ${fixture.competitionNote} — this match could go to extra time and penalties)` : ' (a league match — normally 90 minutes, no extra time)'}.
 
-IMPORTANT: Scorelines in these posts may be written without a dash, e.g. "2 1" instead of "2-1" (sometimes preceded by team colour emojis like "🔴⚫️ v 🟡🟡"). Recognise these as valid scorelines too — when extracting "score", "finalScoreAnnounced", or "halfTimeScoreAnnounced", normalise whatever format you see into standard "X-Y" form (e.g. "2 1" becomes "2-1").
+IMPORTANT: Sandbach United specifically have ONE player with the surname "Foley" (not to be confused with the opposing club "Foley Meir"). This distinction ONLY matters when it's ambiguous whether "Foley" refers to that Sandbach player or to the club Foley Meir. If a post clearly names a different, specific player (e.g. "Kyle Foley", "Jack Foley") who is NOT further identified as Sandbach's player, do not assume they must be that Sandbach player — trust the team/side the post itself indicates.
 
-IMPORTANT: Sandbach United specifically have ONE player with the surname "Foley" (not to be confused with the opposing club "Foley Meir"). This distinction ONLY matters when it's ambiguous whether "Foley" refers to that Sandbach player or to the club Foley Meir. If a post clearly names a different, specific player (e.g. "Kyle Foley", "Jack Foley") who is NOT further identified as Sandbach's player, do not assume they must be that Sandbach player — trust the team/side the post itself indicates (which account posted it, and any home/away context), and record the goal/sub/card for whichever team is actually accurate based on that context.
+IMPORTANT: Both the home and away clubs may separately post about the SAME goal, card, or event. Do NOT report the same real-world event twice just because both clubs mentioned it — treat matching or clearly-corroborating mentions from each side as ONE event, not two.
 
-IMPORTANT: Both the home and away clubs may separately post about the SAME goal, card, or event (e.g. one posts "0-1" and the other posts "9' Kieran O'Connell" for the exact same goal). Do NOT report the same real-world event twice just because both clubs mentioned it — treat matching or clearly-corroborating mentions from each side as ONE event, not two.
+IMPORTANT: If a post is a CORRECTION to an earlier goal, do NOT add this as a new goal — it replaces the earlier reported goal.
 
-IMPORTANT: If a post is a CORRECTION to an earlier goal (e.g. "Correction: that goal was actually scored by X, not Y" or "apologies, the scorer was actually..."), do NOT add this as a new goal — it replaces the earlier reported goal, so the total goal count should not increase.
+IMPORTANT: When a post describes a foul or clash between two players before mentioning a card, the card belongs to the player who COMMITTED the foul, not the player who was fouled.
 
-IMPORTANT: When a post describes a foul or clash between two players before mentioning a card (e.g. "X catches Y late, ref shows yellow"), the card belongs to the player who COMMITTED the foul, not the player who was fouled. Record only the carded player's name in the "player" field — do not combine both players' names into one entry.
+IMPORTANT: When extracting "finalScoreAnnounced" or "halfTimeScoreAnnounced", only use a scoreline explicitly stated in a post that comes AT OR AFTER the point in the match it claims to describe. Do not use an outdated scoreline that predates goals also visible in these posts.
 
-IMPORTANT: When extracting "finalScoreAnnounced" or "halfTimeScoreAnnounced", only use a scoreline explicitly stated in a post that comes AT OR AFTER the point in the match it claims to describe (e.g. a "2-1" mention posted before a 3rd goal has actually happened should not be used as a current score). Do not use an outdated scoreline that predates goals also visible in these posts.
+IMPORTANT: Scorelines in these posts may be written without a dash, e.g. "2 1" instead of "2-1". Recognise these as valid too, and normalise to "X-Y" form.
 
 Posts:
 ${postsText}
 
-Using information present in these posts AND any attached images (e.g. graphics that say "Full Time" with a score, "Half Time" with a score, or team sheet images), build a structured match summary. Respond with ONLY a JSON object, no other text, no markdown fences, in exactly this shape:
+Using information present in these posts AND any attached images, build a structured match summary. Respond with ONLY a JSON object, no other text, no markdown fences, in exactly this shape:
 
 {
   "score": "string or null — the current or final score after 90 minutes",
-  "finalScoreAnnounced": "string or null — ONLY fill this in if a post explicitly states the full-time score as a direct statement (e.g. 'FT 3-2', a full-time graphic, 'match ends 3-2') — not inferred from goals, the literal announced score",
-  "halfTimeScoreAnnounced": "string or null — ONLY fill this in if a post explicitly states the half-time score as a direct statement (e.g. 'HT 1-1', a half-time graphic) — the literal announced HT score",
-  "matchStage": "one of: scheduled, first_half, half_time, second_half, extra_time, penalties, full_time — ONLY set to half_time or full_time when a post EXPLICITLY ANNOUNCES it as a standalone statement or with a score (e.g. 'HT', 'HT 1-2', 'Half time score:', a half-time graphic, 'FT', 'FT 2-3', 'Full time:', a full-time graphic). Do NOT set half_time/full_time just because a post MENTIONS the concept in passing (e.g. 'coming up to half time', 'not long until the break') — that kind of mention means the match is still in first_half or second_half respectively.",
+  "finalScoreAnnounced": "string or null — ONLY if a post explicitly states the full-time score as a direct statement",
+  "halfTimeScoreAnnounced": "string or null — ONLY if a post explicitly states the half-time score as a direct statement",
+  "matchStage": "one of: scheduled, first_half, half_time, second_half, extra_time, penalties, full_time — ONLY set to half_time or full_time when a post EXPLICITLY ANNOUNCES it (including abbreviations like 'HT'/'FT'), never guess from elapsed time",
   "lineups": {
     "home": { "players": [], "substitutes": [], "manager": null, "officials": [] },
     "away": { "players": [], "substitutes": [], "manager": null, "officials": [] }
@@ -412,20 +427,14 @@ Using information present in these posts AND any attached images (e.g. graphics 
   "addedTime": { "firstHalf": null, "secondHalf": null },
   "wentToExtraTime": false,
   "wentToPenalties": false,
-  "extraTime": {
-    "score": "string or null — score after extra time",
-    "goals": [{ "minute": null, "team": "home or away", "scorer": "string" }]
-  },
-  "penalties": {
-    "finalScore": "string or null, e.g. '4-3'",
-    "takers": [{ "team": "home or away", "player": "string", "scored": true }]
-  },
+  "extraTime": { "score": null, "goals": [] },
+  "penalties": { "finalScore": null, "takers": [] },
   "roughXG": {
     "firstHalf": { "home": 0.0, "away": 0.0, "note": "string" },
     "secondHalf": { "home": 0.0, "away": 0.0, "note": "string" },
     "extraTime": { "home": 0.0, "away": 0.0, "note": "string" },
     "total": { "home": 0.0, "away": 0.0, "note": "string" },
-    "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure. Values are illustrative, not calculated from actual shot data."
+    "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
   },
   "matchControl": {
     "firstHalf": { "home": 50, "away": 50, "note": "string" },
@@ -436,13 +445,7 @@ Using information present in these posts AND any attached images (e.g. graphics 
   }
 }
 
-For lineups: if shirt numbers are visible (e.g. in a numbered team sheet graphic), format each player as "N. Player Name" (e.g. "1. Parkes", "10. Lovett"). If no number is visible for a player, just use their name alone.
-
-For substitutions: "playerOff" is the player being TAKEN OFF the pitch (leaving), "playerOn" is the player COMING ON (entering). If a post says "X comes on for Y" or "Y makes way for X", then playerOff="Y", playerOn="X".
-
-Be conservative with roughXG and matchControl when there is little material to base them on. If only a small number of posts are available, keep the values close to neutral (e.g. xG near 0.0-0.3 for both sides, control near 50/50) and say so explicitly in "note". Only move further from neutral once there is genuine descriptive commentary to base it on.
-
-Only populate wentToExtraTime, wentToPenalties, extraTime, penalties, and the extraTime period of roughXG/matchControl if there is clear evidence the match went beyond 90 minutes. Otherwise set them to false and leave extraTime periods as null/zero. Leave fields as empty arrays, null, or "unknown" if not mentioned. Do not invent details not present in the posts or images. For matchControl, "home" and "away" should sum to 100. For roughXG, use small decimal numbers in the style of real Expected Goals figures.`;
+For lineups: if shirt numbers are visible, format each player as "N. Player Name". For substitutions: "playerOff" is the player being TAKEN OFF, "playerOn" is the player COMING ON. Be conservative with roughXG and matchControl when there is little material. Only populate wentToExtraTime/wentToPenalties/extraTime/penalties if there is clear evidence the match went beyond 90 minutes.`;
 
   const imageBlocks = [];
   for (const { post, imgUrl } of newImagePairs) {

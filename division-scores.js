@@ -47,12 +47,13 @@ function getTodaysWindow(fixtures) {
   const latest = new Date(Math.max(...kickoffs));
   return {
     start: new Date(earliest.getTime() - 15 * 60000),
-    end: new Date(latest.getTime() + 165 * 60000),
+    // Shortened from 165 to 105 minutes after the latest kickoff — most
+    // league matches are fully done well before then, cutting wasted polls
+    // in the final third of the old window.
+    end: new Date(latest.getTime() + 105 * 60000),
   };
 }
 
-// Finds today's fixtures if there are any; otherwise finds the nearest
-// upcoming matchday so the card can show it in a "ready" state ahead of time.
 function findTargetFixtures(fixtures, testDate) {
   if (testDate) {
     const dayFixtures = fixtures.filter(f => {
@@ -104,14 +105,12 @@ async function run() {
   const isManual = process.env.GITHUB_EVENT_NAME === 'workflow_dispatch' || !!testDate;
   const nowUK = now.getUTCHours();
 
-  // Only apply the "before 11am, no scores yet" state on a genuine today —
-  // a preview of a future matchday should just show fixtures regardless of time.
   if (target.isToday && nowUK < 11 && !isManual) {
     fs.writeFileSync('division-scores.json', JSON.stringify({
       generatedAt: REAL_NOW.toISOString(),
       date: target.targetDate,
       isToday: target.isToday,
-      fixtures: todaysFixtures.map(f => ({ home: f.home, away: f.away, kickoff: f.kickoff, score: null, redCards: [] })),
+      fixtures: todaysFixtures.map(f => ({ home: f.home, away: f.away, kickoff: f.kickoff, score: null, goals: [], redCards: [] })),
       ticker: null,
     }, null, 2));
     console.log(`Before 11am — showing ${todaysFixtures.length} fixtures, no scores yet.`);
@@ -130,14 +129,12 @@ async function run() {
     return;
   }
 
-  // If we're showing a future matchday (not today), just publish the plain
-  // fixture list — no point polling for scores on a day that hasn't happened.
   if (!target.isToday) {
     fs.writeFileSync('division-scores.json', JSON.stringify({
       generatedAt: REAL_NOW.toISOString(),
       date: target.targetDate,
       isToday: false,
-      fixtures: todaysFixtures.map(f => ({ home: f.home, away: f.away, kickoff: f.kickoff, score: null, redCards: [] })),
+      fixtures: todaysFixtures.map(f => ({ home: f.home, away: f.away, kickoff: f.kickoff, score: null, goals: [], redCards: [] })),
       ticker: null,
     }, null, 2));
     console.log(`Showing next matchday (${target.targetDate}) — ${todaysFixtures.length} fixtures, ready ahead of time.`);
@@ -203,9 +200,7 @@ Scorelines in these posts may be written without a dash, e.g. "2 1" instead of "
 
 IMPORTANT: A club's score can change multiple times as goals are scored throughout the match. Always use the MOST RECENT scoreline mentioned for each fixture — do not use an early or outdated scoreline just because it was clearly stated, if a later post shows a different, more current score for the same fixture.
 
-IMPORTANT: If a goal is initially reported without a scorer's name (e.g. just "GOAL!" or an emoji scoreline update), but a LATER post for the same team/fixture around the same time confirms who scored, use that confirmed name rather than leaving the scorer as null. Actively cross-reference all posts for a fixture before deciding a scorer is unknown.
-
-For each fixture above, determine ONLY if a score has been EXPLICITLY stated in a post (e.g. "2-1", "FT 3-0", a clear scoreline) — do not guess or infer from goal mentions alone, but always prefer the LATEST such mention. Also extract individual goals with minute and scorer where explicitly mentioned, matching each goal to the correct fixture. Also note any red card sent-offs explicitly mentioned, with team and player if given.
+For each fixture above, determine ONLY if a score has been EXPLICITLY stated in a post — do not guess or infer from goal mentions alone, but always prefer the LATEST such mention. Also extract individual goals with minute and scorer where explicitly mentioned, matching each goal to the correct fixture. Also note any red card sent-offs explicitly mentioned, with team and player if given.
 
 Respond with ONLY a JSON object, no other text, no markdown fences:
 {
@@ -233,9 +228,10 @@ Only include a score if explicitly stated in the posts. Leave as null if not men
   const data = await res.json();
   if (!data.content) throw new Error(`Unexpected API response: ${JSON.stringify(data)}`);
 
- const raw = data.content.map(b => b.text || '').join('').trim();
+  const raw = data.content.map(b => b.text || '').join('').trim();
   const cleaned = raw.replace(/```json|```/g, '').trim();
   const parsed = JSON.parse(cleaned);
+
   const latestPost = allPosts[0];
   const ticker = latestPost ? `@${latestPost.handle}: ${latestPost.text}` : null;
 
