@@ -1,33 +1,12 @@
 {
   "generatedAt": "2026-08-12T19:05:30.109Z",
-  "date": "2026-08-15",
-  "isToday": false,
+  "date": "2026-08-12",
+  "isToday": true,
   "fixtures": [
     {
-      "home": "AFC Bridgnorth",
-      "away": "Crewe",
-      "kickoff": "15:00",
-      "score": null,
-      "redCards": []
-    },
-    {
-      "home": "Brereton Social",
-      "away": "Bilston Town",
-      "kickoff": "15:00",
-      "score": null,
-      "redCards": []
-    },
-    {
-      "home": "Dawley Town",
-      "away": "Wolverhampton Casuals",
-      "kickoff": "15:00",
-      "score": null,
-      "redCards": []
-    },
-    {
-      "home": "Shawbury United",
-      "away": "Widnes Town",
-      "kickoff": "15:00",
+      "home": "Wolverhampton Casuals",
+      "away": "Eccleshall",
+      "kickoff": "19:45",
       "score": null,
       "redCards": []
     }
