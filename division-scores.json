@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-08-12T19:15:22.653Z",
+  "generatedAt": "2026-08-12T19:19:22.071Z",
   "date": "2026-08-12",
   "isToday": true,
-  "postCount": 11,
+  "postCount": 12,
   "fixtures": [
     {
       "home": "Wolverhampton Casuals",
@@ -11,7 +11,7 @@
       "score": "0-1",
       "goals": [
         {
-          "minute": "9",
+          "minute": 9,
           "team": "away",
           "scorer": "Max Chimenes"
         }
@@ -19,5 +19,5 @@
       "redCards": []
     }
   ],
-  "ticker": "@EccleshallFC: 23' Goal to Cassies ruled out\n\n💙🦅\n\n#EccleshallFC"
+  "ticker": "@EccleshallFC: 29' Cassies shoot, keeper tips it over the bar\n\n💙🦅\n\n#EccleshallFC"
 }
