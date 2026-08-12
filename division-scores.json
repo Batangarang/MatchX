@@ -1,13 +1,15 @@
 {
-  "generatedAt": "2026-08-11T22:55:35.657Z",
+  "generatedAt": "2026-08-12T07:01:03.824Z",
   "date": "2026-08-12",
-  "isToday": false,
+  "isToday": true,
+  "postCount": 1,
   "fixtures": [
     {
       "home": "Barnton",
       "away": "Cheadle Heath Nomads",
       "kickoff": "19:45",
       "score": null,
+      "goals": [],
       "redCards": []
     },
     {
@@ -15,8 +17,9 @@
       "away": "Eccleshall",
       "kickoff": "19:45",
       "score": null,
+      "goals": [],
       "redCards": []
     }
   ],
-  "ticker": null
+  "ticker": "@barntonfc: 𝗠𝗔𝗧𝗖𝗛𝗗𝗔𝗬\n\nBack Home 🏠 &amp; under the lights! ⚽️\n\n🏆 | NWCFL D1S \n🆚️ | @CheadleNomads \n🕢 | 19:45 KO\n🏟️ | @CreativeHutEdu \n📍 | CW8 4LH\n💵 | Entrance £6 | Cons £4 | 18-21yrs £2 | U18 £1 | U5s Free\n\n🖤🤍\n\nCome on Barnton! 👊🏻\n\n#BarntonAFC #FinoAllaFine #UTV https://t.co/GMH99U63u7"
 }
