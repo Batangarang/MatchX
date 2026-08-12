@@ -297,7 +297,12 @@ Respond with ONLY a JSON object, no other text, no markdown fences, in exactly t
   fs.writeFileSync(outputFile, JSON.stringify(output, null, 2));
   if (decision.periodKey) markRunForPeriod(decision.periodKey);
 
-  logCost(`recap-${MODE}`, { getxapiCalls: 0, claudeCalls: 1 });
+  logCost(`recap-${MODE}`, {
+    getxapiCalls: 0,
+    claudeCalls: 1,
+    inputTokens: data.usage?.input_tokens || 0,
+    outputTokens: data.usage?.output_tokens || 0,
+  });
   console.log(`[${MODE}] Saved. Sandbach focus:`, (output.sandbachFocus || output.summary || '').slice(0, 150));
 }
 

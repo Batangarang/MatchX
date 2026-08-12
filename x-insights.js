@@ -90,7 +90,12 @@ ${nwcflContext} Write a short, friendly 2-3 sentence summary for fans, covering 
     postsConsidered: posts.length,
     summary,
   };
-  logCost('x-insights', { getxapiCalls: 0, claudeCalls: 1 });
+  logCost('x-insights', {
+    getxapiCalls: 0,
+    claudeCalls: 1,
+    inputTokens: data.usage?.input_tokens || 0,
+    outputTokens: data.usage?.output_tokens || 0,
+  });
   fs.writeFileSync('x-insights.json', JSON.stringify(output, null, 2));
   fs.writeFileSync(stateFile, JSON.stringify({ signature: currentSignature }));
   console.log('Saved insight:', summary);

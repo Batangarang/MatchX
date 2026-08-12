@@ -257,7 +257,12 @@ Only include a score if explicitly stated in the posts. Leave as null if not men
   };
 
   fs.writeFileSync('division-scores.json', JSON.stringify(output, null, 2));
-  logCost('division-scores', { getxapiCalls: handlesNeeded.size, claudeCalls: 1 });
+  logCost('division-scores', {
+    getxapiCalls: handlesNeeded.size,
+    claudeCalls: 1,
+    inputTokens: data.usage?.input_tokens || 0,
+    outputTokens: data.usage?.output_tokens || 0,
+  });
   console.log(`Saved division-scores.json with ${output.fixtures.length} fixtures`);
 }
 

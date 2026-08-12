@@ -532,7 +532,12 @@ For lineups: if shirt numbers are visible, format each player as "N. Player Name
   if (!process.env.MATCHDAY_TEST_DATE) {
     fs.writeFileSync('matchday-live.json', JSON.stringify(output, null, 2));
   }
-  logCost('matchday-live', { getxapiCalls: 2, claudeCalls: 1 });
+  logCost('matchday-live', {
+    getxapiCalls: 2,
+    claudeCalls: 1,
+    inputTokens: data.usage?.input_tokens || 0,
+    outputTokens: data.usage?.output_tokens || 0,
+  });
   console.log(`Saved ${archiveFile} (${combined.length} posts, ${imageBlocks.length / 2} new images this run, ${alreadySeen.size} total)`);
 }
 
