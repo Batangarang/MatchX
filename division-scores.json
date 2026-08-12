@@ -1,38 +1,40 @@
 {
-  "generatedAt": "2026-08-12T22:31:04.103Z",
-  "date": "2026-08-12",
-  "isToday": true,
-  "postCount": 38,
+  "generatedAt": "2026-08-12T23:00:57.166Z",
+  "date": "2026-08-15",
+  "isToday": false,
   "fixtures": [
     {
-      "home": "Wolverhampton Casuals",
-      "away": "Eccleshall",
-      "kickoff": "19:45",
-      "score": "1-2",
-      "goals": [
-        {
-          "minute": 9,
-          "team": "away",
-          "scorer": "Max Chimenes"
-        },
-        {
-          "minute": 46,
-          "team": "away",
-          "scorer": "Morgan Russell"
-        },
-        {
-          "minute": 55,
-          "team": "home",
-          "scorer": "Kieran Cook"
-        }
-      ],
-      "redCards": [
-        {
-          "team": "away",
-          "player": "Jamie Turner"
-        }
-      ]
+      "home": "AFC Bridgnorth",
+      "away": "Crewe",
+      "kickoff": "15:00",
+      "score": null,
+      "goals": [],
+      "redCards": []
+    },
+    {
+      "home": "Brereton Social",
+      "away": "Bilston Town",
+      "kickoff": "15:00",
+      "score": null,
+      "goals": [],
+      "redCards": []
+    },
+    {
+      "home": "Dawley Town",
+      "away": "Wolverhampton Casuals",
+      "kickoff": "15:00",
+      "score": null,
+      "goals": [],
+      "redCards": []
+    },
+    {
+      "home": "Shawbury United",
+      "away": "Widnes Town",
+      "kickoff": "15:00",
+      "score": null,
+      "goals": [],
+      "redCards": []
     }
   ],
-  "ticker": "@EccleshallFC: Max Chimenes and Morgan Russell both score in this evenings 2-1 win over Wolverhampton Casuals. \n\n💙🦅\n\n#EccleshallFC https://t.co/fd7GD1yQzd"
+  "ticker": null
 }
