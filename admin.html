@@ -452,9 +452,11 @@
       log.entries.forEach(e => {
         const day = e.timestamp.slice(0, 10);
         if (!byDay[day]) byDay[day] = {};
-        if (!byDay[day][e.script]) byDay[day][e.script] = { x: 0, ai: 0 };
+        if (!byDay[day][e.script]) byDay[day][e.script] = { x: 0, ai: 0, xCalls: 0, aiCalls: 0 };
         byDay[day][e.script].x += e.xCostGBP;
         byDay[day][e.script].ai += e.aiCostGBP;
+        byDay[day][e.script].xCalls += e.getxapiCalls || 0;
+        byDay[day][e.script].aiCalls += e.claudeCalls || 0;
       });
 
       const days = Object.keys(byDay).sort().slice(-14);
@@ -475,10 +477,15 @@
               <div style="display:flex; justify-content:space-between; font-size:11px; margin-top:4px;">
                 <span>${displayName(script)}</span><span>£${scriptTotal.toFixed(4)}</span>
               </div>
-              <div style="background:var(--paper); border-radius:4px; height:10px; overflow:hidden; display:flex; width:${barWidth}%; min-width:2px;">
-                <div style="background:var(--royal); height:100%; width:${scriptTotal > 0 ? (cost.x / scriptTotal) * 100 : 0}%;" title="GetXAPI: £${cost.x.toFixed(4)}"></div>
-                <div style="background:var(--amber); height:100%; width:${scriptTotal > 0 ? (cost.ai / scriptTotal) * 100 : 0}%;" title="Anthropic: £${cost.ai.toFixed(4)}"></div>
+              <div style="display:flex; justify-content:space-between; font-size:10px; color:var(--muted); margin-bottom:2px;">
+                <span>${cost.xCalls} GetXAPI call${cost.xCalls === 1 ? '' : 's'} · ${cost.aiCalls} Anthropic call${cost.aiCalls === 1 ? '' : 's'}</span>
               </div>
+              <div style="background:var(--paper); border-radius:4px; height:10px; overflow:hidden; display:flex; width:${barWidth}%; min-width:2px;">
+                <div style="background:var(--royal); height:100%; width:${scriptTotal > 0 ? (cost.x / scriptTotal) * 100 : 0}%;" title="GetXAPI: £${cost.x.toFixed(4)} (${cost.xCalls} calls)"></div>
+                <div style="background:var(--amber); height:100%; width:${scriptTotal > 0 ? (cost.ai / scriptTotal) * 100 : 0}%;" title="Anthropic: £${cost.ai.toFixed(4)} (${cost.aiCalls} calls)"></div>
+              </div>
+            `;
+          }).join('');
             `;
           }).join('');
 
