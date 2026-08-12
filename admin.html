@@ -207,6 +207,8 @@
     const REPO = 'Batangarang/MatchX';
     const ADMIN_PASSWORD_HASH = '17a3c1cc9792d6bbf28d8092e88c15953c73fb42f0e6a9499b6b7dc978e48954';
 
+    const X_SHARE = 0.45;
+    const AI_SHARE = 0.55;
     const USD_TO_GBP = 0.75;
     const MATCHDAY_TOTAL_USD = (0.44 + 0.44 + 0.65) / 3;
     const NONMATCHDAY_TOTAL_USD = (0.334 + 0.860 + 0.501) / 3;
@@ -486,8 +488,6 @@
     }
 // Rough estimated split of the real combined total — not independently
     // measured, since GetXAPI/Anthropic don't expose this breakdown themselves
-    const X_SHARE = 0.45;
-    const AI_SHARE = 0.55;
     function setCostPeriod(period) {
       document.querySelectorAll('.toggle-btn').forEach(b => b.classList.toggle('active', b.dataset.period === period));
 
