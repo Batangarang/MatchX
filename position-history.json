@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-08T17:22:47.481Z",
+  "generatedAt": "2026-08-12T06:35:40.096Z",
   "history": [
     {
       "gamesPlayed": 1,
@@ -36,6 +36,18 @@
       "cumGoalsFor": 5,
       "cumGoalsAgainst": 4,
       "cumGoalDifference": 1
+    },
+    {
+      "gamesPlayed": 4,
+      "date": "Tue 11/08/26",
+      "opponent": "New Mills",
+      "position": 9,
+      "points": 6,
+      "gameGoalsFor": 1,
+      "gameGoalsAgainst": 3,
+      "cumGoalsFor": 6,
+      "cumGoalsAgainst": 7,
+      "cumGoalDifference": -1
     }
   ]
 }
