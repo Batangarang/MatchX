@@ -415,7 +415,7 @@
       }
       setTimeout(() => { btnEl.textContent = 'Run now'; btnEl.disabled = false; }, 3000);
     }
-    // ----------Actal Cost----------
+    // ----------Actual Cost----------
     async function loadRealCostData() {
       try {
         const res = await fetch('cost-log.json?t=' + Date.now());
@@ -432,7 +432,6 @@
         return;
       }
 
-      // Group by day and by script
       const byDay = {};
       log.entries.forEach(e => {
         const day = e.timestamp.slice(0, 10);
@@ -442,28 +441,37 @@
         byDay[day][e.script].ai += e.aiCostGBP;
       });
 
-      const days = Object.keys(byDay).sort().slice(-14); // last 14 days
-      const maxDayTotal = Math.max(...days.map(d =>
-        Object.values(byDay[d]).reduce((sum, s) => sum + s.x + s.ai, 0)
-      ), 0.01);
+      const days = Object.keys(byDay).sort().slice(-14);
+      const allScriptCosts = days.flatMap(d => Object.values(byDay[d]).map(s => s.x + s.ai));
+      const maxScriptCost = Math.max(...allScriptCosts, 0.001);
 
       document.getElementById('real-cost-chart').innerHTML = days.map(day => {
         const scripts = byDay[day];
         const dayTotal = Object.values(scripts).reduce((sum, s) => sum + s.x + s.ai, 0);
-        const barWidth = (dayTotal / maxDayTotal) * 100;
         const dateLabel = new Date(day).toLocaleDateString('en-GB', { day: 'numeric', month: 'short' });
 
+        const scriptRows = Object.entries(scripts)
+          .sort((a, b) => (b[1].x + b[1].ai) - (a[1].x + a[1].ai))
+          .map(([script, cost]) => {
+            const scriptTotal = cost.x + cost.ai;
+            const barWidth = (scriptTotal / maxScriptCost) * 100;
+            return `
+              <div style="display:flex; justify-content:space-between; font-size:11px; margin-top:4px;">
+                <span>${script}</span><span>£${scriptTotal.toFixed(4)}</span>
+              </div>
+              <div style="background:var(--paper); border-radius:4px; height:10px; overflow:hidden; display:flex; width:${barWidth}%; min-width:2px;">
+                <div style="background:var(--royal); height:100%; width:${scriptTotal > 0 ? (cost.x / scriptTotal) * 100 : 0}%;" title="GetXAPI: £${cost.x.toFixed(4)}"></div>
+                <div style="background:var(--amber); height:100%; width:${scriptTotal > 0 ? (cost.ai / scriptTotal) * 100 : 0}%;" title="Anthropic: £${cost.ai.toFixed(4)}"></div>
+              </div>
+            `;
+          }).join('');
+
         return `
-          <div style="margin-bottom:10px;">
-            <div style="display:flex; justify-content:space-between; font-size:12px; margin-bottom:2px;">
-              <span>${dateLabel}</span><span>£${dayTotal.toFixed(3)}</span>
+          <div style="margin-bottom:16px; padding-bottom:8px; border-bottom:1px solid var(--line);">
+            <div style="display:flex; justify-content:space-between; font-size:13px; font-weight:700; margin-bottom:4px;">
+              <span>${dateLabel}</span><span>£${dayTotal.toFixed(4)}</span>
             </div>
-            <div style="background:var(--paper); border-radius:4px; height:14px; overflow:hidden; display:flex; width:${barWidth}%; min-width:2px;">
-              ${Object.entries(scripts).map(([script, cost]) =>
-                `<div style="background:var(--royal); height:100%; width:${(cost.x / dayTotal) * 100}%;" title="${script} GetXAPI: £${cost.x.toFixed(3)}"></div>
-                 <div style="background:var(--amber); height:100%; width:${(cost.ai / dayTotal) * 100}%;" title="${script} Anthropic: £${cost.ai.toFixed(3)}"></div>`
-              ).join('')}
-            </div>
+            ${scriptRows}
           </div>
         `;
       }).join('');
@@ -472,9 +480,8 @@
       const totalX = log.entries.reduce((s, e) => s + e.xCostGBP, 0);
       const totalAI = log.entries.reduce((s, e) => s + e.aiCostGBP, 0);
       document.getElementById('real-cost-total').textContent =
-        `£${totalAllTime.toFixed(2)} logged over last ${days.length} days (£${totalX.toFixed(2)} GetXAPI · £${totalAI.toFixed(2)} Anthropic)`;
+        `£${totalAllTime.toFixed(2)} logged over last ${days.length} day(s) (£${totalX.toFixed(2)} GetXAPI · £${totalAI.toFixed(2)} Anthropic)`;
     }
-
 
 
 
