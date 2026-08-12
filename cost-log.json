@@ -39,6 +39,14 @@
       "claudeCalls": 0,
       "xCostGBP": 0.0008,
       "aiCostGBP": 0
+    },
+    {
+      "script": "x-posts",
+      "timestamp": "2026-08-12T20:50:22.078Z",
+      "getxapiCalls": 1,
+      "claudeCalls": 0,
+      "xCostGBP": 0.0008,
+      "aiCostGBP": 0
     }
   ]
 }
