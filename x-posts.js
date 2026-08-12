@@ -97,15 +97,8 @@ async function run() {
     })),
   };
 
-  fs.writeFileSync('x-posts.json', JSON.stringify(output, null, 2));
-  console.log('DEBUG: about to call logCost');
-  try {
-    logCost('x-posts', { getxapiCalls: 1, claudeCalls: 0 });
-    console.log('DEBUG: logCost completed, checking file...');
-    console.log('DEBUG: cost-log.json exists?', fs.existsSync('cost-log.json'));
-  } catch (err) {
-    console.log('DEBUG: logCost threw an error:', err.message);
-  }
+fs.writeFileSync('x-posts.json', JSON.stringify(output, null, 2));
+  logCost('x-posts', { getxapiCalls: 1, claudeCalls: 0 });
   console.log(`Saved ${posts.length} posts from @${USERNAME}`);
 }
 
