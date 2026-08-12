@@ -52,7 +52,29 @@ async function scrape() {
     });
   });
 
-  fs.writeFileSync('division-fixtures.json', JSON.stringify({ generatedAt: new Date().toISOString(), fixtures }, null, 2));
+  // If today's own fixture(s) have dropped off the source page (this happens
+  // once kickoff passes — the site only lists upcoming fixtures), preserve
+  // whatever we already knew about today rather than losing it entirely.
+  const todayStr = new Date().toDateString();
+  let preservedTodayFixtures = [];
+  if (fs.existsSync('division-fixtures.json')) {
+    try {
+      const previous = JSON.parse(fs.readFileSync('division-fixtures.json', 'utf-8'));
+      preservedTodayFixtures = (previous.fixtures || []).filter(f => {
+        const d = new Date(f.date.replace(/^\w+day\s+/, '')); // strip "Wednesday " etc.
+        return !isNaN(d) && d.toDateString() === todayStr &&
+               !fixtures.some(nf => nf.home === f.home && nf.away === f.away);
+      });
+    } catch {}
+  }
+
+  const finalFixtures = [...fixtures, ...preservedTodayFixtures];
+
+  fs.writeFileSync('division-fixtures.json', JSON.stringify({ generatedAt: new Date().toISOString(), fixtures: finalFixtures }, null, 2));
+  if (preservedTodayFixtures.length > 0) {
+    console.log(`Preserved ${preservedTodayFixtures.length} of today's fixtures that had dropped off the source page.`);
+  }
+  
   console.log(`Saved ${fixtures.length} division fixtures`);
   console.log('First 5:', fixtures.slice(0, 5));
 }
