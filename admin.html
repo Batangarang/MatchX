@@ -149,6 +149,16 @@
     </div>
 
     <div class="card">
+      <h2>Real Logged Cost (last 14 days)</h2>
+      <div class="sub" id="real-cost-total">Loading…</div>
+      <div id="real-cost-chart" style="margin-top:10px;"></div>
+      <div class="cost-caveat" style="margin-top:10px;">
+        Built from real per-run call counts logged by each script (cost-log.json) — genuine data, not an estimate.
+        Blue = GetXAPI, amber = Anthropic. Bar length shows relative daily total across the last 14 days.
+      </div>
+    </div>
+
+    <div class="card">
       <h2>Estimated Cost</h2>
       <label style="display:flex; align-items:center; gap:8px; font-size:13px; margin-bottom:12px;">
         <input type="checkbox" id="matchday-toggle" onchange="toggleMatchday()">
@@ -248,6 +258,7 @@
       renderEfficiencyTable();
       document.getElementById('domain-cost-note').textContent = `£${DOMAIN_YEARLY_GBP.toFixed(2)}`;
       setCostPeriod('day');
+      loadRealCostData().then(renderRealCostChart);
     }
 
     if (sessionStorage.getItem('matchx_admin_ok') === 'true') {
@@ -402,6 +413,70 @@
       }
       setTimeout(() => { btnEl.textContent = 'Run now'; btnEl.disabled = false; }, 3000);
     }
+    // ----------Actal Cost----------
+    async function loadRealCostData() {
+      try {
+        const res = await fetch('cost-log.json?t=' + Date.now());
+        if (!res.ok) return null;
+        return await res.json();
+      } catch {
+        return null;
+      }
+    }
+
+    function renderRealCostChart(log) {
+      if (!log || !log.entries || log.entries.length === 0) {
+        document.getElementById('real-cost-chart').innerHTML = '<div class="empty">No real cost data logged yet — this builds up as workflows run.</div>';
+        return;
+      }
+
+      // Group by day and by script
+      const byDay = {};
+      log.entries.forEach(e => {
+        const day = e.timestamp.slice(0, 10);
+        if (!byDay[day]) byDay[day] = {};
+        if (!byDay[day][e.script]) byDay[day][e.script] = { x: 0, ai: 0 };
+        byDay[day][e.script].x += e.xCostGBP;
+        byDay[day][e.script].ai += e.aiCostGBP;
+      });
+
+      const days = Object.keys(byDay).sort().slice(-14); // last 14 days
+      const maxDayTotal = Math.max(...days.map(d =>
+        Object.values(byDay[d]).reduce((sum, s) => sum + s.x + s.ai, 0)
+      ), 0.01);
+
+      document.getElementById('real-cost-chart').innerHTML = days.map(day => {
+        const scripts = byDay[day];
+        const dayTotal = Object.values(scripts).reduce((sum, s) => sum + s.x + s.ai, 0);
+        const barWidth = (dayTotal / maxDayTotal) * 100;
+        const dateLabel = new Date(day).toLocaleDateString('en-GB', { day: 'numeric', month: 'short' });
+
+        return `
+          <div style="margin-bottom:10px;">
+            <div style="display:flex; justify-content:space-between; font-size:12px; margin-bottom:2px;">
+              <span>${dateLabel}</span><span>£${dayTotal.toFixed(3)}</span>
+            </div>
+            <div style="background:var(--paper); border-radius:4px; height:14px; overflow:hidden; display:flex; width:${barWidth}%; min-width:2px;">
+              ${Object.entries(scripts).map(([script, cost]) =>
+                `<div style="background:var(--royal); height:100%; width:${(cost.x / dayTotal) * 100}%;" title="${script} GetXAPI: £${cost.x.toFixed(3)}"></div>
+                 <div style="background:var(--amber); height:100%; width:${(cost.ai / dayTotal) * 100}%;" title="${script} Anthropic: £${cost.ai.toFixed(3)}"></div>`
+              ).join('')}
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      const totalAllTime = log.entries.reduce((s, e) => s + e.xCostGBP + e.aiCostGBP, 0);
+      const totalX = log.entries.reduce((s, e) => s + e.xCostGBP, 0);
+      const totalAI = log.entries.reduce((s, e) => s + e.aiCostGBP, 0);
+      document.getElementById('real-cost-total').textContent =
+        `£${totalAllTime.toFixed(2)} logged over last ${days.length} days (£${totalX.toFixed(2)} GetXAPI · £${totalAI.toFixed(2)} Anthropic)`;
+    }
+
+
+
+
+
 
     // ---------- Cost estimate ----------
     function toggleMatchday() {

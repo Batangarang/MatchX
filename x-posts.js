@@ -1,5 +1,6 @@
 const fs = require('fs');
 const { getUserTweets } = require('./getxapi-client.js');
+const { logCost } = require('./cost-tracker.js');
 
 const USERNAME = 'SandbachFC_1st';
 const API_KEY = process.env.GETXAPI_KEY;
@@ -97,6 +98,7 @@ async function run() {
   };
 
   fs.writeFileSync('x-posts.json', JSON.stringify(output, null, 2));
+  logCost('x-posts', { getxapiCalls: 1, claudeCalls: 0 });
   console.log(`Saved ${posts.length} posts from @${USERNAME}`);
 }
 
