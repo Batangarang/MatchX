@@ -1,23 +1,37 @@
 {
-  "scrapedAt": "2026-08-13T04:10:42.831Z",
+  "scrapedAt": "2026-08-13T04:15:43.180Z",
   "division": "First Division South",
   "standings": [
     {
       "position": 1,
       "team": "Wolverhampton Casuals",
-      "played": "3",
+      "played": "4",
       "won": "3",
       "drawn": "0",
-      "lost": "0",
-      "for": "8",
-      "against": "0",
-      "goalDifference": "8",
+      "lost": "1",
+      "for": "9",
+      "against": "2",
+      "goalDifference": "7",
       "points": "9",
       "clubUrl": "clubpage.php?id=73",
-      "form": "WWW"
+      "form": "LWWW"
     },
     {
       "position": 2,
+      "team": "Eccleshall",
+      "played": "4",
+      "won": "3",
+      "drawn": "0",
+      "lost": "1",
+      "for": "10",
+      "against": "4",
+      "goalDifference": "6",
+      "points": "9",
+      "clubUrl": "clubpage.php?id=30",
+      "form": "WLWW"
+    },
+    {
+      "position": 3,
       "team": "Stafford Town",
       "played": "4",
       "won": "3",
@@ -31,7 +45,7 @@
       "form": "WLWW"
     },
     {
-      "position": 3,
+      "position": 4,
       "team": "New Mills",
       "played": "4",
       "won": "3",
@@ -45,7 +59,7 @@
       "form": "WWLW"
     },
     {
-      "position": 4,
+      "position": 5,
       "team": "AFC Bridgnorth",
       "played": "3",
       "won": "2",
@@ -59,7 +73,7 @@
       "form": "DWWW"
     },
     {
-      "position": 5,
+      "position": 6,
       "team": "Shawbury United",
       "played": "4",
       "won": "2",
@@ -71,20 +85,6 @@
       "points": "7",
       "clubUrl": "clubpage.php?id=792",
       "form": "WWDL"
-    },
-    {
-      "position": 6,
-      "team": "Eccleshall",
-      "played": "3",
-      "won": "2",
-      "drawn": "0",
-      "lost": "1",
-      "for": "8",
-      "against": "3",
-      "goalDifference": "5",
-      "points": "6",
-      "clubUrl": "clubpage.php?id=30",
-      "form": "LWW"
     },
     {
       "position": 7,
