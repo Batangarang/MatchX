@@ -282,12 +282,17 @@
     .form-badges {
       white-space: nowrap;
       overflow: hidden;
-      max-width: 62px; /* roughly 5 badges × 11px + margins */
+      max-width: 58px;
     }
-
     .form-badges span {
-      display: inline-block; width: 11px; height: 11px; border-radius: 2px;
-      margin-right: 2px; font-size: 0;
+      display: inline-block; width: 9px; height: 9px; border-radius: 2px;
+      margin-right: 1.5px; font-size: 0;
+    }
+    #league-table {
+      font-size: 12px;
+    }
+    #league-table td, #league-table th {
+      padding: 4px 3px;
     }
 
     .empty { color: var(--muted); font-size: 13px; }
@@ -306,7 +311,6 @@
     </div>
     <div class="live-badge show" id="live-badge"><span class="live-dot" id="live-dot"></span> <span id="countdown-text">Loading…</span></div>
   </div>
-
   <div class="card" id="matchday-card" style="display: none;">
     <h2>Matchday</h2>
     <div id="matchday-link-wrapper" style="text-decoration: none; color: inherit; display: block;">
