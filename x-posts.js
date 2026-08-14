@@ -34,8 +34,6 @@ function getTodayFixtureWindow() {
 }
 
 function shouldPollNow() {
-  if (process.env.GITHUB_EVENT_NAME === 'workflow_dispatch') return true;
-
   const now = new Date();
   const window = getTodayFixtureWindow();
   if (window && now >= window.start && now <= window.end) return true;
@@ -48,8 +46,6 @@ function shouldPollNow() {
 
   const hour = now.getUTCHours();
   const isNight = hour < 5 || hour > 23;
-  // Widened from 30 to 60 minutes — a single club's own account rarely
-  // needs checking more often than hourly outside its own matchday
   const targetIntervalMinutes = isNight ? 180 : 60;
   const minutesSinceLastPoll = lastPoll ? (now - lastPoll) / 60000 : Infinity;
 
