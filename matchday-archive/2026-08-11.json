@@ -88,43 +88,9 @@
         "team": "home",
         "playerOff": "Finney",
         "playerOn": "Stafford"
-      },
-      {
-        "minute": 66,
-        "team": "home",
-        "playerOff": "Kieran Nolan",
-        "playerOn": "Cope"
-      },
-      {
-        "minute": 62,
-        "team": "away",
-        "playerOff": "number 10",
-        "playerOn": "number 15"
-      },
-      {
-        "minute": 62,
-        "team": "away",
-        "playerOff": "10",
-        "playerOn": "15"
-      },
-      {
-        "minute": 62,
-        "team": "away",
-        "playerOff": "Number 10",
-        "playerOn": "Number 15"
       }
     ],
     "sinBins": [
-      {
-        "minute": 56,
-        "team": "home",
-        "player": "number 4"
-      },
-      {
-        "minute": 56,
-        "team": "home",
-        "player": "4"
-      },
       {
         "minute": 56,
         "team": "home",
