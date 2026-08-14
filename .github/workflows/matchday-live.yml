@@ -1,6 +1,11 @@
 name: Matchday live tracker
 on:
   workflow_dispatch:
+
+concurrency:
+  group: division-scores
+  cancel-in-progress: false
+    
 permissions:
   contents: write
 jobs:

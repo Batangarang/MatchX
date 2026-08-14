@@ -1,8 +1,15 @@
 name: Division recap - weekend recap
 on:
   workflow_dispatch:
+
+concurrency:
+  group: division-scores
+  cancel-in-progress: false
+
+
 permissions:
   contents: write
+  
 jobs:
   recap:
     runs-on: ubuntu-latest

@@ -3,6 +3,10 @@ name: Division scores
 on:
   workflow_dispatch:
 
+concurrency:
+  group: division-scores
+  cancel-in-progress: false
+
 permissions:
   contents: write
 
