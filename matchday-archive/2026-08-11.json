@@ -80,14 +80,20 @@
       {
         "minute": 62,
         "team": "away",
-        "playerOff": "unknown",
-        "playerOn": "unknown"
+        "playerOff": "15",
+        "playerOn": "10"
       },
       {
         "minute": 66,
         "team": "home",
         "playerOff": "Finney",
         "playerOn": "Stafford"
+      },
+      {
+        "minute": 66,
+        "team": "home",
+        "playerOff": "Cope",
+        "playerOn": "Kieran Nolan"
       }
     ],
     "sinBins": [
