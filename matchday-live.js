@@ -189,6 +189,40 @@ function dedupeSimilarEvents(events, keyFields) {
   return dedupeByTeamMinuteAndIdentity(events, identityField);
 }
 
+function dedupeSimilarSubstitutions(subs) {
+  const deduped = [];
+  subs.forEach(s => {
+    const sOffId = normalizeIdentity(s.playerOff);
+    const sOnId = normalizeIdentity(s.playerOn);
+    const matchIndex = deduped.findIndex(existing => {
+      if (existing.team !== s.team) return false;
+      if (Math.abs((existing.minute || 0) - (s.minute || 0)) > 3) return false;
+      const existingOffId = normalizeIdentity(existing.playerOff);
+      const existingOnId = normalizeIdentity(existing.playerOn);
+      const offMatches = !existingOffId || !sOffId || namesLikelyMatch(existingOffId, sOffId);
+      const onMatches = !existingOnId || !sOnId || namesLikelyMatch(existingOnId, sOnId);
+      return offMatches && onMatches;
+    });
+
+    if (matchIndex === -1) {
+      deduped.push(s);
+    } else {
+      const existing = deduped[matchIndex];
+      const existingOffId = normalizeIdentity(existing.playerOff);
+      const existingOnId = normalizeIdentity(existing.playerOn);
+      const offIsMoreSpecific = sOffId && (!existingOffId || sOffId.length > existingOffId.length);
+      const onIsMoreSpecific = sOnId && (!existingOnId || sOnId.length > existingOnId.length);
+      deduped[matchIndex] = {
+        ...existing,
+        playerOff: offIsMoreSpecific ? s.playerOff : existing.playerOff,
+        playerOn: onIsMoreSpecific ? s.playerOn : existing.playerOn,
+        minute: s.minute ?? existing.minute,
+      };
+    }
+  });
+  return deduped;
+}
+
 function deriveScoreFromGoals(goals) {
   if (!goals || goals.length === 0) return null;
   const home = goals.filter(g => g.team === 'home').length;
@@ -226,6 +260,7 @@ function mergeMatchData(previous, incoming) {
       halfTimeScoreAnnounced: announcedHT,
       htDiscrepancy,
       finalScoreAnnounced: announcedScore,
+      substitutions: dedupeSimilarSubstitutions(incoming.substitutions || []),
       yellowCards: dedupeSimilarEvents(incoming.yellowCards || [], ['team', 'player']),
       redCards: dedupeSimilarEvents(incoming.redCards || [], ['team', 'player']),
       sinBins: dedupeSimilarEvents(incoming.sinBins || [], ['team', 'player']),
@@ -287,7 +322,9 @@ function mergeMatchData(previous, incoming) {
     goals: mergedGoals,
     yellowCards: mergedYellowCards,
     redCards: mergedRedCards,
-    substitutions: mergeArrays(previous.substitutions, incoming.substitutions, s => `${s.minute}-${s.playerOff}-${s.playerOn}`),
+    substitutions: dedupeSimilarSubstitutions(
+      mergeArrays(previous.substitutions, incoming.substitutions, s => `${s.minute}-${s.playerOff}-${s.playerOn}`)
+    ),
     sinBins: mergedSinBins,
     injuries: mergeArrays(previous.injuries, incoming.injuries, i => `${i.minute}-${i.player}-${i.team}`),
     addedTime: {
