@@ -281,6 +281,8 @@
 
     .form-badges {
       white-space: nowrap;
+      overflow: hidden;
+      max-width: 62px; /* roughly 5 badges × 11px + margins */
     }
 
     .form-badges span {
@@ -996,7 +998,7 @@
             <td>${t.lost}</td>
             <td>${t.goalDifference}</td>
             <td>${t.points}</td>
-            <td>${formBadges(t.form)}</td>
+            <td style="overflow: hidden;">${formBadges(t.form)}</td>
           </tr>
         `;
       }).join('');
