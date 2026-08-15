@@ -1,34 +1,6 @@
 {
-  "generatedAt": "2026-08-15T13:40:57.361Z",
+  "generatedAt": "2026-08-15T14:08:03.535Z",
   "fixtures": [
-    {
-      "date": "Saturday 15 August 2026",
-      "home": "AFC Bridgnorth",
-      "away": "Crewe",
-      "kickoff": "15:00",
-      "postponed": false
-    },
-    {
-      "date": "Saturday 15 August 2026",
-      "home": "Brereton Social",
-      "away": "Bilston Town",
-      "kickoff": "15:00",
-      "postponed": false
-    },
-    {
-      "date": "Saturday 15 August 2026",
-      "home": "Dawley Town",
-      "away": "Wolverhampton Casuals",
-      "kickoff": "15:00",
-      "postponed": false
-    },
-    {
-      "date": "Saturday 15 August 2026",
-      "home": "Shawbury United",
-      "away": "Widnes Town",
-      "kickoff": "15:00",
-      "postponed": false
-    },
     {
       "date": "Monday 17 August 2026",
       "home": "Cheadle Heath Nomads",
@@ -2427,6 +2399,34 @@
       "date": "Saturday 17 April 2027",
       "home": "Wolverhampton Casuals",
       "away": "Cheadle Heath Nomads",
+      "kickoff": "15:00",
+      "postponed": false
+    },
+    {
+      "date": "Saturday 15 August 2026",
+      "home": "AFC Bridgnorth",
+      "away": "Crewe",
+      "kickoff": "15:00",
+      "postponed": false
+    },
+    {
+      "date": "Saturday 15 August 2026",
+      "home": "Brereton Social",
+      "away": "Bilston Town",
+      "kickoff": "15:00",
+      "postponed": false
+    },
+    {
+      "date": "Saturday 15 August 2026",
+      "home": "Dawley Town",
+      "away": "Wolverhampton Casuals",
+      "kickoff": "15:00",
+      "postponed": false
+    },
+    {
+      "date": "Saturday 15 August 2026",
+      "home": "Shawbury United",
+      "away": "Widnes Town",
       "kickoff": "15:00",
       "postponed": false
     }
