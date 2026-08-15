@@ -1,24 +1,29 @@
 {
-  "generatedAt": "2026-08-15T15:10:51.088Z",
+  "generatedAt": "2026-08-15T15:35:44.340Z",
   "date": "2026-08-15",
   "isToday": true,
-  "postCount": 27,
+  "postCount": 29,
   "fixtures": [
     {
       "home": "AFC Bridgnorth",
       "away": "Crewe",
       "kickoff": "15:00",
-      "score": "1-1",
+      "score": "2-1",
       "goals": [
         {
           "minute": "2",
           "team": "away",
-          "scorer": "unknown"
+          "scorer": null
         },
         {
-          "minute": "unknown",
+          "minute": null,
           "team": "home",
           "scorer": "Dubz"
+        },
+        {
+          "minute": null,
+          "team": "home",
+          "scorer": "Suar"
         }
       ],
       "redCards": []
@@ -51,8 +56,14 @@
       "home": "Dawley Town",
       "away": "Wolverhampton Casuals",
       "kickoff": "15:00",
-      "score": "0-0",
-      "goals": [],
+      "score": "0-1",
+      "goals": [
+        {
+          "minute": "66",
+          "team": "away",
+          "scorer": "Liam Kirton"
+        }
+      ],
       "redCards": [
         {
           "team": "home",
@@ -69,7 +80,7 @@
         {
           "minute": "7",
           "team": "away",
-          "scorer": "unknown"
+          "scorer": null
         },
         {
           "minute": "27",
@@ -79,7 +90,7 @@
         {
           "minute": "43",
           "team": "away",
-          "scorer": "unknown"
+          "scorer": null
         },
         {
           "minute": "45+3",
@@ -95,5 +106,5 @@
       "redCards": []
     }
   ],
-  "ticker": "@bilstontownfc: Brereton Sports 0 Steelmen 3\n\nJ Crump \n\n52 mins"
+  "ticker": "@WolvesCassies: 66': Liam Kirton scores for Wolverhampton Casuals 🙌\n#DAWWOL #Pitchero\nhttps://www.wolverhamptoncasualsfc.co.uk/teams/294420/match-centre/1-19876187?utm_campaign=match_event&utm_medium=post&utm_source=twitter&utm_content=goal https://t.co/LEVFdTNBGF"
 }
