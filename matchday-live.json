@@ -1,17 +1,19 @@
 {
-  "generatedAt": "2026-08-15T13:20:53.478Z",
+  "generatedAt": "2026-08-15T14:02:16.212Z",
   "fixtureDate": "2026-08-15",
   "kickoff": "15:00",
   "homeTeam": "Sandbach United",
   "awayTeam": "Ashby Ivanhoe",
-  "postsUsed": 1,
+  "postsUsed": 2,
   "imagesAnalyzedThisRun": 1,
-  "totalImagesAnalyzed": 1,
+  "totalImagesAnalyzed": 2,
   "match": {
     "score": null,
+    "scoreDiscrepancy": null,
     "finalScoreAnnounced": null,
     "halfTimeScoreAnnounced": null,
-    "matchStage": "scheduled",
+    "htDiscrepancy": null,
+    "matchStage": "first_half",
     "lineups": {
       "home": {
         "players": [
@@ -68,22 +70,22 @@
       "firstHalf": {
         "home": 0,
         "away": 0,
-        "note": "No match data available"
+        "note": "No shot data available"
       },
       "secondHalf": {
         "home": 0,
         "away": 0,
-        "note": "No match data available"
+        "note": "No shot data available"
       },
       "extraTime": {
         "home": 0,
         "away": 0,
-        "note": "No match data available"
+        "note": "No shot data available"
       },
       "total": {
         "home": 0,
         "away": 0,
-        "note": "No match data available"
+        "note": "No shot data available"
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
@@ -91,26 +93,24 @@
       "firstHalf": {
         "home": 50,
         "away": 50,
-        "note": "No match data available"
+        "note": "Match just kicked off, no play data available"
       },
       "secondHalf": {
         "home": 50,
         "away": 50,
-        "note": "No match data available"
+        "note": "No shot data available"
       },
       "extraTime": {
         "home": 50,
         "away": 50,
-        "note": "No match data available"
+        "note": "No shot data available"
       },
       "total": {
         "home": 50,
         "away": 50,
-        "note": "No match data available"
+        "note": "No shot data available"
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
-    },
-    "scoreDiscrepancy": null,
-    "htDiscrepancy": null
+    }
   }
 }
