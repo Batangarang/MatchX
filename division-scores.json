@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-08-15T16:03:01.153Z",
+  "generatedAt": "2026-08-15T16:15:49.453Z",
   "date": "2026-08-15",
   "isToday": true,
-  "postCount": 36,
+  "postCount": 37,
   "fixtures": [
     {
       "home": "AFC Bridgnorth",
@@ -13,25 +13,25 @@
         {
           "minute": "2",
           "team": "away",
-          "scorer": "Unknown"
+          "scorer": null
         },
         {
-          "minute": "14",
+          "minute": null,
           "team": "home",
           "scorer": "Dubz"
         },
         {
-          "minute": "15",
+          "minute": null,
           "team": "home",
           "scorer": "Suar"
         },
         {
-          "minute": "15",
+          "minute": null,
           "team": "home",
           "scorer": "Zazi"
         },
         {
-          "minute": "15",
+          "minute": null,
           "team": "home",
           "scorer": "Zazi"
         }
@@ -90,7 +90,7 @@
         {
           "minute": "7",
           "team": "away",
-          "scorer": "Unknown"
+          "scorer": null
         },
         {
           "minute": "27",
@@ -100,7 +100,7 @@
         {
           "minute": "43",
           "team": "away",
-          "scorer": "Unknown"
+          "scorer": null
         },
         {
           "minute": "45+3",
@@ -116,5 +116,5 @@
       "redCards": []
     }
   ],
-  "ticker": "@bilstontownfc: Full Time 🧡\n\nBrereton Sports 0 Steelmen 3"
+  "ticker": "@shawburyutd: FT\n@shawburyutd 3-2 @WidnesTownFC https://t.co/UEf0LnZrgN"
 }
