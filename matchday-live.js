@@ -391,8 +391,8 @@ async function run() {
   }
 
   const [homePosts, awayPosts] = await Promise.all([
-    getPostsForHandle(homeHandle, dateStr),
-    getPostsForHandle(awayHandle, dateStr),
+    homeHandle ? getPostsForHandle(homeHandle, dateStr) : Promise.resolve([]),
+    awayHandle ? getPostsForHandle(awayHandle, dateStr) : Promise.resolve([]),
   ]);
 
   const combinedRaw = [
