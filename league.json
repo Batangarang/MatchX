@@ -1,5 +1,5 @@
 {
-  "scrapedAt": "2026-08-15T19:50:33.836Z",
+  "scrapedAt": "2026-08-15T19:55:29.840Z",
   "division": "First Division South",
   "standings": [
     {
@@ -126,7 +126,7 @@
       "goalDifference": "0",
       "points": "6",
       "clubUrl": "clubpage.php?id=898",
-      "form": "WLWL"
+      "form": "WWLWL"
     },
     {
       "position": 10,
@@ -140,7 +140,7 @@
       "goalDifference": "-1",
       "points": "6",
       "clubUrl": "clubpage.php?id=803",
-      "form": "LWLW"
+      "form": "LLWLW"
     },
     {
       "position": 11,
@@ -154,7 +154,7 @@
       "goalDifference": "0",
       "points": "4",
       "clubUrl": "clubpage.php?id=191",
-      "form": "DWWL"
+      "form": "LDWWL"
     },
     {
       "position": 12,
@@ -168,7 +168,7 @@
       "goalDifference": "-6",
       "points": "4",
       "clubUrl": "clubpage.php?id=881",
-      "form": "LWDL"
+      "form": "WLWDL"
     },
     {
       "position": 13,
