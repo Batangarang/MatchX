@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-08-15T14:32:00.387Z",
+  "generatedAt": "2026-08-15T15:10:51.088Z",
   "date": "2026-08-15",
   "isToday": true,
-  "postCount": 17,
+  "postCount": 27,
   "fixtures": [
     {
       "home": "AFC Bridgnorth",
@@ -16,7 +16,7 @@
           "scorer": "unknown"
         },
         {
-          "minute": null,
+          "minute": "unknown",
           "team": "home",
           "scorer": "Dubz"
         }
@@ -27,34 +27,44 @@
       "home": "Brereton Social",
       "away": "Bilston Town",
       "kickoff": "15:00",
-      "score": null,
-      "goals": [],
+      "score": "0-3",
+      "goals": [
+        {
+          "minute": "33",
+          "team": "away",
+          "scorer": "L Carter"
+        },
+        {
+          "minute": "39",
+          "team": "away",
+          "scorer": "N Guest"
+        },
+        {
+          "minute": "52",
+          "team": "away",
+          "scorer": "J Crump"
+        }
+      ],
       "redCards": []
     },
     {
       "home": "Dawley Town",
       "away": "Wolverhampton Casuals",
       "kickoff": "15:00",
-      "score": "1-1",
-      "goals": [
+      "score": "0-0",
+      "goals": [],
+      "redCards": [
         {
-          "minute": "15",
           "team": "home",
-          "scorer": "Ross Jones"
-        },
-        {
-          "minute": "22",
-          "team": "away",
-          "scorer": "Bailey Storey"
+          "player": "Dyerel Graham-Hoof"
         }
-      ],
-      "redCards": []
+      ]
     },
     {
       "home": "Shawbury United",
       "away": "Widnes Town",
       "kickoff": "15:00",
-      "score": "1-1",
+      "score": "3-2",
       "goals": [
         {
           "minute": "7",
@@ -65,10 +75,25 @@
           "minute": "27",
           "team": "home",
           "scorer": "Pickford"
+        },
+        {
+          "minute": "43",
+          "team": "away",
+          "scorer": "unknown"
+        },
+        {
+          "minute": "45+3",
+          "team": "home",
+          "scorer": "Hesson"
+        },
+        {
+          "minute": "45+6",
+          "team": "home",
+          "scorer": "Pickford"
         }
       ],
       "redCards": []
     }
   ],
-  "ticker": "@shawburyutd: 27’ Pickford levels it up! \n\n⚪️⚫️1-1🟡🟡 https://t.co/SLBGhoD3Aa"
+  "ticker": "@bilstontownfc: Brereton Sports 0 Steelmen 3\n\nJ Crump \n\n52 mins"
 }
