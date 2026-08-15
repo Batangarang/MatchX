@@ -1,120 +1,16 @@
 {
-  "generatedAt": "2026-08-15T18:25:49.074Z",
-  "date": "2026-08-15",
-  "isToday": true,
-  "postCount": 38,
+  "generatedAt": "2026-08-15T23:05:48.322Z",
+  "date": "2026-08-17",
+  "isToday": false,
   "fixtures": [
     {
-      "home": "AFC Bridgnorth",
-      "away": "Crewe",
-      "kickoff": "15:00",
-      "score": "4-1",
-      "goals": [
-        {
-          "minute": "2",
-          "team": "away",
-          "scorer": null
-        },
-        {
-          "minute": "14",
-          "team": "home",
-          "scorer": "Dubz"
-        },
-        {
-          "minute": "15",
-          "team": "home",
-          "scorer": "Suar"
-        },
-        {
-          "minute": "15",
-          "team": "home",
-          "scorer": "Zazi"
-        },
-        {
-          "minute": "15",
-          "team": "home",
-          "scorer": "Zazi"
-        }
-      ],
-      "redCards": []
-    },
-    {
-      "home": "Brereton Social",
-      "away": "Bilston Town",
-      "kickoff": "15:00",
-      "score": "0-3",
-      "goals": [
-        {
-          "minute": "33",
-          "team": "away",
-          "scorer": "L Carter"
-        },
-        {
-          "minute": "39",
-          "team": "away",
-          "scorer": "N Guest"
-        },
-        {
-          "minute": "52",
-          "team": "away",
-          "scorer": "J Crump"
-        }
-      ],
-      "redCards": []
-    },
-    {
-      "home": "Dawley Town",
-      "away": "Wolverhampton Casuals",
-      "kickoff": "15:00",
-      "score": "0-1",
-      "goals": [
-        {
-          "minute": "66",
-          "team": "away",
-          "scorer": "Liam Kirton"
-        }
-      ],
-      "redCards": [
-        {
-          "team": "home",
-          "player": "Dyerel Graham-Hoof"
-        }
-      ]
-    },
-    {
-      "home": "Shawbury United",
-      "away": "Widnes Town",
-      "kickoff": "15:00",
-      "score": "3-2",
-      "goals": [
-        {
-          "minute": "7",
-          "team": "away",
-          "scorer": null
-        },
-        {
-          "minute": "27",
-          "team": "home",
-          "scorer": "Pickford"
-        },
-        {
-          "minute": "43",
-          "team": "away",
-          "scorer": null
-        },
-        {
-          "minute": "45+3",
-          "team": "home",
-          "scorer": "Hesson"
-        },
-        {
-          "minute": "45+6",
-          "team": "home",
-          "scorer": "Pickford"
-        }
-      ],
+      "home": "Cheadle Heath Nomads",
+      "away": "Alsager Town",
+      "kickoff": "19:45",
+      "score": null,
+      "goals": [],
       "redCards": []
     }
   ],
-  "ticker": "@bilstontownfc: Our white shirts looked great today. https://t.co/cgzmLof6gO"
+  "ticker": null
 }
