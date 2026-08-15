@@ -5145,6 +5145,26 @@
       "outputTokens": 261,
       "xCostGBP": 0.006,
       "aiCostGBP": 0.0017
+    },
+    {
+      "script": "division-posts",
+      "timestamp": "2026-08-15T09:02:01.433Z",
+      "getxapiCalls": 21,
+      "claudeCalls": 0,
+      "inputTokens": 0,
+      "outputTokens": 0,
+      "xCostGBP": 0.0158,
+      "aiCostGBP": 0
+    },
+    {
+      "script": "recap-weekend-recap",
+      "timestamp": "2026-08-15T09:02:08.581Z",
+      "getxapiCalls": 0,
+      "claudeCalls": 1,
+      "inputTokens": 42312,
+      "outputTokens": 449,
+      "xCostGBP": 0,
+      "aiCostGBP": 0.0334
     }
   ]
 }
