@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-15T16:01:51.653Z",
+  "generatedAt": "2026-08-15T17:20:55.659Z",
   "fixtureDate": "2026-08-15",
   "kickoff": "15:00",
   "homeTeam": "Sandbach United",
   "awayTeam": "Ashby Ivanhoe",
-  "postsUsed": 5,
-  "imagesAnalyzedThisRun": 1,
+  "postsUsed": 6,
+  "imagesAnalyzedThisRun": 0,
   "totalImagesAnalyzed": 4,
   "match": {
     "score": "0-1",
@@ -75,13 +75,13 @@
     "roughXG": {
       "firstHalf": {
         "home": 0,
-        "away": 0,
-        "note": "Ashby took an early lead; Sandbach struggled in first half"
+        "away": 1,
+        "note": "Ashby scored; Sandbach appeared to create little"
       },
       "secondHalf": {
         "home": 0,
         "away": 0,
-        "note": "Sandbach improved but could not score"
+        "note": "Better Sandbach performance but no clear chances mentioned"
       },
       "extraTime": {
         "home": 0,
@@ -90,21 +90,21 @@
       },
       "total": {
         "home": 0,
-        "away": 0,
-        "note": "No detailed shot information available from posts"
+        "away": 1,
+        "note": "One goal for Ashby; limited shot information"
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
     "matchControl": {
       "firstHalf": {
-        "home": 25,
-        "away": 75,
-        "note": "Ashby dominated, taking deserved lead; Hall (Sandbach) made saves to prevent wider margin"
+        "home": 30,
+        "away": 70,
+        "note": "Ashby dominated and scored; Sandbach had to be prevented from conceding more"
       },
       "secondHalf": {
-        "home": 40,
-        "away": 60,
-        "note": "Sandbach improved but still could not equalise"
+        "home": 60,
+        "away": 40,
+        "note": "Better Sandbach performance but insufficient to equalise"
       },
       "extraTime": {
         "home": 50,
@@ -112,9 +112,9 @@
         "note": "Match did not go to extra time"
       },
       "total": {
-        "home": 33,
-        "away": 67,
-        "note": "Ashby controlled most of the match and saw out the win"
+        "home": 40,
+        "away": 60,
+        "note": "Ashby controlled the match overall and held their lead"
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
