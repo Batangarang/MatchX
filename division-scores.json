@@ -1,19 +1,24 @@
 {
-  "generatedAt": "2026-08-15T14:08:03.608Z",
+  "generatedAt": "2026-08-15T14:32:00.387Z",
   "date": "2026-08-15",
   "isToday": true,
-  "postCount": 12,
+  "postCount": 17,
   "fixtures": [
     {
       "home": "AFC Bridgnorth",
       "away": "Crewe",
       "kickoff": "15:00",
-      "score": "0-1",
+      "score": "1-1",
       "goals": [
         {
-          "minute": 2,
+          "minute": "2",
           "team": "away",
           "scorer": "unknown"
+        },
+        {
+          "minute": null,
+          "team": "home",
+          "scorer": "Dubz"
         }
       ],
       "redCards": []
@@ -30,18 +35,40 @@
       "home": "Dawley Town",
       "away": "Wolverhampton Casuals",
       "kickoff": "15:00",
-      "score": null,
-      "goals": [],
+      "score": "1-1",
+      "goals": [
+        {
+          "minute": "15",
+          "team": "home",
+          "scorer": "Ross Jones"
+        },
+        {
+          "minute": "22",
+          "team": "away",
+          "scorer": "Bailey Storey"
+        }
+      ],
       "redCards": []
     },
     {
       "home": "Shawbury United",
       "away": "Widnes Town",
       "kickoff": "15:00",
-      "score": null,
-      "goals": [],
+      "score": "1-1",
+      "goals": [
+        {
+          "minute": "7",
+          "team": "away",
+          "scorer": "unknown"
+        },
+        {
+          "minute": "27",
+          "team": "home",
+          "scorer": "Pickford"
+        }
+      ],
       "redCards": []
     }
   ],
-  "ticker": "@AFCBridgnorth: Crewe take the lead on 2 minutes. 0-1"
+  "ticker": "@shawburyutd: 27’ Pickford levels it up! \n\n⚪️⚫️1-1🟡🟡 https://t.co/SLBGhoD3Aa"
 }
