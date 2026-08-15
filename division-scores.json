@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-08-15T16:15:49.453Z",
+  "generatedAt": "2026-08-15T18:25:49.074Z",
   "date": "2026-08-15",
   "isToday": true,
-  "postCount": 37,
+  "postCount": 38,
   "fixtures": [
     {
       "home": "AFC Bridgnorth",
@@ -16,22 +16,22 @@
           "scorer": null
         },
         {
-          "minute": null,
+          "minute": "14",
           "team": "home",
           "scorer": "Dubz"
         },
         {
-          "minute": null,
+          "minute": "15",
           "team": "home",
           "scorer": "Suar"
         },
         {
-          "minute": null,
+          "minute": "15",
           "team": "home",
           "scorer": "Zazi"
         },
         {
-          "minute": null,
+          "minute": "15",
           "team": "home",
           "scorer": "Zazi"
         }
@@ -116,5 +116,5 @@
       "redCards": []
     }
   ],
-  "ticker": "@shawburyutd: FT\n@shawburyutd 3-2 @WidnesTownFC https://t.co/UEf0LnZrgN"
+  "ticker": "@bilstontownfc: Our white shirts looked great today. https://t.co/cgzmLof6gO"
 }
