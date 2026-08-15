@@ -1,19 +1,19 @@
 {
-  "generatedAt": "2026-08-15T14:50:55.533Z",
+  "generatedAt": "2026-08-15T16:01:51.653Z",
   "fixtureDate": "2026-08-15",
   "kickoff": "15:00",
   "homeTeam": "Sandbach United",
   "awayTeam": "Ashby Ivanhoe",
-  "postsUsed": 4,
+  "postsUsed": 5,
   "imagesAnalyzedThisRun": 1,
-  "totalImagesAnalyzed": 3,
+  "totalImagesAnalyzed": 4,
   "match": {
     "score": "0-1",
     "scoreDiscrepancy": null,
-    "finalScoreAnnounced": null,
+    "finalScoreAnnounced": "0-1",
     "halfTimeScoreAnnounced": "0-1",
     "htDiscrepancy": null,
-    "matchStage": "half_time",
+    "matchStage": "full_time",
     "lineups": {
       "home": {
         "players": [
@@ -76,45 +76,45 @@
       "firstHalf": {
         "home": 0,
         "away": 0,
-        "note": "Ashby described as 'deserved' lead; Sandbach goalkeeper Hall made saves. Insufficient detail for meaningful estimate."
+        "note": "Ashby took an early lead; Sandbach struggled in first half"
       },
       "secondHalf": {
         "home": 0,
         "away": 0,
-        "note": "No second half data available."
+        "note": "Sandbach improved but could not score"
       },
       "extraTime": {
         "home": 0,
         "away": 0,
-        "note": "Match did not reach extra time."
+        "note": "Match did not go to extra time"
       },
       "total": {
         "home": 0,
         "away": 0,
-        "note": "Insufficient data for meaningful xG estimate."
+        "note": "No detailed shot information available from posts"
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
     "matchControl": {
       "firstHalf": {
-        "home": 40,
-        "away": 60,
-        "note": "Ashby described as having 'deserved' lead with unmarked goal-scorer; Hall (Sandbach GK) preventing wider deficit suggests Ashby dominance."
+        "home": 25,
+        "away": 75,
+        "note": "Ashby dominated, taking deserved lead; Hall (Sandbach) made saves to prevent wider margin"
       },
       "secondHalf": {
-        "home": 50,
-        "away": 50,
-        "note": "No second half data available."
+        "home": 40,
+        "away": 60,
+        "note": "Sandbach improved but still could not equalise"
       },
       "extraTime": {
         "home": 50,
         "away": 50,
-        "note": "Match did not reach extra time."
+        "note": "Match did not go to extra time"
       },
       "total": {
-        "home": 45,
-        "away": 55,
-        "note": "Based on first half only; Ashby appeared dominant."
+        "home": 33,
+        "away": 67,
+        "note": "Ashby controlled most of the match and saw out the win"
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
