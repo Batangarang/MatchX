@@ -5135,6 +5135,16 @@
       "outputTokens": 261,
       "xCostGBP": 0.006,
       "aiCostGBP": 0.0016
+    },
+    {
+      "script": "division-scores",
+      "timestamp": "2026-08-15T08:56:05.559Z",
+      "getxapiCalls": 8,
+      "claudeCalls": 1,
+      "inputTokens": 949,
+      "outputTokens": 261,
+      "xCostGBP": 0.006,
+      "aiCostGBP": 0.0017
     }
   ]
 }
