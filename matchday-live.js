@@ -385,8 +385,8 @@ async function run() {
   const homeHandle = fixture.homeAway === 'H' ? 'SandbachFC_1st' : findHandle(fixture.opposition);
   const awayHandle = fixture.homeAway === 'H' ? findHandle(fixture.opposition) : 'SandbachFC_1st';
 
-  if (!homeHandle || !awayHandle) {
-    console.log(`Could not resolve both handles (home=${homeHandle}, away=${awayHandle}) — skipping.`);
+  if (!homeHandle && !awayHandle) {
+    console.log(`Could not resolve either handle — skipping.`);
     return;
   }
 
