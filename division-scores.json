@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-08-15T15:35:44.340Z",
+  "generatedAt": "2026-08-15T15:48:47.066Z",
   "date": "2026-08-15",
   "isToday": true,
-  "postCount": 29,
+  "postCount": 34,
   "fixtures": [
     {
       "home": "AFC Bridgnorth",
       "away": "Crewe",
       "kickoff": "15:00",
-      "score": "2-1",
+      "score": "4-1",
       "goals": [
         {
           "minute": "2",
@@ -16,14 +16,24 @@
           "scorer": null
         },
         {
-          "minute": null,
+          "minute": "14",
           "team": "home",
           "scorer": "Dubz"
         },
         {
-          "minute": null,
+          "minute": "15",
           "team": "home",
           "scorer": "Suar"
+        },
+        {
+          "minute": "48",
+          "team": "home",
+          "scorer": "Zazi"
+        },
+        {
+          "minute": "48",
+          "team": "home",
+          "scorer": "Zazi"
         }
       ],
       "redCards": []
@@ -56,8 +66,13 @@
       "home": "Dawley Town",
       "away": "Wolverhampton Casuals",
       "kickoff": "15:00",
-      "score": "0-1",
+      "score": "1-1",
       "goals": [
+        {
+          "minute": "38",
+          "team": "home",
+          "scorer": null
+        },
         {
           "minute": "66",
           "team": "away",
@@ -106,5 +121,5 @@
       "redCards": []
     }
   ],
-  "ticker": "@WolvesCassies: 66': Liam Kirton scores for Wolverhampton Casuals 🙌\n#DAWWOL #Pitchero\nhttps://www.wolverhamptoncasualsfc.co.uk/teams/294420/match-centre/1-19876187?utm_campaign=match_event&utm_medium=post&utm_source=twitter&utm_content=goal https://t.co/LEVFdTNBGF"
+  "ticker": "@AFCBridgnorth: Goal Zazi with a second makea it 4-1 https://t.co/9YxI5MZ441"
 }
