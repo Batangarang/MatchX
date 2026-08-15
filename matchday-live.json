@@ -1,19 +1,19 @@
 {
-  "generatedAt": "2026-08-15T14:02:16.212Z",
+  "generatedAt": "2026-08-15T14:50:55.533Z",
   "fixtureDate": "2026-08-15",
   "kickoff": "15:00",
   "homeTeam": "Sandbach United",
   "awayTeam": "Ashby Ivanhoe",
-  "postsUsed": 2,
+  "postsUsed": 4,
   "imagesAnalyzedThisRun": 1,
-  "totalImagesAnalyzed": 2,
+  "totalImagesAnalyzed": 3,
   "match": {
-    "score": null,
+    "score": "0-1",
     "scoreDiscrepancy": null,
     "finalScoreAnnounced": null,
-    "halfTimeScoreAnnounced": null,
+    "halfTimeScoreAnnounced": "0-1",
     "htDiscrepancy": null,
-    "matchStage": "first_half",
+    "matchStage": "half_time",
     "lineups": {
       "home": {
         "players": [
@@ -46,7 +46,13 @@
         "officials": []
       }
     },
-    "goals": [],
+    "goals": [
+      {
+        "minute": 14,
+        "team": "away",
+        "scorer": "Ryman Johnson"
+      }
+    ],
     "yellowCards": [],
     "redCards": [],
     "substitutions": [],
@@ -70,45 +76,45 @@
       "firstHalf": {
         "home": 0,
         "away": 0,
-        "note": "No shot data available"
+        "note": "Ashby described as 'deserved' lead; Sandbach goalkeeper Hall made saves. Insufficient detail for meaningful estimate."
       },
       "secondHalf": {
         "home": 0,
         "away": 0,
-        "note": "No shot data available"
+        "note": "No second half data available."
       },
       "extraTime": {
         "home": 0,
         "away": 0,
-        "note": "No shot data available"
+        "note": "Match did not reach extra time."
       },
       "total": {
         "home": 0,
         "away": 0,
-        "note": "No shot data available"
+        "note": "Insufficient data for meaningful xG estimate."
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
     "matchControl": {
       "firstHalf": {
-        "home": 50,
-        "away": 50,
-        "note": "Match just kicked off, no play data available"
+        "home": 40,
+        "away": 60,
+        "note": "Ashby described as having 'deserved' lead with unmarked goal-scorer; Hall (Sandbach GK) preventing wider deficit suggests Ashby dominance."
       },
       "secondHalf": {
         "home": 50,
         "away": 50,
-        "note": "No shot data available"
+        "note": "No second half data available."
       },
       "extraTime": {
         "home": 50,
         "away": 50,
-        "note": "No shot data available"
+        "note": "Match did not reach extra time."
       },
       "total": {
-        "home": 50,
-        "away": 50,
-        "note": "No shot data available"
+        "home": 45,
+        "away": 55,
+        "note": "Based on first half only; Ashby appeared dominant."
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
