@@ -21,7 +21,8 @@ jobs:
       - run: npm install
       - run: node x-posts.js
         env:
-          GETXAPI_KEY: ${{ secrets.GETXAPI_KEY }}
+            GETXAPI_KEY: ${{ secrets.GETXAPI_KEY }}
+            IS_SCHEDULED_DISPATCH: 'true'
       - run: node nwcfl-news.js
       - run: node x-insights.js
         env:
