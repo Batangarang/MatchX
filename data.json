@@ -1,5 +1,5 @@
 {
-  "scrapedAt": "2026-08-16T20:10:31.659Z",
+  "scrapedAt": "2026-08-16T21:10:35.788Z",
   "nextFixture": {
     "date": "Tue 18/08/26",
     "opposition": "Market Drayton Town",
@@ -69,7 +69,7 @@
     "homeAway": "H",
     "kickoff": "15:00",
     "score": "L 0-1",
-    "scorers": "()",
+    "scorers": null,
     "competitionNote": "The Isuzu FA Vase 1Q"
   },
   "lastResults": [
@@ -80,7 +80,7 @@
       "homeAway": "H",
       "kickoff": "15:00",
       "score": "L 0-1",
-      "scorers": "()",
+      "scorers": null,
       "competitionNote": "The Isuzu FA Vase 1Q"
     },
     {
@@ -152,7 +152,7 @@
       "homeAway": "H",
       "kickoff": "15:00",
       "score": "L 0-1",
-      "scorers": "()",
+      "scorers": null,
       "competitionNote": "The Isuzu FA Vase 1Q"
     },
     {
