@@ -40,5 +40,13 @@ jobs:
             [ -f "$f" ] && git add "$f"
           done
           git diff --staged --quiet || git commit -m "Weekend recap"
-          git pull --rebase --autostash origin main
+          for i in 1 2 3; do
+            if git pull --rebase --autostash origin main; then
+              break
+            fi
+            git diff --name-only --diff-filter=U | while read -r f; do
+              git checkout --theirs "$f" 2>/dev/null && git add "$f"
+            done
+            git rebase --continue --no-edit || git rebase --abort
+          done
           git push
