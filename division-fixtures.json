@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-16T16:30:56.368Z",
+  "generatedAt": "2026-08-16T16:40:44.223Z",
   "fixtures": [
     {
       "date": "Monday 17 August 2026",
@@ -269,8 +269,36 @@
     },
     {
       "date": "Saturday 12 September 2026",
+      "home": "Cheadle Heath Nomads",
+      "away": "Sandbach United",
+      "kickoff": "15:00",
+      "postponed": false
+    },
+    {
+      "date": "Saturday 12 September 2026",
       "home": "Dawley Town",
       "away": "Brereton Social",
+      "kickoff": "15:00",
+      "postponed": false
+    },
+    {
+      "date": "Saturday 12 September 2026",
+      "home": "New Mills",
+      "away": "Market Drayton Town",
+      "kickoff": "15:00",
+      "postponed": false
+    },
+    {
+      "date": "Saturday 12 September 2026",
+      "home": "Stafford Town",
+      "away": "Alsager Town",
+      "kickoff": "15:00",
+      "postponed": false
+    },
+    {
+      "date": "Saturday 12 September 2026",
+      "home": "Wednesfield Community",
+      "away": "Allscott Heath",
       "kickoff": "15:00",
       "postponed": false
     },
@@ -766,13 +794,6 @@
     },
     {
       "date": "Saturday 14 November 2026",
-      "home": "Stafford Town",
-      "away": "Alsager Town",
-      "kickoff": "15:00",
-      "postponed": false
-    },
-    {
-      "date": "Saturday 14 November 2026",
       "home": "Telford Town",
       "away": "Cheadle Heath Nomads",
       "kickoff": "15:00",
@@ -955,13 +976,6 @@
     },
     {
       "date": "Saturday 5 December 2026",
-      "home": "Cheadle Heath Nomads",
-      "away": "Sandbach United",
-      "kickoff": "15:00",
-      "postponed": false
-    },
-    {
-      "date": "Saturday 5 December 2026",
       "home": "Foley Meir",
       "away": "Telford Town",
       "kickoff": "15:00",
@@ -1116,13 +1130,6 @@
     },
     {
       "date": "Saturday 19 December 2026",
-      "home": "New Mills",
-      "away": "Market Drayton Town",
-      "kickoff": "15:00",
-      "postponed": false
-    },
-    {
-      "date": "Saturday 19 December 2026",
       "home": "Stafford Town",
       "away": "Shawbury United",
       "kickoff": "15:00",
@@ -1335,13 +1342,6 @@
       "date": "Saturday 9 January 2027",
       "home": "Stafford Town",
       "away": "Barnton",
-      "kickoff": "15:00",
-      "postponed": false
-    },
-    {
-      "date": "Saturday 9 January 2027",
-      "home": "Wednesfield Community",
-      "away": "Allscott Heath",
       "kickoff": "15:00",
       "postponed": false
     },
