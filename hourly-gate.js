@@ -1,9 +1,6 @@
-// hourly-gate.js
 const fs = require('fs');
 
 function shouldRunHourlyTask() {
-  if (process.env.GITHUB_EVENT_NAME === 'workflow_dispatch') return true;
-
   const stateFile = '.scrape-lastrun.json';
   const now = new Date();
 
@@ -13,7 +10,7 @@ function shouldRunHourlyTask() {
   }
 
   const minutesSinceLastRun = lastRun ? (now - lastRun) / 60000 : Infinity;
-  if (minutesSinceLastRun < 55) return false; // roughly hourly, with a little buffer
+  if (minutesSinceLastRun < 55) return false;
 
   fs.writeFileSync(stateFile, JSON.stringify({ lastRun: now.toISOString() }));
   return true;

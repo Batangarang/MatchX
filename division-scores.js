@@ -103,7 +103,7 @@ async function run() {
   const todaysFixtures = target.fixtures;
 
   const now = getUKNow();
-  const isManual = process.env.GITHUB_EVENT_NAME === 'workflow_dispatch' || !!testDate;
+  const isManual = !!testDate;
   const nowUK = now.getUTCHours();
 
   if (target.isToday && nowUK < 11 && !isManual) {

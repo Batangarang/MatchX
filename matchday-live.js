@@ -34,7 +34,7 @@ function findHandle(clubName) {
 }
 
 function isManualRun() {
-  return process.env.GITHUB_EVENT_NAME === 'workflow_dispatch' || !!process.env.MATCHDAY_TEST_DATE;
+  return !!process.env.MATCHDAY_TEST_DATE;
 }
 
 function withinMatchWindow(kickoff, competitionNote) {
