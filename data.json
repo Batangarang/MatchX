@@ -1,5 +1,5 @@
 {
-  "scrapedAt": "2026-08-16T16:10:32.604Z",
+  "scrapedAt": "2026-08-16T17:10:30.881Z",
   "nextFixture": {
     "date": "Tue 18/08/26",
     "opposition": "Market Drayton Town",
@@ -52,10 +52,10 @@
       "competitionNote": null
     },
     {
-      "date": "Sat 19/09/26",
-      "opposition": "Eccleshall",
-      "opponentUrl": "clubpage.php?id=30",
-      "homeAway": "H",
+      "date": "Sat 12/09/26",
+      "opposition": "Cheadle Heath Nomads",
+      "opponentUrl": "clubpage.php?id=713",
+      "homeAway": "A",
       "kickoff": "15:00",
       "score": null,
       "scorers": null,
@@ -196,6 +196,16 @@
       "competitionNote": null
     },
     {
+      "date": "Sat 12/09/26",
+      "opposition": "Cheadle Heath Nomads",
+      "opponentUrl": "clubpage.php?id=713",
+      "homeAway": "A",
+      "kickoff": "15:00",
+      "score": null,
+      "scorers": null,
+      "competitionNote": null
+    },
+    {
       "date": "Sat 19/09/26",
       "opposition": "Eccleshall",
       "opponentUrl": "clubpage.php?id=30",
@@ -289,16 +299,6 @@
       "date": "Sat 28/11/26",
       "opposition": "Stafford Town",
       "opponentUrl": "clubpage.php?id=182",
-      "homeAway": "A",
-      "kickoff": "15:00",
-      "score": null,
-      "scorers": null,
-      "competitionNote": null
-    },
-    {
-      "date": "Sat 05/12/26",
-      "opposition": "Cheadle Heath Nomads",
-      "opponentUrl": "clubpage.php?id=713",
       "homeAway": "A",
       "kickoff": "15:00",
       "score": null,
