@@ -1,9 +1,9 @@
 const fs = require('fs');
 const CLUBS = require('./division-clubs.js');
+const { logCost } = require('./cost-tracker.js');
 const API_KEY = process.env.ANTHROPIC_API_KEY;
 const MODE = process.env.RECAP_MODE; // 'weekend-preview', 'weekend-recap', 'midweek-preview', 'midweek-recap'
 const CURRENT_CLUB_NAMES = new Set(CLUBS.map(c => c.name));
-const { logCost } = require('./cost-tracker.js');
 
 function parseFixtureDate(dateStr) {
   const match = dateStr.match(/(\d{1,2})\s+(\w+)\s+(\d{4})/);
@@ -37,13 +37,11 @@ function isSameDay(a, b) {
 }
 
 function isWeekend(date) {
-  const day = date.getDay(); // 0 = Sunday, 6 = Saturday
+  const day = date.getDay();
   return day === 0 || day === 6;
 }
 
 function getWeekendRange(today) {
-  // The Saturday-Sunday pair containing or most recently including today
-  // (used by weekend-recap, which only runs DURING an actual weekend)
   const day = today.getDay();
   const saturday = new Date(today);
   if (day === 0) saturday.setDate(today.getDate() - 1);
@@ -54,8 +52,6 @@ function getWeekendRange(today) {
 }
 
 function getNextWeekendRange(now) {
-  // The NEXT upcoming Saturday-Sunday pair, regardless of what day it is today
-  // (used by weekend-preview, which can run any day of the week)
   const day = now.getDay();
   let daysUntilSaturday;
   if (day === 6) daysUntilSaturday = 0;
@@ -186,13 +182,13 @@ async function run() {
     const mainData = JSON.parse(fs.readFileSync('data.json', 'utf-8'));
     const candidates = mainData.nextFixtures || (mainData.nextFixture ? [mainData.nextFixture] : []);
 
-    const relevantDates = new Set(decision.relevantFixtures.map(f => f.date));
+    const relevantDatesForSandbach = new Set(decision.relevantFixtures.map(f => f.date));
     const sandbachFixture = candidates.find(f => {
       const match = f.date.match(/(\d{2})\/(\d{2})\/(\d{2})/);
       if (!match) return false;
       const [, dd, mm, yy] = match;
       const asDate = new Date(2000 + parseInt(yy), parseInt(mm) - 1, parseInt(dd));
-      return [...relevantDates].some(rd => {
+      return [...relevantDatesForSandbach].some(rd => {
         const parsed = parseFixtureDate(rd);
         return parsed && isSameDay(parsed, asDate);
       });
@@ -218,12 +214,36 @@ async function run() {
     }
   }
 
-  const fixtureList = decision.relevantFixtures.map(f => `${f.home} v ${f.away} (${f.date}, KO ${f.kickoff})`).join('\n');
+  // Scope posts to only the clubs and dates actually relevant to this period,
+  // and only from roughly 10am UK onward — cuts irrelevant clubs/days/hours
+  // out of the prompt, significantly reducing token usage per call.
+  const EARLIEST_RELEVANT_HOUR_UTC = 9;
+
+  const relevantClubNames = new Set(
+    decision.relevantFixtures.flatMap(f => [f.home, f.away])
+  );
+
+  const relevantDates = new Set(decision.relevantFixtures.map(f => {
+    const d = parseFixtureDate(f.date);
+    return d ? d.toDateString() : null;
+  }).filter(Boolean));
 
   const postsText = clubs
-    .filter(c => c.posts.length > 0)
-    .map(c => `--- ${c.name} ---\n` + c.posts.map(p => `[${p.createdAt}] ${p.text}`).join('\n'))
+    .filter(c => relevantClubNames.has(c.name) && c.posts.length > 0)
+    .map(c => {
+      const relevantPosts = c.posts.filter(p => {
+        const postDate = new Date(p.createdAt);
+        const isRelevantDate = relevantDates.has(postDate.toDateString());
+        const isAfterCutoff = postDate.getUTCHours() >= EARLIEST_RELEVANT_HOUR_UTC;
+        return isRelevantDate && isAfterCutoff;
+      });
+      if (relevantPosts.length === 0) return null;
+      return `--- ${c.name} ---\n` + relevantPosts.map(p => `[${p.createdAt}] ${p.text}`).join('\n');
+    })
+    .filter(Boolean)
     .join('\n\n');
+
+  const fixtureList = decision.relevantFixtures.map(f => `${f.home} v ${f.away} (${f.date}, KO ${f.kickoff})`).join('\n');
 
   const isPreview = MODE.includes('preview');
   const periodLabel = MODE.startsWith('weekend') ? 'this weekend' : 'today';
@@ -302,6 +322,7 @@ Respond with ONLY a JSON object, no other text, no markdown fences, in exactly t
     inputTokens: data.usage?.input_tokens || 0,
     outputTokens: data.usage?.output_tokens || 0,
   });
+
   console.log(`[${MODE}] Saved. Sandbach focus:`, (output.sandbachFocus || output.summary || '').slice(0, 150));
 }
 
