@@ -89,7 +89,6 @@ function markRunForPeriod(periodKey) {
 }
 
 function shouldRunNow() {
-  const isManual = process.env.GITHUB_EVENT_NAME === 'workflow_dispatch';
   const now = new Date();
   const fixtures = loadFixtures();
 
@@ -117,7 +116,7 @@ function shouldRunNow() {
     const range = getWeekendRange(now);
     if (!range) return { proceed: false, reason: 'Not currently within a weekend.' };
     const periodKey = range.saturday.toISOString().slice(0, 10);
-    if (!isManual && alreadyRunForPeriod(periodKey)) return { proceed: false, reason: 'Already ran for this weekend.' };
+    if (alreadyRunForPeriod(periodKey)) return { proceed: false, reason: 'Already ran for this weekend.' };
     const weekendFixtures = fixtures.filter(f => {
       const d = parseFixtureDate(f.date);
       return d && (isSameDay(d, range.saturday) || isSameDay(d, range.sunday));
@@ -129,7 +128,7 @@ function shouldRunNow() {
       return ko > latest ? ko : latest;
     }, new Date(0));
     const cutoff = new Date(latestKickoff.getTime() + 180 * 60000);
-    if (!isManual && now < cutoff) return { proceed: false, reason: `Waiting until ${cutoff.toISOString()} (latest KO + 3hrs).` };
+    if (now < cutoff) return { proceed: false, reason: `Waiting until ${cutoff.toISOString()} (latest KO + 3hrs).` };
     return { proceed: true, periodKey, relevantFixtures: weekendFixtures };
   }
 
@@ -140,14 +139,14 @@ function shouldRunNow() {
     });
     if (todayFixtures.length === 0) return { proceed: false, reason: 'No midweek fixtures today.' };
     const periodKey = now.toISOString().slice(0, 10);
-    if (!isManual && alreadyRunForPeriod(periodKey)) return { proceed: false, reason: 'Already ran for today.' };
+    if (alreadyRunForPeriod(periodKey)) return { proceed: false, reason: 'Already ran for today.' };
     const latestKickoff = todayFixtures.reduce((latest, f) => {
       const d = parseFixtureDate(f.date);
       const ko = kickoffToUTC(d, f.kickoff);
       return ko > latest ? ko : latest;
     }, new Date(0));
     const cutoff = new Date(latestKickoff.getTime() + 180 * 60000);
-    if (!isManual && now < cutoff) return { proceed: false, reason: `Waiting until ${cutoff.toISOString()} (latest KO + 3hrs).` };
+    if (now < cutoff) return { proceed: false, reason: `Waiting until ${cutoff.toISOString()} (latest KO + 3hrs).` };
     return { proceed: true, periodKey, relevantFixtures: todayFixtures };
   }
 
