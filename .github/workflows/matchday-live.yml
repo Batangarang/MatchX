@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 
 concurrency:
-  group: division-scores
+  group: matchday-live
   cancel-in-progress: false
     
 permissions:
