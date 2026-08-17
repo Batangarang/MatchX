@@ -1,5 +1,5 @@
 {
-  "scrapedAt": "2026-08-17T20:00:51.459Z",
+  "scrapedAt": "2026-08-17T21:00:52.924Z",
   "division": "First Division South",
   "standings": [
     {
@@ -158,6 +158,20 @@
     },
     {
       "position": 12,
+      "team": "Alsager Town",
+      "played": "5",
+      "won": "1",
+      "drawn": "1",
+      "lost": "3",
+      "for": "10",
+      "against": "11",
+      "goalDifference": "-1",
+      "points": "4",
+      "clubUrl": "clubpage.php?id=3",
+      "form": "WLLLLD"
+    },
+    {
+      "position": 13,
       "team": "Telford Town",
       "played": "4",
       "won": "1",
@@ -171,7 +185,7 @@
       "form": "WLWDL"
     },
     {
-      "position": 13,
+      "position": 14,
       "team": "Barnton",
       "played": "3",
       "won": "1",
@@ -185,7 +199,7 @@
       "form": "WWLL"
     },
     {
-      "position": 14,
+      "position": 15,
       "team": "Market Drayton Town",
       "played": "3",
       "won": "1",
@@ -199,7 +213,7 @@
       "form": "LWWLL"
     },
     {
-      "position": 15,
+      "position": 16,
       "team": "Crewe",
       "played": "4",
       "won": "1",
@@ -213,21 +227,21 @@
       "form": "LLLWL"
     },
     {
-      "position": 16,
+      "position": 17,
       "team": "Cheadle Heath Nomads",
-      "played": "3",
+      "played": "4",
       "won": "0",
       "drawn": "2",
-      "lost": "1",
-      "for": "4",
-      "against": "7",
-      "goalDifference": "-3",
+      "lost": "2",
+      "for": "5",
+      "against": "11",
+      "goalDifference": "-6",
       "points": "2",
       "clubUrl": "clubpage.php?id=713",
-      "form": "LLDD"
+      "form": "LLLDD"
     },
     {
-      "position": 17,
+      "position": 18,
       "team": "Dawley Town",
       "played": "3",
       "won": "0",
@@ -241,7 +255,7 @@
       "form": "LLLD"
     },
     {
-      "position": 18,
+      "position": 19,
       "team": "Widnes Town",
       "played": "3",
       "won": "0",
@@ -253,20 +267,6 @@
       "points": "1",
       "clubUrl": "clubpage.php?id=868",
       "form": "LLDL"
-    },
-    {
-      "position": 19,
-      "team": "Alsager Town",
-      "played": "4",
-      "won": "0",
-      "drawn": "1",
-      "lost": "3",
-      "for": "6",
-      "against": "10",
-      "goalDifference": "-4",
-      "points": "1",
-      "clubUrl": "clubpage.php?id=3",
-      "form": "LLLLD"
     },
     {
       "position": 20,
