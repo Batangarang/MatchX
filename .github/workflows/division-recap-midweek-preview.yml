@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 
 concurrency:
-  group: division-scores
+  group: division-recap-midweek-preview
   cancel-in-progress: false
 
 
