@@ -1,17 +1,40 @@
 {
-  "generatedAt": "2026-08-17T19:05:45.277Z",
-  "date": "2026-08-17",
+  "generatedAt": "2026-08-17T23:05:28.881Z",
+  "date": "2026-08-18",
   "isToday": true,
-  "postCount": 7,
   "fixtures": [
     {
-      "home": "Cheadle Heath Nomads",
-      "away": "Alsager Town",
+      "home": "Market Drayton Town",
+      "away": "Sandbach United",
       "kickoff": "19:45",
-      "score": "0-0",
+      "score": null,
+      "goals": [],
+      "redCards": []
+    },
+    {
+      "home": "New Mills",
+      "away": "Barnton",
+      "kickoff": "19:45",
+      "score": null,
+      "goals": [],
+      "redCards": []
+    },
+    {
+      "home": "Telford Town",
+      "away": "Allscott Heath",
+      "kickoff": "19:45",
+      "score": null,
+      "goals": [],
+      "redCards": []
+    },
+    {
+      "home": "Stafford Town",
+      "away": "Foley Meir",
+      "kickoff": "20:00",
+      "score": null,
       "goals": [],
       "redCards": []
     }
   ],
-  "ticker": "@alsagertown_fc: 14’ | An even contested battle so far, with the best opportunity arriving for @tjboydy just recently.\n\nHis diagonal run caught the defenders unaware but the header lacked power to beat Jones. 👍 \n\n0-0 | @CheadleNomads"
+  "ticker": null
 }
