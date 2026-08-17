@@ -1,13 +1,6 @@
 {
-  "generatedAt": "2026-08-17T18:30:54.238Z",
+  "generatedAt": "2026-08-17T19:05:45.216Z",
   "fixtures": [
-    {
-      "date": "Monday 17 August 2026",
-      "home": "Cheadle Heath Nomads",
-      "away": "Alsager Town",
-      "kickoff": "19:45",
-      "postponed": false
-    },
     {
       "date": "Tuesday 18 August 2026",
       "home": "Market Drayton Town",
@@ -2400,6 +2393,13 @@
       "home": "Wolverhampton Casuals",
       "away": "Cheadle Heath Nomads",
       "kickoff": "15:00",
+      "postponed": false
+    },
+    {
+      "date": "Monday 17 August 2026",
+      "home": "Cheadle Heath Nomads",
+      "away": "Alsager Town",
+      "kickoff": "19:45",
       "postponed": false
     }
   ]
