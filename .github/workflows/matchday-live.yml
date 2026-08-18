@@ -27,9 +27,14 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add -A -- matchday-archive matchday-index.json matchday-live.json user-ids.json cost-log.json
           git diff --staged --quiet || git commit -m "..."
-          for i in 1 2 3; do
+          for i in 1 2 3 4 5; do
             if git pull --rebase --autostash origin main; then
-              break
+              if git push; then
+                break
+              fi
+              echo "Push rejected (race with another run), retrying..."
+              sleep $((RANDOM % 5 + 1))
+              continue
             fi
             git diff --name-only --diff-filter=U | while read -r f; do
               git checkout --theirs "$f" 2>/dev/null && git add "$f"
