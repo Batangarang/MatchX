@@ -1,17 +1,17 @@
 {
-  "generatedAt": "2026-08-18T19:31:01.077Z",
+  "generatedAt": "2026-08-18T19:35:44.657Z",
   "fixtureDate": "2026-08-18",
   "kickoff": "19:45",
   "homeTeam": "Market Drayton Town",
   "awayTeam": "Sandbach United",
-  "postsUsed": 22,
-  "imagesAnalyzedThisRun": 0,
-  "totalImagesAnalyzed": 5,
+  "postsUsed": 25,
+  "imagesAnalyzedThisRun": 1,
+  "totalImagesAnalyzed": 6,
   "match": {
-    "score": "2-3",
+    "score": "3-3",
     "scoreDiscrepancy": null,
     "finalScoreAnnounced": null,
-    "halfTimeScoreAnnounced": null,
+    "halfTimeScoreAnnounced": "3-3",
     "htDiscrepancy": null,
     "matchStage": "half_time",
     "lineups": {
@@ -71,6 +71,11 @@
         "minute": 42,
         "team": "away",
         "scorer": "Nathan Barry"
+      },
+      {
+        "minute": 45,
+        "team": "home",
+        "scorer": "Cian McIntosh"
       }
     ],
     "yellowCards": [],
@@ -94,14 +99,14 @@
     },
     "roughXG": {
       "firstHalf": {
-        "home": 1.5,
-        "away": 1,
-        "note": "Market Drayton scored early and had a chance with McIntosh. Sandbach equalized quickly with a header and scored twice more from set pieces."
+        "home": 0,
+        "away": 0,
+        "note": "No shot data available; very high-scoring first half with 6 goals suggests both teams created clear-cut chances but exact xG cannot be estimated from social media posts."
       },
       "secondHalf": {
         "home": 0,
         "away": 0,
-        "note": "No second half data available in posts."
+        "note": "Second half not yet completed in available posts."
       },
       "extraTime": {
         "home": 0,
@@ -109,22 +114,22 @@
         "note": "Match did not go to extra time."
       },
       "total": {
-        "home": 1.5,
-        "away": 1,
-        "note": "Based on first half only; second half incomplete."
+        "home": 0,
+        "away": 0,
+        "note": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
     "matchControl": {
       "firstHalf": {
-        "home": 45,
-        "away": 55,
-        "note": "Drayton started well with early goal but Sandbach took control with two goals before half-time and strong pressing."
+        "home": 50,
+        "away": 50,
+        "note": "Evenly matched with rapid exchanges; both teams scored 3 goals and traded lead multiple times."
       },
       "secondHalf": {
         "home": 50,
         "away": 50,
-        "note": "No second half data available in posts."
+        "note": "Second half not yet completed in available posts."
       },
       "extraTime": {
         "home": 50,
@@ -132,9 +137,9 @@
         "note": "Match did not go to extra time."
       },
       "total": {
-        "home": 45,
-        "away": 55,
-        "note": "Based on first half only; Sandbach appeared more threatening overall."
+        "home": 50,
+        "away": 50,
+        "note": "Inferred from tone/content of posts only, not real possession or shot data."
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
