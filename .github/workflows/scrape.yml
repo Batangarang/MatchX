@@ -54,6 +54,6 @@ jobs:
             git diff --name-only --diff-filter=U | while read -r f; do
               git checkout --theirs "$f" 2>/dev/null && git add "$f"
             done
-            git rebase --continue --no-edit || git rebase --abort
+            git rebase --continue || git rebase --abort
           done
           git push
