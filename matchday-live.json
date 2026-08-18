@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-08-18T19:50:50.997Z",
+  "generatedAt": "2026-08-18T20:01:06.876Z",
   "fixtureDate": "2026-08-18",
   "kickoff": "19:45",
   "homeTeam": "Market Drayton Town",
   "awayTeam": "Sandbach United",
-  "postsUsed": 29,
+  "postsUsed": 31,
   "imagesAnalyzedThisRun": 0,
   "totalImagesAnalyzed": 7,
   "match": {
@@ -101,22 +101,22 @@
       "firstHalf": {
         "home": 0,
         "away": 0,
-        "note": "Insufficient data for estimate"
+        "note": "High-scoring half with 6 goals; limited detail on actual shots on target vs off-target"
       },
       "secondHalf": {
         "home": 0,
         "away": 0,
-        "note": "Match ended during second half at 47 minutes; insufficient data"
+        "note": "Two clear chances mentioned (Wood and McIntosh headers); second half posts end at 59 minutes"
       },
       "extraTime": {
         "home": 0,
         "away": 0,
-        "note": "No extra time"
+        "note": "Not applicable"
       },
       "total": {
         "home": 0,
         "away": 0,
-        "note": "Insufficient data for estimate"
+        "note": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
@@ -124,22 +124,22 @@
       "firstHalf": {
         "home": 50,
         "away": 50,
-        "note": "Fast-paced, end-to-end match with both sides creating chances and scoring freely; evenly matched"
+        "note": "Evenly matched with both sides trading goals; Sandbach took 2-1 lead then Drayton equalized twice"
       },
       "secondHalf": {
-        "home": 50,
-        "away": 50,
-        "note": "Posts only cover 47 minutes of second half; Sandbach had a clear chance at 47 mins but insufficient data for full assessment"
+        "home": 55,
+        "away": 45,
+        "note": "Drayton appeared to have slight edge in second half; limited data as posts end at 59 minutes"
       },
       "extraTime": {
         "home": 50,
         "away": 50,
-        "note": "No extra time"
+        "note": "Not applicable"
       },
       "total": {
         "home": 50,
         "away": 50,
-        "note": "Evenly matched encounter with high intensity and open play"
+        "note": "Inferred from tone/content of posts only, not real possession or shot data."
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
