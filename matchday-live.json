@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-08-18T19:10:47.224Z",
+  "generatedAt": "2026-08-18T19:15:51.458Z",
   "fixtureDate": "2026-08-18",
   "kickoff": "19:45",
   "homeTeam": "Market Drayton Town",
   "awayTeam": "Sandbach United",
-  "postsUsed": 18,
-  "imagesAnalyzedThisRun": 0,
-  "totalImagesAnalyzed": 4,
+  "postsUsed": 20,
+  "imagesAnalyzedThisRun": 1,
+  "totalImagesAnalyzed": 5,
   "match": {
-    "score": "1-2",
+    "score": "2-2",
     "scoreDiscrepancy": null,
     "finalScoreAnnounced": null,
     "halfTimeScoreAnnounced": null,
@@ -61,6 +61,11 @@
         "minute": 21,
         "team": "away",
         "scorer": "Kieran O'Connell"
+      },
+      {
+        "minute": 26,
+        "team": "home",
+        "scorer": "Cian McIntosh"
       }
     ],
     "yellowCards": [],
@@ -85,46 +90,46 @@
     "roughXG": {
       "firstHalf": {
         "home": 1.5,
-        "away": 0.8,
-        "note": "Market Drayton had early chances via McIntosh and Wood; Sandbach created from set pieces and counters"
+        "away": 1.2,
+        "note": "Drayton scored early through McCann from outside the box; McIntosh had a tap-in at 26'. Sandbach scored via headers from set-pieces and a rebound finish. Both sides had shooting opportunities."
       },
       "secondHalf": {
         "home": 0,
         "away": 0,
-        "note": "No posts cover the second half"
+        "note": "No second-half data available."
       },
       "extraTime": {
         "home": 0,
         "away": 0,
-        "note": "Not applicable"
+        "note": "Match did not go to extra time."
       },
       "total": {
         "home": 1.5,
-        "away": 0.8,
-        "note": "Based on first half only; second half data not provided"
+        "away": 1.2,
+        "note": "First half only. Drayton showed clinical finishing early; Sandbach were dangerous from set-pieces."
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
     "matchControl": {
       "firstHalf": {
-        "home": 55,
-        "away": 45,
-        "note": "Market Drayton started brightly with early goal and chances; Sandbach responded well from set pieces and quick transitions"
+        "home": 50,
+        "away": 50,
+        "note": "Evenly matched opening 26 minutes. Drayton scored first but Sandbach responded immediately. Multiple chances at both ends."
       },
       "secondHalf": {
         "home": 50,
         "away": 50,
-        "note": "No posts cover the second half"
+        "note": "No second-half data available."
       },
       "extraTime": {
         "home": 50,
         "away": 50,
-        "note": "Not applicable"
+        "note": "Match did not go to extra time."
       },
       "total": {
         "home": 50,
         "away": 50,
-        "note": "Based on first 21 minutes only; remaining match data not provided"
+        "note": "First half only; both teams appeared evenly matched with attacking intent."
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
