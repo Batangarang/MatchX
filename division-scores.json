@@ -1,88 +1,16 @@
 {
-  "generatedAt": "2026-08-18T19:40:41.687Z",
-  "date": "2026-08-18",
+  "generatedAt": "2026-08-18T23:00:57.860Z",
+  "date": "2026-08-19",
   "isToday": true,
-  "postCount": 53,
   "fixtures": [
     {
-      "home": "Stafford Town",
-      "away": "Foley Meir",
-      "kickoff": "20:00",
+      "home": "Eccleshall",
+      "away": "Wednesfield Community",
+      "kickoff": "19:45",
       "score": null,
-      "goals": [],
-      "redCards": []
-    },
-    {
-      "home": "Market Drayton Town",
-      "away": "Sandbach United",
-      "kickoff": "19:45",
-      "score": "3-3",
-      "goals": [
-        {
-          "minute": "7",
-          "team": "home",
-          "scorer": "Aidan McCann"
-        },
-        {
-          "minute": "10",
-          "team": "away",
-          "scorer": "Robbie Hatton"
-        },
-        {
-          "minute": "21",
-          "team": "away",
-          "scorer": "Kieron O'Connell"
-        },
-        {
-          "minute": "26",
-          "team": "home",
-          "scorer": "Cian McIntosh"
-        },
-        {
-          "minute": "42",
-          "team": "away",
-          "scorer": "Nathan Barry"
-        },
-        {
-          "minute": "45",
-          "team": "home",
-          "scorer": "Cian McIntosh"
-        }
-      ],
-      "redCards": []
-    },
-    {
-      "home": "New Mills",
-      "away": "Barnton",
-      "kickoff": "19:45",
-      "score": "2-1",
-      "goals": [
-        {
-          "minute": "9",
-          "team": "home",
-          "scorer": null
-        },
-        {
-          "minute": "18",
-          "team": "home",
-          "scorer": "Luc Ferry"
-        },
-        {
-          "minute": "25",
-          "team": "away",
-          "scorer": null
-        }
-      ],
-      "redCards": []
-    },
-    {
-      "home": "Telford Town",
-      "away": "Allscott Heath",
-      "kickoff": "19:45",
-      "score": "0-0",
       "goals": [],
       "redCards": []
     }
   ],
-  "ticker": "@MDTFC: What a half 6 goal thriller all for a fiver \n\nMarket Drayton Town 3-3 Sandbach United\n\nGoals For Drayton \nMcCann\nMcIntosh Brace https://t.co/fn49vt6G5p"
+  "ticker": null
 }
