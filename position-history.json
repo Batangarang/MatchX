@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-12T06:35:40.096Z",
+  "generatedAt": "2026-08-18T22:00:54.753Z",
   "history": [
     {
       "gamesPlayed": 1,
@@ -48,6 +48,18 @@
       "cumGoalsFor": 6,
       "cumGoalsAgainst": 7,
       "cumGoalDifference": -1
+    },
+    {
+      "gamesPlayed": 5,
+      "date": "Tue 18/08/26",
+      "opponent": "Market Drayton Town",
+      "position": 7,
+      "points": 9,
+      "gameGoalsFor": 3,
+      "gameGoalsAgainst": 4,
+      "cumGoalsFor": 10,
+      "cumGoalsAgainst": 10,
+      "cumGoalDifference": 0
     }
   ]
 }
