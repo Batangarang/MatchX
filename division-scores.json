@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-08-18T18:50:42.141Z",
+  "generatedAt": "2026-08-18T19:01:35.553Z",
   "date": "2026-08-18",
   "isToday": true,
-  "postCount": 19,
+  "postCount": 28,
   "fixtures": [
     {
       "home": "Stafford Town",
@@ -16,16 +16,33 @@
       "home": "Market Drayton Town",
       "away": "Sandbach United",
       "kickoff": "19:45",
-      "score": "0-0",
-      "goals": [],
+      "score": "1-1",
+      "goals": [
+        {
+          "minute": 7,
+          "team": "home",
+          "scorer": "Aidan McCann"
+        },
+        {
+          "minute": 10,
+          "team": "away",
+          "scorer": "Robbie Hatton"
+        }
+      ],
       "redCards": []
     },
     {
       "home": "New Mills",
       "away": "Barnton",
       "kickoff": "19:45",
-      "score": "0-0",
-      "goals": [],
+      "score": "1-0",
+      "goals": [
+        {
+          "minute": 9,
+          "team": "home",
+          "scorer": null
+        }
+      ],
       "redCards": []
     },
     {
@@ -37,5 +54,5 @@
       "redCards": []
     }
   ],
-  "ticker": "@MDTFC: Kick off 0’\n\n🔴⚪️0-0🟡🟡"
+  "ticker": "@StaffordTown1st: We are underway! \n\nTown in all red, foley in yellow and grey. \n\n#UpTheTown https://t.co/9mPWXl61UH"
 }

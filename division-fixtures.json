@@ -1,13 +1,6 @@
 {
-  "generatedAt": "2026-08-18T18:50:42.073Z",
+  "generatedAt": "2026-08-18T19:01:35.482Z",
   "fixtures": [
-    {
-      "date": "Tuesday 18 August 2026",
-      "home": "Stafford Town",
-      "away": "Foley Meir",
-      "kickoff": "20:00",
-      "postponed": false
-    },
     {
       "date": "Wednesday 19 August 2026",
       "home": "Eccleshall",
@@ -2372,6 +2365,13 @@
       "home": "Wolverhampton Casuals",
       "away": "Cheadle Heath Nomads",
       "kickoff": "15:00",
+      "postponed": false
+    },
+    {
+      "date": "Tuesday 18 August 2026",
+      "home": "Stafford Town",
+      "away": "Foley Meir",
+      "kickoff": "20:00",
       "postponed": false
     },
     {
