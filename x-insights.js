@@ -26,6 +26,26 @@ async function run() {
     return;
   }
 
+    if (fs.existsSync('matchday-live.json')) {
+    try {
+      const matchdayData = JSON.parse(fs.readFileSync('matchday-live.json', 'utf-8'));
+      const stage = matchdayData.match?.matchStage;
+      const isLiveNow = stage && !['scheduled', 'full_time'].includes(stage) &&
+        matchdayData.fixtureDate === new Date().toISOString().slice(0, 10);
+      if (isLiveNow) {
+        const output = {
+          generatedAt: new Date().toISOString(),
+          isFromToday: true,
+          postsConsidered: 0,
+          summary: `Sandbach United are playing right now! Check the Matchday card above for the latest score and updates.`,
+        };
+        fs.writeFileSync('x-insights.json', JSON.stringify(output, null, 2));
+        console.log('Match is live — showing a simple live-match notice instead of attempting to summarize in-progress posts.');
+        return;
+      }
+    } catch {}
+  }
+
   // Skip the whole thing (and the paid AI call) if the underlying posts
   // haven't actually changed since the last summary was generated.
   const stateFile = 'x-insights-lastrun.json';
