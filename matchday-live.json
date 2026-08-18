@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-08-18T19:35:44.657Z",
+  "generatedAt": "2026-08-18T19:40:48.032Z",
   "fixtureDate": "2026-08-18",
   "kickoff": "19:45",
   "homeTeam": "Market Drayton Town",
   "awayTeam": "Sandbach United",
-  "postsUsed": 25,
+  "postsUsed": 26,
   "imagesAnalyzedThisRun": 1,
-  "totalImagesAnalyzed": 6,
+  "totalImagesAnalyzed": 7,
   "match": {
     "score": "3-3",
     "scoreDiscrepancy": null,
@@ -101,22 +101,22 @@
       "firstHalf": {
         "home": 0,
         "away": 0,
-        "note": "No shot data available; very high-scoring first half with 6 goals suggests both teams created clear-cut chances but exact xG cannot be estimated from social media posts."
+        "note": "Six goals in the first half indicate high-quality chances; no detailed shot data available"
       },
       "secondHalf": {
         "home": 0,
         "away": 0,
-        "note": "Second half not yet completed in available posts."
+        "note": "No second half data posted"
       },
       "extraTime": {
         "home": 0,
         "away": 0,
-        "note": "Match did not go to extra time."
+        "note": "Match did not go to extra time"
       },
       "total": {
         "home": 0,
         "away": 0,
-        "note": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
+        "note": "Six goals in first half; second half not yet played"
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
@@ -124,22 +124,22 @@
       "firstHalf": {
         "home": 50,
         "away": 50,
-        "note": "Evenly matched with rapid exchanges; both teams scored 3 goals and traded lead multiple times."
+        "note": "Extremely open match with both teams trading goals; no clear control pattern evident from posts"
       },
       "secondHalf": {
         "home": 50,
         "away": 50,
-        "note": "Second half not yet completed in available posts."
+        "note": "Second half not yet played"
       },
       "extraTime": {
         "home": 50,
         "away": 50,
-        "note": "Match did not go to extra time."
+        "note": "Match did not go to extra time"
       },
       "total": {
         "home": 50,
         "away": 50,
-        "note": "Inferred from tone/content of posts only, not real possession or shot data."
+        "note": "Balanced attacking match with six first-half goals"
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
