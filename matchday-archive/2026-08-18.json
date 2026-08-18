@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-08-18T20:01:06.876Z",
+  "generatedAt": "2026-08-18T20:10:49.249Z",
   "fixtureDate": "2026-08-18",
   "kickoff": "19:45",
   "homeTeam": "Market Drayton Town",
   "awayTeam": "Sandbach United",
-  "postsUsed": 31,
+  "postsUsed": 34,
   "imagesAnalyzedThisRun": 0,
   "totalImagesAnalyzed": 7,
   "match": {
@@ -80,7 +80,14 @@
     ],
     "yellowCards": [],
     "redCards": [],
-    "substitutions": [],
+    "substitutions": [
+      {
+        "minute": 65,
+        "team": "away",
+        "playerOff": "Kieran Nolan",
+        "playerOn": "Jake Pollard"
+      }
+    ],
     "sinBins": [],
     "injuries": [],
     "addedTime": {
@@ -101,22 +108,22 @@
       "firstHalf": {
         "home": 0,
         "away": 0,
-        "note": "High-scoring half with 6 goals; limited detail on actual shots on target vs off-target"
+        "note": "High-scoring but limited detail on shot quality in posts"
       },
       "secondHalf": {
         "home": 0,
         "away": 0,
-        "note": "Two clear chances mentioned (Wood and McIntosh headers); second half posts end at 59 minutes"
+        "note": "Several chances mentioned (Hatton over, Wood saved, McIntosh chances) but insufficient detail"
       },
       "extraTime": {
         "home": 0,
         "away": 0,
-        "note": "Not applicable"
+        "note": "Match did not go to extra time"
       },
       "total": {
         "home": 0,
         "away": 0,
-        "note": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
+        "note": "Insufficient shot data from social media posts"
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
@@ -124,22 +131,22 @@
       "firstHalf": {
         "home": 50,
         "away": 50,
-        "note": "Evenly matched with both sides trading goals; Sandbach took 2-1 lead then Drayton equalized twice"
+        "note": "Fast-paced, evenly matched; 6 goals shared equally (3-3)"
       },
       "secondHalf": {
         "home": 55,
         "away": 45,
-        "note": "Drayton appeared to have slight edge in second half; limited data as posts end at 59 minutes"
+        "note": "Drayton created more chances (Wood, McIntosh opportunities); Sandbach had one clear chance (Hatton over bar)"
       },
       "extraTime": {
         "home": 50,
         "away": 50,
-        "note": "Not applicable"
+        "note": "Match did not go to extra time"
       },
       "total": {
-        "home": 50,
-        "away": 50,
-        "note": "Inferred from tone/content of posts only, not real possession or shot data."
+        "home": 52,
+        "away": 48,
+        "note": "Slightly favoured home side in second half, but closely contested overall"
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }

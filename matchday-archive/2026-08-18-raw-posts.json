@@ -260,5 +260,29 @@
     "side": "home",
     "handle": "MDTFC",
     "isDuplicateCommentary": false
+  },
+  {
+    "text": "64’ Army breaks free takes on 3 players… squares it to McIntosh who can’t steer it home \n\n🔴⚪️3-3🟡🟡",
+    "createdAt": "2026-08-18T20:06:09.000Z",
+    "images": [],
+    "side": "home",
+    "handle": "MDTFC",
+    "isDuplicateCommentary": false
+  },
+  {
+    "text": "🔴⚪️ v 🟡🟡\n\nMarket Drayton v Sandbach United \n\nKieran Nolan replaced by Jake Pollard\n\n3 3\n\n65 mins gone",
+    "createdAt": "2026-08-18T20:06:21.000Z",
+    "images": [],
+    "side": "away",
+    "handle": "SandbachFC_1st",
+    "isDuplicateCommentary": false
+  },
+  {
+    "text": "65’ \n\nSandbach Sub\n\nOFF \nNOLAN\n\nON \nPOLLARD",
+    "createdAt": "2026-08-18T20:07:00.000Z",
+    "images": [],
+    "side": "home",
+    "handle": "MDTFC",
+    "isDuplicateCommentary": true
   }
 ]
