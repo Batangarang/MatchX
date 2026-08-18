@@ -1,27 +1,6 @@
 {
-  "generatedAt": "2026-08-18T18:15:35.182Z",
+  "generatedAt": "2026-08-18T18:50:42.073Z",
   "fixtures": [
-    {
-      "date": "Tuesday 18 August 2026",
-      "home": "Market Drayton Town",
-      "away": "Sandbach United",
-      "kickoff": "19:45",
-      "postponed": false
-    },
-    {
-      "date": "Tuesday 18 August 2026",
-      "home": "New Mills",
-      "away": "Barnton",
-      "kickoff": "19:45",
-      "postponed": false
-    },
-    {
-      "date": "Tuesday 18 August 2026",
-      "home": "Telford Town",
-      "away": "Allscott Heath",
-      "kickoff": "19:45",
-      "postponed": false
-    },
     {
       "date": "Tuesday 18 August 2026",
       "home": "Stafford Town",
@@ -2393,6 +2372,27 @@
       "home": "Wolverhampton Casuals",
       "away": "Cheadle Heath Nomads",
       "kickoff": "15:00",
+      "postponed": false
+    },
+    {
+      "date": "Tuesday 18 August 2026",
+      "home": "Market Drayton Town",
+      "away": "Sandbach United",
+      "kickoff": "19:45",
+      "postponed": false
+    },
+    {
+      "date": "Tuesday 18 August 2026",
+      "home": "New Mills",
+      "away": "Barnton",
+      "kickoff": "19:45",
+      "postponed": false
+    },
+    {
+      "date": "Tuesday 18 August 2026",
+      "home": "Telford Town",
+      "away": "Allscott Heath",
+      "kickoff": "19:45",
       "postponed": false
     }
   ]

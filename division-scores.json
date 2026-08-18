@@ -1,14 +1,22 @@
 {
-  "generatedAt": "2026-08-18T18:10:42.358Z",
+  "generatedAt": "2026-08-18T18:50:42.141Z",
   "date": "2026-08-18",
   "isToday": true,
-  "postCount": 13,
+  "postCount": 19,
   "fixtures": [
+    {
+      "home": "Stafford Town",
+      "away": "Foley Meir",
+      "kickoff": "20:00",
+      "score": null,
+      "goals": [],
+      "redCards": []
+    },
     {
       "home": "Market Drayton Town",
       "away": "Sandbach United",
       "kickoff": "19:45",
-      "score": null,
+      "score": "0-0",
       "goals": [],
       "redCards": []
     },
@@ -16,7 +24,7 @@
       "home": "New Mills",
       "away": "Barnton",
       "kickoff": "19:45",
-      "score": null,
+      "score": "0-0",
       "goals": [],
       "redCards": []
     },
@@ -27,15 +35,7 @@
       "score": null,
       "goals": [],
       "redCards": []
-    },
-    {
-      "home": "Stafford Town",
-      "away": "Foley Meir",
-      "kickoff": "20:00",
-      "score": null,
-      "goals": [],
-      "redCards": []
     }
   ],
-  "ticker": "@StaffordTown1st: Your Stafford team to take on Foley Meir\n\nPerry and Lynch come in to the 11 from Saturday for Mazurkiewicz (suspended) &amp; Taylor (holiday)\n\nSatchwell and Tibbs come in on the bench. \n\n#UpTheTown https://t.co/LOIQRfTvqu"
+  "ticker": "@MDTFC: Kick off 0’\n\n🔴⚪️0-0🟡🟡"
 }
