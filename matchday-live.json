@@ -1,21 +1,41 @@
 {
-  "generatedAt": "2026-08-18T17:15:40.458Z",
+  "generatedAt": "2026-08-18T18:40:51.240Z",
   "fixtureDate": "2026-08-18",
   "kickoff": "19:45",
   "homeTeam": "Market Drayton Town",
   "awayTeam": "Sandbach United",
-  "postsUsed": 2,
+  "postsUsed": 3,
   "imagesAnalyzedThisRun": 1,
-  "totalImagesAnalyzed": 1,
+  "totalImagesAnalyzed": 2,
   "match": {
     "score": null,
+    "scoreDiscrepancy": null,
     "finalScoreAnnounced": null,
     "halfTimeScoreAnnounced": null,
+    "htDiscrepancy": null,
     "matchStage": "scheduled",
     "lineups": {
       "home": {
-        "players": [],
-        "substitutes": [],
+        "players": [
+          "1. A. Rawlins",
+          "2. T. Horton",
+          "3. G. Woodroffe",
+          "4. B. Bywater",
+          "5. J. Sutton",
+          "6. G. Handley",
+          "7. A. Wood",
+          "8. A. Mccann",
+          "9. C. Mcintosh",
+          "10. R. Oakley",
+          "14. K. Knott"
+        ],
+        "substitutes": [
+          "17. M. Raine",
+          "11. J. Beamond",
+          "12. O. Griffiths",
+          "15. W. Holt",
+          "16. A. Jones"
+        ],
         "manager": null,
         "officials": []
       },
@@ -91,8 +111,6 @@
         "note": "No match data available"
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
-    },
-    "scoreDiscrepancy": null,
-    "htDiscrepancy": null
+    }
   }
 }
