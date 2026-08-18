@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-08-18T20:45:56.289Z",
+  "generatedAt": "2026-08-18T20:51:00.729Z",
   "fixtureDate": "2026-08-18",
   "kickoff": "19:45",
   "homeTeam": "Market Drayton Town",
   "awayTeam": "Sandbach United",
-  "postsUsed": 53,
-  "imagesAnalyzedThisRun": 0,
-  "totalImagesAnalyzed": 9,
+  "postsUsed": 54,
+  "imagesAnalyzedThisRun": 1,
+  "totalImagesAnalyzed": 10,
   "match": {
     "score": "3-4",
     "scoreDiscrepancy": null,
@@ -192,47 +192,47 @@
     },
     "roughXG": {
       "firstHalf": {
-        "home": 0.8,
-        "away": 0.6,
-        "note": "Six goals in first half with multiple chances described; home had McIntosh effort and others, away had Hatton chance and conversion. Difficult to estimate true xG from social media."
+        "home": 0,
+        "away": 0,
+        "note": "Six goals scored in first half (3-3); multiple chances mentioned but no clear shot counts provided"
       },
       "secondHalf": {
-        "home": 0.5,
-        "away": 0.4,
-        "note": "Fewer clear chances after Cope's red card; Sandbach had O'Connell header and Pollard shot, home had Wood and McIntosh chances."
+        "home": 0,
+        "away": 0,
+        "note": "One goal scored (O'Connell 82'); several chances for Drayton mentioned but no detailed shot data"
       },
       "extraTime": {
         "home": 0,
         "away": 0,
-        "note": "No extra time played."
+        "note": "No extra time played"
       },
       "total": {
-        "home": 1.3,
-        "away": 1,
-        "note": "Very rough estimate based on described chances and goals. Home scored 3, away scored 4."
+        "home": 0,
+        "away": 0,
+        "note": "Seven goals across 90 minutes; insufficient data for accurate xG estimation"
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
     "matchControl": {
       "firstHalf": {
-        "home": 50,
-        "away": 50,
-        "note": "Evenly matched with six goals; both sides had clear chances and counter-attacking opportunities."
+        "home": 45,
+        "away": 55,
+        "note": "High-scoring first half with both teams creating chances; Sandbach took lead twice but Drayton equalized both times; control roughly balanced with slight edge to Sandbach"
       },
       "secondHalf": {
-        "home": 60,
-        "away": 40,
-        "note": "Home appeared to have more control after Sandbach went down to 10 men in 70th minute, but away grabbed decisive winner late."
+        "home": 55,
+        "away": 45,
+        "note": "Drayton dominated after Sandbach went down to 10 men (70'); created more chances but Sandbach scored the winner on a counter"
       },
       "extraTime": {
-        "home": 0,
-        "away": 0,
-        "note": "No extra time played."
+        "home": 50,
+        "away": 50,
+        "note": "No extra time played"
       },
       "total": {
         "home": 50,
         "away": 50,
-        "note": "Tightly contested match; away won despite numerical disadvantage in second half."
+        "note": "Evenly contested; Sandbach's numerical disadvantage in second half offset by defensive solidity and counter-attacking effectiveness"
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
