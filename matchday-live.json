@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-18T20:15:50.673Z",
+  "generatedAt": "2026-08-18T20:20:51.866Z",
   "fixtureDate": "2026-08-18",
   "kickoff": "19:45",
   "homeTeam": "Market Drayton Town",
   "awayTeam": "Sandbach United",
-  "postsUsed": 39,
-  "imagesAnalyzedThisRun": 2,
+  "postsUsed": 45,
+  "imagesAnalyzedThisRun": 0,
   "totalImagesAnalyzed": 9,
   "match": {
     "score": "3-3",
@@ -83,6 +83,11 @@
         "minute": 73,
         "team": "away",
         "player": "Stan Tatters"
+      },
+      {
+        "minute": 78,
+        "team": "away",
+        "player": "Nathan Barry"
       }
     ],
     "redCards": [
@@ -98,6 +103,18 @@
         "team": "away",
         "playerOff": "Kieran Nolan",
         "playerOn": "Jake Pollard"
+      },
+      {
+        "minute": 74,
+        "team": "away",
+        "playerOff": "Fowles",
+        "playerOn": "Forrester"
+      },
+      {
+        "minute": 75,
+        "team": "home",
+        "playerOff": "Knott",
+        "playerOn": "Beamond"
       }
     ],
     "sinBins": [],
@@ -118,24 +135,24 @@
     },
     "roughXG": {
       "firstHalf": {
-        "home": 2.5,
-        "away": 2.5,
-        "note": "Six goals in first half; both sides created genuine chances"
+        "home": 0,
+        "away": 0,
+        "note": "Six goals scored in first half; limited detail on chances, no clear xG inference"
       },
       "secondHalf": {
-        "home": 1.5,
-        "away": 0.5,
-        "note": "Market Drayton dominated with clear-cut chances (Wood vs keeper, McIntosh misses); Sandbach reduced to 10 men after 70 minutes with limited threat"
+        "home": 0,
+        "away": 0,
+        "note": "Several near-misses mentioned (Hatton 47', Wood 58', McIntosh 59' and 64', Knott 75') but no goals; match ended 3-3 at 79+ minutes"
       },
       "extraTime": {
         "home": 0,
         "away": 0,
-        "note": "No extra time played"
+        "note": "No extra time"
       },
       "total": {
-        "home": 4,
-        "away": 3,
-        "note": "High-scoring first half with balanced chances; second half tilted toward home side after away team's red card"
+        "home": 0,
+        "away": 0,
+        "note": "Very high-scoring match; posts do not provide enough detail for meaningful xG estimates"
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
@@ -143,22 +160,22 @@
       "firstHalf": {
         "home": 50,
         "away": 50,
-        "note": "Evenly matched; both sides created genuine chances and scored headers from corners"
+        "note": "Highly competitive; both teams scored, chances at both ends"
       },
       "secondHalf": {
-        "home": 65,
-        "away": 35,
-        "note": "Market Drayton began to dominate after Sandbach's Cope sent off at 70 minutes; Drayton had multiple clear chances"
+        "home": 60,
+        "away": 40,
+        "note": "Drayton created more clear-cut chances (Wood, McIntosh) after Cope's red card (70') gave them numerical advantage; Sandbach under pressure with 10 men"
       },
       "extraTime": {
         "home": 50,
         "away": 50,
-        "note": "No extra time played"
+        "note": "No extra time"
       },
       "total": {
-        "home": 57,
-        "away": 43,
-        "note": "Match balanced in first half; Market Drayton gained upper hand in second half with numerical advantage"
+        "home": 55,
+        "away": 45,
+        "note": "Drayton dominated second half especially after red card, but Sandbach resilient"
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
