@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-08-18T19:20:43.636Z",
+  "generatedAt": "2026-08-18T19:25:39.159Z",
   "date": "2026-08-18",
   "isToday": true,
-  "postCount": 42,
+  "postCount": 43,
   "fixtures": [
     {
       "home": "Stafford Town",
@@ -19,22 +19,22 @@
       "score": "2-2",
       "goals": [
         {
-          "minute": "7",
+          "minute": 7,
           "team": "home",
           "scorer": "Aidan McCann"
         },
         {
-          "minute": "10",
+          "minute": 10,
           "team": "away",
           "scorer": "Robbie Hatton"
         },
         {
-          "minute": "21",
+          "minute": 21,
           "team": "away",
           "scorer": "Kieron O'Connell"
         },
         {
-          "minute": "26",
+          "minute": 26,
           "team": "home",
           "scorer": "Cian McIntosh"
         }
@@ -48,17 +48,17 @@
       "score": "2-1",
       "goals": [
         {
-          "minute": "9",
-          "team": "home",
-          "scorer": null
-        },
-        {
-          "minute": "18",
+          "minute": 9,
           "team": "home",
           "scorer": "Luc Ferry"
         },
         {
-          "minute": "24",
+          "minute": 18,
+          "team": "home",
+          "scorer": "Luc Ferry"
+        },
+        {
+          "minute": 25,
           "team": "away",
           "scorer": null
         }
@@ -74,5 +74,5 @@
       "redCards": []
     }
   ],
-  "ticker": "@barntonfc: ⏱️35’ | Bailey Sherlock rattles the crossbar from a great volley.\n\n🟡 NWM 2-1 BAR 🔵\n\n#UTV | #TheCheshireJuve | #FinoAllaFine"
+  "ticker": "@NewMillsFC: Millers under it a bit here after a bright start, 38 mins gone. 2-1 Millers"
 }
