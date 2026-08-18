@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-18T19:40:48.032Z",
+  "generatedAt": "2026-08-18T19:50:50.997Z",
   "fixtureDate": "2026-08-18",
   "kickoff": "19:45",
   "homeTeam": "Market Drayton Town",
   "awayTeam": "Sandbach United",
-  "postsUsed": 26,
-  "imagesAnalyzedThisRun": 1,
+  "postsUsed": 29,
+  "imagesAnalyzedThisRun": 0,
   "totalImagesAnalyzed": 7,
   "match": {
     "score": "3-3",
@@ -13,7 +13,7 @@
     "finalScoreAnnounced": null,
     "halfTimeScoreAnnounced": "3-3",
     "htDiscrepancy": null,
-    "matchStage": "half_time",
+    "matchStage": "second_half",
     "lineups": {
       "home": {
         "players": [
@@ -101,22 +101,22 @@
       "firstHalf": {
         "home": 0,
         "away": 0,
-        "note": "Six goals in the first half indicate high-quality chances; no detailed shot data available"
+        "note": "Insufficient data for estimate"
       },
       "secondHalf": {
         "home": 0,
         "away": 0,
-        "note": "No second half data posted"
+        "note": "Match ended during second half at 47 minutes; insufficient data"
       },
       "extraTime": {
         "home": 0,
         "away": 0,
-        "note": "Match did not go to extra time"
+        "note": "No extra time"
       },
       "total": {
         "home": 0,
         "away": 0,
-        "note": "Six goals in first half; second half not yet played"
+        "note": "Insufficient data for estimate"
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
@@ -124,22 +124,22 @@
       "firstHalf": {
         "home": 50,
         "away": 50,
-        "note": "Extremely open match with both teams trading goals; no clear control pattern evident from posts"
+        "note": "Fast-paced, end-to-end match with both sides creating chances and scoring freely; evenly matched"
       },
       "secondHalf": {
         "home": 50,
         "away": 50,
-        "note": "Second half not yet played"
+        "note": "Posts only cover 47 minutes of second half; Sandbach had a clear chance at 47 mins but insufficient data for full assessment"
       },
       "extraTime": {
         "home": 50,
         "away": 50,
-        "note": "Match did not go to extra time"
+        "note": "No extra time"
       },
       "total": {
         "home": 50,
         "away": 50,
-        "note": "Balanced attacking match with six first-half goals"
+        "note": "Evenly matched encounter with high intensity and open play"
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
