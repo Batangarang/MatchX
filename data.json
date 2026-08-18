@@ -1,5 +1,5 @@
 {
-  "scrapedAt": "2026-08-18T12:01:02.123Z",
+  "scrapedAt": "2026-08-18T13:01:10.575Z",
   "nextFixture": {
     "date": "Tue 18/08/26",
     "opposition": "Market Drayton Town",
@@ -214,6 +214,16 @@
       "score": null,
       "scorers": null,
       "competitionNote": null
+    },
+    {
+      "date": "Sat 26/09/26",
+      "opposition": "Alsager Town",
+      "opponentUrl": "clubpage.php?id=3",
+      "homeAway": "H",
+      "kickoff": "15:00",
+      "score": null,
+      "scorers": null,
+      "competitionNote": "The Macron Cup 1"
     },
     {
       "date": "Sat 03/10/26",
