@@ -1,4 +1,4 @@
-name: Division recap - weekend recap
+name: Division recap - midweek preview
 on:
   workflow_dispatch:
 
