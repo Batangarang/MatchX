@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-08-18T18:49:59.156Z",
+  "generatedAt": "2026-08-18T18:57:54.308Z",
   "fixtureDate": "2026-08-18",
   "kickoff": "19:45",
   "homeTeam": "Market Drayton Town",
   "awayTeam": "Sandbach United",
-  "postsUsed": 6,
-  "imagesAnalyzedThisRun": 0,
-  "totalImagesAnalyzed": 2,
+  "postsUsed": 10,
+  "imagesAnalyzedThisRun": 1,
+  "totalImagesAnalyzed": 3,
   "match": {
-    "score": null,
+    "score": "1-1",
     "scoreDiscrepancy": null,
     "finalScoreAnnounced": null,
     "halfTimeScoreAnnounced": null,
@@ -46,7 +46,18 @@
         "officials": []
       }
     },
-    "goals": [],
+    "goals": [
+      {
+        "minute": 7,
+        "team": "home",
+        "scorer": "Aidan McCann"
+      },
+      {
+        "minute": 10,
+        "team": "away",
+        "scorer": "Robbie Hatton"
+      }
+    ],
     "yellowCards": [],
     "redCards": [],
     "substitutions": [],
@@ -70,12 +81,12 @@
       "firstHalf": {
         "home": 0,
         "away": 0,
-        "note": "No shot data available"
+        "note": "Insufficient data; only two goals mentioned in first 10 minutes with minimal descriptive detail"
       },
       "secondHalf": {
         "home": 0,
         "away": 0,
-        "note": "Match appears to have only just kicked off"
+        "note": "No posts from second half available"
       },
       "extraTime": {
         "home": 0,
@@ -85,7 +96,7 @@
       "total": {
         "home": 0,
         "away": 0,
-        "note": "No shot data available"
+        "note": "Insufficient data"
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
@@ -93,12 +104,12 @@
       "firstHalf": {
         "home": 50,
         "away": 50,
-        "note": "Match just started, no control information available"
+        "note": "Match evenly poised after early exchanges; one goal each in first 10 minutes"
       },
       "secondHalf": {
         "home": 50,
         "away": 50,
-        "note": "Match still in early stages"
+        "note": "No data available"
       },
       "extraTime": {
         "home": 50,
@@ -108,7 +119,7 @@
       "total": {
         "home": 50,
         "away": 50,
-        "note": "Insufficient data; match only recently kicked off at 18:46"
+        "note": "Insufficient data to assess overall match control"
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
