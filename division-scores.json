@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-08-18T19:01:35.553Z",
+  "generatedAt": "2026-08-18T19:10:43.908Z",
   "date": "2026-08-18",
   "isToday": true,
-  "postCount": 28,
+  "postCount": 38,
   "fixtures": [
     {
       "home": "Stafford Town",
@@ -16,7 +16,7 @@
       "home": "Market Drayton Town",
       "away": "Sandbach United",
       "kickoff": "19:45",
-      "score": "1-1",
+      "score": "1-2",
       "goals": [
         {
           "minute": 7,
@@ -27,6 +27,11 @@
           "minute": 10,
           "team": "away",
           "scorer": "Robbie Hatton"
+        },
+        {
+          "minute": 21,
+          "team": "away",
+          "scorer": "Kieron O'Connell"
         }
       ],
       "redCards": []
@@ -35,11 +40,21 @@
       "home": "New Mills",
       "away": "Barnton",
       "kickoff": "19:45",
-      "score": "1-0",
+      "score": "2-1",
       "goals": [
         {
           "minute": 9,
           "team": "home",
+          "scorer": "Luc Ferry"
+        },
+        {
+          "minute": 18,
+          "team": "home",
+          "scorer": "Luc Ferry"
+        },
+        {
+          "minute": 25,
+          "team": "away",
           "scorer": null
         }
       ],
@@ -54,5 +69,5 @@
       "redCards": []
     }
   ],
-  "ticker": "@StaffordTown1st: We are underway! \n\nTown in all red, foley in yellow and grey. \n\n#UpTheTown https://t.co/9mPWXl61UH"
+  "ticker": "@MDTFC: 21’ GOAL SANDBACH \n\nOCONNELL\n\nAll comes from a dubious offside given against Drayton. Sandbach move the ball quickly, they hit the post and are quickest to react. OConnell puts it in \n\n🔴⚪️1-2🟡🟡"
 }
