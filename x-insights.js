@@ -51,6 +51,19 @@ async function run() {
     }
   }
 
+    let liveMatchWarning = '';
+  if (fs.existsSync('matchday-live.json')) {
+    try {
+      const matchdayData = JSON.parse(fs.readFileSync('matchday-live.json', 'utf-8'));
+      const stage = matchdayData.match?.matchStage;
+      const isLiveNow = stage && !['scheduled', 'full_time'].includes(stage) &&
+        matchdayData.fixtureDate === new Date().toISOString().slice(0, 10);
+      if (isLiveNow) {
+        liveMatchWarning = `\n\nIMPORTANT: Sandbach's match today is CURRENTLY IN PROGRESS (not finished) — any goals mentioned in these posts are the score SO FAR, not a final result. Do NOT describe this as a completed win/loss/draw, do NOT say things like "secured victory" or "sealed the win" — instead describe it as an ongoing match, e.g. "Sandbach currently lead/trail X-Y" or "the match is underway." Never state or imply a final result while the match is still live.`;
+      }
+    } catch {}
+  }
+  
   const todaysPosts = allPosts.filter(p => isSameUKDay(p.createdAt));
   const isToday = todaysPosts.length > 0;
   const posts = isToday ? todaysPosts : allPosts.slice(0, 5);
@@ -73,7 +86,7 @@ async function run() {
         role: 'user',
         content: `Here are recent posts from Sandbach United's official 1st team X account, ${contextNote}:
 ${postsText}
-${nwcflContext} Write a short, friendly 2-3 sentence summary for fans, covering things like recent form, team news, or anything notable. Use player and club names exactly as they'd normally be written in football reporting — if a name in the source posts includes emoji, numbers, hashtags, or decorative styling (e.g. "Joe Bev97" or "J.Bevan⚽"), extract just the real underlying name and ignore the decoration. Do not use the word "today" or "this morning" anywhere in the summary, since it may be read days later — use durable phrasing instead (e.g. "in their last match," "recently," or the actual date). Plain text only, no markdown, no headers.`,
+${nwcflContext} ${liveMatchWarning} Write a short, friendly 2-3 sentence summary for fans, covering things like recent form, team news, or anything notable. Use player and club names exactly as they'd normally be written in football reporting — if a name in the source posts includes emoji, numbers, hashtags, or decorative styling (e.g. "Joe Bev97" or "J.Bevan⚽"), extract just the real underlying name and ignore the decoration. Do not use the word "today" or "this morning" anywhere in the summary, since it may be read days later — use durable phrasing instead (e.g. "in their last match," "recently," or the actual date). Plain text only, no markdown, no headers.`,
       }],
     }),
   });
