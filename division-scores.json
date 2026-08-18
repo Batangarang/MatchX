@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-08-18T19:15:35.433Z",
+  "generatedAt": "2026-08-18T19:20:43.636Z",
   "date": "2026-08-18",
   "isToday": true,
-  "postCount": 40,
+  "postCount": 42,
   "fixtures": [
     {
       "home": "Stafford Town",
@@ -19,22 +19,22 @@
       "score": "2-2",
       "goals": [
         {
-          "minute": 7,
+          "minute": "7",
           "team": "home",
           "scorer": "Aidan McCann"
         },
         {
-          "minute": 10,
+          "minute": "10",
           "team": "away",
           "scorer": "Robbie Hatton"
         },
         {
-          "minute": 21,
+          "minute": "21",
           "team": "away",
           "scorer": "Kieron O'Connell"
         },
         {
-          "minute": 26,
+          "minute": "26",
           "team": "home",
           "scorer": "Cian McIntosh"
         }
@@ -48,17 +48,17 @@
       "score": "2-1",
       "goals": [
         {
-          "minute": 18,
+          "minute": "9",
+          "team": "home",
+          "scorer": null
+        },
+        {
+          "minute": "18",
           "team": "home",
           "scorer": "Luc Ferry"
         },
         {
-          "minute": 18,
-          "team": "home",
-          "scorer": "Luc Ferry"
-        },
-        {
-          "minute": 25,
+          "minute": "24",
           "team": "away",
           "scorer": null
         }
@@ -74,5 +74,5 @@
       "redCards": []
     }
   ],
-  "ticker": "@MDTFC: 26’ GOAL DRAYTON \n\nITS Cian McIntosh \n\nTom Horton drives into the box, squares it for Cian to tap in \n\nWhat a game \n\n🔴⚪️2-2🟡🟡 https://t.co/PCXZ3Hqln3"
+  "ticker": "@barntonfc: ⏱️35’ | Bailey Sherlock rattles the crossbar from a great volley.\n\n🟡 NWM 2-1 BAR 🔵\n\n#UTV | #TheCheshireJuve | #FinoAllaFine"
 }
