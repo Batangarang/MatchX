@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-08-18T18:57:54.308Z",
+  "generatedAt": "2026-08-18T19:04:08.546Z",
   "fixtureDate": "2026-08-18",
   "kickoff": "19:45",
   "homeTeam": "Market Drayton Town",
   "awayTeam": "Sandbach United",
-  "postsUsed": 10,
+  "postsUsed": 15,
   "imagesAnalyzedThisRun": 1,
-  "totalImagesAnalyzed": 3,
+  "totalImagesAnalyzed": 4,
   "match": {
     "score": "1-1",
     "scoreDiscrepancy": null,
@@ -79,47 +79,47 @@
     },
     "roughXG": {
       "firstHalf": {
-        "home": 0,
-        "away": 0,
-        "note": "Insufficient data; only two goals mentioned in first 10 minutes with minimal descriptive detail"
+        "home": 1.2,
+        "away": 0.3,
+        "note": "Market Drayton scored early and had a clear chance around 16-17 minutes; Sandbach equalized from a corner but appeared more defensive thereafter."
       },
       "secondHalf": {
         "home": 0,
         "away": 0,
-        "note": "No posts from second half available"
+        "note": "No second-half data available in posts."
       },
       "extraTime": {
         "home": 0,
         "away": 0,
-        "note": "Not applicable"
+        "note": "Match did not go to extra time."
       },
       "total": {
-        "home": 0,
-        "away": 0,
-        "note": "Insufficient data"
+        "home": 1.2,
+        "away": 0.3,
+        "note": "First-half data only; full match xG cannot be estimated from available posts."
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
     "matchControl": {
       "firstHalf": {
-        "home": 50,
-        "away": 50,
-        "note": "Match evenly poised after early exchanges; one goal each in first 10 minutes"
+        "home": 60,
+        "away": 40,
+        "note": "Market Drayton scored first and created chances; Sandbach equalized via a set-piece but posts suggest Drayton had more attacking intent early on."
       },
       "secondHalf": {
         "home": 50,
         "away": 50,
-        "note": "No data available"
+        "note": "No second-half data available in posts."
       },
       "extraTime": {
         "home": 50,
         "away": 50,
-        "note": "Not applicable"
+        "note": "Match did not go to extra time."
       },
       "total": {
-        "home": 50,
-        "away": 50,
-        "note": "Insufficient data to assess overall match control"
+        "home": 55,
+        "away": 45,
+        "note": "Estimate based on first-half observations only; full-match assessment not possible from available data."
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
