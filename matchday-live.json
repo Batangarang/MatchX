@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-08-18T20:25:43.576Z",
+  "generatedAt": "2026-08-18T20:30:59.878Z",
   "fixtureDate": "2026-08-18",
   "kickoff": "19:45",
   "homeTeam": "Market Drayton Town",
   "awayTeam": "Sandbach United",
-  "postsUsed": 49,
+  "postsUsed": 50,
   "imagesAnalyzedThisRun": 0,
   "totalImagesAnalyzed": 9,
   "match": {
@@ -102,7 +102,7 @@
       {
         "minute": 81,
         "team": "away",
-        "player": "Hall"
+        "player": "Greg Hall"
       }
     ],
     "redCards": [
@@ -130,6 +130,18 @@
         "team": "home",
         "playerOff": "Knott",
         "playerOn": "Beamond"
+      },
+      {
+        "minute": 83,
+        "team": "home",
+        "playerOff": "Oakley",
+        "playerOn": "Holt"
+      },
+      {
+        "minute": 83,
+        "team": "home",
+        "playerOff": "Bywater",
+        "playerOn": "Raine"
       }
     ],
     "sinBins": [],
@@ -150,24 +162,24 @@
     },
     "roughXG": {
       "firstHalf": {
-        "home": 0,
-        "away": 0,
-        "note": "Six goals in first half with multiple chances on both sides; xG estimation not attempted from social media descriptions alone."
+        "home": 1.5,
+        "away": 1.5,
+        "note": "High-scoring first half with 6 goals; both teams created clear chances"
       },
       "secondHalf": {
-        "home": 0,
-        "away": 0,
-        "note": "Multiple chances described; Hatton missed sitter at 47', Wood saved at 59', McIntosh missed at 64', Knott missed at 75', Pollard shot saved at 80'; Sandbach scored at 82'."
+        "home": 1,
+        "away": 0.8,
+        "note": "Market Drayton had more chances in second half but Sandbach scored the clincher; Drayton down to 10 men after Cope's red card"
       },
       "extraTime": {
         "home": 0,
         "away": 0,
-        "note": "Not applicable."
+        "note": "No extra time played"
       },
       "total": {
-        "home": 0,
-        "away": 0,
-        "note": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
+        "home": 2.5,
+        "away": 2.3,
+        "note": "Rough estimate based on mentioned chances and goals"
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
@@ -175,22 +187,22 @@
       "firstHalf": {
         "home": 50,
         "away": 50,
-        "note": "Highly competitive with 6 goals; both sides created chances throughout."
+        "note": "Evenly balanced with rapid goal-scoring exchanges; both teams attacking with equal intensity"
       },
       "secondHalf": {
         "home": 55,
         "away": 45,
-        "note": "Drayton had more chances in second half until Cope's red card; Sandbach finished strongly with numerical disadvantage to score at 82'."
+        "note": "Drayton pressed for much of second half and had more chances, but Sandbach's numerical advantage late (after red card) allowed them to finish stronger with O'Connell's second goal"
       },
       "extraTime": {
         "home": 50,
         "away": 50,
-        "note": "Not applicable."
+        "note": "No extra time"
       },
       "total": {
         "home": 52,
         "away": 48,
-        "note": "Inferred from tone/content of posts only, not real possession or shot data."
+        "note": "Slight home dominance overall, particularly in second half, though match remained competitive"
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
