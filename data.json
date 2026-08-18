@@ -1,26 +1,16 @@
 {
-  "scrapedAt": "2026-08-18T20:00:53.826Z",
+  "scrapedAt": "2026-08-18T21:00:53.586Z",
   "nextFixture": {
-    "date": "Tue 18/08/26",
-    "opposition": "Market Drayton Town",
-    "opponentUrl": "clubpage.php?id=224",
-    "homeAway": "A",
-    "kickoff": "19:45",
+    "date": "Sat 22/08/26",
+    "opposition": "Wolverhampton Casuals",
+    "opponentUrl": "clubpage.php?id=73",
+    "homeAway": "H",
+    "kickoff": "15:00",
     "score": null,
     "scorers": null,
     "competitionNote": null
   },
   "nextFixtures": [
-    {
-      "date": "Tue 18/08/26",
-      "opposition": "Market Drayton Town",
-      "opponentUrl": "clubpage.php?id=224",
-      "homeAway": "A",
-      "kickoff": "19:45",
-      "score": null,
-      "scorers": null,
-      "competitionNote": null
-    },
     {
       "date": "Sat 22/08/26",
       "opposition": "Wolverhampton Casuals",
@@ -60,19 +50,39 @@
       "score": null,
       "scorers": null,
       "competitionNote": null
+    },
+    {
+      "date": "Sat 19/09/26",
+      "opposition": "Eccleshall",
+      "opponentUrl": "clubpage.php?id=30",
+      "homeAway": "H",
+      "kickoff": "15:00",
+      "score": null,
+      "scorers": null,
+      "competitionNote": null
     }
   ],
   "lastResult": {
-    "date": "Sat 15/08/26",
-    "opposition": "Ashby Ivanhoe",
-    "opponentUrl": "lineups.php?id=22048",
-    "homeAway": "H",
-    "kickoff": "15:00",
-    "score": "L 0-1",
-    "scorers": null,
-    "competitionNote": "The Isuzu FA Vase 1Q"
+    "date": "Tue 18/08/26",
+    "opposition": "Market Drayton Town",
+    "opponentUrl": "clubpage.php?id=224",
+    "homeAway": "A",
+    "kickoff": "19:45",
+    "score": "W 4-3",
+    "scorers": "Robbie Hatton (10) Kieran OConnell (21) Nathan Barry (42) Kieran OConnell (81)",
+    "competitionNote": null
   },
   "lastResults": [
+    {
+      "date": "Tue 18/08/26",
+      "opposition": "Market Drayton Town",
+      "opponentUrl": "clubpage.php?id=224",
+      "homeAway": "A",
+      "kickoff": "19:45",
+      "score": "W 4-3",
+      "scorers": "Robbie Hatton (10) Kieran OConnell (21) Nathan Barry (42) Kieran OConnell (81)",
+      "competitionNote": null
+    },
     {
       "date": "Sat 15/08/26",
       "opposition": "Ashby Ivanhoe",
@@ -91,16 +101,6 @@
       "kickoff": "19:45",
       "score": "L 1-3",
       "scorers": "Own Goal (51)",
-      "competitionNote": null
-    },
-    {
-      "date": "Sat 08/08/26",
-      "opposition": "Stafford Town",
-      "opponentUrl": "clubpage.php?id=182",
-      "homeAway": "H",
-      "kickoff": "15:00",
-      "score": "W 1-0",
-      "scorers": "Stanley Tatters (30)",
       "competitionNote": null
     }
   ],
@@ -161,8 +161,8 @@
       "opponentUrl": "clubpage.php?id=224",
       "homeAway": "A",
       "kickoff": "19:45",
-      "score": null,
-      "scorers": null,
+      "score": "W 4-3",
+      "scorers": "Robbie Hatton (10) Kieran OConnell (21) Nathan Barry (42) Kieran OConnell (81)",
       "competitionNote": null
     },
     {
