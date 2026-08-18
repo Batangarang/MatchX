@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-08-18T20:30:59.878Z",
+  "generatedAt": "2026-08-18T20:35:48.048Z",
   "fixtureDate": "2026-08-18",
   "kickoff": "19:45",
   "homeTeam": "Market Drayton Town",
   "awayTeam": "Sandbach United",
-  "postsUsed": 50,
+  "postsUsed": 51,
   "imagesAnalyzedThisRun": 0,
   "totalImagesAnalyzed": 9,
   "match": {
@@ -142,6 +142,12 @@
         "team": "home",
         "playerOff": "Bywater",
         "playerOn": "Raine"
+      },
+      {
+        "minute": 89,
+        "team": "home",
+        "playerOff": "Horton",
+        "playerOn": "Griffiths"
       }
     ],
     "sinBins": [],
@@ -162,24 +168,24 @@
     },
     "roughXG": {
       "firstHalf": {
-        "home": 1.5,
-        "away": 1.5,
-        "note": "High-scoring first half with 6 goals; both teams created clear chances"
+        "home": 0,
+        "away": 0,
+        "note": "Six goals scored in first half; posts mention missed chances and saved shots but insufficient detail for xG estimation"
       },
       "secondHalf": {
-        "home": 1,
-        "away": 0.8,
-        "note": "Market Drayton had more chances in second half but Sandbach scored the clincher; Drayton down to 10 men after Cope's red card"
+        "home": 0,
+        "away": 0,
+        "note": "One goal scored in second half; posts describe chances but insufficient detail for xG estimation"
       },
       "extraTime": {
         "home": 0,
         "away": 0,
-        "note": "No extra time played"
+        "note": "No extra time"
       },
       "total": {
-        "home": 2.5,
-        "away": 2.3,
-        "note": "Rough estimate based on mentioned chances and goals"
+        "home": 0,
+        "away": 0,
+        "note": "Social media updates insufficient for reliable xG calculation"
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
@@ -187,12 +193,12 @@
       "firstHalf": {
         "home": 50,
         "away": 50,
-        "note": "Evenly balanced with rapid goal-scoring exchanges; both teams attacking with equal intensity"
+        "note": "Match described as a high-scoring 'roller coaster' with both teams creating chances and scoring regularly; no clear dominance evident"
       },
       "secondHalf": {
-        "home": 55,
-        "away": 45,
-        "note": "Drayton pressed for much of second half and had more chances, but Sandbach's numerical advantage late (after red card) allowed them to finish stronger with O'Connell's second goal"
+        "home": 45,
+        "away": 55,
+        "note": "Sandbach appeared to create more chances in second half despite going down to 10 men; scored the final goal to take 4-3 lead"
       },
       "extraTime": {
         "home": 50,
@@ -200,9 +206,9 @@
         "note": "No extra time"
       },
       "total": {
-        "home": 52,
-        "away": 48,
-        "note": "Slight home dominance overall, particularly in second half, though match remained competitive"
+        "home": 47,
+        "away": 53,
+        "note": "Sandbach finished ahead but Market Drayton had chances throughout; Sandbach finished with numerical disadvantage (red card 70')"
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
