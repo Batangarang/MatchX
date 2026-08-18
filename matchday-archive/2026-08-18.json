@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-08-18T20:40:54.757Z",
+  "generatedAt": "2026-08-18T20:45:56.289Z",
   "fixtureDate": "2026-08-18",
   "kickoff": "19:45",
   "homeTeam": "Market Drayton Town",
   "awayTeam": "Sandbach United",
-  "postsUsed": 52,
+  "postsUsed": 53,
   "imagesAnalyzedThisRun": 0,
   "totalImagesAnalyzed": 9,
   "match": {
     "score": "3-4",
     "scoreDiscrepancy": null,
-    "finalScoreAnnounced": null,
+    "finalScoreAnnounced": "3-4",
     "halfTimeScoreAnnounced": "3-3",
     "htDiscrepancy": null,
     "matchStage": "full_time",
@@ -168,6 +168,12 @@
         "team": "away",
         "player": "Jake Pollard",
         "note": "Injury requiring replacement"
+      },
+      {
+        "minute": 90,
+        "team": "away",
+        "player": "Pollard",
+        "note": "Replaced due to injury in added time"
       }
     ],
     "addedTime": {
@@ -186,24 +192,24 @@
     },
     "roughXG": {
       "firstHalf": {
-        "home": 0,
-        "away": 0,
-        "note": "Not estimated from posts"
+        "home": 0.8,
+        "away": 0.6,
+        "note": "Six goals in first half with multiple chances described; home had McIntosh effort and others, away had Hatton chance and conversion. Difficult to estimate true xG from social media."
       },
       "secondHalf": {
-        "home": 0,
-        "away": 0,
-        "note": "Not estimated from posts"
+        "home": 0.5,
+        "away": 0.4,
+        "note": "Fewer clear chances after Cope's red card; Sandbach had O'Connell header and Pollard shot, home had Wood and McIntosh chances."
       },
       "extraTime": {
         "home": 0,
         "away": 0,
-        "note": "Match did not go to extra time"
+        "note": "No extra time played."
       },
       "total": {
-        "home": 0,
-        "away": 0,
-        "note": "Not estimated from posts"
+        "home": 1.3,
+        "away": 1,
+        "note": "Very rough estimate based on described chances and goals. Home scored 3, away scored 4."
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
@@ -211,22 +217,22 @@
       "firstHalf": {
         "home": 50,
         "away": 50,
-        "note": "Evenly matched, both teams created chances"
+        "note": "Evenly matched with six goals; both sides had clear chances and counter-attacking opportunities."
       },
       "secondHalf": {
-        "home": 45,
-        "away": 55,
-        "note": "Sandbach had numerical advantage after 70th minute red card but faced increased pressure; multiple chances for both sides"
+        "home": 60,
+        "away": 40,
+        "note": "Home appeared to have more control after Sandbach went down to 10 men in 70th minute, but away grabbed decisive winner late."
       },
       "extraTime": {
-        "home": 50,
-        "away": 50,
-        "note": "Match did not go to extra time"
+        "home": 0,
+        "away": 0,
+        "note": "No extra time played."
       },
       "total": {
         "home": 50,
         "away": 50,
-        "note": "Competitive, high-scoring encounter with both teams contributing attacking play"
+        "note": "Tightly contested match; away won despite numerical disadvantage in second half."
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
