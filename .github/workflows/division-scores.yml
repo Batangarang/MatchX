@@ -28,6 +28,8 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config core.editor true
+          
           for f in division-fixtures.json division-scores.json cost-log.json; do
             [ -f "$f" ] && git add "$f"
           done
