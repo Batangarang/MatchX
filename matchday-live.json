@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-18T18:40:51.240Z",
+  "generatedAt": "2026-08-18T18:49:59.156Z",
   "fixtureDate": "2026-08-18",
   "kickoff": "19:45",
   "homeTeam": "Market Drayton Town",
   "awayTeam": "Sandbach United",
-  "postsUsed": 3,
-  "imagesAnalyzedThisRun": 1,
+  "postsUsed": 6,
+  "imagesAnalyzedThisRun": 0,
   "totalImagesAnalyzed": 2,
   "match": {
     "score": null,
@@ -13,7 +13,7 @@
     "finalScoreAnnounced": null,
     "halfTimeScoreAnnounced": null,
     "htDiscrepancy": null,
-    "matchStage": "scheduled",
+    "matchStage": "first_half",
     "lineups": {
       "home": {
         "players": [
@@ -70,22 +70,22 @@
       "firstHalf": {
         "home": 0,
         "away": 0,
-        "note": "No match data available"
+        "note": "No shot data available"
       },
       "secondHalf": {
         "home": 0,
         "away": 0,
-        "note": "No match data available"
+        "note": "Match appears to have only just kicked off"
       },
       "extraTime": {
         "home": 0,
         "away": 0,
-        "note": "No match data available"
+        "note": "Not applicable"
       },
       "total": {
         "home": 0,
         "away": 0,
-        "note": "No match data available"
+        "note": "No shot data available"
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
@@ -93,22 +93,22 @@
       "firstHalf": {
         "home": 50,
         "away": 50,
-        "note": "No match data available"
+        "note": "Match just started, no control information available"
       },
       "secondHalf": {
         "home": 50,
         "away": 50,
-        "note": "No match data available"
+        "note": "Match still in early stages"
       },
       "extraTime": {
         "home": 50,
         "away": 50,
-        "note": "No match data available"
+        "note": "Not applicable"
       },
       "total": {
         "home": 50,
         "away": 50,
-        "note": "No match data available"
+        "note": "Insufficient data; match only recently kicked off at 18:46"
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
