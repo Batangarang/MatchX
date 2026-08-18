@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-08-18T19:35:30.289Z",
+  "generatedAt": "2026-08-18T19:40:41.687Z",
   "date": "2026-08-18",
   "isToday": true,
-  "postCount": 50,
+  "postCount": 53,
   "fixtures": [
     {
       "home": "Stafford Town",
@@ -60,7 +60,7 @@
         {
           "minute": "9",
           "team": "home",
-          "scorer": "Luc Ferry"
+          "scorer": null
         },
         {
           "minute": "18",
@@ -84,5 +84,5 @@
       "redCards": []
     }
   ],
-  "ticker": "@TelfordTownFC: HALF TIME: Telford Town 0 - 0 Allscott Heath\n#TELALL\nhttps://www.telfordtownfc.co.uk/teams/277817/match-centre/1-19876192?utm_campaign=score_update&utm_medium=post&utm_source=twitter&utm_content=E1 https://t.co/YDxcfcreT7"
+  "ticker": "@MDTFC: What a half 6 goal thriller all for a fiver \n\nMarket Drayton Town 3-3 Sandbach United\n\nGoals For Drayton \nMcCann\nMcIntosh Brace https://t.co/fn49vt6G5p"
 }
