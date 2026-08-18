@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-17T23:55:30.141Z",
+  "generatedAt": "2026-08-18T00:01:04.493Z",
   "fixtures": [
     {
       "date": "Tuesday 18 August 2026",
@@ -2393,13 +2393,6 @@
       "home": "Wolverhampton Casuals",
       "away": "Cheadle Heath Nomads",
       "kickoff": "15:00",
-      "postponed": false
-    },
-    {
-      "date": "Monday 17 August 2026",
-      "home": "Cheadle Heath Nomads",
-      "away": "Alsager Town",
-      "kickoff": "19:45",
       "postponed": false
     }
   ]
