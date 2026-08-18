@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-08-18T20:20:51.866Z",
+  "generatedAt": "2026-08-18T20:25:43.576Z",
   "fixtureDate": "2026-08-18",
   "kickoff": "19:45",
   "homeTeam": "Market Drayton Town",
   "awayTeam": "Sandbach United",
-  "postsUsed": 45,
+  "postsUsed": 49,
   "imagesAnalyzedThisRun": 0,
   "totalImagesAnalyzed": 9,
   "match": {
-    "score": "3-3",
+    "score": "3-4",
     "scoreDiscrepancy": null,
     "finalScoreAnnounced": null,
     "halfTimeScoreAnnounced": "3-3",
@@ -76,6 +76,11 @@
         "minute": 45,
         "team": "home",
         "scorer": "Cian McIntosh"
+      },
+      {
+        "minute": 82,
+        "team": "away",
+        "scorer": "Kieran O'Connell"
       }
     ],
     "yellowCards": [
@@ -88,6 +93,16 @@
         "minute": 78,
         "team": "away",
         "player": "Nathan Barry"
+      },
+      {
+        "minute": 81,
+        "team": "home",
+        "player": "Beamond"
+      },
+      {
+        "minute": 81,
+        "team": "away",
+        "player": "Hall"
       }
     ],
     "redCards": [
@@ -137,22 +152,22 @@
       "firstHalf": {
         "home": 0,
         "away": 0,
-        "note": "Six goals scored in first half; limited detail on chances, no clear xG inference"
+        "note": "Six goals in first half with multiple chances on both sides; xG estimation not attempted from social media descriptions alone."
       },
       "secondHalf": {
         "home": 0,
         "away": 0,
-        "note": "Several near-misses mentioned (Hatton 47', Wood 58', McIntosh 59' and 64', Knott 75') but no goals; match ended 3-3 at 79+ minutes"
+        "note": "Multiple chances described; Hatton missed sitter at 47', Wood saved at 59', McIntosh missed at 64', Knott missed at 75', Pollard shot saved at 80'; Sandbach scored at 82'."
       },
       "extraTime": {
         "home": 0,
         "away": 0,
-        "note": "No extra time"
+        "note": "Not applicable."
       },
       "total": {
         "home": 0,
         "away": 0,
-        "note": "Very high-scoring match; posts do not provide enough detail for meaningful xG estimates"
+        "note": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
@@ -160,22 +175,22 @@
       "firstHalf": {
         "home": 50,
         "away": 50,
-        "note": "Highly competitive; both teams scored, chances at both ends"
+        "note": "Highly competitive with 6 goals; both sides created chances throughout."
       },
       "secondHalf": {
-        "home": 60,
-        "away": 40,
-        "note": "Drayton created more clear-cut chances (Wood, McIntosh) after Cope's red card (70') gave them numerical advantage; Sandbach under pressure with 10 men"
+        "home": 55,
+        "away": 45,
+        "note": "Drayton had more chances in second half until Cope's red card; Sandbach finished strongly with numerical disadvantage to score at 82'."
       },
       "extraTime": {
         "home": 50,
         "away": 50,
-        "note": "No extra time"
+        "note": "Not applicable."
       },
       "total": {
-        "home": 55,
-        "away": 45,
-        "note": "Drayton dominated second half especially after red card, but Sandbach resilient"
+        "home": 52,
+        "away": 48,
+        "note": "Inferred from tone/content of posts only, not real possession or shot data."
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
