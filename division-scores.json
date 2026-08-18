@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-08-18T19:25:39.159Z",
+  "generatedAt": "2026-08-18T19:30:51.554Z",
   "date": "2026-08-18",
   "isToday": true,
-  "postCount": 43,
+  "postCount": 45,
   "fixtures": [
     {
       "home": "Stafford Town",
@@ -16,7 +16,7 @@
       "home": "Market Drayton Town",
       "away": "Sandbach United",
       "kickoff": "19:45",
-      "score": "2-2",
+      "score": "2-3",
       "goals": [
         {
           "minute": 7,
@@ -31,12 +31,17 @@
         {
           "minute": 21,
           "team": "away",
-          "scorer": "Kieron O'Connell"
+          "scorer": "Kieran O'Connell"
         },
         {
           "minute": 26,
           "team": "home",
           "scorer": "Cian McIntosh"
+        },
+        {
+          "minute": 42,
+          "team": "away",
+          "scorer": "Nathan Barry"
         }
       ],
       "redCards": []
@@ -74,5 +79,5 @@
       "redCards": []
     }
   ],
-  "ticker": "@NewMillsFC: Millers under it a bit here after a bright start, 38 mins gone. 2-1 Millers"
+  "ticker": "@SandbachFC_1st: 🔴⚪️ v 🟡🟡\n\nMarket Drayton v Sandbach United \n\nAnd the Bach make it 3 with another header from a corner as Nathan Barry buries it, great finish and well deserved from the hard working Bach 9\n\n2 3\n\n42 mins gone"
 }
