@@ -7407,14 +7407,14 @@
       "aiCostGBP": 0
     },
     {
-      "script": "x-posts",
-      "timestamp": "2026-08-19T17:30:38.337Z",
-      "getxapiCalls": 1,
-      "claudeCalls": 0,
-      "inputTokens": 0,
-      "outputTokens": 0,
-      "xCostGBP": 0.0008,
-      "aiCostGBP": 0
+      "script": "division-scores",
+      "timestamp": "2026-08-19T17:31:01.848Z",
+      "getxapiCalls": 2,
+      "claudeCalls": 1,
+      "inputTokens": 827,
+      "outputTokens": 90,
+      "xCostGBP": 0.0015,
+      "aiCostGBP": 0.001
     }
   ]
 }

@@ -1,16 +1,18 @@
 {
-  "generatedAt": "2026-08-19T09:55:30.523Z",
+  "generatedAt": "2026-08-19T17:30:55.912Z",
   "date": "2026-08-19",
   "isToday": true,
+  "postCount": 2,
   "fixtures": [
     {
       "home": "Eccleshall",
       "away": "Wednesfield Community",
       "kickoff": "19:45",
       "score": null,
+      "matchStage": "scheduled",
       "goals": [],
       "redCards": []
     }
   ],
-  "ticker": null
+  "ticker": "@WednesfieldCFC: 12:00pm ✍🏼 https://t.co/vISvaunwrj"
 }
