@@ -1,18 +1,29 @@
 {
-  "generatedAt": "2026-08-19T18:45:38.535Z",
+  "generatedAt": "2026-08-19T19:25:28.197Z",
   "date": "2026-08-19",
   "isToday": true,
-  "postCount": 5,
+  "postCount": 7,
   "fixtures": [
     {
       "home": "Eccleshall",
       "away": "Wednesfield Community",
       "kickoff": "19:45",
-      "score": null,
-      "matchStage": "first_half",
-      "goals": [],
+      "score": "2-0",
+      "matchStage": "second_half",
+      "goals": [
+        {
+          "minute": null,
+          "team": "home",
+          "scorer": null
+        },
+        {
+          "minute": null,
+          "team": "home",
+          "scorer": null
+        }
+      ],
       "redCards": []
     }
   ],
-  "ticker": "@WednesfieldCFC: https://t.co/9bCwAgnGYF"
+  "ticker": "@EccleshallFC: Wednesfield double. \n\n2-0\n\n💙🦅\n\n#EccleshallFC"
 }
