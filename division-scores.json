@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-08-19T18:40:37.175Z",
+  "generatedAt": "2026-08-19T18:45:38.535Z",
   "date": "2026-08-19",
   "isToday": true,
-  "postCount": 3,
+  "postCount": 5,
   "fixtures": [
     {
       "home": "Eccleshall",
       "away": "Wednesfield Community",
       "kickoff": "19:45",
       "score": null,
-      "matchStage": "scheduled",
+      "matchStage": "first_half",
       "goals": [],
       "redCards": []
     }
   ],
-  "ticker": "@EccleshallFC: How we lineup in ST21. \n\n💙🦅\n\n#EccleshallFC https://t.co/Wlibrkfytc"
+  "ticker": "@WednesfieldCFC: https://t.co/9bCwAgnGYF"
 }
