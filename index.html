@@ -975,16 +975,19 @@
               `${g.minute ? g.minute + "' " : ''}${g.scorer && g.scorer !== 'null' ? g.scorer : 'Scorer unconfirmed'} (${g.team === 'home' ? f.home : f.away})`
             ).join(', ');
             const redCardHtml = (f.redCards || []).map(r => `🟥${r.player ? ' ' + r.player : ''} (${r.team === 'home' ? f.home : f.away})`).join(' ');
-            return `
+
+                return `
               <div style="padding:6px 0; border-bottom:1px solid var(--line); font-size:14px;">
                 ${f.score
-                  <span style="font-weight:700;">${f.score || f.kickoff}${f.matchStage === 'half_time' ? ' <span style="color:var(--amber); font-size:11px;">HT</span>' : f.matchStage === 'full_time' ? ' <span style="color:var(--muted); font-size:11px;">FT</span>' : ''}</span>
+                  ? `${f.home} <span style="font-weight:700;">${f.score.replace('-', ' - ')}</span> ${f.away}${f.matchStage === 'half_time' ? ' <span style="color:var(--amber); font-size:11px;">HT</span>' : f.matchStage === 'full_time' ? ' <span style="color:var(--muted); font-size:11px;">FT</span>' : ''}`
+                  : `${f.home} v ${f.away} <span style="color:var(--muted);">— ${f.kickoff}</span>`
                 }
               </div>
-                ${goalsHtml ? `<div style="font-size:12px; color:var(--muted); margin-top:2px;">⚽ ${goalsHtml}</div>` : ''}
-                ${redCardHtml ? `<div style="font-size:12px; color:var(--muted); margin-top:2px;">${redCardHtml}</div>` : ''}
-              </div>
-            `;
+              ${goalsHtml ? `<div style="font-size:12px; color:var(--muted); margin-top:2px;">⚽ ${goalsHtml}</div>` : ''}
+              ${redCardHtml ? `<div style="font-size:12px; color:var(--muted); margin-top:2px;">${redCardHtml}</div>` : ''}
+            </div>
+          `;
+            
           }).join('');
         }
 
