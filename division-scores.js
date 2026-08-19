@@ -240,8 +240,14 @@ Only include a score if explicitly stated in the posts. Leave as null if not men
 
   // If no explicit scoreline was stated but goals were extracted, derive a
   // score from the goals count rather than showing nothing at all.
-  const fixturesWithDerivedScores = (parsed.fixtures || []).map(f => {
-  if (f.score) return { ...f, matchStage: f.matchStage || 'scheduled' };
+    const fixturesWithDerivedScores = (parsed.fixtures || []).map(f => {
+    if (f.score) return { ...f, matchStage: f.matchStage || 'scheduled' };
+    const goals = f.goals || [];
+    if (goals.length === 0) return { ...f, matchStage: f.matchStage || 'scheduled' };
+    const home = goals.filter(g => g.team === 'home').length;
+    const away = goals.filter(g => g.team === 'away').length;
+    return { ...f, score: `${home}-${away}`, matchStage: f.matchStage || 'scheduled' };
+ });
 
   const output = {
     generatedAt: REAL_NOW.toISOString(),
