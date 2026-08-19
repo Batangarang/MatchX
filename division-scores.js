@@ -203,6 +203,8 @@ IMPORTANT: A club's score can change multiple times as goals are scored througho
 
 For each fixture above, determine ONLY if a score has been EXPLICITLY stated in a post — do not guess or infer from goal mentions alone, but always prefer the LATEST such mention. Also extract individual goals with minute and scorer where explicitly mentioned, matching each goal to the correct fixture. Also note any red card sent-offs explicitly mentioned, with team and player if given.
 
+IMPORTANT: Clubs often use colour-coded circle emoji instead of names in their live scoreline updates (e.g. "🔴🔵0-0⚫️⚪️"). These emoji colours can look similar or identical across different clubs and different fixtures happening on the same day — do NOT rely on emoji colour alone to decide which fixture a scoreline belongs to. Always match a post to the correct fixture using the ACCOUNT HANDLE that posted it (shown in brackets before each post) cross-referenced against the fixture list's home/away clubs — never assume from emoji colour alone. If genuinely unsure which fixture a scoreline update belongs to, prefer matching by handle over emoji.
+
 Respond with ONLY a JSON object, no other text, no markdown fences:
 {
   "fixtures": [
