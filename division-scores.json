@@ -1,29 +1,88 @@
 {
-  "generatedAt": "2026-08-19T19:25:28.197Z",
-  "date": "2026-08-19",
-  "isToday": true,
-  "postCount": 7,
+  "generatedAt": "2026-08-19T23:00:59.029Z",
+  "date": "2026-08-22",
+  "isToday": false,
   "fixtures": [
     {
-      "home": "Eccleshall",
-      "away": "Wednesfield Community",
-      "kickoff": "19:45",
-      "score": "2-0",
-      "matchStage": "second_half",
-      "goals": [
-        {
-          "minute": null,
-          "team": "home",
-          "scorer": null
-        },
-        {
-          "minute": null,
-          "team": "home",
-          "scorer": null
-        }
-      ],
+      "home": "Allscott Heath",
+      "away": "Widnes Town",
+      "kickoff": "15:00",
+      "score": null,
+      "goals": [],
+      "redCards": []
+    },
+    {
+      "home": "Alsager Town",
+      "away": "AFC Bridgnorth",
+      "kickoff": "15:00",
+      "score": null,
+      "goals": [],
+      "redCards": []
+    },
+    {
+      "home": "Bilston Town",
+      "away": "Barnton",
+      "kickoff": "15:00",
+      "score": null,
+      "goals": [],
+      "redCards": []
+    },
+    {
+      "home": "Dawley Town",
+      "away": "Market Drayton Town",
+      "kickoff": "15:00",
+      "score": null,
+      "goals": [],
+      "redCards": []
+    },
+    {
+      "home": "Foley Meir",
+      "away": "Eccleshall",
+      "kickoff": "15:00",
+      "score": null,
+      "goals": [],
+      "redCards": []
+    },
+    {
+      "home": "New Mills",
+      "away": "Shawbury United",
+      "kickoff": "15:00",
+      "score": null,
+      "goals": [],
+      "redCards": []
+    },
+    {
+      "home": "Sandbach United",
+      "away": "Wolverhampton Casuals",
+      "kickoff": "15:00",
+      "score": null,
+      "goals": [],
+      "redCards": []
+    },
+    {
+      "home": "Stafford Town",
+      "away": "Crewe",
+      "kickoff": "15:00",
+      "score": null,
+      "goals": [],
+      "redCards": []
+    },
+    {
+      "home": "Telford Town",
+      "away": "Brereton Social",
+      "kickoff": "15:00",
+      "score": null,
+      "goals": [],
+      "redCards": []
+    },
+    {
+      "home": "Wednesfield Community",
+      "away": "Cheadle Heath Nomads",
+      "kickoff": "15:00",
+      "score": null,
+      "goals": [],
       "redCards": []
     }
   ],
-  "ticker": "@EccleshallFC: Wednesfield double. \n\n2-0\n\n💙🦅\n\n#EccleshallFC"
+  "ticker": null
 }
