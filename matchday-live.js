@@ -483,7 +483,9 @@ Using information present in these posts AND any attached images, build a struct
   }
 }
 
-For lineups: if shirt numbers are visible, format each player as "N. Player Name". For substitutions: "playerOff" is the player being TAKEN OFF, "playerOn" is the player COMING ON. Be conservative with roughXG and matchControl when there is little material. Only populate wentToExtraTime/wentToPenalties/extraTime/penalties if there is clear evidence the match went beyond 90 minutes.`;
+For lineups: if shirt numbers are visible, format each player as "N. Player Name". For substitutions: "playerOff" is the player being TAKEN OFF, "playerOn" is the player COMING ON. Be conservative with roughXG and matchControl when there is little material. Only populate wentToExtraTime/wentToPenalties/extraTime/penalties if there is clear evidence the match went beyond 90 minutes.
+
+IMPORTANT: If actual goals have been scored, roughXG must reflect that clearly — a team that has scored 2+ goals should show a roughXG total meaningfully above those goals (e.g. 2+ goals means roughXG of at least 1.5-2.5+, never 0.0 or near-zero). Do NOT apply the "be conservative" guidance to a team that has genuinely scored — conservatism is for judging chances/quality when little happened, not for denying real goals already in the data. The number of real goals scored is always a hard floor under the roughXG estimate.`;
 
   const imageBlocks = [];
   for (const { post, imgUrl } of newImagePairs) {
