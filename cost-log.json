@@ -8207,14 +8207,14 @@
       "aiCostGBP": 0.0062
     },
     {
-      "script": "matchday-live",
-      "timestamp": "2026-08-22T14:05:42.672Z",
-      "getxapiCalls": 2,
+      "script": "division-scores",
+      "timestamp": "2026-08-22T14:06:00.847Z",
+      "getxapiCalls": 20,
       "claudeCalls": 1,
-      "inputTokens": 2761,
-      "outputTokens": 731,
-      "xCostGBP": 0.0015,
-      "aiCostGBP": 0.0048
+      "inputTokens": 5294,
+      "outputTokens": 785,
+      "xCostGBP": 0.015,
+      "aiCostGBP": 0.0069
     }
   ]
 }

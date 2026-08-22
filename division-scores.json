@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-08-22T14:00:57.054Z",
+  "generatedAt": "2026-08-22T14:05:32.273Z",
   "date": "2026-08-22",
   "isToday": true,
-  "postCount": 38,
+  "postCount": 46,
   "fixtures": [
     {
       "home": "Allscott Heath",
@@ -62,9 +62,15 @@
       "home": "Sandbach United",
       "away": "Wolverhampton Casuals",
       "kickoff": "15:00",
-      "score": null,
-      "matchStage": "scheduled",
-      "goals": [],
+      "score": "1-0",
+      "matchStage": "first_half",
+      "goals": [
+        {
+          "minute": 4,
+          "team": "home",
+          "scorer": "Robbie Hatton"
+        }
+      ],
       "redCards": []
     },
     {
@@ -89,11 +95,11 @@
       "home": "Wednesfield Community",
       "away": "Cheadle Heath Nomads",
       "kickoff": "15:00",
-      "score": null,
-      "matchStage": "scheduled",
+      "score": "0-0",
+      "matchStage": "first_half",
       "goals": [],
       "redCards": []
     }
   ],
-  "ticker": "@NewMillsFC: Kick of here at Church Lane #UptheMillers https://t.co/AGiFAkhdzQ"
+  "ticker": "@SandbachFC_1st: 🔵⚪️ v 🟢🟢\n\nSandbach United v Wolverhampton Casuals\n\nAfter 4 mins Robbie the Hitman Hatton gets a header at the far post from a corner which. Is blocked but he is on hand to smash the rebound home, get in The Bach\n\n4 mins\n\n1   0"
 }
