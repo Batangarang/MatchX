@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-18T22:00:54.753Z",
+  "generatedAt": "2026-08-22T17:00:54.727Z",
   "history": [
     {
       "gamesPlayed": 1,
@@ -60,6 +60,18 @@
       "cumGoalsFor": 10,
       "cumGoalsAgainst": 10,
       "cumGoalDifference": 0
+    },
+    {
+      "gamesPlayed": 6,
+      "date": "Sat 22/08/26",
+      "opponent": "Wolverhampton Casuals",
+      "position": 6,
+      "points": 12,
+      "gameGoalsFor": 4,
+      "gameGoalsAgainst": 1,
+      "cumGoalsFor": 14,
+      "cumGoalsAgainst": 11,
+      "cumGoalDifference": 3
     }
   ]
 }
