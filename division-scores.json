@@ -1,194 +1,88 @@
 {
-  "generatedAt": "2026-08-22T14:40:44.788Z",
-  "date": "2026-08-22",
-  "isToday": true,
-  "postCount": 87,
+  "generatedAt": "2026-08-22T23:00:56.697Z",
+  "date": "2026-08-29",
+  "isToday": false,
   "fixtures": [
     {
-      "home": "Allscott Heath",
-      "away": "Widnes Town",
+      "home": "AFC Bridgnorth",
+      "away": "New Mills",
       "kickoff": "15:00",
-      "score": "3-0",
-      "matchStage": "first_half",
-      "goals": [
-        {
-          "minute": 5,
-          "team": "home",
-          "scorer": "Ben Summers"
-        },
-        {
-          "minute": 20,
-          "team": "home",
-          "scorer": "Ben Summers"
-        },
-        {
-          "minute": 25,
-          "team": "home",
-          "scorer": "Harry Morris"
-        }
-      ],
+      "score": null,
+      "goals": [],
       "redCards": []
     },
     {
-      "home": "Alsager Town",
-      "away": "AFC Bridgnorth",
+      "home": "Allscott Heath",
+      "away": "Market Drayton Town",
       "kickoff": "15:00",
-      "score": "1-1",
-      "matchStage": "first_half",
-      "goals": [
-        {
-          "minute": 25,
-          "team": "away",
-          "scorer": "Harley Renshaw"
-        },
-        {
-          "minute": 30,
-          "team": "away",
-          "scorer": null
-        }
-      ],
+      "score": null,
+      "goals": [],
+      "redCards": []
+    },
+    {
+      "home": "Barnton",
+      "away": "Wednesfield Community",
+      "kickoff": "15:00",
+      "score": null,
+      "goals": [],
       "redCards": []
     },
     {
       "home": "Bilston Town",
-      "away": "Barnton",
+      "away": "Stafford Town",
       "kickoff": "15:00",
-      "score": "1-1",
-      "matchStage": "first_half",
-      "goals": [
-        {
-          "minute": 15,
-          "team": "away",
-          "scorer": "Jarrald"
-        },
-        {
-          "minute": 20,
-          "team": "home",
-          "scorer": null
-        }
-      ],
+      "score": null,
+      "goals": [],
       "redCards": []
     },
     {
-      "home": "Dawley Town",
-      "away": "Market Drayton Town",
+      "home": "Cheadle Heath Nomads",
+      "away": "Eccleshall",
       "kickoff": "15:00",
-      "score": "1-0",
-      "matchStage": "first_half",
-      "goals": [
-        {
-          "minute": 6,
-          "team": "home",
-          "scorer": null
-        }
-      ],
-      "redCards": [
-        {
-          "team": "home",
-          "player": null
-        }
-      ]
+      "score": null,
+      "goals": [],
+      "redCards": []
+    },
+    {
+      "home": "Crewe",
+      "away": "Telford Town",
+      "kickoff": "15:00",
+      "score": null,
+      "goals": [],
+      "redCards": []
     },
     {
       "home": "Foley Meir",
-      "away": "Eccleshall",
-      "kickoff": "15:00",
-      "score": "0-1",
-      "matchStage": "first_half",
-      "goals": [
-        {
-          "minute": 37,
-          "team": "away",
-          "scorer": "Archie"
-        }
-      ],
-      "redCards": [
-        {
-          "team": "home",
-          "player": null
-        }
-      ]
-    },
-    {
-      "home": "New Mills",
-      "away": "Shawbury United",
-      "kickoff": "15:00",
-      "score": "1-1",
-      "matchStage": "first_half",
-      "goals": [
-        {
-          "minute": 20,
-          "team": "home",
-          "scorer": "Luke Evans"
-        },
-        {
-          "minute": 32,
-          "team": "away",
-          "scorer": null
-        }
-      ],
-      "redCards": [
-        {
-          "team": "away",
-          "player": null
-        }
-      ]
-    },
-    {
-      "home": "Sandbach United",
-      "away": "Wolverhampton Casuals",
-      "kickoff": "15:00",
-      "score": "1-0",
-      "matchStage": "first_half",
-      "goals": [
-        {
-          "minute": 4,
-          "team": "home",
-          "scorer": "Robbie Hatton"
-        }
-      ],
-      "redCards": [
-        {
-          "team": "home",
-          "player": "Robbie Hatton"
-        },
-        {
-          "team": "away",
-          "player": "Lewis Gill"
-        },
-        {
-          "team": "home",
-          "player": "Kieran O'Connell"
-        }
-      ]
-    },
-    {
-      "home": "Stafford Town",
-      "away": "Crewe",
-      "kickoff": "15:00",
-      "score": null,
-      "matchStage": "scheduled",
-      "goals": [],
-      "redCards": []
-    },
-    {
-      "home": "Telford Town",
       "away": "Brereton Social",
       "kickoff": "15:00",
       "score": null,
-      "matchStage": "scheduled",
       "goals": [],
       "redCards": []
     },
     {
-      "home": "Wednesfield Community",
-      "away": "Cheadle Heath Nomads",
+      "home": "Sandbach United",
+      "away": "Widnes Town",
       "kickoff": "15:00",
-      "score": "0-0",
-      "matchStage": "first_half",
+      "score": null,
+      "goals": [],
+      "redCards": []
+    },
+    {
+      "home": "Shawbury United",
+      "away": "Dawley Town",
+      "kickoff": "15:00",
+      "score": null,
+      "goals": [],
+      "redCards": []
+    },
+    {
+      "home": "Wolverhampton Casuals",
+      "away": "Alsager Town",
+      "kickoff": "15:00",
+      "score": null,
       "goals": [],
       "redCards": []
     }
   ],
-  "ticker": "@WolvesCassies: 30': Robbie Hatton is yellow carded for Sandbach United\n#SANWOL #Pitchero\nhttps://www.wolverhamptoncasualsfc.co.uk/teams/294420/match-centre/1-19876201?utm_campaign=match_event&utm_medium=post&utm_source=twitter&utm_content=yellow_card https://t.co/BirAgnUu28"
+  "ticker": null
 }
