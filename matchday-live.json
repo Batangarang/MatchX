@@ -1,19 +1,19 @@
 {
-  "generatedAt": "2026-08-22T14:45:42.566Z",
+  "generatedAt": "2026-08-22T14:50:45.774Z",
   "fixtureDate": "2026-08-22",
   "kickoff": "15:00",
   "homeTeam": "Sandbach United",
   "awayTeam": "Wolverhampton Casuals",
-  "postsUsed": 15,
-  "imagesAnalyzedThisRun": 0,
-  "totalImagesAnalyzed": 7,
+  "postsUsed": 17,
+  "imagesAnalyzedThisRun": 1,
+  "totalImagesAnalyzed": 8,
   "match": {
     "score": "1-0",
     "scoreDiscrepancy": null,
     "finalScoreAnnounced": null,
-    "halfTimeScoreAnnounced": null,
+    "halfTimeScoreAnnounced": "1-0",
     "htDiscrepancy": null,
-    "matchStage": "first_half",
+    "matchStage": "half_time",
     "lineups": {
       "home": {
         "players": [
@@ -105,47 +105,47 @@
     },
     "roughXG": {
       "firstHalf": {
-        "home": 1.2,
+        "home": 1.5,
         "away": 0.3,
-        "note": "Sandbach scored early from a corner rebound; Wolverhampton had a dangerous free kick but did not convert chances"
+        "note": "Sandbach scored early from a corner rebound; Josh Fowles had a volley cleared. Wolverhampton had a dangerous free kick but didn't get a clear chance."
       },
       "secondHalf": {
         "home": 0,
         "away": 0,
-        "note": "Posts end at 45 minutes; second half data not available"
+        "note": "No second-half data available in posts."
       },
       "extraTime": {
         "home": 0,
         "away": 0,
-        "note": "No extra time played"
+        "note": "Match did not go to extra time."
       },
       "total": {
-        "home": 1.2,
+        "home": 1.5,
         "away": 0.3,
-        "note": "First half only; Sandbach ahead 1-0"
+        "note": "Sandbach dominated early and scored; Wolverhampton shaded possession in the latter part of the half but created little."
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
     "matchControl": {
       "firstHalf": {
-        "home": 45,
-        "away": 55,
-        "note": "Wolverhampton shading the balance of play in latter stages of first half; Sandbach battling well but Cassies winning possession"
+        "home": 55,
+        "away": 45,
+        "note": "Sandbach scored early and were competitive; Wolverhampton shaded the balance of play in the latter stages but were largely frustrated."
       },
       "secondHalf": {
         "home": 50,
         "away": 50,
-        "note": "Posts end at 45 minutes; second half data not available"
+        "note": "No second-half data available in posts."
       },
       "extraTime": {
         "home": 50,
         "away": 50,
-        "note": "No extra time played"
+        "note": "Match did not go to extra time."
       },
       "total": {
-        "home": 45,
-        "away": 55,
-        "note": "First half only; slight Wolverhampton advantage in play despite Sandbach's early goal"
+        "home": 55,
+        "away": 45,
+        "note": "Sandbach led and battled well; Wolverhampton tried to gain control in the latter first half but remained goalless at the break."
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
