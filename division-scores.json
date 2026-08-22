@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-08-22T14:35:34.771Z",
+  "generatedAt": "2026-08-22T14:40:44.788Z",
   "date": "2026-08-22",
   "isToday": true,
-  "postCount": 83,
+  "postCount": 87,
   "fixtures": [
     {
       "home": "Allscott Heath",
       "away": "Widnes Town",
       "kickoff": "15:00",
-      "score": "2-0",
+      "score": "3-0",
       "matchStage": "first_half",
       "goals": [
         {
@@ -42,7 +42,7 @@
           "scorer": "Harley Renshaw"
         },
         {
-          "minute": 29,
+          "minute": 30,
           "team": "away",
           "scorer": null
         }
@@ -93,9 +93,15 @@
       "home": "Foley Meir",
       "away": "Eccleshall",
       "kickoff": "15:00",
-      "score": "0-0",
+      "score": "0-1",
       "matchStage": "first_half",
-      "goals": [],
+      "goals": [
+        {
+          "minute": 37,
+          "team": "away",
+          "scorer": "Archie"
+        }
+      ],
       "redCards": [
         {
           "team": "home",
@@ -144,11 +150,15 @@
       "redCards": [
         {
           "team": "home",
-          "player": "Kieran O'Connell"
+          "player": "Robbie Hatton"
         },
         {
           "team": "away",
           "player": "Lewis Gill"
+        },
+        {
+          "team": "home",
+          "player": "Kieran O'Connell"
         }
       ]
     },
@@ -180,5 +190,5 @@
       "redCards": []
     }
   ],
-  "ticker": "@shawburyutd: 32’ GOAAALL!! Harvey’s corner is sliced in by the @NewMillsFC #4! \n\n🟡⚫️1-1⚪️⚫️"
+  "ticker": "@WolvesCassies: 30': Robbie Hatton is yellow carded for Sandbach United\n#SANWOL #Pitchero\nhttps://www.wolverhamptoncasualsfc.co.uk/teams/294420/match-centre/1-19876201?utm_campaign=match_event&utm_medium=post&utm_source=twitter&utm_content=yellow_card https://t.co/BirAgnUu28"
 }
