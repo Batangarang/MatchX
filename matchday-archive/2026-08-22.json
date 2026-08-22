@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-08-22T14:30:59.453Z",
+  "generatedAt": "2026-08-22T14:35:36.289Z",
   "fixtureDate": "2026-08-22",
   "kickoff": "15:00",
   "homeTeam": "Sandbach United",
   "awayTeam": "Wolverhampton Casuals",
-  "postsUsed": 11,
+  "postsUsed": 12,
   "imagesAnalyzedThisRun": 0,
   "totalImagesAnalyzed": 6,
   "match": {
@@ -73,6 +73,11 @@
         "minute": 14,
         "team": "away",
         "player": "Lewis Gill"
+      },
+      {
+        "minute": 32,
+        "team": "home",
+        "player": "Kieran O'Connell"
       }
     ],
     "redCards": [],
@@ -96,23 +101,23 @@
     "roughXG": {
       "firstHalf": {
         "home": 1.2,
-        "away": 0.1,
-        "note": "Sandbach scored from a corner/rebound; Wolverhampton had a dangerous free kick across the box but did not connect."
+        "away": 0.3,
+        "note": "Sandbach scored early from a corner rebound; Wolves created a dangerous free kick but failed to convert."
       },
       "secondHalf": {
         "home": 0,
         "away": 0,
-        "note": "No second-half action recorded in posts."
+        "note": "No second half data available in posts."
       },
       "extraTime": {
         "home": 0,
         "away": 0,
-        "note": "Match did not go to extra time."
+        "note": "Not applicable."
       },
       "total": {
         "home": 1.2,
-        "away": 0.1,
-        "note": "Sandbach led 1-0 with the recorded action showing one goal and one dangerous chance for Wolverhampton that was not converted."
+        "away": 0.3,
+        "note": "Limited data; based on first half only."
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
@@ -120,22 +125,22 @@
       "firstHalf": {
         "home": 65,
         "away": 35,
-        "note": "Sandbach scored early, defended against a dangerous free kick, and appeared in control through 27 minutes."
+        "note": "Sandbach scored early and created dangerous moments; Wolves mounted some pressure but limited clear chances."
       },
       "secondHalf": {
         "home": 50,
         "away": 50,
-        "note": "No second-half action recorded in posts."
+        "note": "No second half data available in posts."
       },
       "extraTime": {
         "home": 50,
         "away": 50,
-        "note": "Match did not go to extra time."
+        "note": "Not applicable."
       },
       "total": {
-        "home": 65,
-        "away": 35,
-        "note": "Sandbach appeared dominant in the recorded first-half period, scoring early and limiting clear Wolverhampton chances."
+        "home": 60,
+        "away": 40,
+        "note": "Based on first half dominance by Sandbach."
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
