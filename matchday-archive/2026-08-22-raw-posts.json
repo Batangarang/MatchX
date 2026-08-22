@@ -292,5 +292,15 @@
     "side": "home",
     "handle": "SandbachFC_1st",
     "isDuplicateCommentary": false
+  },
+  {
+    "text": "FULL TIME: Sandbach United 4 - 1 Wolverhampton Casuals\n#SANWOL #Pitchero\nhttps://www.wolverhamptoncasualsfc.co.uk/teams/294420/match-centre/1-19876201?utm_campaign=score_update&utm_medium=post&utm_source=twitter&utm_content=FT https://t.co/iSetTMLSWO",
+    "createdAt": "2026-08-22T15:51:09.000Z",
+    "images": [
+      "https://pbs.twimg.com/media/HQVnihoXYAASjTh.jpg"
+    ],
+    "side": "away",
+    "handle": "WolvesCassies",
+    "isDuplicateCommentary": true
   }
 ]
