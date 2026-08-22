@@ -1,9 +1,9 @@
 {
-  "scrapedAt": "2026-08-22T15:00:52.068Z",
+  "scrapedAt": "2026-08-22T16:00:56.996Z",
   "nextFixture": {
-    "date": "Sat 22/08/26",
-    "opposition": "Wolverhampton Casuals",
-    "opponentUrl": "clubpage.php?id=73",
+    "date": "Sat 29/08/26",
+    "opposition": "Widnes Town",
+    "opponentUrl": "clubpage.php?id=868",
     "homeAway": "H",
     "kickoff": "15:00",
     "score": null,
@@ -11,16 +11,6 @@
     "competitionNote": null
   },
   "nextFixtures": [
-    {
-      "date": "Sat 22/08/26",
-      "opposition": "Wolverhampton Casuals",
-      "opponentUrl": "clubpage.php?id=73",
-      "homeAway": "H",
-      "kickoff": "15:00",
-      "score": null,
-      "scorers": null,
-      "competitionNote": null
-    },
     {
       "date": "Sat 29/08/26",
       "opposition": "Widnes Town",
@@ -60,19 +50,39 @@
       "score": null,
       "scorers": null,
       "competitionNote": null
+    },
+    {
+      "date": "Sat 26/09/26",
+      "opposition": "Alsager Town",
+      "opponentUrl": "clubpage.php?id=3",
+      "homeAway": "H",
+      "kickoff": "15:00",
+      "score": null,
+      "scorers": null,
+      "competitionNote": "The Macron Cup 1"
     }
   ],
   "lastResult": {
-    "date": "Tue 18/08/26",
-    "opposition": "Market Drayton Town",
-    "opponentUrl": "clubpage.php?id=224",
-    "homeAway": "A",
-    "kickoff": "19:45",
-    "score": "W 4-3",
-    "scorers": "Robbie Hatton (10) Kieran OConnell (21) Nathan Barry (42) Kieran OConnell (81)",
+    "date": "Sat 22/08/26",
+    "opposition": "Wolverhampton Casuals",
+    "opponentUrl": "clubpage.php?id=73",
+    "homeAway": "H",
+    "kickoff": "15:00",
+    "score": "W 4-1",
+    "scorers": "Robbie Hatton (4) Max Williams (61) Matthew Birchall (82) Kieran Nolan (90+2)",
     "competitionNote": null
   },
   "lastResults": [
+    {
+      "date": "Sat 22/08/26",
+      "opposition": "Wolverhampton Casuals",
+      "opponentUrl": "clubpage.php?id=73",
+      "homeAway": "H",
+      "kickoff": "15:00",
+      "score": "W 4-1",
+      "scorers": "Robbie Hatton (4) Max Williams (61) Matthew Birchall (82) Kieran Nolan (90+2)",
+      "competitionNote": null
+    },
     {
       "date": "Tue 18/08/26",
       "opposition": "Market Drayton Town",
@@ -92,16 +102,6 @@
       "score": "L 0-1",
       "scorers": null,
       "competitionNote": "The Isuzu FA Vase 1Q"
-    },
-    {
-      "date": "Tue 11/08/26",
-      "opposition": "New Mills",
-      "opponentUrl": "clubpage.php?id=91",
-      "homeAway": "H",
-      "kickoff": "19:45",
-      "score": "L 1-3",
-      "scorers": "Own Goal (51)",
-      "competitionNote": null
     }
   ],
   "allFixtures": [
@@ -171,8 +171,8 @@
       "opponentUrl": "clubpage.php?id=73",
       "homeAway": "H",
       "kickoff": "15:00",
-      "score": null,
-      "scorers": null,
+      "score": "W 4-1",
+      "scorers": "Robbie Hatton (4) Max Williams (61) Matthew Birchall (82) Kieran Nolan (90+2)",
       "competitionNote": null
     },
     {
