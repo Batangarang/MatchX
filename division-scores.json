@@ -1,16 +1,22 @@
 {
-  "generatedAt": "2026-08-22T14:05:32.273Z",
+  "generatedAt": "2026-08-22T14:10:40.406Z",
   "date": "2026-08-22",
   "isToday": true,
-  "postCount": 46,
+  "postCount": 50,
   "fixtures": [
     {
       "home": "Allscott Heath",
       "away": "Widnes Town",
       "kickoff": "15:00",
-      "score": null,
-      "matchStage": "scheduled",
-      "goals": [],
+      "score": "1-0",
+      "matchStage": "first_half",
+      "goals": [
+        {
+          "minute": 5,
+          "team": "home",
+          "scorer": "Ben Summers"
+        }
+      ],
       "redCards": []
     },
     {
@@ -35,9 +41,15 @@
       "home": "Dawley Town",
       "away": "Market Drayton Town",
       "kickoff": "15:00",
-      "score": "0-0",
+      "score": "1-0",
       "matchStage": "first_half",
-      "goals": [],
+      "goals": [
+        {
+          "minute": 6,
+          "team": "home",
+          "scorer": null
+        }
+      ],
       "redCards": []
     },
     {
@@ -101,5 +113,5 @@
       "redCards": []
     }
   ],
-  "ticker": "@SandbachFC_1st: 🔵⚪️ v 🟢🟢\n\nSandbach United v Wolverhampton Casuals\n\nAfter 4 mins Robbie the Hitman Hatton gets a header at the far post from a corner which. Is blocked but he is on hand to smash the rebound home, get in The Bach\n\n4 mins\n\n1   0"
+  "ticker": "@MDTFC: 9’ CHANCE \n\nMCCANN PUTS A CROSS IN MCINTOSH PUTS OVER THE BAR \n\n🟣🔵1-0⚫️⚪️"
 }
