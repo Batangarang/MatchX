@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-08-22T13:55:32.166Z",
+  "generatedAt": "2026-08-22T14:00:57.054Z",
   "date": "2026-08-22",
   "isToday": true,
-  "postCount": 31,
+  "postCount": 38,
   "fixtures": [
     {
       "home": "Allscott Heath",
@@ -17,8 +17,8 @@
       "home": "Alsager Town",
       "away": "AFC Bridgnorth",
       "kickoff": "15:00",
-      "score": null,
-      "matchStage": "scheduled",
+      "score": "0-0",
+      "matchStage": "first_half",
       "goals": [],
       "redCards": []
     },
@@ -35,8 +35,8 @@
       "home": "Dawley Town",
       "away": "Market Drayton Town",
       "kickoff": "15:00",
-      "score": null,
-      "matchStage": "scheduled",
+      "score": "0-0",
+      "matchStage": "first_half",
       "goals": [],
       "redCards": []
     },
@@ -45,7 +45,7 @@
       "away": "Eccleshall",
       "kickoff": "15:00",
       "score": null,
-      "matchStage": "scheduled",
+      "matchStage": "first_half",
       "goals": [],
       "redCards": []
     },
@@ -54,7 +54,7 @@
       "away": "Shawbury United",
       "kickoff": "15:00",
       "score": null,
-      "matchStage": "scheduled",
+      "matchStage": "first_half",
       "goals": [],
       "redCards": []
     },
@@ -72,7 +72,7 @@
       "away": "Crewe",
       "kickoff": "15:00",
       "score": null,
-      "matchStage": "scheduled",
+      "matchStage": "first_half",
       "goals": [],
       "redCards": []
     },
@@ -95,5 +95,5 @@
       "redCards": []
     }
   ],
-  "ticker": "@EccleshallFC: Up against Foley Meir. \n\nLive updates on Twitter.\n\n💙🦅\n\n#EccleshallFC https://t.co/i5ObB3BRfl"
+  "ticker": "@NewMillsFC: Kick of here at Church Lane #UptheMillers https://t.co/AGiFAkhdzQ"
 }
