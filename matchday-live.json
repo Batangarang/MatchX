@@ -1,19 +1,19 @@
 {
-  "generatedAt": "2026-08-22T15:40:49.166Z",
+  "generatedAt": "2026-08-22T15:45:46.435Z",
   "fixtureDate": "2026-08-22",
   "kickoff": "15:00",
   "homeTeam": "Sandbach United",
   "awayTeam": "Wolverhampton Casuals",
-  "postsUsed": 29,
+  "postsUsed": 30,
   "imagesAnalyzedThisRun": 1,
-  "totalImagesAnalyzed": 13,
+  "totalImagesAnalyzed": 14,
   "match": {
     "score": "3-1",
     "scoreDiscrepancy": null,
     "finalScoreAnnounced": null,
     "halfTimeScoreAnnounced": "1-0",
     "htDiscrepancy": null,
-    "matchStage": "second_half",
+    "matchStage": "full_time",
     "lineups": {
       "home": {
         "players": [
@@ -146,46 +146,46 @@
     "roughXG": {
       "firstHalf": {
         "home": 1.2,
-        "away": 0.4,
-        "note": "Sandbach scored early from a corner rebound; nearly added a second late in the half. Wolverhampton had limited clear chances."
+        "away": 0.3,
+        "note": "Sandbach scored early from a corner rebound; Wolverhampton had limited clear-cut chances despite shading play late in the half"
       },
       "secondHalf": {
-        "home": 2,
-        "away": 0.6,
-        "note": "Sandbach scored twice more; Wolverhampton pulled one back from a counter-attack but created few other opportunities."
+        "home": 2.1,
+        "away": 0.8,
+        "note": "Sandbach added two more goals from set pieces and a break; Wolverhampton scored once on the counter but created little else"
       },
       "extraTime": {
         "home": 0,
         "away": 0,
-        "note": "No extra time played."
+        "note": "No extra time"
       },
       "total": {
-        "home": 3.2,
-        "away": 1,
-        "note": "Sandbach dominated and converted chances efficiently; Wolverhampton had a penalty-area goal but limited overall creation."
+        "home": 3.3,
+        "away": 1.1,
+        "note": "Sandbach dominated and converted multiple chances; Wolverhampton made one good counter-attacking opportunity but were largely subdued"
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
     "matchControl": {
       "firstHalf": {
-        "home": 55,
-        "away": 45,
-        "note": "Sandbach scored early and controlled the game; Wolverhampton shaded possession in patches but the hosts were stronger."
+        "home": 45,
+        "away": 55,
+        "note": "Wolverhampton shaded possession and play, but Sandbach took their chance early and defended well"
       },
       "secondHalf": {
-        "home": 60,
-        "away": 40,
-        "note": "Sandbach extended their lead and managed the match well; Wolverhampton had one good counter-attack goal but Sandbach remained dominant."
+        "home": 65,
+        "away": 35,
+        "note": "Sandbach dominated after the break, scoring twice more while Wolverhampton mounted limited threat"
       },
       "extraTime": {
         "home": 50,
         "away": 50,
-        "note": "No extra time played."
+        "note": "No extra time"
       },
       "total": {
-        "home": 58,
-        "away": 42,
-        "note": "Sandbach controlled most of the match, particularly in the second half after going 2-0 up."
+        "home": 55,
+        "away": 45,
+        "note": "Match turned decisively in Sandbach's favour in the second half; they controlled the game and converted chances efficiently"
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
