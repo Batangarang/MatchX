@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-22T15:25:44.052Z",
+  "generatedAt": "2026-08-22T15:35:43.811Z",
   "fixtureDate": "2026-08-22",
   "kickoff": "15:00",
   "homeTeam": "Sandbach United",
   "awayTeam": "Wolverhampton Casuals",
-  "postsUsed": 26,
-  "imagesAnalyzedThisRun": 2,
+  "postsUsed": 27,
+  "imagesAnalyzedThisRun": 0,
   "totalImagesAnalyzed": 12,
   "match": {
     "score": "2-1",
@@ -142,12 +142,12 @@
       "firstHalf": {
         "home": 1.2,
         "away": 0.3,
-        "note": "Sandbach scored early, had a close effort from Fowles; Casuals posed occasional threat but mostly contained."
+        "note": "Sandbach scored early from a corner rebound; Wolverhampton had a free kick flashed across the box but no real clear chances."
       },
       "secondHalf": {
-        "home": 0.8,
-        "away": 0.6,
-        "note": "Sandbach doubled lead from a free kick; Casuals got a goal back on the break but limited further opportunities."
+        "home": 1.5,
+        "away": 1.2,
+        "note": "Sandbach scored a second goal from a free kick; Wolverhampton got one back from a fast break. Sandbach had another chance late but was denied by goalkeeper."
       },
       "extraTime": {
         "home": 0,
@@ -155,9 +155,9 @@
         "note": "No extra time played."
       },
       "total": {
-        "home": 2,
-        "away": 0.9,
-        "note": "Sandbach dominant, scoring twice; Casuals managed one late goal but created few clear chances."
+        "home": 2.7,
+        "away": 1.5,
+        "note": "Sandbach scored twice and had several other half-chances; Wolverhampton scored once from a well-executed break and had a dangerous free kick and other moments."
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
@@ -165,12 +165,12 @@
       "firstHalf": {
         "home": 55,
         "away": 45,
-        "note": "Sandbach took an early lead and held control, though Casuals showed moments of pressure."
+        "note": "Sandbach scored early but Wolverhampton shaded the balance of play in the latter stages of the first half; described as 'battling well' and 'shading the balance'."
       },
       "secondHalf": {
         "home": 60,
         "away": 40,
-        "note": "Sandbach extended lead early in second half; Casuals improved but lacked cutting edge until late goal."
+        "note": "Sandbach extended their lead to 2-0 but Wolverhampton mounted a comeback with a goal from a fast break."
       },
       "extraTime": {
         "home": 50,
@@ -178,9 +178,9 @@
         "note": "No extra time played."
       },
       "total": {
-        "home": 58,
-        "away": 42,
-        "note": "Sandbach commanded most of the match, particularly in the second period. Casuals shaded play at times in first half but were ultimately outclassed."
+        "home": 57,
+        "away": 43,
+        "note": "Sandbach controlled much of the match, scored twice, and despite Wolverhampton's second-half goal, maintained their advantage through 76 minutes of available posts."
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
