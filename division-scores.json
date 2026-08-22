@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-08-22T14:25:30.628Z",
+  "generatedAt": "2026-08-22T14:30:57.052Z",
   "date": "2026-08-22",
   "isToday": true,
-  "postCount": 68,
+  "postCount": 78,
   "fixtures": [
     {
       "home": "Allscott Heath",
       "away": "Widnes Town",
       "kickoff": "15:00",
-      "score": "1-0",
+      "score": "2-0",
       "matchStage": "first_half",
       "goals": [
         {
@@ -19,7 +19,7 @@
         {
           "minute": "20",
           "team": "home",
-          "scorer": "Ben Summers"
+          "scorer": "Harry Morris"
         }
       ],
       "redCards": []
@@ -28,9 +28,20 @@
       "home": "Alsager Town",
       "away": "AFC Bridgnorth",
       "kickoff": "15:00",
-      "score": "0-0",
+      "score": "1-1",
       "matchStage": "first_half",
-      "goals": [],
+      "goals": [
+        {
+          "minute": "25",
+          "team": "home",
+          "scorer": "Harley Renshaw"
+        },
+        {
+          "minute": "29",
+          "team": "away",
+          "scorer": null
+        }
+      ],
       "redCards": []
     },
     {
@@ -66,7 +77,12 @@
           "scorer": null
         }
       ],
-      "redCards": []
+      "redCards": [
+        {
+          "team": "home",
+          "player": null
+        }
+      ]
     },
     {
       "home": "Foley Meir",
@@ -78,7 +94,7 @@
       "redCards": [
         {
           "team": "home",
-          "player": "Woods"
+          "player": null
         }
       ]
     },
@@ -95,7 +111,12 @@
           "scorer": "Luke Evans"
         }
       ],
-      "redCards": []
+      "redCards": [
+        {
+          "team": "away",
+          "player": "Woody"
+        }
+      ]
     },
     {
       "home": "Sandbach United",
@@ -145,5 +166,5 @@
       "redCards": []
     }
   ],
-  "ticker": "@MDTFC: 26’ Dawley have the ball in the back of the net but the linesman has his flag up \n\n🟣🔵1-0⚫️⚪️"
+  "ticker": "@MDTFC: 30’ First card of the game goes to Dawley Captain 🟡 the tackle on McIntosh didn’t look pretty\n\n🟣🔵1-0⚫️⚪️"
 }
