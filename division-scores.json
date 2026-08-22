@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-08-22T14:15:36.493Z",
+  "generatedAt": "2026-08-22T14:20:43.161Z",
   "date": "2026-08-22",
   "isToday": true,
-  "postCount": 58,
+  "postCount": 65,
   "fixtures": [
     {
       "home": "Allscott Heath",
@@ -32,9 +32,20 @@
       "home": "Bilston Town",
       "away": "Barnton",
       "kickoff": "15:00",
-      "score": null,
-      "matchStage": "scheduled",
-      "goals": [],
+      "score": "1-1",
+      "matchStage": "first_half",
+      "goals": [
+        {
+          "minute": 15,
+          "team": "away",
+          "scorer": "Jarrald"
+        },
+        {
+          "minute": 20,
+          "team": "home",
+          "scorer": null
+        }
+      ],
       "redCards": []
     },
     {
@@ -62,7 +73,7 @@
       "redCards": [
         {
           "team": "home",
-          "player": "Woodsy"
+          "player": "Woods"
         }
       ]
     },
@@ -70,9 +81,15 @@
       "home": "New Mills",
       "away": "Shawbury United",
       "kickoff": "15:00",
-      "score": null,
+      "score": "1-0",
       "matchStage": "first_half",
-      "goals": [],
+      "goals": [
+        {
+          "minute": 20,
+          "team": "home",
+          "scorer": "Luke Evans"
+        }
+      ],
       "redCards": []
     },
     {
@@ -83,7 +100,7 @@
       "matchStage": "first_half",
       "goals": [
         {
-          "minute": 3,
+          "minute": 4,
           "team": "home",
           "scorer": "Robbie Hatton"
         }
@@ -123,5 +140,5 @@
       "redCards": []
     }
   ],
-  "ticker": "@SandbachFC_1st: 🔵⚪️ v 🟢🟢\n\nSandbach United v Wolverhampton Casuals\n\nO’Connell takes one to the head and the Cassies player receives a yellow for his troubles.\n\n1  0\n\n16 mins gone"
+  "ticker": "@CheadleNomads: 17’ | SAVE\n\nWednesfield work the ball out wide and their left winger fires a shot towards goal, but Charlie Jones is equal to it, pulling off a superb save to keep the scores level.\n\n@WednesfieldCFC 0-0 @CheadleNomads \n\n#WeAreNomads | @nwcfl | @NWCFLScores"
 }
