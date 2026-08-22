@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-08-22T14:20:43.161Z",
+  "generatedAt": "2026-08-22T14:25:30.628Z",
   "date": "2026-08-22",
   "isToday": true,
-  "postCount": 65,
+  "postCount": 68,
   "fixtures": [
     {
       "home": "Allscott Heath",
@@ -12,7 +12,12 @@
       "matchStage": "first_half",
       "goals": [
         {
-          "minute": 5,
+          "minute": "5",
+          "team": "home",
+          "scorer": "Ben Summers"
+        },
+        {
+          "minute": "20",
           "team": "home",
           "scorer": "Ben Summers"
         }
@@ -36,12 +41,12 @@
       "matchStage": "first_half",
       "goals": [
         {
-          "minute": 15,
+          "minute": "15",
           "team": "away",
           "scorer": "Jarrald"
         },
         {
-          "minute": 20,
+          "minute": "20",
           "team": "home",
           "scorer": null
         }
@@ -56,7 +61,7 @@
       "matchStage": "first_half",
       "goals": [
         {
-          "minute": 6,
+          "minute": "6",
           "team": "home",
           "scorer": null
         }
@@ -85,7 +90,7 @@
       "matchStage": "first_half",
       "goals": [
         {
-          "minute": 20,
+          "minute": "20",
           "team": "home",
           "scorer": "Luke Evans"
         }
@@ -100,7 +105,7 @@
       "matchStage": "first_half",
       "goals": [
         {
-          "minute": 4,
+          "minute": "4",
           "team": "home",
           "scorer": "Robbie Hatton"
         }
@@ -140,5 +145,5 @@
       "redCards": []
     }
   ],
-  "ticker": "@CheadleNomads: 17’ | SAVE\n\nWednesfield work the ball out wide and their left winger fires a shot towards goal, but Charlie Jones is equal to it, pulling off a superb save to keep the scores level.\n\n@WednesfieldCFC 0-0 @CheadleNomads \n\n#WeAreNomads | @nwcfl | @NWCFLScores"
+  "ticker": "@MDTFC: 26’ Dawley have the ball in the back of the net but the linesman has his flag up \n\n🟣🔵1-0⚫️⚪️"
 }
