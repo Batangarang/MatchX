@@ -1,13 +1,15 @@
 {
-  "generatedAt": "2026-08-22T09:55:29.667Z",
+  "generatedAt": "2026-08-22T12:45:41.423Z",
   "date": "2026-08-22",
   "isToday": true,
+  "postCount": 17,
   "fixtures": [
     {
       "home": "Allscott Heath",
       "away": "Widnes Town",
       "kickoff": "15:00",
       "score": null,
+      "matchStage": "scheduled",
       "goals": [],
       "redCards": []
     },
@@ -16,6 +18,7 @@
       "away": "AFC Bridgnorth",
       "kickoff": "15:00",
       "score": null,
+      "matchStage": "scheduled",
       "goals": [],
       "redCards": []
     },
@@ -24,6 +27,7 @@
       "away": "Barnton",
       "kickoff": "15:00",
       "score": null,
+      "matchStage": "scheduled",
       "goals": [],
       "redCards": []
     },
@@ -32,6 +36,7 @@
       "away": "Market Drayton Town",
       "kickoff": "15:00",
       "score": null,
+      "matchStage": "scheduled",
       "goals": [],
       "redCards": []
     },
@@ -40,6 +45,7 @@
       "away": "Eccleshall",
       "kickoff": "15:00",
       "score": null,
+      "matchStage": "scheduled",
       "goals": [],
       "redCards": []
     },
@@ -48,6 +54,7 @@
       "away": "Shawbury United",
       "kickoff": "15:00",
       "score": null,
+      "matchStage": "scheduled",
       "goals": [],
       "redCards": []
     },
@@ -56,6 +63,7 @@
       "away": "Wolverhampton Casuals",
       "kickoff": "15:00",
       "score": null,
+      "matchStage": "scheduled",
       "goals": [],
       "redCards": []
     },
@@ -64,6 +72,7 @@
       "away": "Crewe",
       "kickoff": "15:00",
       "score": null,
+      "matchStage": "scheduled",
       "goals": [],
       "redCards": []
     },
@@ -72,6 +81,7 @@
       "away": "Brereton Social",
       "kickoff": "15:00",
       "score": null,
+      "matchStage": "scheduled",
       "goals": [],
       "redCards": []
     },
@@ -80,9 +90,10 @@
       "away": "Cheadle Heath Nomads",
       "kickoff": "15:00",
       "score": null,
+      "matchStage": "scheduled",
       "goals": [],
       "redCards": []
     }
   ],
-  "ticker": null
+  "ticker": "@StaffordTown1st: 📰 Matchday Programme! 📰\n\nToday’s edition of the Town Times is now live.\n\nFollow the link below to view. \n\nhttps://drive.google.com/file/d/1OfBMzoehNkj_4dqsqj0xXY2eSCmLYwhL/view?usp=share_link\n\n#UpTheTown https://t.co/mty4uq5g6X"
 }
