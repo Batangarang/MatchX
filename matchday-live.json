@@ -1,16 +1,18 @@
 {
-  "generatedAt": "2026-08-22T12:50:46.954Z",
+  "generatedAt": "2026-08-22T13:50:48.991Z",
   "fixtureDate": "2026-08-22",
   "kickoff": "15:00",
   "homeTeam": "Sandbach United",
   "awayTeam": "Wolverhampton Casuals",
-  "postsUsed": 1,
-  "imagesAnalyzedThisRun": 0,
-  "totalImagesAnalyzed": 0,
+  "postsUsed": 2,
+  "imagesAnalyzedThisRun": 1,
+  "totalImagesAnalyzed": 1,
   "match": {
     "score": null,
+    "scoreDiscrepancy": null,
     "finalScoreAnnounced": null,
     "halfTimeScoreAnnounced": null,
+    "htDiscrepancy": null,
     "matchStage": "scheduled",
     "lineups": {
       "home": {
@@ -20,9 +22,25 @@
         "officials": []
       },
       "away": {
-        "players": [],
-        "substitutes": [],
-        "manager": null,
+        "players": [
+          "1. Stan Amos",
+          "2. Zak Poskitt",
+          "3. Jake Pearson",
+          "4. Bailey Storey",
+          "5. Ben Podmore",
+          "6. Jayden Kirk",
+          "7. Lewis Gill",
+          "8. Declan Hutchings",
+          "9. Kieran Cook",
+          "10. James Rowland",
+          "11. Liam Kirton"
+        ],
+        "substitutes": [
+          "14. Gill",
+          "15. McNevin",
+          "18. Kirton"
+        ],
+        "manager": "Dean Gill",
         "officials": []
       }
     },
@@ -50,22 +68,22 @@
       "firstHalf": {
         "home": 0,
         "away": 0,
-        "note": "No match data available"
+        "note": "No match action yet — only pre-match lineup posts available."
       },
       "secondHalf": {
         "home": 0,
         "away": 0,
-        "note": "No match data available"
+        "note": "No match action yet — only pre-match lineup posts available."
       },
       "extraTime": {
         "home": 0,
         "away": 0,
-        "note": "No match data available"
+        "note": "Match did not go to extra time."
       },
       "total": {
         "home": 0,
         "away": 0,
-        "note": "No match data available"
+        "note": "No match action yet — only pre-match lineup posts available."
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
@@ -73,26 +91,24 @@
       "firstHalf": {
         "home": 50,
         "away": 50,
-        "note": "No match data available"
+        "note": "No match action reported yet."
       },
       "secondHalf": {
         "home": 50,
         "away": 50,
-        "note": "No match data available"
+        "note": "No match action reported yet."
       },
       "extraTime": {
         "home": 50,
         "away": 50,
-        "note": "No match data available"
+        "note": "Match did not go to extra time."
       },
       "total": {
         "home": 50,
         "away": 50,
-        "note": "No match data available"
+        "note": "No match action reported yet."
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
-    },
-    "scoreDiscrepancy": null,
-    "htDiscrepancy": null
+    }
   }
 }
