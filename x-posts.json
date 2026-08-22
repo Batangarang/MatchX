@@ -1,7 +1,13 @@
 {
-  "scrapedAt": "2026-08-22T12:20:27.326Z",
+  "scrapedAt": "2026-08-22T13:20:28.546Z",
   "username": "SandbachFC_1st",
   "posts": [
+    {
+      "text": "Home game today 3pm kick off against Wolverhampton Casuals - it’s an early season 6 pointer as we take on top of the table!\nSee you at the game!",
+      "createdAt": "2026-08-22T12:50:23.000Z",
+      "images": [],
+      "isMatchday": true
+    },
     {
       "text": "JKD and Dec give us their thoughts on tonight’s win in the sunshine, the rain and the night sky in Shropshire with a 3 4 away win at Market Drayton https://t.co/1QAYNhGeua",
       "createdAt": "2026-08-18T21:25:35.000Z",
@@ -55,14 +61,6 @@
       "createdAt": "2026-08-18T20:14:41.000Z",
       "images": [
         "https://pbs.twimg.com/media/HQB9gGgXwAAyZHb.jpg"
-      ],
-      "isMatchday": true
-    },
-    {
-      "text": "No idea why but a straight red shown https://t.co/sA60fHpJbk",
-      "createdAt": "2026-08-18T20:13:04.000Z",
-      "images": [
-        "https://pbs.twimg.com/media/HQB9IZXXIAAmS6F.jpg"
       ],
       "isMatchday": true
     }
