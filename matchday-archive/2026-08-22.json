@@ -1,19 +1,19 @@
 {
-  "generatedAt": "2026-08-22T15:15:46.263Z",
+  "generatedAt": "2026-08-22T15:20:53.320Z",
   "fixtureDate": "2026-08-22",
   "kickoff": "15:00",
   "homeTeam": "Sandbach United",
   "awayTeam": "Wolverhampton Casuals",
-  "postsUsed": 19,
-  "imagesAnalyzedThisRun": 0,
-  "totalImagesAnalyzed": 8,
+  "postsUsed": 22,
+  "imagesAnalyzedThisRun": 2,
+  "totalImagesAnalyzed": 10,
   "match": {
-    "score": "1-0",
+    "score": "2-0",
     "scoreDiscrepancy": null,
     "finalScoreAnnounced": null,
     "halfTimeScoreAnnounced": "1-0",
     "htDiscrepancy": null,
-    "matchStage": "half_time",
+    "matchStage": "second_half",
     "lineups": {
       "home": {
         "players": [
@@ -66,6 +66,11 @@
         "minute": 3,
         "team": "home",
         "scorer": "Robbie Hatton"
+      },
+      {
+        "minute": 61,
+        "team": "home",
+        "scorer": "Max Williams"
       }
     ],
     "yellowCards": [
@@ -83,6 +88,11 @@
         "minute": 30,
         "team": "home",
         "player": "Robbie Hatton"
+      },
+      {
+        "minute": 63,
+        "team": "away",
+        "player": "Declan Hutchings"
       }
     ],
     "redCards": [],
@@ -95,7 +105,14 @@
       }
     ],
     "sinBins": [],
-    "injuries": [],
+    "injuries": [
+      {
+        "minute": null,
+        "team": "home",
+        "player": "Mason Wilson",
+        "note": "returning from prolonged absence due to injury and illness"
+      }
+    ],
     "addedTime": {
       "firstHalf": null,
       "secondHalf": null
@@ -114,45 +131,45 @@
       "firstHalf": {
         "home": 1.2,
         "away": 0.3,
-        "note": "Sandbach scored early from a corner rebound. Wolverhampton had a dangerous free kick but didn't convert."
+        "note": "Sandbach scored early and had a close volley attempt; Casuals shaded possession in latter stages but limited clear openings"
       },
       "secondHalf": {
-        "home": 0,
-        "away": 0,
-        "note": "Posts end at 57 minutes; second half incomplete."
+        "home": 1.5,
+        "away": 0.2,
+        "note": "Sandbach added second goal from close range; Casuals created little despite pressure"
       },
       "extraTime": {
         "home": 0,
         "away": 0,
-        "note": "Match did not go to extra time."
+        "note": "No extra time played"
       },
       "total": {
-        "home": 1.2,
-        "away": 0.3,
-        "note": "Based on first half only; match summary incomplete."
+        "home": 2.7,
+        "away": 0.5,
+        "note": "Sandbach converted two clear chances; Casuals offered limited attacking threat"
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
     "matchControl": {
       "firstHalf": {
-        "home": 45,
-        "away": 55,
-        "note": "Sandbach scored early but Wolverhampton Casuals shaded the balance of play in latter stages of first half."
+        "home": 55,
+        "away": 45,
+        "note": "Sandbach scored early, then Casuals shaded possession in latter half but Sandbach battled well defensively"
       },
       "secondHalf": {
-        "home": 50,
-        "away": 50,
-        "note": "Posts end at 57 minutes; incomplete data."
+        "home": 60,
+        "away": 40,
+        "note": "Sandbach extended lead and controlled the game; Casuals applied some pressure but lacked incision"
       },
       "extraTime": {
         "home": 50,
         "away": 50,
-        "note": "Match did not go to extra time."
+        "note": "No extra time played"
       },
       "total": {
-        "home": 50,
-        "away": 50,
-        "note": "Match summary incomplete at 57 minutes."
+        "home": 57,
+        "away": 43,
+        "note": "Sandbach dominated overall despite Casuals attempting to gain control in first-half closing stages"
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
