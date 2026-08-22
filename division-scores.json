@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-08-22T14:30:57.052Z",
+  "generatedAt": "2026-08-22T14:35:34.771Z",
   "date": "2026-08-22",
   "isToday": true,
-  "postCount": 78,
+  "postCount": 83,
   "fixtures": [
     {
       "home": "Allscott Heath",
@@ -12,12 +12,17 @@
       "matchStage": "first_half",
       "goals": [
         {
-          "minute": "5",
+          "minute": 5,
           "team": "home",
           "scorer": "Ben Summers"
         },
         {
-          "minute": "20",
+          "minute": 20,
+          "team": "home",
+          "scorer": "Ben Summers"
+        },
+        {
+          "minute": 25,
           "team": "home",
           "scorer": "Harry Morris"
         }
@@ -32,12 +37,12 @@
       "matchStage": "first_half",
       "goals": [
         {
-          "minute": "25",
-          "team": "home",
+          "minute": 25,
+          "team": "away",
           "scorer": "Harley Renshaw"
         },
         {
-          "minute": "29",
+          "minute": 29,
           "team": "away",
           "scorer": null
         }
@@ -52,12 +57,12 @@
       "matchStage": "first_half",
       "goals": [
         {
-          "minute": "15",
+          "minute": 15,
           "team": "away",
           "scorer": "Jarrald"
         },
         {
-          "minute": "20",
+          "minute": 20,
           "team": "home",
           "scorer": null
         }
@@ -72,7 +77,7 @@
       "matchStage": "first_half",
       "goals": [
         {
-          "minute": "6",
+          "minute": 6,
           "team": "home",
           "scorer": null
         }
@@ -102,19 +107,24 @@
       "home": "New Mills",
       "away": "Shawbury United",
       "kickoff": "15:00",
-      "score": "1-0",
+      "score": "1-1",
       "matchStage": "first_half",
       "goals": [
         {
-          "minute": "20",
+          "minute": 20,
           "team": "home",
           "scorer": "Luke Evans"
+        },
+        {
+          "minute": 32,
+          "team": "away",
+          "scorer": null
         }
       ],
       "redCards": [
         {
           "team": "away",
-          "player": "Woody"
+          "player": null
         }
       ]
     },
@@ -126,12 +136,16 @@
       "matchStage": "first_half",
       "goals": [
         {
-          "minute": "4",
+          "minute": 4,
           "team": "home",
           "scorer": "Robbie Hatton"
         }
       ],
       "redCards": [
+        {
+          "team": "home",
+          "player": "Kieran O'Connell"
+        },
         {
           "team": "away",
           "player": "Lewis Gill"
@@ -143,7 +157,7 @@
       "away": "Crewe",
       "kickoff": "15:00",
       "score": null,
-      "matchStage": "first_half",
+      "matchStage": "scheduled",
       "goals": [],
       "redCards": []
     },
@@ -166,5 +180,5 @@
       "redCards": []
     }
   ],
-  "ticker": "@MDTFC: 30’ First card of the game goes to Dawley Captain 🟡 the tackle on McIntosh didn’t look pretty\n\n🟣🔵1-0⚫️⚪️"
+  "ticker": "@shawburyutd: 32’ GOAAALL!! Harvey’s corner is sliced in by the @NewMillsFC #4! \n\n🟡⚫️1-1⚪️⚫️"
 }
