@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-08-22T15:20:53.320Z",
+  "generatedAt": "2026-08-22T15:25:44.052Z",
   "fixtureDate": "2026-08-22",
   "kickoff": "15:00",
   "homeTeam": "Sandbach United",
   "awayTeam": "Wolverhampton Casuals",
-  "postsUsed": 22,
+  "postsUsed": 26,
   "imagesAnalyzedThisRun": 2,
-  "totalImagesAnalyzed": 10,
+  "totalImagesAnalyzed": 12,
   "match": {
-    "score": "2-0",
+    "score": "2-1",
     "scoreDiscrepancy": null,
     "finalScoreAnnounced": null,
     "halfTimeScoreAnnounced": "1-0",
@@ -71,6 +71,11 @@
         "minute": 61,
         "team": "home",
         "scorer": "Max Williams"
+      },
+      {
+        "minute": 68,
+        "team": "away",
+        "scorer": "Liam Kirton"
       }
     ],
     "yellowCards": [
@@ -102,6 +107,12 @@
         "team": "home",
         "playerOff": "Mason Wilson",
         "playerOn": "Kieran Nolan"
+      },
+      {
+        "minute": 65,
+        "team": "home",
+        "playerOff": "Josh Fowles",
+        "playerOn": "Birchall"
       }
     ],
     "sinBins": [],
@@ -131,22 +142,22 @@
       "firstHalf": {
         "home": 1.2,
         "away": 0.3,
-        "note": "Sandbach scored early and had a close volley attempt; Casuals shaded possession in latter stages but limited clear openings"
+        "note": "Sandbach scored early, had a close effort from Fowles; Casuals posed occasional threat but mostly contained."
       },
       "secondHalf": {
-        "home": 1.5,
-        "away": 0.2,
-        "note": "Sandbach added second goal from close range; Casuals created little despite pressure"
+        "home": 0.8,
+        "away": 0.6,
+        "note": "Sandbach doubled lead from a free kick; Casuals got a goal back on the break but limited further opportunities."
       },
       "extraTime": {
         "home": 0,
         "away": 0,
-        "note": "No extra time played"
+        "note": "No extra time played."
       },
       "total": {
-        "home": 2.7,
-        "away": 0.5,
-        "note": "Sandbach converted two clear chances; Casuals offered limited attacking threat"
+        "home": 2,
+        "away": 0.9,
+        "note": "Sandbach dominant, scoring twice; Casuals managed one late goal but created few clear chances."
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
@@ -154,22 +165,22 @@
       "firstHalf": {
         "home": 55,
         "away": 45,
-        "note": "Sandbach scored early, then Casuals shaded possession in latter half but Sandbach battled well defensively"
+        "note": "Sandbach took an early lead and held control, though Casuals showed moments of pressure."
       },
       "secondHalf": {
         "home": 60,
         "away": 40,
-        "note": "Sandbach extended lead and controlled the game; Casuals applied some pressure but lacked incision"
+        "note": "Sandbach extended lead early in second half; Casuals improved but lacked cutting edge until late goal."
       },
       "extraTime": {
         "home": 50,
         "away": 50,
-        "note": "No extra time played"
+        "note": "No extra time played."
       },
       "total": {
-        "home": 57,
-        "away": 43,
-        "note": "Sandbach dominated overall despite Casuals attempting to gain control in first-half closing stages"
+        "home": 58,
+        "away": 42,
+        "note": "Sandbach commanded most of the match, particularly in the second period. Casuals shaded play at times in first half but were ultimately outclassed."
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }

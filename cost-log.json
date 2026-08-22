@@ -8427,14 +8427,14 @@
       "aiCostGBP": 0.008
     },
     {
-      "script": "x-posts",
-      "timestamp": "2026-08-22T15:25:21.940Z",
-      "getxapiCalls": 1,
-      "claudeCalls": 0,
-      "inputTokens": 0,
-      "outputTokens": 0,
-      "xCostGBP": 0.0008,
-      "aiCostGBP": 0
+      "script": "matchday-live",
+      "timestamp": "2026-08-22T15:25:44.054Z",
+      "getxapiCalls": 2,
+      "claudeCalls": 1,
+      "inputTokens": 5108,
+      "outputTokens": 1130,
+      "xCostGBP": 0.0015,
+      "aiCostGBP": 0.0081
     }
   ]
 }
