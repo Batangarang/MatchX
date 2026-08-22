@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-08-22T15:05:39.633Z",
+  "generatedAt": "2026-08-22T15:15:46.263Z",
   "fixtureDate": "2026-08-22",
   "kickoff": "15:00",
   "homeTeam": "Sandbach United",
   "awayTeam": "Wolverhampton Casuals",
-  "postsUsed": 18,
+  "postsUsed": 19,
   "imagesAnalyzedThisRun": 0,
   "totalImagesAnalyzed": 8,
   "match": {
@@ -86,7 +86,14 @@
       }
     ],
     "redCards": [],
-    "substitutions": [],
+    "substitutions": [
+      {
+        "minute": 57,
+        "team": "home",
+        "playerOff": "Mason Wilson",
+        "playerOn": "Kieran Nolan"
+      }
+    ],
     "sinBins": [],
     "injuries": [],
     "addedTime": {
@@ -107,22 +114,22 @@
       "firstHalf": {
         "home": 1.2,
         "away": 0.3,
-        "note": "Sandbach scored early from a corner rebound; Wolverhampton had some dangerous moments but limited clear chances"
+        "note": "Sandbach scored early from a corner rebound. Wolverhampton had a dangerous free kick but didn't convert."
       },
       "secondHalf": {
         "home": 0,
         "away": 0,
-        "note": "Second half commentary only mentions team adjustments and play resuming; no shot data available"
+        "note": "Posts end at 57 minutes; second half incomplete."
       },
       "extraTime": {
         "home": 0,
         "away": 0,
-        "note": "Match did not go to extra time"
+        "note": "Match did not go to extra time."
       },
       "total": {
         "home": 1.2,
         "away": 0.3,
-        "note": "Based on first-half activity only; second half incomplete"
+        "note": "Based on first half only; match summary incomplete."
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
@@ -130,22 +137,22 @@
       "firstHalf": {
         "home": 45,
         "away": 55,
-        "note": "Wolverhampton shading play in latter stages of first half; Sandbach efficient early on"
+        "note": "Sandbach scored early but Wolverhampton Casuals shaded the balance of play in latter stages of first half."
       },
       "secondHalf": {
         "home": 50,
         "away": 50,
-        "note": "Second half just commenced; no commentary on balance of play yet"
+        "note": "Posts end at 57 minutes; incomplete data."
       },
       "extraTime": {
         "home": 50,
         "away": 50,
-        "note": "Match did not go to extra time"
+        "note": "Match did not go to extra time."
       },
       "total": {
-        "home": 45,
-        "away": 55,
-        "note": "Based on first-half narrative; Cassies shading play overall but Sandbach got early goal"
+        "home": 50,
+        "away": 50,
+        "note": "Match summary incomplete at 57 minutes."
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
