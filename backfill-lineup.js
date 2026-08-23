@@ -74,4 +74,4 @@ async function run() {
   }
 }
 
-run().catch(err => console.error('Failed:', err.message));git push
+run().catch(err => console.error('Failed:', err.message));

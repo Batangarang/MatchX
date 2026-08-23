@@ -61,7 +61,7 @@ function isMatchdayPost(createdAt) {
     const postDate = new Date(createdAt);
     return (data.allFixtures || []).some(f => {
       const [, dd, mm, yy] = f.date.match(/(\d{2})\/(\d{2})\/(\d{2})/);
-      const fixtureDate = new Date(2000 + parseInt(yy), parseInt(mm) - 1, parseInt(dd));
+      const fixtureDate = new Date(Date.UTC(2000 + parseInt(yy), parseInt(mm) - 1, parseInt(dd)));
       return fixtureDate.getUTCFullYear() === postDate.getUTCFullYear() &&
              fixtureDate.getUTCMonth() === postDate.getUTCMonth() &&
              fixtureDate.getUTCDate() === postDate.getUTCDate();

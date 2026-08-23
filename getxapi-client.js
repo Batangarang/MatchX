@@ -36,9 +36,8 @@ async function getUserTweets(userName, apiKey, opts = {}) {
     });
 
     const data = await res.json();
-    console.log('Raw GetXAPI response for', userName, ':', JSON.stringify(data).slice(0, 500));
-    
-      if (data.error) {
+
+    if (data.error) {
       throw new Error(`GetXAPI error for @${userName}: ${data.error}`);
     }
 
