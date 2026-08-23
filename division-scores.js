@@ -209,7 +209,7 @@ IMPORTANT: Clubs often use colour-coded circle emoji instead of names in their l
 Respond with ONLY a JSON object, no other text, no markdown fences:
 {
   "fixtures": [
-    { "home": "string", "away": "string", "kickoff": "string", "score": "string or null", "matchStage": "one of: scheduled, first_half, half_time, second_half, full_time — ONLY set half_time or full_time when a post EXPLICITLY announces it (e.g. 'HT', 'Half time score:', 'FT', 'Full time:') — never guess from elapsed time or infer from a lack of updates", "goals": [{ "minute": null, "team": "home or away", "scorer": "string" }], "redCards": [{ "team": "home or away", "player": "string or null" }] }
+    { "home": "string", "away": "string", "kickoff": "string", "score": "string or null", "matchStage": "one of: scheduled, first_half, half_time, second_half, full_time — ONLY set half_time or full_time when a post EXPLICITLY announces it (e.g. 'HT', 'Half time score:', 'FT', 'Full time:') — never guess from elapsed time or infer from a lack of updates", "goals": [{ "minute": null, "team": "home or away", "scorer": "string" }], "yellowCards": [{ "team": "home or away", "player": "string or null" }], "redCards": [{ "team": "home or away", "player": "string or null" }] }
   ]
 }
 
