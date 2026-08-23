@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-23T18:05:28.523Z",
+  "generatedAt": "2026-08-23T18:10:46.214Z",
   "fixtures": [
     {
       "date": "Saturday 29 August 2026",
@@ -136,15 +136,15 @@
     },
     {
       "date": "Tuesday 8 September 2026",
-      "home": "Widnes Town",
-      "away": "New Mills",
+      "home": "Barnton",
+      "away": "Cheadle Heath Nomads",
       "kickoff": "19:45",
       "postponed": false
     },
     {
-      "date": "Wednesday 9 September 2026",
-      "home": "Barnton",
-      "away": "Cheadle Heath Nomads",
+      "date": "Tuesday 8 September 2026",
+      "home": "Widnes Town",
+      "away": "New Mills",
       "kickoff": "19:45",
       "postponed": false
     },
