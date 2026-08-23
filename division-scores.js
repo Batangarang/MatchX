@@ -161,8 +161,7 @@ async function run() {
   for (const handle of handlesNeeded) {
     try {
       const posts = await getUserTweets(handle, API_KEY, { maxPages: 2, sinceDate: dayStart });
-          postsByHandle[handle] = posts.filter(p => new Date(p.createdAt) >= dayStart);
-          console.log(`DEBUG ${handle}: fetched ${posts.length}, filtered to ${postsByHandle[handle].length}, dayStart=${dayStart.toISOString()}, newest=${posts[0]?.createdAt}`);
+      postsByHandle[handle] = posts.filter(p => new Date(p.createdAt) >= dayStart);
     } catch (err) {
       console.warn(`Skipping @${handle}: ${err.message}`);
       postsByHandle[handle] = [];
