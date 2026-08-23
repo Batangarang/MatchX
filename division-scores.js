@@ -111,7 +111,7 @@ async function run() {
       generatedAt: REAL_NOW.toISOString(),
       date: target.targetDate,
       isToday: target.isToday,
-      fixtures: todaysFixtures.map(f => ({ home: f.home, away: f.away, kickoff: f.kickoff, score: null, goals: [], redCards: [] })),
+      fixtures: todaysFixtures.map(f => ({ home: f.home, away: f.away, kickoff: f.kickoff, score: null, goals: [], yellowCards: [], redCards: [] })),
       ticker: null,
     }, null, 2));
     console.log(`Before 11am — showing ${todaysFixtures.length} fixtures, no scores yet.`);
@@ -206,6 +206,7 @@ For each fixture above, determine ONLY if a score has been EXPLICITLY stated in 
 
 IMPORTANT: Clubs often use colour-coded circle emoji instead of names in their live scoreline updates (e.g. "🔴🔵0-0⚫️⚪️"). These emoji colours can look similar or identical across different clubs and different fixtures happening on the same day — do NOT rely on emoji colour alone to decide which fixture a scoreline belongs to. Always match a post to the correct fixture using the ACCOUNT HANDLE that posted it (shown in brackets before each post) cross-referenced against the fixture list's home/away clubs — never assume from emoji colour alone. If genuinely unsure which fixture a scoreline update belongs to, prefer matching by handle over emoji.
 
+IMPORTANT: Distinguish clearly between yellow cards and red cards — only put a card in "redCards" if it's explicitly a red card, straight red, or second yellow leading to a sending off. A single yellow card booking belongs in "yellowCards", never "redCards".
 Respond with ONLY a JSON object, no other text, no markdown fences:
 {
   "fixtures": [
