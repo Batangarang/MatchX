@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-23T17:55:30.711Z",
+  "generatedAt": "2026-08-23T18:00:58.884Z",
   "fixtures": [
     {
       "date": "Saturday 29 August 2026",
@@ -129,16 +129,16 @@
     },
     {
       "date": "Saturday 5 September 2026",
-      "home": "Widnes Town",
-      "away": "New Mills",
+      "home": "Wolverhampton Casuals",
+      "away": "Bilston Town",
       "kickoff": "15:00",
       "postponed": false
     },
     {
-      "date": "Saturday 5 September 2026",
-      "home": "Wolverhampton Casuals",
-      "away": "Bilston Town",
-      "kickoff": "15:00",
+      "date": "Tuesday 8 September 2026",
+      "home": "Widnes Town",
+      "away": "New Mills",
+      "kickoff": "19:45",
       "postponed": false
     },
     {
