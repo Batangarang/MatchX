@@ -974,6 +974,7 @@
             const goalsHtml = (f.goals || []).map(g =>
               `${g.minute ? g.minute + "' " : ''}${g.scorer && g.scorer !== 'null' ? g.scorer : 'Scorer unconfirmed'} (${g.team === 'home' ? f.home : f.away})`
             ).join(', ');
+            const yellowCardHtml = (f.yellowCards || []).map(r => `🟨${r.player ? ' ' + r.player : ''} (${r.team === 'home' ? f.home : f.away})`).join(' ');
             const redCardHtml = (f.redCards || []).map(r => `🟥${r.player ? ' ' + r.player : ''} (${r.team === 'home' ? f.home : f.away})`).join(' ');
 
                 return `
@@ -984,6 +985,7 @@
                 }
               </div>
               ${goalsHtml ? `<div style="font-size:12px; color:var(--muted); margin-top:2px;">⚽ ${goalsHtml}</div>` : ''}
+              ${yellowCardHtml ? `<div style="font-size:12px; color:var(--muted); margin-top:2px;">${yellowCardHtml}</div>` : ''}
               ${redCardHtml ? `<div style="font-size:12px; color:var(--muted); margin-top:2px;">${redCardHtml}</div>` : ''}
             </div>
           `;
