@@ -1,6 +1,14 @@
 {
-  "generatedAt": "2026-08-27T08:00:49.627Z",
+  "generatedAt": "2026-08-28T10:45:25.052Z",
   "articles": [
+    {
+      "id": "10207",
+      "title": "Vacancies",
+      "meta": "Fri 28th August 2026 | Vacancies | By Martin Fallon",
+      "body": "Are you looking for a job at one of our clubs? A number of vacancies have arised at a couple of our clubs that you may be interested in.\n\nFirst Division North side Garstang have two roles, one being a First Team Match Co-ordinator and the other being a Media Assistant.\n\nFirst Division South side Crewe are looking for a Sports Therapist or Physiotherapist, with the possibilty of developing their own sports therapy/physiotherapy service from the club.\n\nBoth vacancies can be found on our League Vacancies page which is the League Info tab. Alternatively you can click the link below.\n\nClick here to visit the League Vacancies page",
+      "url": "https://www.nwcfl.com/news-articles.php?id=10207",
+      "scrapedAt": "2026-08-28T10:45:25.052Z"
+    },
     {
       "id": "10203",
       "title": "Five Things We Learned 2026/27: Week 4",
@@ -152,14 +160,6 @@
       "body": "",
       "url": "https://www.nwcfl.com/news-articles.php?id=10186",
       "scrapedAt": "2026-08-07T20:40:23.513Z"
-    },
-    {
-      "id": "10187",
-      "title": "Week 1: Round Up",
-      "meta": "Tue 4th August 2026 | Match Reviews | By Ben Wilkinson",
-      "body": "PREMIER DIVISION\n\nFIRST DIVISION NORTH\n\nFIRST DIVISION SOUTH",
-      "url": "https://www.nwcfl.com/news-articles.php?id=10187",
-      "scrapedAt": "2026-08-07T20:40:23.301Z"
     }
   ]
 }
