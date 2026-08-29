@@ -1,19 +1,19 @@
 {
-  "generatedAt": "2026-08-29T14:50:58.339Z",
+  "generatedAt": "2026-08-29T15:01:14.615Z",
   "fixtureDate": "2026-08-29",
   "kickoff": "15:00",
   "homeTeam": "Sandbach United",
   "awayTeam": "Widnes Town",
-  "postsUsed": 16,
+  "postsUsed": 17,
   "imagesAnalyzedThisRun": 0,
   "totalImagesAnalyzed": 5,
   "match": {
     "score": "3-0",
     "scoreDiscrepancy": null,
     "finalScoreAnnounced": null,
-    "halfTimeScoreAnnounced": null,
+    "halfTimeScoreAnnounced": "3-0",
     "htDiscrepancy": null,
-    "matchStage": "first_half",
+    "matchStage": "half_time",
     "lineups": {
       "home": {
         "players": [
@@ -55,7 +55,7 @@
       {
         "minute": 19,
         "team": "home",
-        "scorer": "Barry"
+        "scorer": "Nathan Barry"
       },
       {
         "minute": 30,
@@ -85,23 +85,23 @@
     "roughXG": {
       "firstHalf": {
         "home": 2.5,
-        "away": 0.2,
-        "note": "Sandbach dominant with multiple clear chances, including shot from O'Connell tipped over, corner header wide, Hatton header wide, and three goals. Widnes had only rare half-chances that came to nothing."
+        "away": 0.1,
+        "note": "Sandbach created multiple clear chances and scored 3 goals from good quality moves. Widnes had only half-chances."
       },
       "secondHalf": {
         "home": 0,
         "away": 0,
-        "note": "Match posts end at 45 minutes; second half data not available."
+        "note": "No second half data available in posts."
       },
       "extraTime": {
         "home": 0,
         "away": 0,
-        "note": "No extra time played."
+        "note": "Match did not reach extra time."
       },
       "total": {
         "home": 2.5,
-        "away": 0.2,
-        "note": "Data available only for first 45 minutes. Sandbach created multiple high-quality chances and converted three; Widnes offered minimal threat."
+        "away": 0.1,
+        "note": "Sandbach dominated the first half with clinical finishing; Widnes offered minimal attacking threat."
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
@@ -109,22 +109,22 @@
       "firstHalf": {
         "home": 85,
         "away": 15,
-        "note": "Sandbach dominated possession and chances throughout. Multiple attempts on goal, corners, and headers. Widnes described as having 'rare half-chances' that 'went begging'."
+        "note": "Sandbach controlled the match throughout, creating numerous chances and scoring 3 goals. Widnes had only rare half-chances."
       },
       "secondHalf": {
         "home": 50,
         "away": 50,
-        "note": "Match posts end at 45 minutes; second half data not available."
+        "note": "No second half data available in posts."
       },
       "extraTime": {
         "home": 50,
         "away": 50,
-        "note": "No extra time played."
+        "note": "Match did not reach extra time."
       },
       "total": {
         "home": 85,
         "away": 15,
-        "note": "Data available only for first 45 minutes. Sandbach overwhelmingly dominant in play and scoring."
+        "note": "Sandbach dominated the first half with clear control and efficiency."
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
