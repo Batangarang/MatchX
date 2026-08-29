@@ -1,13 +1,15 @@
 {
-  "generatedAt": "2026-08-29T09:55:32.515Z",
+  "generatedAt": "2026-08-29T12:45:45.273Z",
   "date": "2026-08-29",
   "isToday": true,
+  "postCount": 20,
   "fixtures": [
     {
       "home": "AFC Bridgnorth",
       "away": "New Mills",
       "kickoff": "15:00",
       "score": null,
+      "matchStage": "scheduled",
       "goals": [],
       "yellowCards": [],
       "redCards": []
@@ -17,6 +19,7 @@
       "away": "Market Drayton Town",
       "kickoff": "15:00",
       "score": null,
+      "matchStage": "scheduled",
       "goals": [],
       "yellowCards": [],
       "redCards": []
@@ -26,6 +29,7 @@
       "away": "Wednesfield Community",
       "kickoff": "15:00",
       "score": null,
+      "matchStage": "scheduled",
       "goals": [],
       "yellowCards": [],
       "redCards": []
@@ -35,6 +39,7 @@
       "away": "Stafford Town",
       "kickoff": "15:00",
       "score": null,
+      "matchStage": "scheduled",
       "goals": [],
       "yellowCards": [],
       "redCards": []
@@ -44,6 +49,7 @@
       "away": "Eccleshall",
       "kickoff": "15:00",
       "score": null,
+      "matchStage": "scheduled",
       "goals": [],
       "yellowCards": [],
       "redCards": []
@@ -53,6 +59,7 @@
       "away": "Telford Town",
       "kickoff": "15:00",
       "score": null,
+      "matchStage": "scheduled",
       "goals": [],
       "yellowCards": [],
       "redCards": []
@@ -62,6 +69,7 @@
       "away": "Brereton Social",
       "kickoff": "15:00",
       "score": null,
+      "matchStage": "scheduled",
       "goals": [],
       "yellowCards": [],
       "redCards": []
@@ -71,6 +79,7 @@
       "away": "Widnes Town",
       "kickoff": "15:00",
       "score": null,
+      "matchStage": "scheduled",
       "goals": [],
       "yellowCards": [],
       "redCards": []
@@ -80,6 +89,7 @@
       "away": "Dawley Town",
       "kickoff": "15:00",
       "score": null,
+      "matchStage": "scheduled",
       "goals": [],
       "yellowCards": [],
       "redCards": []
@@ -89,10 +99,11 @@
       "away": "Alsager Town",
       "kickoff": "15:00",
       "score": null,
+      "matchStage": "scheduled",
       "goals": [],
       "yellowCards": [],
       "redCards": []
     }
   ],
-  "ticker": null
+  "ticker": "@bilstontownfc: Just a reminder its enrolment time at @wolvcoll if your looking for Full-time or Part-time courses, Apprenticeships, Higher education or even some careers advice and guidance visit https://www.wolvcoll.ac.uk https://t.co/01iEwu51tw"
 }
