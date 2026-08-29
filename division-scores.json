@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-08-29T13:55:32.600Z",
+  "generatedAt": "2026-08-29T14:01:14.163Z",
   "date": "2026-08-29",
   "isToday": true,
-  "postCount": 35,
+  "postCount": 39,
   "fixtures": [
     {
       "home": "AFC Bridgnorth",
@@ -38,8 +38,8 @@
       "home": "Bilston Town",
       "away": "Stafford Town",
       "kickoff": "15:00",
-      "score": null,
-      "matchStage": "scheduled",
+      "score": "0-0",
+      "matchStage": "first_half",
       "goals": [],
       "yellowCards": [],
       "redCards": []
@@ -49,7 +49,7 @@
       "away": "Eccleshall",
       "kickoff": "15:00",
       "score": null,
-      "matchStage": "scheduled",
+      "matchStage": "first_half",
       "goals": [],
       "yellowCards": [],
       "redCards": []
@@ -78,8 +78,8 @@
       "home": "Sandbach United",
       "away": "Widnes Town",
       "kickoff": "15:00",
-      "score": null,
-      "matchStage": "scheduled",
+      "score": "0-0",
+      "matchStage": "first_half",
       "goals": [],
       "yellowCards": [],
       "redCards": []
@@ -105,5 +105,5 @@
       "redCards": []
     }
   ],
-  "ticker": "@EccleshallFC: Team against Cheadle Heath Nomads. \n\n💙🦅\n\n#EccleshallFC https://t.co/qkcGVBdzS0"
+  "ticker": "@EccleshallFC: The game is underway here in a rainy Cheadle\n\n💙🦅\n\n#EccleshallFC"
 }
