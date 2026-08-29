@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-08-29T14:31:00.070Z",
+  "generatedAt": "2026-08-29T14:35:36.058Z",
   "date": "2026-08-29",
   "isToday": true,
-  "postCount": 79,
+  "postCount": 86,
   "fixtures": [
     {
       "home": "AFC Bridgnorth",
@@ -13,13 +13,13 @@
       "goals": [
         {
           "minute": "6",
-          "team": "away",
+          "team": "home",
           "scorer": "Josh Lowe"
         },
         {
           "minute": "16",
-          "team": "home",
-          "scorer": "deflected effort"
+          "team": "away",
+          "scorer": "unknown"
         }
       ],
       "yellowCards": [],
@@ -66,7 +66,7 @@
       "yellowCards": [
         {
           "team": "away",
-          "player": "Cooper"
+          "player": "Efford"
         }
       ],
       "redCards": []
@@ -86,8 +86,8 @@
       ],
       "yellowCards": [
         {
-          "team": "home",
-          "player": "C.Graham"
+          "team": "away",
+          "player": "Max"
         },
         {
           "team": "home",
@@ -106,7 +106,7 @@
         {
           "minute": "10",
           "team": "home",
-          "scorer": null
+          "scorer": "unknown"
         }
       ],
       "yellowCards": [
@@ -181,9 +181,14 @@
       "score": "0-0",
       "matchStage": "second_half",
       "goals": [],
-      "yellowCards": [],
+      "yellowCards": [
+        {
+          "team": "away",
+          "player": "Jordyn Fitton"
+        }
+      ],
       "redCards": []
     }
   ],
-  "ticker": "@shawburyutd: 27’ GOOOAAL! Ross Jones bursts through and puts the visitors ahead \n\n⚪️⚫️0-1🔵🔵\n\n@DawleyTownFC"
+  "ticker": "@WolvesCassies: 30': Jordyn Fitton is yellow carded for Alsager Town\n#WOLALS #Pitchero\nhttps://www.wolverhamptoncasualsfc.co.uk/teams/294420/match-centre/1-19876214?utm_campaign=match_event&utm_medium=post&utm_source=twitter&utm_content=yellow_card https://t.co/8OAy15r1z7"
 }
