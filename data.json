@@ -1,26 +1,16 @@
 {
-  "scrapedAt": "2026-08-29T15:30:48.848Z",
+  "scrapedAt": "2026-08-29T16:30:49.067Z",
   "nextFixture": {
-    "date": "Sat 29/08/26",
-    "opposition": "Widnes Town",
-    "opponentUrl": "clubpage.php?id=868",
-    "homeAway": "H",
+    "date": "Sat 05/09/26",
+    "opposition": "Brereton Social",
+    "opponentUrl": "clubpage.php?id=459",
+    "homeAway": "A",
     "kickoff": "15:00",
     "score": null,
     "scorers": null,
     "competitionNote": null
   },
   "nextFixtures": [
-    {
-      "date": "Sat 29/08/26",
-      "opposition": "Widnes Town",
-      "opponentUrl": "clubpage.php?id=868",
-      "homeAway": "H",
-      "kickoff": "15:00",
-      "score": null,
-      "scorers": null,
-      "competitionNote": null
-    },
     {
       "date": "Sat 05/09/26",
       "opposition": "Brereton Social",
@@ -60,19 +50,39 @@
       "score": null,
       "scorers": null,
       "competitionNote": "The Macron Cup 1"
+    },
+    {
+      "date": "Sat 03/10/26",
+      "opposition": "Alsager Town",
+      "opponentUrl": "clubpage.php?id=3",
+      "homeAway": "H",
+      "kickoff": "15:00",
+      "score": null,
+      "scorers": null,
+      "competitionNote": null
     }
   ],
   "lastResult": {
-    "date": "Sat 22/08/26",
-    "opposition": "Wolverhampton Casuals",
-    "opponentUrl": "clubpage.php?id=73",
+    "date": "Sat 29/08/26",
+    "opposition": "Widnes Town",
+    "opponentUrl": "clubpage.php?id=868",
     "homeAway": "H",
     "kickoff": "15:00",
-    "score": "W 4-1",
-    "scorers": "Robbie Hatton (4) Max Williams (61) Matthew Birchall (82) Kieran Nolan (90+2)",
+    "score": "W 6-0",
+    "scorers": "Kieran OConnell (11) Nathan Barry (19) Kyle Foley (28) Kyle Foley (78) Stanley Tatters (80) Robbie Hatton (89)",
     "competitionNote": null
   },
   "lastResults": [
+    {
+      "date": "Sat 29/08/26",
+      "opposition": "Widnes Town",
+      "opponentUrl": "clubpage.php?id=868",
+      "homeAway": "H",
+      "kickoff": "15:00",
+      "score": "W 6-0",
+      "scorers": "Kieran OConnell (11) Nathan Barry (19) Kyle Foley (28) Kyle Foley (78) Stanley Tatters (80) Robbie Hatton (89)",
+      "competitionNote": null
+    },
     {
       "date": "Sat 22/08/26",
       "opposition": "Wolverhampton Casuals",
@@ -92,16 +102,6 @@
       "score": "W 4-3",
       "scorers": "Robbie Hatton (10) Kieran OConnell (21) Nathan Barry (42) Kieran OConnell (81)",
       "competitionNote": null
-    },
-    {
-      "date": "Sat 15/08/26",
-      "opposition": "Ashby Ivanhoe",
-      "opponentUrl": "lineups.php?id=22048",
-      "homeAway": "H",
-      "kickoff": "15:00",
-      "score": "L 0-1",
-      "scorers": null,
-      "competitionNote": "The Isuzu FA Vase 1Q"
     }
   ],
   "allFixtures": [
@@ -181,8 +181,8 @@
       "opponentUrl": "clubpage.php?id=868",
       "homeAway": "H",
       "kickoff": "15:00",
-      "score": null,
-      "scorers": null,
+      "score": "W 6-0",
+      "scorers": "Kieran OConnell (11) Nathan Barry (19) Kyle Foley (28) Kyle Foley (78) Stanley Tatters (80) Robbie Hatton (89)",
       "competitionNote": null
     },
     {

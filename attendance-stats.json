@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-29T15:30:52.866Z",
+  "generatedAt": "2026-08-29T16:30:53.635Z",
   "games": [
     {
       "opponent": "Wednesfield Community",
@@ -24,9 +24,15 @@
       "score": "4-1",
       "attendance": 148,
       "date": "Sat 22/08/26"
+    },
+    {
+      "opponent": "Widnes Town",
+      "score": "6-0",
+      "attendance": 135,
+      "date": "Sat 29/08/26"
     }
   ],
-  "average": 146,
+  "average": 143,
   "lowest": {
     "opponent": "Wednesfield Community",
     "score": "2-1",

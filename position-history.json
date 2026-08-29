@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-22T17:00:54.727Z",
+  "generatedAt": "2026-08-29T16:30:50.612Z",
   "history": [
     {
       "gamesPlayed": 1,
@@ -72,6 +72,18 @@
       "cumGoalsFor": 14,
       "cumGoalsAgainst": 11,
       "cumGoalDifference": 3
+    },
+    {
+      "gamesPlayed": 7,
+      "date": "Sat 29/08/26",
+      "opponent": "Widnes Town",
+      "position": 2,
+      "points": 15,
+      "gameGoalsFor": 6,
+      "gameGoalsAgainst": 0,
+      "cumGoalsFor": 20,
+      "cumGoalsAgainst": 11,
+      "cumGoalDifference": 9
     }
   ]
 }
