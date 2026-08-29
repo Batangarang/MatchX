@@ -1,25 +1,25 @@
 {
-  "generatedAt": "2026-08-29T14:25:42.166Z",
+  "generatedAt": "2026-08-29T14:31:00.070Z",
   "date": "2026-08-29",
   "isToday": true,
-  "postCount": 71,
+  "postCount": 79,
   "fixtures": [
     {
       "home": "AFC Bridgnorth",
       "away": "New Mills",
       "kickoff": "15:00",
       "score": "1-1",
-      "matchStage": "first_half",
+      "matchStage": "second_half",
       "goals": [
         {
           "minute": "6",
-          "team": "home",
+          "team": "away",
           "scorer": "Josh Lowe"
         },
         {
           "minute": "16",
-          "team": "away",
-          "scorer": "Unknown"
+          "team": "home",
+          "scorer": "deflected effort"
         }
       ],
       "yellowCards": [],
@@ -30,7 +30,7 @@
       "away": "Market Drayton Town",
       "kickoff": "15:00",
       "score": null,
-      "matchStage": "first_half",
+      "matchStage": "second_half",
       "goals": [],
       "yellowCards": [
         {
@@ -45,7 +45,7 @@
       "away": "Wednesfield Community",
       "kickoff": "15:00",
       "score": "1-0",
-      "matchStage": "first_half",
+      "matchStage": "second_half",
       "goals": [
         {
           "minute": "16",
@@ -61,12 +61,12 @@
       "away": "Stafford Town",
       "kickoff": "15:00",
       "score": "0-0",
-      "matchStage": "first_half",
+      "matchStage": "second_half",
       "goals": [],
       "yellowCards": [
         {
-          "team": "home",
-          "player": null
+          "team": "away",
+          "player": "Cooper"
         }
       ],
       "redCards": []
@@ -76,7 +76,7 @@
       "away": "Eccleshall",
       "kickoff": "15:00",
       "score": "0-1",
-      "matchStage": "first_half",
+      "matchStage": "second_half",
       "goals": [
         {
           "minute": "15",
@@ -84,7 +84,16 @@
           "scorer": "Dylan"
         }
       ],
-      "yellowCards": [],
+      "yellowCards": [
+        {
+          "team": "home",
+          "player": "C.Graham"
+        },
+        {
+          "team": "home",
+          "player": "Cheadle"
+        }
+      ],
       "redCards": []
     },
     {
@@ -92,12 +101,12 @@
       "away": "Telford Town",
       "kickoff": "15:00",
       "score": "1-0",
-      "matchStage": "first_half",
+      "matchStage": "second_half",
       "goals": [
         {
           "minute": "10",
           "team": "home",
-          "scorer": "Unknown"
+          "scorer": null
         }
       ],
       "yellowCards": [
@@ -113,17 +122,22 @@
       "away": "Brereton Social",
       "kickoff": "15:00",
       "score": "0-0",
-      "matchStage": "first_half",
+      "matchStage": "second_half",
       "goals": [],
-      "yellowCards": [],
+      "yellowCards": [
+        {
+          "team": "home",
+          "player": "Baker"
+        }
+      ],
       "redCards": []
     },
     {
       "home": "Sandbach United",
       "away": "Widnes Town",
       "kickoff": "15:00",
-      "score": "2-0",
-      "matchStage": "first_half",
+      "score": "3-0",
+      "matchStage": "second_half",
       "goals": [
         {
           "minute": "11",
@@ -134,6 +148,11 @@
           "minute": "19",
           "team": "home",
           "scorer": "Hatton"
+        },
+        {
+          "minute": "30",
+          "team": "home",
+          "scorer": "Foley"
         }
       ],
       "yellowCards": [],
@@ -143,9 +162,15 @@
       "home": "Shawbury United",
       "away": "Dawley Town",
       "kickoff": "15:00",
-      "score": null,
-      "matchStage": "scheduled",
-      "goals": [],
+      "score": "0-1",
+      "matchStage": "second_half",
+      "goals": [
+        {
+          "minute": "27",
+          "team": "away",
+          "scorer": "Ross Jones"
+        }
+      ],
       "yellowCards": [],
       "redCards": []
     },
@@ -154,11 +179,11 @@
       "away": "Alsager Town",
       "kickoff": "15:00",
       "score": "0-0",
-      "matchStage": "first_half",
+      "matchStage": "second_half",
       "goals": [],
       "yellowCards": [],
       "redCards": []
     }
   ],
-  "ticker": "@alsagertown_fc: 20’ | Great clearance by James Peake then Johnrose is able to hold the ball up &amp; win a throw-in higher up the field after a battle with the defender. 👍\n\nTough start to this match. 😤\n\n0-0 | @WolvesCassies"
+  "ticker": "@shawburyutd: 27’ GOOOAAL! Ross Jones bursts through and puts the visitors ahead \n\n⚪️⚫️0-1🔵🔵\n\n@DawleyTownFC"
 }
