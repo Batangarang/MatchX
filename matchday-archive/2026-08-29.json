@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-08-29T13:01:17.208Z",
+  "generatedAt": "2026-08-29T13:40:52.570Z",
   "fixtureDate": "2026-08-29",
   "kickoff": "15:00",
   "homeTeam": "Sandbach United",
   "awayTeam": "Widnes Town",
-  "postsUsed": 2,
+  "postsUsed": 3,
   "imagesAnalyzedThisRun": 1,
-  "totalImagesAnalyzed": 1,
+  "totalImagesAnalyzed": 2,
   "match": {
     "score": null,
     "scoreDiscrepancy": null,
@@ -16,8 +16,26 @@
     "matchStage": "scheduled",
     "lineups": {
       "home": {
-        "players": [],
-        "substitutes": [],
+        "players": [
+          "1. Greg Hall",
+          "2. Kieran O'Connell",
+          "3. Max Williams",
+          "4. Saul Shotton",
+          "5. Jack Finney",
+          "6. Stan Tatters",
+          "7. Mason Wilson",
+          "8. Mitch Nolan",
+          "9. Nathan Barry",
+          "10. Robbie Hatton",
+          "11. Kyle Foley"
+        ],
+        "substitutes": [
+          "Bavington",
+          "Stafford",
+          "Pollard",
+          "Forrester",
+          "Vaghan"
+        ],
         "manager": null,
         "officials": []
       },
@@ -52,22 +70,22 @@
       "firstHalf": {
         "home": 0,
         "away": 0,
-        "note": "Match not yet played; only pre-match posts available"
+        "note": "No match action reported yet"
       },
       "secondHalf": {
         "home": 0,
         "away": 0,
-        "note": "Match not yet played"
+        "note": "No match action reported yet"
       },
       "extraTime": {
         "home": 0,
         "away": 0,
-        "note": "Match not yet played"
+        "note": "No extra time"
       },
       "total": {
         "home": 0,
         "away": 0,
-        "note": "Match not yet played"
+        "note": "No match action reported yet"
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
@@ -85,7 +103,7 @@
       "extraTime": {
         "home": 50,
         "away": 50,
-        "note": "Match not yet played"
+        "note": "No extra time"
       },
       "total": {
         "home": 50,
