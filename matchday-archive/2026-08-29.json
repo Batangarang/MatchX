@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-08-29T15:21:01.218Z",
+  "generatedAt": "2026-08-29T15:25:49.158Z",
   "fixtureDate": "2026-08-29",
   "kickoff": "15:00",
   "homeTeam": "Sandbach United",
   "awayTeam": "Widnes Town",
-  "postsUsed": 21,
+  "postsUsed": 23,
   "imagesAnalyzedThisRun": 0,
   "totalImagesAnalyzed": 5,
   "match": {
@@ -65,7 +65,20 @@
     ],
     "yellowCards": [],
     "redCards": [],
-    "substitutions": [],
+    "substitutions": [
+      {
+        "minute": 67,
+        "team": "home",
+        "playerOff": "Mason Wilson",
+        "playerOn": "Brad Forrester"
+      },
+      {
+        "minute": 67,
+        "team": "home",
+        "playerOff": "Mitch Nolan",
+        "playerOn": "Jordan Stafford"
+      }
+    ],
     "sinBins": [],
     "injuries": [],
     "addedTime": {
@@ -84,24 +97,24 @@
     },
     "roughXG": {
       "firstHalf": {
-        "home": 2.8,
+        "home": 2.2,
         "away": 0.2,
-        "note": "Sandbach dominated with multiple clear chances; shots from Foley, Hatton, O'Connell (25-yard screamer), headers from corner, and eventually three goals. Widnes had only one half-chance."
+        "note": "Sandbach created multiple clear-cut chances including shots from Foley, Hatton, and O'Connell before scoring three goals. Widnes had only half-chances."
       },
       "secondHalf": {
-        "home": 1.2,
-        "away": 0.1,
-        "note": "Sandbach continued to press with a Foley header saved; Widnes hit the post from an offside situation and had minimal attacking play."
+        "home": 1.1,
+        "away": 0.3,
+        "note": "Sandbach continued to create chances (Foley header saved, Foley shot saved, missed chance from Tatters chip). Widnes had limited opportunities and hit the post once."
       },
       "extraTime": {
         "home": 0,
         "away": 0,
-        "note": "Match did not go to extra time."
+        "note": "No extra time played."
       },
       "total": {
-        "home": 4,
-        "away": 0.3,
-        "note": "Sandbach were dominant throughout, scoring 3 goals and creating numerous chances. Widnes offered little attacking threat."
+        "home": 3.3,
+        "away": 0.5,
+        "note": "Sandbach dominated with three genuine goals and multiple additional chances. Widnes created very little."
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
@@ -109,22 +122,22 @@
       "firstHalf": {
         "home": 85,
         "away": 15,
-        "note": "Sandbach dominated possession and chances, scoring 3 goals by half-time. Widnes had only rare half-chances."
+        "note": "Sandbach controlled the match from kickoff, creating constant pressure and scoring three goals. Widnes offered minimal threat."
       },
       "secondHalf": {
         "home": 80,
         "away": 20,
-        "note": "Sandbach remained in control with continued attacking play and shooting. Widnes mounted minimal threat despite hitting the post."
+        "note": "Sandbach continued dominance with sustained attacking play. Widnes had rare moments but remained well-contained."
       },
       "extraTime": {
         "home": 50,
         "away": 50,
-        "note": "Match did not go to extra time."
+        "note": "No extra time played."
       },
       "total": {
-        "home": 83,
-        "away": 17,
-        "note": "Sandbach were thoroughly dominant from start to finish, controlling the ball and creating chances consistently."
+        "home": 82,
+        "away": 18,
+        "note": "Comprehensive Sandbach control throughout; Widnes never threatened seriously despite occasional chances."
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
