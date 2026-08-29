@@ -1,20 +1,25 @@
 {
-  "generatedAt": "2026-08-29T14:15:42.424Z",
+  "generatedAt": "2026-08-29T14:20:46.203Z",
   "date": "2026-08-29",
   "isToday": true,
-  "postCount": 62,
+  "postCount": 67,
   "fixtures": [
     {
       "home": "AFC Bridgnorth",
       "away": "New Mills",
       "kickoff": "15:00",
-      "score": "0-1",
+      "score": "1-1",
       "matchStage": "first_half",
       "goals": [
         {
-          "minute": 6,
+          "minute": "6",
           "team": "away",
           "scorer": "Josh Lowe"
+        },
+        {
+          "minute": "16",
+          "team": "home",
+          "scorer": null
         }
       ],
       "yellowCards": [],
@@ -27,7 +32,12 @@
       "score": null,
       "matchStage": "first_half",
       "goals": [],
-      "yellowCards": [],
+      "yellowCards": [
+        {
+          "team": "away",
+          "player": "Kian"
+        }
+      ],
       "redCards": []
     },
     {
@@ -49,8 +59,8 @@
       "goals": [],
       "yellowCards": [
         {
-          "team": "away",
-          "player": "Cooper"
+          "team": "home",
+          "player": null
         }
       ],
       "redCards": []
@@ -63,9 +73,9 @@
       "matchStage": "first_half",
       "goals": [
         {
-          "minute": 15,
+          "minute": "15",
           "team": "away",
-          "scorer": "Dylan"
+          "scorer": null
         }
       ],
       "yellowCards": [],
@@ -79,7 +89,7 @@
       "matchStage": "first_half",
       "goals": [
         {
-          "minute": 10,
+          "minute": "10",
           "team": "home",
           "scorer": null
         }
@@ -106,13 +116,18 @@
       "home": "Sandbach United",
       "away": "Widnes Town",
       "kickoff": "15:00",
-      "score": "1-0",
+      "score": "2-0",
       "matchStage": "first_half",
       "goals": [
         {
-          "minute": 11,
+          "minute": "11",
           "team": "home",
-          "scorer": "Kieran O'Connell"
+          "scorer": "Kieron O'Connell"
+        },
+        {
+          "minute": "19",
+          "team": "home",
+          "scorer": null
         }
       ],
       "yellowCards": [],
@@ -139,5 +154,5 @@
       "redCards": []
     }
   ],
-  "ticker": "@EccleshallFC: 15' ball edge of the box, Dylan evades a tackle and scores\n\n0-1\n\n💙🦅\n\n#EccleshallFC"
+  "ticker": "@SandbachFC_1st: 🔵⚪️ v 🟡🟡\n\nSandbach United v Widnes Town\n\nAnd it’s 2 as Hatton drives through from the half way line and slide rules a pass that Barry and he finishes low under the keeper. Deserved he’s goal and get in The Bach\n\n2 0\n\n19 mins gone"
 }
