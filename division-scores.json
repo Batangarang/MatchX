@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-08-29T14:10:43.650Z",
+  "generatedAt": "2026-08-29T14:15:42.424Z",
   "date": "2026-08-29",
   "isToday": true,
-  "postCount": 55,
+  "postCount": 62,
   "fixtures": [
     {
       "home": "AFC Bridgnorth",
@@ -12,7 +12,7 @@
       "matchStage": "first_half",
       "goals": [
         {
-          "minute": "6",
+          "minute": 6,
           "team": "away",
           "scorer": "Josh Lowe"
         }
@@ -25,7 +25,7 @@
       "away": "Market Drayton Town",
       "kickoff": "15:00",
       "score": null,
-      "matchStage": "scheduled",
+      "matchStage": "first_half",
       "goals": [],
       "yellowCards": [],
       "redCards": []
@@ -47,16 +47,27 @@
       "score": "0-0",
       "matchStage": "first_half",
       "goals": [],
-      "yellowCards": [],
+      "yellowCards": [
+        {
+          "team": "away",
+          "player": "Cooper"
+        }
+      ],
       "redCards": []
     },
     {
       "home": "Cheadle Heath Nomads",
       "away": "Eccleshall",
       "kickoff": "15:00",
-      "score": "0-0",
+      "score": "0-1",
       "matchStage": "first_half",
-      "goals": [],
+      "goals": [
+        {
+          "minute": 15,
+          "team": "away",
+          "scorer": "Dylan"
+        }
+      ],
       "yellowCards": [],
       "redCards": []
     },
@@ -68,7 +79,7 @@
       "matchStage": "first_half",
       "goals": [
         {
-          "minute": "10",
+          "minute": 10,
           "team": "home",
           "scorer": null
         }
@@ -95,9 +106,15 @@
       "home": "Sandbach United",
       "away": "Widnes Town",
       "kickoff": "15:00",
-      "score": "0-0",
+      "score": "1-0",
       "matchStage": "first_half",
-      "goals": [],
+      "goals": [
+        {
+          "minute": 11,
+          "team": "home",
+          "scorer": "Kieran O'Connell"
+        }
+      ],
       "yellowCards": [],
       "redCards": []
     },
@@ -122,5 +139,5 @@
       "redCards": []
     }
   ],
-  "ticker": "@TelfordTownFC: 10': Goal for Crewe\n#CRETEL\nhttps://www.telfordtownfc.co.uk/teams/277817/match-centre/1-19876210?utm_campaign=match_event&utm_medium=post&utm_source=twitter&utm_content=goal https://t.co/AaCBZtRzn1"
+  "ticker": "@EccleshallFC: 15' ball edge of the box, Dylan evades a tackle and scores\n\n0-1\n\n💙🦅\n\n#EccleshallFC"
 }
