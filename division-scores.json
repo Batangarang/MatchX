@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-08-29T14:01:14.163Z",
+  "generatedAt": "2026-08-29T14:05:34.215Z",
   "date": "2026-08-29",
   "isToday": true,
-  "postCount": 39,
+  "postCount": 47,
   "fixtures": [
     {
       "home": "AFC Bridgnorth",
       "away": "New Mills",
       "kickoff": "15:00",
       "score": null,
-      "matchStage": "scheduled",
+      "matchStage": "first_half",
       "goals": [],
       "yellowCards": [],
       "redCards": []
@@ -28,8 +28,8 @@
       "home": "Barnton",
       "away": "Wednesfield Community",
       "kickoff": "15:00",
-      "score": null,
-      "matchStage": "scheduled",
+      "score": "0-0",
+      "matchStage": "first_half",
       "goals": [],
       "yellowCards": [],
       "redCards": []
@@ -38,7 +38,7 @@
       "home": "Bilston Town",
       "away": "Stafford Town",
       "kickoff": "15:00",
-      "score": "0-0",
+      "score": null,
       "matchStage": "first_half",
       "goals": [],
       "yellowCards": [],
@@ -48,7 +48,7 @@
       "home": "Cheadle Heath Nomads",
       "away": "Eccleshall",
       "kickoff": "15:00",
-      "score": null,
+      "score": "0-0",
       "matchStage": "first_half",
       "goals": [],
       "yellowCards": [],
@@ -58,18 +58,29 @@
       "home": "Crewe",
       "away": "Telford Town",
       "kickoff": "15:00",
-      "score": null,
-      "matchStage": "scheduled",
-      "goals": [],
-      "yellowCards": [],
+      "score": "0-1",
+      "matchStage": "first_half",
+      "goals": [
+        {
+          "minute": 4,
+          "team": "away",
+          "scorer": null
+        }
+      ],
+      "yellowCards": [
+        {
+          "team": "away",
+          "player": "Jordan Jones"
+        }
+      ],
       "redCards": []
     },
     {
       "home": "Foley Meir",
       "away": "Brereton Social",
       "kickoff": "15:00",
-      "score": null,
-      "matchStage": "scheduled",
+      "score": "0-0",
+      "matchStage": "first_half",
       "goals": [],
       "yellowCards": [],
       "redCards": []
@@ -105,5 +116,5 @@
       "redCards": []
     }
   ],
-  "ticker": "@EccleshallFC: The game is underway here in a rainy Cheadle\n\n💙🦅\n\n#EccleshallFC"
+  "ticker": "@TelfordTownFC: 4': Jordan Jones is yellow carded for Telford Town\n#CRETEL\nhttps://www.telfordtownfc.co.uk/teams/277817/match-centre/1-19876210?utm_campaign=match_event&utm_medium=post&utm_source=twitter&utm_content=yellow_card https://t.co/O7sQSTfPKd"
 }
