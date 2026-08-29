@@ -1,210 +1,80 @@
 {
-  "generatedAt": "2026-08-29T14:40:45.442Z",
-  "date": "2026-08-29",
-  "isToday": true,
-  "postCount": 90,
+  "generatedAt": "2026-08-29T23:01:06.257Z",
+  "date": "2026-09-05",
+  "isToday": false,
   "fixtures": [
     {
       "home": "AFC Bridgnorth",
-      "away": "New Mills",
+      "away": "Shawbury United",
       "kickoff": "15:00",
-      "score": "1-1",
-      "matchStage": "second_half",
-      "goals": [
-        {
-          "minute": "6",
-          "team": "away",
-          "scorer": "Josh Lowe"
-        },
-        {
-          "minute": "16",
-          "team": "home",
-          "scorer": "deflected effort"
-        }
-      ],
-      "yellowCards": [
-        {
-          "team": "away",
-          "player": "Marcelo"
-        }
-      ],
+      "score": null,
+      "goals": [],
       "redCards": []
     },
     {
-      "home": "Allscott Heath",
-      "away": "Market Drayton Town",
+      "home": "Alsager Town",
+      "away": "Crewe",
       "kickoff": "15:00",
-      "score": "0-1",
-      "matchStage": "second_half",
-      "goals": [
-        {
-          "minute": "32",
-          "team": "away",
-          "scorer": "James"
-        }
-      ],
-      "yellowCards": [
-        {
-          "team": "away",
-          "player": "Kian"
-        }
-      ],
+      "score": null,
+      "goals": [],
       "redCards": []
     },
     {
       "home": "Barnton",
-      "away": "Wednesfield Community",
+      "away": "Foley Meir",
       "kickoff": "15:00",
-      "score": "1-0",
-      "matchStage": "second_half",
-      "goals": [
-        {
-          "minute": "16",
-          "team": "home",
-          "scorer": "Tom Stanton"
-        }
-      ],
-      "yellowCards": [],
-      "redCards": []
-    },
-    {
-      "home": "Bilston Town",
-      "away": "Stafford Town",
-      "kickoff": "15:00",
-      "score": "0-0",
-      "matchStage": "second_half",
+      "score": null,
       "goals": [],
-      "yellowCards": [
-        {
-          "team": "away",
-          "player": "Efford"
-        }
-      ],
       "redCards": []
     },
     {
-      "home": "Cheadle Heath Nomads",
-      "away": "Eccleshall",
+      "home": "Brereton Social",
+      "away": "Sandbach United",
       "kickoff": "15:00",
-      "score": "0-1",
-      "matchStage": "second_half",
-      "goals": [
-        {
-          "minute": "15",
-          "team": "away",
-          "scorer": "Dylan"
-        }
-      ],
-      "yellowCards": [
-        {
-          "team": "away",
-          "player": "Max"
-        },
-        {
-          "team": "home",
-          "player": "Cheadle"
-        }
-      ],
-      "redCards": []
-    },
-    {
-      "home": "Crewe",
-      "away": "Telford Town",
-      "kickoff": "15:00",
-      "score": "1-0",
-      "matchStage": "second_half",
-      "goals": [
-        {
-          "minute": "10",
-          "team": "home",
-          "scorer": null
-        }
-      ],
-      "yellowCards": [
-        {
-          "team": "away",
-          "player": "Jordan Jones"
-        }
-      ],
-      "redCards": []
-    },
-    {
-      "home": "Foley Meir",
-      "away": "Brereton Social",
-      "kickoff": "15:00",
-      "score": "0-0",
-      "matchStage": "second_half",
+      "score": null,
       "goals": [],
-      "yellowCards": [
-        {
-          "team": "home",
-          "player": "Baker"
-        }
-      ],
       "redCards": []
     },
     {
-      "home": "Sandbach United",
-      "away": "Widnes Town",
-      "kickoff": "15:00",
-      "score": "3-0",
-      "matchStage": "second_half",
-      "goals": [
-        {
-          "minute": "11",
-          "team": "home",
-          "scorer": "Kieron O'Connell"
-        },
-        {
-          "minute": "19",
-          "team": "home",
-          "scorer": "Hatton"
-        },
-        {
-          "minute": "30",
-          "team": "home",
-          "scorer": "Foley"
-        }
-      ],
-      "yellowCards": [],
-      "redCards": []
-    },
-    {
-      "home": "Shawbury United",
+      "home": "Eccleshall",
       "away": "Dawley Town",
       "kickoff": "15:00",
-      "score": "0-2",
-      "matchStage": "second_half",
-      "goals": [
-        {
-          "minute": "27",
-          "team": "away",
-          "scorer": "Ross Jones"
-        },
-        {
-          "minute": "36",
-          "team": "away",
-          "scorer": "Jones"
-        }
-      ],
-      "yellowCards": [],
+      "score": null,
+      "goals": [],
+      "redCards": []
+    },
+    {
+      "home": "Market Drayton Town",
+      "away": "Cheadle Heath Nomads",
+      "kickoff": "15:00",
+      "score": null,
+      "goals": [],
+      "redCards": []
+    },
+    {
+      "home": "Stafford Town",
+      "away": "Allscott Heath",
+      "kickoff": "15:00",
+      "score": null,
+      "goals": [],
+      "redCards": []
+    },
+    {
+      "home": "Wednesfield Community",
+      "away": "Telford Town",
+      "kickoff": "15:00",
+      "score": null,
+      "goals": [],
       "redCards": []
     },
     {
       "home": "Wolverhampton Casuals",
-      "away": "Alsager Town",
+      "away": "Bilston Town",
       "kickoff": "15:00",
-      "score": "0-0",
-      "matchStage": "second_half",
+      "score": null,
       "goals": [],
-      "yellowCards": [
-        {
-          "team": "away",
-          "player": "Jordyn Fitton"
-        }
-      ],
       "redCards": []
     }
   ],
-  "ticker": "@StaffordTown1st: 40 - Finally some positive play from Stafford \n\nPat holds the ball well and lays off to Parker. Who’s shot from 20 yards curls wide of the post. \n\n🟠⚫️ 0-0 🔘🔘"
+  "ticker": null
 }
