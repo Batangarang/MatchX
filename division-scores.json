@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-08-29T14:35:36.058Z",
+  "generatedAt": "2026-08-29T14:40:45.442Z",
   "date": "2026-08-29",
   "isToday": true,
-  "postCount": 86,
+  "postCount": 90,
   "fixtures": [
     {
       "home": "AFC Bridgnorth",
@@ -13,25 +13,36 @@
       "goals": [
         {
           "minute": "6",
-          "team": "home",
+          "team": "away",
           "scorer": "Josh Lowe"
         },
         {
           "minute": "16",
-          "team": "away",
-          "scorer": "unknown"
+          "team": "home",
+          "scorer": "deflected effort"
         }
       ],
-      "yellowCards": [],
+      "yellowCards": [
+        {
+          "team": "away",
+          "player": "Marcelo"
+        }
+      ],
       "redCards": []
     },
     {
       "home": "Allscott Heath",
       "away": "Market Drayton Town",
       "kickoff": "15:00",
-      "score": null,
+      "score": "0-1",
       "matchStage": "second_half",
-      "goals": [],
+      "goals": [
+        {
+          "minute": "32",
+          "team": "away",
+          "scorer": "James"
+        }
+      ],
       "yellowCards": [
         {
           "team": "away",
@@ -106,7 +117,7 @@
         {
           "minute": "10",
           "team": "home",
-          "scorer": "unknown"
+          "scorer": null
         }
       ],
       "yellowCards": [
@@ -162,13 +173,18 @@
       "home": "Shawbury United",
       "away": "Dawley Town",
       "kickoff": "15:00",
-      "score": "0-1",
+      "score": "0-2",
       "matchStage": "second_half",
       "goals": [
         {
           "minute": "27",
           "team": "away",
           "scorer": "Ross Jones"
+        },
+        {
+          "minute": "36",
+          "team": "away",
+          "scorer": "Jones"
         }
       ],
       "yellowCards": [],
@@ -190,5 +206,5 @@
       "redCards": []
     }
   ],
-  "ticker": "@WolvesCassies: 30': Jordyn Fitton is yellow carded for Alsager Town\n#WOLALS #Pitchero\nhttps://www.wolverhamptoncasualsfc.co.uk/teams/294420/match-centre/1-19876214?utm_campaign=match_event&utm_medium=post&utm_source=twitter&utm_content=yellow_card https://t.co/8OAy15r1z7"
+  "ticker": "@StaffordTown1st: 40 - Finally some positive play from Stafford \n\nPat holds the ball well and lays off to Parker. Who’s shot from 20 yards curls wide of the post. \n\n🟠⚫️ 0-0 🔘🔘"
 }
