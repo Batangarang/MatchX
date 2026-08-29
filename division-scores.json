@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-08-29T14:20:46.203Z",
+  "generatedAt": "2026-08-29T14:25:42.166Z",
   "date": "2026-08-29",
   "isToday": true,
-  "postCount": 67,
+  "postCount": 71,
   "fixtures": [
     {
       "home": "AFC Bridgnorth",
@@ -13,13 +13,13 @@
       "goals": [
         {
           "minute": "6",
-          "team": "away",
+          "team": "home",
           "scorer": "Josh Lowe"
         },
         {
           "minute": "16",
-          "team": "home",
-          "scorer": null
+          "team": "away",
+          "scorer": "Unknown"
         }
       ],
       "yellowCards": [],
@@ -44,9 +44,15 @@
       "home": "Barnton",
       "away": "Wednesfield Community",
       "kickoff": "15:00",
-      "score": "0-0",
+      "score": "1-0",
       "matchStage": "first_half",
-      "goals": [],
+      "goals": [
+        {
+          "minute": "16",
+          "team": "home",
+          "scorer": "Tom Stanton"
+        }
+      ],
       "yellowCards": [],
       "redCards": []
     },
@@ -75,7 +81,7 @@
         {
           "minute": "15",
           "team": "away",
-          "scorer": null
+          "scorer": "Dylan"
         }
       ],
       "yellowCards": [],
@@ -91,7 +97,7 @@
         {
           "minute": "10",
           "team": "home",
-          "scorer": null
+          "scorer": "Unknown"
         }
       ],
       "yellowCards": [
@@ -127,7 +133,7 @@
         {
           "minute": "19",
           "team": "home",
-          "scorer": null
+          "scorer": "Hatton"
         }
       ],
       "yellowCards": [],
@@ -154,5 +160,5 @@
       "redCards": []
     }
   ],
-  "ticker": "@SandbachFC_1st: 🔵⚪️ v 🟡🟡\n\nSandbach United v Widnes Town\n\nAnd it’s 2 as Hatton drives through from the half way line and slide rules a pass that Barry and he finishes low under the keeper. Deserved he’s goal and get in The Bach\n\n2 0\n\n19 mins gone"
+  "ticker": "@alsagertown_fc: 20’ | Great clearance by James Peake then Johnrose is able to hold the ball up &amp; win a throw-in higher up the field after a battle with the defender. 👍\n\nTough start to this match. 😤\n\n0-0 | @WolvesCassies"
 }
