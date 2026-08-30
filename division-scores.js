@@ -173,16 +173,20 @@ async function run() {
   ).sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
 
   const totalPostCount = allPosts.length;
-
+  const latestPostTimestamp = allPosts[0]?.createdAt || null;
   let previous = null;
   if (fs.existsSync('division-scores.json')) {
     previous = JSON.parse(fs.readFileSync('division-scores.json', 'utf-8'));
   }
-  if (previous && previous.postCount === totalPostCount && previous.date === target.targetDate) {
+  if (
+    previous &&
+    previous.postCount === totalPostCount &&
+    previous.latestPostTimestamp === latestPostTimestamp &&
+    previous.date === target.targetDate
+  ) {
     console.log('Nothing new since last check — skipping AI call.');
     return;
   }
-
   if (allPosts.length === 0) {
     console.log('No posts found from any club playing today.');
     return;
@@ -250,11 +254,12 @@ Only include a score if explicitly stated in the posts. Leave as null if not men
     return { ...f, score: `${home}-${away}`, matchStage: f.matchStage || 'scheduled' };
  });
 
-  const output = {
+    const output = {
     generatedAt: REAL_NOW.toISOString(),
     date: target.targetDate,
     isToday: true,
     postCount: totalPostCount,
+    latestPostTimestamp,
     fixtures: fixturesWithDerivedScores,
     ticker,
   };
