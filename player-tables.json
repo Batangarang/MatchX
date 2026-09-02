@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-02T11:00:57.511Z",
+  "generatedAt": "2026-09-02T12:01:04.116Z",
   "division": "First Division South",
   "appearances": [
     {
@@ -288,6 +288,12 @@
     },
     {
       "rank": "2",
+      "player": "Ross Jones",
+      "club": "Dawley Town",
+      "total": "5"
+    },
+    {
+      "rank": "3",
       "player": "Luc Ferry",
       "club": "New Mills",
       "total": "5"
@@ -305,7 +311,7 @@
       "total": "4"
     },
     {
-      "rank": "5",
+      "rank": "6",
       "player": "Ben Davies",
       "club": "Allscott Heath",
       "total": "4"
@@ -333,12 +339,6 @@
       "player": "Liam Kirton",
       "club": "Wolverhampton Casuals",
       "total": "4"
-    },
-    {
-      "rank": "-",
-      "player": "Ross Jones",
-      "club": "Dawley Town",
-      "total": "3"
     },
     {
       "rank": "-",
@@ -692,6 +692,18 @@
     },
     {
       "rank": "-",
+      "player": "Mitchell Evans",
+      "club": "AFC Bridgnorth",
+      "total": "2"
+    },
+    {
+      "rank": "-",
+      "player": "Carl Rogers",
+      "club": "Allscott Heath",
+      "total": "2"
+    },
+    {
+      "rank": "-",
       "player": "Benjamin Summers",
       "club": "Allscott Heath",
       "total": "2"
@@ -734,6 +746,12 @@
     },
     {
       "rank": "-",
+      "player": "Tyron Oliver",
+      "club": "Dawley Town",
+      "total": "2"
+    },
+    {
+      "rank": "-",
       "player": "Archie Ellams",
       "club": "Foley Meir",
       "total": "2"
@@ -758,19 +776,25 @@
     },
     {
       "rank": "-",
+      "player": "Oliver Cooper",
+      "club": "Shawbury United",
+      "total": "2"
+    },
+    {
+      "rank": "-",
       "player": "Rhyce Brown",
       "club": "Telford Town",
       "total": "2"
     },
     {
-      "rank": "20",
-      "player": "David Anani",
-      "club": "AFC Bridgnorth",
-      "total": "1"
+      "rank": "-",
+      "player": "Rio Tetsell",
+      "club": "Wednesfield Community",
+      "total": "2"
     },
     {
-      "rank": "-",
-      "player": "Mitchell Evans",
+      "rank": "25",
+      "player": "David Anani",
       "club": "AFC Bridgnorth",
       "total": "1"
     },
@@ -806,12 +830,6 @@
     },
     {
       "rank": "-",
-      "player": "Carl Rogers",
-      "club": "Allscott Heath",
-      "total": "1"
-    },
-    {
-      "rank": "-",
       "player": "Jacob Welch",
       "club": "Allscott Heath",
       "total": "1"
@@ -831,6 +849,12 @@
     {
       "rank": "-",
       "player": "Ivan Otono",
+      "club": "Alsager Town",
+      "total": "1"
+    },
+    {
+      "rank": "-",
+      "player": "Samuel Stephens",
       "club": "Alsager Town",
       "total": "1"
     },
@@ -856,6 +880,18 @@
       "rank": "-",
       "player": "Nathan Guest",
       "club": "Bilston Town",
+      "total": "1"
+    },
+    {
+      "rank": "-",
+      "player": "Ben Priest",
+      "club": "Bilston Town",
+      "total": "1"
+    },
+    {
+      "rank": "-",
+      "player": "Jake Cartwright",
+      "club": "Brereton Social",
       "total": "1"
     },
     {
@@ -926,12 +962,6 @@
     },
     {
       "rank": "-",
-      "player": "Tyron Oliver",
-      "club": "Dawley Town",
-      "total": "1"
-    },
-    {
-      "rank": "-",
       "player": "Jay Owen",
       "club": "Dawley Town",
       "total": "1"
@@ -968,6 +998,12 @@
     },
     {
       "rank": "-",
+      "player": "Zach  Robinson",
+      "club": "Foley Meir",
+      "total": "1"
+    },
+    {
+      "rank": "-",
       "player": "Connor Withers",
       "club": "Foley Meir",
       "total": "1"
@@ -987,6 +1023,12 @@
     {
       "rank": "-",
       "player": "Aidan McCann",
+      "club": "Market Drayton Town",
+      "total": "1"
+    },
+    {
+      "rank": "-",
+      "player": "Shaun Rowley",
       "club": "Market Drayton Town",
       "total": "1"
     },
@@ -1034,6 +1076,12 @@
     },
     {
       "rank": "-",
+      "player": "Robbie Hatton",
+      "club": "Sandbach United",
+      "total": "1"
+    },
+    {
+      "rank": "-",
       "player": "Lewis Bloor",
       "club": "Shawbury United",
       "total": "1"
@@ -1052,12 +1100,6 @@
     },
     {
       "rank": "-",
-      "player": "Oliver Cooper",
-      "club": "Shawbury United",
-      "total": "1"
-    },
-    {
-      "rank": "-",
       "player": "Josh Hesson",
       "club": "Shawbury United",
       "total": "1"
@@ -1071,6 +1113,12 @@
     {
       "rank": "-",
       "player": "Daniel Clarkson",
+      "club": "Stafford Town",
+      "total": "1"
+    },
+    {
+      "rank": "-",
+      "player": "Daniel Cooper",
       "club": "Stafford Town",
       "total": "1"
     },
@@ -1136,14 +1184,20 @@
     },
     {
       "rank": "-",
-      "player": "Rio Tetsell",
-      "club": "Wednesfield Community",
+      "player": "Xenon Bahula",
+      "club": "Widnes Town",
       "total": "1"
     },
     {
       "rank": "-",
-      "player": "Xenon Bahula",
+      "player": "Connor Dixon",
       "club": "Widnes Town",
+      "total": "1"
+    },
+    {
+      "rank": "-",
+      "player": "Liam Kirton",
+      "club": "Wolverhampton Casuals",
       "total": "1"
     },
     {
@@ -1154,7 +1208,7 @@
     },
     {
       "rank": "-",
-      "player": "Liam Kirton",
+      "player": "Jake Pearson",
       "club": "Wolverhampton Casuals",
       "total": "1"
     },
