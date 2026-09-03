@@ -1,5 +1,5 @@
 {
-  "scrapedAt": "2026-09-03T17:01:03.894Z",
+  "scrapedAt": "2026-09-03T18:00:59.360Z",
   "nextFixture": {
     "date": "Sat 05/09/26",
     "opposition": "Brereton Social",
@@ -254,6 +254,16 @@
       "score": null,
       "scorers": null,
       "competitionNote": null
+    },
+    {
+      "date": "Tue 13/10/26",
+      "opposition": "Stockport County",
+      "opponentUrl": null,
+      "homeAway": "H",
+      "kickoff": "19:45",
+      "score": null,
+      "scorers": null,
+      "competitionNote": "Cheshire Senior Cup 1"
     },
     {
       "date": "Sat 17/10/26",
