@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-09-05T15:45:53.662Z",
+  "generatedAt": "2026-09-05T15:50:55.943Z",
   "fixtureDate": "2026-09-05",
   "kickoff": "15:00",
   "homeTeam": "Brereton Social",
   "awayTeam": "Sandbach United",
-  "postsUsed": 21,
+  "postsUsed": 22,
   "imagesAnalyzedThisRun": 0,
   "totalImagesAnalyzed": 5,
   "match": {
@@ -155,45 +155,45 @@
       "firstHalf": {
         "home": 0.3,
         "away": 0.4,
-        "note": "Both teams had overhead kick attempts; Brereton had half-chance from free-kick"
+        "note": "Both teams had overhead kick attempts; Sandbach appealed for a penalty. Few clear-cut chances."
       },
       "secondHalf": {
         "home": 0.2,
         "away": 0.5,
-        "note": "Max Williams 25-yard strike, Pollard header, defensive close calls; very few clear chances"
+        "note": "Sandbach had Max Williams' 25-yard strike, Barry header and late snap shot. Brereton had defensive header that looped near post."
       },
       "extraTime": {
         "home": 0,
         "away": 0,
-        "note": "No extra time"
+        "note": "No extra time played"
       },
       "total": {
         "home": 0.5,
         "away": 0.9,
-        "note": "Low-quality match with minimal clear opportunities for either side; described as a 'snore fest'"
+        "note": "Very few clear chances throughout. Sandbach marginally more threatening but no quality finishing from either side."
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
     "matchControl": {
       "firstHalf": {
-        "home": 50,
-        "away": 50,
-        "note": "Even game with very few chances; both sides created minimal openings"
-      },
-      "secondHalf": {
         "home": 45,
         "away": 55,
-        "note": "Sandbach had slight edge; Max Williams strike and Pollard chance suggest more attacking intent"
+        "note": "Sandbach created more threat with their overhead kick and penalty appeal; Brereton also had one overhead kick attempt."
+      },
+      "secondHalf": {
+        "home": 40,
+        "away": 60,
+        "note": "Sandbach dominated with better chances after introducing Fowles and Pollard, though still limited quality."
       },
       "extraTime": {
         "home": 50,
         "away": 50,
-        "note": "No extra time"
+        "note": "No extra time played"
       },
       "total": {
-        "home": 47,
-        "away": 53,
-        "note": "Match was evenly contested but dull; Sandbach had marginally more attacking moments overall"
+        "home": 42,
+        "away": 58,
+        "note": "Sandbach United were marginally more threatening throughout, though both teams created few genuine scoring opportunities. Described as a 'snore fest' with very few chances."
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
