@@ -12317,14 +12317,14 @@
       "aiCostGBP": 0
     },
     {
-      "script": "x-posts",
-      "timestamp": "2026-09-05T13:40:42.281Z",
-      "getxapiCalls": 1,
-      "claudeCalls": 0,
-      "inputTokens": 0,
-      "outputTokens": 0,
-      "xCostGBP": 0.0008,
-      "aiCostGBP": 0
+      "script": "division-scores",
+      "timestamp": "2026-09-05T13:41:12.763Z",
+      "getxapiCalls": 18,
+      "claudeCalls": 1,
+      "inputTokens": 4660,
+      "outputTokens": 717,
+      "xCostGBP": 0.0135,
+      "aiCostGBP": 0.0062
     }
   ]
 }
