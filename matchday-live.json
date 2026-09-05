@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-09-05T14:31:09.781Z",
+  "generatedAt": "2026-09-05T14:40:48.363Z",
   "fixtureDate": "2026-09-05",
   "kickoff": "15:00",
   "homeTeam": "Brereton Social",
   "awayTeam": "Sandbach United",
-  "postsUsed": 8,
+  "postsUsed": 9,
   "imagesAnalyzedThisRun": 0,
   "totalImagesAnalyzed": 3,
   "match": {
@@ -55,6 +55,12 @@
         "team": "away",
         "playerOff": "Kieran O'Connell",
         "playerOn": "Jacob Vernon"
+      },
+      {
+        "minute": 13,
+        "team": "home",
+        "playerOff": "10",
+        "playerOn": "14"
       }
     ],
     "sinBins": [],
@@ -70,6 +76,12 @@
         "team": "home",
         "player": "Number 10",
         "note": "Collision with Bach defender on edge of area, replaced by Number 14"
+      },
+      {
+        "minute": 13,
+        "team": "home",
+        "player": "10",
+        "note": "Collision on edge of area, replaced by number 14"
       }
     ],
     "addedTime": {
@@ -89,31 +101,31 @@
     "roughXG": {
       "firstHalf": {
         "home": 0.1,
-        "away": 0.2,
-        "note": "Limited attacking play in early stages; Sandbach had a penalty appeal denied at 25 mins"
+        "away": 0.3,
+        "note": "Very limited chance creation in first 37 minutes. Sandbach had a disputed penalty appeal (25 mins), Mason (Sandbach) made good defensive challenge, Shotton (Sandbach) had effort just wide (37 mins). No clear-cut chances recorded."
       },
       "secondHalf": {
         "home": 0,
         "away": 0,
-        "note": "No second half data available"
+        "note": "No second half data available in posts"
       },
       "extraTime": {
         "home": 0,
         "away": 0,
-        "note": "No extra time"
+        "note": "Not applicable"
       },
       "total": {
         "home": 0.1,
-        "away": 0.2,
-        "note": "Very early in match; minimal shooting opportunities recorded"
+        "away": 0.3,
+        "note": "Match was goalless through 37 minutes with minimal clear chances. Sandbach slightly more threatening but no real quality opportunities."
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
     "matchControl": {
       "firstHalf": {
-        "home": 50,
-        "away": 50,
-        "note": "Balanced opening; Mason (Sandbach) made defensive clearance; Sandbach appealing for penalty late in first half"
+        "home": 45,
+        "away": 55,
+        "note": "Sandbach created more threat with Shotton effort and penalty appeal; Brereton had defensive injury at 13 mins which may have unsettled them early."
       },
       "secondHalf": {
         "home": 50,
@@ -123,12 +135,12 @@
       "extraTime": {
         "home": 50,
         "away": 50,
-        "note": "No extra time"
+        "note": "Not applicable"
       },
       "total": {
-        "home": 50,
-        "away": 50,
-        "note": "Inferred from tone/content of posts only, not real possession or shot data."
+        "home": 48,
+        "away": 52,
+        "note": "Based on limited first-half data, Sandbach marginally on top but match remained competitive and goalless."
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
