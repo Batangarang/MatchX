@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-09-05T15:35:49.315Z",
+  "generatedAt": "2026-09-05T15:40:50.651Z",
   "fixtureDate": "2026-09-05",
   "kickoff": "15:00",
   "homeTeam": "Brereton Social",
   "awayTeam": "Sandbach United",
-  "postsUsed": 18,
+  "postsUsed": 19,
   "imagesAnalyzedThisRun": 0,
   "totalImagesAnalyzed": 5,
   "match": {
@@ -58,6 +58,11 @@
         "minute": 44,
         "team": "away",
         "player": "Nathan Barry"
+      },
+      {
+        "minute": 80,
+        "team": "home",
+        "player": "BS 3"
       }
     ],
     "redCards": [],
@@ -71,8 +76,8 @@
       {
         "minute": 13,
         "team": "home",
-        "playerOff": "10",
-        "playerOn": "14"
+        "playerOff": "BS 10",
+        "playerOn": "BS 14"
       },
       {
         "minute": 57,
@@ -118,6 +123,12 @@
         "team": "home",
         "player": "number 10",
         "note": "Collision on edge of area, replaced by number 14"
+      },
+      {
+        "minute": 13,
+        "team": "home",
+        "player": "BS 10",
+        "note": "Collision on edge of area"
       }
     ],
     "addedTime": {
@@ -138,45 +149,45 @@
       "firstHalf": {
         "home": 0.3,
         "away": 0.4,
-        "note": "Both sides had overhead kicks come closest; Brereton had a free kick attempt that went wide"
+        "note": "Both teams had very few chances; Brereton had a free kick that went wide, Sandbach had an overhead kick that went wide and shouts for a penalty that was not awarded."
       },
       "secondHalf": {
-        "home": 0.1,
+        "home": 0.2,
         "away": 0.5,
-        "note": "Sandbach's Max Williams had a great 25-yard strike into side netting (48'); Fowles set up Barry who missed his kick (74')"
+        "note": "Sandbach had Max Williams' 25-yard strike to side netting (good quality) and a Barry header. Brereton had minimal clear chances."
       },
       "extraTime": {
         "home": 0,
         "away": 0,
-        "note": "No extra time played"
+        "note": "No extra time played."
       },
       "total": {
-        "home": 0.4,
+        "home": 0.5,
         "away": 0.9,
-        "note": "Very few clear-cut chances overall; Sandbach created slightly more but neither team converted"
+        "note": "Match ended 0-0 with few clear-cut opportunities for either team. Sandbach slightly edged chances but neither side converted."
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
     "matchControl": {
       "firstHalf": {
-        "home": 50,
-        "away": 50,
-        "note": "Evenly matched; described as a game with very few chances"
+        "home": 48,
+        "away": 52,
+        "note": "Balanced first half with very few chances; Sandbach marginally more attacking."
       },
       "secondHalf": {
         "home": 45,
         "away": 55,
-        "note": "Sandbach appeared slightly more threatening after slope advantage in second half"
+        "note": "Sandbach had slope advantage second half and created slightly more; Williams' strike was the best chance of the match. Overall a scrappy, low-quality contest."
       },
       "extraTime": {
         "home": 50,
         "away": 50,
-        "note": "No extra time played"
+        "note": "No extra time played."
       },
       "total": {
-        "home": 48,
-        "away": 52,
-        "note": "Sandbach slightly more dangerous overall but neither team dominated; described as 'not a classic'"
+        "home": 47,
+        "away": 53,
+        "note": "Sandbach marginally controlled the match but neither side dominated significantly. Described as 'not a classic' with few genuine chances."
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
