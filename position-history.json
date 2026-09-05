@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-29T16:30:50.612Z",
+  "generatedAt": "2026-09-05T23:10:41.075Z",
   "history": [
     {
       "gamesPlayed": 1,
@@ -84,6 +84,18 @@
       "cumGoalsFor": 20,
       "cumGoalsAgainst": 11,
       "cumGoalDifference": 9
+    },
+    {
+      "gamesPlayed": 8,
+      "date": "Sat 05/09/26",
+      "opponent": "Brereton Social",
+      "position": 2,
+      "points": 18,
+      "gameGoalsFor": 0,
+      "gameGoalsAgainst": 1,
+      "cumGoalsFor": 21,
+      "cumGoalsAgainst": 11,
+      "cumGoalDifference": 10
     }
   ]
 }
