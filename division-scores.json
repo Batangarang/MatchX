@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-09-05T14:20:50.414Z",
+  "generatedAt": "2026-09-05T14:25:30.416Z",
   "date": "2026-09-05",
   "isToday": true,
-  "postCount": 68,
-  "latestPostTimestamp": "2026-09-05T14:20:50.000Z",
+  "postCount": 74,
+  "latestPostTimestamp": "2026-09-05T14:25:31.000Z",
   "fixtures": [
     {
       "home": "AFC Bridgnorth",
@@ -13,9 +13,9 @@
       "matchStage": "first_half",
       "goals": [
         {
-          "minute": "14",
+          "minute": 14,
           "team": "home",
-          "scorer": "unknown"
+          "scorer": "Suar"
         }
       ],
       "yellowCards": [],
@@ -29,7 +29,7 @@
       "matchStage": "first_half",
       "goals": [
         {
-          "minute": "13",
+          "minute": 13,
           "team": "away",
           "scorer": "Billinge"
         }
@@ -45,14 +45,14 @@
       "matchStage": "first_half",
       "goals": [
         {
-          "minute": "5",
+          "minute": 5,
           "team": "home",
           "scorer": "Kian Mattison"
         },
         {
-          "minute": "18",
+          "minute": 18,
           "team": "away",
-          "scorer": "Tyler"
+          "scorer": null
         }
       ],
       "yellowCards": [
@@ -67,7 +67,7 @@
       "home": "Brereton Social",
       "away": "Sandbach United",
       "kickoff": "15:00",
-      "score": "0-0",
+      "score": null,
       "matchStage": "first_half",
       "goals": [],
       "yellowCards": [],
@@ -77,13 +77,18 @@
       "home": "Eccleshall",
       "away": "Dawley Town",
       "kickoff": "15:00",
-      "score": "0-1",
+      "score": "1-1",
       "matchStage": "first_half",
       "goals": [
         {
-          "minute": "11",
+          "minute": 11,
           "team": "away",
-          "scorer": "unknown"
+          "scorer": null
+        },
+        {
+          "minute": 23,
+          "team": "home",
+          "scorer": "Matt"
         }
       ],
       "yellowCards": [],
@@ -112,14 +117,14 @@
       "matchStage": "first_half",
       "goals": [
         {
-          "minute": "7",
+          "minute": 7,
           "team": "home",
           "scorer": "Eshan"
         }
       ],
       "yellowCards": [
         {
-          "team": "away",
+          "team": "home",
           "player": "Beech"
         }
       ],
@@ -129,13 +134,18 @@
       "home": "Wednesfield Community",
       "away": "Telford Town",
       "kickoff": "15:00",
-      "score": "1-0",
+      "score": "1-1",
       "matchStage": "first_half",
       "goals": [
         {
-          "minute": "11",
+          "minute": 11,
           "team": "home",
-          "scorer": "unknown"
+          "scorer": null
+        },
+        {
+          "minute": 21,
+          "team": "away",
+          "scorer": "Shaquille McDonald"
         }
       ],
       "yellowCards": [],
@@ -149,7 +159,7 @@
       "matchStage": "first_half",
       "goals": [
         {
-          "minute": "16",
+          "minute": 16,
           "team": "home",
           "scorer": "Kieran Cook"
         }
@@ -158,5 +168,5 @@
       "redCards": []
     }
   ],
-  "ticker": "@alsagertown_fc: 19’ | Could’ve been 2. A goal-line scramble which hit the post twice including Peake making the save without knowing too much about it.\n\n0-1 | @CreweFC"
+  "ticker": "@SandbachFC_1st: 🔴🔴 v 🟡🟡\n\nBrereton Social v Sandbach United\n\nThe Bach shout for a Peno as Hatton is taken out in the six yard box but the ref is interested…\n\n0  0\n\n25 mins gone"
 }
