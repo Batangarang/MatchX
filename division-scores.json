@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-09-05T14:30:51.241Z",
+  "generatedAt": "2026-09-05T14:35:34.517Z",
   "date": "2026-09-05",
   "isToday": true,
-  "postCount": 79,
-  "latestPostTimestamp": "2026-09-05T14:30:19.000Z",
+  "postCount": 84,
+  "latestPostTimestamp": "2026-09-05T14:35:01.000Z",
   "fixtures": [
     {
       "home": "AFC Bridgnorth",
@@ -13,7 +13,7 @@
       "matchStage": "second_half",
       "goals": [
         {
-          "minute": 14,
+          "minute": "14",
           "team": "home",
           "scorer": "Suar"
         }
@@ -29,7 +29,7 @@
       "matchStage": "second_half",
       "goals": [
         {
-          "minute": 13,
+          "minute": "13",
           "team": "away",
           "scorer": "Billinge"
         }
@@ -45,12 +45,12 @@
       "matchStage": "second_half",
       "goals": [
         {
-          "minute": 5,
+          "minute": "5",
           "team": "home",
           "scorer": "Kian Mattison"
         },
         {
-          "minute": 18,
+          "minute": "18",
           "team": "away",
           "scorer": null
         }
@@ -77,22 +77,27 @@
       "home": "Eccleshall",
       "away": "Dawley Town",
       "kickoff": "15:00",
-      "score": "2-1",
+      "score": "2-2",
       "matchStage": "second_half",
       "goals": [
         {
-          "minute": 11,
+          "minute": "11",
           "team": "away",
           "scorer": null
         },
         {
-          "minute": 23,
+          "minute": "23",
           "team": "home",
-          "scorer": "Matt"
+          "scorer": null
         },
         {
-          "minute": 28,
+          "minute": "28",
           "team": "home",
+          "scorer": null
+        },
+        {
+          "minute": "31",
+          "team": "away",
           "scorer": null
         }
       ],
@@ -107,7 +112,7 @@
       "matchStage": "second_half",
       "goals": [
         {
-          "minute": 26,
+          "minute": "26",
           "team": "home",
           "scorer": "Oultram"
         }
@@ -116,6 +121,10 @@
         {
           "team": "home",
           "player": "Mcann"
+        },
+        {
+          "team": "away",
+          "player": null
         }
       ],
       "redCards": []
@@ -128,18 +137,18 @@
       "matchStage": "second_half",
       "goals": [
         {
-          "minute": 7,
+          "minute": "7",
           "team": "home",
           "scorer": "Eshan"
         }
       ],
       "yellowCards": [
         {
-          "team": "away",
+          "team": "home",
           "player": "Beech"
         },
         {
-          "team": "away",
+          "team": "home",
           "player": "Lynch"
         }
       ],
@@ -153,12 +162,12 @@
       "matchStage": "second_half",
       "goals": [
         {
-          "minute": 11,
+          "minute": "11",
           "team": "home",
           "scorer": null
         },
         {
-          "minute": 21,
+          "minute": "21",
           "team": "away",
           "scorer": "Shaquille McDonald"
         }
@@ -170,16 +179,16 @@
       "home": "Wolverhampton Casuals",
       "away": "Bilston Town",
       "kickoff": "15:00",
-      "score": "2-1",
+      "score": "1-1",
       "matchStage": "second_half",
       "goals": [
         {
-          "minute": 16,
+          "minute": "16",
           "team": "home",
           "scorer": "Kieran Cook"
         },
         {
-          "minute": 29,
+          "minute": "29",
           "team": "away",
           "scorer": "Callum Bright"
         }
@@ -188,5 +197,5 @@
       "redCards": []
     }
   ],
-  "ticker": "@WolvesCassies: 29': Callum Bright scores for Bilston Town\n#WOLBIL #Pitchero\nhttps://www.wolverhamptoncasualsfc.co.uk/teams/294420/match-centre/1-20008239?utm_campaign=match_event&utm_medium=post&utm_source=twitter&utm_content=goal https://t.co/vGEwa89DEc"
+  "ticker": "@MDTFC: 34’\n\nCheadles no7 takes a dive which Tom Daley would be proud off to try and win a penalty. \n\nReferee produces a yellow and not a gold!!!!\n\n🔴⚪️1-0🟡🔵"
 }
