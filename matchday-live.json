@@ -1,19 +1,19 @@
 {
-  "generatedAt": "2026-09-05T14:45:48.416Z",
+  "generatedAt": "2026-09-05T14:50:57.984Z",
   "fixtureDate": "2026-09-05",
   "kickoff": "15:00",
   "homeTeam": "Brereton Social",
   "awayTeam": "Sandbach United",
-  "postsUsed": 12,
+  "postsUsed": 13,
   "imagesAnalyzedThisRun": 1,
-  "totalImagesAnalyzed": 4,
+  "totalImagesAnalyzed": 5,
   "match": {
-    "score": "0-0",
+    "score": "0-1",
     "scoreDiscrepancy": null,
     "finalScoreAnnounced": null,
-    "halfTimeScoreAnnounced": null,
+    "halfTimeScoreAnnounced": "0-1",
     "htDiscrepancy": null,
-    "matchStage": "first_half",
+    "matchStage": "half_time",
     "lineups": {
       "home": {
         "players": [],
@@ -46,7 +46,13 @@
         "officials": []
       }
     },
-    "goals": [],
+    "goals": [
+      {
+        "minute": null,
+        "team": "away",
+        "scorer": "Unknown Sandbach United player"
+      }
+    ],
     "yellowCards": [
       {
         "minute": 44,
@@ -88,6 +94,12 @@
         "team": "home",
         "player": "10",
         "note": "Collision on edge of area, replaced by number 14"
+      },
+      {
+        "minute": 13,
+        "team": "home",
+        "player": "Brereton Social number 10",
+        "note": "Collision on edge of area, replaced"
       }
     ],
     "addedTime": {
@@ -107,46 +119,46 @@
     "roughXG": {
       "firstHalf": {
         "home": 0.3,
-        "away": 0.4,
-        "note": "Limited clear-cut chances; Sandbach had a disputed penalty appeal, Shotton effort wide, Brereton had free-kick effort wide"
+        "away": 1.2,
+        "note": "Sandbach had penalty claim and shot wide; Brereton had free kick effort wide. Sandbach scored one goal."
       },
       "secondHalf": {
         "home": 0,
         "away": 0,
-        "note": "No data available"
+        "note": "No second half data provided"
       },
       "extraTime": {
         "home": 0,
         "away": 0,
-        "note": "Not applicable"
+        "note": "Match did not go to extra time"
       },
       "total": {
         "home": 0.3,
-        "away": 0.4,
-        "note": "Match appears to have ended 0-0 with few genuine scoring opportunities in first 44 minutes"
+        "away": 1.2,
+        "note": "Based on first half only; Sandbach had clear chance(s) and converted one. Brereton had limited attacking opportunities."
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
     "matchControl": {
       "firstHalf": {
-        "home": 45,
-        "away": 55,
-        "note": "Sandbach appears to be slightly more threatening; Brereton defending well with Mason making defensive challenge at 5 mins; both sides had half-chances"
+        "home": 40,
+        "away": 60,
+        "note": "Sandbach created more chances and scored; Brereton had defensive focus and limited clear opportunities"
       },
       "secondHalf": {
         "home": 50,
         "away": 50,
-        "note": "No data available"
+        "note": "No second half data provided"
       },
       "extraTime": {
         "home": 50,
         "away": 50,
-        "note": "Not applicable"
+        "note": "Match did not go to extra time"
       },
       "total": {
-        "home": 45,
-        "away": 55,
-        "note": "Based on first 44 minutes only; Sandbach slightly dominant but match remained tight"
+        "home": 40,
+        "away": 60,
+        "note": "Based on first half only; Sandbach dominated and led 0-1 at half time"
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
