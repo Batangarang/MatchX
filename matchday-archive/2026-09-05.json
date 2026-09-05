@@ -1,19 +1,19 @@
 {
-  "generatedAt": "2026-09-05T13:30:58.827Z",
+  "generatedAt": "2026-09-05T14:01:13.469Z",
   "fixtureDate": "2026-09-05",
   "kickoff": "15:00",
   "homeTeam": "Brereton Social",
   "awayTeam": "Sandbach United",
-  "postsUsed": 4,
-  "imagesAnalyzedThisRun": 1,
+  "postsUsed": 5,
+  "imagesAnalyzedThisRun": 0,
   "totalImagesAnalyzed": 3,
   "match": {
-    "score": null,
+    "score": "0-0",
     "scoreDiscrepancy": null,
     "finalScoreAnnounced": null,
     "halfTimeScoreAnnounced": null,
     "htDiscrepancy": null,
-    "matchStage": "scheduled",
+    "matchStage": "first_half",
     "lineups": {
       "home": {
         "players": [],
@@ -70,22 +70,22 @@
       "firstHalf": {
         "home": 0,
         "away": 0,
-        "note": "No match action data available"
+        "note": "Match just started; no play data available"
       },
       "secondHalf": {
         "home": 0,
         "away": 0,
-        "note": "No match action data available"
+        "note": "Match not yet advanced to second half"
       },
       "extraTime": {
         "home": 0,
         "away": 0,
-        "note": "No extra time played"
+        "note": "No extra time"
       },
       "total": {
         "home": 0,
         "away": 0,
-        "note": "No match action data available"
+        "note": "Match in early stages; insufficient data"
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
@@ -93,22 +93,22 @@
       "firstHalf": {
         "home": 50,
         "away": 50,
-        "note": "No match data available"
+        "note": "Match just kicked off; no play commentary available"
       },
       "secondHalf": {
         "home": 50,
         "away": 50,
-        "note": "No match data available"
+        "note": "Match not yet advanced to second half"
       },
       "extraTime": {
         "home": 50,
         "away": 50,
-        "note": "No extra time played"
+        "note": "No extra time"
       },
       "total": {
         "home": 50,
         "away": 50,
-        "note": "No match data available"
+        "note": "Insufficient match data to assess control"
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
