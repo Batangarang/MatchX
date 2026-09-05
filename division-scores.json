@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-09-05T14:01:06.008Z",
+  "generatedAt": "2026-09-05T14:05:34.761Z",
   "date": "2026-09-05",
   "isToday": true,
-  "postCount": 42,
-  "latestPostTimestamp": "2026-09-05T14:01:12.000Z",
+  "postCount": 47,
+  "latestPostTimestamp": "2026-09-05T14:05:09.000Z",
   "fixtures": [
     {
       "home": "AFC Bridgnorth",
@@ -29,9 +29,15 @@
       "home": "Barnton",
       "away": "Foley Meir",
       "kickoff": "15:00",
-      "score": "0-0",
+      "score": "1-0",
       "matchStage": "first_half",
-      "goals": [],
+      "goals": [
+        {
+          "minute": "4",
+          "team": "home",
+          "scorer": null
+        }
+      ],
       "yellowCards": [],
       "redCards": []
     },
@@ -50,7 +56,7 @@
       "away": "Dawley Town",
       "kickoff": "15:00",
       "score": null,
-      "matchStage": "scheduled",
+      "matchStage": "first_half",
       "goals": [],
       "yellowCards": [],
       "redCards": []
@@ -62,15 +68,20 @@
       "score": "0-0",
       "matchStage": "first_half",
       "goals": [],
-      "yellowCards": [],
+      "yellowCards": [
+        {
+          "team": "home",
+          "player": "Mcann"
+        }
+      ],
       "redCards": []
     },
     {
       "home": "Stafford Town",
       "away": "Allscott Heath",
       "kickoff": "15:00",
-      "score": null,
-      "matchStage": "scheduled",
+      "score": "0-0",
+      "matchStage": "first_half",
       "goals": [],
       "yellowCards": [],
       "redCards": []
@@ -96,5 +107,5 @@
       "redCards": []
     }
   ],
-  "ticker": "@MDTFC: Kick off 0’\n\n🔴⚪️0-0🟡🔵"
+  "ticker": "@foley_fc: 𝗧𝗘𝗔𝗠 𝗡𝗘𝗪𝗦 | 𝗕𝗔𝗥𝗡𝗧𝗢𝗡 (𝗔) 💛🩶\n\nHere’s how Foley line up this afternoon for our trip to Barnton in the North West Counties League.\n\n(Sorry for it being late I was warming the keeper up)\n\n#UpTheFoley | #TeamNews | #NWCFL https://t.co/s8UxaZVeha"
 }
