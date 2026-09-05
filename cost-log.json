@@ -12237,14 +12237,14 @@
       "aiCostGBP": 0.0052
     },
     {
-      "script": "matchday-live",
-      "timestamp": "2026-09-05T12:55:38.441Z",
-      "getxapiCalls": 2,
+      "script": "division-scores",
+      "timestamp": "2026-09-05T12:55:58.914Z",
+      "getxapiCalls": 18,
       "claudeCalls": 1,
-      "inputTokens": 1655,
-      "outputTokens": 674,
-      "xCostGBP": 0.0015,
-      "aiCostGBP": 0.0038
+      "inputTokens": 3667,
+      "outputTokens": 717,
+      "xCostGBP": 0.0135,
+      "aiCostGBP": 0.0054
     }
   ]
 }
