@@ -12555,6 +12555,16 @@
       "outputTokens": 0,
       "xCostGBP": 0.0008,
       "aiCostGBP": 0
+    },
+    {
+      "script": "matchday-live",
+      "timestamp": "2026-09-05T14:45:48.418Z",
+      "getxapiCalls": 2,
+      "claudeCalls": 1,
+      "inputTokens": 3215,
+      "outputTokens": 924,
+      "xCostGBP": 0.0015,
+      "aiCostGBP": 0.0059
     }
   ]
 }

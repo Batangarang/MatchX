@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-09-05T14:40:48.363Z",
+  "generatedAt": "2026-09-05T14:45:48.416Z",
   "fixtureDate": "2026-09-05",
   "kickoff": "15:00",
   "homeTeam": "Brereton Social",
   "awayTeam": "Sandbach United",
-  "postsUsed": 9,
-  "imagesAnalyzedThisRun": 0,
-  "totalImagesAnalyzed": 3,
+  "postsUsed": 12,
+  "imagesAnalyzedThisRun": 1,
+  "totalImagesAnalyzed": 4,
   "match": {
     "score": "0-0",
     "scoreDiscrepancy": null,
@@ -47,7 +47,13 @@
       }
     },
     "goals": [],
-    "yellowCards": [],
+    "yellowCards": [
+      {
+        "minute": 44,
+        "team": "away",
+        "player": "Nathan Barry"
+      }
+    ],
     "redCards": [],
     "substitutions": [
       {
@@ -100,14 +106,14 @@
     },
     "roughXG": {
       "firstHalf": {
-        "home": 0.1,
-        "away": 0.3,
-        "note": "Very limited chance creation in first 37 minutes. Sandbach had a disputed penalty appeal (25 mins), Mason (Sandbach) made good defensive challenge, Shotton (Sandbach) had effort just wide (37 mins). No clear-cut chances recorded."
+        "home": 0.3,
+        "away": 0.4,
+        "note": "Limited clear-cut chances; Sandbach had a disputed penalty appeal, Shotton effort wide, Brereton had free-kick effort wide"
       },
       "secondHalf": {
         "home": 0,
         "away": 0,
-        "note": "No second half data available in posts"
+        "note": "No data available"
       },
       "extraTime": {
         "home": 0,
@@ -115,9 +121,9 @@
         "note": "Not applicable"
       },
       "total": {
-        "home": 0.1,
-        "away": 0.3,
-        "note": "Match was goalless through 37 minutes with minimal clear chances. Sandbach slightly more threatening but no real quality opportunities."
+        "home": 0.3,
+        "away": 0.4,
+        "note": "Match appears to have ended 0-0 with few genuine scoring opportunities in first 44 minutes"
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
@@ -125,12 +131,12 @@
       "firstHalf": {
         "home": 45,
         "away": 55,
-        "note": "Sandbach created more threat with Shotton effort and penalty appeal; Brereton had defensive injury at 13 mins which may have unsettled them early."
+        "note": "Sandbach appears to be slightly more threatening; Brereton defending well with Mason making defensive challenge at 5 mins; both sides had half-chances"
       },
       "secondHalf": {
         "home": 50,
         "away": 50,
-        "note": "No second half data available"
+        "note": "No data available"
       },
       "extraTime": {
         "home": 50,
@@ -138,9 +144,9 @@
         "note": "Not applicable"
       },
       "total": {
-        "home": 48,
-        "away": 52,
-        "note": "Based on limited first-half data, Sandbach marginally on top but match remained competitive and goalless."
+        "home": 45,
+        "away": 55,
+        "note": "Based on first 44 minutes only; Sandbach slightly dominant but match remained tight"
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
