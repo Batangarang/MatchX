@@ -1,222 +1,24 @@
 {
-  "generatedAt": "2026-09-05T14:40:36.651Z",
-  "date": "2026-09-05",
-  "isToday": true,
-  "postCount": 94,
-  "latestPostTimestamp": "2026-09-05T14:40:14.000Z",
+  "generatedAt": "2026-09-05T23:01:04.500Z",
+  "date": "2026-09-08",
+  "isToday": false,
   "fixtures": [
     {
-      "home": "AFC Bridgnorth",
-      "away": "Shawbury United",
-      "kickoff": "15:00",
-      "score": "1-0",
-      "matchStage": "second_half",
-      "goals": [
-        {
-          "minute": "14",
-          "team": "home",
-          "scorer": "Suar"
-        }
-      ],
-      "yellowCards": [],
-      "redCards": []
-    },
-    {
-      "home": "Alsager Town",
-      "away": "Crewe",
-      "kickoff": "15:00",
-      "score": "0-1",
-      "matchStage": "second_half",
-      "goals": [
-        {
-          "minute": "13",
-          "team": "away",
-          "scorer": "Billinge"
-        }
-      ],
-      "yellowCards": [],
-      "redCards": []
-    },
-    {
       "home": "Barnton",
-      "away": "Foley Meir",
-      "kickoff": "15:00",
-      "score": "2-1",
-      "matchStage": "second_half",
-      "goals": [
-        {
-          "minute": "5",
-          "team": "home",
-          "scorer": "Kian Mattison"
-        },
-        {
-          "minute": "18",
-          "team": "away",
-          "scorer": null
-        },
-        {
-          "minute": "37",
-          "team": "home",
-          "scorer": "Stanton"
-        }
-      ],
-      "yellowCards": [
-        {
-          "team": "away",
-          "player": "Kerr"
-        }
-      ],
-      "redCards": []
-    },
-    {
-      "home": "Brereton Social",
-      "away": "Sandbach United",
-      "kickoff": "15:00",
-      "score": "0-0",
-      "matchStage": "second_half",
-      "goals": [],
-      "yellowCards": [],
-      "redCards": []
-    },
-    {
-      "home": "Eccleshall",
-      "away": "Dawley Town",
-      "kickoff": "15:00",
-      "score": "2-2",
-      "matchStage": "second_half",
-      "goals": [
-        {
-          "minute": "11",
-          "team": "away",
-          "scorer": null
-        },
-        {
-          "minute": "23",
-          "team": "home",
-          "scorer": "Matt"
-        },
-        {
-          "minute": "28",
-          "team": "home",
-          "scorer": "Nicky"
-        },
-        {
-          "minute": "31",
-          "team": "away",
-          "scorer": null
-        }
-      ],
-      "yellowCards": [
-        {
-          "team": "home",
-          "player": "Essa"
-        }
-      ],
-      "redCards": []
-    },
-    {
-      "home": "Market Drayton Town",
       "away": "Cheadle Heath Nomads",
-      "kickoff": "15:00",
-      "score": "1-0",
-      "matchStage": "second_half",
-      "goals": [
-        {
-          "minute": "26",
-          "team": "home",
-          "scorer": "Oultram"
-        }
-      ],
-      "yellowCards": [
-        {
-          "team": "away",
-          "player": null
-        }
-      ],
+      "kickoff": "19:45",
+      "score": null,
+      "goals": [],
       "redCards": []
     },
     {
-      "home": "Stafford Town",
-      "away": "Allscott Heath",
-      "kickoff": "15:00",
-      "score": "1-0",
-      "matchStage": "second_half",
-      "goals": [
-        {
-          "minute": "7",
-          "team": "home",
-          "scorer": "Eshan"
-        }
-      ],
-      "yellowCards": [
-        {
-          "team": "home",
-          "player": "Beech"
-        },
-        {
-          "team": "home",
-          "player": "Lynch"
-        }
-      ],
-      "redCards": []
-    },
-    {
-      "home": "Wednesfield Community",
-      "away": "Telford Town",
-      "kickoff": "15:00",
-      "score": "1-2",
-      "matchStage": "second_half",
-      "goals": [
-        {
-          "minute": "11",
-          "team": "home",
-          "scorer": null
-        },
-        {
-          "minute": "21",
-          "team": "away",
-          "scorer": "Shaquille McDonald"
-        },
-        {
-          "minute": "34",
-          "team": "away",
-          "scorer": "Isaac Cooper"
-        }
-      ],
-      "yellowCards": [],
-      "redCards": []
-    },
-    {
-      "home": "Wolverhampton Casuals",
-      "away": "Bilston Town",
-      "kickoff": "15:00",
-      "score": "2-1",
-      "matchStage": "second_half",
-      "goals": [
-        {
-          "minute": "16",
-          "team": "home",
-          "scorer": "Kieran Cook"
-        },
-        {
-          "minute": "29",
-          "team": "away",
-          "scorer": "Callum Bright"
-        },
-        {
-          "minute": "36",
-          "team": "home",
-          "scorer": "Kieran Cook"
-        }
-      ],
-      "yellowCards": [
-        {
-          "team": "away",
-          "player": "Jordan Crump"
-        }
-      ],
+      "home": "Widnes Town",
+      "away": "New Mills",
+      "kickoff": "19:45",
+      "score": null,
+      "goals": [],
       "redCards": []
     }
   ],
-  "ticker": "@foley_fc: 39 | Kerr gets a yellow card for a late challenge, he’s gone for the ball but caught the man.\n\n⚫️⚪️2-1💛🩶"
+  "ticker": null
 }
