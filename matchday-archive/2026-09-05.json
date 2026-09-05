@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-09-05T14:01:13.469Z",
+  "generatedAt": "2026-09-05T14:11:56.650Z",
   "fixtureDate": "2026-09-05",
   "kickoff": "15:00",
   "homeTeam": "Brereton Social",
   "awayTeam": "Sandbach United",
-  "postsUsed": 5,
+  "postsUsed": 6,
   "imagesAnalyzedThisRun": 0,
   "totalImagesAnalyzed": 3,
   "match": {
@@ -51,7 +51,14 @@
     "redCards": [],
     "substitutions": [],
     "sinBins": [],
-    "injuries": [],
+    "injuries": [
+      {
+        "minute": null,
+        "team": "away",
+        "player": "Kieran O'Connell",
+        "note": "Unavailable for selection; replaced at Right Back by Jacob Vernon"
+      }
+    ],
     "addedTime": {
       "firstHalf": null,
       "secondHalf": null
@@ -70,22 +77,22 @@
       "firstHalf": {
         "home": 0,
         "away": 0,
-        "note": "Match just started; no play data available"
+        "note": "Match only 5 minutes played; limited chance creation evident from posts. Sandbach defender Mason made a defensive challenge; no clear shooting opportunities described."
       },
       "secondHalf": {
         "home": 0,
         "away": 0,
-        "note": "Match not yet advanced to second half"
+        "note": "No data"
       },
       "extraTime": {
         "home": 0,
         "away": 0,
-        "note": "No extra time"
+        "note": "No data"
       },
       "total": {
         "home": 0,
         "away": 0,
-        "note": "Match in early stages; insufficient data"
+        "note": "Very early in match; insufficient data for meaningful xG estimate."
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
@@ -93,22 +100,22 @@
       "firstHalf": {
         "home": 50,
         "away": 50,
-        "note": "Match just kicked off; no play commentary available"
+        "note": "Match just 5 minutes in; no clear control pattern yet."
       },
       "secondHalf": {
         "home": 50,
         "away": 50,
-        "note": "Match not yet advanced to second half"
+        "note": "No data"
       },
       "extraTime": {
         "home": 50,
         "away": 50,
-        "note": "No extra time"
+        "note": "No data"
       },
       "total": {
         "home": 50,
         "away": 50,
-        "note": "Insufficient match data to assess control"
+        "note": "Too early to assess."
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
