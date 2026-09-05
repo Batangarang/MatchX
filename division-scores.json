@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-09-05T14:25:30.416Z",
+  "generatedAt": "2026-09-05T14:30:51.241Z",
   "date": "2026-09-05",
   "isToday": true,
-  "postCount": 74,
-  "latestPostTimestamp": "2026-09-05T14:25:31.000Z",
+  "postCount": 79,
+  "latestPostTimestamp": "2026-09-05T14:30:19.000Z",
   "fixtures": [
     {
       "home": "AFC Bridgnorth",
       "away": "Shawbury United",
       "kickoff": "15:00",
       "score": "1-0",
-      "matchStage": "first_half",
+      "matchStage": "second_half",
       "goals": [
         {
           "minute": 14,
@@ -26,7 +26,7 @@
       "away": "Crewe",
       "kickoff": "15:00",
       "score": "0-1",
-      "matchStage": "first_half",
+      "matchStage": "second_half",
       "goals": [
         {
           "minute": 13,
@@ -42,7 +42,7 @@
       "away": "Foley Meir",
       "kickoff": "15:00",
       "score": "1-1",
-      "matchStage": "first_half",
+      "matchStage": "second_half",
       "goals": [
         {
           "minute": 5,
@@ -67,8 +67,8 @@
       "home": "Brereton Social",
       "away": "Sandbach United",
       "kickoff": "15:00",
-      "score": null,
-      "matchStage": "first_half",
+      "score": "0-0",
+      "matchStage": "second_half",
       "goals": [],
       "yellowCards": [],
       "redCards": []
@@ -77,8 +77,8 @@
       "home": "Eccleshall",
       "away": "Dawley Town",
       "kickoff": "15:00",
-      "score": "1-1",
-      "matchStage": "first_half",
+      "score": "2-1",
+      "matchStage": "second_half",
       "goals": [
         {
           "minute": 11,
@@ -89,6 +89,11 @@
           "minute": 23,
           "team": "home",
           "scorer": "Matt"
+        },
+        {
+          "minute": 28,
+          "team": "home",
+          "scorer": null
         }
       ],
       "yellowCards": [],
@@ -98,9 +103,15 @@
       "home": "Market Drayton Town",
       "away": "Cheadle Heath Nomads",
       "kickoff": "15:00",
-      "score": "0-0",
-      "matchStage": "first_half",
-      "goals": [],
+      "score": "1-0",
+      "matchStage": "second_half",
+      "goals": [
+        {
+          "minute": 26,
+          "team": "home",
+          "scorer": "Oultram"
+        }
+      ],
       "yellowCards": [
         {
           "team": "home",
@@ -114,7 +125,7 @@
       "away": "Allscott Heath",
       "kickoff": "15:00",
       "score": "1-0",
-      "matchStage": "first_half",
+      "matchStage": "second_half",
       "goals": [
         {
           "minute": 7,
@@ -124,8 +135,12 @@
       ],
       "yellowCards": [
         {
-          "team": "home",
+          "team": "away",
           "player": "Beech"
+        },
+        {
+          "team": "away",
+          "player": "Lynch"
         }
       ],
       "redCards": []
@@ -135,7 +150,7 @@
       "away": "Telford Town",
       "kickoff": "15:00",
       "score": "1-1",
-      "matchStage": "first_half",
+      "matchStage": "second_half",
       "goals": [
         {
           "minute": 11,
@@ -155,18 +170,23 @@
       "home": "Wolverhampton Casuals",
       "away": "Bilston Town",
       "kickoff": "15:00",
-      "score": "1-0",
-      "matchStage": "first_half",
+      "score": "2-1",
+      "matchStage": "second_half",
       "goals": [
         {
           "minute": 16,
           "team": "home",
           "scorer": "Kieran Cook"
+        },
+        {
+          "minute": 29,
+          "team": "away",
+          "scorer": "Callum Bright"
         }
       ],
       "yellowCards": [],
       "redCards": []
     }
   ],
-  "ticker": "@SandbachFC_1st: 🔴🔴 v 🟡🟡\n\nBrereton Social v Sandbach United\n\nThe Bach shout for a Peno as Hatton is taken out in the six yard box but the ref is interested…\n\n0  0\n\n25 mins gone"
+  "ticker": "@WolvesCassies: 29': Callum Bright scores for Bilston Town\n#WOLBIL #Pitchero\nhttps://www.wolverhamptoncasualsfc.co.uk/teams/294420/match-centre/1-20008239?utm_campaign=match_event&utm_medium=post&utm_source=twitter&utm_content=goal https://t.co/vGEwa89DEc"
 }
