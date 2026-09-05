@@ -1,13 +1,16 @@
 {
-  "generatedAt": "2026-09-05T09:55:40.265Z",
+  "generatedAt": "2026-09-05T12:45:43.392Z",
   "date": "2026-09-05",
   "isToday": true,
+  "postCount": 18,
+  "latestPostTimestamp": "2026-09-05T12:43:46.000Z",
   "fixtures": [
     {
       "home": "AFC Bridgnorth",
       "away": "Shawbury United",
       "kickoff": "15:00",
       "score": null,
+      "matchStage": "scheduled",
       "goals": [],
       "yellowCards": [],
       "redCards": []
@@ -17,6 +20,7 @@
       "away": "Crewe",
       "kickoff": "15:00",
       "score": null,
+      "matchStage": "scheduled",
       "goals": [],
       "yellowCards": [],
       "redCards": []
@@ -26,6 +30,7 @@
       "away": "Foley Meir",
       "kickoff": "15:00",
       "score": null,
+      "matchStage": "scheduled",
       "goals": [],
       "yellowCards": [],
       "redCards": []
@@ -35,6 +40,7 @@
       "away": "Sandbach United",
       "kickoff": "15:00",
       "score": null,
+      "matchStage": "scheduled",
       "goals": [],
       "yellowCards": [],
       "redCards": []
@@ -44,6 +50,7 @@
       "away": "Dawley Town",
       "kickoff": "15:00",
       "score": null,
+      "matchStage": "scheduled",
       "goals": [],
       "yellowCards": [],
       "redCards": []
@@ -53,6 +60,7 @@
       "away": "Cheadle Heath Nomads",
       "kickoff": "15:00",
       "score": null,
+      "matchStage": "scheduled",
       "goals": [],
       "yellowCards": [],
       "redCards": []
@@ -62,6 +70,7 @@
       "away": "Allscott Heath",
       "kickoff": "15:00",
       "score": null,
+      "matchStage": "scheduled",
       "goals": [],
       "yellowCards": [],
       "redCards": []
@@ -71,6 +80,7 @@
       "away": "Telford Town",
       "kickoff": "15:00",
       "score": null,
+      "matchStage": "scheduled",
       "goals": [],
       "yellowCards": [],
       "redCards": []
@@ -80,10 +90,11 @@
       "away": "Bilston Town",
       "kickoff": "15:00",
       "score": null,
+      "matchStage": "scheduled",
       "goals": [],
       "yellowCards": [],
       "redCards": []
     }
   ],
-  "ticker": null
+  "ticker": "@alsagertown_fc: Matchday Programme! 📖 \n\nInside:\n✅ Crewe’s record\n✅ Manager’s thoughts\n✅ NWCFL South review\n\nTap below to download/view 👇\n\nhttps://shorturl.at/14H4X https://t.co/kKV51R8CAK"
 }
