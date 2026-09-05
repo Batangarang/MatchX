@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-09-05T15:01:13.197Z",
+  "generatedAt": "2026-09-05T15:05:45.964Z",
   "fixtureDate": "2026-09-05",
   "kickoff": "15:00",
   "homeTeam": "Brereton Social",
   "awayTeam": "Sandbach United",
-  "postsUsed": 14,
+  "postsUsed": 15,
   "imagesAnalyzedThisRun": 0,
   "totalImagesAnalyzed": 5,
   "match": {
@@ -120,22 +120,22 @@
       "firstHalf": {
         "home": 0.3,
         "away": 0.4,
-        "note": "Very few chances for either team; Sandbach had penalty shout (not given), Brereton had free kick effort. Shotton over-the-shoulder attempt for Sandbach drifted wide."
+        "note": "Very few clear chances; Sandbach had penalty appeal denied, Shotton effort wide, Barry shot after turn; Brereton had free kick hooked wide"
       },
       "secondHalf": {
         "home": 0,
         "away": 0,
-        "note": "No second half data available in posts"
+        "note": "No data available; posts only confirm second half kickoff at 47 mins"
       },
       "extraTime": {
         "home": 0,
         "away": 0,
-        "note": "No extra time"
+        "note": "Match did not go to extra time"
       },
       "total": {
         "home": 0.3,
         "away": 0.4,
-        "note": "Scarce chances throughout first half; match described as not a classic with very few opportunities"
+        "note": "Stalemate at half-time; very few clear-cut opportunities for either side"
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
@@ -143,22 +143,22 @@
       "firstHalf": {
         "home": 50,
         "away": 50,
-        "note": "Balanced match with neither team creating clear dominance; described as stalemate at HT"
+        "note": "Game described as having very few chances for either team; tightly contested"
       },
       "secondHalf": {
         "home": 50,
         "away": 50,
-        "note": "No second half data available"
+        "note": "No detail provided; no conclusions can be drawn"
       },
       "extraTime": {
         "home": 50,
         "away": 50,
-        "note": "No extra time"
+        "note": "Match did not go to extra time"
       },
       "total": {
         "home": 50,
         "away": 50,
-        "note": "Even contest; Sandbach had slope advantage second half according to away commentary"
+        "note": "Evenly balanced throughout available data; Sandbach to have slope advantage in second half"
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
