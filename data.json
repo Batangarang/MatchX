@@ -1,9 +1,9 @@
 {
-  "scrapedAt": "2026-09-05T15:20:32.397Z",
+  "scrapedAt": "2026-09-05T16:20:31.449Z",
   "nextFixture": {
-    "date": "Sat 05/09/26",
-    "opposition": "Brereton Social",
-    "opponentUrl": "clubpage.php?id=459",
+    "date": "Sat 12/09/26",
+    "opposition": "Cheadle Heath Nomads",
+    "opponentUrl": "clubpage.php?id=713",
     "homeAway": "A",
     "kickoff": "15:00",
     "score": null,
@@ -11,16 +11,6 @@
     "competitionNote": null
   },
   "nextFixtures": [
-    {
-      "date": "Sat 05/09/26",
-      "opposition": "Brereton Social",
-      "opponentUrl": "clubpage.php?id=459",
-      "homeAway": "A",
-      "kickoff": "15:00",
-      "score": null,
-      "scorers": null,
-      "competitionNote": null
-    },
     {
       "date": "Sat 12/09/26",
       "opposition": "Cheadle Heath Nomads",
@@ -60,19 +50,39 @@
       "score": null,
       "scorers": null,
       "competitionNote": null
+    },
+    {
+      "date": "Tue 06/10/26",
+      "opposition": "Foley Meir",
+      "opponentUrl": "clubpage.php?id=898",
+      "homeAway": "H",
+      "kickoff": "19:45",
+      "score": null,
+      "scorers": null,
+      "competitionNote": "The Edward Case Cup 1 S"
     }
   ],
   "lastResult": {
-    "date": "Sat 29/08/26",
-    "opposition": "Widnes Town",
-    "opponentUrl": "clubpage.php?id=868",
-    "homeAway": "H",
+    "date": "Sat 05/09/26",
+    "opposition": "Brereton Social",
+    "opponentUrl": "clubpage.php?id=459",
+    "homeAway": "A",
     "kickoff": "15:00",
-    "score": "W 6-0",
-    "scorers": "Kieran OConnell (11) Nathan Barry (19) Kyle Foley (28) Kyle Foley (78) Stanley Tatters (80) Robbie Hatton (89)",
+    "score": "W 1-0",
+    "scorers": "Robbie Hatton (90+3)",
     "competitionNote": null
   },
   "lastResults": [
+    {
+      "date": "Sat 05/09/26",
+      "opposition": "Brereton Social",
+      "opponentUrl": "clubpage.php?id=459",
+      "homeAway": "A",
+      "kickoff": "15:00",
+      "score": "W 1-0",
+      "scorers": "Robbie Hatton (90+3)",
+      "competitionNote": null
+    },
     {
       "date": "Sat 29/08/26",
       "opposition": "Widnes Town",
@@ -91,16 +101,6 @@
       "kickoff": "15:00",
       "score": "W 4-1",
       "scorers": "Robbie Hatton (4) Max Williams (61) Matthew Birchall (82) Kieran Nolan (90+2)",
-      "competitionNote": null
-    },
-    {
-      "date": "Tue 18/08/26",
-      "opposition": "Market Drayton Town",
-      "opponentUrl": "clubpage.php?id=224",
-      "homeAway": "A",
-      "kickoff": "19:45",
-      "score": "W 4-3",
-      "scorers": "Robbie Hatton (10) Kieran OConnell (21) Nathan Barry (42) Kieran OConnell (81)",
       "competitionNote": null
     }
   ],
@@ -191,8 +191,8 @@
       "opponentUrl": "clubpage.php?id=459",
       "homeAway": "A",
       "kickoff": "15:00",
-      "score": null,
-      "scorers": null,
+      "score": "W 1-0",
+      "scorers": "Robbie Hatton (90+3)",
       "competitionNote": null
     },
     {
