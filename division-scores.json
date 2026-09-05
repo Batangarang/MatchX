@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-09-05T14:10:39.244Z",
+  "generatedAt": "2026-09-05T14:15:49.279Z",
   "date": "2026-09-05",
   "isToday": true,
-  "postCount": 52,
-  "latestPostTimestamp": "2026-09-05T14:09:56.000Z",
+  "postCount": 59,
+  "latestPostTimestamp": "2026-09-05T14:15:14.000Z",
   "fixtures": [
     {
       "home": "AFC Bridgnorth",
@@ -33,12 +33,22 @@
       "matchStage": "first_half",
       "goals": [
         {
+          "minute": "4",
+          "team": "home",
+          "scorer": "Unknown"
+        },
+        {
           "minute": "5",
           "team": "home",
           "scorer": "Kian Mattison"
         }
       ],
-      "yellowCards": [],
+      "yellowCards": [
+        {
+          "team": "away",
+          "player": "Barnton 7"
+        }
+      ],
       "redCards": []
     },
     {
@@ -55,9 +65,15 @@
       "home": "Eccleshall",
       "away": "Dawley Town",
       "kickoff": "15:00",
-      "score": null,
+      "score": "0-1",
       "matchStage": "first_half",
-      "goals": [],
+      "goals": [
+        {
+          "minute": "11",
+          "team": "away",
+          "scorer": "Dawley 11"
+        }
+      ],
       "yellowCards": [],
       "redCards": []
     },
@@ -96,9 +112,15 @@
       "home": "Wednesfield Community",
       "away": "Telford Town",
       "kickoff": "15:00",
-      "score": null,
-      "matchStage": "scheduled",
-      "goals": [],
+      "score": "1-0",
+      "matchStage": "first_half",
+      "goals": [
+        {
+          "minute": "11",
+          "team": "home",
+          "scorer": "Unknown"
+        }
+      ],
       "yellowCards": [],
       "redCards": []
     },
@@ -113,5 +135,5 @@
       "redCards": []
     }
   ],
-  "ticker": "@MDTFC: 9’\n\nShot by Cheadle no7 is straight at Rowley \n\n🔴⚪️0-0🟡🔵"
+  "ticker": "@foley_fc: 15 | Barnton 7 gets a yellow for a high foot challenge on Baker.\n\n⚫️⚪️1-0💛🩶"
 }
