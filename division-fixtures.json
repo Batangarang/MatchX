@@ -1,69 +1,6 @@
 {
-  "generatedAt": "2026-09-05T13:55:31.835Z",
+  "generatedAt": "2026-09-05T14:01:05.956Z",
   "fixtures": [
-    {
-      "date": "Saturday 5 September 2026",
-      "home": "AFC Bridgnorth",
-      "away": "Shawbury United",
-      "kickoff": "15:00",
-      "postponed": false
-    },
-    {
-      "date": "Saturday 5 September 2026",
-      "home": "Alsager Town",
-      "away": "Crewe",
-      "kickoff": "15:00",
-      "postponed": false
-    },
-    {
-      "date": "Saturday 5 September 2026",
-      "home": "Barnton",
-      "away": "Foley Meir",
-      "kickoff": "15:00",
-      "postponed": false
-    },
-    {
-      "date": "Saturday 5 September 2026",
-      "home": "Brereton Social",
-      "away": "Sandbach United",
-      "kickoff": "15:00",
-      "postponed": false
-    },
-    {
-      "date": "Saturday 5 September 2026",
-      "home": "Eccleshall",
-      "away": "Dawley Town",
-      "kickoff": "15:00",
-      "postponed": false
-    },
-    {
-      "date": "Saturday 5 September 2026",
-      "home": "Market Drayton Town",
-      "away": "Cheadle Heath Nomads",
-      "kickoff": "15:00",
-      "postponed": false
-    },
-    {
-      "date": "Saturday 5 September 2026",
-      "home": "Stafford Town",
-      "away": "Allscott Heath",
-      "kickoff": "15:00",
-      "postponed": false
-    },
-    {
-      "date": "Saturday 5 September 2026",
-      "home": "Wednesfield Community",
-      "away": "Telford Town",
-      "kickoff": "15:00",
-      "postponed": false
-    },
-    {
-      "date": "Saturday 5 September 2026",
-      "home": "Wolverhampton Casuals",
-      "away": "Bilston Town",
-      "kickoff": "15:00",
-      "postponed": false
-    },
     {
       "date": "Tuesday 8 September 2026",
       "home": "Barnton",
@@ -2217,6 +2154,69 @@
       "date": "Saturday 17 April 2027",
       "home": "Wolverhampton Casuals",
       "away": "Cheadle Heath Nomads",
+      "kickoff": "15:00",
+      "postponed": false
+    },
+    {
+      "date": "Saturday 5 September 2026",
+      "home": "AFC Bridgnorth",
+      "away": "Shawbury United",
+      "kickoff": "15:00",
+      "postponed": false
+    },
+    {
+      "date": "Saturday 5 September 2026",
+      "home": "Alsager Town",
+      "away": "Crewe",
+      "kickoff": "15:00",
+      "postponed": false
+    },
+    {
+      "date": "Saturday 5 September 2026",
+      "home": "Barnton",
+      "away": "Foley Meir",
+      "kickoff": "15:00",
+      "postponed": false
+    },
+    {
+      "date": "Saturday 5 September 2026",
+      "home": "Brereton Social",
+      "away": "Sandbach United",
+      "kickoff": "15:00",
+      "postponed": false
+    },
+    {
+      "date": "Saturday 5 September 2026",
+      "home": "Eccleshall",
+      "away": "Dawley Town",
+      "kickoff": "15:00",
+      "postponed": false
+    },
+    {
+      "date": "Saturday 5 September 2026",
+      "home": "Market Drayton Town",
+      "away": "Cheadle Heath Nomads",
+      "kickoff": "15:00",
+      "postponed": false
+    },
+    {
+      "date": "Saturday 5 September 2026",
+      "home": "Stafford Town",
+      "away": "Allscott Heath",
+      "kickoff": "15:00",
+      "postponed": false
+    },
+    {
+      "date": "Saturday 5 September 2026",
+      "home": "Wednesfield Community",
+      "away": "Telford Town",
+      "kickoff": "15:00",
+      "postponed": false
+    },
+    {
+      "date": "Saturday 5 September 2026",
+      "home": "Wolverhampton Casuals",
+      "away": "Bilston Town",
       "kickoff": "15:00",
       "postponed": false
     }
