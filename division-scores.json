@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-09-05T14:05:34.761Z",
+  "generatedAt": "2026-09-05T14:10:39.244Z",
   "date": "2026-09-05",
   "isToday": true,
-  "postCount": 47,
-  "latestPostTimestamp": "2026-09-05T14:05:09.000Z",
+  "postCount": 52,
+  "latestPostTimestamp": "2026-09-05T14:09:56.000Z",
   "fixtures": [
     {
       "home": "AFC Bridgnorth",
@@ -33,9 +33,9 @@
       "matchStage": "first_half",
       "goals": [
         {
-          "minute": "4",
+          "minute": "5",
           "team": "home",
-          "scorer": null
+          "scorer": "Kian Mattison"
         }
       ],
       "yellowCards": [],
@@ -80,9 +80,15 @@
       "home": "Stafford Town",
       "away": "Allscott Heath",
       "kickoff": "15:00",
-      "score": "0-0",
+      "score": "1-0",
       "matchStage": "first_half",
-      "goals": [],
+      "goals": [
+        {
+          "minute": "7",
+          "team": "home",
+          "scorer": "Eshan"
+        }
+      ],
       "yellowCards": [],
       "redCards": []
     },
@@ -107,5 +113,5 @@
       "redCards": []
     }
   ],
-  "ticker": "@foley_fc: 𝗧𝗘𝗔𝗠 𝗡𝗘𝗪𝗦 | 𝗕𝗔𝗥𝗡𝗧𝗢𝗡 (𝗔) 💛🩶\n\nHere’s how Foley line up this afternoon for our trip to Barnton in the North West Counties League.\n\n(Sorry for it being late I was warming the keeper up)\n\n#UpTheFoley | #TeamNews | #NWCFL https://t.co/s8UxaZVeha"
+  "ticker": "@MDTFC: 9’\n\nShot by Cheadle no7 is straight at Rowley \n\n🔴⚪️0-0🟡🔵"
 }
