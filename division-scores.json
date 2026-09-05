@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-09-05T14:35:34.517Z",
+  "generatedAt": "2026-09-05T14:40:36.651Z",
   "date": "2026-09-05",
   "isToday": true,
-  "postCount": 84,
-  "latestPostTimestamp": "2026-09-05T14:35:01.000Z",
+  "postCount": 94,
+  "latestPostTimestamp": "2026-09-05T14:40:14.000Z",
   "fixtures": [
     {
       "home": "AFC Bridgnorth",
@@ -41,7 +41,7 @@
       "home": "Barnton",
       "away": "Foley Meir",
       "kickoff": "15:00",
-      "score": "1-1",
+      "score": "2-1",
       "matchStage": "second_half",
       "goals": [
         {
@@ -53,12 +53,17 @@
           "minute": "18",
           "team": "away",
           "scorer": null
+        },
+        {
+          "minute": "37",
+          "team": "home",
+          "scorer": "Stanton"
         }
       ],
       "yellowCards": [
         {
           "team": "away",
-          "player": null
+          "player": "Kerr"
         }
       ],
       "redCards": []
@@ -88,12 +93,12 @@
         {
           "minute": "23",
           "team": "home",
-          "scorer": null
+          "scorer": "Matt"
         },
         {
           "minute": "28",
           "team": "home",
-          "scorer": null
+          "scorer": "Nicky"
         },
         {
           "minute": "31",
@@ -101,7 +106,12 @@
           "scorer": null
         }
       ],
-      "yellowCards": [],
+      "yellowCards": [
+        {
+          "team": "home",
+          "player": "Essa"
+        }
+      ],
       "redCards": []
     },
     {
@@ -118,10 +128,6 @@
         }
       ],
       "yellowCards": [
-        {
-          "team": "home",
-          "player": "Mcann"
-        },
         {
           "team": "away",
           "player": null
@@ -158,7 +164,7 @@
       "home": "Wednesfield Community",
       "away": "Telford Town",
       "kickoff": "15:00",
-      "score": "1-1",
+      "score": "1-2",
       "matchStage": "second_half",
       "goals": [
         {
@@ -170,6 +176,11 @@
           "minute": "21",
           "team": "away",
           "scorer": "Shaquille McDonald"
+        },
+        {
+          "minute": "34",
+          "team": "away",
+          "scorer": "Isaac Cooper"
         }
       ],
       "yellowCards": [],
@@ -179,7 +190,7 @@
       "home": "Wolverhampton Casuals",
       "away": "Bilston Town",
       "kickoff": "15:00",
-      "score": "1-1",
+      "score": "2-1",
       "matchStage": "second_half",
       "goals": [
         {
@@ -191,11 +202,21 @@
           "minute": "29",
           "team": "away",
           "scorer": "Callum Bright"
+        },
+        {
+          "minute": "36",
+          "team": "home",
+          "scorer": "Kieran Cook"
         }
       ],
-      "yellowCards": [],
+      "yellowCards": [
+        {
+          "team": "away",
+          "player": "Jordan Crump"
+        }
+      ],
       "redCards": []
     }
   ],
-  "ticker": "@MDTFC: 34’\n\nCheadles no7 takes a dive which Tom Daley would be proud off to try and win a penalty. \n\nReferee produces a yellow and not a gold!!!!\n\n🔴⚪️1-0🟡🔵"
+  "ticker": "@foley_fc: 39 | Kerr gets a yellow card for a late challenge, he’s gone for the ball but caught the man.\n\n⚫️⚪️2-1💛🩶"
 }
