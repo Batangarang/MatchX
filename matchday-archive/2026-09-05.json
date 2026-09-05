@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-09-05T15:50:55.943Z",
+  "generatedAt": "2026-09-05T15:55:41.458Z",
   "fixtureDate": "2026-09-05",
   "kickoff": "15:00",
   "homeTeam": "Brereton Social",
   "awayTeam": "Sandbach United",
-  "postsUsed": 22,
-  "imagesAnalyzedThisRun": 0,
-  "totalImagesAnalyzed": 5,
+  "postsUsed": 24,
+  "imagesAnalyzedThisRun": 1,
+  "totalImagesAnalyzed": 6,
   "match": {
-    "score": "0-1",
+    "score": "0-2",
     "scoreDiscrepancy": null,
     "finalScoreAnnounced": null,
     "halfTimeScoreAnnounced": "0-0",
@@ -51,6 +51,11 @@
         "minute": null,
         "team": "away",
         "scorer": "Unknown Sandbach United player"
+      },
+      {
+        "minute": "90+",
+        "team": "away",
+        "scorer": "Robbie Hatton"
       }
     ],
     "yellowCards": [
@@ -139,7 +144,7 @@
     ],
     "addedTime": {
       "firstHalf": null,
-      "secondHalf": null
+      "secondHalf": 3
     },
     "wentToExtraTime": false,
     "wentToPenalties": false,
@@ -154,46 +159,46 @@
     "roughXG": {
       "firstHalf": {
         "home": 0.3,
-        "away": 0.4,
-        "note": "Both teams had overhead kick attempts; Sandbach appealed for a penalty. Few clear-cut chances."
+        "away": 0.3,
+        "note": "Both teams had overhead kicks as their closest efforts; very few clear chances"
       },
       "secondHalf": {
         "home": 0.2,
-        "away": 0.5,
-        "note": "Sandbach had Max Williams' 25-yard strike, Barry header and late snap shot. Brereton had defensive header that looped near post."
+        "away": 0.8,
+        "note": "Max Williams struck a 25-yarder into side netting, Barry had a snap shot just wide, Hatton scored late from a volley at back post"
       },
       "extraTime": {
         "home": 0,
         "away": 0,
-        "note": "No extra time played"
+        "note": "No extra time"
       },
       "total": {
         "home": 0.5,
-        "away": 0.9,
-        "note": "Very few clear chances throughout. Sandbach marginally more threatening but no quality finishing from either side."
+        "away": 1.1,
+        "note": "Low-chance game overall; Sandbach's goal came very late from a corner situation"
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
     "matchControl": {
       "firstHalf": {
-        "home": 45,
-        "away": 55,
-        "note": "Sandbach created more threat with their overhead kick and penalty appeal; Brereton also had one overhead kick attempt."
+        "home": 50,
+        "away": 50,
+        "note": "Evenly contested; few chances for either team"
       },
       "secondHalf": {
-        "home": 40,
-        "away": 60,
-        "note": "Sandbach dominated with better chances after introducing Fowles and Pollard, though still limited quality."
+        "home": 45,
+        "away": 55,
+        "note": "Sandbach slightly more attacking with the slope in their favour; late pressure led to winning goal"
       },
       "extraTime": {
         "home": 50,
         "away": 50,
-        "note": "No extra time played"
+        "note": "No extra time"
       },
       "total": {
-        "home": 42,
-        "away": 58,
-        "note": "Sandbach United were marginally more threatening throughout, though both teams created few genuine scoring opportunities. Described as a 'snore fest' with very few chances."
+        "home": 47,
+        "away": 53,
+        "note": "Sandbach edged possession and chances; game described as low-scoring and lacking entertainment"
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
