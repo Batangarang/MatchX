@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-09-05T14:50:57.984Z",
+  "generatedAt": "2026-09-05T15:01:13.197Z",
   "fixtureDate": "2026-09-05",
   "kickoff": "15:00",
   "homeTeam": "Brereton Social",
   "awayTeam": "Sandbach United",
-  "postsUsed": 13,
-  "imagesAnalyzedThisRun": 1,
+  "postsUsed": 14,
+  "imagesAnalyzedThisRun": 0,
   "totalImagesAnalyzed": 5,
   "match": {
     "score": "0-1",
     "scoreDiscrepancy": null,
     "finalScoreAnnounced": null,
-    "halfTimeScoreAnnounced": "0-1",
-    "htDiscrepancy": null,
+    "halfTimeScoreAnnounced": "0-0",
+    "htDiscrepancy": "First-half goals suggest HT 0-1, but an announced HT score of 0-0 was also seen.",
     "matchStage": "half_time",
     "lineups": {
       "home": {
@@ -119,46 +119,46 @@
     "roughXG": {
       "firstHalf": {
         "home": 0.3,
-        "away": 1.2,
-        "note": "Sandbach had penalty claim and shot wide; Brereton had free kick effort wide. Sandbach scored one goal."
+        "away": 0.4,
+        "note": "Very few chances for either team; Sandbach had penalty shout (not given), Brereton had free kick effort. Shotton over-the-shoulder attempt for Sandbach drifted wide."
       },
       "secondHalf": {
         "home": 0,
         "away": 0,
-        "note": "No second half data provided"
+        "note": "No second half data available in posts"
       },
       "extraTime": {
         "home": 0,
         "away": 0,
-        "note": "Match did not go to extra time"
+        "note": "No extra time"
       },
       "total": {
         "home": 0.3,
-        "away": 1.2,
-        "note": "Based on first half only; Sandbach had clear chance(s) and converted one. Brereton had limited attacking opportunities."
+        "away": 0.4,
+        "note": "Scarce chances throughout first half; match described as not a classic with very few opportunities"
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
     "matchControl": {
       "firstHalf": {
-        "home": 40,
-        "away": 60,
-        "note": "Sandbach created more chances and scored; Brereton had defensive focus and limited clear opportunities"
+        "home": 50,
+        "away": 50,
+        "note": "Balanced match with neither team creating clear dominance; described as stalemate at HT"
       },
       "secondHalf": {
         "home": 50,
         "away": 50,
-        "note": "No second half data provided"
+        "note": "No second half data available"
       },
       "extraTime": {
         "home": 50,
         "away": 50,
-        "note": "Match did not go to extra time"
+        "note": "No extra time"
       },
       "total": {
-        "home": 40,
-        "away": 60,
-        "note": "Based on first half only; Sandbach dominated and led 0-1 at half time"
+        "home": 50,
+        "away": 50,
+        "note": "Even contest; Sandbach had slope advantage second half according to away commentary"
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
