@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-07T22:55:33.839Z",
+  "generatedAt": "2026-09-07T23:01:11.900Z",
   "date": "2026-09-08",
-  "isToday": false,
+  "isToday": true,
   "fixtures": [
     {
       "home": "Barnton",
@@ -9,6 +9,7 @@
       "kickoff": "19:45",
       "score": null,
       "goals": [],
+      "yellowCards": [],
       "redCards": []
     },
     {
@@ -17,6 +18,7 @@
       "kickoff": "19:45",
       "score": null,
       "goals": [],
+      "yellowCards": [],
       "redCards": []
     }
   ],
