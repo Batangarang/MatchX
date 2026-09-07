@@ -1,281 +1,233 @@
 {
-  "generatedAt": "2026-09-07T09:40:41.145Z",
+  "generatedAt": "2026-09-07T10:40:36.191Z",
   "division": "First Division South",
   "appearances": [
     {
       "rank": "1",
-      "player": "Daniel Clarkson",
-      "club": "Stafford Town",
-      "total": "7"
-    },
-    {
-      "rank": "-",
-      "player": "Luke Evans",
-      "club": "New Mills",
-      "total": "7"
-    },
-    {
-      "rank": "3",
       "player": "Zach  Robinson",
       "club": "Foley Meir",
-      "total": "7"
+      "total": "8"
     },
     {
       "rank": "-",
       "player": "Robbie Hatton",
       "club": "Sandbach United",
-      "total": "7"
-    },
-    {
-      "rank": "-",
-      "player": "Rhyce Brown",
-      "club": "Telford Town",
-      "total": "7"
+      "total": "8"
     },
     {
       "rank": "-",
       "player": "Nathan Barry",
       "club": "Sandbach United",
-      "total": "7"
+      "total": "8"
     },
     {
       "rank": "-",
       "player": "Monty Parkes (GK)",
       "club": "Foley Meir",
-      "total": "7"
-    },
-    {
-      "rank": "-",
-      "player": "Maxwell Chimenes",
-      "club": "Eccleshall",
-      "total": "7"
-    },
-    {
-      "rank": "-",
-      "player": "Macaulay Eyre",
-      "club": "New Mills",
-      "total": "7"
+      "total": "8"
     },
     {
       "rank": "-",
       "player": "Lawson Birch",
       "club": "Wednesfield Community",
-      "total": "6"
-    },
-    {
-      "rank": "-",
-      "player": "Kieran OConnell",
-      "club": "Sandbach United",
       "total": "7"
     },
     {
       "rank": "-",
       "player": "Kerr Dollochin",
       "club": "Foley Meir",
-      "total": "7"
+      "total": "8"
     },
     {
       "rank": "-",
       "player": "Kane Cartwright",
       "club": "Alsager Town",
-      "total": "7"
+      "total": "8"
     },
     {
       "rank": "-",
       "player": "Joshua Wilson",
       "club": "Stafford Town",
-      "total": "7"
+      "total": "8"
     },
     {
       "rank": "-",
       "player": "Jordyn Fitton",
       "club": "Alsager Town",
-      "total": "7"
+      "total": "8"
     },
     {
       "rank": "-",
       "player": "Jordan Darlington",
       "club": "Stafford Town",
-      "total": "7"
+      "total": "8"
     },
     {
       "rank": "-",
       "player": "James Sutton",
       "club": "Market Drayton Town",
-      "total": "6"
+      "total": "7"
     },
     {
       "rank": "-",
       "player": "Jacob Welch",
       "club": "Allscott Heath",
-      "total": "7"
-    },
-    {
-      "rank": "-",
-      "player": "Jack Morris",
-      "club": "New Mills",
-      "total": "7"
+      "total": "8"
     },
     {
       "rank": "-",
       "player": "Harvey Dangerfield",
       "club": "Wednesfield Community",
-      "total": "6"
+      "total": "7"
     },
     {
       "rank": "-",
       "player": "Harley Renshaw",
       "club": "Alsager Town",
-      "total": "7"
+      "total": "8"
     },
     {
       "rank": "-",
       "player": "Gregory Hall (GK)",
       "club": "Sandbach United",
-      "total": "7"
-    },
-    {
-      "rank": "-",
-      "player": "Godfred Summerville",
-      "club": "Telford Town",
-      "total": "7"
+      "total": "8"
     },
     {
       "rank": "-",
       "player": "George Scott (GK)",
       "club": "Telford Town",
-      "total": "7"
+      "total": "8"
     },
     {
       "rank": "-",
       "player": "George Handley",
       "club": "Market Drayton Town",
-      "total": "6"
+      "total": "7"
     },
     {
       "rank": "-",
       "player": "Essa Faburay",
       "club": "Eccleshall",
-      "total": "7"
+      "total": "8"
     },
     {
       "rank": "-",
       "player": "Eshan Greer",
       "club": "Stafford Town",
-      "total": "7"
+      "total": "8"
+    },
+    {
+      "rank": "-",
+      "player": "Daniel Cooper (GK)",
+      "club": "Stafford Town",
+      "total": "8"
+    },
+    {
+      "rank": "-",
+      "player": "Daniel Clarkson",
+      "club": "Stafford Town",
+      "total": "8"
     },
     {
       "rank": "-",
       "player": "Ben Davies",
       "club": "Allscott Heath",
-      "total": "7"
+      "total": "8"
     },
     {
       "rank": "-",
       "player": "Armando Wood",
       "club": "Market Drayton Town",
-      "total": "6"
-    },
-    {
-      "rank": "-",
-      "player": "Shaun Gordon",
-      "club": "Telford Town",
       "total": "7"
     },
     {
       "rank": "-",
       "player": "Rio Tetsell",
       "club": "Wednesfield Community",
-      "total": "6"
-    },
-    {
-      "rank": "-",
-      "player": "Morgan Russell",
-      "club": "Eccleshall",
       "total": "7"
     },
     {
       "rank": "-",
       "player": "Matthew Beech",
       "club": "Stafford Town",
-      "total": "7"
+      "total": "8"
     },
     {
       "rank": "-",
       "player": "Matthew  Jones",
       "club": "Eccleshall",
-      "total": "7"
+      "total": "8"
     },
     {
       "rank": "-",
       "player": "Jack Grimshaw",
       "club": "Telford Town",
-      "total": "7"
+      "total": "8"
     },
     {
       "rank": "-",
       "player": "Harry Livingstone",
       "club": "Foley Meir",
+      "total": "8"
+    },
+    {
+      "rank": "-",
+      "player": "Stanley Tatters",
+      "club": "Sandbach United",
+      "total": "8"
+    },
+    {
+      "rank": "-",
+      "player": "Saul Shotton",
+      "club": "Sandbach United",
+      "total": "8"
+    },
+    {
+      "rank": "-",
+      "player": "Liam Connolly",
+      "club": "Foley Meir",
+      "total": "8"
+    },
+    {
+      "rank": "-",
+      "player": "Jaden Henry-Dean",
+      "club": "Wednesfield Community",
       "total": "7"
     },
     {
       "rank": "-",
       "player": "Benjamin Summers",
       "club": "Allscott Heath",
-      "total": "7"
+      "total": "8"
     },
     {
       "rank": "-",
       "player": "Tyler Bishop",
       "club": "Wednesfield Community",
-      "total": "6"
-    },
-    {
-      "rank": "-",
-      "player": "Stanley Tatters",
-      "club": "Sandbach United",
       "total": "7"
     },
     {
       "rank": "-",
-      "player": "Saul Shotton",
-      "club": "Sandbach United",
-      "total": "7"
-    },
-    {
-      "rank": "-",
-      "player": "Luke Moran",
-      "club": "Widnes Town",
-      "total": "7"
-    },
-    {
-      "rank": "-",
-      "player": "Liam Connolly",
-      "club": "Foley Meir",
-      "total": "7"
-    },
-    {
-      "rank": "-",
-      "player": "Jaden Henry-Dean",
-      "club": "Wednesfield Community",
-      "total": "6"
-    },
-    {
-      "rank": "-",
-      "player": "Finlay Murray",
-      "club": "Wednesfield Community",
-      "total": "6"
-    },
-    {
-      "rank": "-",
-      "player": "Callum Parker",
+      "player": "Sam Lynch",
       "club": "Stafford Town",
-      "total": "7"
+      "total": "8"
     },
     {
       "rank": "-",
       "player": "Archie Ellams",
       "club": "Foley Meir",
+      "total": "8"
+    },
+    {
+      "rank": "-",
+      "player": "Callum Parker",
+      "club": "Stafford Town",
+      "total": "8"
+    },
+    {
+      "rank": "-",
+      "player": "Luke Evans",
+      "club": "New Mills",
       "total": "7"
     }
   ],
