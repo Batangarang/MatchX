@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-09-08T18:35:37.233Z",
+  "generatedAt": "2026-09-08T18:50:45.174Z",
   "date": "2026-09-08",
   "isToday": true,
-  "postCount": 7,
-  "latestPostTimestamp": "2026-09-08T18:31:51.000Z",
+  "postCount": 9,
+  "latestPostTimestamp": "2026-09-08T18:48:07.000Z",
   "fixtures": [
     {
       "home": "Barnton",
       "away": "Cheadle Heath Nomads",
       "kickoff": "19:45",
-      "score": null,
-      "matchStage": "scheduled",
+      "score": "0-0",
+      "matchStage": "first_half",
       "goals": [],
       "yellowCards": [],
       "redCards": []
@@ -26,5 +26,5 @@
       "redCards": []
     }
   ],
-  "ticker": "@barntonfc: Our line up for tonight’s game \n\n#nwcfl #finoallfine #cheshirejuve https://t.co/YACoN5RLaS"
+  "ticker": "@CheadleNomads: 1’ | KICK-OFF\n\nLETS GO NOMADS!\n\n@barntonfc 0-0 @CheadleNomads \n\n#WeAreNomads | @nwcfl | @NWCFLScores"
 }
