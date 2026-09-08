@@ -1,5 +1,5 @@
 {
-  "scrapedAt": "2026-09-08T20:30:45.482Z",
+  "scrapedAt": "2026-09-08T21:30:47.701Z",
   "division": "First Division South",
   "standings": [
     {
@@ -75,19 +75,33 @@
     {
       "position": 6,
       "team": "New Mills",
-      "played": "7",
+      "played": "8",
       "won": "4",
-      "drawn": "1",
+      "drawn": "2",
       "lost": "2",
-      "for": "19",
-      "against": "15",
+      "for": "21",
+      "against": "17",
       "goalDifference": "4",
-      "points": "13",
+      "points": "14",
       "clubUrl": "clubpage.php?id=91",
-      "form": "LWDLWW"
+      "form": "DLWDLW"
     },
     {
       "position": 7,
+      "team": "Barnton",
+      "played": "8",
+      "won": "3",
+      "drawn": "3",
+      "lost": "2",
+      "for": "16",
+      "against": "12",
+      "goalDifference": "4",
+      "points": "12",
+      "clubUrl": "clubpage.php?id=266",
+      "form": "WDWDDW"
+    },
+    {
+      "position": 8,
       "team": "Bilston Town",
       "played": "6",
       "won": "3",
@@ -101,7 +115,7 @@
       "form": "DWDWLL"
     },
     {
-      "position": 8,
+      "position": 9,
       "team": "Foley Meir",
       "played": "8",
       "won": "3",
@@ -115,7 +129,7 @@
       "form": "DWLDWW"
     },
     {
-      "position": 9,
+      "position": 10,
       "team": "Wednesfield Community",
       "played": "7",
       "won": "3",
@@ -129,7 +143,7 @@
       "form": "WLLWLD"
     },
     {
-      "position": 10,
+      "position": 11,
       "team": "Shawbury United",
       "played": "8",
       "won": "3",
@@ -141,20 +155,6 @@
       "points": "10",
       "clubUrl": "clubpage.php?id=792",
       "form": "LLLWWW"
-    },
-    {
-      "position": 11,
-      "team": "Barnton",
-      "played": "7",
-      "won": "2",
-      "drawn": "3",
-      "lost": "2",
-      "for": "15",
-      "against": "12",
-      "goalDifference": "3",
-      "points": "9",
-      "clubUrl": "clubpage.php?id=266",
-      "form": "DWDDWW"
     },
     {
       "position": 12,
@@ -243,16 +243,16 @@
     {
       "position": 18,
       "team": "Cheadle Heath Nomads",
-      "played": "7",
+      "played": "8",
       "won": "1",
       "drawn": "2",
-      "lost": "4",
+      "lost": "5",
       "for": "8",
-      "against": "15",
-      "goalDifference": "-7",
+      "against": "16",
+      "goalDifference": "-8",
       "points": "5",
       "clubUrl": "clubpage.php?id=713",
-      "form": "LLWLLL"
+      "form": "LLLWLL"
     },
     {
       "position": 19,
@@ -271,16 +271,16 @@
     {
       "position": 20,
       "team": "Widnes Town",
-      "played": "5",
+      "played": "6",
       "won": "0",
-      "drawn": "1",
+      "drawn": "2",
       "lost": "4",
-      "for": "5",
-      "against": "21",
+      "for": "7",
+      "against": "23",
       "goalDifference": "-16",
-      "points": "1",
+      "points": "2",
       "clubUrl": "clubpage.php?id=868",
-      "form": "LLLLDL"
+      "form": "DLLLLD"
     }
   ]
 }
