@@ -1,13 +1,16 @@
 {
-  "generatedAt": "2026-09-08T09:55:32.148Z",
+  "generatedAt": "2026-09-08T17:30:55.855Z",
   "date": "2026-09-08",
   "isToday": true,
+  "postCount": 5,
+  "latestPostTimestamp": "2026-09-08T16:19:40.000Z",
   "fixtures": [
     {
       "home": "Barnton",
       "away": "Cheadle Heath Nomads",
       "kickoff": "19:45",
       "score": null,
+      "matchStage": "scheduled",
       "goals": [],
       "yellowCards": [],
       "redCards": []
@@ -17,10 +20,11 @@
       "away": "New Mills",
       "kickoff": "19:45",
       "score": null,
+      "matchStage": "scheduled",
       "goals": [],
       "yellowCards": [],
       "redCards": []
     }
   ],
-  "ticker": null
+  "ticker": "@CheadleNomads: NEXT UP\n\nWe’re back in action tonight as we hit the road to take on @barntonfc!\n\n🕒 19:45 PM KO\n🆚 @barntonfc \n📍 Creative Hut Stadium, CW8 4LH\n🎟️ Adults £6 | Concessions £4\n\n#Wearenomads | @nwcfl | @NWCFLScores https://t.co/8zTjnNec11"
 }
