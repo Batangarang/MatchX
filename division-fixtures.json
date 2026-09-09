@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-08T23:55:36.202Z",
+  "generatedAt": "2026-09-09T00:01:11.995Z",
   "fixtures": [
     {
       "date": "Saturday 12 September 2026",
@@ -2141,20 +2141,6 @@
       "home": "Wolverhampton Casuals",
       "away": "Cheadle Heath Nomads",
       "kickoff": "15:00",
-      "postponed": false
-    },
-    {
-      "date": "Tuesday 8 September 2026",
-      "home": "Barnton",
-      "away": "Cheadle Heath Nomads",
-      "kickoff": "19:45",
-      "postponed": false
-    },
-    {
-      "date": "Tuesday 8 September 2026",
-      "home": "Widnes Town",
-      "away": "New Mills",
-      "kickoff": "19:45",
       "postponed": false
     }
   ]
