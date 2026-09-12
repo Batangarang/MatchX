@@ -51,7 +51,7 @@ function getTodaysWindow(fixtures) {
     // Widened back from 105 to 150 minutes — 105 was cutting off genuinely
     // still-live matches (confirmed 12 Sep: game still running at 16:28
     // real time, well past the old 105-min cutoff from a 15:00 kickoff).
-    end: new Date(latest.getTime() + 150 * 60000),
+    end: new Date(latest.getTime() + 240 * 60000),
   };
 }
 
