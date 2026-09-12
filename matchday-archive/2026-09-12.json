@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-09-12T15:25:46.110Z",
+  "generatedAt": "2026-09-12T15:31:09.643Z",
   "fixtureDate": "2026-09-12",
   "kickoff": "15:00",
   "homeTeam": "Cheadle Heath Nomads",
   "awayTeam": "Sandbach United",
-  "postsUsed": 24,
+  "postsUsed": 26,
   "imagesAnalyzedThisRun": 1,
-  "totalImagesAnalyzed": 10,
+  "totalImagesAnalyzed": 11,
   "match": {
     "score": "2-2",
     "scoreDiscrepancy": null,
@@ -102,13 +102,13 @@
         "playerOn": "17. D. Almeida"
       },
       {
-        "minute": 54,
+        "minute": 56,
         "team": "away",
         "playerOff": "Pollard",
         "playerOn": "O'Connell"
       },
       {
-        "minute": 54,
+        "minute": 56,
         "team": "away",
         "playerOff": "Williams",
         "playerOn": "K Nolan"
@@ -124,6 +124,18 @@
         "team": "away",
         "playerOff": "Williams",
         "playerOn": "K Nolan"
+      },
+      {
+        "minute": 67,
+        "team": "home",
+        "playerOff": "9. D. Lewis",
+        "playerOn": "12. E. Thompson"
+      },
+      {
+        "minute": 70,
+        "team": "away",
+        "playerOff": "Barry",
+        "playerOn": "Fowles"
       }
     ],
     "sinBins": [],
@@ -146,17 +158,22 @@
       "firstHalf": {
         "home": 1.8,
         "away": 0.9,
-        "note": "Home team scored twice with two high-quality finishes (Woods and Colville described as 'worldies'); away team scored once but had limited chances early"
+        "note": "Cheadle scored two high-quality strikes (Woods and Colville described as 'worldies'). Sandbach had one chance early and one goal from open play."
       },
       "secondHalf": {
         "home": 0.5,
-        "away": 1.5,
-        "note": "Away team equalised through O'Connell's diving header and gained traction after substitutions; home team appeared less threatening"
+        "away": 1.4,
+        "note": "Sandbach equalised with a diving header from O'Connell after subs changed the dynamic. Cheadle appeared to struggle after the leveller."
+      },
+      "extraTime": {
+        "home": 0,
+        "away": 0,
+        "note": "No extra time played."
       },
       "total": {
         "home": 2.3,
-        "away": 2.4,
-        "note": "Both teams scored twice; away team improved significantly in second half after tactical adjustments"
+        "away": 2.3,
+        "note": "Both teams scored twice; efforts reasonably balanced across the match."
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
@@ -164,17 +181,22 @@
       "firstHalf": {
         "home": 65,
         "away": 35,
-        "note": "Home team dominated, scoring twice with clinical finishes; away team had 'decent chances' but struggled to capitalise"
+        "note": "Cheadle dominated with two excellent finishes early; Sandbach levelled but struggled to control the tempo."
       },
       "secondHalf": {
         "home": 40,
         "away": 60,
-        "note": "Away team 'changed dynamic and shape' after substitutions, gained 'traction in midfield', and quickly equalised; home team appeared to lose control"
+        "note": "Sandbach subs changed the dynamic significantly, gaining traction in midfield and equalising. Match became more competitive."
+      },
+      "extraTime": {
+        "home": 50,
+        "away": 50,
+        "note": "No extra time played."
       },
       "total": {
         "home": 52,
         "away": 48,
-        "note": "Match was competitive with momentum shifts; home team dominated first half but away team took control in second half"
+        "note": "Cheadle started stronger and led at half-time, but Sandbach came back level in the second half."
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
