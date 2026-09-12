@@ -1,13 +1,16 @@
 {
-  "generatedAt": "2026-09-12T09:50:41.623Z",
+  "generatedAt": "2026-09-12T12:45:44.549Z",
   "date": "2026-09-12",
   "isToday": true,
+  "postCount": 8,
+  "latestPostTimestamp": "2026-09-12T12:08:03.000Z",
   "fixtures": [
     {
       "home": "Bilston Town",
       "away": "Widnes Town",
       "kickoff": "15:00",
       "score": null,
+      "matchStage": "scheduled",
       "goals": [],
       "yellowCards": [],
       "redCards": []
@@ -17,6 +20,7 @@
       "away": "Sandbach United",
       "kickoff": "15:00",
       "score": null,
+      "matchStage": "scheduled",
       "goals": [],
       "yellowCards": [],
       "redCards": []
@@ -26,6 +30,7 @@
       "away": "Brereton Social",
       "kickoff": "15:00",
       "score": null,
+      "matchStage": "scheduled",
       "goals": [],
       "yellowCards": [],
       "redCards": []
@@ -35,6 +40,7 @@
       "away": "Market Drayton Town",
       "kickoff": "15:00",
       "score": null,
+      "matchStage": "scheduled",
       "goals": [],
       "yellowCards": [],
       "redCards": []
@@ -44,6 +50,7 @@
       "away": "Alsager Town",
       "kickoff": "15:00",
       "score": null,
+      "matchStage": "scheduled",
       "goals": [],
       "yellowCards": [],
       "redCards": []
@@ -53,10 +60,11 @@
       "away": "Allscott Heath",
       "kickoff": "15:00",
       "score": null,
+      "matchStage": "scheduled",
       "goals": [],
       "yellowCards": [],
       "redCards": []
     }
   ],
-  "ticker": null
+  "ticker": "@CheadleNomads: MATCH DAY\n\nIn just a couple of hours, we’re back on home soil as we welcome @SandbachFC_1st \n\n🕒 15:00 PM KO\n🆚 @SandbachFC_1st \n📍  Ideal Building Systems Stadium, SK8 2ET\n🎟️ Adults £6 | Concessions £3\n\n#Wearenomads | @nwcfl | @NWCFLScores https://t.co/myYHhYLFCF"
 }
