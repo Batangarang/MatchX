@@ -1,235 +1,88 @@
 {
-  "generatedAt": "2026-09-12T16:50:48.920Z",
-  "date": "2026-09-12",
-  "isToday": true,
-  "postCount": 131,
-  "latestPostTimestamp": "2026-09-12T16:50:54.000Z",
+  "generatedAt": "2026-09-12T23:01:09.250Z",
+  "date": "2026-09-19",
+  "isToday": false,
   "fixtures": [
     {
-      "home": "Bilston Town",
-      "away": "Widnes Town",
+      "home": "Allscott Heath",
+      "away": "Alsager Town",
       "kickoff": "15:00",
-      "score": "7-0",
-      "matchStage": "full_time",
-      "goals": [
-        {
-          "minute": null,
-          "team": "home",
-          "scorer": "Crump"
-        },
-        {
-          "minute": null,
-          "team": "home",
-          "scorer": "Dixon"
-        },
-        {
-          "minute": null,
-          "team": "home",
-          "scorer": "Priest"
-        },
-        {
-          "minute": null,
-          "team": "home",
-          "scorer": "Hewett"
-        },
-        {
-          "minute": null,
-          "team": "home",
-          "scorer": "Crump"
-        },
-        {
-          "minute": null,
-          "team": "home",
-          "scorer": "Dixon"
-        },
-        {
-          "minute": null,
-          "team": "home",
-          "scorer": "Bright"
-        }
-      ],
-      "yellowCards": [],
+      "score": null,
+      "goals": [],
+      "redCards": []
+    },
+    {
+      "home": "Bilston Town",
+      "away": "Market Drayton Town",
+      "kickoff": "15:00",
+      "score": null,
+      "goals": [],
+      "redCards": []
+    },
+    {
+      "home": "Brereton Social",
+      "away": "AFC Bridgnorth",
+      "kickoff": "15:00",
+      "score": null,
+      "goals": [],
       "redCards": []
     },
     {
       "home": "Cheadle Heath Nomads",
-      "away": "Sandbach United",
+      "away": "Stafford Town",
       "kickoff": "15:00",
-      "score": "3-3",
-      "matchStage": "full_time",
-      "goals": [
-        {
-          "minute": 19,
-          "team": "home",
-          "scorer": "Dylan Woods"
-        },
-        {
-          "minute": 26,
-          "team": "away",
-          "scorer": "Foley"
-        },
-        {
-          "minute": 29,
-          "team": "home",
-          "scorer": "George Colville"
-        },
-        {
-          "minute": 63,
-          "team": "away",
-          "scorer": "O'Connell"
-        },
-        {
-          "minute": 77,
-          "team": "away",
-          "scorer": "Foley"
-        },
-        {
-          "minute": 90,
-          "team": "home",
-          "scorer": "Jack Higginbottom"
-        }
-      ],
-      "yellowCards": [
-        {
-          "team": "away",
-          "player": "Tatters"
-        }
-      ],
+      "score": null,
+      "goals": [],
       "redCards": []
     },
     {
-      "home": "Dawley Town",
-      "away": "Brereton Social",
+      "home": "Crewe",
+      "away": "Wednesfield Community",
       "kickoff": "15:00",
-      "score": "0-0",
-      "matchStage": "full_time",
+      "score": null,
       "goals": [],
-      "yellowCards": [],
       "redCards": []
     },
     {
       "home": "New Mills",
-      "away": "Market Drayton Town",
+      "away": "Dawley Town",
       "kickoff": "15:00",
-      "score": "1-2",
-      "matchStage": "full_time",
-      "goals": [
-        {
-          "minute": 30,
-          "team": "home",
-          "scorer": "Malachi Babayale"
-        },
-        {
-          "minute": 45,
-          "team": "away",
-          "scorer": "Tyler Cooper"
-        },
-        {
-          "minute": 76,
-          "team": "away",
-          "scorer": "Armando Wood"
-        }
-      ],
-      "yellowCards": [],
-      "redCards": [
-        {
-          "team": "home",
-          "player": "Akim Samms"
-        }
-      ]
-    },
-    {
-      "home": "Stafford Town",
-      "away": "Alsager Town",
-      "kickoff": "15:00",
-      "score": "5-2",
-      "matchStage": "full_time",
-      "goals": [
-        {
-          "minute": 16,
-          "team": "home",
-          "scorer": "Parker"
-        },
-        {
-          "minute": 28,
-          "team": "home",
-          "scorer": "Wilding"
-        },
-        {
-          "minute": 30,
-          "team": "away",
-          "scorer": "Harley Renshaw"
-        },
-        {
-          "minute": 50,
-          "team": "home",
-          "scorer": "Parker"
-        },
-        {
-          "minute": 52,
-          "team": "home",
-          "scorer": "Parker"
-        },
-        {
-          "minute": 72,
-          "team": "home",
-          "scorer": "Jones"
-        },
-        {
-          "minute": 75,
-          "team": "away",
-          "scorer": "Harley Renshaw"
-        }
-      ],
-      "yellowCards": [],
+      "score": null,
+      "goals": [],
       "redCards": []
     },
     {
-      "home": "Wednesfield Community",
-      "away": "Allscott Heath",
+      "home": "Sandbach United",
+      "away": "Eccleshall",
       "kickoff": "15:00",
-      "score": "1-7",
-      "matchStage": "full_time",
-      "goals": [
-        {
-          "minute": 2,
-          "team": "away",
-          "scorer": "Ben Davies"
-        },
-        {
-          "minute": 15,
-          "team": "away",
-          "scorer": "Ben Davies"
-        },
-        {
-          "minute": 19,
-          "team": "away",
-          "scorer": "Kian Newnes"
-        },
-        {
-          "minute": null,
-          "team": "away",
-          "scorer": "Newnes"
-        },
-        {
-          "minute": null,
-          "team": "away",
-          "scorer": "Cross"
-        },
-        {
-          "minute": null,
-          "team": "away",
-          "scorer": "Parkinson"
-        },
-        {
-          "minute": null,
-          "team": "home",
-          "scorer": null
-        }
-      ],
-      "yellowCards": [],
+      "score": null,
+      "goals": [],
+      "redCards": []
+    },
+    {
+      "home": "Shawbury United",
+      "away": "Wolverhampton Casuals",
+      "kickoff": "15:00",
+      "score": null,
+      "goals": [],
+      "redCards": []
+    },
+    {
+      "home": "Telford Town",
+      "away": "Barnton",
+      "kickoff": "15:00",
+      "score": null,
+      "goals": [],
+      "redCards": []
+    },
+    {
+      "home": "Widnes Town",
+      "away": "Foley Meir",
+      "kickoff": "15:00",
+      "score": null,
+      "goals": [],
       "redCards": []
     }
   ],
-  "ticker": "@SandbachFC_1st: Thank you @CheadleNomads for the usual good hospitality 👏🏻"
+  "ticker": null
 }
