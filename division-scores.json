@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-09-12T16:45:43.635Z",
+  "generatedAt": "2026-09-12T16:50:48.920Z",
   "date": "2026-09-12",
   "isToday": true,
-  "postCount": 130,
-  "latestPostTimestamp": "2026-09-12T16:42:14.000Z",
+  "postCount": 131,
+  "latestPostTimestamp": "2026-09-12T16:50:54.000Z",
   "fixtures": [
     {
       "home": "Bilston Town",
@@ -92,7 +92,7 @@
       "yellowCards": [
         {
           "team": "away",
-          "player": null
+          "player": "Tatters"
         }
       ],
       "redCards": []
@@ -159,11 +159,6 @@
           "minute": 30,
           "team": "away",
           "scorer": "Harley Renshaw"
-        },
-        {
-          "minute": 33,
-          "team": "home",
-          "scorer": "Lynch"
         },
         {
           "minute": 50,
@@ -236,5 +231,5 @@
       "redCards": []
     }
   ],
-  "ticker": "@SandbachFC_1st: We hear from the Dec and JKD after the game. https://t.co/PLHAJJLSGX"
+  "ticker": "@SandbachFC_1st: Thank you @CheadleNomads for the usual good hospitality 👏🏻"
 }
