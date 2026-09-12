@@ -1,19 +1,19 @@
 {
-  "generatedAt": "2026-09-12T13:25:43.435Z",
+  "generatedAt": "2026-09-12T14:01:19.723Z",
   "fixtureDate": "2026-09-12",
   "kickoff": "15:00",
   "homeTeam": "Cheadle Heath Nomads",
   "awayTeam": "Sandbach United",
-  "postsUsed": 3,
-  "imagesAnalyzedThisRun": 1,
+  "postsUsed": 4,
+  "imagesAnalyzedThisRun": 0,
   "totalImagesAnalyzed": 3,
   "match": {
-    "score": null,
+    "score": "0-0",
     "scoreDiscrepancy": null,
     "finalScoreAnnounced": null,
     "halfTimeScoreAnnounced": null,
     "htDiscrepancy": null,
-    "matchStage": "scheduled",
+    "matchStage": "first_half",
     "lineups": {
       "home": {
         "players": [
@@ -88,22 +88,22 @@
       "firstHalf": {
         "home": 0,
         "away": 0,
-        "note": "No match action reported yet"
+        "note": "Match has only just begun at 1 minute; no meaningful data available"
       },
       "secondHalf": {
         "home": 0,
         "away": 0,
-        "note": "No match action reported yet"
+        "note": "Not yet played"
       },
       "extraTime": {
         "home": 0,
         "away": 0,
-        "note": "No extra time"
+        "note": "Not applicable"
       },
       "total": {
         "home": 0,
         "away": 0,
-        "note": "Match has not yet kicked off"
+        "note": "Insufficient data"
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
@@ -111,22 +111,22 @@
       "firstHalf": {
         "home": 50,
         "away": 50,
-        "note": "No match action reported yet"
+        "note": "Match only just kicked off; no data available"
       },
       "secondHalf": {
         "home": 50,
         "away": 50,
-        "note": "No match action reported yet"
+        "note": "Not yet played"
       },
       "extraTime": {
         "home": 50,
         "away": 50,
-        "note": "No extra time"
+        "note": "Not applicable"
       },
       "total": {
         "home": 50,
         "away": 50,
-        "note": "Match has not yet kicked off"
+        "note": "Insufficient data"
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
