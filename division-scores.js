@@ -64,10 +64,25 @@ function findTargetFixtures(fixtures, testDate) {
     return { fixtures: dayFixtures, isToday: false, targetDate: testDate };
   }
 
-  const now = getUKNow();
+    const now = getUKNow();
   const todaysFixtures = fixtures.filter(f => isToday(parseFixtureDate(f.date)));
   if (todaysFixtures.length > 0) {
     return { fixtures: todaysFixtures, isToday: true, targetDate: getUKDateString(now) };
+  }
+
+  // Genuine race condition: division-fixtures.js briefly wipes today's
+  // fixtures mid-match before its own preservation logic restores them.
+  // If our own previous output still shows today as a live matchday,
+  // trust that over an empty fixture list this one cycle, rather than
+  // jumping ahead to next Saturday's fixtures.
+  if (fs.existsSync('division-scores.json')) {
+    try {
+      const previousOutput = JSON.parse(fs.readFileSync('division-scores.json', 'utf-8'));
+      if (previousOutput.isToday && previousOutput.date === getUKDateString(now)) {
+        console.log('Today\'s fixtures missing from a fresh scrape (likely mid-write race) — reusing previous fixture list for this cycle.');
+        return { fixtures: previousOutput.fixtures.map(f => ({ home: f.home, away: f.away, kickoff: f.kickoff })), isToday: true, targetDate: getUKDateString(now) };
+      }
+    } catch {}
   }
 
   const futureDates = [...new Set(fixtures
