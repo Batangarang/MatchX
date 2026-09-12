@@ -1,27 +1,67 @@
 {
-  "generatedAt": "2026-09-12T15:36:46.872Z",
+  "generatedAt": "2026-09-12T15:42:44.068Z",
   "date": "2026-09-12",
   "isToday": true,
-  "postCount": 0,
+  "postCount": 110,
+  "latestPostTimestamp": "2026-09-12T15:39:17.000Z",
   "fixtures": [
     {
       "home": "Bilston Town",
       "away": "Widnes Town",
       "kickoff": "15:00",
-      "score": null,
-      "goals": [],
+      "score": "7-0",
+      "matchStage": "full_time",
+      "goals": [
+        {
+          "minute": null,
+          "team": "home",
+          "scorer": "Crump"
+        },
+        {
+          "minute": null,
+          "team": "home",
+          "scorer": "Dixon"
+        },
+        {
+          "minute": null,
+          "team": "home",
+          "scorer": "Priest"
+        },
+        {
+          "minute": null,
+          "team": "home",
+          "scorer": "Hewett"
+        },
+        {
+          "minute": null,
+          "team": "home",
+          "scorer": "Crump"
+        },
+        {
+          "minute": null,
+          "team": "home",
+          "scorer": "Dixon"
+        },
+        {
+          "minute": null,
+          "team": "home",
+          "scorer": "Bright"
+        }
+      ],
+      "yellowCards": [],
       "redCards": []
     },
     {
       "home": "Cheadle Heath Nomads",
       "away": "Sandbach United",
       "kickoff": "15:00",
-      "score": "2-1",
+      "score": "2-3",
+      "matchStage": "full_time",
       "goals": [
         {
           "minute": 19,
           "team": "home",
-          "scorer": "Woods"
+          "scorer": "Dylan Woods"
         },
         {
           "minute": 26,
@@ -31,7 +71,23 @@
         {
           "minute": 29,
           "team": "home",
-          "scorer": "Colville"
+          "scorer": "George Colville"
+        },
+        {
+          "minute": 63,
+          "team": "away",
+          "scorer": "O'Connell"
+        },
+        {
+          "minute": 77,
+          "team": "away",
+          "scorer": "Foley"
+        }
+      ],
+      "yellowCards": [
+        {
+          "team": "away",
+          "player": null
         }
       ],
       "redCards": []
@@ -41,28 +97,48 @@
       "away": "Brereton Social",
       "kickoff": "15:00",
       "score": null,
+      "matchStage": "half_time",
       "goals": [],
+      "yellowCards": [],
       "redCards": []
     },
     {
       "home": "New Mills",
       "away": "Market Drayton Town",
       "kickoff": "15:00",
-      "score": "1-0",
+      "score": "1-2",
+      "matchStage": "second_half",
       "goals": [
         {
           "minute": 30,
           "team": "home",
           "scorer": "Malachi Babayale"
+        },
+        {
+          "minute": 43,
+          "team": "away",
+          "scorer": "Tyler Cooper"
+        },
+        {
+          "minute": 76,
+          "team": "away",
+          "scorer": null
         }
       ],
-      "redCards": []
+      "yellowCards": [],
+      "redCards": [
+        {
+          "team": "home",
+          "player": "Akim Samms"
+        }
+      ]
     },
     {
       "home": "Stafford Town",
       "away": "Alsager Town",
       "kickoff": "15:00",
-      "score": "3-1",
+      "score": "5-2",
+      "matchStage": "full_time",
       "goals": [
         {
           "minute": 16,
@@ -77,14 +153,35 @@
         {
           "minute": 30,
           "team": "away",
-          "scorer": "Renshaw"
+          "scorer": "Harley Renshaw"
         },
         {
           "minute": 33,
           "team": "home",
           "scorer": "Lynch"
+        },
+        {
+          "minute": 50,
+          "team": "away",
+          "scorer": "Parker"
+        },
+        {
+          "minute": 52,
+          "team": "home",
+          "scorer": "Parker"
+        },
+        {
+          "minute": 72,
+          "team": "home",
+          "scorer": "Jones"
+        },
+        {
+          "minute": 75,
+          "team": "away",
+          "scorer": "Harley Renshaw"
         }
       ],
+      "yellowCards": [],
       "redCards": []
     },
     {
@@ -92,6 +189,7 @@
       "away": "Allscott Heath",
       "kickoff": "15:00",
       "score": "0-3",
+      "matchStage": "half_time",
       "goals": [
         {
           "minute": 2,
@@ -109,8 +207,9 @@
           "scorer": "Kian Newnes"
         }
       ],
+      "yellowCards": [],
       "redCards": []
     }
   ],
-  "ticker": null
+  "ticker": "@MDTFC: 76’ \n\nGOALLLLLLL\n\nA little stutter and army cooly slots the ball into the net…\n\nAnother New Mills player thought he was in a boxing ring after the goal… missed by the ref this time. \n\n#upthegingerbreadmen"
 }
