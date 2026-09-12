@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-09-12T16:31:00.391Z",
+  "generatedAt": "2026-09-12T16:35:35.688Z",
   "date": "2026-09-12",
   "isToday": true,
-  "postCount": 127,
-  "latestPostTimestamp": "2026-09-12T16:30:54.000Z",
+  "postCount": 128,
+  "latestPostTimestamp": "2026-09-12T16:33:32.000Z",
   "fixtures": [
     {
       "home": "Bilston Town",
@@ -111,7 +111,7 @@
       "home": "New Mills",
       "away": "Market Drayton Town",
       "kickoff": "15:00",
-      "score": "3-2",
+      "score": "1-2",
       "matchStage": "full_time",
       "goals": [
         {
@@ -125,17 +125,7 @@
           "scorer": null
         },
         {
-          "minute": 49,
-          "team": "home",
-          "scorer": "Tyler Cooper"
-        },
-        {
           "minute": 76,
-          "team": "away",
-          "scorer": null
-        },
-        {
-          "minute": 85,
           "team": "away",
           "scorer": null
         }
@@ -246,5 +236,5 @@
       "redCards": []
     }
   ],
-  "ticker": "@breretonsocialf: 0-0 very hard fought point away from home. Best chance of the game for Becks but their keeper made a brilliant double save @NWCFLScores"
+  "ticker": "@NewMillsFC: Millers go down 1-2 at home, arguably the better side 2nd half with 10 men but will rue missed chances #UpTheMillers https://t.co/bYcmufRq3I"
 }
