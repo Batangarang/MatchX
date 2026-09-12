@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-09-12T14:15:57.478Z",
+  "generatedAt": "2026-09-12T14:21:00.380Z",
   "fixtureDate": "2026-09-12",
   "kickoff": "15:00",
   "homeTeam": "Cheadle Heath Nomads",
   "awayTeam": "Sandbach United",
-  "postsUsed": 8,
-  "imagesAnalyzedThisRun": 1,
+  "postsUsed": 9,
+  "imagesAnalyzedThisRun": 0,
   "totalImagesAnalyzed": 4,
   "match": {
-    "score": "0-0",
+    "score": "0-1",
     "scoreDiscrepancy": null,
     "finalScoreAnnounced": null,
     "halfTimeScoreAnnounced": null,
@@ -64,7 +64,13 @@
         "officials": []
       }
     },
-    "goals": [],
+    "goals": [
+      {
+        "minute": 18,
+        "team": "away",
+        "scorer": "Unknown"
+      }
+    ],
     "yellowCards": [
       {
         "minute": 9,
@@ -92,14 +98,14 @@
     },
     "roughXG": {
       "firstHalf": {
-        "home": 0.2,
-        "away": 0.1,
-        "note": "Cheadle had one early chance (Lewis header from Ewelike cross), Sandbach had one unspecified chance. Both sides not capitalising."
+        "home": 0.3,
+        "away": 0.5,
+        "note": "Cheadle had one clear chance (Lewis header from Ewelike cross); Sandbach scored via a looping goal from deep. Limited data available."
       },
       "secondHalf": {
         "home": 0,
         "away": 0,
-        "note": "No second-half play data available."
+        "note": "No second-half action reported."
       },
       "extraTime": {
         "home": 0,
@@ -107,9 +113,9 @@
         "note": "Match did not go to extra time."
       },
       "total": {
-        "home": 0.2,
-        "away": 0.1,
-        "note": "Very limited data; only first 9 minutes covered in posts."
+        "home": 0.3,
+        "away": 1.5,
+        "note": "Sandbach scored one goal; estimate reflects that solid floor plus the chance quality observed."
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
@@ -117,12 +123,12 @@
       "firstHalf": {
         "home": 50,
         "away": 50,
-        "note": "Both sides had early chances; described as even early in the match."
+        "note": "Both sides had early chances; match appeared even in the opening 18 minutes before Sandbach's goal."
       },
       "secondHalf": {
         "home": 50,
         "away": 50,
-        "note": "No second-half data available."
+        "note": "No second-half action reported."
       },
       "extraTime": {
         "home": 50,
@@ -132,7 +138,7 @@
       "total": {
         "home": 50,
         "away": 50,
-        "note": "Limited data; match control cannot be assessed beyond first 9 minutes."
+        "note": "Very limited data; match appeared competitive early on."
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
