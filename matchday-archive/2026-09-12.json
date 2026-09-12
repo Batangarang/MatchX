@@ -1,19 +1,19 @@
 {
-  "generatedAt": "2026-09-12T15:11:27.001Z",
+  "generatedAt": "2026-09-12T15:15:53.489Z",
   "fixtureDate": "2026-09-12",
   "kickoff": "15:00",
   "homeTeam": "Cheadle Heath Nomads",
   "awayTeam": "Sandbach United",
-  "postsUsed": 19,
+  "postsUsed": 20,
   "imagesAnalyzedThisRun": 1,
-  "totalImagesAnalyzed": 8,
+  "totalImagesAnalyzed": 9,
   "match": {
     "score": "2-1",
     "scoreDiscrepancy": null,
     "finalScoreAnnounced": null,
     "halfTimeScoreAnnounced": "2-1",
     "htDiscrepancy": null,
-    "matchStage": "half_time",
+    "matchStage": "second_half",
     "lineups": {
       "home": {
         "players": [
@@ -89,7 +89,14 @@
       }
     ],
     "redCards": [],
-    "substitutions": [],
+    "substitutions": [
+      {
+        "minute": 51,
+        "team": "home",
+        "playerOff": "11. C. Ewelike",
+        "playerOn": "17. D. Almeida"
+      }
+    ],
     "sinBins": [],
     "injuries": [],
     "addedTime": {
@@ -110,22 +117,22 @@
       "firstHalf": {
         "home": 1.8,
         "away": 0.8,
-        "note": "Home team scored 2 goals (Woods spectacular finish, Colville post-rattler). Away team scored 1 (Foley turning and finishing). Home had early chance with Lewis header."
+        "note": "Cheadle had two high-quality finishes (Woods and Colville worldies); Sandbach scored once but posts described it as looping/soft chance initially"
       },
       "secondHalf": {
-        "home": 0,
-        "away": 0,
-        "note": "Match ended at half-time; no second half data available."
+        "home": 0.5,
+        "away": 0.3,
+        "note": "Limited action reported in second half from available posts; match only reached 51 minutes in logs"
       },
       "extraTime": {
         "home": 0,
         "away": 0,
-        "note": "No extra time."
+        "note": "No extra time"
       },
       "total": {
-        "home": 1.8,
-        "away": 0.8,
-        "note": "First half only. Home team's finishing quality was evident in their two goals; away team looked more vulnerable defensively."
+        "home": 2.3,
+        "away": 1.1,
+        "note": "Home team scored 2 goals and had clear chances; away team scored 1 but with less clear-cut buildup"
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
@@ -133,22 +140,22 @@
       "firstHalf": {
         "home": 60,
         "away": 40,
-        "note": "Home team took the lead, scored twice, and went into half-time ahead. Away team equalized once but appeared to be weathering pressure."
+        "note": "Cheadle Nomads dominated with two goals and more controlled play; Sandbach had one equalizer but appeared reactive"
       },
       "secondHalf": {
-        "home": 50,
-        "away": 50,
-        "note": "No second half data; match posts end at half-time."
+        "home": 55,
+        "away": 45,
+        "note": "Cheadle maintained lead; Sandbach described as having 'work to do' to get back into game"
       },
       "extraTime": {
         "home": 50,
         "away": 50,
-        "note": "No extra time."
+        "note": "No extra time"
       },
       "total": {
-        "home": 60,
-        "away": 40,
-        "note": "Home team dominated first half in terms of goal-scoring and momentum, though away team had some chances and scored once."
+        "home": 58,
+        "away": 42,
+        "note": "Cheadle Nomads controlled most of the match, scoring twice and maintaining lead"
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
