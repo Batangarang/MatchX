@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-09-12T15:55:31.798Z",
+  "generatedAt": "2026-09-12T16:01:12.694Z",
   "date": "2026-09-12",
   "isToday": true,
-  "postCount": 119,
-  "latestPostTimestamp": "2026-09-12T15:55:21.000Z",
+  "postCount": 122,
+  "latestPostTimestamp": "2026-09-12T15:59:50.000Z",
   "fixtures": [
     {
       "home": "Bilston Town",
@@ -89,15 +89,20 @@
           "scorer": null
         }
       ],
-      "yellowCards": [],
+      "yellowCards": [
+        {
+          "team": "away",
+          "player": "Tatters"
+        }
+      ],
       "redCards": []
     },
     {
       "home": "Dawley Town",
       "away": "Brereton Social",
       "kickoff": "15:00",
-      "score": "0-0",
-      "matchStage": "full_time",
+      "score": null,
+      "matchStage": "half_time",
       "goals": [],
       "yellowCards": [],
       "redCards": []
@@ -106,7 +111,7 @@
       "home": "New Mills",
       "away": "Market Drayton Town",
       "kickoff": "15:00",
-      "score": "2-2",
+      "score": "1-2",
       "matchStage": "full_time",
       "goals": [
         {
@@ -115,19 +120,24 @@
           "scorer": "Malachi Babayale"
         },
         {
-          "minute": "40",
-          "team": "away",
-          "scorer": null
-        },
-        {
           "minute": "45+3",
-          "team": "away",
+          "team": "home",
           "scorer": "Tyler Cooper"
         },
         {
-          "minute": "76",
-          "team": "home",
+          "minute": "45+4",
+          "team": "away",
           "scorer": null
+        },
+        {
+          "minute": "76",
+          "team": "away",
+          "scorer": null
+        },
+        {
+          "minute": "90+5",
+          "team": "away",
+          "scorer": "Durell"
         }
       ],
       "yellowCards": [],
@@ -158,7 +168,7 @@
         {
           "minute": "30",
           "team": "away",
-          "scorer": "Harley Renshaw"
+          "scorer": "Renshaw"
         },
         {
           "minute": "33",
@@ -167,7 +177,7 @@
         },
         {
           "minute": "50",
-          "team": "away",
+          "team": "home",
           "scorer": "Parker"
         },
         {
@@ -183,7 +193,7 @@
         {
           "minute": "75",
           "team": "away",
-          "scorer": "Harley Renshaw"
+          "scorer": "Renshaw"
         }
       ],
       "yellowCards": [],
@@ -194,7 +204,7 @@
       "away": "Allscott Heath",
       "kickoff": "15:00",
       "score": "0-3",
-      "matchStage": "full_time",
+      "matchStage": "half_time",
       "goals": [
         {
           "minute": "2",
@@ -216,5 +226,5 @@
       "redCards": []
     }
   ],
-  "ticker": "@alsagertown_fc: FT’ | An entertaining fixture with the home side taking all 3 points.\n\n⚽️ Renshaw\n⚽️ Renshaw\n\n2-5 | @StaffordTown1st https://t.co/1g89rHuEhL"
+  "ticker": "@StaffordTown1st: Stafford take all 3 points in the battle of the Towns \n\nWell wishes go out to the Alsager player who suffered what looked to be a serious injury towards the end of the game https://t.co/oFSYx5tafv"
 }
