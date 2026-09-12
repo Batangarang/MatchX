@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-09-12T14:35:46.820Z",
+  "generatedAt": "2026-09-12T14:40:54.194Z",
   "fixtureDate": "2026-09-12",
   "kickoff": "15:00",
   "homeTeam": "Cheadle Heath Nomads",
   "awayTeam": "Sandbach United",
-  "postsUsed": 15,
-  "imagesAnalyzedThisRun": 1,
+  "postsUsed": 16,
+  "imagesAnalyzedThisRun": 0,
   "totalImagesAnalyzed": 7,
   "match": {
     "score": "2-2",
@@ -113,24 +113,24 @@
     },
     "roughXG": {
       "firstHalf": {
-        "home": 2.1,
-        "away": 1.4,
-        "note": "Home team scored twice from a mix of chances (header, flicked finish, accurate shot). Away team had early chances and scored once."
+        "home": 1.8,
+        "away": 1.5,
+        "note": "Cheadle Nomads scored twice (Woods 19', Colville 29'), Sandbach once (Foley 26'). Early chances for both sides noted."
       },
       "secondHalf": {
         "home": 0,
         "away": 0,
-        "note": "Match ended at 29 minutes; second half did not occur."
+        "note": "Match ended during first half or posts ceased; no second-half data available."
       },
       "extraTime": {
         "home": 0,
         "away": 0,
-        "note": "No extra time played."
+        "note": "Not applicable."
       },
       "total": {
-        "home": 2.1,
-        "away": 1.4,
-        "note": "Home team 2-1 up after 29 minutes; first half only."
+        "home": 1.8,
+        "away": 1.5,
+        "note": "Two goals for Cheadle (Woods, Colville); one for Sandbach (Foley). Rough estimate based on described chances."
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
@@ -138,22 +138,22 @@
       "firstHalf": {
         "home": 55,
         "away": 45,
-        "note": "Home team took lead, extended it after away side equalized. Both sides had early chances but home more clinical."
+        "note": "Cheadle created early chance (Lewis header), went ahead, then Sandbach equalized. Cheadle retook lead by 29'."
       },
       "secondHalf": {
         "home": 50,
         "away": 50,
-        "note": "Match ended at 29 minutes; second half did not occur."
+        "note": "No second-half data in posts."
       },
       "extraTime": {
         "home": 50,
         "away": 50,
-        "note": "No extra time played."
+        "note": "Not applicable."
       },
       "total": {
         "home": 55,
         "away": 45,
-        "note": "Home team dominated early stages and converted chances more effectively."
+        "note": "Cheadle slightly dominant in first half, scoring twice to Sandbach's one."
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
