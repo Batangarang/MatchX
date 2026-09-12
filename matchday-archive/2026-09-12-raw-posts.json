@@ -54,7 +54,7 @@
     "isDuplicateCommentary": false
   },
   {
-    "text": "Tatters starting today marked his 200th appearance for Sandbach. Outstanding effort and commitment to the club ����🏻",
+    "text": "Tatters starting today marked his 200th appearance for Sandbach. Outstanding effort and commitment to the club 🙌🏻",
     "createdAt": "2026-09-12T14:07:46.000Z",
     "images": [],
     "side": "away",
@@ -273,6 +273,22 @@
     ],
     "side": "home",
     "handle": "CheadleNomads",
+    "isDuplicateCommentary": false
+  },
+  {
+    "text": "Chance for Fowles but AJ makes it tough for him and Fowles can’t quite get the shot around the keeper.",
+    "createdAt": "2026-09-12T15:47:54.000Z",
+    "images": [],
+    "side": "away",
+    "handle": "SandbachFC_1st",
+    "isDuplicateCommentary": false
+  },
+  {
+    "text": "The Subs from Sandbach have completely changed this game",
+    "createdAt": "2026-09-12T15:48:13.000Z",
+    "images": [],
+    "side": "away",
+    "handle": "SandbachFC_1st",
     "isDuplicateCommentary": false
   }
 ]

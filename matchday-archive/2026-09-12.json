@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-09-12T15:45:58.753Z",
+  "generatedAt": "2026-09-12T15:50:54.276Z",
   "fixtureDate": "2026-09-12",
   "kickoff": "15:00",
   "homeTeam": "Cheadle Heath Nomads",
   "awayTeam": "Sandbach United",
-  "postsUsed": 31,
-  "imagesAnalyzedThisRun": 1,
+  "postsUsed": 33,
+  "imagesAnalyzedThisRun": 0,
   "totalImagesAnalyzed": 14,
   "match": {
     "score": "2-3",
@@ -107,13 +107,13 @@
         "playerOn": "17. D. Almeida"
       },
       {
-        "minute": 54,
+        "minute": 53,
         "team": "away",
         "playerOff": "Pollard",
         "playerOn": "O'Connell"
       },
       {
-        "minute": 54,
+        "minute": 53,
         "team": "away",
         "playerOff": "Williams",
         "playerOn": "K Nolan"
@@ -173,47 +173,47 @@
     },
     "roughXG": {
       "firstHalf": {
-        "home": 1.8,
-        "away": 1.2,
-        "note": "Home team scored twice with striking finishes (Woods flick-and-strike, Colville post-rattler); away team scored once but with limited precision noted in posts"
+        "home": 1.2,
+        "away": 0.8,
+        "note": "Nomads scored two goals (Woods, Colville); Sandbach scored one (Foley). Early Nomads chance from Lewis header; both sides created opportunities."
       },
       "secondHalf": {
-        "home": 0.8,
-        "away": 2.5,
-        "note": "Away team scored twice more; home team had chances but defensive lapses evident from posts mentioning need to pick up free players and dynamic shift by substitutes"
+        "home": 0.6,
+        "away": 1.8,
+        "note": "Sandbach scored twice (O'Connell diving header, Foley brace); Fowles had chance late but couldn't convert. Sandbach subs changed momentum significantly."
       },
       "extraTime": {
         "home": 0,
         "away": 0,
-        "note": "No extra time"
+        "note": "No extra time played."
       },
       "total": {
-        "home": 2.6,
-        "away": 3.7,
-        "note": "Home scored 2 goals, away scored 3 goals; totals reflect shooting quality and match flow described"
+        "home": 1.8,
+        "away": 2.6,
+        "note": "Home team scored 2, away team scored 3. Sandbach's second-half resurgence evident in sustained pressure after substitutions."
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
     "matchControl": {
       "firstHalf": {
-        "home": 55,
-        "away": 45,
-        "note": "Home team dominated early with chances and scored twice before half-time; away team equalized once but home retained control"
+        "home": 60,
+        "away": 40,
+        "note": "Nomads dominated early with two quick goals from quality finishes. Sandbach equalised but Nomads took control with Colville's response."
       },
       "secondHalf": {
-        "home": 40,
-        "away": 60,
-        "note": "Away team subs changed dynamic and gained traction in midfield; away team scored twice to take lead while home struggled to respond"
+        "home": 35,
+        "away": 65,
+        "note": "Sandbach subs dramatically changed the game; Ramblers gained traction in midfield and turned the match around with two goals to take the lead."
       },
       "extraTime": {
         "home": 50,
         "away": 50,
-        "note": "No extra time"
+        "note": "No extra time."
       },
       "total": {
-        "home": 48,
-        "away": 52,
-        "note": "Match was competitive throughout; home dominated first half but away team controlled second half and took final lead"
+        "home": 50,
+        "away": 50,
+        "note": "Evenly contested overall. Nomads controlled first half but Sandbach seized control in second half, ultimately winning 3-2 after 77 minutes."
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
