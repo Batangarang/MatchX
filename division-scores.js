@@ -47,11 +47,10 @@ function getTodaysWindow(fixtures) {
   const earliest = new Date(Math.min(...kickoffs));
   const latest = new Date(Math.max(...kickoffs));
   return {
-    start: new Date(earliest.getTime() - 15 * 60000),
-    // Shortened from 165 to 105 minutes after the latest kickoff — most
-    // league matches are fully done well before then, cutting wasted polls
-    // in the final third of the old window.
-    end: new Date(latest.getTime() + 105 * 60000),
+    // Widened back from 105 to 150 minutes — 105 was cutting off genuinely
+    // still-live matches (confirmed 12 Sep: game still running at 16:28
+    // real time, well past the old 105-min cutoff from a 15:00 kickoff).
+    end: new Date(latest.getTime() + 150 * 60000),
   };
 }
 
