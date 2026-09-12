@@ -158,6 +158,7 @@ async function run() {
   }
 
   const window = getTodaysWindow(todaysFixtures);
+  console.log('DEBUG window check — now:', now.toISOString(), '| window start:', window?.start?.toISOString(), '| window end:', window?.end?.toISOString(), '| fixtures used:', JSON.stringify(todaysFixtures.map(f => f.kickoff)));
   if (!isManual && window && (now < window.start || now > window.end)) {
     console.log('Outside today\'s match window — skipping poll.');
     return;
