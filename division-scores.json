@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-09-12T14:10:45.919Z",
+  "generatedAt": "2026-09-12T14:15:42.948Z",
   "date": "2026-09-12",
   "isToday": true,
-  "postCount": 33,
-  "latestPostTimestamp": "2026-09-12T14:07:46.000Z",
+  "postCount": 34,
+  "latestPostTimestamp": "2026-09-12T14:11:07.000Z",
   "fixtures": [
     {
       "home": "Bilston Town",
@@ -22,7 +22,12 @@
       "score": "0-0",
       "matchStage": "first_half",
       "goals": [],
-      "yellowCards": [],
+      "yellowCards": [
+        {
+          "team": "away",
+          "player": "Tatters"
+        }
+      ],
       "redCards": []
     },
     {
@@ -51,13 +56,7 @@
       "kickoff": "15:00",
       "score": "0-0",
       "matchStage": "first_half",
-      "goals": [
-        {
-          "minute": 4,
-          "team": "away",
-          "scorer": "Geddes"
-        }
-      ],
+      "goals": [],
       "yellowCards": [],
       "redCards": []
     },
@@ -78,5 +77,5 @@
       "redCards": []
     }
   ],
-  "ticker": "@SandbachFC_1st: Tatters starting today marked his 200th appearance for Sandbach. Outstanding effort and commitment to the club 🙌🏻"
+  "ticker": "@SandbachFC_1st: Very soft card that however Tats goes in the book on the 9th minute https://t.co/1T1O0tlVMP"
 }
