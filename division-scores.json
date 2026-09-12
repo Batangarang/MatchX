@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-09-12T14:31:01.080Z",
+  "generatedAt": "2026-09-12T14:35:34.680Z",
   "date": "2026-09-12",
   "isToday": true,
-  "postCount": 50,
-  "latestPostTimestamp": "2026-09-12T14:31:03.000Z",
+  "postCount": 57,
+  "latestPostTimestamp": "2026-09-12T14:34:46.000Z",
   "fixtures": [
     {
       "home": "Bilston Town",
@@ -19,7 +19,7 @@
       "home": "Cheadle Heath Nomads",
       "away": "Sandbach United",
       "kickoff": "15:00",
-      "score": "1-1",
+      "score": "2-1",
       "matchStage": "second_half",
       "goals": [
         {
@@ -31,14 +31,14 @@
           "minute": "26",
           "team": "away",
           "scorer": "Foley"
-        }
-      ],
-      "yellowCards": [
+        },
         {
-          "team": "away",
-          "player": "Tats"
+          "minute": "28",
+          "team": "home",
+          "scorer": null
         }
       ],
+      "yellowCards": [],
       "redCards": []
     },
     {
@@ -55,9 +55,15 @@
       "home": "New Mills",
       "away": "Market Drayton Town",
       "kickoff": "15:00",
-      "score": null,
-      "matchStage": "first_half",
-      "goals": [],
+      "score": "1-0",
+      "matchStage": "second_half",
+      "goals": [
+        {
+          "minute": "30",
+          "team": "home",
+          "scorer": "Malachi Babayale"
+        }
+      ],
       "yellowCards": [],
       "redCards": []
     },
@@ -65,7 +71,7 @@
       "home": "Stafford Town",
       "away": "Alsager Town",
       "kickoff": "15:00",
-      "score": "2-1",
+      "score": "3-2",
       "matchStage": "second_half",
       "goals": [
         {
@@ -75,13 +81,23 @@
         },
         {
           "minute": "28",
-          "team": "away",
+          "team": "home",
           "scorer": "Wilding"
         },
         {
           "minute": "30",
           "team": "away",
-          "scorer": null
+          "scorer": "Renshaw"
+        },
+        {
+          "minute": "33",
+          "team": "away",
+          "scorer": "Lynch"
+        },
+        {
+          "minute": "33",
+          "team": "home",
+          "scorer": "Lynch"
         }
       ],
       "yellowCards": [],
@@ -91,16 +107,11 @@
       "home": "Wednesfield Community",
       "away": "Allscott Heath",
       "kickoff": "15:00",
-      "score": "0-3",
-      "matchStage": "first_half",
+      "score": "0-2",
+      "matchStage": "second_half",
       "goals": [
         {
           "minute": "2",
-          "team": "away",
-          "scorer": "Ben Davies"
-        },
-        {
-          "minute": "15",
           "team": "away",
           "scorer": "Ben Davies"
         },
@@ -114,5 +125,5 @@
       "redCards": []
     }
   ],
-  "ticker": "@StaffordTown1st: 30 - Goal Alsager \n\nNumber 11 with a powerful strike from a tight angle. \n\n🔴🔴 2-1 🔵🔵"
+  "ticker": "@StaffordTown1st: 33 - LYNNNCCCHHH!!!\n\nIf he meant that it’s goal of the season. I’m going to say an over hit cross lobs the keeper and finds the top corner!\n\n🔴🔴 3-1 🔵🔵 https://t.co/28GjxAYSRU"
 }
