@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-09-12T14:01:19.723Z",
+  "generatedAt": "2026-09-12T14:05:43.136Z",
   "fixtureDate": "2026-09-12",
   "kickoff": "15:00",
   "homeTeam": "Cheadle Heath Nomads",
   "awayTeam": "Sandbach United",
-  "postsUsed": 4,
+  "postsUsed": 5,
   "imagesAnalyzedThisRun": 0,
   "totalImagesAnalyzed": 3,
   "match": {
@@ -86,47 +86,47 @@
     },
     "roughXG": {
       "firstHalf": {
-        "home": 0,
+        "home": 0.15,
         "away": 0,
-        "note": "Match has only just begun at 1 minute; no meaningful data available"
+        "note": "One clear early chance for Cheadle Nomads (Lewis header from Ewelike cross), well saved."
       },
       "secondHalf": {
         "home": 0,
         "away": 0,
-        "note": "Not yet played"
+        "note": "No second-half content available."
       },
       "extraTime": {
         "home": 0,
         "away": 0,
-        "note": "Not applicable"
+        "note": "Match did not reach extra time."
       },
       "total": {
-        "home": 0,
+        "home": 0.15,
         "away": 0,
-        "note": "Insufficient data"
+        "note": "Minimal data; only early first-half chance recorded."
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
     "matchControl": {
       "firstHalf": {
-        "home": 50,
-        "away": 50,
-        "note": "Match only just kicked off; no data available"
+        "home": 60,
+        "away": 40,
+        "note": "Cheadle Nomads proactive in early minutes with attacking play down the flank."
       },
       "secondHalf": {
         "home": 50,
         "away": 50,
-        "note": "Not yet played"
+        "note": "Insufficient data to assess second half."
       },
       "extraTime": {
         "home": 50,
         "away": 50,
-        "note": "Not applicable"
+        "note": "Match did not reach extra time."
       },
       "total": {
-        "home": 50,
-        "away": 50,
-        "note": "Insufficient data"
+        "home": 55,
+        "away": 45,
+        "note": "Limited material; early signs suggest slight Cheadle dominance."
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
