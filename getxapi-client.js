@@ -38,6 +38,17 @@ async function getUserTweets(userName, apiKey, opts = {}) {
     const data = await res.json();
 
     if (data.error) {
+      const isRateLimited = res.status === 429 || /RATE_LIMITED/i.test(data.error);
+      if (isRateLimited && (opts.retriesLeft ?? 2) > 0) {
+        const waitMs = 3000 * ((opts.retryAttempt ?? 0) + 1); // 3s, then 6s
+        console.warn(`Rate limited for @${userName}, retrying in ${waitMs}ms...`);
+        await new Promise(r => setTimeout(r, waitMs));
+        return getUserTweets(userName, apiKey, {
+          ...opts,
+          retriesLeft: (opts.retriesLeft ?? 2) - 1,
+          retryAttempt: (opts.retryAttempt ?? 0) + 1,
+        });
+      }
       throw new Error(`GetXAPI error for @${userName}: ${data.error}`);
     }
 
