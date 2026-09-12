@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-09-12T16:10:44.932Z",
+  "generatedAt": "2026-09-12T16:15:42.743Z",
   "date": "2026-09-12",
   "isToday": true,
-  "postCount": 125,
-  "latestPostTimestamp": "2026-09-12T16:05:48.000Z",
+  "postCount": 126,
+  "latestPostTimestamp": "2026-09-12T16:11:18.000Z",
   "fixtures": [
     {
       "home": "Bilston Town",
@@ -33,12 +33,12 @@
           "scorer": "Hewett"
         },
         {
-          "minute": null,
+          "minute": 48,
           "team": "home",
           "scorer": "Crump"
         },
         {
-          "minute": null,
+          "minute": 48,
           "team": "home",
           "scorer": "Dixon"
         },
@@ -89,12 +89,7 @@
           "scorer": "Jack Higginbottom"
         }
       ],
-      "yellowCards": [
-        {
-          "team": "away",
-          "player": null
-        }
-      ],
+      "yellowCards": [],
       "redCards": []
     },
     {
@@ -102,7 +97,7 @@
       "away": "Brereton Social",
       "kickoff": "15:00",
       "score": null,
-      "matchStage": "scheduled",
+      "matchStage": "half_time",
       "goals": [],
       "yellowCards": [],
       "redCards": []
@@ -111,7 +106,7 @@
       "home": "New Mills",
       "away": "Market Drayton Town",
       "kickoff": "15:00",
-      "score": "3-2",
+      "score": "2-3",
       "matchStage": "full_time",
       "goals": [
         {
@@ -122,17 +117,22 @@
         {
           "minute": 45,
           "team": "away",
-          "scorer": "Tyler Cooper"
-        },
-        {
-          "minute": 45,
-          "team": "away",
           "scorer": null
         },
         {
           "minute": 76,
           "team": "away",
           "scorer": null
+        },
+        {
+          "minute": null,
+          "team": "home",
+          "scorer": "Tyler Cooper"
+        },
+        {
+          "minute": null,
+          "team": "away",
+          "scorer": "Durell"
         }
       ],
       "yellowCards": [],
@@ -163,7 +163,7 @@
         {
           "minute": 30,
           "team": "away",
-          "scorer": "Renshaw"
+          "scorer": "Harley Renshaw"
         },
         {
           "minute": 33,
@@ -188,7 +188,7 @@
         {
           "minute": 75,
           "team": "away",
-          "scorer": "Renshaw"
+          "scorer": "Harley Renshaw"
         }
       ],
       "yellowCards": [],
@@ -198,7 +198,7 @@
       "home": "Wednesfield Community",
       "away": "Allscott Heath",
       "kickoff": "15:00",
-      "score": "1-7",
+      "score": "0-7",
       "matchStage": "full_time",
       "goals": [
         {
@@ -219,6 +219,11 @@
         {
           "minute": null,
           "team": "away",
+          "scorer": "Newnes"
+        },
+        {
+          "minute": null,
+          "team": "away",
           "scorer": "Cross"
         },
         {
@@ -229,12 +234,12 @@
         {
           "minute": null,
           "team": "away",
-          "scorer": "Newnes"
+          "scorer": null
         }
       ],
       "yellowCards": [],
       "redCards": []
     }
   ],
-  "ticker": "@CheadleNomads: 90’ | FULL-TIME \n\nThe points are shared after Jack Higginbottom’s late equaliser rescues a point for the Nomads in a thrilling finish\n\n@CheadleNomads 3-3 @SandbachFC_1st \n\n#WeAreNomads | @nwcfl | @NWCFLScores https://t.co/ZN4baiwAN1"
+  "ticker": "@bilstontownfc: Full Time - Steelmen 7 Widnes Town 0"
 }
