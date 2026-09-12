@@ -1,44 +1,22 @@
 {
-  "generatedAt": "2026-09-12T14:40:44.949Z",
+  "generatedAt": "2026-09-12T15:31:04.707Z",
   "date": "2026-09-12",
-  "isToday": true,
-  "postCount": 58,
-  "latestPostTimestamp": "2026-09-12T14:37:25.000Z",
+  "isToday": false,
   "fixtures": [
     {
       "home": "Bilston Town",
       "away": "Widnes Town",
       "kickoff": "15:00",
       "score": null,
-      "matchStage": "scheduled",
       "goals": [],
-      "yellowCards": [],
       "redCards": []
     },
     {
       "home": "Cheadle Heath Nomads",
       "away": "Sandbach United",
       "kickoff": "15:00",
-      "score": "2-1",
-      "matchStage": "second_half",
-      "goals": [
-        {
-          "minute": 19,
-          "team": "home",
-          "scorer": "Woods"
-        },
-        {
-          "minute": 26,
-          "team": "away",
-          "scorer": "Foley"
-        },
-        {
-          "minute": 29,
-          "team": "home",
-          "scorer": "Colville"
-        }
-      ],
-      "yellowCards": [],
+      "score": null,
+      "goals": [],
       "redCards": []
     },
     {
@@ -46,84 +24,33 @@
       "away": "Brereton Social",
       "kickoff": "15:00",
       "score": null,
-      "matchStage": "scheduled",
       "goals": [],
-      "yellowCards": [],
       "redCards": []
     },
     {
       "home": "New Mills",
       "away": "Market Drayton Town",
       "kickoff": "15:00",
-      "score": "1-0",
-      "matchStage": "second_half",
-      "goals": [
-        {
-          "minute": 30,
-          "team": "home",
-          "scorer": "Malachi Babayale"
-        }
-      ],
-      "yellowCards": [],
+      "score": null,
+      "goals": [],
       "redCards": []
     },
     {
       "home": "Stafford Town",
       "away": "Alsager Town",
       "kickoff": "15:00",
-      "score": "3-1",
-      "matchStage": "second_half",
-      "goals": [
-        {
-          "minute": 16,
-          "team": "home",
-          "scorer": "Parker"
-        },
-        {
-          "minute": 28,
-          "team": "home",
-          "scorer": "Wilding"
-        },
-        {
-          "minute": 30,
-          "team": "away",
-          "scorer": "Renshaw"
-        },
-        {
-          "minute": 33,
-          "team": "home",
-          "scorer": "Lynch"
-        }
-      ],
-      "yellowCards": [],
+      "score": null,
+      "goals": [],
       "redCards": []
     },
     {
       "home": "Wednesfield Community",
       "away": "Allscott Heath",
       "kickoff": "15:00",
-      "score": "0-3",
-      "matchStage": "second_half",
-      "goals": [
-        {
-          "minute": 2,
-          "team": "away",
-          "scorer": "Ben Davies"
-        },
-        {
-          "minute": 15,
-          "team": "away",
-          "scorer": "Ben Davies"
-        },
-        {
-          "minute": 19,
-          "team": "away",
-          "scorer": "Kian Newnes"
-        }
-      ],
-      "yellowCards": [],
+      "score": null,
+      "goals": [],
       "redCards": []
     }
   ],
-  "ticker": "@MDTFC: 30’ gone \n\nNew Mills 1 - 0 Market Drayton\n\nA shot tipped onto the post by Ash and finished by the New Mills 3.\n\n#upthegingerbreadmen"
+  "ticker": null
 }
