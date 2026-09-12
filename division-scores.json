@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-09-12T14:05:36.292Z",
+  "generatedAt": "2026-09-12T14:10:45.919Z",
   "date": "2026-09-12",
   "isToday": true,
-  "postCount": 28,
-  "latestPostTimestamp": "2026-09-12T14:05:33.000Z",
+  "postCount": 33,
+  "latestPostTimestamp": "2026-09-12T14:07:46.000Z",
   "fixtures": [
     {
       "home": "Bilston Town",
@@ -51,7 +51,13 @@
       "kickoff": "15:00",
       "score": "0-0",
       "matchStage": "first_half",
-      "goals": [],
+      "goals": [
+        {
+          "minute": 4,
+          "team": "away",
+          "scorer": "Geddes"
+        }
+      ],
       "yellowCards": [],
       "redCards": []
     },
@@ -72,5 +78,5 @@
       "redCards": []
     }
   ],
-  "ticker": "@NewMillsFC: Delay here as a fan at the far end has been hit by a ball and is requiring a bit of medical attention from the team’s physio’s, hope they are ok 🙏"
+  "ticker": "@SandbachFC_1st: Tatters starting today marked his 200th appearance for Sandbach. Outstanding effort and commitment to the club 🙌🏻"
 }
