@@ -1,16 +1,18 @@
 {
-  "generatedAt": "2026-09-12T12:31:09.956Z",
+  "generatedAt": "2026-09-12T13:05:49.067Z",
   "fixtureDate": "2026-09-12",
   "kickoff": "15:00",
   "homeTeam": "Cheadle Heath Nomads",
   "awayTeam": "Sandbach United",
-  "postsUsed": 1,
+  "postsUsed": 2,
   "imagesAnalyzedThisRun": 1,
-  "totalImagesAnalyzed": 1,
+  "totalImagesAnalyzed": 2,
   "match": {
     "score": null,
+    "scoreDiscrepancy": null,
     "finalScoreAnnounced": null,
     "halfTimeScoreAnnounced": null,
+    "htDiscrepancy": null,
     "matchStage": "scheduled",
     "lineups": {
       "home": {
@@ -20,8 +22,26 @@
         "officials": []
       },
       "away": {
-        "players": [],
-        "substitutes": [],
+        "players": [
+          "1. Greg Hall",
+          "2. Jacob Vernon",
+          "3. Max Williams",
+          "4. Saul Shotton",
+          "5. Jack Finney",
+          "6. Stan Tatters",
+          "7. Jake Pollard",
+          "8. Mitch Nolan",
+          "9. Nathan Barry",
+          "10. Robbie Hatton",
+          "11. Kyle Foley"
+        ],
+        "substitutes": [
+          "O'Connell",
+          "Stafford",
+          "Nolan",
+          "Forrester",
+          "Fowles"
+        ],
         "manager": null,
         "officials": []
       }
@@ -50,22 +70,22 @@
       "firstHalf": {
         "home": 0,
         "away": 0,
-        "note": "No match data available — only pre-match announcement posted"
+        "note": "Match not yet played; kickoff at 15:00"
       },
       "secondHalf": {
         "home": 0,
         "away": 0,
-        "note": "No match data available"
+        "note": "Match not yet played"
       },
       "extraTime": {
         "home": 0,
         "away": 0,
-        "note": "No match data available"
+        "note": "Not applicable"
       },
       "total": {
         "home": 0,
         "away": 0,
-        "note": "No match data available"
+        "note": "Match not yet played"
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
@@ -73,26 +93,24 @@
       "firstHalf": {
         "home": 50,
         "away": 50,
-        "note": "No match data available"
+        "note": "Match not yet played"
       },
       "secondHalf": {
         "home": 50,
         "away": 50,
-        "note": "No match data available"
+        "note": "Match not yet played"
       },
       "extraTime": {
         "home": 50,
         "away": 50,
-        "note": "No match data available"
+        "note": "Not applicable"
       },
       "total": {
         "home": 50,
         "away": 50,
-        "note": "No match data available"
+        "note": "Match not yet played"
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
-    },
-    "scoreDiscrepancy": null,
-    "htDiscrepancy": null
+    }
   }
 }
