@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-09-12T15:50:43.280Z",
+  "generatedAt": "2026-09-12T15:55:31.798Z",
   "date": "2026-09-12",
   "isToday": true,
-  "postCount": 115,
-  "latestPostTimestamp": "2026-09-12T15:49:49.000Z",
+  "postCount": 119,
+  "latestPostTimestamp": "2026-09-12T15:55:21.000Z",
   "fixtures": [
     {
       "home": "Bilston Town",
       "away": "Widnes Town",
       "kickoff": "15:00",
       "score": "7-0",
-      "matchStage": "second_half",
+      "matchStage": "full_time",
       "goals": [
         {
           "minute": null,
@@ -55,8 +55,8 @@
       "home": "Cheadle Heath Nomads",
       "away": "Sandbach United",
       "kickoff": "15:00",
-      "score": "2-3",
-      "matchStage": "second_half",
+      "score": "3-3",
+      "matchStage": "full_time",
       "goals": [
         {
           "minute": "19",
@@ -82,6 +82,11 @@
           "minute": "77",
           "team": "away",
           "scorer": "Foley"
+        },
+        {
+          "minute": "90+2",
+          "team": "home",
+          "scorer": null
         }
       ],
       "yellowCards": [],
@@ -91,8 +96,8 @@
       "home": "Dawley Town",
       "away": "Brereton Social",
       "kickoff": "15:00",
-      "score": null,
-      "matchStage": "half_time",
+      "score": "0-0",
+      "matchStage": "full_time",
       "goals": [],
       "yellowCards": [],
       "redCards": []
@@ -101,8 +106,8 @@
       "home": "New Mills",
       "away": "Market Drayton Town",
       "kickoff": "15:00",
-      "score": "1-2",
-      "matchStage": "second_half",
+      "score": "2-2",
+      "matchStage": "full_time",
       "goals": [
         {
           "minute": "30",
@@ -110,18 +115,18 @@
           "scorer": "Malachi Babayale"
         },
         {
-          "minute": "41",
+          "minute": "40",
           "team": "away",
           "scorer": null
         },
         {
           "minute": "45+3",
-          "team": "home",
+          "team": "away",
           "scorer": "Tyler Cooper"
         },
         {
           "minute": "76",
-          "team": "away",
+          "team": "home",
           "scorer": null
         }
       ],
@@ -138,7 +143,7 @@
       "away": "Alsager Town",
       "kickoff": "15:00",
       "score": "5-2",
-      "matchStage": "second_half",
+      "matchStage": "full_time",
       "goals": [
         {
           "minute": "16",
@@ -162,7 +167,7 @@
         },
         {
           "minute": "50",
-          "team": "home",
+          "team": "away",
           "scorer": "Parker"
         },
         {
@@ -189,7 +194,7 @@
       "away": "Allscott Heath",
       "kickoff": "15:00",
       "score": "0-3",
-      "matchStage": "half_time",
+      "matchStage": "full_time",
       "goals": [
         {
           "minute": "2",
@@ -211,5 +216,5 @@
       "redCards": []
     }
   ],
-  "ticker": "@StaffordTown1st: 90 - In to 6 minutes added time \n\n🔴🔴 5-2 🔵🔵"
+  "ticker": "@alsagertown_fc: FT’ | An entertaining fixture with the home side taking all 3 points.\n\n⚽️ Renshaw\n⚽️ Renshaw\n\n2-5 | @StaffordTown1st https://t.co/1g89rHuEhL"
 }
