@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-09-12T16:35:35.688Z",
+  "generatedAt": "2026-09-12T16:45:43.635Z",
   "date": "2026-09-12",
   "isToday": true,
-  "postCount": 128,
-  "latestPostTimestamp": "2026-09-12T16:33:32.000Z",
+  "postCount": 130,
+  "latestPostTimestamp": "2026-09-12T16:42:14.000Z",
   "fixtures": [
     {
       "home": "Bilston Town",
@@ -122,12 +122,12 @@
         {
           "minute": 45,
           "team": "away",
-          "scorer": null
+          "scorer": "Tyler Cooper"
         },
         {
           "minute": 76,
           "team": "away",
-          "scorer": null
+          "scorer": "Armando Wood"
         }
       ],
       "yellowCards": [],
@@ -236,5 +236,5 @@
       "redCards": []
     }
   ],
-  "ticker": "@NewMillsFC: Millers go down 1-2 at home, arguably the better side 2nd half with 10 men but will rue missed chances #UpTheMillers https://t.co/bYcmufRq3I"
+  "ticker": "@SandbachFC_1st: We hear from the Dec and JKD after the game. https://t.co/PLHAJJLSGX"
 }
