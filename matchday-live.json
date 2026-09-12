@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-09-12T15:31:09.643Z",
+  "generatedAt": "2026-09-12T15:35:44.790Z",
   "fixtureDate": "2026-09-12",
   "kickoff": "15:00",
   "homeTeam": "Cheadle Heath Nomads",
   "awayTeam": "Sandbach United",
-  "postsUsed": 26,
-  "imagesAnalyzedThisRun": 1,
+  "postsUsed": 27,
+  "imagesAnalyzedThisRun": 0,
   "totalImagesAnalyzed": 11,
   "match": {
     "score": "2-2",
@@ -102,13 +102,13 @@
         "playerOn": "17. D. Almeida"
       },
       {
-        "minute": 56,
+        "minute": 53,
         "team": "away",
         "playerOff": "Pollard",
         "playerOn": "O'Connell"
       },
       {
-        "minute": 56,
+        "minute": 53,
         "team": "away",
         "playerOff": "Williams",
         "playerOn": "K Nolan"
@@ -156,14 +156,14 @@
     },
     "roughXG": {
       "firstHalf": {
-        "home": 1.8,
-        "away": 0.9,
-        "note": "Cheadle scored two high-quality strikes (Woods and Colville described as 'worldies'). Sandbach had one chance early and one goal from open play."
+        "home": 1.2,
+        "away": 0.8,
+        "note": "Cheadle had early chance (Lewis header) and scored two well-taken goals (Woods flick-and-strike, Colville's effort off the post). Sandbach conceded early but pulled level with a quality Foley strike."
       },
       "secondHalf": {
         "home": 0.5,
-        "away": 1.4,
-        "note": "Sandbach equalised with a diving header from O'Connell after subs changed the dynamic. Cheadle appeared to struggle after the leveller."
+        "away": 1.5,
+        "note": "Sandbach dominated after substitutions, with Fowles making an immediate impact. O'Connell scored a close-range diving header to equalize."
       },
       "extraTime": {
         "home": 0,
@@ -171,22 +171,22 @@
         "note": "No extra time played."
       },
       "total": {
-        "home": 2.3,
+        "home": 1.7,
         "away": 2.3,
-        "note": "Both teams scored twice; efforts reasonably balanced across the match."
+        "note": "Cheadle scored two high-quality goals in first half but offered little in second half. Sandbach gradually took control and equalized through O'Connell."
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
     "matchControl": {
       "firstHalf": {
-        "home": 65,
-        "away": 35,
-        "note": "Cheadle dominated with two excellent finishes early; Sandbach levelled but struggled to control the tempo."
+        "home": 60,
+        "away": 40,
+        "note": "Cheadle dominated early with two goals from quality chances. Sandbach showed resilience to equalize through Foley but trailed at half-time."
       },
       "secondHalf": {
-        "home": 40,
-        "away": 60,
-        "note": "Sandbach subs changed the dynamic significantly, gaining traction in midfield and equalising. Match became more competitive."
+        "home": 35,
+        "away": 65,
+        "note": "Sandbach substitutions (O'Connell, K Nolan, Fowles) transformed the game. Posts indicate away team 'gaining traction' and improved shape after subs, leading to equalization."
       },
       "extraTime": {
         "home": 50,
@@ -194,9 +194,9 @@
         "note": "No extra time played."
       },
       "total": {
-        "home": 52,
-        "away": 48,
-        "note": "Cheadle started stronger and led at half-time, but Sandbach came back level in the second half."
+        "home": 50,
+        "away": 50,
+        "note": "Evenly matched overall; Cheadle's strong first-half control offset by Sandbach's second-half dominance."
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
