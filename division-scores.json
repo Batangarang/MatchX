@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-09-12T16:05:36.047Z",
+  "generatedAt": "2026-09-12T16:10:44.932Z",
   "date": "2026-09-12",
   "isToday": true,
-  "postCount": 124,
-  "latestPostTimestamp": "2026-09-12T16:04:15.000Z",
+  "postCount": 125,
+  "latestPostTimestamp": "2026-09-12T16:05:48.000Z",
   "fixtures": [
     {
       "home": "Bilston Town",
@@ -86,13 +86,13 @@
         {
           "minute": 90,
           "team": "home",
-          "scorer": "Higgy"
+          "scorer": "Jack Higginbottom"
         }
       ],
       "yellowCards": [
         {
           "team": "away",
-          "player": "Tatters"
+          "player": null
         }
       ],
       "redCards": []
@@ -102,7 +102,7 @@
       "away": "Brereton Social",
       "kickoff": "15:00",
       "score": null,
-      "matchStage": "half_time",
+      "matchStage": "scheduled",
       "goals": [],
       "yellowCards": [],
       "redCards": []
@@ -122,22 +122,17 @@
         {
           "minute": 45,
           "team": "away",
-          "scorer": null
+          "scorer": "Tyler Cooper"
         },
         {
-          "minute": 49,
-          "team": "home",
-          "scorer": "Tyler Cooper"
+          "minute": 45,
+          "team": "away",
+          "scorer": null
         },
         {
           "minute": 76,
           "team": "away",
           "scorer": null
-        },
-        {
-          "minute": 90,
-          "team": "home",
-          "scorer": "Durell"
         }
       ],
       "yellowCards": [],
@@ -168,7 +163,7 @@
         {
           "minute": 30,
           "team": "away",
-          "scorer": "Harley Renshaw"
+          "scorer": "Renshaw"
         },
         {
           "minute": 33,
@@ -186,14 +181,14 @@
           "scorer": "Parker"
         },
         {
-          "minute": 71,
+          "minute": 72,
           "team": "home",
           "scorer": "Jones"
         },
         {
           "minute": 75,
           "team": "away",
-          "scorer": "Harley Renshaw"
+          "scorer": "Renshaw"
         }
       ],
       "yellowCards": [],
@@ -203,7 +198,7 @@
       "home": "Wednesfield Community",
       "away": "Allscott Heath",
       "kickoff": "15:00",
-      "score": "0-7",
+      "score": "1-7",
       "matchStage": "full_time",
       "goals": [
         {
@@ -224,11 +219,6 @@
         {
           "minute": null,
           "team": "away",
-          "scorer": "Newnes"
-        },
-        {
-          "minute": null,
-          "team": "away",
           "scorer": "Cross"
         },
         {
@@ -239,12 +229,12 @@
         {
           "minute": null,
           "team": "away",
-          "scorer": "Ben Davies"
+          "scorer": "Newnes"
         }
       ],
       "yellowCards": [],
       "redCards": []
     }
   ],
-  "ticker": "@AllscottHeathFC: FULL TIME \n\nWHAT. A. WIN! \n\nThe Monners run riot with a 7–1 victory!\n \n⚽⚽⚽ Ben Davies\n⚽⚽ Newnes\n⚽ Cross\n⚽ Parkinson\n\nA dominant display from start to finish! 🟢⚫\n\n#TheMonners https://t.co/eIvyBNhrDo"
+  "ticker": "@CheadleNomads: 90’ | FULL-TIME \n\nThe points are shared after Jack Higginbottom’s late equaliser rescues a point for the Nomads in a thrilling finish\n\n@CheadleNomads 3-3 @SandbachFC_1st \n\n#WeAreNomads | @nwcfl | @NWCFLScores https://t.co/ZN4baiwAN1"
 }
