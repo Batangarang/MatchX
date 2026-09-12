@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-09-12T13:05:49.067Z",
+  "generatedAt": "2026-09-12T13:25:43.435Z",
   "fixtureDate": "2026-09-12",
   "kickoff": "15:00",
   "homeTeam": "Cheadle Heath Nomads",
   "awayTeam": "Sandbach United",
-  "postsUsed": 2,
+  "postsUsed": 3,
   "imagesAnalyzedThisRun": 1,
-  "totalImagesAnalyzed": 2,
+  "totalImagesAnalyzed": 3,
   "match": {
     "score": null,
     "scoreDiscrepancy": null,
@@ -16,8 +16,26 @@
     "matchStage": "scheduled",
     "lineups": {
       "home": {
-        "players": [],
-        "substitutes": [],
+        "players": [
+          "1. Andrew Jones",
+          "2. Cal Graham",
+          "3. Luke Roscoe",
+          "4. Jack Higginbottom",
+          "5. Kwame Osigwe",
+          "6. Harvey Berry",
+          "7. Dylan Woods",
+          "8. Collins Tanor",
+          "9. Dan Lewis",
+          "10. George Colville",
+          "11. Chigozie Ewelike"
+        ],
+        "substitutes": [
+          "12. E. Thompson",
+          "14. K. Depeiaza",
+          "15. L. Knight",
+          "16. K. Leckey",
+          "17. D. Almeida"
+        ],
         "manager": null,
         "officials": []
       },
@@ -70,22 +88,22 @@
       "firstHalf": {
         "home": 0,
         "away": 0,
-        "note": "Match not yet played; kickoff at 15:00"
+        "note": "No match action reported yet"
       },
       "secondHalf": {
         "home": 0,
         "away": 0,
-        "note": "Match not yet played"
+        "note": "No match action reported yet"
       },
       "extraTime": {
         "home": 0,
         "away": 0,
-        "note": "Not applicable"
+        "note": "No extra time"
       },
       "total": {
         "home": 0,
         "away": 0,
-        "note": "Match not yet played"
+        "note": "Match has not yet kicked off"
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
@@ -93,22 +111,22 @@
       "firstHalf": {
         "home": 50,
         "away": 50,
-        "note": "Match not yet played"
+        "note": "No match action reported yet"
       },
       "secondHalf": {
         "home": 50,
         "away": 50,
-        "note": "Match not yet played"
+        "note": "No match action reported yet"
       },
       "extraTime": {
         "home": 50,
         "away": 50,
-        "note": "Not applicable"
+        "note": "No extra time"
       },
       "total": {
         "home": 50,
         "away": 50,
-        "note": "Match not yet played"
+        "note": "Match has not yet kicked off"
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
