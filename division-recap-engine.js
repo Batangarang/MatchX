@@ -254,6 +254,7 @@ ${fixtureList}
 ${sandbachOverrideNote}
 IMPORTANT: In the fixture list above, the format is always "Home Team v Away Team" — the first team named is always playing at home, the second team is always the visitor. Do not reverse this or infer venue/direction from anything else in the posts — always trust this explicit home/away order from the fixture list.
 IMPORTANT: You MUST reference every single fixture listed above at least briefly — do not skip or omit any fixture from the list, even if it seems minor. If there isn't much to say about a fixture, a single short sentence is fine, but every fixture must be mentioned somewhere in your response.
+CRITICAL: Only state facts that are directly supported by the league table data or the X posts provided above. Do NOT invent results, a losing streak, a table position change, or a specific points gap unless it is explicitly confirmed by the data given. If you are not certain about a specific detail, describe the situation more generally rather than stating something specific that might be wrong. Cross-check any claim about recent form or results against the "form" field in the league table and the actual posts before stating it.
 Here is the current league table:
 ${leagueContext}
 Here are recent X posts from clubs in the division:
@@ -268,6 +269,7 @@ ${fixtureList}
 ${sandbachOverrideNote}
 IMPORTANT: In the fixture list above, the format is always "Home Team v Away Team" — the first team named is always playing at home, the second team is always the visitor. Do not reverse this or infer venue/direction from anything else in the posts — always trust this explicit home/away order from the fixture list.
 IMPORTANT: You MUST reference every single fixture listed above at least briefly — do not skip or omit any fixture from the list, even if it seems minor. If there isn't much to say about a fixture, a single short sentence is fine, but every fixture must be mentioned somewhere in your response.
+CRITICAL: Only state facts that are directly supported by the league table data or the X posts provided above. Do NOT invent results, a losing streak, a table position change, or a specific points gap unless it is explicitly confirmed by the data given. If you are not certain about a specific detail, describe the situation more generally rather than stating something specific that might be wrong. Cross-check any claim about recent form or results against the "form" field in the league table and the actual posts before stating it.
 Here is the current league table:
 ${leagueContext}
 Here are recent X posts from clubs in the division:
