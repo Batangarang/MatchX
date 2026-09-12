@@ -1,48 +1,6 @@
 {
-  "generatedAt": "2026-09-12T13:55:32.676Z",
+  "generatedAt": "2026-09-12T14:01:15.159Z",
   "fixtures": [
-    {
-      "date": "Saturday 12 September 2026",
-      "home": "Bilston Town",
-      "away": "Widnes Town",
-      "kickoff": "15:00",
-      "postponed": false
-    },
-    {
-      "date": "Saturday 12 September 2026",
-      "home": "Cheadle Heath Nomads",
-      "away": "Sandbach United",
-      "kickoff": "15:00",
-      "postponed": false
-    },
-    {
-      "date": "Saturday 12 September 2026",
-      "home": "Dawley Town",
-      "away": "Brereton Social",
-      "kickoff": "15:00",
-      "postponed": false
-    },
-    {
-      "date": "Saturday 12 September 2026",
-      "home": "New Mills",
-      "away": "Market Drayton Town",
-      "kickoff": "15:00",
-      "postponed": false
-    },
-    {
-      "date": "Saturday 12 September 2026",
-      "home": "Stafford Town",
-      "away": "Alsager Town",
-      "kickoff": "15:00",
-      "postponed": false
-    },
-    {
-      "date": "Saturday 12 September 2026",
-      "home": "Wednesfield Community",
-      "away": "Allscott Heath",
-      "kickoff": "15:00",
-      "postponed": false
-    },
     {
       "date": "Saturday 19 September 2026",
       "home": "Allscott Heath",
@@ -2140,6 +2098,48 @@
       "date": "Saturday 17 April 2027",
       "home": "Wolverhampton Casuals",
       "away": "Cheadle Heath Nomads",
+      "kickoff": "15:00",
+      "postponed": false
+    },
+    {
+      "date": "Saturday 12 September 2026",
+      "home": "Bilston Town",
+      "away": "Widnes Town",
+      "kickoff": "15:00",
+      "postponed": false
+    },
+    {
+      "date": "Saturday 12 September 2026",
+      "home": "Cheadle Heath Nomads",
+      "away": "Sandbach United",
+      "kickoff": "15:00",
+      "postponed": false
+    },
+    {
+      "date": "Saturday 12 September 2026",
+      "home": "Dawley Town",
+      "away": "Brereton Social",
+      "kickoff": "15:00",
+      "postponed": false
+    },
+    {
+      "date": "Saturday 12 September 2026",
+      "home": "New Mills",
+      "away": "Market Drayton Town",
+      "kickoff": "15:00",
+      "postponed": false
+    },
+    {
+      "date": "Saturday 12 September 2026",
+      "home": "Stafford Town",
+      "away": "Alsager Town",
+      "kickoff": "15:00",
+      "postponed": false
+    },
+    {
+      "date": "Saturday 12 September 2026",
+      "home": "Wednesfield Community",
+      "away": "Allscott Heath",
       "kickoff": "15:00",
       "postponed": false
     }

@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-09-12T13:50:46.424Z",
+  "generatedAt": "2026-09-12T14:01:15.223Z",
   "date": "2026-09-12",
   "isToday": true,
-  "postCount": 18,
-  "latestPostTimestamp": "2026-09-12T13:48:07.000Z",
+  "postCount": 24,
+  "latestPostTimestamp": "2026-09-12T14:01:02.000Z",
   "fixtures": [
     {
       "home": "Bilston Town",
@@ -19,8 +19,8 @@
       "home": "Cheadle Heath Nomads",
       "away": "Sandbach United",
       "kickoff": "15:00",
-      "score": null,
-      "matchStage": "scheduled",
+      "score": "0-0",
+      "matchStage": "first_half",
       "goals": [],
       "yellowCards": [],
       "redCards": []
@@ -49,8 +49,8 @@
       "home": "Stafford Town",
       "away": "Alsager Town",
       "kickoff": "15:00",
-      "score": null,
-      "matchStage": "scheduled",
+      "score": "0-0",
+      "matchStage": "first_half",
       "goals": [],
       "yellowCards": [],
       "redCards": []
@@ -66,5 +66,5 @@
       "redCards": []
     }
   ],
-  "ticker": "@WednesfieldCFC: https://t.co/G0T6BzpMsB"
+  "ticker": "@CheadleNomads: 1’ | KICK-OFF\n\nLETS GO NOMADS!\n\n@CheadleNomads 0-0 @SandbachFC_1st \n\n#WeAreNomads | @nwcfl | @NWCFLScores"
 }
