@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-09-12T14:25:44.021Z",
+  "generatedAt": "2026-09-12T14:31:11.526Z",
   "fixtureDate": "2026-09-12",
   "kickoff": "15:00",
   "homeTeam": "Cheadle Heath Nomads",
   "awayTeam": "Sandbach United",
-  "postsUsed": 11,
+  "postsUsed": 13,
   "imagesAnalyzedThisRun": 1,
-  "totalImagesAnalyzed": 5,
+  "totalImagesAnalyzed": 6,
   "match": {
-    "score": "1-1",
+    "score": "1-2",
     "scoreDiscrepancy": null,
     "finalScoreAnnounced": null,
     "halfTimeScoreAnnounced": null,
@@ -74,6 +74,11 @@
         "minute": 19,
         "team": "home",
         "scorer": "Dylan Woods"
+      },
+      {
+        "minute": 26,
+        "team": "away",
+        "scorer": "Kyle Foley"
       }
     ],
     "yellowCards": [
@@ -104,13 +109,13 @@
     "roughXG": {
       "firstHalf": {
         "home": 1.2,
-        "away": 0.3,
-        "note": "Cheadle had an early header and a well-taken goal from Woods. Sandbach had one chance mentioned but did not capitalize."
+        "away": 1.3,
+        "note": "Both sides created chances; Cheadle had Lewis's header, Sandbach had the looping goal and Foley's finish."
       },
       "secondHalf": {
         "home": 0,
         "away": 0,
-        "note": "No second-half data available in posts."
+        "note": "No data from second half."
       },
       "extraTime": {
         "home": 0,
@@ -119,21 +124,21 @@
       },
       "total": {
         "home": 1.2,
-        "away": 0.3,
-        "note": "Cheadle dominated early chances and converted; Sandbach had limited clear opportunities in the first half."
+        "away": 1.3,
+        "note": "Two goals scored (1 each); both teams showed decent attacking intent in first half."
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
     "matchControl": {
       "firstHalf": {
-        "home": 55,
-        "away": 45,
-        "note": "Cheadle created more early chances and scored; Sandbach had opportunities but did not capitalize."
+        "home": 50,
+        "away": 50,
+        "note": "Both sides had chances early; fairly balanced opening period with equal goal threat."
       },
       "secondHalf": {
         "home": 50,
         "away": 50,
-        "note": "No second-half data available in posts."
+        "note": "No data from second half."
       },
       "extraTime": {
         "home": 50,
@@ -141,9 +146,9 @@
         "note": "Match did not go to extra time."
       },
       "total": {
-        "home": 55,
-        "away": 45,
-        "note": "Cheadle showed slightly better control in the available first-half footage, scoring early."
+        "home": 50,
+        "away": 50,
+        "note": "Evenly matched based on available first-half data."
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
