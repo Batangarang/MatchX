@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-09-12T14:21:00.380Z",
+  "generatedAt": "2026-09-12T14:25:44.021Z",
   "fixtureDate": "2026-09-12",
   "kickoff": "15:00",
   "homeTeam": "Cheadle Heath Nomads",
   "awayTeam": "Sandbach United",
-  "postsUsed": 9,
-  "imagesAnalyzedThisRun": 0,
-  "totalImagesAnalyzed": 4,
+  "postsUsed": 11,
+  "imagesAnalyzedThisRun": 1,
+  "totalImagesAnalyzed": 5,
   "match": {
-    "score": "0-1",
+    "score": "1-1",
     "scoreDiscrepancy": null,
     "finalScoreAnnounced": null,
     "halfTimeScoreAnnounced": null,
@@ -69,6 +69,11 @@
         "minute": 18,
         "team": "away",
         "scorer": "Unknown"
+      },
+      {
+        "minute": 19,
+        "team": "home",
+        "scorer": "Dylan Woods"
       }
     ],
     "yellowCards": [
@@ -98,14 +103,14 @@
     },
     "roughXG": {
       "firstHalf": {
-        "home": 0.3,
-        "away": 0.5,
-        "note": "Cheadle had one clear chance (Lewis header from Ewelike cross); Sandbach scored via a looping goal from deep. Limited data available."
+        "home": 1.2,
+        "away": 0.3,
+        "note": "Cheadle had an early header and a well-taken goal from Woods. Sandbach had one chance mentioned but did not capitalize."
       },
       "secondHalf": {
         "home": 0,
         "away": 0,
-        "note": "No second-half action reported."
+        "note": "No second-half data available in posts."
       },
       "extraTime": {
         "home": 0,
@@ -113,22 +118,22 @@
         "note": "Match did not go to extra time."
       },
       "total": {
-        "home": 0.3,
-        "away": 1.5,
-        "note": "Sandbach scored one goal; estimate reflects that solid floor plus the chance quality observed."
+        "home": 1.2,
+        "away": 0.3,
+        "note": "Cheadle dominated early chances and converted; Sandbach had limited clear opportunities in the first half."
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
     "matchControl": {
       "firstHalf": {
-        "home": 50,
-        "away": 50,
-        "note": "Both sides had early chances; match appeared even in the opening 18 minutes before Sandbach's goal."
+        "home": 55,
+        "away": 45,
+        "note": "Cheadle created more early chances and scored; Sandbach had opportunities but did not capitalize."
       },
       "secondHalf": {
         "home": 50,
         "away": 50,
-        "note": "No second-half action reported."
+        "note": "No second-half data available in posts."
       },
       "extraTime": {
         "home": 50,
@@ -136,9 +141,9 @@
         "note": "Match did not go to extra time."
       },
       "total": {
-        "home": 50,
-        "away": 50,
-        "note": "Very limited data; match appeared competitive early on."
+        "home": 55,
+        "away": 45,
+        "note": "Cheadle showed slightly better control in the available first-half footage, scoring early."
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
