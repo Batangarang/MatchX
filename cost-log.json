@@ -14365,6 +14365,16 @@
       "outputTokens": 0,
       "xCostGBP": 0.0008,
       "aiCostGBP": 0
+    },
+    {
+      "script": "recap-weekend-preview",
+      "timestamp": "2026-09-12T10:12:41.910Z",
+      "getxapiCalls": 0,
+      "claudeCalls": 1,
+      "inputTokens": 1883,
+      "outputTokens": 371,
+      "xCostGBP": 0,
+      "aiCostGBP": 0.0028
     }
   ]
 }
