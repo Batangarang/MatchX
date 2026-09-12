@@ -1,19 +1,19 @@
 {
-  "generatedAt": "2026-09-12T15:20:52.675Z",
+  "generatedAt": "2026-09-12T15:25:46.110Z",
   "fixtureDate": "2026-09-12",
   "kickoff": "15:00",
   "homeTeam": "Cheadle Heath Nomads",
   "awayTeam": "Sandbach United",
-  "postsUsed": 21,
-  "imagesAnalyzedThisRun": 0,
-  "totalImagesAnalyzed": 9,
+  "postsUsed": 24,
+  "imagesAnalyzedThisRun": 1,
+  "totalImagesAnalyzed": 10,
   "match": {
-    "score": "2-1",
+    "score": "2-2",
     "scoreDiscrepancy": null,
     "finalScoreAnnounced": null,
     "halfTimeScoreAnnounced": "2-1",
     "htDiscrepancy": null,
-    "matchStage": "half_time",
+    "matchStage": "second_half",
     "lineups": {
       "home": {
         "players": [
@@ -79,6 +79,11 @@
         "minute": 29,
         "team": "home",
         "scorer": "George Colville"
+      },
+      {
+        "minute": 63,
+        "team": "away",
+        "scorer": "Kieran O'Connell"
       }
     ],
     "yellowCards": [
@@ -107,6 +112,18 @@
         "team": "away",
         "playerOff": "Williams",
         "playerOn": "K Nolan"
+      },
+      {
+        "minute": null,
+        "team": "away",
+        "playerOff": "Pollard",
+        "playerOn": "O'Connell"
+      },
+      {
+        "minute": null,
+        "team": "away",
+        "playerOff": "Williams",
+        "playerOn": "K Nolan"
       }
     ],
     "sinBins": [],
@@ -129,45 +146,35 @@
       "firstHalf": {
         "home": 1.8,
         "away": 0.9,
-        "note": "Home team scored two goals from good chances; away team had one early chance and one goal from a looping effort"
+        "note": "Home team scored twice with two high-quality finishes (Woods and Colville described as 'worldies'); away team scored once but had limited chances early"
       },
       "secondHalf": {
-        "home": 0,
-        "away": 0,
-        "note": "No shots or clear chances described in second half posts before half-time"
-      },
-      "extraTime": {
-        "home": 0,
-        "away": 0,
-        "note": "Match did not go to extra time"
+        "home": 0.5,
+        "away": 1.5,
+        "note": "Away team equalised through O'Connell's diving header and gained traction after substitutions; home team appeared less threatening"
       },
       "total": {
-        "home": 1.8,
-        "away": 0.9,
-        "note": "Home team dominated first half with two well-taken goals; away team scored once but generally created less"
+        "home": 2.3,
+        "away": 2.4,
+        "note": "Both teams scored twice; away team improved significantly in second half after tactical adjustments"
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
     "matchControl": {
       "firstHalf": {
-        "home": 60,
-        "away": 40,
-        "note": "Home team took control with two quick goals; away team responded once but Nomads regained the lead before half-time"
+        "home": 65,
+        "away": 35,
+        "note": "Home team dominated, scoring twice with clinical finishes; away team had 'decent chances' but struggled to capitalise"
       },
       "secondHalf": {
-        "home": 55,
-        "away": 45,
-        "note": "Away team stated they had 'work to do' to get back into the game, suggesting home team in control entering second half"
-      },
-      "extraTime": {
-        "home": 50,
-        "away": 50,
-        "note": "Match did not go to extra time"
+        "home": 40,
+        "away": 60,
+        "note": "Away team 'changed dynamic and shape' after substitutions, gained 'traction in midfield', and quickly equalised; home team appeared to lose control"
       },
       "total": {
-        "home": 58,
-        "away": 42,
-        "note": "Home team dominated throughout, scoring twice in first half and maintaining a 2-1 lead at the break"
+        "home": 52,
+        "away": 48,
+        "note": "Match was competitive with momentum shifts; home team dominated first half but away team took control in second half"
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
