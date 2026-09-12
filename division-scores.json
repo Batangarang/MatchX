@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-09-12T15:42:44.068Z",
+  "generatedAt": "2026-09-12T15:45:38.755Z",
   "date": "2026-09-12",
   "isToday": true,
-  "postCount": 110,
-  "latestPostTimestamp": "2026-09-12T15:39:17.000Z",
+  "postCount": 111,
+  "latestPostTimestamp": "2026-09-12T15:44:59.000Z",
   "fixtures": [
     {
       "home": "Bilston Town",
       "away": "Widnes Town",
       "kickoff": "15:00",
       "score": "7-0",
-      "matchStage": "full_time",
+      "matchStage": "second_half",
       "goals": [
         {
           "minute": null,
@@ -43,7 +43,7 @@
           "scorer": "Dixon"
         },
         {
-          "minute": null,
+          "minute": 75,
           "team": "home",
           "scorer": "Bright"
         }
@@ -56,12 +56,12 @@
       "away": "Sandbach United",
       "kickoff": "15:00",
       "score": "2-3",
-      "matchStage": "full_time",
+      "matchStage": "second_half",
       "goals": [
         {
           "minute": 19,
           "team": "home",
-          "scorer": "Dylan Woods"
+          "scorer": "Woods"
         },
         {
           "minute": 26,
@@ -71,7 +71,7 @@
         {
           "minute": 29,
           "team": "home",
-          "scorer": "George Colville"
+          "scorer": "Colville"
         },
         {
           "minute": 63,
@@ -84,12 +84,7 @@
           "scorer": "Foley"
         }
       ],
-      "yellowCards": [
-        {
-          "team": "away",
-          "player": null
-        }
-      ],
+      "yellowCards": [],
       "redCards": []
     },
     {
@@ -112,12 +107,12 @@
         {
           "minute": 30,
           "team": "home",
-          "scorer": "Malachi Babayale"
+          "scorer": "Babayale"
         },
         {
           "minute": 43,
           "team": "away",
-          "scorer": "Tyler Cooper"
+          "scorer": "Cooper"
         },
         {
           "minute": 76,
@@ -138,7 +133,7 @@
       "away": "Alsager Town",
       "kickoff": "15:00",
       "score": "5-2",
-      "matchStage": "full_time",
+      "matchStage": "second_half",
       "goals": [
         {
           "minute": 16,
@@ -153,7 +148,7 @@
         {
           "minute": 30,
           "team": "away",
-          "scorer": "Harley Renshaw"
+          "scorer": "Renshaw"
         },
         {
           "minute": 33,
@@ -178,7 +173,7 @@
         {
           "minute": 75,
           "team": "away",
-          "scorer": "Harley Renshaw"
+          "scorer": "Renshaw"
         }
       ],
       "yellowCards": [],
@@ -194,22 +189,22 @@
         {
           "minute": 2,
           "team": "away",
-          "scorer": "Ben Davies"
+          "scorer": "Davies"
         },
         {
           "minute": 15,
           "team": "away",
-          "scorer": "Ben Davies"
+          "scorer": "Davies"
         },
         {
           "minute": 19,
           "team": "away",
-          "scorer": "Kian Newnes"
+          "scorer": "Newnes"
         }
       ],
       "yellowCards": [],
       "redCards": []
     }
   ],
-  "ticker": "@MDTFC: 76’ \n\nGOALLLLLLL\n\nA little stutter and army cooly slots the ball into the net…\n\nAnother New Mills player thought he was in a boxing ring after the goal… missed by the ref this time. \n\n#upthegingerbreadmen"
+  "ticker": "@CheadleNomads: 84’ | SUBSTITUTE \n\n➡️ 15. L.Knight\n⬅️ 7. D.Woods\n\n@CheadleNomads 2-3 @SandbachFC_1st \n\n#WeAreNomads | @nwcfl | @NWCFLScores https://t.co/QCdNa7W35H"
 }
