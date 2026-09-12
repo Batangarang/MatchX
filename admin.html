@@ -498,9 +498,11 @@
         `;
       }).join('');
 
-      const totalAllTime = log.entries.reduce((s, e) => s + e.xCostGBP + e.aiCostGBP, 0);
-      const totalX = log.entries.reduce((s, e) => s + e.xCostGBP, 0);
-      const totalAI = log.entries.reduce((s, e) => s + e.aiCostGBP, 0);
+      const recentDays = new Set(days);
+      const recentEntries = log.entries.filter(e => recentDays.has(e.timestamp.slice(0, 10)));
+      const totalAllTime = recentEntries.reduce((s, e) => s + e.xCostGBP + e.aiCostGBP, 0);
+      const totalX = recentEntries.reduce((s, e) => s + e.xCostGBP, 0);
+      const totalAI = recentEntries.reduce((s, e) => s + e.aiCostGBP, 0);
       document.getElementById('real-cost-total').textContent =
         `£${totalAllTime.toFixed(2)} logged over last ${days.length} day(s) (£${totalX.toFixed(2)} GetXAPI · £${totalAI.toFixed(2)} Anthropic)`;
     }
