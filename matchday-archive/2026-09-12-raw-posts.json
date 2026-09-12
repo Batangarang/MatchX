@@ -290,5 +290,23 @@
     "side": "away",
     "handle": "SandbachFC_1st",
     "isDuplicateCommentary": false
+  },
+  {
+    "text": "A free kick delivered by AJ for nomads floats in finds a team mate who heads across goal and it’s nodded in at close range \n\n3-3 \n\nSeconds to play",
+    "createdAt": "2026-09-12T15:51:39.000Z",
+    "images": [],
+    "side": "away",
+    "handle": "SandbachFC_1st",
+    "isDuplicateCommentary": false
+  },
+  {
+    "text": "90+2’ | GGGGOOOAAALL \n\n@CheadleNomads 3-3 @SandbachFC_1st \n\n#WeAreNomads | @nwcfl | @NWCFLScores https://t.co/ksGZBEjYEI",
+    "createdAt": "2026-09-12T15:55:16.000Z",
+    "images": [
+      "https://pbs.twimg.com/media/HSBx3rfasAAov0l.jpg"
+    ],
+    "side": "home",
+    "handle": "CheadleNomads",
+    "isDuplicateCommentary": false
   }
 ]
