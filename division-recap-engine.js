@@ -224,7 +224,7 @@ async function run() {
         }
       }
 
-      sandbachOverrideNote = `\n\nIMPORTANT: Sandbach United's actual fixture in this period is: ${homeTeam} v ${awayTeam} (${sandbachFixture.date}, KO ${sandbachFixture.kickoff}${competitionText}). Use this REAL fixture when describing Sandbach's own match this period — do not substitute a different fixture or date for Sandbach.${levelWarning}`;
+            sandbachOverrideNote = `\n\nIMPORTANT: Sandbach United's actual fixture in this period is: ${homeTeam} v ${awayTeam} (${sandbachFixture.date}, KO ${sandbachFixture.kickoff}${competitionText}). Use this REAL fixture when describing Sandbach's own match this period — do not substitute a different fixture or date for Sandbach.${levelWarning}${sandbachFormNote}`;
     }
   }
 
