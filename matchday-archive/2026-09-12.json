@@ -8,11 +8,11 @@
   "imagesAnalyzedThisRun": 1,
   "totalImagesAnalyzed": 8,
   "match": {
-    "score": "2-2",
+    "score": "2-1",
     "scoreDiscrepancy": null,
     "finalScoreAnnounced": null,
     "halfTimeScoreAnnounced": "2-1",
-    "htDiscrepancy": "First-half goals suggest HT 2-2, but an announced HT score of 2-1 was also seen.",
+    "htDiscrepancy": null,
     "matchStage": "half_time",
     "lineups": {
       "home": {
@@ -65,11 +65,6 @@
       }
     },
     "goals": [
-      {
-        "minute": 18,
-        "team": "away",
-        "scorer": "Unknown"
-      },
       {
         "minute": 19,
         "team": "home",
