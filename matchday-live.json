@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-09-12T15:40:53.339Z",
+  "generatedAt": "2026-09-12T15:45:58.753Z",
   "fixtureDate": "2026-09-12",
   "kickoff": "15:00",
   "homeTeam": "Cheadle Heath Nomads",
   "awayTeam": "Sandbach United",
-  "postsUsed": 30,
-  "imagesAnalyzedThisRun": 2,
-  "totalImagesAnalyzed": 13,
+  "postsUsed": 31,
+  "imagesAnalyzedThisRun": 1,
+  "totalImagesAnalyzed": 14,
   "match": {
     "score": "2-3",
     "scoreDiscrepancy": null,
@@ -107,13 +107,13 @@
         "playerOn": "17. D. Almeida"
       },
       {
-        "minute": 53,
+        "minute": 54,
         "team": "away",
         "playerOff": "Pollard",
         "playerOn": "O'Connell"
       },
       {
-        "minute": 53,
+        "minute": 54,
         "team": "away",
         "playerOff": "Williams",
         "playerOn": "K Nolan"
@@ -147,6 +147,12 @@
         "team": "home",
         "playerOff": "C. Graham",
         "playerOn": "K. Depeiaza"
+      },
+      {
+        "minute": 84,
+        "team": "home",
+        "playerOff": "D. Woods",
+        "playerOn": "L. Knight"
       }
     ],
     "sinBins": [],
@@ -169,45 +175,45 @@
       "firstHalf": {
         "home": 1.8,
         "away": 1.2,
-        "note": "Home team scored 2 goals (Woods, Colville) plus early chance from Lewis header; away team scored 1 (Foley) with described soft chance early."
+        "note": "Home team scored twice with striking finishes (Woods flick-and-strike, Colville post-rattler); away team scored once but with limited precision noted in posts"
       },
       "secondHalf": {
-        "home": 0.5,
-        "away": 2.2,
-        "note": "Home team weakened after good first half; away team scored 2 (O'Connell header, Foley's brace) with improved second-half presence."
+        "home": 0.8,
+        "away": 2.5,
+        "note": "Away team scored twice more; home team had chances but defensive lapses evident from posts mentioning need to pick up free players and dynamic shift by substitutes"
       },
       "extraTime": {
         "home": 0,
         "away": 0,
-        "note": "No extra time played."
+        "note": "No extra time"
       },
       "total": {
-        "home": 2.3,
-        "away": 3.4,
-        "note": "Home scored 2 goals; away scored 3. Away team showed stronger second-half performance after substitutes changed their midfield dynamics."
+        "home": 2.6,
+        "away": 3.7,
+        "note": "Home scored 2 goals, away scored 3 goals; totals reflect shooting quality and match flow described"
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
     "matchControl": {
       "firstHalf": {
-        "home": 60,
-        "away": 40,
-        "note": "Home team dominant with two quality finishes (Woods, Colville). Away team equalised once but trailed at half-time."
+        "home": 55,
+        "away": 45,
+        "note": "Home team dominated early with chances and scored twice before half-time; away team equalized once but home retained control"
       },
       "secondHalf": {
-        "home": 35,
-        "away": 65,
-        "note": "Away team gained clear traction after substitutions (O'Connell and K Nolan on, Fowles on). Posts describe Sandbach gaining dominance in midfield and momentum to take lead."
+        "home": 40,
+        "away": 60,
+        "note": "Away team subs changed dynamic and gained traction in midfield; away team scored twice to take lead while home struggled to respond"
       },
       "extraTime": {
         "home": 50,
         "away": 50,
-        "note": "No extra time."
+        "note": "No extra time"
       },
       "total": {
         "home": 48,
         "away": 52,
-        "note": "Match was tight overall. Home started strong but away team's substitutions transformed the game in second half, ultimately taking the lead."
+        "note": "Match was competitive throughout; home dominated first half but away team controlled second half and took final lead"
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
