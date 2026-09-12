@@ -177,7 +177,7 @@ async function run() {
       .join('\n');
   }
 
-  let sandbachOverrideNote = '';
+  let sandbachFormNote = '';
   if (fs.existsSync('data.json')) {
     const mainData = JSON.parse(fs.readFileSync('data.json', 'utf-8'));
     const candidates = mainData.nextFixtures || (mainData.nextFixture ? [mainData.nextFixture] : []);
