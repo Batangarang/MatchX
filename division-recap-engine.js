@@ -173,7 +173,7 @@ async function run() {
     const currentStandings = (leagueData.standings || [])
       .filter(t => CURRENT_CLUB_NAMES.has(t.team) || t.team.includes('Sandbach'));
     leagueContext = currentStandings
-      .map(t => `${t.position}. ${t.team} — P${t.played} W${t.won} D${t.drawn} L${t.lost} GD${t.goalDifference} Pts${t.points}${t.form ? ' — form: ' + t.form : ''}`)
+      .map(t => `${t.position}. ${t.team} — P${t.played} W${t.won} D${t.drawn} L${t.lost} GD${t.goalDifference} Pts${t.points}${t.form ? ' — recent form (NEWEST result first, so the FIRST letter is their most recent result): ' + t.form.split('').join('-') : ''}`)
       .join('\n');
   }
 
