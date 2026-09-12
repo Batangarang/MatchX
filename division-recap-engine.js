@@ -194,6 +194,20 @@ async function run() {
       });
     });
 
+
+    let sandbachFormNote = '';
+    if (fs.existsSync('league.json')) {
+      const leagueData = JSON.parse(fs.readFileSync('league.json', 'utf-8'));
+      const sandbachStanding = leagueData.standings.find(t => t.team.includes('Sandbach'));
+      if (sandbachStanding && sandbachStanding.form) {
+        const formLetters = sandbachStanding.form.split('');
+        const resultWords = { W: 'WIN', D: 'DRAW', L: 'LOSS' };
+        const mostRecent = resultWords[formLetters[0]] || formLetters[0];
+        const recentSequence = formLetters.slice(0, 5).map(f => resultWords[f] || f).join(', ');
+        sandbachFormNote = `\n\nFACT (already computed for you, do not recalculate or contradict this): Sandbach United's MOST RECENT result was a ${mostRecent}. Their last 5 results in order from most recent to oldest were: ${recentSequence}. They are currently ${sandbachStanding.position === 1 ? '1st' : sandbachStanding.position + (sandbachStanding.position === 2 ? 'nd' : sandbachStanding.position === 3 ? 'rd' : 'th')} in the table with ${sandbachStanding.points} points from ${sandbachStanding.played} games. Do not describe them as being on a losing streak or having recently lost multiple games unless the sequence above genuinely shows that.`;
+      }
+    }
+
     if (sandbachFixture) {
       const homeTeam = sandbachFixture.homeAway === 'H' ? 'Sandbach United' : sandbachFixture.opposition;
       const awayTeam = sandbachFixture.homeAway === 'H' ? sandbachFixture.opposition : 'Sandbach United';
@@ -251,7 +265,7 @@ async function run() {
   const prompt = isPreview
     ? `Here are the upcoming First Division South fixtures for ${periodLabel}:
 ${fixtureList}
-${sandbachOverrideNote}
+${sandbachOverrideNote}${sandbachFormNote}
 IMPORTANT: In the fixture list above, the format is always "Home Team v Away Team" — the first team named is always playing at home, the second team is always the visitor. Do not reverse this or infer venue/direction from anything else in the posts — always trust this explicit home/away order from the fixture list.
 IMPORTANT: You MUST reference every single fixture listed above at least briefly — do not skip or omit any fixture from the list, even if it seems minor. If there isn't much to say about a fixture, a single short sentence is fine, but every fixture must be mentioned somewhere in your response.
 CRITICAL: Only state facts that are directly supported by the league table data or the X posts provided above. Do NOT invent results, a losing streak, a table position change, or a specific points gap unless it is explicitly confirmed by the data given. If you are not certain about a specific detail, describe the situation more generally rather than stating something specific that might be wrong. Cross-check any claim about recent form or results against the "form" field in the league table and the actual posts before stating it.
@@ -266,7 +280,7 @@ Respond with ONLY a JSON object, no other text, no markdown fences, in exactly t
 }`
     : `Here are the First Division South fixtures that were played ${periodLabel}:
 ${fixtureList}
-${sandbachOverrideNote}
+${sandbachOverrideNote}${sandbachFormNote}
 IMPORTANT: In the fixture list above, the format is always "Home Team v Away Team" — the first team named is always playing at home, the second team is always the visitor. Do not reverse this or infer venue/direction from anything else in the posts — always trust this explicit home/away order from the fixture list.
 IMPORTANT: You MUST reference every single fixture listed above at least briefly — do not skip or omit any fixture from the list, even if it seems minor. If there isn't much to say about a fixture, a single short sentence is fine, but every fixture must be mentioned somewhere in your response.
 CRITICAL: Only state facts that are directly supported by the league table data or the X posts provided above. Do NOT invent results, a losing streak, a table position change, or a specific points gap unless it is explicitly confirmed by the data given. If you are not certain about a specific detail, describe the situation more generally rather than stating something specific that might be wrong. Cross-check any claim about recent form or results against the "form" field in the league table and the actual posts before stating it.
