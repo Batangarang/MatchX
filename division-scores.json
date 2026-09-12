@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-09-12T14:01:15.223Z",
+  "generatedAt": "2026-09-12T14:05:36.292Z",
   "date": "2026-09-12",
   "isToday": true,
-  "postCount": 24,
-  "latestPostTimestamp": "2026-09-12T14:01:02.000Z",
+  "postCount": 28,
+  "latestPostTimestamp": "2026-09-12T14:05:33.000Z",
   "fixtures": [
     {
       "home": "Bilston Town",
@@ -40,7 +40,7 @@
       "away": "Market Drayton Town",
       "kickoff": "15:00",
       "score": null,
-      "matchStage": "scheduled",
+      "matchStage": "first_half",
       "goals": [],
       "yellowCards": [],
       "redCards": []
@@ -59,12 +59,18 @@
       "home": "Wednesfield Community",
       "away": "Allscott Heath",
       "kickoff": "15:00",
-      "score": null,
-      "matchStage": "scheduled",
-      "goals": [],
+      "score": "0-1",
+      "matchStage": "first_half",
+      "goals": [
+        {
+          "minute": 2,
+          "team": "away",
+          "scorer": "Ben Davies"
+        }
+      ],
       "yellowCards": [],
       "redCards": []
     }
   ],
-  "ticker": "@CheadleNomads: 1’ | KICK-OFF\n\nLETS GO NOMADS!\n\n@CheadleNomads 0-0 @SandbachFC_1st \n\n#WeAreNomads | @nwcfl | @NWCFLScores"
+  "ticker": "@NewMillsFC: Delay here as a fan at the far end has been hit by a ball and is requiring a bit of medical attention from the team’s physio’s, hope they are ok 🙏"
 }
