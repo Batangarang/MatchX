@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-09-12T14:25:32.784Z",
+  "generatedAt": "2026-09-12T14:31:01.080Z",
   "date": "2026-09-12",
   "isToday": true,
-  "postCount": 45,
-  "latestPostTimestamp": "2026-09-12T14:25:28.000Z",
+  "postCount": 50,
+  "latestPostTimestamp": "2026-09-12T14:31:03.000Z",
   "fixtures": [
     {
       "home": "Bilston Town",
@@ -19,19 +19,24 @@
       "home": "Cheadle Heath Nomads",
       "away": "Sandbach United",
       "kickoff": "15:00",
-      "score": "1-0",
-      "matchStage": "first_half",
+      "score": "1-1",
+      "matchStage": "second_half",
       "goals": [
         {
-          "minute": 19,
+          "minute": "19",
           "team": "home",
           "scorer": "Woods"
+        },
+        {
+          "minute": "26",
+          "team": "away",
+          "scorer": "Foley"
         }
       ],
       "yellowCards": [
         {
           "team": "away",
-          "player": "Tatters"
+          "player": "Tats"
         }
       ],
       "redCards": []
@@ -60,13 +65,23 @@
       "home": "Stafford Town",
       "away": "Alsager Town",
       "kickoff": "15:00",
-      "score": "1-0",
-      "matchStage": "first_half",
+      "score": "2-1",
+      "matchStage": "second_half",
       "goals": [
         {
-          "minute": 16,
+          "minute": "16",
           "team": "home",
           "scorer": "Parker"
+        },
+        {
+          "minute": "28",
+          "team": "away",
+          "scorer": "Wilding"
+        },
+        {
+          "minute": "30",
+          "team": "away",
+          "scorer": null
         }
       ],
       "yellowCards": [],
@@ -80,17 +95,17 @@
       "matchStage": "first_half",
       "goals": [
         {
-          "minute": 2,
+          "minute": "2",
           "team": "away",
           "scorer": "Ben Davies"
         },
         {
-          "minute": 15,
+          "minute": "15",
           "team": "away",
           "scorer": "Ben Davies"
         },
         {
-          "minute": 19,
+          "minute": "19",
           "team": "away",
           "scorer": "Kian Newnes"
         }
@@ -99,5 +114,5 @@
       "redCards": []
     }
   ],
-  "ticker": "@CheadleNomads: 19’ | GOAL\n\nWOODS! WHAT A FINISH!\n\nWoods picks up the ball on the edge of the box, flicks it over his man with his left foot before unleashing a fierce strike with his right to beat the Sandbach No. 1!\n\n@CheadleNomads 1-0 @SandbachFC_1st \n\n#WeAreNomads | @nwcfl | @NWCFLScores"
+  "ticker": "@StaffordTown1st: 30 - Goal Alsager \n\nNumber 11 with a powerful strike from a tight angle. \n\n🔴🔴 2-1 🔵🔵"
 }
