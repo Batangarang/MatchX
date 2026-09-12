@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-09-12T15:55:47.885Z",
+  "generatedAt": "2026-09-12T16:01:26.420Z",
   "fixtureDate": "2026-09-12",
   "kickoff": "15:00",
   "homeTeam": "Cheadle Heath Nomads",
   "awayTeam": "Sandbach United",
-  "postsUsed": 35,
-  "imagesAnalyzedThisRun": 1,
+  "postsUsed": 36,
+  "imagesAnalyzedThisRun": 0,
   "totalImagesAnalyzed": 15,
   "match": {
     "score": "3-3",
     "scoreDiscrepancy": null,
-    "finalScoreAnnounced": null,
+    "finalScoreAnnounced": "3-3",
     "halfTimeScoreAnnounced": "2-1",
     "htDiscrepancy": null,
     "matchStage": "full_time",
@@ -112,13 +112,13 @@
         "playerOn": "17. D. Almeida"
       },
       {
-        "minute": 54,
+        "minute": 53,
         "team": "away",
         "playerOff": "Pollard",
         "playerOn": "O'Connell"
       },
       {
-        "minute": 54,
+        "minute": 53,
         "team": "away",
         "playerOff": "Williams",
         "playerOn": "K Nolan"
@@ -150,14 +150,14 @@
       {
         "minute": 76,
         "team": "home",
-        "playerOff": "C. Graham",
-        "playerOn": "K. Depeiaza"
+        "playerOff": "2. C. Graham",
+        "playerOn": "14. K. Depeiaza"
       },
       {
         "minute": 84,
         "team": "home",
-        "playerOff": "D. Woods",
-        "playerOn": "L. Knight"
+        "playerOff": "7. D. Woods",
+        "playerOn": "15. L. Knight"
       }
     ],
     "sinBins": [],
@@ -178,24 +178,24 @@
     },
     "roughXG": {
       "firstHalf": {
-        "home": 1.5,
-        "away": 0.8,
-        "note": "Home team scored twice; one chance also noted for each side in early going."
+        "home": 1.8,
+        "away": 0.9,
+        "note": "Cheadle created early chances (Ewelike cross to Lewis header); Sandbach had one looping goal from distance but limited other clear-cut chances"
       },
       "secondHalf": {
-        "home": 1,
-        "away": 2,
-        "note": "Away team scored twice in second half after substitutes changed momentum; home team late equaliser."
+        "home": 1.2,
+        "away": 2.1,
+        "note": "Sandbach subs transformed the game with O'Connell and Foley scoring; Cheadle conceded late but salvaged a draw with a free-kick goal in 90+2'"
       },
       "extraTime": {
         "home": 0,
         "away": 0,
-        "note": "No extra time played."
+        "note": "No extra time played"
       },
       "total": {
-        "home": 2.5,
-        "away": 2.8,
-        "note": "Three goals each; home team had early dominance (first half 2 goals), away team seized control after substitutions (second half 2 goals), late home equaliser."
+        "home": 3,
+        "away": 3,
+        "note": "Both sides scored 3 goals; quality chances present throughout with Cheadle strong in first half, Sandbach dominant after substitutions in second half"
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
@@ -203,22 +203,22 @@
       "firstHalf": {
         "home": 65,
         "away": 35,
-        "note": "Home team dominated early with two goals and clear chances; Sandbach appeared reactive."
+        "note": "Cheadle dominated early with chances and took a 2-1 lead by half-time; Sandbach equalized mid-half but struggled to gain sustained control"
       },
       "secondHalf": {
-        "home": 40,
-        "away": 60,
-        "note": "Away team's substitutions markedly changed the game; they took control and scored twice to go ahead. Home team pushed back late for equaliser."
+        "home": 35,
+        "away": 65,
+        "note": "Sandbach subs significantly changed momentum; O'Connell and Foley brought attacking impetus, allowing away side to turn the game around and lead 3-2; Cheadle's late equalizer came against the run of play"
       },
       "extraTime": {
         "home": 50,
         "away": 50,
-        "note": "No extra time played."
+        "note": "No extra time played"
       },
       "total": {
-        "home": 52,
-        "away": 48,
-        "note": "Home team started strong; away team rallied in second half. Evenly matched by full-time whistle."
+        "home": 50,
+        "away": 50,
+        "note": "Even contest overall despite contrasting halves; Cheadle controlled first half, Sandbach controlled second, resulting in a 3-3 draw"
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
