@@ -1,26 +1,16 @@
 {
-  "scrapedAt": "2026-09-12T15:10:32.486Z",
+  "scrapedAt": "2026-09-12T16:10:33.509Z",
   "nextFixture": {
-    "date": "Sat 12/09/26",
-    "opposition": "Cheadle Heath Nomads",
-    "opponentUrl": "clubpage.php?id=713",
-    "homeAway": "A",
+    "date": "Sat 19/09/26",
+    "opposition": "Eccleshall",
+    "opponentUrl": "clubpage.php?id=30",
+    "homeAway": "H",
     "kickoff": "15:00",
     "score": null,
     "scorers": null,
     "competitionNote": null
   },
   "nextFixtures": [
-    {
-      "date": "Sat 12/09/26",
-      "opposition": "Cheadle Heath Nomads",
-      "opponentUrl": "clubpage.php?id=713",
-      "homeAway": "A",
-      "kickoff": "15:00",
-      "score": null,
-      "scorers": null,
-      "competitionNote": null
-    },
     {
       "date": "Sat 19/09/26",
       "opposition": "Eccleshall",
@@ -60,19 +50,39 @@
       "score": null,
       "scorers": null,
       "competitionNote": "The Edward Case Cup 1 S"
+    },
+    {
+      "date": "Sat 10/10/26",
+      "opposition": "AFC Bridgnorth",
+      "opponentUrl": "clubpage.php?id=936",
+      "homeAway": "A",
+      "kickoff": "15:00",
+      "score": null,
+      "scorers": null,
+      "competitionNote": null
     }
   ],
   "lastResult": {
-    "date": "Sat 05/09/26",
-    "opposition": "Brereton Social",
-    "opponentUrl": "clubpage.php?id=459",
+    "date": "Sat 12/09/26",
+    "opposition": "Cheadle Heath Nomads",
+    "opponentUrl": "clubpage.php?id=713",
     "homeAway": "A",
     "kickoff": "15:00",
-    "score": "W 1-0",
-    "scorers": "Robbie Hatton (90+3)",
+    "score": "D 3-3",
+    "scorers": "Kyle Foley (26) Kieran OConnell (63) Kyle Foley (77)",
     "competitionNote": null
   },
   "lastResults": [
+    {
+      "date": "Sat 12/09/26",
+      "opposition": "Cheadle Heath Nomads",
+      "opponentUrl": "clubpage.php?id=713",
+      "homeAway": "A",
+      "kickoff": "15:00",
+      "score": "D 3-3",
+      "scorers": "Kyle Foley (26) Kieran OConnell (63) Kyle Foley (77)",
+      "competitionNote": null
+    },
     {
       "date": "Sat 05/09/26",
       "opposition": "Brereton Social",
@@ -91,16 +101,6 @@
       "kickoff": "15:00",
       "score": "W 6-0",
       "scorers": "Kieran OConnell (11) Nathan Barry (19) Kyle Foley (28) Kyle Foley (78) Stanley Tatters (80) Robbie Hatton (89)",
-      "competitionNote": null
-    },
-    {
-      "date": "Sat 22/08/26",
-      "opposition": "Wolverhampton Casuals",
-      "opponentUrl": "clubpage.php?id=73",
-      "homeAway": "H",
-      "kickoff": "15:00",
-      "score": "W 4-1",
-      "scorers": "Robbie Hatton (4) Max Williams (61) Matthew Birchall (82) Kieran Nolan (90+2)",
       "competitionNote": null
     }
   ],
@@ -201,8 +201,8 @@
       "opponentUrl": "clubpage.php?id=713",
       "homeAway": "A",
       "kickoff": "15:00",
-      "score": null,
-      "scorers": null,
+      "score": "D 3-3",
+      "scorers": "Kyle Foley (26) Kieran OConnell (63) Kyle Foley (77)",
       "competitionNote": null
     },
     {
