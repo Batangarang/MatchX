@@ -168,8 +168,6 @@
         <button class="toggle-btn active" data-period="day" onclick="setCostPeriod('day')">Day</button>
         <button class="toggle-btn" data-period="month" onclick="setCostPeriod('month')">Month</button>
         <button class="toggle-btn" data-period="year" onclick="setCostPeriod('year')">Year</button>
-        <button class="toggle-btn" data-period="avg-month" onclick="setCostPeriod('avg-month')">Avg Month</button>
-        <button class="toggle-btn" data-period="avg-year" onclick="setCostPeriod('avg-year')">Avg Year</button>
       </div>
       <div class="cost-total" id="cost-total">—</div>
       <div class="cost-caveat">
@@ -209,19 +207,21 @@
 
     const X_SHARE = 0.45;
     const AI_SHARE = 0.55;
-    const USD_TO_GBP = 0.75;
-    const MATCHDAY_TOTAL_USD = (0.44 + 0.44 + 0.65) / 3;
-    const NONMATCHDAY_TOTAL_USD = (0.334 + 0.860 + 0.501) / 3;
-    const MATCHDAY_TOTAL_GBP = MATCHDAY_TOTAL_USD * USD_TO_GBP;
-    const NONMATCHDAY_TOTAL_GBP = NONMATCHDAY_TOTAL_USD * USD_TO_GBP;
+   const USD_TO_GBP = 0.7393; // real rate, checked 12 Sep 2026
+    // Real per-day averages derived from 32 days of genuine cost-log.json data (at 12/09/26)
+    // (x-posts: 36.7 runs/day avg, division-scores/matchday-live only fire on
+    // match days, recap-weekend-recap only fires on weekends) — replaces the
+    // earlier rough estimates now that real data exists.
+    const NONMATCHDAY_TOTAL_GBP = 0.066; // x-posts + x-insights + division-posts baseline, every day
+    const MATCHDAY_TOTAL_GBP = 0.066 + 0.1815 + 0.0984; // baseline + division-scores + matchday-live on a real match day
     const DOMAIN_YEARLY_GBP = 5.30 * USD_TO_GBP;
     const DOMAIN_DAILY_GBP = DOMAIN_YEARLY_GBP / 365;
 
     const WORKFLOWS = [
       { file: 'scrape.yml', name: 'Scrape Sandbach Fixtures', pulls: 'nwcfl.com: fixtures, league table, player stats, attendance, position history', skipLogic: 'Hourly gate — real work only ~once/hour even though triggered every 5 min', shareOfDay: 0, staleAfterMinutes: 75 },
-      { file: 'matchday-live.yml', name: 'Matchday Live Tracker', pulls: 'X posts (home + away club) + vision analysis of new images, on Sandbach\'s own match day', skipLogic: 'Only active kickoff-90min to kickoff+150/240min; skips if no new posts/images since last check', shareOfDay: 0.55, matchdayOnly: true, staleAfterMinutes: 15 },
-      { file: 'division-scores.yml', name: 'Division Scores', pulls: 'X posts from ~19 division clubs, on any day with First Division South fixtures', skipLogic: 'Resets to fixture-only before 11am; polls only within the whole division\'s match window; skips if nothing new', shareOfDay: 0.45, matchdayOnly: true, staleAfterMinutes: 15 },
-      { file: 'x-live.yml', name: 'Poll X (Fan Briefing)', pulls: 'Sandbach\'s own X posts + NWCFL news articles + Fan Briefing regeneration', skipLogic: 'x-posts.js gated to 30min/3hr/matchday tiers; x-insights.js skips if underlying posts unchanged since last summary', shareOfDay: 0.35, nonMatchday: true, staleAfterMinutes: 15 },
+      { file: 'matchday-live.yml', name: 'Matchday Live Tracker', pulls: 'X posts (home + away club) + vision analysis of new images, on Sandbach\'s own match day', skipLogic: 'Only active kickoff-90min to kickoff+150/240min; skips if nothing new; retries on GetXAPI rate-limit', shareOfDay: 0.098, matchdayOnly: true, staleAfterMinutes: 15 },
+      { file: 'division-scores.yml', name: 'Division Scores', pulls: 'X posts from ~19 division clubs, on any day with First Division South fixtures', skipLogic: 'Resets to fixture-only before 11am; polls only within match window; skips if nothing new; retries on GetXAPI rate-limit', shareOfDay: 0.1815, matchdayOnly: true, staleAfterMinutes: 15 },
+      { file: 'x-live.yml', name: 'Poll X (Fan Briefing)', pulls: 'Sandbach\'s own X posts + NWCFL news articles + Fan Briefing regeneration', skipLogic: 'x-posts.js gated to 60min/180min tiers; x-insights.js skips if underlying posts unchanged', shareOfDay: 0.033, nonMatchday: true, staleAfterMinutes: 15 },
       { file: 'division-recap-weekend-preview.yml', name: 'Weekend Preview', pulls: 'Next weekend\'s division fixtures + recent club posts + league table', skipLogic: 'Runs once, always regenerates fresh (Friday-scheduled)', shareOfDay: 0.15, nonMatchday: true, staleAfterMinutes: 60 * 24 * 8 },
       { file: 'division-recap-weekend-recap.yml', name: 'Weekend Recap', pulls: 'Weekend\'s played fixtures + club posts + league table', skipLogic: 'Only proceeds once, ~3hrs after the latest weekend kickoff; skips outside a real weekend', shareOfDay: 0.2, nonMatchday: true, staleAfterMinutes: 60 * 24 * 8 },
       { file: 'division-recap-midweek-preview.yml', name: 'Midweek Preview', pulls: 'Tomorrow\'s midweek fixtures (if any) + club posts + league table', skipLogic: 'Skips entirely if no midweek fixtures tomorrow', shareOfDay: 0.15, nonMatchday: true, staleAfterMinutes: 60 * 24 * 4 },
@@ -540,12 +540,12 @@
       }
 
       let gamesCount, totalDays, domainCost, label;
-      if (period === 'month' || period === 'avg-month') {
+      if (period === 'month') {
         gamesCount = 6; totalDays = 30; domainCost = DOMAIN_DAILY_GBP * 30;
-        label = period === 'month' ? 'month' : 'avg month (6 games)';
+        label = 'month';
       } else {
         gamesCount = 50; totalDays = 365; domainCost = DOMAIN_YEARLY_GBP;
-        label = period === 'year' ? 'year' : 'avg year (50 games)';
+        label = 'year';
       }
 
       const nonMatchdayDays = totalDays - gamesCount;
