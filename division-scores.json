@@ -1,7 +1,8 @@
 {
-  "generatedAt": "2026-09-12T15:32:48.824Z",
+  "generatedAt": "2026-09-12T15:36:46.872Z",
   "date": "2026-09-12",
-  "isToday": false,
+  "isToday": true,
+  "postCount": 0,
   "fixtures": [
     {
       "home": "Bilston Town",
@@ -15,8 +16,24 @@
       "home": "Cheadle Heath Nomads",
       "away": "Sandbach United",
       "kickoff": "15:00",
-      "score": null,
-      "goals": [],
+      "score": "2-1",
+      "goals": [
+        {
+          "minute": 19,
+          "team": "home",
+          "scorer": "Woods"
+        },
+        {
+          "minute": 26,
+          "team": "away",
+          "scorer": "Foley"
+        },
+        {
+          "minute": 29,
+          "team": "home",
+          "scorer": "Colville"
+        }
+      ],
       "redCards": []
     },
     {
@@ -31,24 +48,67 @@
       "home": "New Mills",
       "away": "Market Drayton Town",
       "kickoff": "15:00",
-      "score": null,
-      "goals": [],
+      "score": "1-0",
+      "goals": [
+        {
+          "minute": 30,
+          "team": "home",
+          "scorer": "Malachi Babayale"
+        }
+      ],
       "redCards": []
     },
     {
       "home": "Stafford Town",
       "away": "Alsager Town",
       "kickoff": "15:00",
-      "score": null,
-      "goals": [],
+      "score": "3-1",
+      "goals": [
+        {
+          "minute": 16,
+          "team": "home",
+          "scorer": "Parker"
+        },
+        {
+          "minute": 28,
+          "team": "home",
+          "scorer": "Wilding"
+        },
+        {
+          "minute": 30,
+          "team": "away",
+          "scorer": "Renshaw"
+        },
+        {
+          "minute": 33,
+          "team": "home",
+          "scorer": "Lynch"
+        }
+      ],
       "redCards": []
     },
     {
       "home": "Wednesfield Community",
       "away": "Allscott Heath",
       "kickoff": "15:00",
-      "score": null,
-      "goals": [],
+      "score": "0-3",
+      "goals": [
+        {
+          "minute": 2,
+          "team": "away",
+          "scorer": "Ben Davies"
+        },
+        {
+          "minute": 15,
+          "team": "away",
+          "scorer": "Ben Davies"
+        },
+        {
+          "minute": 19,
+          "team": "away",
+          "scorer": "Kian Newnes"
+        }
+      ],
       "redCards": []
     }
   ],
