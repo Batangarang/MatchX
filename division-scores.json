@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-09-12T15:45:38.755Z",
+  "generatedAt": "2026-09-12T15:50:43.280Z",
   "date": "2026-09-12",
   "isToday": true,
-  "postCount": 111,
-  "latestPostTimestamp": "2026-09-12T15:44:59.000Z",
+  "postCount": 115,
+  "latestPostTimestamp": "2026-09-12T15:49:49.000Z",
   "fixtures": [
     {
       "home": "Bilston Town",
@@ -43,7 +43,7 @@
           "scorer": "Dixon"
         },
         {
-          "minute": 75,
+          "minute": null,
           "team": "home",
           "scorer": "Bright"
         }
@@ -59,27 +59,27 @@
       "matchStage": "second_half",
       "goals": [
         {
-          "minute": 19,
+          "minute": "19",
           "team": "home",
-          "scorer": "Woods"
+          "scorer": "Dylan Woods"
         },
         {
-          "minute": 26,
+          "minute": "26",
           "team": "away",
           "scorer": "Foley"
         },
         {
-          "minute": 29,
+          "minute": "29",
           "team": "home",
-          "scorer": "Colville"
+          "scorer": "George Colville"
         },
         {
-          "minute": 63,
+          "minute": "63",
           "team": "away",
           "scorer": "O'Connell"
         },
         {
-          "minute": 77,
+          "minute": "77",
           "team": "away",
           "scorer": "Foley"
         }
@@ -105,17 +105,22 @@
       "matchStage": "second_half",
       "goals": [
         {
-          "minute": 30,
+          "minute": "30",
           "team": "home",
-          "scorer": "Babayale"
+          "scorer": "Malachi Babayale"
         },
         {
-          "minute": 43,
+          "minute": "41",
           "team": "away",
-          "scorer": "Cooper"
+          "scorer": null
         },
         {
-          "minute": 76,
+          "minute": "45+3",
+          "team": "home",
+          "scorer": "Tyler Cooper"
+        },
+        {
+          "minute": "76",
           "team": "away",
           "scorer": null
         }
@@ -136,44 +141,44 @@
       "matchStage": "second_half",
       "goals": [
         {
-          "minute": 16,
+          "minute": "16",
           "team": "home",
           "scorer": "Parker"
         },
         {
-          "minute": 28,
+          "minute": "28",
           "team": "home",
           "scorer": "Wilding"
         },
         {
-          "minute": 30,
+          "minute": "30",
           "team": "away",
-          "scorer": "Renshaw"
+          "scorer": "Harley Renshaw"
         },
         {
-          "minute": 33,
+          "minute": "33",
           "team": "home",
           "scorer": "Lynch"
         },
         {
-          "minute": 50,
-          "team": "away",
-          "scorer": "Parker"
-        },
-        {
-          "minute": 52,
+          "minute": "50",
           "team": "home",
           "scorer": "Parker"
         },
         {
-          "minute": 72,
+          "minute": "52",
+          "team": "home",
+          "scorer": "Parker"
+        },
+        {
+          "minute": "72",
           "team": "home",
           "scorer": "Jones"
         },
         {
-          "minute": 75,
+          "minute": "75",
           "team": "away",
-          "scorer": "Renshaw"
+          "scorer": "Harley Renshaw"
         }
       ],
       "yellowCards": [],
@@ -187,24 +192,24 @@
       "matchStage": "half_time",
       "goals": [
         {
-          "minute": 2,
+          "minute": "2",
           "team": "away",
-          "scorer": "Davies"
+          "scorer": "Ben Davies"
         },
         {
-          "minute": 15,
+          "minute": "15",
           "team": "away",
-          "scorer": "Davies"
+          "scorer": "Ben Davies"
         },
         {
-          "minute": 19,
+          "minute": "19",
           "team": "away",
-          "scorer": "Newnes"
+          "scorer": "Kian Newnes"
         }
       ],
       "yellowCards": [],
       "redCards": []
     }
   ],
-  "ticker": "@CheadleNomads: 84’ | SUBSTITUTE \n\n➡️ 15. L.Knight\n⬅️ 7. D.Woods\n\n@CheadleNomads 2-3 @SandbachFC_1st \n\n#WeAreNomads | @nwcfl | @NWCFLScores https://t.co/QCdNa7W35H"
+  "ticker": "@StaffordTown1st: 90 - In to 6 minutes added time \n\n🔴🔴 5-2 🔵🔵"
 }
