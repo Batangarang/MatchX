@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-09-12T14:15:42.948Z",
+  "generatedAt": "2026-09-12T14:20:53.561Z",
   "date": "2026-09-12",
   "isToday": true,
-  "postCount": 34,
-  "latestPostTimestamp": "2026-09-12T14:11:07.000Z",
+  "postCount": 42,
+  "latestPostTimestamp": "2026-09-12T14:19:58.000Z",
   "fixtures": [
     {
       "home": "Bilston Town",
       "away": "Widnes Town",
       "kickoff": "15:00",
       "score": null,
-      "matchStage": "scheduled",
+      "matchStage": "first_half",
       "goals": [],
       "yellowCards": [],
       "redCards": []
@@ -19,9 +19,15 @@
       "home": "Cheadle Heath Nomads",
       "away": "Sandbach United",
       "kickoff": "15:00",
-      "score": "0-0",
+      "score": "0-1",
       "matchStage": "first_half",
-      "goals": [],
+      "goals": [
+        {
+          "minute": 18,
+          "team": "away",
+          "scorer": "unknown"
+        }
+      ],
       "yellowCards": [
         {
           "team": "away",
@@ -54,9 +60,15 @@
       "home": "Stafford Town",
       "away": "Alsager Town",
       "kickoff": "15:00",
-      "score": "0-0",
+      "score": "1-0",
       "matchStage": "first_half",
-      "goals": [],
+      "goals": [
+        {
+          "minute": 16,
+          "team": "home",
+          "scorer": "Parker"
+        }
+      ],
       "yellowCards": [],
       "redCards": []
     },
@@ -64,18 +76,23 @@
       "home": "Wednesfield Community",
       "away": "Allscott Heath",
       "kickoff": "15:00",
-      "score": "0-1",
+      "score": "0-2",
       "matchStage": "first_half",
       "goals": [
         {
           "minute": 2,
           "team": "away",
           "scorer": "Ben Davies"
+        },
+        {
+          "minute": 19,
+          "team": "away",
+          "scorer": "Kian Newnes"
         }
       ],
       "yellowCards": [],
       "redCards": []
     }
   ],
-  "ticker": "@SandbachFC_1st: Very soft card that however Tats goes in the book on the 9th minute https://t.co/1T1O0tlVMP"
+  "ticker": "@SandbachFC_1st: 1-0 on 18’ as a ball high and deep over the box is shinned in with a looping goal.  Need to pick up the free players."
 }
