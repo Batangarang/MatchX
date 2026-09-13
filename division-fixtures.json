@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-13T10:50:39.945Z",
+  "generatedAt": "2026-09-13T10:55:29.793Z",
   "fixtures": [
     {
       "date": "Saturday 19 September 2026",
@@ -143,13 +143,6 @@
     },
     {
       "date": "Saturday 10 October 2026",
-      "home": "AFC Bridgnorth",
-      "away": "Sandbach United",
-      "kickoff": "15:00",
-      "postponed": false
-    },
-    {
-      "date": "Saturday 10 October 2026",
       "home": "Allscott Heath",
       "away": "Brereton Social",
       "kickoff": "15:00",
@@ -178,13 +171,6 @@
     },
     {
       "date": "Saturday 10 October 2026",
-      "home": "Foley Meir",
-      "away": "Cheadle Heath Nomads",
-      "kickoff": "15:00",
-      "postponed": false
-    },
-    {
-      "date": "Saturday 10 October 2026",
       "home": "Market Drayton Town",
       "away": "Widnes Town",
       "kickoff": "15:00",
@@ -194,20 +180,6 @@
       "date": "Saturday 10 October 2026",
       "home": "Stafford Town",
       "away": "Wednesfield Community",
-      "kickoff": "15:00",
-      "postponed": false
-    },
-    {
-      "date": "Saturday 10 October 2026",
-      "home": "Telford Town",
-      "away": "Eccleshall",
-      "kickoff": "15:00",
-      "postponed": false
-    },
-    {
-      "date": "Saturday 10 October 2026",
-      "home": "Wolverhampton Casuals",
-      "away": "New Mills",
       "kickoff": "15:00",
       "postponed": false
     },
