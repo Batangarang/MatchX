@@ -1,5 +1,5 @@
 {
-  "scrapedAt": "2026-09-13T10:10:37.247Z",
+  "scrapedAt": "2026-09-13T11:10:33.094Z",
   "nextFixture": {
     "date": "Sat 19/09/26",
     "opposition": "Eccleshall",
@@ -52,14 +52,14 @@
       "competitionNote": "The Edward Case Cup 1 S"
     },
     {
-      "date": "Sat 10/10/26",
-      "opposition": "AFC Bridgnorth",
-      "opponentUrl": "clubpage.php?id=936",
-      "homeAway": "A",
-      "kickoff": "15:00",
+      "date": "Tue 13/10/26",
+      "opposition": "Stockport County",
+      "opponentUrl": null,
+      "homeAway": "H",
+      "kickoff": "19:45",
       "score": null,
       "scorers": null,
-      "competitionNote": null
+      "competitionNote": "Cheshire Senior Cup 1"
     }
   ],
   "lastResult": {
@@ -244,16 +244,6 @@
       "score": null,
       "scorers": null,
       "competitionNote": "The Edward Case Cup 1 S"
-    },
-    {
-      "date": "Sat 10/10/26",
-      "opposition": "AFC Bridgnorth",
-      "opponentUrl": "clubpage.php?id=936",
-      "homeAway": "A",
-      "kickoff": "15:00",
-      "score": null,
-      "scorers": null,
-      "competitionNote": null
     },
     {
       "date": "Tue 13/10/26",
@@ -521,6 +511,16 @@
       "opponentUrl": "clubpage.php?id=91",
       "homeAway": "A",
       "kickoff": "15:00",
+      "score": null,
+      "scorers": null,
+      "competitionNote": null
+    },
+    {
+      "date": "TBC",
+      "opposition": "AFC Bridgnorth",
+      "opponentUrl": "clubpage.php?id=936",
+      "homeAway": "A",
+      "kickoff": "",
       "score": null,
       "scorers": null,
       "competitionNote": null
