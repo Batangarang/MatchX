@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-14T14:50:47.645Z",
+  "generatedAt": "2026-09-14T14:55:41.398Z",
   "fixtures": [
     {
       "date": "Saturday 19 September 2026",
@@ -38,6 +38,13 @@
     },
     {
       "date": "Saturday 19 September 2026",
+      "home": "Foley Meir",
+      "away": "Widnes Town",
+      "kickoff": "15:00",
+      "postponed": false
+    },
+    {
+      "date": "Saturday 19 September 2026",
       "home": "New Mills",
       "away": "Dawley Town",
       "kickoff": "15:00",
@@ -61,13 +68,6 @@
       "date": "Saturday 19 September 2026",
       "home": "Telford Town",
       "away": "Barnton",
-      "kickoff": "15:00",
-      "postponed": false
-    },
-    {
-      "date": "Saturday 19 September 2026",
-      "home": "Widnes Town",
-      "away": "Foley Meir",
       "kickoff": "15:00",
       "postponed": false
     },
@@ -794,13 +794,6 @@
     },
     {
       "date": "Saturday 19 December 2026",
-      "home": "Foley Meir",
-      "away": "Widnes Town",
-      "kickoff": "15:00",
-      "postponed": false
-    },
-    {
-      "date": "Saturday 19 December 2026",
       "home": "Stafford Town",
       "away": "Shawbury United",
       "kickoff": "15:00",
@@ -810,6 +803,13 @@
       "date": "Saturday 19 December 2026",
       "home": "Wednesfield Community",
       "away": "Crewe",
+      "kickoff": "15:00",
+      "postponed": false
+    },
+    {
+      "date": "Saturday 19 December 2026",
+      "home": "Widnes Town",
+      "away": "Foley Meir",
       "kickoff": "15:00",
       "postponed": false
     },

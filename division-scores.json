@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-14T14:50:47.719Z",
+  "generatedAt": "2026-09-14T14:55:41.469Z",
   "date": "2026-09-19",
   "isToday": false,
   "fixtures": [
@@ -44,6 +44,14 @@
       "redCards": []
     },
     {
+      "home": "Foley Meir",
+      "away": "Widnes Town",
+      "kickoff": "15:00",
+      "score": null,
+      "goals": [],
+      "redCards": []
+    },
+    {
       "home": "New Mills",
       "away": "Dawley Town",
       "kickoff": "15:00",
@@ -70,14 +78,6 @@
     {
       "home": "Telford Town",
       "away": "Barnton",
-      "kickoff": "15:00",
-      "score": null,
-      "goals": [],
-      "redCards": []
-    },
-    {
-      "home": "Widnes Town",
-      "away": "Foley Meir",
       "kickoff": "15:00",
       "score": null,
       "goals": [],
