@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-14T15:25:37.172Z",
+  "generatedAt": "2026-09-14T15:31:08.050Z",
   "fixtures": [
     {
       "date": "Saturday 19 September 2026",
@@ -178,8 +178,22 @@
     },
     {
       "date": "Saturday 10 October 2026",
+      "home": "Sandbach United",
+      "away": "Cheadle Heath Nomads",
+      "kickoff": "15:00",
+      "postponed": false
+    },
+    {
+      "date": "Saturday 10 October 2026",
       "home": "Stafford Town",
       "away": "Wednesfield Community",
+      "kickoff": "15:00",
+      "postponed": false
+    },
+    {
+      "date": "Saturday 10 October 2026",
+      "home": "Telford Town",
+      "away": "New Mills",
       "kickoff": "15:00",
       "postponed": false
     },
@@ -1277,13 +1291,6 @@
     },
     {
       "date": "Saturday 6 February 2027",
-      "home": "Sandbach United",
-      "away": "Cheadle Heath Nomads",
-      "kickoff": "15:00",
-      "postponed": false
-    },
-    {
-      "date": "Saturday 6 February 2027",
       "home": "Telford Town",
       "away": "Stafford Town",
       "kickoff": "15:00",
@@ -1412,13 +1419,6 @@
       "date": "Saturday 20 February 2027",
       "home": "Stafford Town",
       "away": "AFC Bridgnorth",
-      "kickoff": "15:00",
-      "postponed": false
-    },
-    {
-      "date": "Saturday 20 February 2027",
-      "home": "Telford Town",
-      "away": "New Mills",
       "kickoff": "15:00",
       "postponed": false
     },
