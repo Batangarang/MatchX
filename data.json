@@ -1,5 +1,5 @@
 {
-  "scrapedAt": "2026-09-14T15:00:58.602Z",
+  "scrapedAt": "2026-09-14T16:00:57.917Z",
   "nextFixture": {
     "date": "Sat 19/09/26",
     "opposition": "Eccleshall",
@@ -52,14 +52,14 @@
       "competitionNote": "The Edward Case Cup 1 S"
     },
     {
-      "date": "Tue 13/10/26",
-      "opposition": "Stockport County",
-      "opponentUrl": null,
+      "date": "Sat 10/10/26",
+      "opposition": "Cheadle Heath Nomads",
+      "opponentUrl": "clubpage.php?id=713",
       "homeAway": "H",
-      "kickoff": "19:45",
+      "kickoff": "15:00",
       "score": null,
       "scorers": null,
-      "competitionNote": "Cheshire Senior Cup 1"
+      "competitionNote": null
     }
   ],
   "lastResult": {
@@ -246,6 +246,16 @@
       "competitionNote": "The Edward Case Cup 1 S"
     },
     {
+      "date": "Sat 10/10/26",
+      "opposition": "Cheadle Heath Nomads",
+      "opponentUrl": "clubpage.php?id=713",
+      "homeAway": "H",
+      "kickoff": "15:00",
+      "score": null,
+      "scorers": null,
+      "competitionNote": null
+    },
+    {
       "date": "Tue 13/10/26",
       "opposition": "Stockport County",
       "opponentUrl": null,
@@ -390,16 +400,6 @@
       "opposition": "Barnton",
       "opponentUrl": "clubpage.php?id=266",
       "homeAway": "A",
-      "kickoff": "15:00",
-      "score": null,
-      "scorers": null,
-      "competitionNote": null
-    },
-    {
-      "date": "Sat 06/02/27",
-      "opposition": "Cheadle Heath Nomads",
-      "opponentUrl": "clubpage.php?id=713",
-      "homeAway": "H",
       "kickoff": "15:00",
       "score": null,
       "scorers": null,
