@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-18T17:15:41.674Z",
+  "generatedAt": "2026-09-18T17:20:45.932Z",
   "fixtures": [
     {
       "date": "Saturday 19 September 2026",
@@ -149,6 +149,13 @@
       "postponed": false
     },
     {
+      "date": "Wednesday 7 October 2026",
+      "home": "Brereton Social",
+      "away": "Wednesfield Community",
+      "kickoff": "19:45",
+      "postponed": false
+    },
+    {
       "date": "Saturday 10 October 2026",
       "home": "Allscott Heath",
       "away": "Brereton Social",
@@ -223,13 +230,6 @@
       "home": "Crewe",
       "away": "Widnes Town",
       "kickoff": "20:00",
-      "postponed": false
-    },
-    {
-      "date": "Wednesday 14 October 2026",
-      "home": "Brereton Social",
-      "away": "Wednesfield Community",
-      "kickoff": "19:45",
       "postponed": false
     },
     {
