@@ -1,6 +1,13 @@
 {
-  "generatedAt": "2026-09-18T15:40:46.739Z",
+  "generatedAt": "2026-09-18T15:45:43.518Z",
   "fixtures": [
+    {
+      "date": "Saturday 19 September 2026",
+      "home": "15:00 Foley Meir",
+      "away": "Widnes Town  Trentham Foods Stadium",
+      "kickoff": null,
+      "postponed": true
+    },
     {
       "date": "Saturday 19 September 2026",
       "home": "Allscott Heath",
@@ -39,9 +46,9 @@
     {
       "date": "Saturday 19 September 2026",
       "home": "Foley Meir",
-      "away": "Widnes Town",
-      "kickoff": "15:00",
-      "postponed": false
+      "away": "Widnes Town (15:00)",
+      "kickoff": null,
+      "postponed": true
     },
     {
       "date": "Saturday 19 September 2026",

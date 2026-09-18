@@ -1,8 +1,16 @@
 {
-  "generatedAt": "2026-09-18T15:40:46.809Z",
+  "generatedAt": "2026-09-18T15:45:43.587Z",
   "date": "2026-09-19",
   "isToday": false,
   "fixtures": [
+    {
+      "home": "15:00 Foley Meir",
+      "away": "Widnes Town  Trentham Foods Stadium",
+      "kickoff": null,
+      "score": null,
+      "goals": [],
+      "redCards": []
+    },
     {
       "home": "Allscott Heath",
       "away": "Alsager Town",
@@ -45,8 +53,8 @@
     },
     {
       "home": "Foley Meir",
-      "away": "Widnes Town",
-      "kickoff": "15:00",
+      "away": "Widnes Town (15:00)",
+      "kickoff": null,
       "score": null,
       "goals": [],
       "redCards": []
