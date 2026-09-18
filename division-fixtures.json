@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-18T16:15:43.620Z",
+  "generatedAt": "2026-09-18T16:20:45.141Z",
   "fixtures": [
     {
       "date": "Saturday 19 September 2026",
@@ -440,6 +440,13 @@
       "home": "Wolverhampton Casuals",
       "away": "Foley Meir",
       "kickoff": "15:00",
+      "postponed": false
+    },
+    {
+      "date": "Wednesday 11 November 2026",
+      "home": "Wolverhampton Casuals",
+      "away": "New Mills",
+      "kickoff": "20:00",
       "postponed": false
     },
     {
