@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-09-19T19:25:33.757Z",
+  "generatedAt": "2026-09-19T19:30:55.124Z",
   "date": "2026-09-19",
   "isToday": true,
-  "postCount": 197,
-  "latestPostTimestamp": "2026-09-19T19:23:45.000Z",
+  "postCount": 198,
+  "latestPostTimestamp": "2026-09-19T19:28:22.000Z",
   "fixtures": [
     {
       "home": "Foley Meir",
       "away": "Widnes Town",
-      "kickoff": null,
+      "kickoff": "15:00",
       "score": null,
       "matchStage": "scheduled",
       "goals": [],
@@ -107,23 +107,23 @@
       "goals": [
         {
           "minute": 21,
-          "team": "home",
+          "team": "away",
           "scorer": null
         },
         {
           "minute": 24,
           "team": "away",
-          "scorer": "Parker"
+          "scorer": "Callum Parker"
         },
         {
           "minute": 37,
           "team": "away",
-          "scorer": "Mazurkiewicz"
+          "scorer": "Piotr Mazurkiewicz"
         },
         {
           "minute": 52,
           "team": "home",
-          "scorer": "Wilding"
+          "scorer": null
         },
         {
           "minute": 75,
@@ -133,23 +133,23 @@
         {
           "minute": 83,
           "team": "away",
-          "scorer": "Mazurkiewicz"
+          "scorer": "Piotr Mazurkiewicz"
         }
       ],
       "yellowCards": [
         {
           "team": "away",
-          "player": "Efford"
+          "player": "Tom Efford"
         },
         {
           "team": "away",
-          "player": "Wilding"
+          "player": "Tom Efford"
         }
       ],
       "redCards": [
         {
           "team": "away",
-          "player": "Efford"
+          "player": "Tom Efford"
         }
       ]
     },
@@ -216,7 +216,11 @@
       "yellowCards": [
         {
           "team": "home",
-          "player": null
+          "player": "Barry"
+        },
+        {
+          "team": "home",
+          "player": "Robbie Hatton"
         }
       ],
       "redCards": []
@@ -229,7 +233,7 @@
       "matchStage": "full_time",
       "goals": [
         {
-          "minute": 30,
+          "minute": 29,
           "team": "away",
           "scorer": "Cian McIntosh"
         },
@@ -249,12 +253,7 @@
           "scorer": "Kieran Cook"
         }
       ],
-      "yellowCards": [
-        {
-          "team": "away",
-          "player": "Jayden Kirk"
-        }
-      ],
+      "yellowCards": [],
       "redCards": []
     },
     {
@@ -265,7 +264,7 @@
       "matchStage": "full_time",
       "goals": [
         {
-          "minute": 61,
+          "minute": 66,
           "team": "away",
           "scorer": null
         },
@@ -278,19 +277,19 @@
       "yellowCards": [
         {
           "team": "home",
-          "player": "Joe Cuff"
-        },
-        {
-          "team": "home",
           "player": "Joe Danby"
         },
         {
           "team": "home",
           "player": "Jack Grimshaw"
+        },
+        {
+          "team": "home",
+          "player": "Joe Cuff"
         }
       ],
       "redCards": []
     }
   ],
-  "ticker": "@barntonfc: 🎙️ Man of the Match\n\nWe catch up with today’s Man of the Match, Raion Rowe, following our 2-0 victory away at Telford Town. ⚽️\n\nA big thank you to HAS Gas for their sponsorship and continued support. 🤝\n\n#ManOfTheMatch #cheshirejuve #juve #nwcfl #finoallafine https://t.co/s4J7xsATsw"
+  "ticker": "@barntonfc: 🎙️ Time for the Manager Lewis Wood.\n\nWe catch up with Manager Lewis Wood following today’s 2-0 win. ⚽️\n\nHear Lewis’s thoughts on the game and tonight’s performance. \n\n#finoallafine #cheshirejuve #nwcfl https://t.co/RKBZpSZUJJ"
 }

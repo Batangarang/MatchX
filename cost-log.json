@@ -11421,14 +11421,14 @@
       "aiCostGBP": 0.0195
     },
     {
-      "script": "recap-preview",
-      "timestamp": "2026-09-19T19:30:44.919Z",
-      "getxapiCalls": 0,
+      "script": "division-scores",
+      "timestamp": "2026-09-19T19:31:34.854Z",
+      "getxapiCalls": 20,
       "claudeCalls": 1,
-      "inputTokens": 15487,
-      "outputTokens": 382,
-      "xCostGBP": 0,
-      "aiCostGBP": 0.013
+      "inputTokens": 16410,
+      "outputTokens": 1964,
+      "xCostGBP": 0.015,
+      "aiCostGBP": 0.0197
     }
   ]
 }
