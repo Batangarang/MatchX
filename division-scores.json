@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-09-19T15:25:35.923Z",
+  "generatedAt": "2026-09-19T15:31:03.507Z",
   "date": "2026-09-19",
   "isToday": true,
-  "postCount": 144,
-  "latestPostTimestamp": "2026-09-19T15:25:19.000Z",
+  "postCount": 153,
+  "latestPostTimestamp": "2026-09-19T15:30:06.000Z",
   "fixtures": [
     {
       "home": "Foley Meir",
@@ -19,8 +19,8 @@
       "home": "Allscott Heath",
       "away": "Alsager Town",
       "kickoff": "15:00",
-      "score": "2-2",
-      "matchStage": "second_half",
+      "score": "2-1",
+      "matchStage": "half_time",
       "goals": [
         {
           "minute": 6,
@@ -33,13 +33,18 @@
           "scorer": "James Allen"
         },
         {
-          "minute": 33,
+          "minute": 35,
           "team": "home",
           "scorer": "Liam Parkinson"
         },
         {
-          "minute": 48,
+          "minute": 47,
           "team": "away",
+          "scorer": "Kian Newnes"
+        },
+        {
+          "minute": 58,
+          "team": "home",
           "scorer": "Kian Newnes"
         }
       ],
@@ -116,30 +121,30 @@
           "scorer": "Parker"
         },
         {
+          "minute": 37,
+          "team": "away",
+          "scorer": "Mazurkiewicz"
+        },
+        {
           "minute": 52,
           "team": "home",
           "scorer": "Wilding"
-        },
-        {
-          "minute": 37,
-          "team": "away",
-          "scorer": "Pat Mazurkiewicz"
         }
       ],
       "yellowCards": [
         {
           "team": "away",
-          "player": "Tom Efford"
+          "player": "Efford"
         },
         {
           "team": "away",
-          "player": "Tom Efford"
+          "player": "Wilding"
         }
       ],
       "redCards": [
         {
           "team": "away",
-          "player": "Tom Efford"
+          "player": "Efford"
         }
       ]
     },
@@ -171,6 +176,11 @@
           "scorer": "Will Frankish"
         },
         {
+          "minute": 60,
+          "team": "away",
+          "scorer": null
+        },
+        {
           "minute": 63,
           "team": "home",
           "scorer": "Jack Morris"
@@ -194,7 +204,7 @@
       ],
       "yellowCards": [
         {
-          "team": "away",
+          "team": "home",
           "player": null
         }
       ],
@@ -240,9 +250,15 @@
       "home": "Telford Town",
       "away": "Barnton",
       "kickoff": "15:00",
-      "score": "0-0",
-      "matchStage": "half_time",
-      "goals": [],
+      "score": "0-1",
+      "matchStage": "second_half",
+      "goals": [
+        {
+          "minute": 61,
+          "team": "away",
+          "scorer": null
+        }
+      ],
       "yellowCards": [
         {
           "team": "home",
@@ -256,5 +272,5 @@
       "redCards": []
     }
   ],
-  "ticker": "@MDTFC: 67’ gone \n\nA third for Bilston and their 10 runs through and tucks one into the far corner."
+  "ticker": "@EccleshallFC: 69.33\nSol gives away a freekick, eccys half\n\n💙🦅\n#EccleshallFC"
 }
