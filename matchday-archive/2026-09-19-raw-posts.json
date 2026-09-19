@@ -144,5 +144,31 @@
     "side": "away",
     "handle": "EccleshallFC",
     "isDuplicateCommentary": false
+  },
+  {
+    "text": "1-0 https://t.co/EWYxSf2rOR",
+    "createdAt": "2026-09-19T14:33:04.000Z",
+    "images": [
+      "https://pbs.twimg.com/media/HSliLx5W4AADY2V.jpg"
+    ],
+    "side": "home",
+    "handle": "SandbachFC_1st",
+    "isDuplicateCommentary": false
+  },
+  {
+    "text": "33.00\nOver the top from Sandbach, offside\n\n💙🦅\n#EccleshallFC",
+    "createdAt": "2026-09-19T14:33:43.000Z",
+    "images": [],
+    "side": "away",
+    "handle": "EccleshallFC",
+    "isDuplicateCommentary": false
+  },
+  {
+    "text": "33.51\nCorner to eccy \nSol takes \nCleared \n\n💙🦅\n#EccleshallFC",
+    "createdAt": "2026-09-19T14:34:54.000Z",
+    "images": [],
+    "side": "away",
+    "handle": "EccleshallFC",
+    "isDuplicateCommentary": false
   }
 ]
