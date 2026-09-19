@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-09-19T13:10:49.991Z",
+  "generatedAt": "2026-09-19T14:01:13.174Z",
   "fixtureDate": "2026-09-19",
   "kickoff": "15:00",
   "homeTeam": "Sandbach United",
   "awayTeam": "Eccleshall",
-  "postsUsed": 4,
+  "postsUsed": 6,
   "imagesAnalyzedThisRun": 1,
-  "totalImagesAnalyzed": 3,
+  "totalImagesAnalyzed": 4,
   "match": {
     "score": null,
     "scoreDiscrepancy": null,
@@ -40,8 +40,26 @@
         "officials": []
       },
       "away": {
-        "players": [],
-        "substitutes": [],
+        "players": [
+          "1. Adam Whitehouse",
+          "2. Archie Elsdon",
+          "3. Matt Jones",
+          "4. Sol Ashworth",
+          "5. Phil McKerdy",
+          "6. Levi Hunter",
+          "7. Dylan Baily",
+          "8. Essa Faburay",
+          "9. Max Chimenes",
+          "10. Dylan Bath",
+          "11. Danny Glover"
+        ],
+        "substitutes": [
+          "12. Matty Argent-Barnes",
+          "14. Joe Drakeley",
+          "15. Morgan Russell",
+          "16. Will Silvester",
+          "17. Bobby Allen"
+        ],
         "manager": null,
         "officials": []
       }
@@ -70,22 +88,22 @@
       "firstHalf": {
         "home": 0,
         "away": 0,
-        "note": "Match not yet played; no data available."
+        "note": "No match events reported yet."
       },
       "secondHalf": {
         "home": 0,
         "away": 0,
-        "note": "Match not yet played; no data available."
+        "note": "No match events reported yet."
       },
       "extraTime": {
         "home": 0,
         "away": 0,
-        "note": "Match not yet played; no data available."
+        "note": "No extra time."
       },
       "total": {
         "home": 0,
         "away": 0,
-        "note": "Match not yet played; no data available."
+        "note": "No match events reported yet."
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
@@ -93,22 +111,22 @@
       "firstHalf": {
         "home": 50,
         "away": 50,
-        "note": "Match not yet played; no data available."
+        "note": "Match not yet started; no information available."
       },
       "secondHalf": {
         "home": 50,
         "away": 50,
-        "note": "Match not yet played; no data available."
+        "note": "Match not yet started; no information available."
       },
       "extraTime": {
         "home": 50,
         "away": 50,
-        "note": "Match not yet played; no data available."
+        "note": "No extra time."
       },
       "total": {
         "home": 50,
         "away": 50,
-        "note": "Match not yet played; no data available."
+        "note": "Match not yet started; no information available."
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
