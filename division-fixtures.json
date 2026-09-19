@@ -1,83 +1,6 @@
 {
-  "generatedAt": "2026-09-19T13:55:31.915Z",
+  "generatedAt": "2026-09-19T14:01:04.679Z",
   "fixtures": [
-    {
-      "date": "Saturday 19 September 2026",
-      "home": "15:00 Foley Meir",
-      "away": "Widnes Town  Trentham Foods Stadium",
-      "kickoff": null,
-      "postponed": true
-    },
-    {
-      "date": "Saturday 19 September 2026",
-      "home": "Allscott Heath",
-      "away": "Alsager Town",
-      "kickoff": "15:00",
-      "postponed": false
-    },
-    {
-      "date": "Saturday 19 September 2026",
-      "home": "Bilston Town",
-      "away": "Market Drayton Town",
-      "kickoff": "15:00",
-      "postponed": false
-    },
-    {
-      "date": "Saturday 19 September 2026",
-      "home": "Brereton Social",
-      "away": "AFC Bridgnorth",
-      "kickoff": "15:00",
-      "postponed": false
-    },
-    {
-      "date": "Saturday 19 September 2026",
-      "home": "Cheadle Heath Nomads",
-      "away": "Stafford Town",
-      "kickoff": "15:00",
-      "postponed": false
-    },
-    {
-      "date": "Saturday 19 September 2026",
-      "home": "Crewe",
-      "away": "Wednesfield Community",
-      "kickoff": "15:00",
-      "postponed": false
-    },
-    {
-      "date": "Saturday 19 September 2026",
-      "home": "Foley Meir",
-      "away": "Widnes Town (15:00)",
-      "kickoff": null,
-      "postponed": true
-    },
-    {
-      "date": "Saturday 19 September 2026",
-      "home": "New Mills",
-      "away": "Dawley Town",
-      "kickoff": "15:00",
-      "postponed": false
-    },
-    {
-      "date": "Saturday 19 September 2026",
-      "home": "Sandbach United",
-      "away": "Eccleshall",
-      "kickoff": "15:00",
-      "postponed": false
-    },
-    {
-      "date": "Saturday 19 September 2026",
-      "home": "Shawbury United",
-      "away": "Wolverhampton Casuals",
-      "kickoff": "15:00",
-      "postponed": false
-    },
-    {
-      "date": "Saturday 19 September 2026",
-      "home": "Telford Town",
-      "away": "Barnton",
-      "kickoff": "15:00",
-      "postponed": false
-    },
     {
       "date": "Saturday 3 October 2026",
       "home": "Cheadle Heath Nomads",
@@ -2084,6 +2007,83 @@
       "date": "Saturday 17 April 2027",
       "home": "Wolverhampton Casuals",
       "away": "Cheadle Heath Nomads",
+      "kickoff": "15:00",
+      "postponed": false
+    },
+    {
+      "date": "Saturday 19 September 2026",
+      "home": "15:00 Foley Meir",
+      "away": "Widnes Town  Trentham Foods Stadium",
+      "kickoff": null,
+      "postponed": true
+    },
+    {
+      "date": "Saturday 19 September 2026",
+      "home": "Allscott Heath",
+      "away": "Alsager Town",
+      "kickoff": "15:00",
+      "postponed": false
+    },
+    {
+      "date": "Saturday 19 September 2026",
+      "home": "Bilston Town",
+      "away": "Market Drayton Town",
+      "kickoff": "15:00",
+      "postponed": false
+    },
+    {
+      "date": "Saturday 19 September 2026",
+      "home": "Brereton Social",
+      "away": "AFC Bridgnorth",
+      "kickoff": "15:00",
+      "postponed": false
+    },
+    {
+      "date": "Saturday 19 September 2026",
+      "home": "Cheadle Heath Nomads",
+      "away": "Stafford Town",
+      "kickoff": "15:00",
+      "postponed": false
+    },
+    {
+      "date": "Saturday 19 September 2026",
+      "home": "Crewe",
+      "away": "Wednesfield Community",
+      "kickoff": "15:00",
+      "postponed": false
+    },
+    {
+      "date": "Saturday 19 September 2026",
+      "home": "Foley Meir",
+      "away": "Widnes Town (15:00)",
+      "kickoff": null,
+      "postponed": true
+    },
+    {
+      "date": "Saturday 19 September 2026",
+      "home": "New Mills",
+      "away": "Dawley Town",
+      "kickoff": "15:00",
+      "postponed": false
+    },
+    {
+      "date": "Saturday 19 September 2026",
+      "home": "Sandbach United",
+      "away": "Eccleshall",
+      "kickoff": "15:00",
+      "postponed": false
+    },
+    {
+      "date": "Saturday 19 September 2026",
+      "home": "Shawbury United",
+      "away": "Wolverhampton Casuals",
+      "kickoff": "15:00",
+      "postponed": false
+    },
+    {
+      "date": "Saturday 19 September 2026",
+      "home": "Telford Town",
+      "away": "Barnton",
       "kickoff": "15:00",
       "postponed": false
     }
