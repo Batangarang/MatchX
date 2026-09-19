@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-09-19T15:15:44.089Z",
+  "generatedAt": "2026-09-19T15:20:42.390Z",
   "date": "2026-09-19",
   "isToday": true,
-  "postCount": 125,
-  "latestPostTimestamp": "2026-09-19T15:15:27.000Z",
+  "postCount": 136,
+  "latestPostTimestamp": "2026-09-19T15:20:38.000Z",
   "fixtures": [
     {
       "home": "Foley Meir",
@@ -20,7 +20,7 @@
       "away": "Alsager Town",
       "kickoff": "15:00",
       "score": "2-1",
-      "matchStage": "half_time",
+      "matchStage": "full_time",
       "goals": [
         {
           "minute": 6,
@@ -82,7 +82,7 @@
         {
           "minute": 26,
           "team": "home",
-          "scorer": "Own goal"
+          "scorer": null
         }
       ],
       "yellowCards": [],
@@ -113,17 +113,17 @@
         {
           "minute": 52,
           "team": "home",
-          "scorer": "Own goal (Wilding)"
+          "scorer": "Wilding"
         }
       ],
       "yellowCards": [
         {
           "team": "away",
-          "player": "Wilding"
+          "player": "Efford"
         },
         {
           "team": "away",
-          "player": "Efford"
+          "player": "Wilding"
         }
       ],
       "redCards": []
@@ -142,8 +142,8 @@
       "home": "New Mills",
       "away": "Dawley Town",
       "kickoff": "15:00",
-      "score": "1-1",
-      "matchStage": "half_time",
+      "score": "1-2",
+      "matchStage": "second_half",
       "goals": [
         {
           "minute": 7,
@@ -154,6 +154,16 @@
           "minute": 27,
           "team": "home",
           "scorer": "Will Frankish"
+        },
+        {
+          "minute": 60,
+          "team": "away",
+          "scorer": null
+        },
+        {
+          "minute": 63,
+          "team": "home",
+          "scorer": "Jack Morris"
         }
       ],
       "yellowCards": [],
@@ -188,7 +198,7 @@
       "home": "Shawbury United",
       "away": "Wolverhampton Casuals",
       "kickoff": "15:00",
-      "score": "1-2",
+      "score": "1-3",
       "matchStage": "second_half",
       "goals": [
         {
@@ -202,9 +212,14 @@
           "scorer": "Ablay Sowe"
         },
         {
-          "minute": 49,
+          "minute": 48,
           "team": "away",
           "scorer": "Ben Podmore"
+        },
+        {
+          "minute": 58,
+          "team": "away",
+          "scorer": "Kieran Cook"
         }
       ],
       "yellowCards": [
@@ -226,10 +241,14 @@
         {
           "team": "home",
           "player": "Joe Danby"
+        },
+        {
+          "team": "home",
+          "player": "Joe Cuff"
         }
       ],
       "redCards": []
     }
   ],
-  "ticker": "@StaffordTown1st: 56 - Sub for Town\n\nTodd Sherwood is on for Sam Lynch\n\n🟣 2-2 🔘"
+  "ticker": "@EccleshallFC: Freekick to eccy. Sol takes \nDanny picks it up and then fouled \nSandbach pick up a yellow\n\n💙🦅\n#EccleshallFC"
 }
