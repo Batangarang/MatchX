@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-19T15:31:19.327Z",
-  "sinceDate": "2026-09-12T15:30:45.338Z",
+  "generatedAt": "2026-09-19T15:31:16.012Z",
+  "sinceDate": "2026-09-12T15:30:42.890Z",
   "clubs": [
     {
       "name": "Sandbach United",
@@ -924,7 +924,7 @@
           ]
         },
         {
-          "text": "🟢⚫ UP NEXT ⚫🟢\n\nBack at the Peter Ford Stadium this weekend! 🏠\n\nFollowing a big performance last week, The Monners are back in action as we welcome @alsagertown_fc .\n\nLet’s make it another big one! \n\n🟢⚫ #TheMonners #AHFC #AllscottHeathFC https://t.co/T3QfC8dsVP",
+          "text": "🟢⚫ UP NEXT ⚫🟢\n\nBack at the Peter Ford Stadium this weekend! ��\n\nFollowing a big performance last week, The Monners are back in action as we welcome @alsagertown_fc .\n\nLet’s make it another big one! \n\n🟢⚫ #TheMonners #AHFC #AllscottHeathFC https://t.co/T3QfC8dsVP",
           "createdAt": "2026-09-17T19:46:27.000Z",
           "images": [
             "https://pbs.twimg.com/media/HScWu3WW0AAeYsJ.jpg"
@@ -1172,6 +1172,11 @@
         {
           "text": "Smith on Love off",
           "createdAt": "2026-09-12T15:33:49.000Z",
+          "images": []
+        },
+        {
+          "text": "Hartill &amp; Preece on\nDedja &amp; Evans H off",
+          "createdAt": "2026-09-12T15:30:44.000Z",
           "images": []
         }
       ]
