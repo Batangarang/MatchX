@@ -61,57 +61,19 @@
   <h1>First Division South — Round-Up</h1>
 
   <div class="card">
-    <h2>Weekend Preview</h2>
-    <div id="weekend-preview" class="summary">Loading...</div>
-    <div class="meta" id="weekend-preview-updated"></div>
+    <h2>Coming Up</h2>
+    <div id="preview-content">Loading...</div>
+    <div class="meta" id="preview-updated"></div>
   </div>
 
   <div class="card">
-    <h2>Weekend Recap</h2>
-    <div id="weekend-recap-content">Loading...</div>
-    <div class="meta" id="weekend-recap-updated"></div>
-  </div>
-
-  <div class="card">
-    <h2>Midweek Preview</h2>
-    <div id="midweek-preview" class="summary">Loading...</div>
-    <div class="meta" id="midweek-preview-updated"></div>
-  </div>
-
-  <div class="card">
-    <h2>Midweek Recap</h2>
-    <div id="midweek-recap-content">Loading...</div>
-    <div class="meta" id="midweek-recap-updated"></div>
+    <h2>Recent Results</h2>
+    <div id="recap-content">Loading...</div>
+    <div class="meta" id="recap-updated"></div>
   </div>
 
   <script>
-    function loadPreview(mode, contentId, metaId) {
-      fetch(`division-insights-${mode}.json?t=` + Date.now())
-        .then(res => res.json())
-        .then(data => {
-          if (!data.sandbachFocus && !data.divisionWide && !data.summary) {
-            document.getElementById(contentId).innerHTML = '<span class="empty">Not available yet.</span>';
-            return;
-          }
-          if (data.sandbachFocus || data.divisionWide) {
-            document.getElementById(contentId).innerHTML = `
-              ${data.sandbachFocus ? `<div class="subhead">Sandbach United</div><div class="summary">${data.sandbachFocus}</div>` : ''}
-              ${data.divisionWide ? `<div class="subhead">Around the Division</div><div class="summary">${data.divisionWide}</div>` : ''}
-            `;
-          } else {
-            document.getElementById(contentId).textContent = data.summary;
-          }
-          const date = new Date(data.generatedAt);
-          document.getElementById(metaId).textContent =
-            'Updated ' + date.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' }) +
-            ' at ' + date.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' });
-        })
-        .catch(() => {
-          document.getElementById(contentId).innerHTML = '<span class="empty">Not available yet — check back after the next preview window.</span>';
-        });
-    }
-
-    function loadRecap(mode, contentId, metaId) {
+    function loadInsight(mode, contentId, metaId) {
       fetch(`division-insights-${mode}.json?t=` + Date.now())
         .then(res => res.json())
         .then(data => {
@@ -129,14 +91,12 @@
             ' at ' + date.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' });
         })
         .catch(() => {
-          document.getElementById(contentId).innerHTML = '<span class="empty">Not available yet — check back after the next recap window.</span>';
+          document.getElementById(contentId).innerHTML = '<span class="empty">Not available yet — check back later.</span>';
         });
     }
 
-    loadPreview('weekend-preview', 'weekend-preview', 'weekend-preview-updated');
-    loadRecap('weekend-recap', 'weekend-recap-content', 'weekend-recap-updated');
-    loadPreview('midweek-preview', 'midweek-preview', 'midweek-preview-updated');
-    loadRecap('midweek-recap', 'midweek-recap-content', 'midweek-recap-updated');
+    loadInsight('preview', 'preview-content', 'preview-updated');
+    loadInsight('recap', 'recap-content', 'recap-updated');
   </script>
 </body>
 </html>
