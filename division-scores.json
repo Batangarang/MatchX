@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-09-19T15:20:42.390Z",
+  "generatedAt": "2026-09-19T15:25:35.923Z",
   "date": "2026-09-19",
   "isToday": true,
-  "postCount": 136,
-  "latestPostTimestamp": "2026-09-19T15:20:38.000Z",
+  "postCount": 144,
+  "latestPostTimestamp": "2026-09-19T15:25:19.000Z",
   "fixtures": [
     {
       "home": "Foley Meir",
@@ -19,8 +19,8 @@
       "home": "Allscott Heath",
       "away": "Alsager Town",
       "kickoff": "15:00",
-      "score": "2-1",
-      "matchStage": "full_time",
+      "score": "2-2",
+      "matchStage": "second_half",
       "goals": [
         {
           "minute": 6,
@@ -33,13 +33,13 @@
           "scorer": "James Allen"
         },
         {
-          "minute": 35,
+          "minute": 33,
           "team": "home",
           "scorer": "Liam Parkinson"
         },
         {
           "minute": 48,
-          "team": "home",
+          "team": "away",
           "scorer": "Kian Newnes"
         }
       ],
@@ -50,7 +50,7 @@
       "home": "Bilston Town",
       "away": "Market Drayton Town",
       "kickoff": "15:00",
-      "score": "2-0",
+      "score": "3-0",
       "matchStage": "second_half",
       "goals": [
         {
@@ -62,6 +62,11 @@
           "minute": 47,
           "team": "home",
           "scorer": "Crump"
+        },
+        {
+          "minute": 67,
+          "team": "home",
+          "scorer": null
         }
       ],
       "yellowCards": [],
@@ -86,7 +91,12 @@
         }
       ],
       "yellowCards": [],
-      "redCards": []
+      "redCards": [
+        {
+          "team": "home",
+          "player": "Blake"
+        }
+      ]
     },
     {
       "home": "Cheadle Heath Nomads",
@@ -97,7 +107,7 @@
       "goals": [
         {
           "minute": 21,
-          "team": "home",
+          "team": "away",
           "scorer": null
         },
         {
@@ -106,27 +116,32 @@
           "scorer": "Parker"
         },
         {
-          "minute": 37,
-          "team": "away",
-          "scorer": "Mazurkiewicz"
-        },
-        {
           "minute": 52,
           "team": "home",
           "scorer": "Wilding"
+        },
+        {
+          "minute": 37,
+          "team": "away",
+          "scorer": "Pat Mazurkiewicz"
         }
       ],
       "yellowCards": [
         {
           "team": "away",
-          "player": "Efford"
+          "player": "Tom Efford"
         },
         {
           "team": "away",
-          "player": "Wilding"
+          "player": "Tom Efford"
         }
       ],
-      "redCards": []
+      "redCards": [
+        {
+          "team": "away",
+          "player": "Tom Efford"
+        }
+      ]
     },
     {
       "home": "Crewe",
@@ -156,11 +171,6 @@
           "scorer": "Will Frankish"
         },
         {
-          "minute": 60,
-          "team": "away",
-          "scorer": null
-        },
-        {
           "minute": 63,
           "team": "home",
           "scorer": "Jack Morris"
@@ -174,7 +184,7 @@
       "away": "Eccleshall",
       "kickoff": "15:00",
       "score": "1-0",
-      "matchStage": "half_time",
+      "matchStage": "second_half",
       "goals": [
         {
           "minute": 12,
@@ -183,10 +193,6 @@
         }
       ],
       "yellowCards": [
-        {
-          "team": "home",
-          "player": "Hatton"
-        },
         {
           "team": "away",
           "player": null
@@ -250,5 +256,5 @@
       "redCards": []
     }
   ],
-  "ticker": "@EccleshallFC: Freekick to eccy. Sol takes \nDanny picks it up and then fouled \nSandbach pick up a yellow\n\n💙🦅\n#EccleshallFC"
+  "ticker": "@MDTFC: 67’ gone \n\nA third for Bilston and their 10 runs through and tucks one into the far corner."
 }
