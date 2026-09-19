@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-09-19T15:35:35.381Z",
+  "generatedAt": "2026-09-19T15:40:40.445Z",
   "date": "2026-09-19",
   "isToday": true,
-  "postCount": 158,
-  "latestPostTimestamp": "2026-09-19T15:35:12.000Z",
+  "postCount": 167,
+  "latestPostTimestamp": "2026-09-19T15:40:24.000Z",
   "fixtures": [
     {
       "home": "Foley Meir",
@@ -19,13 +19,13 @@
       "home": "Allscott Heath",
       "away": "Alsager Town",
       "kickoff": "15:00",
-      "score": "2-1",
+      "score": "4-1",
       "matchStage": "full_time",
       "goals": [
         {
           "minute": 6,
           "team": "away",
-          "scorer": "Fraser Geddes"
+          "scorer": "Geddes"
         },
         {
           "minute": 22,
@@ -39,8 +39,13 @@
         },
         {
           "minute": 48,
-          "team": "away",
+          "team": "home",
           "scorer": "Kian Newnes"
+        },
+        {
+          "minute": 79,
+          "team": "home",
+          "scorer": "Evans"
         }
       ],
       "yellowCards": [],
@@ -51,7 +56,7 @@
       "away": "Market Drayton Town",
       "kickoff": "15:00",
       "score": "3-0",
-      "matchStage": "second_half",
+      "matchStage": "full_time",
       "goals": [
         {
           "minute": 1,
@@ -108,7 +113,7 @@
         {
           "minute": 21,
           "team": "away",
-          "scorer": "Dan Lewis"
+          "scorer": "Lewis"
         },
         {
           "minute": 24,
@@ -122,29 +127,29 @@
         },
         {
           "minute": 52,
-          "team": "home",
-          "scorer": "Own Goal (Scott Wilding)"
+          "team": "away",
+          "scorer": "Wilding (own goal)"
         },
         {
           "minute": 75,
           "team": "home",
-          "scorer": "Player 12"
+          "scorer": "12"
         }
       ],
       "yellowCards": [
         {
           "team": "away",
-          "player": "Tom Efford"
+          "player": "Efford"
         },
         {
           "team": "away",
-          "player": "Scott Wilding"
+          "player": "Efford"
         }
       ],
       "redCards": [
         {
           "team": "away",
-          "player": "Tom Efford"
+          "player": "Efford"
         }
       ]
     },
@@ -176,11 +181,6 @@
           "scorer": "Will Frankish"
         },
         {
-          "minute": 60,
-          "team": "away",
-          "scorer": null
-        },
-        {
           "minute": 63,
           "team": "home",
           "scorer": "Jack Morris"
@@ -205,10 +205,14 @@
       "yellowCards": [
         {
           "team": "home",
-          "player": "Barry"
+          "player": "18"
         },
         {
           "team": "home",
+          "player": "Barry"
+        },
+        {
+          "team": "away",
           "player": "Hatton"
         }
       ],
@@ -232,14 +236,14 @@
           "scorer": "Ablay Sowe"
         },
         {
-          "minute": 48,
+          "minute": 49,
           "team": "away",
           "scorer": "Ben Podmore"
         },
         {
           "minute": 58,
           "team": "away",
-          "scorer": "Kieran Cook"
+          "scorer": "Kieran Cook (penalty)"
         }
       ],
       "yellowCards": [
@@ -254,27 +258,32 @@
       "home": "Telford Town",
       "away": "Barnton",
       "kickoff": "15:00",
-      "score": "0-1",
+      "score": "0-2",
       "matchStage": "second_half",
       "goals": [
         {
           "minute": 61,
           "team": "away",
           "scorer": null
+        },
+        {
+          "minute": 80,
+          "team": "away",
+          "scorer": "Charley"
         }
       ],
       "yellowCards": [
         {
           "team": "home",
-          "player": "Joe Cuff"
+          "player": "Joe Danby"
         },
         {
           "team": "home",
-          "player": "Joe Danby"
+          "player": "Joe Cuff"
         }
       ],
       "redCards": []
     }
   ],
-  "ticker": "@StaffordTown1st: 75 - Sub for Town\n\nLewis Satchwell on for Dan Clarkson \n\n🟣 3-2 🔘"
+  "ticker": "@alsagertown_fc: 79’ | Evans nets another for Allscott Heath.\n\n1-4 | @AllscottHeathFC"
 }
