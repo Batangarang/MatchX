@@ -11351,14 +11351,14 @@
       "aiCostGBP": 0.019
     },
     {
-      "script": "recap-preview",
-      "timestamp": "2026-09-19T16:30:48.295Z",
+      "script": "recap-recap",
+      "timestamp": "2026-09-19T16:30:56.360Z",
       "getxapiCalls": 0,
       "claudeCalls": 1,
-      "inputTokens": 11975,
-      "outputTokens": 559,
+      "inputTokens": 11934,
+      "outputTokens": 466,
       "xCostGBP": 0,
-      "aiCostGBP": 0.0111
+      "aiCostGBP": 0.0107
     }
   ]
 }
