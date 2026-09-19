@@ -2,7 +2,7 @@ const fs = require('fs');
 const CLUBS = require('./division-clubs.js');
 const { logCost } = require('./cost-tracker.js');
 const API_KEY = process.env.ANTHROPIC_API_KEY;
-const MODE = process.env.RECAP_MODE; // 'weekend-preview', 'weekend-recap', 'midweek-preview', 'midweek-recap'
+const MODE = process.env.RECAP_MODE; // 'preview' or 'recap'
 const CURRENT_CLUB_NAMES = new Set(CLUBS.map(c => c.name));
 
 function parseFixtureDate(dateStr) {
@@ -37,35 +37,6 @@ function isSameDay(a, b) {
   return a.getFullYear() === b.getFullYear() && a.getMonth() === b.getMonth() && a.getDate() === b.getDate();
 }
 
-function isWeekend(date) {
-  const day = date.getDay();
-  return day === 0 || day === 6;
-}
-
-function getWeekendRange(today) {
-  const day = today.getDay();
-  const saturday = new Date(today);
-  if (day === 0) saturday.setDate(today.getDate() - 1);
-  else if (day !== 6) return null;
-  const sunday = new Date(saturday);
-  sunday.setDate(saturday.getDate() + 1);
-  return { saturday, sunday };
-}
-
-function getNextWeekendRange(now) {
-  const day = now.getDay();
-  let daysUntilSaturday;
-  if (day === 6) daysUntilSaturday = 0;
-  else if (day === 0) daysUntilSaturday = -1;
-  else daysUntilSaturday = 6 - day;
-
-  const saturday = new Date(now);
-  saturday.setDate(now.getDate() + daysUntilSaturday);
-  const sunday = new Date(saturday);
-  sunday.setDate(saturday.getDate() + 1);
-  return { saturday, sunday };
-}
-
 function getStateFile() {
   return `.recap-state-${MODE}.json`;
 }
@@ -85,66 +56,59 @@ function markRunForPeriod(periodKey) {
   fs.writeFileSync(getStateFile(), JSON.stringify({ lastPeriod: periodKey, ranAt: new Date().toISOString() }));
 }
 
+function getWeekAheadRange(now) {
+  const start = new Date(now);
+  start.setHours(0, 0, 0, 0);
+  const end = new Date(now);
+  end.setDate(end.getDate() + 7);
+  end.setHours(23, 59, 59, 999);
+  return { start, end };
+}
+
+function getWeekBehindRange(now) {
+  const start = new Date(now);
+  start.setDate(start.getDate() - 7);
+  start.setHours(0, 0, 0, 0);
+  const end = new Date(now);
+  end.setHours(23, 59, 59, 999);
+  return { start, end };
+}
+
 function shouldRunNow() {
   const now = new Date();
   const fixtures = loadFixtures();
 
-  if (MODE === 'weekend-preview') {
-    const range = getNextWeekendRange(now);
-    const weekendFixtures = fixtures.filter(f => {
+  if (MODE === 'preview') {
+    const range = getWeekAheadRange(now);
+    const weekFixtures = fixtures.filter(f => {
       const d = parseFixtureDate(f.date);
-      return d && (isSameDay(d, range.saturday) || isSameDay(d, range.sunday));
+      return d && d >= range.start && d <= range.end;
     });
-    return { proceed: true, periodKey: null, relevantFixtures: weekendFixtures };
+    if (weekFixtures.length === 0) return { proceed: false, reason: 'No fixtures in the coming week.' };
+    return { proceed: true, periodKey: null, relevantFixtures: weekFixtures };
   }
 
-  if (MODE === 'midweek-preview') {
-    const tomorrow = new Date(now);
-    tomorrow.setDate(now.getDate() + 1);
-    const tomorrowFixtures = fixtures.filter(f => {
+  if (MODE === 'recap') {
+    const range = getWeekBehindRange(now);
+    const weekFixtures = fixtures.filter(f => {
       const d = parseFixtureDate(f.date);
-      return d && isSameDay(d, tomorrow) && !isWeekend(d);
+      return d && d >= range.start && d <= range.end;
     });
-    if (tomorrowFixtures.length === 0) return { proceed: false, reason: 'No midweek fixtures tomorrow.' };
-    return { proceed: true, periodKey: null, relevantFixtures: tomorrowFixtures };
-  }
+    if (weekFixtures.length === 0) return { proceed: false, reason: 'No fixtures in the past week.' };
 
-  if (MODE === 'weekend-recap') {
-    const range = getWeekendRange(now);
-    if (!range) return { proceed: false, reason: 'Not currently within a weekend.' };
-    const periodKey = range.saturday.toISOString().slice(0, 10);
-    if (alreadyRunForPeriod(periodKey)) return { proceed: false, reason: 'Already ran for this weekend.' };
-    const weekendFixtures = fixtures.filter(f => {
-      const d = parseFixtureDate(f.date);
-      return d && (isSameDay(d, range.saturday) || isSameDay(d, range.sunday));
-    });
-    if (weekendFixtures.length === 0) return { proceed: false, reason: 'No weekend fixtures found.' };
-    const latestKickoff = weekendFixtures.reduce((latest, f) => {
+    const latestKickoff = weekFixtures.reduce((latest, f) => {
       const d = parseFixtureDate(f.date);
       const ko = kickoffToUTC(d, f.kickoff);
       return ko > latest ? ko : latest;
     }, new Date(0));
-    const cutoff = new Date(latestKickoff.getTime() + 180 * 60000);
-    if (now < cutoff) return { proceed: false, reason: `Waiting until ${cutoff.toISOString()} (latest KO + 3hrs).` };
-    return { proceed: true, periodKey, relevantFixtures: weekendFixtures };
-  }
 
-  if (MODE === 'midweek-recap') {
-    const todayFixtures = fixtures.filter(f => {
-      const d = parseFixtureDate(f.date);
-      return d && isSameDay(d, now) && !isWeekend(d);
-    });
-    if (todayFixtures.length === 0) return { proceed: false, reason: 'No midweek fixtures today.' };
-    const periodKey = now.toISOString().slice(0, 10);
-    if (alreadyRunForPeriod(periodKey)) return { proceed: false, reason: 'Already ran for today.' };
-    const latestKickoff = todayFixtures.reduce((latest, f) => {
-      const d = parseFixtureDate(f.date);
-      const ko = kickoffToUTC(d, f.kickoff);
-      return ko > latest ? ko : latest;
-    }, new Date(0));
-    const cutoff = new Date(latestKickoff.getTime() + 180 * 60000);
-    if (now < cutoff) return { proceed: false, reason: `Waiting until ${cutoff.toISOString()} (latest KO + 3hrs).` };
-    return { proceed: true, periodKey, relevantFixtures: todayFixtures };
+    const periodKey = latestKickoff.toISOString().slice(0, 10);
+    if (alreadyRunForPeriod(periodKey)) return { proceed: false, reason: 'Already ran for this period.' };
+
+    const cutoff = new Date(latestKickoff.getTime() + 150 * 60000);
+    if (now < cutoff) return { proceed: false, reason: `Waiting until ${cutoff.toISOString()} (latest KO + 2.5hrs).` };
+
+    return { proceed: true, periodKey, relevantFixtures: weekFixtures };
   }
 
   return { proceed: false, reason: 'Unknown mode.' };
@@ -178,13 +142,26 @@ async function run() {
       .join('\n');
   }
 
+  let sandbachOverrideNote = '';
   let sandbachFormNote = '';
+  if (fs.existsSync('league.json')) {
+    const leagueData = JSON.parse(fs.readFileSync('league.json', 'utf-8'));
+    const sandbachStanding = leagueData.standings.find(t => t.team.includes('Sandbach'));
+    if (sandbachStanding && sandbachStanding.form) {
+      const formLetters = sandbachStanding.form.split('');
+      const resultWords = { W: 'WIN', D: 'DRAW', L: 'LOSS' };
+      const mostRecent = resultWords[formLetters[0]] || formLetters[0];
+      const recentSequence = formLetters.slice(0, 5).map(f => resultWords[f] || f).join(', ');
+      sandbachFormNote = `\n\nFACT (already computed for you, do not recalculate or contradict this): Sandbach United's MOST RECENT result was a ${mostRecent}. Their last 5 results in order from most recent to oldest were: ${recentSequence}. They are currently ${sandbachStanding.position === 1 ? '1st' : sandbachStanding.position + (sandbachStanding.position === 2 ? 'nd' : sandbachStanding.position === 3 ? 'rd' : 'th')} in the table with ${sandbachStanding.points} points from ${sandbachStanding.played} games. Do not describe them as being on a losing streak or having recently lost multiple games unless the sequence above genuinely shows that.`;
+    }
+  }
+
   if (fs.existsSync('data.json')) {
     const mainData = JSON.parse(fs.readFileSync('data.json', 'utf-8'));
     const candidates = mainData.nextFixtures || (mainData.nextFixture ? [mainData.nextFixture] : []);
 
     const relevantDatesForSandbach = new Set(decision.relevantFixtures.map(f => f.date));
-    const sandbachFixture = candidates.find(f => {
+    const sandbachFixtures = candidates.filter(f => {
       const match = f.date.match(/(\d{2})\/(\d{2})\/(\d{2})/);
       if (!match) return false;
       const [, dd, mm, yy] = match;
@@ -195,49 +172,34 @@ async function run() {
       });
     });
 
+    if (sandbachFixtures.length > 0) {
+      const fixtureDescriptions = sandbachFixtures.map(sandbachFixture => {
+        const homeTeam = sandbachFixture.homeAway === 'H' ? 'Sandbach United' : sandbachFixture.opposition;
+        const awayTeam = sandbachFixture.homeAway === 'H' ? sandbachFixture.opposition : 'Sandbach United';
+        const competitionText = sandbachFixture.competitionNote ? ` (${sandbachFixture.competitionNote})` : '';
 
-    let sandbachFormNote = '';
-    if (fs.existsSync('league.json')) {
-      const leagueData = JSON.parse(fs.readFileSync('league.json', 'utf-8'));
-      const sandbachStanding = leagueData.standings.find(t => t.team.includes('Sandbach'));
-      if (sandbachStanding && sandbachStanding.form) {
-        const formLetters = sandbachStanding.form.split('');
-        const resultWords = { W: 'WIN', D: 'DRAW', L: 'LOSS' };
-        const mostRecent = resultWords[formLetters[0]] || formLetters[0];
-        const recentSequence = formLetters.slice(0, 5).map(f => resultWords[f] || f).join(', ');
-        sandbachFormNote = `\n\nFACT (already computed for you, do not recalculate or contradict this): Sandbach United's MOST RECENT result was a ${mostRecent}. Their last 5 results in order from most recent to oldest were: ${recentSequence}. They are currently ${sandbachStanding.position === 1 ? '1st' : sandbachStanding.position + (sandbachStanding.position === 2 ? 'nd' : sandbachStanding.position === 3 ? 'rd' : 'th')} in the table with ${sandbachStanding.points} points from ${sandbachStanding.played} games. Do not describe them as being on a losing streak or having recently lost multiple games unless the sequence above genuinely shows that.`;
-      }
-    }
+        let levelWarning = '';
+        if (sandbachFixture.competitionNote) {
+          const opponentInLeagueTable = fs.existsSync('league.json') &&
+            JSON.parse(fs.readFileSync('league.json', 'utf-8')).standings
+              .some(t => t.team === sandbachFixture.opposition);
 
-    if (sandbachFixture) {
-      const homeTeam = sandbachFixture.homeAway === 'H' ? 'Sandbach United' : sandbachFixture.opposition;
-      const awayTeam = sandbachFixture.homeAway === 'H' ? sandbachFixture.opposition : 'Sandbach United';
-      const competitionText = sandbachFixture.competitionNote ? ` (${sandbachFixture.competitionNote})` : '';
-
-      let levelWarning = '';
-      if (sandbachFixture.competitionNote) {
-        const opponentInLeagueTable = fs.existsSync('league.json') &&
-          JSON.parse(fs.readFileSync('league.json', 'utf-8')).standings
-            .some(t => t.team === sandbachFixture.opposition);
-
-        if (!opponentInLeagueTable) {
-          levelWarning = ` IMPORTANT: ${sandbachFixture.opposition} do NOT play in Sandbach's league (First Division South) — they are a cup opponent from a different league/tier. Do NOT compare league points, form, or table position between the two teams, as this is misleading when they play at different levels. If you don't know ${sandbachFixture.opposition}'s actual league/level, simply don't speculate about it — focus on the cup occasion itself, the round, and any genuine team news instead. Do NOT explain this reasoning to the reader (e.g. do not write things like "direct league comparisons don't apply") — simply write the preview naturally without ever mentioning that a comparison was considered or avoided.`;
+          if (!opponentInLeagueTable) {
+            levelWarning = ` (${sandbachFixture.opposition} do NOT play in Sandbach's league — a cup opponent from a different tier, do not compare league points/form/table position)`;
+          }
         }
-      }
 
-            sandbachOverrideNote = `\n\nIMPORTANT: Sandbach United's actual fixture in this period is: ${homeTeam} v ${awayTeam} (${sandbachFixture.date}, KO ${sandbachFixture.kickoff}${competitionText}). Use this REAL fixture when describing Sandbach's own match this period — do not substitute a different fixture or date for Sandbach.${levelWarning}${sandbachFormNote}`;
+        return `${homeTeam} v ${awayTeam} (${sandbachFixture.date}, KO ${sandbachFixture.kickoff}${competitionText})${levelWarning}`;
+      }).join('; ');
+
+      sandbachOverrideNote = `\n\nIMPORTANT: Sandbach United's actual real fixture(s) in this period: ${fixtureDescriptions}. If Sandbach played/play more than once this period, mention BOTH results/fixtures — do not just cover one. Use these REAL fixtures when describing Sandbach's own match(es) this period — do not substitute a different fixture or date.`;
     }
   }
 
-  // Scope posts to only the clubs and dates actually relevant to this period,
-  // and only from roughly 10am UK onward — cuts irrelevant clubs/days/hours
-  // out of the prompt, significantly reducing token usage per call.
+  const fixtureList = decision.relevantFixtures.map(f => `${f.home} v ${f.away} (${f.date}, KO ${f.kickoff})`).join('\n');
+
   const EARLIEST_RELEVANT_HOUR_UTC = 9;
-
-  const relevantClubNames = new Set(
-    decision.relevantFixtures.flatMap(f => [f.home, f.away])
-  );
-
+  const relevantClubNames = new Set(decision.relevantFixtures.flatMap(f => [f.home, f.away]));
   const relevantDates = new Set(decision.relevantFixtures.map(f => {
     const d = parseFixtureDate(f.date);
     return d ? d.toDateString() : null;
@@ -248,9 +210,7 @@ async function run() {
     .map(c => {
       const relevantPosts = c.posts.filter(p => {
         const postDate = new Date(p.createdAt);
-        const isRelevantDate = relevantDates.has(postDate.toDateString());
-        const isAfterCutoff = postDate.getUTCHours() >= EARLIEST_RELEVANT_HOUR_UTC;
-        return isRelevantDate && isAfterCutoff;
+        return relevantDates.has(postDate.toDateString()) && postDate.getUTCHours() >= EARLIEST_RELEVANT_HOUR_UTC;
       });
       if (relevantPosts.length === 0) return null;
       return `--- ${c.name} ---\n` + relevantPosts.map(p => `[${p.createdAt}] ${p.text}`).join('\n');
@@ -258,13 +218,11 @@ async function run() {
     .filter(Boolean)
     .join('\n\n');
 
-  const fixtureList = decision.relevantFixtures.map(f => `${f.home} v ${f.away} (${f.date}, KO ${f.kickoff})`).join('\n');
-
-  const isPreview = MODE.includes('preview');
-  const periodLabel = MODE.startsWith('weekend') ? 'this weekend' : 'today';
+  const isPreview = MODE === 'preview';
+  const periodLabel = isPreview ? 'the coming week' : 'the past week';
 
   const prompt = isPreview
-    ? `Here are the upcoming First Division South fixtures for ${periodLabel}:
+    ? `Here are the First Division South fixtures coming up over ${periodLabel}:
 ${fixtureList}
 ${sandbachOverrideNote}${sandbachFormNote}
 IMPORTANT: In the fixture list above, the format is always "Home Team v Away Team" — the first team named is always playing at home, the second team is always the visitor. Do not reverse this or infer venue/direction from anything else in the posts — always trust this explicit home/away order from the fixture list.
@@ -276,10 +234,10 @@ Here are recent X posts from clubs in the division:
 ${postsText || '(No recent posts.)'}
 Respond with ONLY a JSON object, no other text, no markdown fences, in exactly this shape:
 {
-  "sandbachFocus": "2-4 sentences specifically previewing Sandbach United's own upcoming fixture(s) this period — opponent, venue (remember: trust the home/away order given above), and anything notable about the matchup",
-  "divisionWide": "A separate preview covering the REST of the division's upcoming fixtures this period — highlight anything notable (title-race relevance, in-form teams, key clashes). Group by theme, not club-by-club. Do NOT repeat Sandbach's own fixture here, that's covered separately above."
+  "sandbachFocus": "2-4 sentences specifically previewing Sandbach United's own upcoming fixture(s) this week — opponent(s), venue (remember: trust the home/away order given above), and anything notable. If they have more than one fixture, cover both.",
+  "divisionWide": "A separate preview covering the REST of the division's upcoming fixtures this week — highlight anything notable (title-race relevance, in-form teams, key clashes). Group by theme, not club-by-club. Do NOT repeat Sandbach's own fixture(s) here, that's covered separately above."
 }`
-    : `Here are the First Division South fixtures that were played ${periodLabel}:
+    : `Here are the First Division South fixtures that were played over ${periodLabel}:
 ${fixtureList}
 ${sandbachOverrideNote}${sandbachFormNote}
 IMPORTANT: In the fixture list above, the format is always "Home Team v Away Team" — the first team named is always playing at home, the second team is always the visitor. Do not reverse this or infer venue/direction from anything else in the posts — always trust this explicit home/away order from the fixture list.
@@ -291,8 +249,8 @@ Here are recent X posts from clubs in the division:
 ${postsText || '(No recent posts.)'}
 Respond with ONLY a JSON object, no other text, no markdown fences, in exactly this shape:
 {
-  "sandbachFocus": "2-4 sentences specifically about Sandbach United's own result(s) this period — what happened, the scoreline, any standout performances or incidents",
-  "divisionWide": "A separate round-up covering the REST of the division — teams in unusually good or bad form, notable results, table movement, player signings or squad news. Group by theme, not club-by-club. Only discuss teams with genuinely notable news or results — skip anyone with nothing interesting to report. Do NOT repeat Sandbach's own result here, that's covered separately above."
+  "sandbachFocus": "2-4 sentences specifically about Sandbach United's own result(s) this week — what happened, the scoreline(s), any standout performances or incidents. If they played more than once, cover both results.",
+  "divisionWide": "A separate round-up covering the REST of the division — teams in unusually good or bad form, notable results, table movement, player signings or squad news. Group by theme, not club-by-club. Only discuss teams with genuinely notable news or results — skip anyone with nothing interesting to report. Do NOT repeat Sandbach's own result(s) here, that's covered separately above."
 }`;
 
   const res = await fetch('https://api.anthropic.com/v1/messages', {
@@ -329,8 +287,7 @@ Respond with ONLY a JSON object, no other text, no markdown fences, in exactly t
     divisionWide: parsed.divisionWide || '',
   };
 
-  const outputFile = `division-insights-${MODE}.json`;
-  fs.writeFileSync(outputFile, JSON.stringify(output, null, 2));
+  fs.writeFileSync(`division-insights-${MODE}.json`, JSON.stringify(output, null, 2));
   if (decision.periodKey) markRunForPeriod(decision.periodKey);
 
   logCost(`recap-${MODE}`, {
@@ -340,7 +297,7 @@ Respond with ONLY a JSON object, no other text, no markdown fences, in exactly t
     outputTokens: data.usage?.output_tokens || 0,
   });
 
-  console.log(`[${MODE}] Saved. Sandbach focus:`, (output.sandbachFocus || output.summary || '').slice(0, 150));
+  console.log(`[${MODE}] Saved. Sandbach focus:`, (output.sandbachFocus || '').slice(0, 150));
 }
 
 run().catch(err => {
