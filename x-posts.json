@@ -1,7 +1,13 @@
 {
-  "scrapedAt": "2026-09-19T15:45:23.753Z",
+  "scrapedAt": "2026-09-19T15:50:22.023Z",
   "username": "SandbachFC_1st",
   "posts": [
+    {
+      "text": "Goal - Robbie Hatton wins the ball and threads through to Kyle Foley who slots it into the bottom corner \n\nSAN 2-0 ECC",
+      "createdAt": "2026-09-19T15:48:25.000Z",
+      "images": [],
+      "isMatchday": true
+    },
     {
       "text": "Barry goes in the book for a foul challenge https://t.co/eQNl5LxslK",
       "createdAt": "2026-09-19T15:33:05.000Z",
@@ -64,12 +70,6 @@
       "images": [
         "https://pbs.twimg.com/media/HSlOZfDWIAAeIKi.jpg"
       ],
-      "isMatchday": true
-    },
-    {
-      "text": "It’s a lovely day here at The Sandbach Community Football Centre where we host @EccleshallFC in @nwcfl Division One South, get yourself down for what promises to be a cracking game. Team sheet coming soon…….",
-      "createdAt": "2026-09-19T12:42:06.000Z",
-      "images": [],
       "isMatchday": true
     }
   ]
