@@ -1,13 +1,16 @@
 {
-  "generatedAt": "2026-09-19T09:55:33.098Z",
+  "generatedAt": "2026-09-19T10:40:40.660Z",
   "date": "2026-09-19",
   "isToday": true,
+  "postCount": 13,
+  "latestPostTimestamp": "2026-09-19T10:12:23.000Z",
   "fixtures": [
     {
-      "home": "15:00 Foley Meir",
-      "away": "Widnes Town  Trentham Foods Stadium",
-      "kickoff": null,
+      "home": "Foley Meir",
+      "away": "Widnes Town",
+      "kickoff": "15:00",
       "score": null,
+      "matchStage": "scheduled",
       "goals": [],
       "yellowCards": [],
       "redCards": []
@@ -17,6 +20,7 @@
       "away": "Alsager Town",
       "kickoff": "15:00",
       "score": null,
+      "matchStage": "scheduled",
       "goals": [],
       "yellowCards": [],
       "redCards": []
@@ -26,6 +30,7 @@
       "away": "Market Drayton Town",
       "kickoff": "15:00",
       "score": null,
+      "matchStage": "scheduled",
       "goals": [],
       "yellowCards": [],
       "redCards": []
@@ -35,6 +40,7 @@
       "away": "AFC Bridgnorth",
       "kickoff": "15:00",
       "score": null,
+      "matchStage": "scheduled",
       "goals": [],
       "yellowCards": [],
       "redCards": []
@@ -44,6 +50,7 @@
       "away": "Stafford Town",
       "kickoff": "15:00",
       "score": null,
+      "matchStage": "scheduled",
       "goals": [],
       "yellowCards": [],
       "redCards": []
@@ -53,15 +60,7 @@
       "away": "Wednesfield Community",
       "kickoff": "15:00",
       "score": null,
-      "goals": [],
-      "yellowCards": [],
-      "redCards": []
-    },
-    {
-      "home": "Foley Meir",
-      "away": "Widnes Town (15:00)",
-      "kickoff": null,
-      "score": null,
+      "matchStage": "scheduled",
       "goals": [],
       "yellowCards": [],
       "redCards": []
@@ -71,6 +70,7 @@
       "away": "Dawley Town",
       "kickoff": "15:00",
       "score": null,
+      "matchStage": "scheduled",
       "goals": [],
       "yellowCards": [],
       "redCards": []
@@ -80,6 +80,7 @@
       "away": "Eccleshall",
       "kickoff": "15:00",
       "score": null,
+      "matchStage": "scheduled",
       "goals": [],
       "yellowCards": [],
       "redCards": []
@@ -89,6 +90,7 @@
       "away": "Wolverhampton Casuals",
       "kickoff": "15:00",
       "score": null,
+      "matchStage": "scheduled",
       "goals": [],
       "yellowCards": [],
       "redCards": []
@@ -98,10 +100,11 @@
       "away": "Barnton",
       "kickoff": "15:00",
       "score": null,
+      "matchStage": "scheduled",
       "goals": [],
       "yellowCards": [],
       "redCards": []
     }
   ],
-  "ticker": null
+  "ticker": "@bilstontownfc: We have our printed fixtures for you to pick up in our clubhouse prior to the match today.\n\nIf any local businesses would like any A3 posters to pop up please drop us a message and these can be provided. https://t.co/QzvT7CnRmn"
 }
