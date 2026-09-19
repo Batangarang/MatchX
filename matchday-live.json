@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-09-19T15:50:55.099Z",
+  "generatedAt": "2026-09-19T15:55:41.581Z",
   "fixtureDate": "2026-09-19",
   "kickoff": "15:00",
   "homeTeam": "Sandbach United",
   "awayTeam": "Eccleshall",
-  "postsUsed": 54,
+  "postsUsed": 56,
   "imagesAnalyzedThisRun": 0,
   "totalImagesAnalyzed": 8,
   "match": {
@@ -13,7 +13,7 @@
     "finalScoreAnnounced": null,
     "halfTimeScoreAnnounced": "1-0",
     "htDiscrepancy": "First-half goals suggest HT 1-1, but an announced HT score of 1-0 was also seen.",
-    "matchStage": "second_half",
+    "matchStage": "full_time",
     "lineups": {
       "home": {
         "players": [
@@ -111,6 +111,11 @@
         "minute": null,
         "team": "home",
         "player": "Unknown (Danny fouled)"
+      },
+      {
+        "minute": 90,
+        "team": "home",
+        "player": "Unknown (obstruction)"
       }
     ],
     "redCards": [],
@@ -156,7 +161,7 @@
     "injuries": [],
     "addedTime": {
       "firstHalf": 1,
-      "secondHalf": null
+      "secondHalf": 2
     },
     "wentToExtraTime": false,
     "wentToPenalties": false,
@@ -170,14 +175,14 @@
     },
     "roughXG": {
       "firstHalf": {
-        "home": 1.2,
-        "away": 0.3,
-        "note": "Sandbach scored early (Fowles 12'), had a shot from Wilson that stung keeper's hands, and a corner. Eccleshall created one promising cross but limited clear chances in first half."
+        "home": 0.8,
+        "away": 0.4,
+        "note": "Sandbach scored early; Eccleshall had some chances but limited clear-cut opportunities. Sandbach slightly more dangerous."
       },
       "secondHalf": {
-        "home": 0.5,
-        "away": 1.8,
-        "note": "Eccleshall dominated second half with multiple corners, a shot from Danny, and Archie hitting the crossbar (55'). Sandbach scored late on the break (Foley 86') with limited attacking play otherwise."
+        "home": 0.7,
+        "away": 1.2,
+        "note": "Eccleshall dominated possession and created multiple chances (crossbar hit, several corners and free kicks), but Sandbach scored on the break. Eccleshall had the better chances but wasteful."
       },
       "extraTime": {
         "home": 0,
@@ -185,9 +190,9 @@
         "note": "No extra time played."
       },
       "total": {
-        "home": 1.7,
-        "away": 2.1,
-        "note": "Sandbach scored 2 goals but were dominated in the second half. Eccleshall pressed hard with multiple set pieces and came close to scoring (crossbar) but could not finish."
+        "home": 1.5,
+        "away": 1.6,
+        "note": "Sandbach efficient with 2 goals from limited shots. Eccleshall created more but converted none."
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
@@ -195,22 +200,22 @@
       "firstHalf": {
         "home": 55,
         "away": 45,
-        "note": "Sandbach took early lead and seemed to control the first half, with even opening ten minutes but Sandbach edging possession and chances."
+        "note": "Even opening, but Sandbach scored early and generally controlled the tempo. Posts describe it as 'even' but Sandbach slightly more compact."
       },
       "secondHalf": {
-        "home": 30,
-        "away": 70,
-        "note": "Eccleshall 'started strong' after restart and 'piled on the pressure' from minute 65 onwards. Multiple corners and set plays. Sandbach sat back, especially late in match before Hatton-Foley goal on counter-attack."
+        "home": 35,
+        "away": 65,
+        "note": "Eccleshall 'piled on the pressure' and 'started to turn the screw'. Dominated possession and territory despite being down to 10 men for part of it (Hatton sin bin). Sandbach sat deeper and hit on the break."
       },
       "extraTime": {
         "home": 50,
         "away": 50,
-        "note": "No extra time played."
+        "note": "No extra time."
       },
       "total": {
-        "home": 42,
-        "away": 58,
-        "note": "Sandbach's early goal and sin bin for Hatton (45') gave them control in first half, but Eccleshall dominated second half despite being unable to break down the defence until late stages."
+        "home": 45,
+        "away": 55,
+        "note": "Eccleshall slightly dominated overall, especially in the second half, but Sandbach's clinical finishing and defensive organization secured the win."
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
