@@ -20,6 +20,7 @@ function isBST() {
 }
 
 function kickoffToUTC(dateObj, kickoff) {
+  if (!kickoff || typeof kickoff !== 'string') return new Date(dateObj);
   const [hh, min] = kickoff.split(':');
   const d = new Date(dateObj);
   d.setUTCHours(parseInt(hh), parseInt(min), 0, 0);
