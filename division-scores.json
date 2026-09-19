@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-09-19T16:25:31.240Z",
+  "generatedAt": "2026-09-19T16:40:40.451Z",
   "date": "2026-09-19",
   "isToday": true,
-  "postCount": 189,
-  "latestPostTimestamp": "2026-09-19T16:22:08.000Z",
+  "postCount": 190,
+  "latestPostTimestamp": "2026-09-19T16:40:51.000Z",
   "fixtures": [
     {
       "home": "Foley Meir",
@@ -76,7 +76,7 @@
         {
           "minute": 67,
           "team": "home",
-          "scorer": null
+          "scorer": "Bustin"
         }
       ],
       "yellowCards": [],
@@ -215,6 +215,10 @@
       "yellowCards": [
         {
           "team": "home",
+          "player": "Hatton"
+        },
+        {
+          "team": "home",
           "player": "Barry"
         },
         {
@@ -242,7 +246,7 @@
           "scorer": "Ablay Sowe"
         },
         {
-          "minute": 48,
+          "minute": 49,
           "team": "away",
           "scorer": "Ben Podmore"
         },
@@ -295,5 +299,5 @@
       "redCards": []
     }
   ],
-  "ticker": "@CheadleNomads: 90’ | FULL-TIME\n\nA point on the board this afternoon.\n\nKylan Depeiaza’s goal looked to have put us on course for all three points, but Stafford Town levelled in the 83rd minute to make it 3-3.\n\nA hard-fought afternoon ends all square.\n\n@CheadleNomads 3-3 @StaffordTown1st \n\n#WeAreNomads | @nwcfl | @NWCFLScores"
+  "ticker": "@SandbachFC_1st: The thoughts of Dec and Josh following our 2-0 win over Eccleshall https://t.co/mvfoHnV4XL"
 }
