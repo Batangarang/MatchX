@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-09-19T14:25:31.813Z",
+  "generatedAt": "2026-09-19T14:30:52.459Z",
   "date": "2026-09-19",
   "isToday": true,
-  "postCount": 64,
-  "latestPostTimestamp": "2026-09-19T14:24:52.000Z",
+  "postCount": 72,
+  "latestPostTimestamp": "2026-09-19T14:30:05.000Z",
   "fixtures": [
     {
       "home": "Foley Meir",
@@ -28,7 +28,7 @@
           "scorer": "Geddes"
         },
         {
-          "minute": 22,
+          "minute": 20,
           "team": "home",
           "scorer": "James Allen"
         }
@@ -71,19 +71,24 @@
       "home": "Cheadle Heath Nomads",
       "away": "Stafford Town",
       "kickoff": "15:00",
-      "score": "1-0",
+      "score": "1-1",
       "matchStage": "first_half",
       "goals": [
         {
           "minute": 21,
           "team": "home",
           "scorer": null
+        },
+        {
+          "minute": 24,
+          "team": "away",
+          "scorer": "Parker"
         }
       ],
       "yellowCards": [
         {
           "team": "away",
-          "player": "Wilding"
+          "player": "Efford"
         }
       ],
       "redCards": []
@@ -102,13 +107,18 @@
       "home": "New Mills",
       "away": "Dawley Town",
       "kickoff": "15:00",
-      "score": "0-1",
+      "score": "1-1",
       "matchStage": "first_half",
       "goals": [
         {
           "minute": 7,
           "team": "away",
           "scorer": null
+        },
+        {
+          "minute": 27,
+          "team": "home",
+          "scorer": "Will Frankish"
         }
       ],
       "yellowCards": [],
@@ -151,5 +161,5 @@
       "redCards": []
     }
   ],
-  "ticker": "@bilstontownfc: Market Drayton are down to 10 men"
+  "ticker": "@MDTFC: ‘30 gone\n\nFirst appearance for Mr Deep Heat Kelley as Ash goes down following an in air collision. \n\n#upthegingerbreadmen"
 }
