@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-09-19T15:20:50.730Z",
+  "generatedAt": "2026-09-19T15:25:37.667Z",
   "fixtureDate": "2026-09-19",
   "kickoff": "15:00",
   "homeTeam": "Sandbach United",
   "awayTeam": "Eccleshall",
-  "postsUsed": 36,
+  "postsUsed": 39,
   "imagesAnalyzedThisRun": 0,
   "totalImagesAnalyzed": 7,
   "match": {
@@ -91,6 +91,11 @@
         "minute": null,
         "team": "home",
         "player": "Unknown Sandbach player"
+      },
+      {
+        "minute": 56,
+        "team": "home",
+        "player": "Unknown"
       }
     ],
     "redCards": [],
@@ -121,22 +126,22 @@
       "firstHalf": {
         "home": 1.2,
         "away": 0.3,
-        "note": "Sandbach scored early; Eccleshall had few clear chances in first half"
+        "note": "Sandbach scored early; Eccleshall had limited clear chances in first half"
       },
       "secondHalf": {
-        "home": 0.4,
-        "away": 0.8,
-        "note": "Eccleshall pressed strongly after restart; hit crossbar around 55 minutes; Sandbach defending with 10 men after Hatton sin bin"
+        "home": 0.5,
+        "away": 1.8,
+        "note": "Eccleshall pressing strongly in second half with crossbar hit and multiple chances; Sandbach defending with 10 men after Hatton sin bin"
       },
       "extraTime": {
         "home": 0,
         "away": 0,
-        "note": "N/A"
+        "note": "Match did not go to extra time"
       },
       "total": {
-        "home": 1.6,
-        "away": 1.1,
-        "note": "Sandbach took their chance early; Eccleshall created pressure in second half but could not convert"
+        "home": 1.7,
+        "away": 2.1,
+        "note": "Sandbach converted early chance; Eccleshall created more opportunities overall but could not finish"
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
@@ -144,22 +149,22 @@
       "firstHalf": {
         "home": 55,
         "away": 45,
-        "note": "Sandbach scored early and maintained slight control; described as even game but with home side slightly on top"
+        "note": "Sandbach scored early and controlled much of first half; Eccleshall had periods of possession but lacked penetration"
       },
       "secondHalf": {
         "home": 40,
         "away": 60,
-        "note": "Eccleshall came out strong with 10-man advantage for Sandbach due to Hatton sin bin; multiple chances and pressing but Sandbach defended and broke quickly"
+        "note": "Eccleshall 'started to turn the screw' and dominated second half with 10-man Sandbach defending; multiple chances created"
       },
       "extraTime": {
         "home": 50,
         "away": 50,
-        "note": "N/A"
+        "note": "Match did not go to extra time"
       },
       "total": {
         "home": 48,
         "away": 52,
-        "note": "Balanced match overall with Eccleshall applying more pressure, particularly in second half, but Sandbach's early goal held up"
+        "note": "Sandbach controlled first half; Eccleshall dominated second half but Sandbach's early goal held up"
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
