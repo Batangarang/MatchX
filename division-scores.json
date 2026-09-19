@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-09-19T14:35:35.279Z",
+  "generatedAt": "2026-09-19T14:40:40.221Z",
   "date": "2026-09-19",
   "isToday": true,
-  "postCount": 81,
-  "latestPostTimestamp": "2026-09-19T14:34:54.000Z",
+  "postCount": 86,
+  "latestPostTimestamp": "2026-09-19T14:40:43.000Z",
   "fixtures": [
     {
       "home": "Foley Meir",
@@ -19,18 +19,28 @@
       "home": "Allscott Heath",
       "away": "Alsager Town",
       "kickoff": "15:00",
-      "score": "1-1",
+      "score": "1-2",
       "matchStage": "second_half",
       "goals": [
         {
-          "minute": 5,
+          "minute": 6,
           "team": "away",
-          "scorer": "Fraser Geddes"
+          "scorer": "Geddes"
         },
         {
-          "minute": 22,
+          "minute": 20,
           "team": "home",
           "scorer": "James Allen"
+        },
+        {
+          "minute": 33,
+          "team": "away",
+          "scorer": "Parkinson"
+        },
+        {
+          "minute": 35,
+          "team": "home",
+          "scorer": "Liam Parkinson"
         }
       ],
       "yellowCards": [],
@@ -67,7 +77,7 @@
         {
           "minute": 26,
           "team": "home",
-          "scorer": "Own Goal"
+          "scorer": "own goal"
         }
       ],
       "yellowCards": [],
@@ -77,7 +87,7 @@
       "home": "Cheadle Heath Nomads",
       "away": "Stafford Town",
       "kickoff": "15:00",
-      "score": "1-1",
+      "score": "1-2",
       "matchStage": "second_half",
       "goals": [
         {
@@ -89,6 +99,11 @@
           "minute": 24,
           "team": "away",
           "scorer": "Parker"
+        },
+        {
+          "minute": 37,
+          "team": "away",
+          "scorer": "Mazurkiewicz"
         }
       ],
       "yellowCards": [
@@ -177,5 +192,5 @@
       "redCards": []
     }
   ],
-  "ticker": "@EccleshallFC: 33.51\nCorner to eccy \nSol takes \nCleared \n\n💙🦅\n#EccleshallFC"
+  "ticker": "@EccleshallFC: 39.18\nShot off by Sandbach, levi makes a superb block \n\n💙🦅\n#EccleshallFC"
 }
