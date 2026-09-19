@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-09-19T17:15:46.197Z",
+  "generatedAt": "2026-09-19T17:25:31.035Z",
   "date": "2026-09-19",
   "isToday": true,
-  "postCount": 194,
-  "latestPostTimestamp": "2026-09-19T17:01:28.000Z",
+  "postCount": 196,
+  "latestPostTimestamp": "2026-09-19T17:23:27.000Z",
   "fixtures": [
     {
       "home": "Foley Meir",
@@ -25,7 +25,7 @@
         {
           "minute": 6,
           "team": "away",
-          "scorer": "Geddes"
+          "scorer": "Fraser Geddes"
         },
         {
           "minute": 22,
@@ -41,11 +41,6 @@
           "minute": 48,
           "team": "home",
           "scorer": "Kian Newnes"
-        },
-        {
-          "minute": 79,
-          "team": "home",
-          "scorer": "Evans"
         },
         {
           "minute": 80,
@@ -76,7 +71,7 @@
         {
           "minute": 67,
           "team": "home",
-          "scorer": "Bustin"
+          "scorer": null
         }
       ],
       "yellowCards": [],
@@ -118,16 +113,16 @@
         {
           "minute": 24,
           "team": "away",
-          "scorer": "Parker"
+          "scorer": "Callum Parker"
         },
         {
           "minute": 37,
           "team": "away",
-          "scorer": "Mazurkiewicz"
+          "scorer": "Pat Mazurkiewicz"
         },
         {
           "minute": 52,
-          "team": "home",
+          "team": "away",
           "scorer": null
         },
         {
@@ -144,17 +139,17 @@
       "yellowCards": [
         {
           "team": "away",
-          "player": "Efford"
+          "player": "Tom Efford"
         },
         {
           "team": "away",
-          "player": "Wilding"
+          "player": "Tom Efford"
         }
       ],
       "redCards": [
         {
           "team": "away",
-          "player": "Efford"
+          "player": "Tom Efford"
         }
       ]
     },
@@ -208,12 +203,12 @@
       "matchStage": "full_time",
       "goals": [
         {
-          "minute": 15,
+          "minute": 14,
           "team": "home",
           "scorer": "Josh Fowles"
         },
         {
-          "minute": 86,
+          "minute": 87,
           "team": "home",
           "scorer": "Kyle Foley"
         }
@@ -221,10 +216,10 @@
       "yellowCards": [
         {
           "team": "home",
-          "player": null
+          "player": "Robbie Hatton"
         },
         {
-          "team": "away",
+          "team": "home",
           "player": null
         }
       ],
@@ -292,10 +287,14 @@
         {
           "team": "home",
           "player": "Jack Grimshaw"
+        },
+        {
+          "team": "home",
+          "player": "Joe Cuff"
         }
       ],
       "redCards": []
     }
   ],
-  "ticker": "@barntonfc: One team. One club. Together 💪🖤🤍\n#UTV #FinoAllaFine https://t.co/8BtEWrUI8t"
+  "ticker": "@breretonsocialf: https://t.co/i0ZXIpUx26"
 }
