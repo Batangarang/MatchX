@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-09-19T15:35:42.474Z",
+  "generatedAt": "2026-09-19T15:40:50.966Z",
   "fixtureDate": "2026-09-19",
   "kickoff": "15:00",
   "homeTeam": "Sandbach United",
   "awayTeam": "Eccleshall",
-  "postsUsed": 46,
-  "imagesAnalyzedThisRun": 1,
+  "postsUsed": 49,
+  "imagesAnalyzedThisRun": 0,
   "totalImagesAnalyzed": 8,
   "match": {
     "score": "1-1",
@@ -101,6 +101,11 @@
         "minute": 72,
         "team": "home",
         "player": "Nathan Barry"
+      },
+      {
+        "minute": null,
+        "team": "home",
+        "player": "Unknown (Danny fouled)"
       }
     ],
     "redCards": [],
@@ -110,6 +115,12 @@
         "team": "home",
         "playerOff": "Unknown",
         "playerOn": "Unknown"
+      },
+      {
+        "minute": 75,
+        "team": "away",
+        "playerOff": "7",
+        "playerOn": "12 (Matty)"
       }
     ],
     "sinBins": [
@@ -136,24 +147,24 @@
     },
     "roughXG": {
       "firstHalf": {
-        "home": 1.2,
-        "away": 0.3,
-        "note": "Sandbach scored early; Eccleshall had limited clear chances in first half"
+        "home": 0.8,
+        "away": 0.4,
+        "note": "Sandbach scored early; Eccleshall had some build-up play but limited clear chances. Sandbach had a Wilson shot that stung the keeper's hands."
       },
       "secondHalf": {
         "home": 0.5,
-        "away": 1.5,
-        "note": "Eccleshall pressed heavily with crossbar hit and multiple set pieces; Sandbach contained with one man temporarily in sin bin"
+        "away": 1.2,
+        "note": "Eccleshall dominated with a crossbar hit from Archie (number 2) and sustained pressure. Sandbach defended with 10 men for much of the half after Hatton's sin bin."
       },
       "extraTime": {
         "home": 0,
         "away": 0,
-        "note": "Match did not go to extra time"
+        "note": "No extra time played."
       },
       "total": {
-        "home": 1.7,
-        "away": 1.8,
-        "note": "Sandbach converted their chance early; Eccleshall created more in second half but could not finish"
+        "home": 1.3,
+        "away": 1.6,
+        "note": "Sandbach converted their early chance; Eccleshall created more chances in the second half but could not score. Rough estimate based on social media narrative."
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
@@ -161,22 +172,22 @@
       "firstHalf": {
         "home": 55,
         "away": 45,
-        "note": "Sandbach controlled the game; Eccleshall pressed but Sandbach broke quickly to score"
+        "note": "Sandbach opened strongly and scored early. Eccleshall had some attacking moments but Sandbach controlled much of the half."
       },
       "secondHalf": {
         "home": 40,
         "away": 60,
-        "note": "Eccleshall 'starting strong' and 'turning the screw'; Sandbach defending and adjusting after sin bin"
+        "note": "Eccleshall 'started strong', 'piled on the pressure', and dominated after the interval. Sandbach with 10 men for much of this period following the sin bin."
       },
       "extraTime": {
         "home": 50,
         "away": 50,
-        "note": "Match did not go to extra time"
+        "note": "No extra time played."
       },
       "total": {
         "home": 48,
         "away": 52,
-        "note": "Sandbach had early control and scored; Eccleshall dominated second half but without breakthrough"
+        "note": "Match was competitive overall; Sandbach started stronger and scored, but Eccleshall controlled the second half and created more chances."
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
