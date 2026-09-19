@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-09-19T14:05:32.118Z",
+  "generatedAt": "2026-09-19T14:10:40.571Z",
   "date": "2026-09-19",
   "isToday": true,
-  "postCount": 42,
-  "latestPostTimestamp": "2026-09-19T14:04:07.000Z",
+  "postCount": 49,
+  "latestPostTimestamp": "2026-09-19T14:10:25.000Z",
   "fixtures": [
     {
       "home": "Foley Meir",
@@ -19,9 +19,15 @@
       "home": "Allscott Heath",
       "away": "Alsager Town",
       "kickoff": "15:00",
-      "score": "0-0",
+      "score": "0-1",
       "matchStage": "first_half",
-      "goals": [],
+      "goals": [
+        {
+          "minute": "5",
+          "team": "away",
+          "scorer": "Fraser"
+        }
+      ],
       "yellowCards": [],
       "redCards": []
     },
@@ -55,7 +61,7 @@
       "home": "Cheadle Heath Nomads",
       "away": "Stafford Town",
       "kickoff": "15:00",
-      "score": null,
+      "score": "0-0",
       "matchStage": "first_half",
       "goals": [],
       "yellowCards": [],
@@ -75,9 +81,15 @@
       "home": "New Mills",
       "away": "Dawley Town",
       "kickoff": "15:00",
-      "score": null,
-      "matchStage": "scheduled",
-      "goals": [],
+      "score": "0-1",
+      "matchStage": "first_half",
+      "goals": [
+        {
+          "minute": "7",
+          "team": "away",
+          "scorer": null
+        }
+      ],
       "yellowCards": [],
       "redCards": []
     },
@@ -96,7 +108,7 @@
       "away": "Wolverhampton Casuals",
       "kickoff": "15:00",
       "score": null,
-      "matchStage": "first_half",
+      "matchStage": "scheduled",
       "goals": [],
       "yellowCards": [],
       "redCards": []
@@ -112,5 +124,5 @@
       "redCards": []
     }
   ],
-  "ticker": "@EccleshallFC: 00.03\n\nArchie makes a great run down the wing \n\n💙🦅\n#EccleshallFC"
+  "ticker": "@StaffordTown1st: 8 - 2 great chances for Town\n\nFirst Wilson’s freekick is tipped behind for a corner. The resulting corner and Parker puts an overhead kick just wide. \n\n🟣 0-0 🔘"
 }
