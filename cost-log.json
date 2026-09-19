@@ -11281,14 +11281,24 @@
       "aiCostGBP": 0.0058
     },
     {
-      "script": "recap-preview",
-      "timestamp": "2026-09-19T13:30:43.132Z",
-      "getxapiCalls": 0,
+      "script": "x-posts",
+      "timestamp": "2026-09-19T13:30:35.583Z",
+      "getxapiCalls": 1,
+      "claudeCalls": 0,
+      "inputTokens": 0,
+      "outputTokens": 0,
+      "xCostGBP": 0.0008,
+      "aiCostGBP": 0
+    },
+    {
+      "script": "division-scores",
+      "timestamp": "2026-09-19T13:31:22.824Z",
+      "getxapiCalls": 20,
       "claudeCalls": 1,
-      "inputTokens": 3460,
-      "outputTokens": 356,
-      "xCostGBP": 0,
-      "aiCostGBP": 0.0039
+      "inputTokens": 3895,
+      "outputTokens": 791,
+      "xCostGBP": 0.015,
+      "aiCostGBP": 0.0059
     }
   ]
 }
