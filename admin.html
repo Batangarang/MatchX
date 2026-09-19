@@ -173,7 +173,7 @@
       <div class="cost-caveat">
         Day/Month/Year use real measured whole-day totals (last 3 matchdays and last 3 non-matchdays averaged),
         not per-workflow guesses. The workflow breakdown below is an approximate proportional split of that real
-        total, not independently metered. Avg Month/Year model 6 games/month or 50 games/year against the rest of
+        total, not independently metered. Month/Year model 6 games/month or 50 games/year against the rest of
         the year as non-matchdays. Includes the <span id="domain-cost-note">—</span>/year Cloudflare domain cost.
       </div>
       <div id="cost-breakdown" style="margin-top:14px;"></div>
@@ -207,13 +207,9 @@
 
     const X_SHARE = 0.45;
     const AI_SHARE = 0.55;
-   const USD_TO_GBP = 0.7393; // real rate, checked 12 Sep 2026
-    // Real per-day averages derived from 32 days of genuine cost-log.json data (at 12/09/26)
-    // (x-posts: 36.7 runs/day avg, division-scores/matchday-live only fire on
-    // match days, recap-weekend-recap only fires on weekends) — replaces the
-    // earlier rough estimates now that real data exists.
-    const NONMATCHDAY_TOTAL_GBP = 0.066; // x-posts + x-insights + division-posts baseline, every day
-    const MATCHDAY_TOTAL_GBP = 0.066 + 0.1815 + 0.0984; // baseline + division-scores + matchday-live on a real match day
+    const USD_TO_GBP = 0.7393; // real rate, checked 12 Sep 2026
+    const NONMATCHDAY_TOTAL_GBP = 0.066;
+    const MATCHDAY_TOTAL_GBP = 0.066 + 0.1815 + 0.0984;
     const DOMAIN_YEARLY_GBP = 5.30 * USD_TO_GBP;
     const DOMAIN_DAILY_GBP = DOMAIN_YEARLY_GBP / 365;
 
@@ -222,10 +218,8 @@
       { file: 'matchday-live.yml', name: 'Matchday Live Tracker', pulls: 'X posts (home + away club) + vision analysis of new images, on Sandbach\'s own match day', skipLogic: 'Only active kickoff-90min to kickoff+150/240min; skips if nothing new; retries on GetXAPI rate-limit', shareOfDay: 0.098, matchdayOnly: true, staleAfterMinutes: 15 },
       { file: 'division-scores.yml', name: 'Division Scores', pulls: 'X posts from ~19 division clubs, on any day with First Division South fixtures', skipLogic: 'Resets to fixture-only before 11am; polls only within match window; skips if nothing new; retries on GetXAPI rate-limit', shareOfDay: 0.1815, matchdayOnly: true, staleAfterMinutes: 15 },
       { file: 'x-live.yml', name: 'Poll X (Fan Briefing)', pulls: 'Sandbach\'s own X posts + NWCFL news articles + Fan Briefing regeneration', skipLogic: 'x-posts.js gated to 60min/180min tiers; x-insights.js skips if underlying posts unchanged', shareOfDay: 0.033, nonMatchday: true, staleAfterMinutes: 15 },
-      { file: 'division-recap-weekend-preview.yml', name: 'Weekend Preview', pulls: 'Next weekend\'s division fixtures + recent club posts + league table', skipLogic: 'Runs once, always regenerates fresh (Friday-scheduled)', shareOfDay: 0.15, nonMatchday: true, staleAfterMinutes: 60 * 24 * 8 },
-      { file: 'division-recap-weekend-recap.yml', name: 'Weekend Recap', pulls: 'Weekend\'s played fixtures + club posts + league table', skipLogic: 'Only proceeds once, ~3hrs after the latest weekend kickoff; skips outside a real weekend', shareOfDay: 0.2, nonMatchday: true, staleAfterMinutes: 60 * 24 * 8 },
-      { file: 'division-recap-midweek-preview.yml', name: 'Midweek Preview', pulls: 'Tomorrow\'s midweek fixtures (if any) + club posts + league table', skipLogic: 'Skips entirely if no midweek fixtures tomorrow', shareOfDay: 0.15, nonMatchday: true, staleAfterMinutes: 60 * 24 * 4 },
-      { file: 'division-recap-midweek-recap.yml', name: 'Midweek Recap', pulls: 'Today\'s midweek fixtures (if any) + club posts + league table', skipLogic: 'Skips if no midweek fixtures today; only proceeds ~3hrs after latest kickoff', shareOfDay: 0.15, nonMatchday: true, staleAfterMinutes: 60 * 24 * 4 },
+      { file: 'division-recap-preview.yml', name: 'Division Preview', pulls: 'Coming week\'s division fixtures (incl. any midweek game) + recent club posts + league table', skipLogic: 'Skips if no fixtures in the coming week', shareOfDay: 0.15, nonMatchday: true, staleAfterMinutes: 60 * 24 },
+      { file: 'division-recap-recap.yml', name: 'Division Recap', pulls: 'Past week\'s played fixtures (incl. any midweek game) + club posts + league table', skipLogic: 'Skips if no fixtures in the past week; only proceeds ~2.5hrs after the latest kickoff in that period; once per period', shareOfDay: 0.2, nonMatchday: true, staleAfterMinutes: 60 * 24 },
     ];
 
     const SCRIPT_DISPLAY_NAMES = {
@@ -234,10 +228,8 @@
       'x-posts': 'Poll X (own posts)',
       'x-insights': 'Fan Briefing',
       'division-posts': 'Division Posts (recap data)',
-      'recap-weekend-preview': 'Weekend Preview',
-      'recap-weekend-recap': 'Weekend Recap',
-      'recap-midweek-preview': 'Midweek Preview',
-      'recap-midweek-recap': 'Midweek Recap',
+      'recap-preview': 'Division Preview',
+      'recap-recap': 'Division Recap',
     };
 
     function displayName(script) {
@@ -431,7 +423,8 @@
       }
       setTimeout(() => { btnEl.textContent = 'Run now'; btnEl.disabled = false; }, 3000);
     }
-    // ----------Actual Cost----------
+
+    // ---------- Actual Cost ----------
     async function loadRealCostData() {
       try {
         const res = await fetch('cost-log.json?t=' + Date.now());
@@ -487,7 +480,7 @@
               </div>
             `;
           }).join('');
-           
+
         return `
           <div style="margin-bottom:16px; padding-bottom:8px; border-bottom:1px solid var(--line);">
             <div style="display:flex; justify-content:space-between; font-size:13px; font-weight:700; margin-bottom:4px;">
@@ -507,18 +500,13 @@
         `£${totalAllTime.toFixed(2)} logged over last ${days.length} day(s) (£${totalX.toFixed(2)} GetXAPI · £${totalAI.toFixed(2)} Anthropic)`;
     }
 
-
-
-
-
     // ---------- Cost estimate ----------
     function toggleMatchday() {
       isMatchdayToday = document.getElementById('matchday-toggle').checked;
       const activePeriod = document.querySelector('.toggle-btn.active').dataset.period;
       setCostPeriod(activePeriod === 'day' ? 'day' : activePeriod);
     }
-// Rough estimated split of the real combined total — not independently
-    // measured, since GetXAPI/Anthropic don't expose this breakdown themselves
+
     function setCostPeriod(period) {
       document.querySelectorAll('.toggle-btn').forEach(b => b.classList.toggle('active', b.dataset.period === period));
 
@@ -545,115 +533,4 @@
       if (period === 'month') {
         gamesCount = 6; totalDays = 30; domainCost = DOMAIN_DAILY_GBP * 30;
         label = 'month';
-      } else {
-        gamesCount = 50; totalDays = 365; domainCost = DOMAIN_YEARLY_GBP;
-        label = 'year';
-      }
-
-      const nonMatchdayDays = totalDays - gamesCount;
-      const matchdayTotal = gamesCount * MATCHDAY_TOTAL_GBP;
-      const nonMatchdayTotal = nonMatchdayDays * NONMATCHDAY_TOTAL_GBP;
-      const grandTotal = matchdayTotal + nonMatchdayTotal + domainCost;
-
-      document.getElementById('cost-total').textContent = `£${grandTotal.toFixed(2)} / ${label}`;
-      renderGroupedBreakdown([
-        { label: 'Matchday activity', total: matchdayTotal },
-        { label: 'Non-matchday activity', total: nonMatchdayTotal },
-      ], domainCost, grandTotal);
-    }
-
-    function renderGroupedBreakdown(groups, domainCost, grandTotal) {
-      const allValues = groups.flatMap(g => [g.total, g.total * X_SHARE, g.total * AI_SHARE]);
-      const maxCost = Math.max(...allValues, domainCost, 0.01);
-
-      const groupsHtml = groups.map(g => {
-        const xCost = g.total * X_SHARE;
-        const aiCost = g.total * AI_SHARE;
-        return `
-          <div class="cost-breakdown-row" style="font-weight:700;"><span>${g.label}</span><span>£${g.total.toFixed(3)}</span></div>
-          <div class="cost-bar-bg"><div class="cost-bar-fill" style="width:${(g.total / maxCost) * 100}%"></div></div>
-          <div class="cost-breakdown-row" style="padding-left:12px; font-size:12px;"><span>— GetXAPI (est.)</span><span>£${xCost.toFixed(3)}</span></div>
-          <div class="cost-bar-bg"><div class="cost-bar-fill" style="background:var(--royal); width:${(xCost / maxCost) * 100}%"></div></div>
-          <div class="cost-breakdown-row" style="padding-left:12px; font-size:12px;"><span>— Anthropic (est.)</span><span>£${aiCost.toFixed(3)}</span></div>
-          <div class="cost-bar-bg"><div class="cost-bar-fill" style="background:var(--amber); width:${(aiCost / maxCost) * 100}%"></div></div>
-        `;
-      }).join('<div style="height:8px;"></div>');
-
-      document.getElementById('cost-breakdown').innerHTML = groupsHtml + `
-        <div class="cost-breakdown-row" style="color:var(--muted); margin-top:8px;"><span>Domain / DNS (Cloudflare)</span><span>£${domainCost.toFixed(3)}</span></div>
-        <div style="margin-top:10px; padding-top:10px; border-top:2px solid var(--navy); display:flex; justify-content:space-between; font-weight:700;">
-          <span>Total</span><span>£${grandTotal.toFixed(2)}</span>
-        </div>
-      `;
-    }
-
-    function renderGroupedBreakdown(groups, domainCost, grandTotal) {
-      const allValues = groups.flatMap(g => [g.total, g.total * X_SHARE, g.total * AI_SHARE]);
-      const maxCost = Math.max(...allValues, domainCost, 0.01);
-
-      const groupsHtml = groups.map(g => {
-        const xCost = g.total * X_SHARE;
-        const aiCost = g.total * AI_SHARE;
-        return `
-          <div class="cost-breakdown-row" style="font-weight:700;"><span>${g.label}</span><span>£${g.total.toFixed(3)}</span></div>
-          <div class="cost-bar-bg"><div class="cost-bar-fill" style="width:${(g.total / maxCost) * 100}%"></div></div>
-          <div class="cost-breakdown-row" style="padding-left:12px; font-size:12px;"><span>— GetXAPI (est.)</span><span>£${xCost.toFixed(3)}</span></div>
-          <div class="cost-bar-bg"><div class="cost-bar-fill" style="background:var(--royal); width:${(xCost / maxCost) * 100}%"></div></div>
-          <div class="cost-breakdown-row" style="padding-left:12px; font-size:12px;"><span>— Anthropic (est.)</span><span>£${aiCost.toFixed(3)}</span></div>
-          <div class="cost-bar-bg"><div class="cost-bar-fill" style="background:var(--amber); width:${(aiCost / maxCost) * 100}%"></div></div>
-        `;
-      }).join('<div style="height:8px;"></div>');
-
-      document.getElementById('cost-breakdown').innerHTML = groupsHtml + `
-        <div class="cost-breakdown-row" style="color:var(--muted); margin-top:8px;"><span>Domain / DNS (Cloudflare)</span><span>£${domainCost.toFixed(3)}</span></div>
-        <div style="margin-top:10px; padding-top:10px; border-top:2px solid var(--navy); display:flex; justify-content:space-between; font-weight:700;">
-          <span>Total</span><span>£${grandTotal.toFixed(2)}</span>
-        </div>
-      `;
-    }
-
-    function renderBlendedBreakdown(matchdayTotal, nonMatchdayTotal, domainTotal, grandTotal) {
-      const xTotal = (matchdayTotal + nonMatchdayTotal) * X_SHARE;
-      const aiTotal = (matchdayTotal + nonMatchdayTotal) * AI_SHARE;
-      const maxCost = Math.max(matchdayTotal, nonMatchdayTotal, xTotal, aiTotal, 0.01);
-
-      document.getElementById('cost-breakdown').innerHTML = `
-        <div class="cost-breakdown-row"><span>Matchday activity</span><span>£${matchdayTotal.toFixed(2)}</span></div>
-        <div class="cost-breakdown-row"><span>Non-matchday activity</span><span>£${nonMatchdayTotal.toFixed(2)}</span></div>
-        <div style="margin:10px 0; border-top:1px dashed var(--line);"></div>
-        <div class="cost-breakdown-row"><span>— of which GetXAPI (est.)</span><span>£${xTotal.toFixed(2)}</span></div>
-        <div class="cost-bar-bg"><div class="cost-bar-fill" style="background:var(--royal); width:${(xTotal / maxCost) * 100}%"></div></div>
-        <div class="cost-breakdown-row"><span>— of which Anthropic (est.)</span><span>£${aiTotal.toFixed(2)}</span></div>
-        <div class="cost-bar-bg"><div class="cost-bar-fill" style="background:var(--amber); width:${(aiTotal / maxCost) * 100}%"></div></div>
-        <div class="cost-breakdown-row" style="color:var(--muted);"><span>Domain / DNS (Cloudflare)</span><span>£${domainTotal.toFixed(2)}</span></div>
-        <div style="margin-top:10px; padding-top:10px; border-top:2px solid var(--navy); display:flex; justify-content:space-between; font-weight:700;">
-          <span>Total</span><span>£${grandTotal.toFixed(2)}</span>
-        </div>
-      `;
-    }
-
-    function renderBlendedBreakdown(matchdayTotal, nonMatchdayTotal, domainTotal, grandTotal) {
-      document.getElementById('cost-breakdown').innerHTML = `
-        <div class="cost-breakdown-row"><span>Matchday activity</span><span>£${matchdayTotal.toFixed(2)}</span></div>
-        <div class="cost-breakdown-row"><span>Non-matchday activity</span><span>£${nonMatchdayTotal.toFixed(2)}</span></div>
-        <div class="cost-breakdown-row" style="color:var(--muted);"><span>Domain / DNS (Cloudflare)</span><span>£${domainTotal.toFixed(2)}</span></div>
-        <div style="margin-top:10px; padding-top:10px; border-top:2px solid var(--navy); display:flex; justify-content:space-between; font-weight:700;">
-          <span>Total</span><span>£${grandTotal.toFixed(2)}</span>
-        </div>
-      `;
-    }
-
-    // ---------- Efficiency table ----------
-    function renderEfficiencyTable() {
-      document.getElementById('efficiency-table').innerHTML = WORKFLOWS.map(wf => `
-        <tr>
-          <td><strong>${wf.name}</strong></td>
-          <td>Every 5 min (cron-job.org)</td>
-          <td>${wf.pulls}</td>
-          <td>${wf.skipLogic}</td>
-        </tr>
-      `).join('');
-    }
-  </script>
-</body>
-</html>
+      } else
