@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-09-19T14:45:36.549Z",
+  "generatedAt": "2026-09-19T14:50:51.308Z",
   "date": "2026-09-19",
   "isToday": true,
-  "postCount": 89,
-  "latestPostTimestamp": "2026-09-19T14:44:49.000Z",
+  "postCount": 98,
+  "latestPostTimestamp": "2026-09-19T14:50:55.000Z",
   "fixtures": [
     {
       "home": "Foley Meir",
@@ -19,8 +19,8 @@
       "home": "Allscott Heath",
       "away": "Alsager Town",
       "kickoff": "15:00",
-      "score": "2-2",
-      "matchStage": "second_half",
+      "score": "2-1",
+      "matchStage": "half_time",
       "goals": [
         {
           "minute": 6,
@@ -28,7 +28,7 @@
           "scorer": "Fraser Geddes"
         },
         {
-          "minute": 20,
+          "minute": 22,
           "team": "home",
           "scorer": "James Allen"
         },
@@ -36,11 +36,6 @@
           "minute": 33,
           "team": "away",
           "scorer": "Parkinson"
-        },
-        {
-          "minute": 35,
-          "team": "home",
-          "scorer": "Liam Parkinson"
         }
       ],
       "yellowCards": [],
@@ -77,7 +72,7 @@
         {
           "minute": 26,
           "team": "home",
-          "scorer": "Own Goal"
+          "scorer": "own goal"
         }
       ],
       "yellowCards": [],
@@ -87,8 +82,8 @@
       "home": "Cheadle Heath Nomads",
       "away": "Stafford Town",
       "kickoff": "15:00",
-      "score": "1-2",
-      "matchStage": "second_half",
+      "score": "1-1",
+      "matchStage": "half_time",
       "goals": [
         {
           "minute": 21,
@@ -109,11 +104,11 @@
       "yellowCards": [
         {
           "team": "away",
-          "player": "Efford"
+          "player": "Wilding"
         },
         {
           "team": "away",
-          "player": "Wilding"
+          "player": "Efford"
         }
       ],
       "redCards": []
@@ -154,7 +149,7 @@
       "away": "Eccleshall",
       "kickoff": "15:00",
       "score": "1-0",
-      "matchStage": "second_half",
+      "matchStage": "half_time",
       "goals": [
         {
           "minute": 12,
@@ -162,7 +157,16 @@
           "scorer": "Josh Fowles"
         }
       ],
-      "yellowCards": [],
+      "yellowCards": [
+        {
+          "team": "home",
+          "player": "Hatton"
+        },
+        {
+          "team": "home",
+          "player": null
+        }
+      ],
       "redCards": []
     },
     {
@@ -170,7 +174,7 @@
       "away": "Wolverhampton Casuals",
       "kickoff": "15:00",
       "score": "0-1",
-      "matchStage": "second_half",
+      "matchStage": "half_time",
       "goals": [
         {
           "minute": 29,
@@ -191,11 +195,16 @@
       "away": "Barnton",
       "kickoff": "15:00",
       "score": "0-0",
-      "matchStage": "first_half",
+      "matchStage": "second_half",
       "goals": [],
-      "yellowCards": [],
+      "yellowCards": [
+        {
+          "team": "home",
+          "player": "Joe Danby"
+        }
+      ],
       "redCards": []
     }
   ],
-  "ticker": "@MDTFC: 43’ gone \n\nThe Bilston choir in full voice with a few lads yet to hit puberty giving us a 10 second chant. Wonder if their parents know they are out at this time. \n\nNot much happening in the game really. A lot of long balls..\n\n#upthegingerbreadmen"
+  "ticker": "@WolvesCassies: HALF TIME: Shawbury United 0 - 1 Wolverhampton Casuals\n#SHAWOL #Pitchero\nhttps://www.wolverhamptoncasualsfc.co.uk/teams/294420/match-centre/1-20008246?utm_campaign=score_update&utm_medium=post&utm_source=twitter&utm_content=E1 https://t.co/ynHmMpy4TV"
 }
