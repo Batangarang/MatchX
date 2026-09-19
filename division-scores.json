@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-09-19T17:30:58.461Z",
+  "generatedAt": "2026-09-19T19:25:33.757Z",
   "date": "2026-09-19",
   "isToday": true,
-  "postCount": 196,
-  "latestPostTimestamp": "2026-09-19T17:27:35.000Z",
+  "postCount": 197,
+  "latestPostTimestamp": "2026-09-19T19:23:45.000Z",
   "fixtures": [
     {
       "home": "Foley Meir",
       "away": "Widnes Town",
-      "kickoff": "15:00",
+      "kickoff": null,
       "score": null,
       "matchStage": "scheduled",
       "goals": [],
@@ -107,7 +107,7 @@
       "goals": [
         {
           "minute": 21,
-          "team": "away",
+          "team": "home",
           "scorer": null
         },
         {
@@ -123,7 +123,7 @@
         {
           "minute": 52,
           "team": "home",
-          "scorer": null
+          "scorer": "Wilding"
         },
         {
           "minute": 75,
@@ -143,7 +143,7 @@
         },
         {
           "team": "away",
-          "player": "Efford"
+          "player": "Wilding"
         }
       ],
       "redCards": [
@@ -216,10 +216,6 @@
       "yellowCards": [
         {
           "team": "home",
-          "player": "Hatton"
-        },
-        {
-          "team": "away",
           "player": null
         }
       ],
@@ -282,19 +278,19 @@
       "yellowCards": [
         {
           "team": "home",
+          "player": "Joe Cuff"
+        },
+        {
+          "team": "home",
           "player": "Joe Danby"
         },
         {
           "team": "home",
           "player": "Jack Grimshaw"
-        },
-        {
-          "team": "away",
-          "player": null
         }
       ],
       "redCards": []
     }
   ],
-  "ticker": "@EccleshallFC: Massive thanks to nick Locke and Rachel green for letting me do the match updates .\n\nVincent \n\n💙🦅\n#EccleshallFC"
+  "ticker": "@barntonfc: 🎙️ Man of the Match\n\nWe catch up with today’s Man of the Match, Raion Rowe, following our 2-0 victory away at Telford Town. ⚽️\n\nA big thank you to HAS Gas for their sponsorship and continued support. 🤝\n\n#ManOfTheMatch #cheshirejuve #juve #nwcfl #finoallafine https://t.co/s4J7xsATsw"
 }
