@@ -38,6 +38,7 @@ function isBST() {
 function getTodaysWindow(fixtures) {
   if (fixtures.length === 0) return null;
   const kickoffs = fixtures.map(f => {
+    if (!f.kickoff || typeof f.kickoff !== 'string') return getUKNow();
     const [hh, min] = f.kickoff.split(':');
     const d = getUKNow();
     d.setUTCHours(parseInt(hh), parseInt(min), 0, 0);
