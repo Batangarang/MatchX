@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-09-19T15:55:31.832Z",
+  "generatedAt": "2026-09-19T16:01:02.558Z",
   "date": "2026-09-19",
   "isToday": true,
-  "postCount": 181,
-  "latestPostTimestamp": "2026-09-19T15:53:43.000Z",
+  "postCount": 186,
+  "latestPostTimestamp": "2026-09-19T16:00:19.000Z",
   "fixtures": [
     {
       "home": "Foley Meir",
@@ -76,7 +76,7 @@
         {
           "minute": 67,
           "team": "home",
-          "scorer": "Bustin"
+          "scorer": null
         }
       ],
       "yellowCards": [],
@@ -92,21 +92,16 @@
       "away": "AFC Bridgnorth",
       "kickoff": "15:00",
       "score": "1-0",
-      "matchStage": "half_time",
+      "matchStage": "full_time",
       "goals": [
         {
           "minute": 26,
           "team": "home",
-          "scorer": null
+          "scorer": "own goal"
         }
       ],
       "yellowCards": [],
-      "redCards": [
-        {
-          "team": "home",
-          "player": "Blake"
-        }
-      ]
+      "redCards": []
     },
     {
       "home": "Cheadle Heath Nomads",
@@ -117,18 +112,28 @@
       "goals": [
         {
           "minute": null,
+          "team": "home",
+          "scorer": "Dan Lewis"
+        },
+        {
+          "minute": 21,
           "team": "away",
           "scorer": null
         },
         {
-          "minute": null,
+          "minute": 24,
           "team": "away",
-          "scorer": null
+          "scorer": "Parker"
+        },
+        {
+          "minute": 37,
+          "team": "away",
+          "scorer": "Mazurkiewicz"
         },
         {
           "minute": 52,
-          "team": "away",
-          "scorer": null
+          "team": "home",
+          "scorer": "own goal"
         },
         {
           "minute": 75,
@@ -144,17 +149,17 @@
       "yellowCards": [
         {
           "team": "away",
-          "player": "Tom Efford"
+          "player": "Efford"
         },
         {
           "team": "away",
-          "player": "Efford"
+          "player": "Wilding"
         }
       ],
       "redCards": [
         {
           "team": "away",
-          "player": "Tom Efford"
+          "player": "Efford"
         }
       ]
     },
@@ -172,8 +177,8 @@
       "home": "New Mills",
       "away": "Dawley Town",
       "kickoff": "15:00",
-      "score": "2-1",
-      "matchStage": "second_half",
+      "score": "1-2",
+      "matchStage": "full_time",
       "goals": [
         {
           "minute": 7,
@@ -202,7 +207,7 @@
       "matchStage": "full_time",
       "goals": [
         {
-          "minute": 12,
+          "minute": 14,
           "team": "home",
           "scorer": "Josh Fowles"
         },
@@ -216,10 +221,6 @@
         {
           "team": "home",
           "player": "Barry"
-        },
-        {
-          "team": "home",
-          "player": "Hatton"
         }
       ],
       "redCards": []
@@ -231,6 +232,11 @@
       "score": "1-3",
       "matchStage": "full_time",
       "goals": [
+        {
+          "minute": 29,
+          "team": "away",
+          "scorer": "Cian McIntosh"
+        },
         {
           "minute": 46,
           "team": "home",
@@ -290,5 +296,5 @@
       "redCards": []
     }
   ],
-  "ticker": "@alsagertown_fc: FT’ | Allscott Heath take the 3 points.\n\n⚽️ Geddes\n\n1-4 | @AllscottHeathFC https://t.co/QOpAhef1v3"
+  "ticker": "@barntonfc: Full Time.\n\nGood result away from home, unbeaten run in the league continues ⚫️⚪️⚽️\n\n🔵 TEL 0-2 BAR ⚫️\n\n#UTV | #TheCheshireJuve | #FinoAllaFine https://t.co/IIEtmSx0Pd"
 }
