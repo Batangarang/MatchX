@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-19T19:45:37.787Z",
+  "generatedAt": "2026-09-19T19:50:48.003Z",
   "fixtures": [
     {
       "date": "Saturday 3 October 2026",
@@ -223,6 +223,13 @@
       "home": "Widnes Town",
       "away": "Dawley Town",
       "kickoff": "15:00",
+      "postponed": false
+    },
+    {
+      "date": "Tuesday 27 October 2026",
+      "home": "Telford Town",
+      "away": "Eccleshall",
+      "kickoff": "19:45",
       "postponed": false
     },
     {
