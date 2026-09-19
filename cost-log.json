@@ -1,66 +1,6 @@
 {
   "entries": [
     {
-      "script": "x-posts",
-      "timestamp": "2026-08-15T08:10:25.381Z",
-      "getxapiCalls": 1,
-      "claudeCalls": 0,
-      "inputTokens": 0,
-      "outputTokens": 0,
-      "xCostGBP": 0.0008,
-      "aiCostGBP": 0
-    },
-    {
-      "script": "division-scores",
-      "timestamp": "2026-08-15T08:16:11.601Z",
-      "getxapiCalls": 8,
-      "claudeCalls": 1,
-      "inputTokens": 615,
-      "outputTokens": 261,
-      "xCostGBP": 0.006,
-      "aiCostGBP": 0.0014
-    },
-    {
-      "script": "division-scores",
-      "timestamp": "2026-08-15T08:21:06.920Z",
-      "getxapiCalls": 8,
-      "claudeCalls": 1,
-      "inputTokens": 793,
-      "outputTokens": 261,
-      "xCostGBP": 0.006,
-      "aiCostGBP": 0.0016
-    },
-    {
-      "script": "division-scores",
-      "timestamp": "2026-08-15T08:56:05.559Z",
-      "getxapiCalls": 8,
-      "claudeCalls": 1,
-      "inputTokens": 949,
-      "outputTokens": 261,
-      "xCostGBP": 0.006,
-      "aiCostGBP": 0.0017
-    },
-    {
-      "script": "division-posts",
-      "timestamp": "2026-08-15T09:02:01.433Z",
-      "getxapiCalls": 21,
-      "claudeCalls": 0,
-      "inputTokens": 0,
-      "outputTokens": 0,
-      "xCostGBP": 0.0158,
-      "aiCostGBP": 0
-    },
-    {
-      "script": "recap-weekend-recap",
-      "timestamp": "2026-08-15T09:02:08.581Z",
-      "getxapiCalls": 0,
-      "claudeCalls": 1,
-      "inputTokens": 42312,
-      "outputTokens": 449,
-      "xCostGBP": 0,
-      "aiCostGBP": 0.0334
-    },
-    {
       "script": "division-scores",
       "timestamp": "2026-08-15T09:06:00.961Z",
       "getxapiCalls": 8,
@@ -11273,6 +11213,16 @@
     {
       "script": "x-posts",
       "timestamp": "2026-09-19T08:05:17.510Z",
+      "getxapiCalls": 1,
+      "claudeCalls": 0,
+      "inputTokens": 0,
+      "outputTokens": 0,
+      "xCostGBP": 0.0008,
+      "aiCostGBP": 0
+    },
+    {
+      "script": "x-posts",
+      "timestamp": "2026-09-19T09:05:53.529Z",
       "getxapiCalls": 1,
       "claudeCalls": 0,
       "inputTokens": 0,
