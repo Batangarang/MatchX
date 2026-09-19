@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-09-19T14:55:35.972Z",
+  "generatedAt": "2026-09-19T15:01:06.457Z",
   "date": "2026-09-19",
   "isToday": true,
-  "postCount": 104,
-  "latestPostTimestamp": "2026-09-19T14:54:47.000Z",
+  "postCount": 105,
+  "latestPostTimestamp": "2026-09-19T14:57:43.000Z",
   "fixtures": [
     {
       "home": "Foley Meir",
@@ -23,17 +23,17 @@
       "matchStage": "half_time",
       "goals": [
         {
-          "minute": "6",
+          "minute": 6,
           "team": "away",
           "scorer": "Geddes"
         },
         {
-          "minute": "22",
+          "minute": 22,
           "team": "home",
           "scorer": "James Allen"
         },
         {
-          "minute": "35",
+          "minute": 35,
           "team": "home",
           "scorer": "Liam Parkinson"
         }
@@ -49,7 +49,7 @@
       "matchStage": "second_half",
       "goals": [
         {
-          "minute": "1",
+          "minute": 1,
           "team": "home",
           "scorer": "Dixon"
         }
@@ -70,9 +70,9 @@
       "matchStage": "half_time",
       "goals": [
         {
-          "minute": "26",
+          "minute": 26,
           "team": "home",
-          "scorer": "Own Goal"
+          "scorer": null
         }
       ],
       "yellowCards": [],
@@ -86,17 +86,12 @@
       "matchStage": "half_time",
       "goals": [
         {
-          "minute": "21",
+          "minute": 21,
           "team": "home",
           "scorer": null
         },
         {
-          "minute": "24",
-          "team": "away",
-          "scorer": "Parker"
-        },
-        {
-          "minute": "37",
+          "minute": 37,
           "team": "away",
           "scorer": "Mazurkiewicz"
         }
@@ -104,11 +99,11 @@
       "yellowCards": [
         {
           "team": "away",
-          "player": "Efford"
+          "player": "Wilding"
         },
         {
           "team": "away",
-          "player": "Wilding"
+          "player": "Efford"
         }
       ],
       "redCards": []
@@ -131,12 +126,12 @@
       "matchStage": "half_time",
       "goals": [
         {
-          "minute": "7",
+          "minute": 7,
           "team": "away",
           "scorer": null
         },
         {
-          "minute": "27",
+          "minute": 27,
           "team": "home",
           "scorer": "Will Frankish"
         }
@@ -152,7 +147,7 @@
       "matchStage": "half_time",
       "goals": [
         {
-          "minute": "12",
+          "minute": 12,
           "team": "home",
           "scorer": "Josh Fowles"
         }
@@ -160,6 +155,10 @@
       "yellowCards": [
         {
           "team": "home",
+          "player": "Hatton"
+        },
+        {
+          "team": "away",
           "player": null
         }
       ],
@@ -173,7 +172,7 @@
       "matchStage": "half_time",
       "goals": [
         {
-          "minute": "29",
+          "minute": 29,
           "team": "away",
           "scorer": "Cian McIntosh"
         }
@@ -202,5 +201,5 @@
       "redCards": []
     }
   ],
-  "ticker": "@shawburyutd: HT\nSUFC ⚪️⚫️0-1🟢🟢 Cassies https://t.co/VJbU7Fd7Um"
+  "ticker": "@SandbachFC_1st: Half time here at Sandbach and we lead 1-0, a tight game that neither side has really got a grip of but Josh Fowles early strike separates the two sides, big 10 minutes of the second half as The Ramblers will start it with 10 men after Hatton’s sin bin"
 }
