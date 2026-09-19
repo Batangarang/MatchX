@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-09-19T15:10:44.887Z",
+  "generatedAt": "2026-09-19T15:15:44.089Z",
   "date": "2026-09-19",
   "isToday": true,
-  "postCount": 120,
-  "latestPostTimestamp": "2026-09-19T15:10:18.000Z",
+  "postCount": 125,
+  "latestPostTimestamp": "2026-09-19T15:15:27.000Z",
   "fixtures": [
     {
       "home": "Foley Meir",
@@ -20,7 +20,7 @@
       "away": "Alsager Town",
       "kickoff": "15:00",
       "score": "2-1",
-      "matchStage": "full_time",
+      "matchStage": "half_time",
       "goals": [
         {
           "minute": 6,
@@ -82,7 +82,7 @@
         {
           "minute": 26,
           "team": "home",
-          "scorer": "Own Goal"
+          "scorer": "Own goal"
         }
       ],
       "yellowCards": [],
@@ -92,7 +92,7 @@
       "home": "Cheadle Heath Nomads",
       "away": "Stafford Town",
       "kickoff": "15:00",
-      "score": "1-2",
+      "score": "2-2",
       "matchStage": "second_half",
       "goals": [
         {
@@ -109,16 +109,21 @@
           "minute": 37,
           "team": "away",
           "scorer": "Mazurkiewicz"
+        },
+        {
+          "minute": 52,
+          "team": "home",
+          "scorer": "Own goal (Wilding)"
         }
       ],
       "yellowCards": [
         {
           "team": "away",
-          "player": "Efford"
+          "player": "Wilding"
         },
         {
           "team": "away",
-          "player": "Wilding"
+          "player": "Efford"
         }
       ],
       "redCards": []
@@ -171,6 +176,10 @@
         {
           "team": "home",
           "player": "Hatton"
+        },
+        {
+          "team": "away",
+          "player": null
         }
       ],
       "redCards": []
@@ -222,5 +231,5 @@
       "redCards": []
     }
   ],
-  "ticker": "@EccleshallFC: 50.00 \nOver the bar \n\n💙🦅\n#EccleshallFC"
+  "ticker": "@StaffordTown1st: 56 - Sub for Town\n\nTodd Sherwood is on for Sam Lynch\n\n🟣 2-2 🔘"
 }
