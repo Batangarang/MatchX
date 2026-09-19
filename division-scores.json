@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-09-19T14:20:50.894Z",
+  "generatedAt": "2026-09-19T14:25:31.813Z",
   "date": "2026-09-19",
   "isToday": true,
-  "postCount": 58,
-  "latestPostTimestamp": "2026-09-19T14:19:28.000Z",
+  "postCount": 64,
+  "latestPostTimestamp": "2026-09-19T14:24:52.000Z",
   "fixtures": [
     {
       "home": "Foley Meir",
@@ -23,14 +23,14 @@
       "matchStage": "first_half",
       "goals": [
         {
-          "minute": "6",
+          "minute": 6,
           "team": "away",
           "scorer": "Geddes"
         },
         {
-          "minute": "11",
-          "team": "away",
-          "scorer": "Jordy Fitton"
+          "minute": 22,
+          "team": "home",
+          "scorer": "James Allen"
         }
       ],
       "yellowCards": [],
@@ -44,13 +44,18 @@
       "matchStage": "first_half",
       "goals": [
         {
-          "minute": "1",
+          "minute": 1,
           "team": "home",
           "scorer": "Dixon"
         }
       ],
       "yellowCards": [],
-      "redCards": []
+      "redCards": [
+        {
+          "team": "away",
+          "player": "Bayley"
+        }
+      ]
     },
     {
       "home": "Brereton Social",
@@ -66,9 +71,15 @@
       "home": "Cheadle Heath Nomads",
       "away": "Stafford Town",
       "kickoff": "15:00",
-      "score": "0-0",
+      "score": "1-0",
       "matchStage": "first_half",
-      "goals": [],
+      "goals": [
+        {
+          "minute": 21,
+          "team": "home",
+          "scorer": null
+        }
+      ],
       "yellowCards": [
         {
           "team": "away",
@@ -95,7 +106,7 @@
       "matchStage": "first_half",
       "goals": [
         {
-          "minute": "7",
+          "minute": 7,
           "team": "away",
           "scorer": null
         }
@@ -111,7 +122,7 @@
       "matchStage": "first_half",
       "goals": [
         {
-          "minute": null,
+          "minute": 12,
           "team": "home",
           "scorer": "Josh Fowles"
         }
@@ -140,5 +151,5 @@
       "redCards": []
     }
   ],
-  "ticker": "@StaffordTown1st: 17 - Yellow card for Wilding \n\nHe loses the ball under pressure and pulls his man back trying to make amends\n\nGreat save from Cooper on the resulting freekick. \n\n🟣 0-0 🔘"
+  "ticker": "@bilstontownfc: Market Drayton are down to 10 men"
 }
