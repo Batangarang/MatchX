@@ -1,0 +1,52 @@
+name: Division recap - preview
+on:
+  workflow_dispatch:
+concurrency:
+  group: recap-preview
+  cancel-in-progress: false
+permissions:
+  contents: write
+jobs:
+  recap:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+      - run: npm install
+      - id: gate
+        run: node recap-gate.js >> "$GITHUB_OUTPUT"
+        env:
+          RECAP_MODE: preview
+      - if: steps.gate.outputs.run == 'true'
+        run: node division-posts.js
+        env:
+          GETXAPI_KEY: ${{ secrets.GETXAPI_KEY }}
+      - if: steps.gate.outputs.run == 'true'
+        run: node division-recap-engine.js
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          RECAP_MODE: preview
+      - name: Commit updated data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          for f in division-posts.json division-insights-preview.json .recap-state-preview.json cost-log.json; do
+            [ -f "$f" ] && git add "$f"
+          done
+          git diff --staged --quiet || git commit -m "Weekly preview"
+          for i in 1 2 3 4 5; do
+            if git pull --rebase --autostash origin main; then
+              if git push; then
+                break
+              fi
+              sleep $((RANDOM % 5 + 1))
+              continue
+            fi
+            git diff --name-only --diff-filter=U | while read -r f; do
+              git checkout --theirs "$f" 2>/dev/null && git add "$f"
+            done
+            GIT_EDITOR=true git rebase --continue || git rebase --abort
+          done
+          git push
