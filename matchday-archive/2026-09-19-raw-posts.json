@@ -70,5 +70,31 @@
     "side": "away",
     "handle": "EccleshallFC",
     "isDuplicateCommentary": false
+  },
+  {
+    "text": "An even opening ten minutes here in the Sandbach sunshine https://t.co/3aTv1IbJN8",
+    "createdAt": "2026-09-19T14:11:20.000Z",
+    "images": [
+      "https://pbs.twimg.com/media/HSldNg7WoAAOT05.jpg"
+    ],
+    "side": "home",
+    "handle": "SandbachFC_1st",
+    "isDuplicateCommentary": false
+  },
+  {
+    "text": "00.10\nArchie knocks a great cross in ,low and fast just begging to be hit",
+    "createdAt": "2026-09-19T14:12:21.000Z",
+    "images": [],
+    "side": "away",
+    "handle": "EccleshallFC",
+    "isDuplicateCommentary": false
+  },
+  {
+    "text": "12.00\nSandbach straight up the pitch \nGoal\n0-1\n\n💙🦅\n#EccleshallFC",
+    "createdAt": "2026-09-19T14:13:22.000Z",
+    "images": [],
+    "side": "away",
+    "handle": "EccleshallFC",
+    "isDuplicateCommentary": false
   }
 ]

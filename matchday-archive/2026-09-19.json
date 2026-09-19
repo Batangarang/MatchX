@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-09-19T14:10:44.031Z",
+  "generatedAt": "2026-09-19T14:15:47.908Z",
   "fixtureDate": "2026-09-19",
   "kickoff": "15:00",
   "homeTeam": "Sandbach United",
   "awayTeam": "Eccleshall",
-  "postsUsed": 8,
-  "imagesAnalyzedThisRun": 0,
-  "totalImagesAnalyzed": 4,
+  "postsUsed": 11,
+  "imagesAnalyzedThisRun": 1,
+  "totalImagesAnalyzed": 5,
   "match": {
-    "score": null,
+    "score": "0-1",
     "scoreDiscrepancy": null,
     "finalScoreAnnounced": null,
     "halfTimeScoreAnnounced": null,
@@ -64,7 +64,13 @@
         "officials": []
       }
     },
-    "goals": [],
+    "goals": [
+      {
+        "minute": 12,
+        "team": "away",
+        "scorer": null
+      }
+    ],
     "yellowCards": [],
     "redCards": [],
     "substitutions": [],
@@ -86,14 +92,14 @@
     },
     "roughXG": {
       "firstHalf": {
-        "home": 0,
-        "away": 0,
-        "note": "Only early match activity (Archie's run down the wing at 3 minutes, free kick at 9 minutes) mentioned; insufficient detail to estimate chances."
+        "home": 0.2,
+        "away": 1.2,
+        "note": "Eccleshall created chances (Archie's run, low fast cross) and converted one; Sandbach described as even in opening 10 minutes but conceded early."
       },
       "secondHalf": {
         "home": 0,
         "away": 0,
-        "note": "No second half updates provided."
+        "note": "No data available."
       },
       "extraTime": {
         "home": 0,
@@ -101,22 +107,22 @@
         "note": "Match did not go to extra time."
       },
       "total": {
-        "home": 0,
-        "away": 0,
-        "note": "Insufficient match data to estimate xG."
+        "home": 0.2,
+        "away": 1.2,
+        "note": "Eccleshall's goal is a hard floor for xG; limited post coverage means conservative estimate for full match."
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
     "matchControl": {
       "firstHalf": {
-        "home": 50,
-        "away": 50,
-        "note": "Very limited early match updates; Eccleshall had some attacking activity early on but no clear dominance indicated."
+        "home": 45,
+        "away": 55,
+        "note": "Eccleshall had early attacking play (wing runs, crosses); Sandbach evened it out by minute 10 before conceding at minute 12."
       },
       "secondHalf": {
         "home": 50,
         "away": 50,
-        "note": "No second half updates provided."
+        "note": "No data available."
       },
       "extraTime": {
         "home": 50,
@@ -126,7 +132,7 @@
       "total": {
         "home": 50,
         "away": 50,
-        "note": "Insufficient match data to assess control."
+        "note": "Insufficient data for full-match assessment; early phase suggests slight Eccleshall edge before goal."
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
