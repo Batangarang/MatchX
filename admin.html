@@ -533,4 +533,59 @@
       if (period === 'month') {
         gamesCount = 6; totalDays = 30; domainCost = DOMAIN_DAILY_GBP * 30;
         label = 'month';
-      } else
+      } else {
+        gamesCount = 50; totalDays = 365; domainCost = DOMAIN_YEARLY_GBP;
+        label = 'year';
+      }
+
+      const nonMatchdayDays = totalDays - gamesCount;
+      const matchdayTotal = gamesCount * MATCHDAY_TOTAL_GBP;
+      const nonMatchdayTotal = nonMatchdayDays * NONMATCHDAY_TOTAL_GBP;
+      const grandTotal = matchdayTotal + nonMatchdayTotal + domainCost;
+
+      document.getElementById('cost-total').textContent = `£${grandTotal.toFixed(2)} / ${label}`;
+      renderGroupedBreakdown([
+        { label: 'Matchday activity', total: matchdayTotal },
+        { label: 'Non-matchday activity', total: nonMatchdayTotal },
+      ], domainCost, grandTotal);
+    }
+
+    function renderGroupedBreakdown(groups, domainCost, grandTotal) {
+      const allValues = groups.flatMap(g => [g.total, g.total * X_SHARE, g.total * AI_SHARE]);
+      const maxCost = Math.max(...allValues, domainCost, 0.01);
+
+      const groupsHtml = groups.map(g => {
+        const xCost = g.total * X_SHARE;
+        const aiCost = g.total * AI_SHARE;
+        return `
+          <div class="cost-breakdown-row" style="font-weight:700;"><span>${g.label}</span><span>£${g.total.toFixed(3)}</span></div>
+          <div class="cost-bar-bg"><div class="cost-bar-fill" style="width:${(g.total / maxCost) * 100}%"></div></div>
+          <div class="cost-breakdown-row" style="padding-left:12px; font-size:12px;"><span>— GetXAPI (est.)</span><span>£${xCost.toFixed(3)}</span></div>
+          <div class="cost-bar-bg"><div class="cost-bar-fill" style="background:var(--royal); width:${(xCost / maxCost) * 100}%"></div></div>
+          <div class="cost-breakdown-row" style="padding-left:12px; font-size:12px;"><span>— Anthropic (est.)</span><span>£${aiCost.toFixed(3)}</span></div>
+          <div class="cost-bar-bg"><div class="cost-bar-fill" style="background:var(--amber); width:${(aiCost / maxCost) * 100}%"></div></div>
+        `;
+      }).join('<div style="height:8px;"></div>');
+
+      document.getElementById('cost-breakdown').innerHTML = groupsHtml + `
+        <div class="cost-breakdown-row" style="color:var(--muted); margin-top:8px;"><span>Domain / DNS (Cloudflare)</span><span>£${domainCost.toFixed(3)}</span></div>
+        <div style="margin-top:10px; padding-top:10px; border-top:2px solid var(--navy); display:flex; justify-content:space-between; font-weight:700;">
+          <span>Total</span><span>£${grandTotal.toFixed(2)}</span>
+        </div>
+      `;
+    }
+
+    // ---------- Efficiency table ----------
+    function renderEfficiencyTable() {
+      document.getElementById('efficiency-table').innerHTML = WORKFLOWS.map(wf => `
+        <tr>
+          <td><strong>${wf.name}</strong></td>
+          <td>Every 5 min (cron-job.org)</td>
+          <td>${wf.pulls}</td>
+          <td>${wf.skipLogic}</td>
+        </tr>
+      `).join('');
+    }
+  </script>
+</body>
+</html>
