@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-09-19T15:01:06.457Z",
+  "generatedAt": "2026-09-19T15:05:34.964Z",
   "date": "2026-09-19",
   "isToday": true,
-  "postCount": 105,
-  "latestPostTimestamp": "2026-09-19T14:57:43.000Z",
+  "postCount": 108,
+  "latestPostTimestamp": "2026-09-19T15:05:17.000Z",
   "fixtures": [
     {
       "home": "Foley Meir",
@@ -19,21 +19,26 @@
       "home": "Allscott Heath",
       "away": "Alsager Town",
       "kickoff": "15:00",
-      "score": "2-1",
-      "matchStage": "half_time",
+      "score": "2-2",
+      "matchStage": "second_half",
       "goals": [
         {
-          "minute": 6,
+          "minute": "6",
           "team": "away",
           "scorer": "Geddes"
         },
         {
-          "minute": 22,
+          "minute": "22",
           "team": "home",
           "scorer": "James Allen"
         },
         {
-          "minute": 35,
+          "minute": "33",
+          "team": "away",
+          "scorer": "Harley Renshaw"
+        },
+        {
+          "minute": "35",
           "team": "home",
           "scorer": "Liam Parkinson"
         }
@@ -49,7 +54,7 @@
       "matchStage": "second_half",
       "goals": [
         {
-          "minute": 1,
+          "minute": "1",
           "team": "home",
           "scorer": "Dixon"
         }
@@ -70,7 +75,7 @@
       "matchStage": "half_time",
       "goals": [
         {
-          "minute": 26,
+          "minute": "26",
           "team": "home",
           "scorer": null
         }
@@ -82,16 +87,21 @@
       "home": "Cheadle Heath Nomads",
       "away": "Stafford Town",
       "kickoff": "15:00",
-      "score": "1-1",
-      "matchStage": "half_time",
+      "score": "1-2",
+      "matchStage": "second_half",
       "goals": [
         {
-          "minute": 21,
+          "minute": "21",
           "team": "home",
           "scorer": null
         },
         {
-          "minute": 37,
+          "minute": "24",
+          "team": "away",
+          "scorer": "Parker"
+        },
+        {
+          "minute": "37",
           "team": "away",
           "scorer": "Mazurkiewicz"
         }
@@ -126,12 +136,12 @@
       "matchStage": "half_time",
       "goals": [
         {
-          "minute": 7,
+          "minute": "7",
           "team": "away",
           "scorer": null
         },
         {
-          "minute": 27,
+          "minute": "27",
           "team": "home",
           "scorer": "Will Frankish"
         }
@@ -147,7 +157,7 @@
       "matchStage": "half_time",
       "goals": [
         {
-          "minute": 12,
+          "minute": "12",
           "team": "home",
           "scorer": "Josh Fowles"
         }
@@ -156,10 +166,6 @@
         {
           "team": "home",
           "player": "Hatton"
-        },
-        {
-          "team": "away",
-          "player": null
         }
       ],
       "redCards": []
@@ -172,7 +178,7 @@
       "matchStage": "half_time",
       "goals": [
         {
-          "minute": 29,
+          "minute": "29",
           "team": "away",
           "scorer": "Cian McIntosh"
         }
@@ -201,5 +207,5 @@
       "redCards": []
     }
   ],
-  "ticker": "@SandbachFC_1st: Half time here at Sandbach and we lead 1-0, a tight game that neither side has really got a grip of but Josh Fowles early strike separates the two sides, big 10 minutes of the second half as The Ramblers will start it with 10 men after Hatton’s sin bin"
+  "ticker": "@NewMillsFC: https://t.co/oIndgNxdJA"
 }
