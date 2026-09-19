@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-09-19T14:01:04.734Z",
+  "generatedAt": "2026-09-19T14:05:32.118Z",
   "date": "2026-09-19",
   "isToday": true,
-  "postCount": 35,
-  "latestPostTimestamp": "2026-09-19T13:59:49.000Z",
+  "postCount": 42,
+  "latestPostTimestamp": "2026-09-19T14:04:07.000Z",
   "fixtures": [
     {
       "home": "Foley Meir",
@@ -19,8 +19,8 @@
       "home": "Allscott Heath",
       "away": "Alsager Town",
       "kickoff": "15:00",
-      "score": null,
-      "matchStage": "scheduled",
+      "score": "0-0",
+      "matchStage": "first_half",
       "goals": [],
       "yellowCards": [],
       "redCards": []
@@ -29,9 +29,15 @@
       "home": "Bilston Town",
       "away": "Market Drayton Town",
       "kickoff": "15:00",
-      "score": null,
-      "matchStage": "scheduled",
-      "goals": [],
+      "score": "1-0",
+      "matchStage": "first_half",
+      "goals": [
+        {
+          "minute": "1",
+          "team": "home",
+          "scorer": "Dixon"
+        }
+      ],
       "yellowCards": [],
       "redCards": []
     },
@@ -50,7 +56,7 @@
       "away": "Stafford Town",
       "kickoff": "15:00",
       "score": null,
-      "matchStage": "scheduled",
+      "matchStage": "first_half",
       "goals": [],
       "yellowCards": [],
       "redCards": []
@@ -80,7 +86,7 @@
       "away": "Eccleshall",
       "kickoff": "15:00",
       "score": null,
-      "matchStage": "scheduled",
+      "matchStage": "first_half",
       "goals": [],
       "yellowCards": [],
       "redCards": []
@@ -90,7 +96,7 @@
       "away": "Wolverhampton Casuals",
       "kickoff": "15:00",
       "score": null,
-      "matchStage": "scheduled",
+      "matchStage": "first_half",
       "goals": [],
       "yellowCards": [],
       "redCards": []
@@ -99,12 +105,12 @@
       "home": "Telford Town",
       "away": "Barnton",
       "kickoff": "15:00",
-      "score": null,
-      "matchStage": "scheduled",
+      "score": "0-0",
+      "matchStage": "first_half",
       "goals": [],
       "yellowCards": [],
       "redCards": []
     }
   ],
-  "ticker": "@MDTFC: Late change for Drayton Town….\n\nStar social media coordinator (yes that’s a role) Mr Dobson had been subbed in for Aaron Kelley, with him having the more important role of running onto the pitch with a bag of deep heat every 10mins….\n\nCome on The Gingerbreadmen!!!!"
+  "ticker": "@EccleshallFC: 00.03\n\nArchie makes a great run down the wing \n\n💙🦅\n#EccleshallFC"
 }
