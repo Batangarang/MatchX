@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-09-19T14:15:39.994Z",
+  "generatedAt": "2026-09-19T14:20:50.894Z",
   "date": "2026-09-19",
   "isToday": true,
-  "postCount": 54,
-  "latestPostTimestamp": "2026-09-19T14:15:09.000Z",
+  "postCount": 58,
+  "latestPostTimestamp": "2026-09-19T14:19:28.000Z",
   "fixtures": [
     {
       "home": "Foley Meir",
@@ -19,16 +19,16 @@
       "home": "Allscott Heath",
       "away": "Alsager Town",
       "kickoff": "15:00",
-      "score": "0-1",
+      "score": "1-1",
       "matchStage": "first_half",
       "goals": [
         {
-          "minute": 5,
+          "minute": "6",
           "team": "away",
           "scorer": "Geddes"
         },
         {
-          "minute": 11,
+          "minute": "11",
           "team": "away",
           "scorer": "Jordy Fitton"
         }
@@ -44,7 +44,7 @@
       "matchStage": "first_half",
       "goals": [
         {
-          "minute": 1,
+          "minute": "1",
           "team": "home",
           "scorer": "Dixon"
         }
@@ -69,7 +69,12 @@
       "score": "0-0",
       "matchStage": "first_half",
       "goals": [],
-      "yellowCards": [],
+      "yellowCards": [
+        {
+          "team": "away",
+          "player": "Wilding"
+        }
+      ],
       "redCards": []
     },
     {
@@ -90,7 +95,7 @@
       "matchStage": "first_half",
       "goals": [
         {
-          "minute": 7,
+          "minute": "7",
           "team": "away",
           "scorer": null
         }
@@ -102,13 +107,13 @@
       "home": "Sandbach United",
       "away": "Eccleshall",
       "kickoff": "15:00",
-      "score": "0-1",
+      "score": "1-0",
       "matchStage": "first_half",
       "goals": [
         {
-          "minute": 12,
-          "team": "away",
-          "scorer": null
+          "minute": null,
+          "team": "home",
+          "scorer": "Josh Fowles"
         }
       ],
       "yellowCards": [],
@@ -118,8 +123,8 @@
       "home": "Shawbury United",
       "away": "Wolverhampton Casuals",
       "kickoff": "15:00",
-      "score": null,
-      "matchStage": "scheduled",
+      "score": "0-0",
+      "matchStage": "first_half",
       "goals": [],
       "yellowCards": [],
       "redCards": []
@@ -135,5 +140,5 @@
       "redCards": []
     }
   ],
-  "ticker": "@alsagertown_fc: 11’ | Good effort by @jordyfitton95 which is tipped over by Dabbs from the free-kick. 👊\n\n1-0 | @AllscottHeathFC"
+  "ticker": "@StaffordTown1st: 17 - Yellow card for Wilding \n\nHe loses the ball under pressure and pulls his man back trying to make amends\n\nGreat save from Cooper on the resulting freekick. \n\n🟣 0-0 🔘"
 }
