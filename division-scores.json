@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-09-19T16:45:40.134Z",
+  "generatedAt": "2026-09-19T16:55:30.072Z",
   "date": "2026-09-19",
   "isToday": true,
-  "postCount": 192,
-  "latestPostTimestamp": "2026-09-19T16:43:51.000Z",
+  "postCount": 193,
+  "latestPostTimestamp": "2026-09-19T16:54:21.000Z",
   "fixtures": [
     {
       "home": "Foley Meir",
@@ -76,7 +76,7 @@
         {
           "minute": 67,
           "team": "home",
-          "scorer": null
+          "scorer": "Unknown"
         }
       ],
       "yellowCards": [],
@@ -97,7 +97,7 @@
         {
           "minute": 26,
           "team": "home",
-          "scorer": null
+          "scorer": "Unknown"
         }
       ],
       "yellowCards": [],
@@ -112,8 +112,8 @@
       "goals": [
         {
           "minute": 21,
-          "team": "home",
-          "scorer": null
+          "team": "away",
+          "scorer": "Unknown"
         },
         {
           "minute": 24,
@@ -121,19 +121,14 @@
           "scorer": "Parker"
         },
         {
-          "minute": 37,
-          "team": "away",
-          "scorer": "Mazurkiewicz"
-        },
-        {
           "minute": 52,
-          "team": "home",
-          "scorer": null
+          "team": "away",
+          "scorer": "Unknown"
         },
         {
           "minute": 75,
           "team": "home",
-          "scorer": null
+          "scorer": "Unknown"
         },
         {
           "minute": 83,
@@ -148,7 +143,7 @@
         },
         {
           "team": "away",
-          "player": "Efford"
+          "player": "Wilding"
         }
       ],
       "redCards": [
@@ -162,9 +157,15 @@
       "home": "Crewe",
       "away": "Wednesfield Community",
       "kickoff": "15:00",
-      "score": null,
-      "matchStage": "scheduled",
-      "goals": [],
+      "score": "0-1",
+      "matchStage": "full_time",
+      "goals": [
+        {
+          "minute": null,
+          "team": "away",
+          "scorer": "Rio Tetsell"
+        }
+      ],
       "yellowCards": [],
       "redCards": []
     },
@@ -178,22 +179,17 @@
         {
           "minute": 7,
           "team": "away",
-          "scorer": null
+          "scorer": "Unknown"
         },
         {
           "minute": 27,
-          "team": "home",
-          "scorer": "Will Frankish"
-        },
-        {
-          "minute": 63,
           "team": "home",
           "scorer": "Jack Morris"
         },
         {
           "minute": 60,
           "team": "away",
-          "scorer": null
+          "scorer": "Unknown"
         }
       ],
       "yellowCards": [],
@@ -207,7 +203,7 @@
       "matchStage": "full_time",
       "goals": [
         {
-          "minute": 12,
+          "minute": 14,
           "team": "home",
           "scorer": "Josh Fowles"
         },
@@ -220,11 +216,11 @@
       "yellowCards": [
         {
           "team": "home",
-          "player": null
+          "player": "Barry"
         },
         {
-          "team": "away",
-          "player": null
+          "team": "home",
+          "player": "Hatton"
         }
       ],
       "redCards": []
@@ -237,17 +233,12 @@
       "matchStage": "full_time",
       "goals": [
         {
-          "minute": 29,
-          "team": "away",
-          "scorer": "Cian McIntosh"
-        },
-        {
           "minute": 46,
           "team": "home",
           "scorer": "Ablay Sowe"
         },
         {
-          "minute": 48,
+          "minute": 49,
           "team": "away",
           "scorer": "Ben Podmore"
         },
@@ -275,12 +266,12 @@
         {
           "minute": 61,
           "team": "away",
-          "scorer": null
+          "scorer": "Unknown"
         },
         {
           "minute": 80,
           "team": "away",
-          "scorer": null
+          "scorer": "Unknown"
         }
       ],
       "yellowCards": [
@@ -300,5 +291,5 @@
       "redCards": []
     }
   ],
-  "ticker": "@breretonsocialf: What a result 1-0, battled so hard, bodies on the line and a happy fan base! @AFCBridgnorth you're a very good side and you'll finish high up the league, but today was our day @NWCFLScores"
+  "ticker": "@EccleshallFC: Danny Glover reviews this afternoons defeat. \n\nDanny is proudly supported by D9 Academy and Gough Landscapes as always we thank you for your continued support 🤝\n\n💙🦅\n\n#EccleshallFC https://t.co/g5oUwKvGZK"
 }
