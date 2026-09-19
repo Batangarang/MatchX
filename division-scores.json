@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-09-19T15:05:34.964Z",
+  "generatedAt": "2026-09-19T15:10:44.887Z",
   "date": "2026-09-19",
   "isToday": true,
-  "postCount": 108,
-  "latestPostTimestamp": "2026-09-19T15:05:17.000Z",
+  "postCount": 120,
+  "latestPostTimestamp": "2026-09-19T15:10:18.000Z",
   "fixtures": [
     {
       "home": "Foley Meir",
@@ -19,28 +19,28 @@
       "home": "Allscott Heath",
       "away": "Alsager Town",
       "kickoff": "15:00",
-      "score": "2-2",
-      "matchStage": "second_half",
+      "score": "2-1",
+      "matchStage": "full_time",
       "goals": [
         {
-          "minute": "6",
+          "minute": 6,
           "team": "away",
-          "scorer": "Geddes"
+          "scorer": "Fraser Geddes"
         },
         {
-          "minute": "22",
+          "minute": 22,
           "team": "home",
           "scorer": "James Allen"
         },
         {
-          "minute": "33",
-          "team": "away",
-          "scorer": "Harley Renshaw"
-        },
-        {
-          "minute": "35",
+          "minute": 35,
           "team": "home",
           "scorer": "Liam Parkinson"
+        },
+        {
+          "minute": 48,
+          "team": "home",
+          "scorer": "Kian Newnes"
         }
       ],
       "yellowCards": [],
@@ -50,13 +50,18 @@
       "home": "Bilston Town",
       "away": "Market Drayton Town",
       "kickoff": "15:00",
-      "score": "1-0",
+      "score": "2-0",
       "matchStage": "second_half",
       "goals": [
         {
-          "minute": "1",
+          "minute": 1,
           "team": "home",
           "scorer": "Dixon"
+        },
+        {
+          "minute": 47,
+          "team": "home",
+          "scorer": "Crump"
         }
       ],
       "yellowCards": [],
@@ -75,9 +80,9 @@
       "matchStage": "half_time",
       "goals": [
         {
-          "minute": "26",
+          "minute": 26,
           "team": "home",
-          "scorer": null
+          "scorer": "Own Goal"
         }
       ],
       "yellowCards": [],
@@ -91,17 +96,17 @@
       "matchStage": "second_half",
       "goals": [
         {
-          "minute": "21",
+          "minute": 21,
           "team": "home",
           "scorer": null
         },
         {
-          "minute": "24",
+          "minute": 24,
           "team": "away",
           "scorer": "Parker"
         },
         {
-          "minute": "37",
+          "minute": 37,
           "team": "away",
           "scorer": "Mazurkiewicz"
         }
@@ -109,11 +114,11 @@
       "yellowCards": [
         {
           "team": "away",
-          "player": "Wilding"
+          "player": "Efford"
         },
         {
           "team": "away",
-          "player": "Efford"
+          "player": "Wilding"
         }
       ],
       "redCards": []
@@ -136,12 +141,12 @@
       "matchStage": "half_time",
       "goals": [
         {
-          "minute": "7",
+          "minute": 7,
           "team": "away",
           "scorer": null
         },
         {
-          "minute": "27",
+          "minute": 27,
           "team": "home",
           "scorer": "Will Frankish"
         }
@@ -157,7 +162,7 @@
       "matchStage": "half_time",
       "goals": [
         {
-          "minute": "12",
+          "minute": 12,
           "team": "home",
           "scorer": "Josh Fowles"
         }
@@ -174,13 +179,23 @@
       "home": "Shawbury United",
       "away": "Wolverhampton Casuals",
       "kickoff": "15:00",
-      "score": "0-1",
-      "matchStage": "half_time",
+      "score": "1-2",
+      "matchStage": "second_half",
       "goals": [
         {
-          "minute": "29",
+          "minute": 29,
           "team": "away",
           "scorer": "Cian McIntosh"
+        },
+        {
+          "minute": 46,
+          "team": "home",
+          "scorer": "Ablay Sowe"
+        },
+        {
+          "minute": 49,
+          "team": "away",
+          "scorer": "Ben Podmore"
         }
       ],
       "yellowCards": [
@@ -207,5 +222,5 @@
       "redCards": []
     }
   ],
-  "ticker": "@NewMillsFC: https://t.co/oIndgNxdJA"
+  "ticker": "@EccleshallFC: 50.00 \nOver the bar \n\n💙🦅\n#EccleshallFC"
 }
