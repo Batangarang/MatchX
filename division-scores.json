@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-09-19T14:50:51.308Z",
+  "generatedAt": "2026-09-19T14:55:35.972Z",
   "date": "2026-09-19",
   "isToday": true,
-  "postCount": 98,
-  "latestPostTimestamp": "2026-09-19T14:50:55.000Z",
+  "postCount": 104,
+  "latestPostTimestamp": "2026-09-19T14:54:47.000Z",
   "fixtures": [
     {
       "home": "Foley Meir",
@@ -23,19 +23,19 @@
       "matchStage": "half_time",
       "goals": [
         {
-          "minute": 6,
+          "minute": "6",
           "team": "away",
-          "scorer": "Fraser Geddes"
+          "scorer": "Geddes"
         },
         {
-          "minute": 22,
+          "minute": "22",
           "team": "home",
           "scorer": "James Allen"
         },
         {
-          "minute": 33,
-          "team": "away",
-          "scorer": "Parkinson"
+          "minute": "35",
+          "team": "home",
+          "scorer": "Liam Parkinson"
         }
       ],
       "yellowCards": [],
@@ -49,7 +49,7 @@
       "matchStage": "second_half",
       "goals": [
         {
-          "minute": 1,
+          "minute": "1",
           "team": "home",
           "scorer": "Dixon"
         }
@@ -67,12 +67,12 @@
       "away": "AFC Bridgnorth",
       "kickoff": "15:00",
       "score": "1-0",
-      "matchStage": "second_half",
+      "matchStage": "half_time",
       "goals": [
         {
-          "minute": 26,
+          "minute": "26",
           "team": "home",
-          "scorer": "own goal"
+          "scorer": "Own Goal"
         }
       ],
       "yellowCards": [],
@@ -86,17 +86,17 @@
       "matchStage": "half_time",
       "goals": [
         {
-          "minute": 21,
+          "minute": "21",
           "team": "home",
           "scorer": null
         },
         {
-          "minute": 24,
+          "minute": "24",
           "team": "away",
           "scorer": "Parker"
         },
         {
-          "minute": 37,
+          "minute": "37",
           "team": "away",
           "scorer": "Mazurkiewicz"
         }
@@ -104,11 +104,11 @@
       "yellowCards": [
         {
           "team": "away",
-          "player": "Wilding"
+          "player": "Efford"
         },
         {
           "team": "away",
-          "player": "Efford"
+          "player": "Wilding"
         }
       ],
       "redCards": []
@@ -128,15 +128,15 @@
       "away": "Dawley Town",
       "kickoff": "15:00",
       "score": "1-1",
-      "matchStage": "second_half",
+      "matchStage": "half_time",
       "goals": [
         {
-          "minute": 7,
+          "minute": "7",
           "team": "away",
           "scorer": null
         },
         {
-          "minute": 27,
+          "minute": "27",
           "team": "home",
           "scorer": "Will Frankish"
         }
@@ -152,16 +152,12 @@
       "matchStage": "half_time",
       "goals": [
         {
-          "minute": 12,
+          "minute": "12",
           "team": "home",
           "scorer": "Josh Fowles"
         }
       ],
       "yellowCards": [
-        {
-          "team": "home",
-          "player": "Hatton"
-        },
         {
           "team": "home",
           "player": null
@@ -177,7 +173,7 @@
       "matchStage": "half_time",
       "goals": [
         {
-          "minute": 29,
+          "minute": "29",
           "team": "away",
           "scorer": "Cian McIntosh"
         }
@@ -195,7 +191,7 @@
       "away": "Barnton",
       "kickoff": "15:00",
       "score": "0-0",
-      "matchStage": "second_half",
+      "matchStage": "half_time",
       "goals": [],
       "yellowCards": [
         {
@@ -206,5 +202,5 @@
       "redCards": []
     }
   ],
-  "ticker": "@WolvesCassies: HALF TIME: Shawbury United 0 - 1 Wolverhampton Casuals\n#SHAWOL #Pitchero\nhttps://www.wolverhamptoncasualsfc.co.uk/teams/294420/match-centre/1-20008246?utm_campaign=score_update&utm_medium=post&utm_source=twitter&utm_content=E1 https://t.co/ynHmMpy4TV"
+  "ticker": "@shawburyutd: HT\nSUFC ⚪️⚫️0-1🟢🟢 Cassies https://t.co/VJbU7Fd7Um"
 }
