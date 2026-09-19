@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-09-19T14:40:46.596Z",
+  "generatedAt": "2026-09-19T14:45:52.068Z",
   "fixtureDate": "2026-09-19",
   "kickoff": "15:00",
   "homeTeam": "Sandbach United",
   "awayTeam": "Eccleshall",
-  "postsUsed": 21,
+  "postsUsed": 22,
   "imagesAnalyzedThisRun": 0,
   "totalImagesAnalyzed": 6,
   "match": {
@@ -99,22 +99,22 @@
       "firstHalf": {
         "home": 1.2,
         "away": 0.3,
-        "note": "Sandbach scored early and had Wilson testing the keeper; Eccleshall had limited clear chances."
+        "note": "Sandbach scored early; had further chances with Wilson shot and corner. Eccleshall had some pressing and crosses but fewer clear-cut opportunities in the opening 39 minutes."
       },
       "secondHalf": {
         "home": 0,
         "away": 0,
-        "note": "No data available — posts end at 37 minutes."
+        "note": "Posts end at 39:18 of the first half; no second half data available."
       },
       "extraTime": {
         "home": 0,
         "away": 0,
-        "note": "Match did not go to extra time."
+        "note": "Not applicable."
       },
       "total": {
         "home": 1.2,
         "away": 0.3,
-        "note": "Based on first 37 minutes only; second half data unavailable."
+        "note": "Data covers only first 39 minutes. Sandbach's goal is a hard floor; they also had a shot saved by keeper and a corner."
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
@@ -122,22 +122,22 @@
       "firstHalf": {
         "home": 60,
         "away": 40,
-        "note": "Sandbach scored early and showed composure; Eccleshall pressed but Sandbach quick on the break."
+        "note": "Sandbach scored early (min 12) and maintained control with quick breaks and chances. Eccleshall pressed at times (min 22) but Sandbach remained dangerous on the counter-attack."
       },
       "secondHalf": {
         "home": 50,
         "away": 50,
-        "note": "No data available — posts end at 37 minutes."
+        "note": "No second half data available in posts."
       },
       "extraTime": {
         "home": 50,
         "away": 50,
-        "note": "Match did not go to extra time."
+        "note": "Not applicable."
       },
       "total": {
         "home": 60,
         "away": 40,
-        "note": "Based on first 37 minutes only; second half data unavailable."
+        "note": "Estimate based on first 39 minutes only. Sandbach appeared to dominate after early goal."
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
