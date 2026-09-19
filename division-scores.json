@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-09-19T16:20:45.290Z",
+  "generatedAt": "2026-09-19T16:25:31.240Z",
   "date": "2026-09-19",
   "isToday": true,
-  "postCount": 188,
-  "latestPostTimestamp": "2026-09-19T16:12:44.000Z",
+  "postCount": 189,
+  "latestPostTimestamp": "2026-09-19T16:22:08.000Z",
   "fixtures": [
     {
       "home": "Foley Meir",
@@ -76,7 +76,7 @@
         {
           "minute": 67,
           "team": "home",
-          "scorer": "Bustin"
+          "scorer": null
         }
       ],
       "yellowCards": [],
@@ -111,11 +111,6 @@
       "matchStage": "full_time",
       "goals": [
         {
-          "minute": null,
-          "team": "home",
-          "scorer": "Dan Lewis"
-        },
-        {
           "minute": 21,
           "team": "away",
           "scorer": null
@@ -132,7 +127,7 @@
         },
         {
           "minute": 52,
-          "team": "away",
+          "team": "home",
           "scorer": null
         },
         {
@@ -247,7 +242,7 @@
           "scorer": "Ablay Sowe"
         },
         {
-          "minute": 49,
+          "minute": 48,
           "team": "away",
           "scorer": "Ben Podmore"
         },
@@ -286,19 +281,19 @@
       "yellowCards": [
         {
           "team": "home",
-          "player": "Joe Cuff"
-        },
-        {
-          "team": "home",
           "player": "Joe Danby"
         },
         {
           "team": "home",
           "player": "Jack Grimshaw"
+        },
+        {
+          "team": "home",
+          "player": "Joe Cuff"
         }
       ],
       "redCards": []
     }
   ],
-  "ticker": "@EccleshallFC: Defeat in Sandbach. \n\n💙🦅\n\n#EccleshallFC https://t.co/ENXFUfZ6sC"
+  "ticker": "@CheadleNomads: 90’ | FULL-TIME\n\nA point on the board this afternoon.\n\nKylan Depeiaza’s goal looked to have put us on course for all three points, but Stafford Town levelled in the 83rd minute to make it 3-3.\n\nA hard-fought afternoon ends all square.\n\n@CheadleNomads 3-3 @StaffordTown1st \n\n#WeAreNomads | @nwcfl | @NWCFLScores"
 }
