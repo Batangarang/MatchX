@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-09-19T14:30:52.459Z",
+  "generatedAt": "2026-09-19T14:35:35.279Z",
   "date": "2026-09-19",
   "isToday": true,
-  "postCount": 72,
-  "latestPostTimestamp": "2026-09-19T14:30:05.000Z",
+  "postCount": 81,
+  "latestPostTimestamp": "2026-09-19T14:34:54.000Z",
   "fixtures": [
     {
       "home": "Foley Meir",
@@ -20,15 +20,15 @@
       "away": "Alsager Town",
       "kickoff": "15:00",
       "score": "1-1",
-      "matchStage": "first_half",
+      "matchStage": "second_half",
       "goals": [
         {
-          "minute": 6,
+          "minute": 5,
           "team": "away",
-          "scorer": "Geddes"
+          "scorer": "Fraser Geddes"
         },
         {
-          "minute": 20,
+          "minute": 22,
           "team": "home",
           "scorer": "James Allen"
         }
@@ -41,7 +41,7 @@
       "away": "Market Drayton Town",
       "kickoff": "15:00",
       "score": "1-0",
-      "matchStage": "first_half",
+      "matchStage": "second_half",
       "goals": [
         {
           "minute": 1,
@@ -61,9 +61,15 @@
       "home": "Brereton Social",
       "away": "AFC Bridgnorth",
       "kickoff": "15:00",
-      "score": null,
-      "matchStage": "scheduled",
-      "goals": [],
+      "score": "1-0",
+      "matchStage": "second_half",
+      "goals": [
+        {
+          "minute": 26,
+          "team": "home",
+          "scorer": "Own Goal"
+        }
+      ],
       "yellowCards": [],
       "redCards": []
     },
@@ -72,7 +78,7 @@
       "away": "Stafford Town",
       "kickoff": "15:00",
       "score": "1-1",
-      "matchStage": "first_half",
+      "matchStage": "second_half",
       "goals": [
         {
           "minute": 21,
@@ -89,6 +95,10 @@
         {
           "team": "away",
           "player": "Efford"
+        },
+        {
+          "team": "away",
+          "player": "Wilding"
         }
       ],
       "redCards": []
@@ -108,7 +118,7 @@
       "away": "Dawley Town",
       "kickoff": "15:00",
       "score": "1-1",
-      "matchStage": "first_half",
+      "matchStage": "second_half",
       "goals": [
         {
           "minute": 7,
@@ -129,7 +139,7 @@
       "away": "Eccleshall",
       "kickoff": "15:00",
       "score": "1-0",
-      "matchStage": "first_half",
+      "matchStage": "second_half",
       "goals": [
         {
           "minute": 12,
@@ -144,9 +154,15 @@
       "home": "Shawbury United",
       "away": "Wolverhampton Casuals",
       "kickoff": "15:00",
-      "score": "0-0",
-      "matchStage": "first_half",
-      "goals": [],
+      "score": "0-1",
+      "matchStage": "second_half",
+      "goals": [
+        {
+          "minute": 29,
+          "team": "away",
+          "scorer": "Cian McIntosh"
+        }
+      ],
       "yellowCards": [],
       "redCards": []
     },
@@ -161,5 +177,5 @@
       "redCards": []
     }
   ],
-  "ticker": "@MDTFC: ‘30 gone\n\nFirst appearance for Mr Deep Heat Kelley as Ash goes down following an in air collision. \n\n#upthegingerbreadmen"
+  "ticker": "@EccleshallFC: 33.51\nCorner to eccy \nSol takes \nCleared \n\n💙🦅\n#EccleshallFC"
 }
