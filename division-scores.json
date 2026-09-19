@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-09-19T14:10:40.571Z",
+  "generatedAt": "2026-09-19T14:15:39.994Z",
   "date": "2026-09-19",
   "isToday": true,
-  "postCount": 49,
-  "latestPostTimestamp": "2026-09-19T14:10:25.000Z",
+  "postCount": 54,
+  "latestPostTimestamp": "2026-09-19T14:15:09.000Z",
   "fixtures": [
     {
       "home": "Foley Meir",
@@ -23,9 +23,14 @@
       "matchStage": "first_half",
       "goals": [
         {
-          "minute": "5",
+          "minute": 5,
           "team": "away",
-          "scorer": "Fraser"
+          "scorer": "Geddes"
+        },
+        {
+          "minute": 11,
+          "team": "away",
+          "scorer": "Jordy Fitton"
         }
       ],
       "yellowCards": [],
@@ -39,7 +44,7 @@
       "matchStage": "first_half",
       "goals": [
         {
-          "minute": "1",
+          "minute": 1,
           "team": "home",
           "scorer": "Dixon"
         }
@@ -85,7 +90,7 @@
       "matchStage": "first_half",
       "goals": [
         {
-          "minute": "7",
+          "minute": 7,
           "team": "away",
           "scorer": null
         }
@@ -97,9 +102,15 @@
       "home": "Sandbach United",
       "away": "Eccleshall",
       "kickoff": "15:00",
-      "score": null,
+      "score": "0-1",
       "matchStage": "first_half",
-      "goals": [],
+      "goals": [
+        {
+          "minute": 12,
+          "team": "away",
+          "scorer": null
+        }
+      ],
       "yellowCards": [],
       "redCards": []
     },
@@ -124,5 +135,5 @@
       "redCards": []
     }
   ],
-  "ticker": "@StaffordTown1st: 8 - 2 great chances for Town\n\nFirst Wilson’s freekick is tipped behind for a corner. The resulting corner and Parker puts an overhead kick just wide. \n\n🟣 0-0 🔘"
+  "ticker": "@alsagertown_fc: 11’ | Good effort by @jordyfitton95 which is tipped over by Dabbs from the free-kick. 👊\n\n1-0 | @AllscottHeathFC"
 }
