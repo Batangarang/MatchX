@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-09-19T16:40:40.451Z",
+  "generatedAt": "2026-09-19T16:45:40.134Z",
   "date": "2026-09-19",
   "isToday": true,
-  "postCount": 190,
-  "latestPostTimestamp": "2026-09-19T16:40:51.000Z",
+  "postCount": 192,
+  "latestPostTimestamp": "2026-09-19T16:43:51.000Z",
   "fixtures": [
     {
       "home": "Foley Meir",
@@ -43,14 +43,14 @@
           "scorer": "Kian Newnes"
         },
         {
-          "minute": 79,
-          "team": "home",
-          "scorer": "Evans"
-        },
-        {
           "minute": 80,
           "team": "home",
           "scorer": "Ethan O'Toole"
+        },
+        {
+          "minute": 79,
+          "team": "home",
+          "scorer": "Evans"
         }
       ],
       "yellowCards": [],
@@ -76,7 +76,7 @@
         {
           "minute": 67,
           "team": "home",
-          "scorer": "Bustin"
+          "scorer": null
         }
       ],
       "yellowCards": [],
@@ -112,7 +112,7 @@
       "goals": [
         {
           "minute": 21,
-          "team": "away",
+          "team": "home",
           "scorer": null
         },
         {
@@ -148,7 +148,7 @@
         },
         {
           "team": "away",
-          "player": "Wilding"
+          "player": "Efford"
         }
       ],
       "redCards": [
@@ -189,6 +189,11 @@
           "minute": 63,
           "team": "home",
           "scorer": "Jack Morris"
+        },
+        {
+          "minute": 60,
+          "team": "away",
+          "scorer": null
         }
       ],
       "yellowCards": [],
@@ -215,14 +220,10 @@
       "yellowCards": [
         {
           "team": "home",
-          "player": "Hatton"
+          "player": null
         },
         {
-          "team": "home",
-          "player": "Barry"
-        },
-        {
-          "team": "home",
+          "team": "away",
           "player": null
         }
       ],
@@ -246,7 +247,7 @@
           "scorer": "Ablay Sowe"
         },
         {
-          "minute": 49,
+          "minute": 48,
           "team": "away",
           "scorer": "Ben Podmore"
         },
@@ -299,5 +300,5 @@
       "redCards": []
     }
   ],
-  "ticker": "@SandbachFC_1st: The thoughts of Dec and Josh following our 2-0 win over Eccleshall https://t.co/mvfoHnV4XL"
+  "ticker": "@breretonsocialf: What a result 1-0, battled so hard, bodies on the line and a happy fan base! @AFCBridgnorth you're a very good side and you'll finish high up the league, but today was our day @NWCFLScores"
 }
