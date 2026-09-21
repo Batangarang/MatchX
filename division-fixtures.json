@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-21T14:15:45.687Z",
+  "generatedAt": "2026-09-21T14:20:58.237Z",
   "fixtures": [
     {
       "date": "Saturday 3 October 2026",
@@ -138,13 +138,6 @@
       "date": "Tuesday 13 October 2026",
       "home": "AFC Bridgnorth",
       "away": "Market Drayton Town",
-      "kickoff": "19:45",
-      "postponed": false
-    },
-    {
-      "date": "Tuesday 13 October 2026",
-      "home": "Dawley Town",
-      "away": "Bilston Town",
       "kickoff": "19:45",
       "postponed": false
     },
@@ -1839,6 +1832,13 @@
       "date": "Saturday 3 April 2027",
       "home": "Crewe",
       "away": "AFC Bridgnorth",
+      "kickoff": "15:00",
+      "postponed": false
+    },
+    {
+      "date": "Saturday 3 April 2027",
+      "home": "Dawley Town",
+      "away": "Bilston Town",
       "kickoff": "15:00",
       "postponed": false
     },
