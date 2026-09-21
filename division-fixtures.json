@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-21T16:35:36.584Z",
+  "generatedAt": "2026-09-21T16:40:41.669Z",
   "fixtures": [
     {
       "date": "Saturday 3 October 2026",
@@ -143,16 +143,16 @@
     },
     {
       "date": "Tuesday 13 October 2026",
-      "home": "Bilston Town",
-      "away": "Dawley Town",
-      "kickoff": "19:45",
-      "postponed": false
-    },
-    {
-      "date": "Tuesday 13 October 2026",
       "home": "Crewe",
       "away": "Widnes Town",
       "kickoff": "20:00",
+      "postponed": false
+    },
+    {
+      "date": "Wednesday 14 October 2026",
+      "home": "Bilston Town",
+      "away": "Dawley Town",
+      "kickoff": "19:45",
       "postponed": false
     },
     {
