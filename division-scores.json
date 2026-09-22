@@ -1,7 +1,88 @@
 {
-  "generatedAt": "2026-09-22T18:25:32.163Z",
-  "date": null,
+  "generatedAt": "2026-09-22T18:30:56.997Z",
+  "date": "2026-10-03",
   "isToday": false,
-  "fixtures": [],
+  "fixtures": [
+    {
+      "home": "Cheadle Heath Nomads",
+      "away": "Telford Town",
+      "kickoff": "15:00",
+      "score": null,
+      "goals": [],
+      "redCards": []
+    },
+    {
+      "home": "Crewe",
+      "away": "Allscott Heath",
+      "kickoff": "15:00",
+      "score": null,
+      "goals": [],
+      "redCards": []
+    },
+    {
+      "home": "Dawley Town",
+      "away": "Stafford Town",
+      "kickoff": "15:00",
+      "score": null,
+      "goals": [],
+      "redCards": []
+    },
+    {
+      "home": "Eccleshall",
+      "away": "AFC Bridgnorth",
+      "kickoff": "15:00",
+      "score": null,
+      "goals": [],
+      "redCards": []
+    },
+    {
+      "home": "Foley Meir",
+      "away": "Bilston Town",
+      "kickoff": "15:00",
+      "score": null,
+      "goals": [],
+      "redCards": []
+    },
+    {
+      "home": "Market Drayton Town",
+      "away": "New Mills",
+      "kickoff": "15:00",
+      "score": null,
+      "goals": [],
+      "redCards": []
+    },
+    {
+      "home": "Sandbach United",
+      "away": "Alsager Town",
+      "kickoff": "15:00",
+      "score": null,
+      "goals": [],
+      "redCards": []
+    },
+    {
+      "home": "Shawbury United",
+      "away": "Barnton",
+      "kickoff": "15:00",
+      "score": null,
+      "goals": [],
+      "redCards": []
+    },
+    {
+      "home": "Wednesfield Community",
+      "away": "Wolverhampton Casuals",
+      "kickoff": "15:00",
+      "score": null,
+      "goals": [],
+      "redCards": []
+    },
+    {
+      "home": "Widnes Town",
+      "away": "Brereton Social",
+      "kickoff": "15:00",
+      "score": null,
+      "goals": [],
+      "redCards": []
+    }
+  ],
   "ticker": null
 }
