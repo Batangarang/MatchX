@@ -1,8 +1,16 @@
 {
-  "generatedAt": "2026-09-24T17:25:34.703Z",
+  "generatedAt": "2026-09-24T17:31:00.137Z",
   "date": "2026-10-03",
   "isToday": false,
   "fixtures": [
+    {
+      "home": "Brereton Social",
+      "away": "Widnes Town",
+      "kickoff": "15:00",
+      "score": null,
+      "goals": [],
+      "redCards": []
+    },
     {
       "home": "Cheadle Heath Nomads",
       "away": "Telford Town",
@@ -70,14 +78,6 @@
     {
       "home": "Wednesfield Community",
       "away": "Wolverhampton Casuals",
-      "kickoff": "15:00",
-      "score": null,
-      "goals": [],
-      "redCards": []
-    },
-    {
-      "home": "Widnes Town",
-      "away": "Brereton Social",
       "kickoff": "15:00",
       "score": null,
       "goals": [],

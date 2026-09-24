@@ -1,6 +1,13 @@
 {
-  "generatedAt": "2026-09-24T17:25:34.643Z",
+  "generatedAt": "2026-09-24T17:31:00.066Z",
   "fixtures": [
+    {
+      "date": "Saturday 3 October 2026",
+      "home": "Brereton Social",
+      "away": "Widnes Town",
+      "kickoff": "15:00",
+      "postponed": false
+    },
     {
       "date": "Saturday 3 October 2026",
       "home": "Cheadle Heath Nomads",
@@ -61,13 +68,6 @@
       "date": "Saturday 3 October 2026",
       "home": "Wednesfield Community",
       "away": "Wolverhampton Casuals",
-      "kickoff": "15:00",
-      "postponed": false
-    },
-    {
-      "date": "Saturday 3 October 2026",
-      "home": "Widnes Town",
-      "away": "Brereton Social",
       "kickoff": "15:00",
       "postponed": false
     },
@@ -1816,13 +1816,6 @@
     },
     {
       "date": "Saturday 3 April 2027",
-      "home": "Brereton Social",
-      "away": "Widnes Town",
-      "kickoff": "15:00",
-      "postponed": false
-    },
-    {
-      "date": "Saturday 3 April 2027",
       "home": "Cheadle Heath Nomads",
       "away": "Barnton",
       "kickoff": "15:00",
@@ -1874,6 +1867,13 @@
       "date": "Saturday 3 April 2027",
       "home": "Wednesfield Community",
       "away": "Alsager Town",
+      "kickoff": "15:00",
+      "postponed": false
+    },
+    {
+      "date": "Saturday 3 April 2027",
+      "home": "Widnes Town",
+      "away": "Brereton Social",
       "kickoff": "15:00",
       "postponed": false
     },
