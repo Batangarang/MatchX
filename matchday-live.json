@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-09-26T14:40:48.074Z",
+  "generatedAt": "2026-09-26T14:50:51.788Z",
   "fixtureDate": "2026-09-26",
   "kickoff": "15:00",
   "homeTeam": "Sandbach United",
   "awayTeam": "Alsager Town",
-  "postsUsed": 27,
+  "postsUsed": 28,
   "imagesAnalyzedThisRun": 0,
   "totalImagesAnalyzed": 3,
   "match": {
@@ -15,9 +15,9 @@
     "scoreDiscrepancy": null,
     "unconfirmedGoals": [],
     "finalScoreAnnounced": null,
-    "halfTimeScoreAnnounced": null,
+    "halfTimeScoreAnnounced": "0-0",
     "htDiscrepancy": null,
-    "matchStage": "first_half",
+    "matchStage": "half_time",
     "lineups": {
       "home": {
         "players": [
@@ -104,24 +104,24 @@
     },
     "roughXG": {
       "firstHalf": {
-        "home": 0.5,
-        "away": 0.8,
-        "note": "Multiple chances for both sides but no goals. Sandbach had Fowles miss at back post and Foley shot cleared off line; Alsager had Hurst miss one-on-one, Renshaw miss from close range, and Parry header miss near post."
+        "home": 0.4,
+        "away": 0.6,
+        "note": "Sandbach had early O'Connell volley over and late Foley chance cleared off line twice; Alsager had Azanb shot on keeper, Hurst one-on-one miss, Renshaw miss, and Parry header miss. Multiple clear chances both sides but both squandered."
       },
       "secondHalf": {
         "home": 0,
         "away": 0,
-        "note": "No second half data available in posts."
+        "note": "No second-half data in posts (match only reached half-time)."
       },
       "extraTime": {
         "home": 0,
         "away": 0,
-        "note": "No extra time played."
+        "note": "Match did not reach extra time."
       },
       "total": {
-        "home": 0.5,
-        "away": 0.8,
-        "note": "First half only. Balanced play with good chances at both ends but neither team could convert."
+        "home": 0.4,
+        "away": 0.6,
+        "note": "First-half only. Alsager slightly more threatening but both sides created decent opportunities without converting."
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
@@ -129,22 +129,22 @@
       "firstHalf": {
         "home": 45,
         "away": 55,
-        "note": "Alsager started well with promising chances; Sandbach got hold of the game towards mid-first-half after early pressure. Post at 38 mins suggests Alsager still pressing but Sandbach defending resolutely."
+        "note": "Sandbach described as needing to 'get a grip and get hold of the game' mid-half; Alsager described as having 'a promising start' and creating more clear chances overall."
       },
       "secondHalf": {
         "home": 50,
         "away": 50,
-        "note": "No second half data available."
+        "note": "No second-half data available."
       },
       "extraTime": {
         "home": 50,
         "away": 50,
-        "note": "No extra time played."
+        "note": "Match did not reach extra time."
       },
       "total": {
         "home": 45,
         "away": 55,
-        "note": "Based on first half only. Alsager had the better start with more clear-cut chances early on; Sandbach gradually came into the match."
+        "note": "Alsager slightly on top in the first half despite both sides creating chances; Sandbach had to fight back into the game."
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
