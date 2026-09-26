@@ -1,26 +1,16 @@
 {
-  "scrapedAt": "2026-09-26T16:01:01.058Z",
+  "scrapedAt": "2026-09-26T17:00:55.683Z",
   "nextFixture": {
-    "date": "Sat 26/09/26",
+    "date": "Sat 03/10/26",
     "opposition": "Alsager Town",
     "opponentUrl": "clubpage.php?id=3",
     "homeAway": "H",
     "kickoff": "15:00",
     "score": null,
     "scorers": null,
-    "competitionNote": "The Macron Cup 1"
+    "competitionNote": null
   },
   "nextFixtures": [
-    {
-      "date": "Sat 26/09/26",
-      "opposition": "Alsager Town",
-      "opponentUrl": "clubpage.php?id=3",
-      "homeAway": "H",
-      "kickoff": "15:00",
-      "score": null,
-      "scorers": null,
-      "competitionNote": "The Macron Cup 1"
-    },
     {
       "date": "Sat 03/10/26",
       "opposition": "Alsager Town",
@@ -60,19 +50,39 @@
       "score": null,
       "scorers": null,
       "competitionNote": "Cheshire Senior Cup 1"
+    },
+    {
+      "date": "Sat 17/10/26",
+      "opposition": "Bilston Town",
+      "opponentUrl": "clubpage.php?id=355",
+      "homeAway": "H",
+      "kickoff": "15:00",
+      "score": null,
+      "scorers": null,
+      "competitionNote": null
     }
   ],
   "lastResult": {
-    "date": "Sat 19/09/26",
-    "opposition": "Eccleshall",
-    "opponentUrl": "clubpage.php?id=30",
+    "date": "Sat 26/09/26",
+    "opposition": "Alsager Town",
+    "opponentUrl": "clubpage.php?id=3",
     "homeAway": "H",
     "kickoff": "15:00",
-    "score": "W 2-0",
-    "scorers": "Joshua Fowles (12) Kyle Foley (86)",
-    "competitionNote": null
+    "score": "LOST",
+    "scorers": null,
+    "competitionNote": "0-0 after 90 mins, Alsager Town won 2-4 on pens"
   },
   "lastResults": [
+    {
+      "date": "Sat 26/09/26",
+      "opposition": "Alsager Town",
+      "opponentUrl": "clubpage.php?id=3",
+      "homeAway": "H",
+      "kickoff": "15:00",
+      "score": "LOST",
+      "scorers": null,
+      "competitionNote": "0-0 after 90 mins, Alsager Town won 2-4 on pens"
+    },
     {
       "date": "Sat 19/09/26",
       "opposition": "Eccleshall",
@@ -91,16 +101,6 @@
       "kickoff": "15:00",
       "score": "D 3-3",
       "scorers": "Kyle Foley (26) Kieran OConnell (63) Kyle Foley (77)",
-      "competitionNote": null
-    },
-    {
-      "date": "Sat 05/09/26",
-      "opposition": "Brereton Social",
-      "opponentUrl": "clubpage.php?id=459",
-      "homeAway": "A",
-      "kickoff": "15:00",
-      "score": "W 1-0",
-      "scorers": "Robbie Hatton (90+3)",
       "competitionNote": null
     }
   ],
@@ -221,9 +221,9 @@
       "opponentUrl": "clubpage.php?id=3",
       "homeAway": "H",
       "kickoff": "15:00",
-      "score": null,
+      "score": "LOST",
       "scorers": null,
-      "competitionNote": "The Macron Cup 1"
+      "competitionNote": "0-0 after 90 mins, Alsager Town won 2-4 on pens"
     },
     {
       "date": "Sat 03/10/26",
