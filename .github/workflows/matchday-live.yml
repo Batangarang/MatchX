@@ -1,6 +1,11 @@
 name: Matchday live tracker
 on:
   workflow_dispatch:
+    inputs:
+      manual:
+        description: 'true when started by hand from the admin page (bypasses time/freshness gates)'
+        required: false
+        default: 'false'
 
 concurrency:
   group: matchday-live
@@ -19,6 +24,7 @@ jobs:
       - run: npm install
       - run: node matchday-live.js
         env:
+          MANUAL_RUN: ${{ github.event.inputs.manual }}
           GETXAPI_KEY: ${{ secrets.GETXAPI_KEY }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
       - name: Commit updated data

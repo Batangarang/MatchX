@@ -1,6 +1,11 @@
 name: Division recap - midweek recap
 on:
   workflow_dispatch:
+    inputs:
+      manual:
+        description: 'true when started by hand from the admin page (bypasses time/freshness gates)'
+        required: false
+        default: 'false'
     
 concurrency:
   group: division-recap-midweek-recap

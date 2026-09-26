@@ -1,6 +1,11 @@
 name: Scrape Sandbach fixtures
 on:
   workflow_dispatch:
+    inputs:
+      manual:
+        description: 'true when started by hand from the admin page (bypasses time/freshness gates)'
+        required: false
+        default: 'false'
 
 concurrency:
   group: scrape

@@ -2,6 +2,11 @@ name: Poll X
 
 on:
   workflow_dispatch:
+    inputs:
+      manual:
+        description: 'true when started by hand from the admin page (bypasses time/freshness gates)'
+        required: false
+        default: 'false'
 
 concurrency:
   group: poll-x
