@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-26T19:31:07.375Z",
-  "sinceDate": "2026-09-19T19:30:39.078Z",
+  "generatedAt": "2026-09-26T22:01:20.051Z",
+  "sinceDate": "2026-09-19T22:00:51.452Z",
   "clubs": [
     {
       "name": "Sandbach United",
@@ -1946,6 +1946,11 @@
       "handle": "nwcfl",
       "posts": [
         {
+          "text": "Final result from today's Macron Cup games",
+          "createdAt": "2026-09-26T19:45:50.000Z",
+          "images": []
+        },
+        {
           "text": "And a full final run down of the draw for the second round of the Macron Cup. \n\nTies to be played on the weekend of Saturday 24th October. https://t.co/dADoTRZnzp",
           "createdAt": "2026-09-26T17:39:58.000Z",
           "images": []
@@ -2095,14 +2100,6 @@
           "text": "Did you know we are now advertising Club vacancies also? \n\nWe have vacancies at @GarstangFC @ashtontownfc and @CreweFC on our website. \n\nCan you help? \n\nhttps://www.nwcfl.com/league-vacancies.php",
           "createdAt": "2026-09-20T17:21:44.000Z",
           "images": []
-        },
-        {
-          "text": "Final Prem update after the late game https://t.co/3ItTq17MMk",
-          "createdAt": "2026-09-19T20:00:45.000Z",
-          "images": [
-            "https://pbs.twimg.com/media/HSmtLwZWkAA-b--.jpg",
-            "https://pbs.twimg.com/media/HSmtMC4XQAASN50.jpg"
-          ]
         }
       ]
     }
