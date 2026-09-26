@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-09-26T15:55:43.947Z",
+  "generatedAt": "2026-09-26T16:06:20.029Z",
   "fixtureDate": "2026-09-26",
   "kickoff": "15:00",
   "homeTeam": "Sandbach United",
   "awayTeam": "Alsager Town",
-  "postsUsed": 48,
+  "postsUsed": 49,
   "imagesAnalyzedThisRun": 0,
   "totalImagesAnalyzed": 3,
   "match": {
@@ -14,7 +14,7 @@
     "feedScore": "0-0",
     "scoreDiscrepancy": null,
     "unconfirmedGoals": [],
-    "finalScoreAnnounced": null,
+    "finalScoreAnnounced": "0-0",
     "halfTimeScoreAnnounced": "0-0",
     "htDiscrepancy": null,
     "matchStage": "penalties",
@@ -109,13 +109,13 @@
         "playerOn": "Tatters"
       },
       {
-        "minute": 53,
+        "minute": 54,
         "team": "home",
         "playerOff": "Williams",
         "playerOn": "Vernon"
       },
       {
-        "minute": 53,
+        "minute": 54,
         "team": "home",
         "playerOff": "Shotton",
         "playerOn": "Tatters"
@@ -152,19 +152,19 @@
       "goals": []
     },
     "penalties": {
-      "finalScore": null,
+      "finalScore": "2-4",
       "takers": []
     },
     "roughXG": {
       "firstHalf": {
         "home": 0.3,
-        "away": 0.5,
-        "note": "Alsager had multiple clear chances (David Hurst one-on-one, header attempts). Sandbach had limited efforts (Fowles header, Foley shot cleared). Alsager edged first half."
+        "away": 0.6,
+        "note": "Alsager had a one-on-one chance (Hurst), plus several headers from corners. Sandbach had Fowles at back post and Foley cleared off the line but limited clear-cut chances."
       },
       "secondHalf": {
         "home": 0.4,
-        "away": 0.3,
-        "note": "Sandbach improved possession but both teams created few high-quality chances. Hall made a good save for Sandbach. Renshaw had a near-miss and Brown couldn't finish."
+        "away": 0.4,
+        "note": "Sandbach improved possession but few big chances. Alsager had dangerous counter from Hurst and Renshaw's effort. Foley's late effort hit the post. Overall cautious finishing from both sides."
       },
       "extraTime": {
         "home": 0,
@@ -173,21 +173,21 @@
       },
       "total": {
         "home": 0.7,
-        "away": 0.8,
-        "note": "Tight match with both sides having chances but neither converting. Alsager slightly more clinical in creating opportunities. Neither team managed to break deadlock in 90 minutes."
+        "away": 1,
+        "note": "Both teams created chances but were largely wasteful in open play. Alsager slightly more threatening overall but neither side converted."
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
     "matchControl": {
       "firstHalf": {
-        "home": 40,
-        "away": 60,
-        "note": "Alsager had more attacking threat with multiple chances; Sandbach offered limited creativity but were 'probably lucky to go in level'."
+        "home": 35,
+        "away": 65,
+        "note": "Alsager had more of the ball and better chances early; Sandbach described as 'needing to get a grip'. Alsager dominated the first half."
       },
       "secondHalf": {
         "home": 55,
         "away": 45,
-        "note": "Sandbach improved and had 'more of the ball' but 'hadn't created many big chances'; stalemate developed."
+        "note": "Sandbach improved and had more of the ball in the second half but Alsager remained dangerous on the counter."
       },
       "extraTime": {
         "home": 50,
@@ -195,9 +195,9 @@
         "note": "No extra time played."
       },
       "total": {
-        "home": 48,
-        "away": 52,
-        "note": "Close match overall; Alsager slightly more threatening in first half, Sandbach more controlled in second, but neither dominant."
+        "home": 45,
+        "away": 55,
+        "note": "Alsager slightly dominated overall, particularly the first half, but Sandbach improved in the second half."
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
