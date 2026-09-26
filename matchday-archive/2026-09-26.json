@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-09-26T15:40:50.808Z",
+  "generatedAt": "2026-09-26T15:45:51.632Z",
   "fixtureDate": "2026-09-26",
   "kickoff": "15:00",
   "homeTeam": "Sandbach United",
   "awayTeam": "Alsager Town",
-  "postsUsed": 42,
+  "postsUsed": 43,
   "imagesAnalyzedThisRun": 0,
   "totalImagesAnalyzed": 3,
   "match": {
@@ -81,6 +81,11 @@
         "minute": 75,
         "team": "away",
         "player": "9. Hurst"
+      },
+      {
+        "minute": 75,
+        "team": "away",
+        "player": "Alsager 9"
       }
     ],
     "redCards": [],
@@ -120,6 +125,18 @@
         "team": "home",
         "playerOff": "Cope",
         "playerOn": "Birchall"
+      },
+      {
+        "minute": 58,
+        "team": "home",
+        "playerOff": "Williams",
+        "playerOn": "Vernon"
+      },
+      {
+        "minute": 58,
+        "team": "home",
+        "playerOff": "Shotton",
+        "playerOn": "Tatters"
       }
     ],
     "sinBins": [],
@@ -140,24 +157,24 @@
     },
     "roughXG": {
       "firstHalf": {
-        "home": 0.3,
+        "home": 0.4,
         "away": 0.6,
-        "note": "Alsager had clear chances (Hurst one-on-one, Renshaw missing from cross), Sandbach had Foley and Fowles efforts cleared off the line. Alsager created more quality chances."
+        "note": "Alsager had two clear-cut chances (Hurst one-on-one, Renshaw miss from good position) and threatened more. Sandbach had Fowles header cleared off line and Foley shot cleared off line. Alsager edged it."
       },
       "secondHalf": {
-        "home": 0.4,
+        "home": 0.5,
         "away": 0.5,
-        "note": "Sandbach had more possession but fewer clear-cut chances. Alsager had Renshaw's near-miss and Hurst's shot saved by Hall. Overall fairly open but few genuine goalscoring opportunities."
+        "note": "Sandbach had more possession but few clear chances. Cope and Birchall had headers cleared, Foley shot cleared. Alsager had Renshaw near-miss from cut-back and Hall made a vital save from Hurst. Fairly balanced."
       },
       "extraTime": {
         "home": 0,
         "away": 0,
-        "note": "No extra time played"
+        "note": "No extra time played."
       },
       "total": {
-        "home": 0.7,
+        "home": 0.9,
         "away": 1.1,
-        "note": "Alsager created slightly more and clearer chances throughout, particularly in the first half. Sandbach improved second-half possession but remained relatively toothless in attack."
+        "note": "Alsager created more clear-cut chances across both halves despite the goalless draw. Sandbach improved after half-time with possession but lacked penetration."
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
@@ -165,22 +182,22 @@
       "firstHalf": {
         "home": 40,
         "away": 60,
-        "note": "Alsager dominated early with better chances and movement. Sandbach described as needing to 'get a grip' on the game."
+        "note": "Alsager started strongly with better chances. Posts noted Sandbach 'probably lucky to go in level' and 'missing a couple of decent chances'."
       },
       "secondHalf": {
         "home": 55,
         "away": 45,
-        "note": "Sandbach improved and had 'definitely more of the ball' in second half, though neither side created many big chances."
+        "note": "Sandbach had 'more of the ball in this second half' but 'haven't created many big chances'. Alsager remained dangerous on the counter."
       },
       "extraTime": {
         "home": 50,
         "away": 50,
-        "note": "No extra time played"
+        "note": "No extra time played."
       },
       "total": {
         "home": 47,
         "away": 53,
-        "note": "Alsager slightly edged control overall, particularly in first half. Match described as 'turgid' with limited quality from either side."
+        "note": "Alsager dominated the first half; Sandbach improved possession second half but Alsager remained more threatening overall."
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
