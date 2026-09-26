@@ -1,10 +1,8 @@
 {
-  "updatedAt": "2026-09-26T10:30:44.442Z",
+  "updatedAt": "2026-09-26T13:18:33.100Z",
   "score": {
-    "enabled": true,
-    "date": "2026-09-19",
-    "home": 2,
-    "away": 0
+    "enabled": false,
+    "date": "2026-09-26"
   },
   "texts": {
     "recap:sandbachFocus": {
@@ -16,7 +14,7 @@
     "fanBriefing": {
       "enabled": true,
       "hold": false,
-      "text": "Sandbach United recently featured in a new football management game, giving fans the chance to take the club to the top of the non-league system.  Outside of the virtual football OConnell and Hatton have been leading the way in terms of goals this season but Foley and Fowels have also been in form and all will be keen to add to their tally against a struggling Alsager side. The club will be looking to build on their recent progress as the campaign continues.",
+      "text": "Sandbach United recently featured in a new football management game, giving fans the chance to take the club to the top of the non-league system.  Outside of the virtual football OConnell, Foley and Hatton have been leading the way in terms of goals but Fowles has also been in form and all will be keen to add to their tally against a struggling Alsager side that will be keen to prove themselves in a cup game under new management. Sandbach will be looking to build on their recent progress as the campaign continues.",
       "base": "2026-09-26T09:30:37.307Z"
     }
   }
