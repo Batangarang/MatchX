@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-09-26T15:15:54.883Z",
+  "generatedAt": "2026-09-26T15:25:41.958Z",
   "fixtureDate": "2026-09-26",
   "kickoff": "15:00",
   "homeTeam": "Sandbach United",
   "awayTeam": "Alsager Town",
-  "postsUsed": 33,
+  "postsUsed": 35,
   "imagesAnalyzedThisRun": 0,
   "totalImagesAnalyzed": 3,
   "match": {
@@ -57,10 +57,10 @@
           "5. Cartwright",
           "6. Parry",
           "7. O'Mara",
-          "8. Fitton",
-          "9. Hurst",
-          "10. Butt",
-          "11. Renshaw"
+          "9. Fitton",
+          "10. Hurst",
+          "11. Butt",
+          "14. Renshaw"
         ],
         "substitutes": [
           "Guiver",
@@ -82,7 +82,7 @@
       {
         "minute": 27,
         "team": "away",
-        "playerOff": "10. Butt",
+        "playerOff": "10. Hurst",
         "playerOn": "15"
       },
       {
@@ -93,6 +93,18 @@
       },
       {
         "minute": null,
+        "team": "home",
+        "playerOff": "Shotton",
+        "playerOn": "Tatters"
+      },
+      {
+        "minute": 54,
+        "team": "home",
+        "playerOff": "Williams",
+        "playerOn": "Vernon"
+      },
+      {
+        "minute": 54,
         "team": "home",
         "playerOff": "Shotton",
         "playerOn": "Tatters"
@@ -117,23 +129,23 @@
     "roughXG": {
       "firstHalf": {
         "home": 0.3,
-        "away": 0.6,
-        "note": "Alsager had the better chances: Hurst missed a one-on-one, Renshaw failed to convert from a good cross. Sandbach had efforts from O'Connell, Fowles and Foley (with two cleared off the line), but fewer clear openings."
+        "away": 0.8,
+        "note": "Alsager had clear chances including Hurst's one-on-one miss and Renshaw's open play miss. Sandbach had Foley and Fowles efforts cleared off the line and an early O'Connell volley over."
       },
       "secondHalf": {
-        "home": 0,
-        "away": 0,
-        "note": "Very limited information; posts only indicate second half restart and substitutions, no specific chances described."
+        "home": 0.4,
+        "away": 0.2,
+        "note": "Sandbach dominated possession but limited clear chances. Cope had a header cleared off the line."
       },
       "extraTime": {
         "home": 0,
         "away": 0,
-        "note": "Not played."
+        "note": "No extra time played."
       },
       "total": {
-        "home": 0.3,
-        "away": 0.6,
-        "note": "Alsager created more clear chances in the first half, particularly Hurst's one-on-one and Renshaw's miss from the cross. Sandbach had some efforts but were described as lucky to go in level."
+        "home": 0.7,
+        "away": 1,
+        "note": "Competitive match with both sides creating chances but neither converting. Alsager slightly more clinical in first half; Sandbach controlled second half without breakthrough."
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
@@ -141,22 +153,22 @@
       "firstHalf": {
         "home": 40,
         "away": 60,
-        "note": "Alsager had the better chances and more attacking threat. Sandbach commentary notes they 'need to get a grip' and were 'lucky to go in level'."
+        "note": "Alsager had the better chances and early dominance; Sandbach 'possibly lucky to go in level' per commentary."
       },
       "secondHalf": {
-        "home": 50,
-        "away": 50,
-        "note": "Insufficient detail in posts to assess; only substitutions and restart mentioned."
+        "home": 65,
+        "away": 35,
+        "note": "Sandbach 'definitely had more of the ball' but struggled to create meaningful chances."
       },
       "extraTime": {
         "home": 50,
         "away": 50,
-        "note": "Not played."
+        "note": "No extra time played."
       },
       "total": {
-        "home": 45,
-        "away": 55,
-        "note": "Alsager dominated possession and chances in the first half; second half balance unknown from available posts."
+        "home": 52,
+        "away": 48,
+        "note": "Evenly matched overall; Alsager stronger in first half, Sandbach stronger in second but no breakthrough either side."
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
