@@ -1,6 +1,6 @@
 const fs = require('fs');
 const CLUBS = require('./division-clubs.js');
-const { getUserTweets } = require('./getxapi-client.js');
+const { getUserTweetsIncremental, getCallCount } = require('./getxapi-client.js');
 const API_KEY = process.env.GETXAPI_KEY;
 const ANTHROPIC_KEY = process.env.ANTHROPIC_API_KEY;
 const { getUKNow, getUKDateString } = require('./uk-time.js');
@@ -174,16 +174,35 @@ async function run() {
   });
 
   const dayStart = new Date(now); dayStart.setUTCHours(0, 0, 0, 0);
+
+  // Incremental fetch: keep today's posts in a cache file and only ask
+  // GetXAPI for anything newer, so a normal poll is ~1 call per club instead
+  // of re-paging the whole day for every club on every run.
+  const CACHE_FILE = 'division-scores-cache.json';
+  let cache = { date: null, posts: {} };
+  try {
+    if (fs.existsSync(CACHE_FILE)) cache = JSON.parse(fs.readFileSync(CACHE_FILE, 'utf-8'));
+  } catch {}
+  if (cache.date !== target.targetDate) cache = { date: target.targetDate, posts: {} };
+
   const postsByHandle = {};
   for (const handle of handlesNeeded) {
     try {
-      const posts = await getUserTweets(handle, API_KEY, { maxPages: 2, sinceDate: dayStart });
-      postsByHandle[handle] = posts.filter(p => new Date(p.createdAt) >= dayStart);
+      const posts = await getUserTweetsIncremental(handle, API_KEY, {
+        cached: cache.posts[handle] || [],
+        floorDate: dayStart,
+        maxPagesFresh: 2,
+        maxPagesIncremental: 2,
+      });
+      postsByHandle[handle] = posts;
+      cache.posts[handle] = posts;
     } catch (err) {
       console.warn(`Skipping @${handle}: ${err.message}`);
-      postsByHandle[handle] = [];
+      // keep whatever we already had rather than treating a failed call as "posted nothing"
+      postsByHandle[handle] = cache.posts[handle] || [];
     }
   }
+  fs.writeFileSync(CACHE_FILE, JSON.stringify(cache));
 
   const allPosts = Object.entries(postsByHandle).flatMap(([handle, posts]) =>
     posts.map(p => ({ ...p, handle }))
@@ -202,10 +221,12 @@ async function run() {
     previous.date === target.targetDate
   ) {
     console.log('Nothing new since last check — skipping AI call.');
+    logCost('division-scores', { getxapiCalls: getCallCount() });
     return;
   }
   if (allPosts.length === 0) {
     console.log('No posts found from any club playing today.');
+    logCost('division-scores', { getxapiCalls: getCallCount() });
     return;
   }
 
@@ -218,7 +239,7 @@ ${fixtureList}
 Here are today's X posts from clubs playing today:
 ${postsText}
 
-Scorelines in these posts may be written without a dash, e.g. "2 1" instead of "2-1". Recognise these as valid too, and normalise to "X-Y" form.
+Scorelines in these posts may be written without a dash, e.g. "2 1" instead of "2-1", or with the word "nil" (e.g. "1 nil", "one-nil", "2-nil" = 2-0). Recognise these as valid too, and normalise to "X-Y" form (home-away).
 
 IMPORTANT: A club's score can change multiple times as goals are scored throughout the match. Always use the MOST RECENT scoreline mentioned for each fixture — do not use an early or outdated scoreline just because it was clearly stated, if a later post shows a different, more current score for the same fixture.
 
@@ -263,12 +284,13 @@ Only include a score if explicitly stated in the posts. Leave as null if not men
   // If no explicit scoreline was stated but goals were extracted, derive a
   // score from the goals count rather than showing nothing at all.
     const fixturesWithDerivedScores = (parsed.fixtures || []).map(f => {
-    if (f.score) return { ...f, matchStage: f.matchStage || 'scheduled' };
+    if (f.score) return { ...f, scoreSource: 'explicit', matchStage: f.matchStage || 'scheduled' };
     const goals = f.goals || [];
     if (goals.length === 0) return { ...f, matchStage: f.matchStage || 'scheduled' };
     const home = goals.filter(g => g.team === 'home').length;
     const away = goals.filter(g => g.team === 'away').length;
-    return { ...f, score: `${home}-${away}`, matchStage: f.matchStage || 'scheduled' };
+    // scoreSource lets matchday-live tell a stated scoreline apart from one we only inferred by counting goals
+    return { ...f, score: `${home}-${away}`, scoreSource: 'derived', matchStage: f.matchStage || 'scheduled' };
  });
 
     const output = {
@@ -283,7 +305,7 @@ Only include a score if explicitly stated in the posts. Leave as null if not men
 
   fs.writeFileSync('division-scores.json', JSON.stringify(output, null, 2));
   logCost('division-scores', {
-    getxapiCalls: handlesNeeded.size,
+    getxapiCalls: getCallCount(),
     claudeCalls: 1,
     inputTokens: data.usage?.input_tokens || 0,
     outputTokens: data.usage?.output_tokens || 0,
