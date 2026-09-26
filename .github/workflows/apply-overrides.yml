@@ -1,45 +1,44 @@
-name: Division scores
-
+name: Apply overrides
 on:
   workflow_dispatch:
     inputs:
+      payload:
+        description: 'overrides JSON sent from the admin page'
+        required: true
       manual:
-        description: 'true when started by hand from the admin page (bypasses time/freshness gates)'
+        description: 'unused (kept so the admin page can send the same inputs to every workflow)'
         required: false
         default: 'false'
 
 concurrency:
-  group: division-scores
+  group: apply-overrides
   cancel-in-progress: false
 
 permissions:
   contents: write
 
 jobs:
-  scores:
+  apply:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
       - uses: actions/setup-node@v5
         with:
           node-version: 24
-      - run: npm install
-      - run: node division-fixtures.js
-      - run: node division-scores.js
+      - name: Validate and apply overrides
+        run: node apply-overrides.js
         env:
-          MANUAL_RUN: ${{ github.event.inputs.manual }}
-          GETXAPI_KEY: ${{ secrets.GETXAPI_KEY }}
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          PAYLOAD: ${{ github.event.inputs.payload }}
       - name: Commit updated data
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git config core.editor true
-          
-          for f in division-fixtures.json division-scores.json division-scores-cache.json division-fixtures-today.json division-results-log.json cost-log.json; do
+          for f in overrides.json matchday-live.json matchday-index.json division-scores.json; do
             [ -f "$f" ] && git add "$f"
           done
-          git diff --staged --quiet || git commit -m "..."
+          git add -A -- matchday-archive
+          git diff --staged --quiet || git commit -m "Apply manual overrides"
           for i in 1 2 3 4 5; do
             if git pull --rebase --autostash origin main; then
               if git push; then

@@ -6,6 +6,7 @@ const ANTHROPIC_KEY = process.env.ANTHROPIC_API_KEY;
 const { getUKNow, getUKDateString } = require('./uk-time.js');
 const REAL_NOW = new Date();
 const { logCost } = require('./cost-tracker.js');
+const { activeScoreOverride } = require('./overrides-node.js');
 
 function findHandle(clubName) {
   if (clubName.includes('Sandbach')) return 'SandbachFC_1st';
@@ -147,6 +148,27 @@ function findTargetFixtures(fixtures, testDate) {
     return d && d.toISOString().slice(0, 10) === nextDateStr;
   });
   return { fixtures: nextDayFixtures, isToday: false, targetDate: nextDateStr };
+}
+
+// Keep a running log of stated/confirmed final-ish scores per day so the recap
+// engine can be handed CONFIRMED results instead of guessing from club posts.
+function recordResults(dateStr, fixtures) {
+  const LOG = 'division-results-log.json';
+  let log = {};
+  try { log = JSON.parse(fs.readFileSync(LOG, 'utf-8')); } catch {}
+  const day = log[dateStr] || {};
+  fixtures.forEach(f => {
+    if (!f.score || f.scoreSource === 'derived') return; // only scores actually stated (or set manually)
+    const key = `${f.home}|${f.away}`;
+    const existing = day[key];
+    const keepExisting = existing && existing.matchStage === 'full_time' && f.matchStage !== 'full_time' && f.scoreSource !== 'manual_override';
+    if (keepExisting) return;
+    day[key] = { home: f.home, away: f.away, score: f.score, matchStage: f.matchStage || null, scoreSource: f.scoreSource };
+  });
+  log[dateStr] = day;
+  const cutoff = Date.now() - 30 * 24 * 60 * 60 * 1000;
+  Object.keys(log).forEach(d => { if (new Date(d).getTime() < cutoff) delete log[d]; });
+  fs.writeFileSync(LOG, JSON.stringify(log, null, 2));
 }
 
 async function run() {
@@ -342,13 +364,22 @@ Only include a score if explicitly stated in the posts. Leave as null if not men
     return { ...f, score: `${home}-${away}`, scoreSource: 'derived', matchStage: f.matchStage || 'scheduled' };
  });
 
+  // Manual score override (admin page) for Sandbach's fixture wins over the AI reading.
+  const scoreOverride = activeScoreOverride(target.targetDate);
+  const finalFixtures = scoreOverride
+    ? fixturesWithDerivedScores.map(f => (/sandbach/i.test(f.home || '') || /sandbach/i.test(f.away || ''))
+        ? { ...f, score: `${scoreOverride.home}-${scoreOverride.away}`, scoreSource: 'manual_override' }
+        : f)
+    : fixturesWithDerivedScores;
+  recordResults(target.targetDate, finalFixtures);
+
     const output = {
     generatedAt: REAL_NOW.toISOString(),
     date: target.targetDate,
     isToday: true,
     postCount: totalPostCount,
     latestPostTimestamp,
-    fixtures: fixturesWithDerivedScores,
+    fixtures: finalFixtures,
     ticker,
   };
 

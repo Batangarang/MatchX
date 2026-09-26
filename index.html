@@ -411,6 +411,7 @@
     </div>
   </div>
 
+  <script src="overrides.js"></script>
   <script>
     // ---------- Reusable carousel ----------
 
@@ -878,7 +879,8 @@
         divisionTitleEl.className = 'briefing-title-active';
         if (divisionBriefingData) {
           const summary = divisionBriefingData.summary || '';
-          const teaser = summary.length > 160 ? summary.slice(0, 160).trim() + '…' : summary;
+          const teaserRaw = summary.length > 160 ? summary.slice(0, 160).trim() + '…' : summary;
+          const teaser = divisionBriefingData.isOverride ? MatchXOverrides.esc(teaserRaw) : teaserRaw;
           contentEl.innerHTML = `
             <div>${teaser || 'No round-up available yet.'}</div>
             <a href="division.html" style="display:inline-block; margin-top:10px; font-size:13px;" onclick="event.stopPropagation()">Read the full round-up →</a>
@@ -899,21 +901,23 @@
 
       fetch('x-insights.json?t=' + Date.now())
       .then(res => res.json())
-      .then(data => {
-        fanBriefingData = data;
+      .then(data => MatchXOverrides.load().then(ov => {
+        const overridden = MatchXOverrides.html(ov, 'fanBriefing', data.generatedAt);
+        fanBriefingData = overridden ? { ...data, summary: overridden } : data;
         renderBriefingCard();
-      })
+      }))
       .catch(() => {
         fanBriefingData = { summary: 'No insight available yet.' };
         renderBriefingCard();
       });
 
-    const divisionModes = ['weekend-preview', 'weekend-recap', 'midweek-preview', 'midweek-recap'];
+    // The recap engine now only generates 'preview' and 'recap' (the old weekend-/midweek- files are no longer updated)
+    const divisionModes = ['preview', 'recap'];
     Promise.allSettled(
       divisionModes.map(mode =>
         fetch(`division-insights-${mode}.json?t=` + Date.now()).then(res => res.json())
       )
-    ).then(results => {
+    ).then(results => MatchXOverrides.load().then(ov => {
       const successful = results
         .filter(r => r.status === 'fulfilled' && (r.value?.summary || r.value?.sandbachFocus))
         .map(r => r.value);
@@ -927,9 +931,11 @@
         divisionBriefingData = latest.sandbachFocus
           ? { ...latest, summary: latest.sandbachFocus }
           : latest;
+        const overriddenText = MatchXOverrides.plain(ov, `${latest.mode}:sandbachFocus`, latest.generatedAt);
+        if (overriddenText) divisionBriefingData = { ...divisionBriefingData, summary: overriddenText, isOverride: true };
       }
       renderBriefingCard();
-    });
+    }));
 
     fetch('x-posts.json?t=' + Date.now())
       .then(res => res.json())

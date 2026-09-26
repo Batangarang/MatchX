@@ -143,6 +143,41 @@
       <button class="btn small" onclick="setToken()">Set GitHub token</button>
     </div>
 
+    <div class="card" id="overrides-card">
+      <h2>Manual Overrides</h2>
+      <div class="sub" style="margin-bottom:12px;">Fix the score or wording by hand if the AI gets it wrong. Tick a box to use your version; untick it to go back to the automatic one. Changes are sent via the "Apply overrides" workflow and go live in about 1–2 minutes.</div>
+
+      <div style="font-weight:700; color:var(--navy); margin-bottom:6px;">Sandbach main game — score</div>
+      <div id="ov-score-current" style="font-size:13px; background:var(--paper); border-radius:8px; padding:10px; margin-bottom:10px;">Loading…</div>
+      <label style="display:flex; align-items:center; gap:8px; font-size:14px; margin-bottom:8px;">
+        <input type="checkbox" id="ov-score-enabled"> Override the score with the values below
+      </label>
+      <div style="display:flex; gap:12px; flex-wrap:wrap; margin-bottom:6px;">
+        <label style="font-size:13px; flex:1; min-width:120px;"><span id="ov-home-label">Home</span><br>
+          <input type="number" id="ov-score-home" min="0" max="99" style="width:100%; padding:8px 10px; border-radius:6px; border:1px solid var(--line); font-size:16px;"></label>
+        <label style="font-size:13px; flex:1; min-width:120px;"><span id="ov-away-label">Away</span><br>
+          <input type="number" id="ov-score-away" min="0" max="99" style="width:100%; padding:8px 10px; border-radius:6px; border:1px solid var(--line); font-size:16px;"></label>
+      </div>
+      <div class="sub" id="ov-score-note" style="margin:4px 0 16px;"></div>
+
+      <div style="font-weight:700; color:var(--navy); margin-bottom:6px;">Text — Fan Briefing &amp; Round-Ups</div>
+      <select id="ov-text-select" style="width:100%; font-size:14px; padding:8px 10px; border-radius:6px; border:1px solid var(--line); margin-bottom:8px;"></select>
+      <div class="sub" id="ov-text-status" style="margin:0 0 6px;"></div>
+      <textarea id="ov-text-area" rows="9" style="width:100%; font-size:14px; padding:10px; border-radius:6px; border:1px solid var(--line); font-family:inherit; line-height:1.5;"></textarea>
+      <label style="display:flex; align-items:center; gap:8px; font-size:14px; margin-top:8px;">
+        <input type="checkbox" id="ov-text-enabled"> Use my text instead of the automatic one
+      </label>
+      <label style="display:flex; align-items:center; gap:8px; font-size:14px; margin-top:6px;">
+        <input type="checkbox" id="ov-text-hold"> Keep my text after the next automatic refresh <span style="color:var(--muted); font-size:12px;">(otherwise it drops when new text is generated)</span>
+      </label>
+
+      <div style="margin-top:16px; display:flex; gap:8px; align-items:center; flex-wrap:wrap;">
+        <button class="btn primary" id="ov-save-btn" onclick="saveOverrides(this)">Save &amp; publish overrides</button>
+        <button class="btn" onclick="loadOverridesPanel()">Discard changes</button>
+        <span id="ov-save-status" style="font-size:12px; color:var(--muted);"></span>
+      </div>
+    </div>
+
     <div class="card">
       <h2>Workflows</h2>
       <div id="workflows-list" class="loading">Loading workflow data from GitHub…</div>
@@ -265,6 +300,7 @@
       document.getElementById('dashboard').style.display = 'block';
       updateTokenStatus();
       loadWorkflows();
+      setTimeout(loadOverridesPanel, 0); // after the script has finished defining its constants
       renderEfficiencyTable();
       document.getElementById('domain-cost-note').textContent = `£${DOMAIN_YEARLY_GBP.toFixed(2)}`;
       setCostPeriod('day');
@@ -427,6 +463,204 @@
         btnEl.textContent = 'Failed';
       }
       setTimeout(() => { btnEl.textContent = 'Run now'; btnEl.disabled = false; }, 3000);
+    }
+
+    // ---------- Manual overrides ----------
+    const TEXT_OVERRIDES = [
+      { key: 'fanBriefing', label: 'Fan Briefing (homepage)', file: 'x-insights.json', field: 'summary' },
+      { key: 'preview:sandbachFocus', label: 'Round-Up · Coming Up · Sandbach United', file: 'division-insights-preview.json', field: 'sandbachFocus' },
+      { key: 'preview:divisionWide', label: 'Round-Up · Coming Up · Around the Division', file: 'division-insights-preview.json', field: 'divisionWide' },
+      { key: 'recap:sandbachFocus', label: 'Round-Up · Recent Results · Sandbach United', file: 'division-insights-recap.json', field: 'sandbachFocus' },
+      { key: 'recap:divisionWide', label: 'Round-Up · Recent Results · Around the Division', file: 'division-insights-recap.json', field: 'divisionWide' },
+    ];
+    const SCORE_SOURCE_LABELS = {
+      manual_override: 'set manually',
+      announced_full_time: 'announced full-time score',
+      confirmed_by_both_feeds: 'confirmed by both feeds',
+      division_scores: 'division live-scores feed',
+      match_feed_stated: 'stated in match feed',
+      goal_count_only: 'counted from goal reports — unconfirmed',
+      restored_after_manual_override: 'restored after a manual override',
+      explicit: 'stated in posts',
+      derived: 'counted from goals — unconfirmed',
+    };
+
+    let ovDraft = { score: { enabled: false }, texts: {} };
+    let ovSources = {};
+    let ovMatch = null;
+    let ovCurrentKey = null;
+    const ovTouched = new Set();
+
+    async function ovFetchJSON(file) {
+      try {
+        const r = await fetch(file + '?t=' + Date.now());
+        return r.ok ? await r.json() : null;
+      } catch { return null; }
+    }
+
+    async function loadOverridesPanel() {
+      ovTouched.clear();
+      document.getElementById('ov-save-status').textContent = '';
+      const [ov, live, ds] = await Promise.all([
+        ovFetchJSON('overrides.json'), ovFetchJSON('matchday-live.json'), ovFetchJSON('division-scores.json'),
+      ]);
+      ovDraft = { score: (ov && ov.score) || { enabled: false }, texts: JSON.parse(JSON.stringify((ov && ov.texts) || {})) };
+      ovMatch = live;
+      ovSources = {};
+      for (const file of [...new Set(TEXT_OVERRIDES.map(t => t.file))]) ovSources[file] = await ovFetchJSON(file);
+
+      // ---- score ----
+      const cur = document.getElementById('ov-score-current');
+      if (!live || !live.match) {
+        cur.textContent = 'No matchday data found yet.';
+      } else {
+        const m = live.match;
+        const dsFixture = ds && ds.date === live.fixtureDate && (ds.fixtures || []).find(f => /sandbach/i.test(f.home) || /sandbach/i.test(f.away));
+        const src = SCORE_SOURCE_LABELS[m.scoreSource] || m.scoreSource || 'not recorded (older data)';
+        cur.innerHTML = `<div><b>${ovEsc(live.homeTeam)} ${ovEsc(m.score || '–')} ${ovEsc(live.awayTeam)}</b> <span style="color:var(--muted);">— ${ovEsc(live.fixtureDate)}${m.matchStage ? ', ' + ovEsc(String(m.matchStage).replace('_', ' ')) : ''}</span></div>
+          <div style="color:var(--muted); font-size:12px; margin-top:4px;">Source: ${ovEsc(src)}${m.scoreDiscrepancy ? ' · ' + ovEsc(m.scoreDiscrepancy) : ''}</div>` +
+          (dsFixture ? `<div style="color:var(--muted); font-size:12px; margin-top:2px;">Division feed shows: ${ovEsc(dsFixture.home)} ${ovEsc(dsFixture.score || '–')} ${ovEsc(dsFixture.away)}${dsFixture.scoreSource ? ' (' + ovEsc(SCORE_SOURCE_LABELS[dsFixture.scoreSource] || dsFixture.scoreSource) + ')' : ''}</div>` : '');
+        document.getElementById('ov-home-label').textContent = live.homeTeam;
+        document.getElementById('ov-away-label').textContent = live.awayTeam;
+        const sc = ovDraft.score;
+        const ovForThisGame = sc.enabled && sc.date === live.fixtureDate;
+        let h = '', a = '';
+        if (ovForThisGame) { h = sc.home; a = sc.away; }
+        else {
+          const base = m.scoreBeforeOverride || m.score || '';
+          const mm = String(base).match(/(\d+)\s*[-–]\s*(\d+)/);
+          if (mm) { h = mm[1]; a = mm[2]; }
+        }
+        document.getElementById('ov-score-enabled').checked = !!ovForThisGame;
+        document.getElementById('ov-score-home').value = h;
+        document.getElementById('ov-score-away').value = a;
+        document.getElementById('ov-score-note').textContent = `Applies to the game on ${live.fixtureDate}. Turning it off puts back the score the automatic logic had before.`;
+      }
+
+      // ---- text ----
+      const sel = document.getElementById('ov-text-select');
+      sel.innerHTML = TEXT_OVERRIDES.map(t => {
+        const e = ovDraft.texts[t.key];
+        return `<option value="${t.key}">${ovEsc(t.label)}${e && e.enabled ? ' ✎' : ''}</option>`;
+      }).join('');
+      ovCurrentKey = TEXT_OVERRIDES[0].key;
+      sel.value = ovCurrentKey;
+      ovLoadTextEditor(ovCurrentKey);
+    }
+
+    function ovEsc(s) {
+      return String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+    }
+
+    function ovUnderlying(t) {
+      const src = ovSources[t.file];
+      return { text: (src && src[t.field]) || '', generatedAt: (src && src.generatedAt) || '' };
+    }
+
+    function ovLoadTextEditor(key) {
+      const t = TEXT_OVERRIDES.find(x => x.key === key);
+      const under = ovUnderlying(t);
+      const e = ovDraft.texts[key];
+      document.getElementById('ov-text-area').value = e ? e.text : under.text;
+      document.getElementById('ov-text-enabled').checked = !!(e && e.enabled);
+      document.getElementById('ov-text-hold').checked = !!(e && e.hold);
+      ovUpdateTextStatus();
+    }
+
+    function ovUpdateTextStatus() {
+      const t = TEXT_OVERRIDES.find(x => x.key === ovCurrentKey);
+      const under = ovUnderlying(t);
+      const e = ovDraft.texts[ovCurrentKey];
+      const when = under.generatedAt ? new Date(under.generatedAt).toLocaleString('en-GB', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' }) : 'unknown';
+      let msg = `Automatic text generated ${when}. `;
+      if (!e || !e.enabled) msg += 'Showing the automatic text.';
+      else if (ovTouched.has(ovCurrentKey)) msg += 'Your override will be active once saved' + (e.hold ? ' and kept past the next refresh.' : ' and drop when new text is generated.');
+      else if (e.hold) msg += 'Override ACTIVE — kept past refreshes.';
+      else if (e.base === under.generatedAt) msg += 'Override ACTIVE — drops automatically when new text is generated.';
+      else msg += 'Override EXPIRED (text was regenerated since). Tick "keep" and save to re-apply it.';
+      document.getElementById('ov-text-status').textContent = msg;
+    }
+
+    function ovCommitTextEditor(touch) {
+      if (!ovCurrentKey) return;
+      const text = document.getElementById('ov-text-area').value;
+      const enabled = document.getElementById('ov-text-enabled').checked;
+      const hold = document.getElementById('ov-text-hold').checked;
+      const existing = ovDraft.texts[ovCurrentKey];
+      if (!touch && !existing) return;
+      ovDraft.texts[ovCurrentKey] = { ...(existing || {}), enabled, hold, text };
+      if (touch) ovTouched.add(ovCurrentKey);
+    }
+
+    document.getElementById('ov-text-select').addEventListener('change', e => {
+      ovCommitTextEditor(false);
+      ovCurrentKey = e.target.value;
+      ovLoadTextEditor(ovCurrentKey);
+    });
+    ['ov-text-area', 'ov-text-enabled', 'ov-text-hold'].forEach(id => {
+      document.getElementById(id).addEventListener('input', () => { ovCommitTextEditor(true); ovUpdateTextStatus(); });
+      document.getElementById(id).addEventListener('change', () => { ovCommitTextEditor(true); ovUpdateTextStatus(); });
+    });
+
+    async function saveOverrides(btnEl) {
+      let token = localStorage.getItem('matchx_gh_token');
+      if (!token) {
+        token = prompt('Paste your GitHub token (the same one used for cron-job.org). This will be saved on this device so you only need to enter it once.');
+        if (!token) return;
+        localStorage.setItem('matchx_gh_token', token);
+        updateTokenStatus();
+      }
+      const status = document.getElementById('ov-save-status');
+      ovCommitTextEditor(false);
+
+      // score
+      const scoreEnabled = document.getElementById('ov-score-enabled').checked;
+      const hVal = document.getElementById('ov-score-home').value;
+      const aVal = document.getElementById('ov-score-away').value;
+      const date = ovMatch && ovMatch.fixtureDate;
+      const score = { enabled: false };
+      if (date) score.date = date;
+      if (scoreEnabled) {
+        if (!date) { status.textContent = 'No matchday found to override.'; return; }
+        if (hVal === '' || aVal === '' || !/^\d{1,2}$/.test(hVal) || !/^\d{1,2}$/.test(aVal)) { status.textContent = 'Enter a whole-number score for both sides.'; return; }
+        score.enabled = true; score.home = parseInt(hVal, 10); score.away = parseInt(aVal, 10);
+      }
+
+      // texts — refresh "base" only for blocks edited in this session
+      const texts = {};
+      for (const [key, e] of Object.entries(ovDraft.texts)) {
+        const t = TEXT_OVERRIDES.find(x => x.key === key);
+        if (!t) continue;
+        const entry = { enabled: !!e.enabled, hold: !!e.hold, text: e.text, base: e.base || '' };
+        if (ovTouched.has(key)) entry.base = ovUnderlying(t).generatedAt;
+        texts[key] = entry;
+      }
+
+      const payload = JSON.stringify({ score, texts });
+      if (payload.length > 60000) { status.textContent = 'Too much text to send — shorten it.'; return; }
+
+      btnEl.disabled = true;
+      status.textContent = 'Sending…';
+      try {
+        const res = await fetch(`https://api.github.com/repos/${REPO}/actions/workflows/apply-overrides.yml/dispatches`, {
+          method: 'POST',
+          headers: { 'Authorization': `Bearer ${token}`, 'Accept': 'application/vnd.github+json' },
+          body: JSON.stringify({ ref: 'main', inputs: { payload, manual: 'true' } }),
+        });
+        if (res.status === 204) {
+          status.textContent = 'Sent ✓ — live in about 1–2 minutes. Reloading this panel shortly…';
+          setTimeout(loadOverridesPanel, 100000);
+        } else if (res.status === 401 || res.status === 403 || res.status === 404) {
+          status.textContent = 'Failed — check the token.';
+          localStorage.removeItem('matchx_gh_token');
+          updateTokenStatus();
+        } else {
+          status.textContent = `Failed (${res.status}).`;
+        }
+      } catch {
+        status.textContent = 'Failed — network error.';
+      }
+      btnEl.disabled = false;
     }
 
     // ---------- Actual Cost ----------

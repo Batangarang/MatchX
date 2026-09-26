@@ -1,6 +1,7 @@
 const fs = require('fs');
 const CLUBS = require('./division-clubs.js');
 const { logCost } = require('./cost-tracker.js');
+const { activeScoreOverride } = require('./overrides-node.js');
 const API_KEY = process.env.ANTHROPIC_API_KEY;
 const MODE = process.env.RECAP_MODE; // 'preview' or 'recap'
 const CURRENT_CLUB_NAMES = new Set(CLUBS.map(c => c.name));
@@ -31,6 +32,63 @@ function kickoffToUTC(dateObj, kickoff) {
 function loadFixtures() {
   if (!fs.existsSync('division-fixtures.json')) return [];
   return JSON.parse(fs.readFileSync('division-fixtures.json', 'utf-8')).fixtures || [];
+}
+
+const pad2 = n => String(n).padStart(2, '0');
+function toDateKey(d) {
+  return `${d.getFullYear()}-${pad2(d.getMonth() + 1)}-${pad2(d.getDate())}`;
+}
+
+// Build a block of CONFIRMED final scores to hand to the AI, so it never has to
+// guess a scoreline from club posts (it once wrote "1-0" for a 2-0 win).
+// Sources, best first: manual admin override > official nwcfl result (data.json)
+// for Sandbach; division-results-log.json (scores actually stated in posts) for the rest.
+function buildConfirmedResults(relevantFixtures) {
+  const dateKeys = new Set(relevantFixtures.map(f => {
+    const d = parseFixtureDate(f.date);
+    return d ? toDateKey(d) : null;
+  }).filter(Boolean));
+
+  const lines = [];
+
+  // --- Sandbach ---
+  try {
+    const mainData = JSON.parse(fs.readFileSync('data.json', 'utf-8'));
+    const official = (mainData.allFixtures || []).filter(f => f.score && f.date);
+    official.forEach(f => {
+      const m = f.date.match(/(\d{2})\/(\d{2})\/(\d{2})/);
+      if (!m) return;
+      const key = `20${m[3]}-${m[2]}-${m[1]}`;
+      if (!dateKeys.has(key)) return;
+      const sm = f.score.match(/([WDL])\s*(\d+)\s*-\s*(\d+)/);
+      if (!sm) return;
+      let sandbachGoals = sm[2], oppGoals = sm[3];
+      let source = 'official NWCFL result';
+      const ov = activeScoreOverride(key);
+      if (ov) {
+        // override is home-first; convert to Sandbach-first
+        [sandbachGoals, oppGoals] = f.homeAway === 'H' ? [ov.home, ov.away] : [ov.away, ov.home];
+        source = 'manually confirmed';
+      }
+      const word = Number(sandbachGoals) > Number(oppGoals) ? 'WON' : Number(sandbachGoals) < Number(oppGoals) ? 'LOST' : 'DREW';
+      lines.push(`Sandbach United ${word} ${f.homeAway === 'H' ? 'at home to' : 'away at'} ${f.opposition} — Sandbach United scored ${sandbachGoals}, ${f.opposition} scored ${oppGoals} (${source}, ${key})`);
+    });
+  } catch {}
+
+  // --- Rest of the division ---
+  try {
+    const log = JSON.parse(fs.readFileSync('division-results-log.json', 'utf-8'));
+    dateKeys.forEach(key => {
+      Object.values(log[key] || {}).forEach(r => {
+        if (/sandbach/i.test(r.home) || /sandbach/i.test(r.away)) return; // covered above
+        const stage = r.matchStage === 'full_time' ? 'full time' : (r.matchStage ? r.matchStage.replace('_', ' ') + ' — may not be final' : 'latest stated score');
+        lines.push(`${r.home} ${String(r.score).replace('-', ' - ')} ${r.away} (home team first; ${stage})`);
+      });
+    });
+  } catch {}
+
+  if (lines.length === 0) return '';
+  return `\n\nCONFIRMED SCORES (authoritative — these override anything the X posts say. Copy these scorelines exactly; never alter, average or recompute them):\n${lines.join('\n')}\nFor any fixture NOT listed above, only quote a scoreline if a post explicitly states it; otherwise describe the result without giving a score.`;
 }
 
 function isSameDay(a, b) {
@@ -103,10 +161,12 @@ function shouldRunNow() {
     }, new Date(0));
 
     const periodKey = latestKickoff.toISOString().slice(0, 10);
-    if (alreadyRunForPeriod(periodKey)) return { proceed: false, reason: 'Already ran for this period.' };
+    // MANUAL_RUN is set only by the admin page's "Run now" — lets you regenerate a recap on demand
+    const manual = process.env.MANUAL_RUN === 'true';
+    if (!manual && alreadyRunForPeriod(periodKey)) return { proceed: false, reason: 'Already ran for this period.' };
 
     const cutoff = new Date(latestKickoff.getTime() + 150 * 60000);
-    if (now < cutoff) return { proceed: false, reason: `Waiting until ${cutoff.toISOString()} (latest KO + 2.5hrs).` };
+    if (!manual && now < cutoff) return { proceed: false, reason: `Waiting until ${cutoff.toISOString()} (latest KO + 2.5hrs).` };
 
     return { proceed: true, periodKey, relevantFixtures: weekFixtures };
   }
@@ -218,6 +278,7 @@ async function run() {
     .filter(Boolean)
     .join('\n\n');
 
+  const confirmedResultsNote = MODE === 'recap' ? buildConfirmedResults(decision.relevantFixtures) : '';
   const isPreview = MODE === 'preview';
   const periodLabel = isPreview ? 'the coming week' : 'the past week';
 
@@ -239,7 +300,7 @@ Respond with ONLY a JSON object, no other text, no markdown fences, in exactly t
 }`
     : `Here are the First Division South fixtures that were played over ${periodLabel}:
 ${fixtureList}
-${sandbachOverrideNote}${sandbachFormNote}
+${sandbachOverrideNote}${sandbachFormNote}${confirmedResultsNote}
 IMPORTANT: In the fixture list above, the format is always "Home Team v Away Team" — the first team named is always playing at home, the second team is always the visitor. Do not reverse this or infer venue/direction from anything else in the posts — always trust this explicit home/away order from the fixture list.
 IMPORTANT: You MUST reference every single fixture listed above at least briefly — do not skip or omit any fixture from the list, even if it seems minor. If there isn't much to say about a fixture, a single short sentence is fine, but every fixture must be mentioned somewhere in your response.
 CRITICAL: Only state facts that are directly supported by the league table data or the X posts provided above. Do NOT invent results, a losing streak, a table position change, or a specific points gap unless it is explicitly confirmed by the data given. If you are not certain about a specific detail, describe the situation more generally rather than stating something specific that might be wrong. Cross-check any claim about recent form or results against the "form" field in the league table and the actual posts before stating it.

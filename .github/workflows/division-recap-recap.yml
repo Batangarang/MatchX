@@ -33,6 +33,7 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           RECAP_MODE: recap
+          MANUAL_RUN: ${{ github.event.inputs.manual }}
       - name: Commit updated data
         run: |
           git config user.name "github-actions[bot]"

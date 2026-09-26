@@ -72,10 +72,18 @@
     <div class="meta" id="recap-updated"></div>
   </div>
 
+  <script src="overrides.js"></script>
   <script>
     function loadInsight(mode, contentId, metaId) {
       fetch(`division-insights-${mode}.json?t=` + Date.now())
         .then(res => res.json())
+        .then(data => MatchXOverrides.load().then(ov => {
+          const sOv = MatchXOverrides.html(ov, `${mode}:sandbachFocus`, data.generatedAt);
+          const dOv = MatchXOverrides.html(ov, `${mode}:divisionWide`, data.generatedAt);
+          if (sOv) data = { ...data, sandbachFocus: sOv, _sHtml: true };
+          if (dOv) data = { ...data, divisionWide: dOv, _dHtml: true };
+          return data;
+        }))
         .then(data => {
           if (!data.sandbachFocus && !data.divisionWide) {
             document.getElementById(contentId).innerHTML = '<span class="empty">Not available yet.</span>';

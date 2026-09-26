@@ -2,6 +2,7 @@ const fs = require('fs');
 const CLUBS = require('./division-clubs.js');
 const { getUserTweetsIncremental, getCallCount } = require('./getxapi-client.js');
 const { logCost } = require('./cost-tracker.js');
+const { activeScoreOverride } = require('./overrides-node.js');
 
 const API_KEY = process.env.GETXAPI_KEY;
 const ANTHROPIC_KEY = process.env.ANTHROPIC_API_KEY;
@@ -346,7 +347,7 @@ function loadDivisionScore(dateStr, sandbachIsHome) {
 
 // Decide the score to display, and make the goal list agree with it.
 //   match: { goals, feedScore, finalScoreAnnounced, matchStage }
-function confirmScore(match, divisionScore, fallbackScore) {
+function confirmScore(match, divisionScore, fallbackScore, scoreOverride) {
   const goals = match.goals || [];
   const derived = deriveScoreFromGoals(goals);
   const feed = match.feedScore && parseScore(match.feedScore) ? match.feedScore : null;
@@ -355,7 +356,10 @@ function confirmScore(match, divisionScore, fallbackScore) {
     ? match.finalScoreAnnounced : null;
 
   let score, scoreSource, scoreConfirmed = true, note = null;
-  if (ft) {
+  if (scoreOverride) {
+    // Set by hand from the admin page — beats every automatic source.
+    score = `${scoreOverride.home}-${scoreOverride.away}`; scoreSource = 'manual_override';
+  } else if (ft) {
     score = ft; scoreSource = 'announced_full_time';
   } else if (division && feed && division === feed) {
     score = division; scoreSource = 'confirmed_by_both_feeds';
@@ -388,14 +392,14 @@ function confirmScore(match, divisionScore, fallbackScore) {
   return { score, scoreSource, scoreConfirmed, scoreDiscrepancy: note, goals: finalGoals, unconfirmedGoals };
 }
 
-function mergeMatchData(previous, incoming, divisionScore) {
+function mergeMatchData(previous, incoming, divisionScore, scoreOverride) {
   if (!previous) {
     const dedupedGoals = dedupeSimilarGoals(incoming.goals || []);
     const announcedScore = incoming.finalScoreAnnounced || null;
     const feedScore = incoming.scoreEvidence ? (incoming.score || null) : null;
     const confirmed = confirmScore(
       { goals: dedupedGoals, feedScore, finalScoreAnnounced: announcedScore, matchStage: incoming.matchStage },
-      divisionScore, incoming.score
+      divisionScore, incoming.score, scoreOverride
     );
     const derivedHT = deriveHalfTimeScoreFromGoals(confirmed.goals);
     const announcedHT = incoming.halfTimeScoreAnnounced || null;
@@ -444,7 +448,7 @@ function mergeMatchData(previous, incoming, divisionScore) {
   const stageNow = incoming.matchStage && incoming.matchStage !== 'scheduled' ? incoming.matchStage : previous.matchStage;
   const confirmed = confirmScore(
     { goals: mergedGoals, feedScore, finalScoreAnnounced: announcedScore, matchStage: stageNow },
-    divisionScore, previous.score
+    divisionScore, previous.score, scoreOverride
   );
 
   const derivedHT = deriveHalfTimeScoreFromGoals(confirmed.goals);
@@ -565,6 +569,7 @@ async function run() {
   // Independent second source for the score: what division-scores.js has
   // confirmed from explicitly stated scorelines.
   const divisionScore = loadDivisionScore(dateStr, fixture.homeAway === 'H');
+  const scoreOverride = activeScoreOverride(dateStr);
 
   const combinedRaw = [
     ...homePosts.map(p => ({ ...p, side: 'home', handle: homeHandle })),
@@ -596,8 +601,8 @@ async function run() {
     // No new posts, but the division feed may have confirmed/corrected the
     // score since last time — re-check it for free (no AI call).
     const prevMatch = previousOutput.match;
-    if (prevMatch && divisionScore) {
-      const re = confirmScore(prevMatch, divisionScore, prevMatch.score);
+    if (prevMatch && (divisionScore || scoreOverride)) {
+      const re = confirmScore(prevMatch, divisionScore, prevMatch.score, scoreOverride);
       if (re.score !== prevMatch.score || re.goals.length !== (prevMatch.goals || []).length) {
         const updated = {
           ...previousOutput,
@@ -729,7 +734,7 @@ IMPORTANT: If actual goals have been scored, roughXG must reflect that clearly �
     throw new Error(`Failed to parse AI response as JSON: ${err.message}\nRaw: ${raw}`);
   }
 
-  const mergedMatch = mergeMatchData(previousOutput?.match, parsed, divisionScore);
+  const mergedMatch = mergeMatchData(previousOutput?.match, parsed, divisionScore, scoreOverride);
 
   const output = {
     generatedAt: new Date().toISOString(),
