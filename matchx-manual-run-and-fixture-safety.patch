@@ -1,0 +1,400 @@
+diff --git a/.github/workflows/division-recap-midweek-preview.yml b/.github/workflows/division-recap-midweek-preview.yml
+index b87461e0c..68a4f28e2 100644
+--- a/.github/workflows/division-recap-midweek-preview.yml
++++ b/.github/workflows/division-recap-midweek-preview.yml
+@@ -1,6 +1,11 @@
+ name: Division recap - midweek preview
+ on:
+   workflow_dispatch:
++    inputs:
++      manual:
++        description: 'true when started by hand from the admin page (bypasses time/freshness gates)'
++        required: false
++        default: 'false'
+ 
+ concurrency:
+   group: division-recap-midweek-preview
+diff --git a/.github/workflows/division-recap-midweek-recap.yml b/.github/workflows/division-recap-midweek-recap.yml
+index 8283f5c39..5b77a7b8f 100644
+--- a/.github/workflows/division-recap-midweek-recap.yml
++++ b/.github/workflows/division-recap-midweek-recap.yml
+@@ -1,6 +1,11 @@
+ name: Division recap - midweek recap
+ on:
+   workflow_dispatch:
++    inputs:
++      manual:
++        description: 'true when started by hand from the admin page (bypasses time/freshness gates)'
++        required: false
++        default: 'false'
+     
+ concurrency:
+   group: division-recap-midweek-recap
+diff --git a/.github/workflows/division-recap-preview.yml b/.github/workflows/division-recap-preview.yml
+index e01de90d7..31cc61452 100644
+--- a/.github/workflows/division-recap-preview.yml
++++ b/.github/workflows/division-recap-preview.yml
+@@ -1,6 +1,11 @@
+ name: Division recap - preview
+ on:
+   workflow_dispatch:
++    inputs:
++      manual:
++        description: 'true when started by hand from the admin page (bypasses time/freshness gates)'
++        required: false
++        default: 'false'
+ concurrency:
+   group: recap-preview
+   cancel-in-progress: false
+diff --git a/.github/workflows/division-recap-recap.yml b/.github/workflows/division-recap-recap.yml
+index b96969868..f9b79b951 100644
+--- a/.github/workflows/division-recap-recap.yml
++++ b/.github/workflows/division-recap-recap.yml
+@@ -1,6 +1,11 @@
+ name: Division recap - recap
+ on:
+   workflow_dispatch:
++    inputs:
++      manual:
++        description: 'true when started by hand from the admin page (bypasses time/freshness gates)'
++        required: false
++        default: 'false'
+ concurrency:
+   group: recap-recap
+   cancel-in-progress: false
+diff --git a/.github/workflows/division-recap-weekend-preview.yml b/.github/workflows/division-recap-weekend-preview.yml
+index 7c918e17d..9e5ff2a36 100644
+--- a/.github/workflows/division-recap-weekend-preview.yml
++++ b/.github/workflows/division-recap-weekend-preview.yml
+@@ -1,6 +1,11 @@
+ name: Division recap - weekend preview
+ on:
+   workflow_dispatch:
++    inputs:
++      manual:
++        description: 'true when started by hand from the admin page (bypasses time/freshness gates)'
++        required: false
++        default: 'false'
+ 
+ concurrency:
+   group: division-recap-weekend-preview
+diff --git a/.github/workflows/division-recap-weekend-recap.yml b/.github/workflows/division-recap-weekend-recap.yml
+index 46165d380..fe9c65dff 100644
+--- a/.github/workflows/division-recap-weekend-recap.yml
++++ b/.github/workflows/division-recap-weekend-recap.yml
+@@ -1,6 +1,11 @@
+ name: Division recap - weekend recap
+ on:
+   workflow_dispatch:
++    inputs:
++      manual:
++        description: 'true when started by hand from the admin page (bypasses time/freshness gates)'
++        required: false
++        default: 'false'
+ 
+ concurrency:
+   group: division-recap-weekend-recap
+diff --git a/.github/workflows/division-scores.yml b/.github/workflows/division-scores.yml
+index a994ad9ef..8361ab2a3 100644
+--- a/.github/workflows/division-scores.yml
++++ b/.github/workflows/division-scores.yml
+@@ -2,6 +2,11 @@ name: Division scores
+ 
+ on:
+   workflow_dispatch:
++    inputs:
++      manual:
++        description: 'true when started by hand from the admin page (bypasses time/freshness gates)'
++        required: false
++        default: 'false'
+ 
+ concurrency:
+   group: division-scores
+@@ -22,6 +27,7 @@ jobs:
+       - run: node division-fixtures.js
+       - run: node division-scores.js
+         env:
++          MANUAL_RUN: ${{ github.event.inputs.manual }}
+           GETXAPI_KEY: ${{ secrets.GETXAPI_KEY }}
+           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+       - name: Commit updated data
+@@ -30,7 +36,7 @@ jobs:
+           git config user.email "github-actions[bot]@users.noreply.github.com"
+           git config core.editor true
+           
+-          for f in division-fixtures.json division-scores.json division-scores-cache.json cost-log.json; do
++          for f in division-fixtures.json division-scores.json division-scores-cache.json division-fixtures-today.json cost-log.json; do
+             [ -f "$f" ] && git add "$f"
+           done
+           git diff --staged --quiet || git commit -m "..."
+diff --git a/.github/workflows/matchday-live.yml b/.github/workflows/matchday-live.yml
+index 61483597e..26050b21c 100644
+--- a/.github/workflows/matchday-live.yml
++++ b/.github/workflows/matchday-live.yml
+@@ -1,6 +1,11 @@
+ name: Matchday live tracker
+ on:
+   workflow_dispatch:
++    inputs:
++      manual:
++        description: 'true when started by hand from the admin page (bypasses time/freshness gates)'
++        required: false
++        default: 'false'
+ 
+ concurrency:
+   group: matchday-live
+@@ -19,6 +24,7 @@ jobs:
+       - run: npm install
+       - run: node matchday-live.js
+         env:
++          MANUAL_RUN: ${{ github.event.inputs.manual }}
+           GETXAPI_KEY: ${{ secrets.GETXAPI_KEY }}
+           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+       - name: Commit updated data
+diff --git a/.github/workflows/scrape.yml b/.github/workflows/scrape.yml
+index 09dca0e56..3bad07b85 100644
+--- a/.github/workflows/scrape.yml
++++ b/.github/workflows/scrape.yml
+@@ -1,6 +1,11 @@
+ name: Scrape Sandbach fixtures
+ on:
+   workflow_dispatch:
++    inputs:
++      manual:
++        description: 'true when started by hand from the admin page (bypasses time/freshness gates)'
++        required: false
++        default: 'false'
+ 
+ concurrency:
+   group: scrape
+diff --git a/.github/workflows/x-live.yml b/.github/workflows/x-live.yml
+index 8524912c6..a68741c60 100644
+--- a/.github/workflows/x-live.yml
++++ b/.github/workflows/x-live.yml
+@@ -2,6 +2,11 @@ name: Poll X
+ 
+ on:
+   workflow_dispatch:
++    inputs:
++      manual:
++        description: 'true when started by hand from the admin page (bypasses time/freshness gates)'
++        required: false
++        default: 'false'
+ 
+ concurrency:
+   group: poll-x
+diff --git a/admin.html b/admin.html
+index d329bca10..a17de0375 100644
+--- a/admin.html
++++ b/admin.html
+@@ -407,16 +407,21 @@
+             'Authorization': `Bearer ${token}`,
+             'Accept': 'application/vnd.github+json',
+           },
+-          body: JSON.stringify({ ref: 'main' }),
++          // manual=true tells the scripts this is a genuine click, not a cron-job.org run
++          body: JSON.stringify({ ref: 'main', inputs: { manual: 'true' } }),
+         });
+ 
+         if (res.status === 204) {
+           btnEl.textContent = 'Triggered ✓';
+           setTimeout(() => loadWorkflows(), 3000);
+         } else {
+-          btnEl.textContent = 'Failed — check token';
+-          localStorage.removeItem('matchx_gh_token');
+-          updateTokenStatus();
++          if (res.status === 401 || res.status === 403 || res.status === 404) {
++            btnEl.textContent = 'Failed — check token';
++            localStorage.removeItem('matchx_gh_token');
++            updateTokenStatus();
++          } else {
++            btnEl.textContent = `Failed (${res.status})`;
++          }
+         }
+       } catch (err) {
+         btnEl.textContent = 'Failed';
+diff --git a/division-scores.js b/division-scores.js
+index 8a3e114b3..e75d98228 100644
+--- a/division-scores.js
++++ b/division-scores.js
+@@ -56,6 +56,35 @@ function getTodaysWindow(fixtures) {
+   };
+ }
+ 
++// Once today's fixtures have been seen, remember them in their own small file.
++// nwcfl.com stops listing a fixture once it kicks off, and division-fixtures.js's
++// "keep today's fixtures" logic depends on the previous file surviving intact —
++// a single bad scrape or push-conflict resolution used to wipe them for the
++// rest of the day. This file only ever GROWS during a day, so it can't be wiped.
++const TODAY_FIXTURES_FILE = 'division-fixtures-today.json';
++
++function fixtureKey(f) {
++  return `${(f.home || '').toLowerCase()}|${(f.away || '').toLowerCase()}`;
++}
++
++function loadSavedTodayFixtures(dateStr) {
++  try {
++    if (!fs.existsSync(TODAY_FIXTURES_FILE)) return [];
++    const saved = JSON.parse(fs.readFileSync(TODAY_FIXTURES_FILE, 'utf-8'));
++    return saved.date === dateStr && Array.isArray(saved.fixtures) ? saved.fixtures : [];
++  } catch {
++    return [];
++  }
++}
++
++function saveTodayFixtures(dateStr, fixtures) {
++  const payload = JSON.stringify({ date: dateStr, fixtures }, null, 2);
++  try {
++    if (fs.existsSync(TODAY_FIXTURES_FILE) && fs.readFileSync(TODAY_FIXTURES_FILE, 'utf-8') === payload) return;
++  } catch {}
++  fs.writeFileSync(TODAY_FIXTURES_FILE, payload);
++}
++
+ function findTargetFixtures(fixtures, testDate) {
+   if (testDate) {
+     const dayFixtures = fixtures.filter(f => {
+@@ -66,9 +95,25 @@ function findTargetFixtures(fixtures, testDate) {
+   }
+ 
+     const now = getUKNow();
+-  const todaysFixtures = fixtures.filter(f => isToday(parseFixtureDate(f.date)));
++  const todayStr = getUKDateString(now);
++  const freshToday = fixtures.filter(f => isToday(parseFixtureDate(f.date)));
++  const savedToday = loadSavedTodayFixtures(todayStr);
++
++  // DEBUG: shows exactly what the fixture lookup saw, so a mid-match failure
++  // can be diagnosed from the run log instead of guessed at.
++  const distinctDates = [...new Set(fixtures.map(f => f.date))].slice(0, 4);
++  console.log(`DEBUG fixtures: UK today=${todayStr} | in division-fixtures.json=${fixtures.length} (first dates: ${JSON.stringify(distinctDates)}) | matching today=${freshToday.length} | saved-today file=${savedToday.length}`);
++
++  // Fresh scrape + anything already saved for today (a fixture that has kicked
++  // off drops off the source page, but stays known via the saved file).
++  const freshKeys = new Set(freshToday.map(fixtureKey));
++  const todaysFixtures = [...freshToday, ...savedToday.filter(f => !freshKeys.has(fixtureKey(f)))];
+   if (todaysFixtures.length > 0) {
+-    return { fixtures: todaysFixtures, isToday: true, targetDate: getUKDateString(now) };
++    if (todaysFixtures.length !== savedToday.length) saveTodayFixtures(todayStr, todaysFixtures);
++    if (todaysFixtures.length !== freshToday.length) {
++      console.log(`Today's fixture list restored from saved-today file (${todaysFixtures.length - freshToday.length} fixture(s) had dropped off the scrape).`);
++    }
++    return { fixtures: todaysFixtures, isToday: true, targetDate: todayStr };
+   }
+ 
+   // Genuine race condition: division-fixtures.js briefly wipes today's
+@@ -80,7 +125,7 @@ function findTargetFixtures(fixtures, testDate) {
+     try {
+       const previousOutput = JSON.parse(fs.readFileSync('division-scores.json', 'utf-8'));
+       if (previousOutput.isToday && previousOutput.date === getUKDateString(now)) {
+-        console.log('Today\'s fixtures missing from a fresh scrape (likely mid-write race) — reusing previous fixture list for this cycle.');
++        console.log('Today\'s fixtures missing from BOTH the scrape and the saved-today file — reusing previous division-scores.json fixture list for this cycle.');
+         return { fixtures: previousOutput.fixtures.map(f => ({ home: f.home, away: f.away, kickoff: f.kickoff })), isToday: true, targetDate: getUKDateString(now) };
+       }
+     } catch {}
+@@ -119,7 +164,10 @@ async function run() {
+   const todaysFixtures = target.fixtures;
+ 
+   const now = getUKNow();
+-  const isManual = !!testDate;
++  // MANUAL_RUN is only set when the admin page's "Run now" passes manual=true.
++  // cron-job.org dispatches the same workflow WITHOUT it, so automated runs stay gated.
++  const isManual = !!testDate || process.env.MANUAL_RUN === 'true';
++  if (isManual) console.log('Manual run — bypassing time-window and "nothing new" gates.');
+   const nowUK = now.getUTCHours();
+ 
+   if (target.isToday && nowUK < 11 && !isManual) {
+@@ -218,7 +266,8 @@ async function run() {
+     previous &&
+     previous.postCount === totalPostCount &&
+     previous.latestPostTimestamp === latestPostTimestamp &&
+-    previous.date === target.targetDate
++    previous.date === target.targetDate &&
++    !isManual
+   ) {
+     console.log('Nothing new since last check — skipping AI call.');
+     logCost('division-scores', { getxapiCalls: getCallCount() });
+diff --git a/matchday-live.js b/matchday-live.js
+index 314a6b540..6146f976a 100644
+--- a/matchday-live.js
++++ b/matchday-live.js
+@@ -34,7 +34,8 @@ function findHandle(clubName) {
+ }
+ 
+ function isManualRun() {
+-  return !!process.env.MATCHDAY_TEST_DATE;
++  // MANUAL_RUN comes from the admin page's "Run now" (manual=true); cron-job.org never sets it.
++  return !!process.env.MATCHDAY_TEST_DATE || process.env.MANUAL_RUN === 'true';
+ }
+ 
+ function withinMatchWindow(kickoff, competitionNote) {
+@@ -188,7 +189,44 @@ function dedupeByTeamMinuteAndIdentity(events, identityField) {
+ }
+ 
+ function dedupeSimilarGoals(goals) {
+-  return dedupeByTeamMinuteAndIdentity(goals, 'scorer');
++  const deduped = dedupeByTeamMinuteAndIdentity(goals, 'scorer');
++  // An UNNAMED goal within 3 minutes of a NAMED goal for the OTHER team is almost
++  // always the same real goal reported with the wrong side (seen 12 Sep: a phantom
++  // "Unknown" goal for the wrong team turned 2-1 into 2-2). Drop it.
++  return deduped.filter(g => {
++    if (normalizeIdentity(g.scorer)) return true;
++    if (g.minute == null) return true;
++    return !deduped.some(o =>
++      o !== g && o.team !== g.team && normalizeIdentity(o.scorer) && o.minute != null &&
++      Math.abs(o.minute - g.minute) <= 3
++    );
++  });
++}
++
++// The AI's roughXG can come back as 0.0 for a side that has really scored
++// (the "be conservative" instruction wins over the goals). Enforce the rule
++// in code: real goals are a hard floor under the estimate.
++function enforceXgFloor(xg, goals) {
++  if (!xg || !goals || goals.length === 0) return xg;
++  const PER_GOAL = 0.75;
++  const out = JSON.parse(JSON.stringify(xg));
++  const count = (team, pred) => goals.filter(g => g.team === team && pred(g)).length;
++  const periods = {
++    firstHalf: g => g.minute != null && g.minute <= 45,
++    secondHalf: g => g.minute != null && g.minute > 45,
++    total: () => true,
++  };
++  Object.entries(periods).forEach(([period, pred]) => {
++    const p = out[period];
++    if (!p) return;
++    let raised = false;
++    ['home', 'away'].forEach(side => {
++      const floor = Number((count(side, pred) * PER_GOAL).toFixed(1));
++      if (floor > 0 && !(Number(p[side]) >= floor)) { p[side] = floor; raised = true; }
++    });
++    if (raised) p.note = `${p.note ? p.note + ' ' : ''}(raised to reflect goals actually scored)`;
++  });
++  return out;
+ }
+ 
+ function dedupeSimilarEvents(events, keyFields) {
+@@ -367,6 +405,7 @@ function mergeMatchData(previous, incoming, divisionScore) {
+ 
+     return {
+       ...incoming,
++      roughXG: enforceXgFloor(incoming.roughXG, confirmed.goals),
+       goals: confirmed.goals,
+       unconfirmedGoals: confirmed.unconfirmedGoals,
+       score: confirmed.score,
+@@ -455,7 +494,7 @@ function mergeMatchData(previous, incoming, divisionScore) {
+     wentToPenalties: incoming.wentToPenalties || previous.wentToPenalties || false,
+     extraTime: incoming.wentToExtraTime ? (incoming.extraTime || previous.extraTime) : previous.extraTime,
+     penalties: incoming.wentToPenalties ? (incoming.penalties || previous.penalties) : previous.penalties,
+-    roughXG: incoming.roughXG || previous.roughXG,
++    roughXG: enforceXgFloor(incoming.roughXG || previous.roughXG, confirmed.goals),
+     matchControl: incoming.matchControl || previous.matchControl,
+   };
+ }
+@@ -552,7 +591,7 @@ async function run() {
+   const newImagePairs = selectRelevantImages(combined, alreadySeen);
+   const newTextCount = combined.length - (previousOutput?.postsUsed || 0);
+ 
+-  if (newImagePairs.length === 0 && newTextCount <= 0 && previousOutput) {
++  if (newImagePairs.length === 0 && newTextCount <= 0 && previousOutput && !isManualRun()) {
+     console.log('Nothing new since last check — skipping AI call.');
+     // No new posts, but the division feed may have confirmed/corrected the
+     // score since last time — re-check it for free (no AI call).

@@ -34,7 +34,8 @@ function findHandle(clubName) {
 }
 
 function isManualRun() {
-  return !!process.env.MATCHDAY_TEST_DATE;
+  // MANUAL_RUN comes from the admin page's "Run now" (manual=true); cron-job.org never sets it.
+  return !!process.env.MATCHDAY_TEST_DATE || process.env.MANUAL_RUN === 'true';
 }
 
 function withinMatchWindow(kickoff, competitionNote) {
@@ -188,7 +189,44 @@ function dedupeByTeamMinuteAndIdentity(events, identityField) {
 }
 
 function dedupeSimilarGoals(goals) {
-  return dedupeByTeamMinuteAndIdentity(goals, 'scorer');
+  const deduped = dedupeByTeamMinuteAndIdentity(goals, 'scorer');
+  // An UNNAMED goal within 3 minutes of a NAMED goal for the OTHER team is almost
+  // always the same real goal reported with the wrong side (seen 12 Sep: a phantom
+  // "Unknown" goal for the wrong team turned 2-1 into 2-2). Drop it.
+  return deduped.filter(g => {
+    if (normalizeIdentity(g.scorer)) return true;
+    if (g.minute == null) return true;
+    return !deduped.some(o =>
+      o !== g && o.team !== g.team && normalizeIdentity(o.scorer) && o.minute != null &&
+      Math.abs(o.minute - g.minute) <= 3
+    );
+  });
+}
+
+// The AI's roughXG can come back as 0.0 for a side that has really scored
+// (the "be conservative" instruction wins over the goals). Enforce the rule
+// in code: real goals are a hard floor under the estimate.
+function enforceXgFloor(xg, goals) {
+  if (!xg || !goals || goals.length === 0) return xg;
+  const PER_GOAL = 0.75;
+  const out = JSON.parse(JSON.stringify(xg));
+  const count = (team, pred) => goals.filter(g => g.team === team && pred(g)).length;
+  const periods = {
+    firstHalf: g => g.minute != null && g.minute <= 45,
+    secondHalf: g => g.minute != null && g.minute > 45,
+    total: () => true,
+  };
+  Object.entries(periods).forEach(([period, pred]) => {
+    const p = out[period];
+    if (!p) return;
+    let raised = false;
+    ['home', 'away'].forEach(side => {
+      const floor = Number((count(side, pred) * PER_GOAL).toFixed(1));
+      if (floor > 0 && !(Number(p[side]) >= floor)) { p[side] = floor; raised = true; }
+    });
+    if (raised) p.note = `${p.note ? p.note + ' ' : ''}(raised to reflect goals actually scored)`;
+  });
+  return out;
 }
 
 function dedupeSimilarEvents(events, keyFields) {
@@ -367,6 +405,7 @@ function mergeMatchData(previous, incoming, divisionScore) {
 
     return {
       ...incoming,
+      roughXG: enforceXgFloor(incoming.roughXG, confirmed.goals),
       goals: confirmed.goals,
       unconfirmedGoals: confirmed.unconfirmedGoals,
       score: confirmed.score,
@@ -455,7 +494,7 @@ function mergeMatchData(previous, incoming, divisionScore) {
     wentToPenalties: incoming.wentToPenalties || previous.wentToPenalties || false,
     extraTime: incoming.wentToExtraTime ? (incoming.extraTime || previous.extraTime) : previous.extraTime,
     penalties: incoming.wentToPenalties ? (incoming.penalties || previous.penalties) : previous.penalties,
-    roughXG: incoming.roughXG || previous.roughXG,
+    roughXG: enforceXgFloor(incoming.roughXG || previous.roughXG, confirmed.goals),
     matchControl: incoming.matchControl || previous.matchControl,
   };
 }
@@ -552,7 +591,7 @@ async function run() {
   const newImagePairs = selectRelevantImages(combined, alreadySeen);
   const newTextCount = combined.length - (previousOutput?.postsUsed || 0);
 
-  if (newImagePairs.length === 0 && newTextCount <= 0 && previousOutput) {
+  if (newImagePairs.length === 0 && newTextCount <= 0 && previousOutput && !isManualRun()) {
     console.log('Nothing new since last check — skipping AI call.');
     // No new posts, but the division feed may have confirmed/corrected the
     // score since last time — re-check it for free (no AI call).

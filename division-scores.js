@@ -56,6 +56,35 @@ function getTodaysWindow(fixtures) {
   };
 }
 
+// Once today's fixtures have been seen, remember them in their own small file.
+// nwcfl.com stops listing a fixture once it kicks off, and division-fixtures.js's
+// "keep today's fixtures" logic depends on the previous file surviving intact —
+// a single bad scrape or push-conflict resolution used to wipe them for the
+// rest of the day. This file only ever GROWS during a day, so it can't be wiped.
+const TODAY_FIXTURES_FILE = 'division-fixtures-today.json';
+
+function fixtureKey(f) {
+  return `${(f.home || '').toLowerCase()}|${(f.away || '').toLowerCase()}`;
+}
+
+function loadSavedTodayFixtures(dateStr) {
+  try {
+    if (!fs.existsSync(TODAY_FIXTURES_FILE)) return [];
+    const saved = JSON.parse(fs.readFileSync(TODAY_FIXTURES_FILE, 'utf-8'));
+    return saved.date === dateStr && Array.isArray(saved.fixtures) ? saved.fixtures : [];
+  } catch {
+    return [];
+  }
+}
+
+function saveTodayFixtures(dateStr, fixtures) {
+  const payload = JSON.stringify({ date: dateStr, fixtures }, null, 2);
+  try {
+    if (fs.existsSync(TODAY_FIXTURES_FILE) && fs.readFileSync(TODAY_FIXTURES_FILE, 'utf-8') === payload) return;
+  } catch {}
+  fs.writeFileSync(TODAY_FIXTURES_FILE, payload);
+}
+
 function findTargetFixtures(fixtures, testDate) {
   if (testDate) {
     const dayFixtures = fixtures.filter(f => {
@@ -66,9 +95,25 @@ function findTargetFixtures(fixtures, testDate) {
   }
 
     const now = getUKNow();
-  const todaysFixtures = fixtures.filter(f => isToday(parseFixtureDate(f.date)));
+  const todayStr = getUKDateString(now);
+  const freshToday = fixtures.filter(f => isToday(parseFixtureDate(f.date)));
+  const savedToday = loadSavedTodayFixtures(todayStr);
+
+  // DEBUG: shows exactly what the fixture lookup saw, so a mid-match failure
+  // can be diagnosed from the run log instead of guessed at.
+  const distinctDates = [...new Set(fixtures.map(f => f.date))].slice(0, 4);
+  console.log(`DEBUG fixtures: UK today=${todayStr} | in division-fixtures.json=${fixtures.length} (first dates: ${JSON.stringify(distinctDates)}) | matching today=${freshToday.length} | saved-today file=${savedToday.length}`);
+
+  // Fresh scrape + anything already saved for today (a fixture that has kicked
+  // off drops off the source page, but stays known via the saved file).
+  const freshKeys = new Set(freshToday.map(fixtureKey));
+  const todaysFixtures = [...freshToday, ...savedToday.filter(f => !freshKeys.has(fixtureKey(f)))];
   if (todaysFixtures.length > 0) {
-    return { fixtures: todaysFixtures, isToday: true, targetDate: getUKDateString(now) };
+    if (todaysFixtures.length !== savedToday.length) saveTodayFixtures(todayStr, todaysFixtures);
+    if (todaysFixtures.length !== freshToday.length) {
+      console.log(`Today's fixture list restored from saved-today file (${todaysFixtures.length - freshToday.length} fixture(s) had dropped off the scrape).`);
+    }
+    return { fixtures: todaysFixtures, isToday: true, targetDate: todayStr };
   }
 
   // Genuine race condition: division-fixtures.js briefly wipes today's
@@ -80,7 +125,7 @@ function findTargetFixtures(fixtures, testDate) {
     try {
       const previousOutput = JSON.parse(fs.readFileSync('division-scores.json', 'utf-8'));
       if (previousOutput.isToday && previousOutput.date === getUKDateString(now)) {
-        console.log('Today\'s fixtures missing from a fresh scrape (likely mid-write race) — reusing previous fixture list for this cycle.');
+        console.log('Today\'s fixtures missing from BOTH the scrape and the saved-today file — reusing previous division-scores.json fixture list for this cycle.');
         return { fixtures: previousOutput.fixtures.map(f => ({ home: f.home, away: f.away, kickoff: f.kickoff })), isToday: true, targetDate: getUKDateString(now) };
       }
     } catch {}
@@ -119,7 +164,10 @@ async function run() {
   const todaysFixtures = target.fixtures;
 
   const now = getUKNow();
-  const isManual = !!testDate;
+  // MANUAL_RUN is only set when the admin page's "Run now" passes manual=true.
+  // cron-job.org dispatches the same workflow WITHOUT it, so automated runs stay gated.
+  const isManual = !!testDate || process.env.MANUAL_RUN === 'true';
+  if (isManual) console.log('Manual run — bypassing time-window and "nothing new" gates.');
   const nowUK = now.getUTCHours();
 
   if (target.isToday && nowUK < 11 && !isManual) {
@@ -218,7 +266,8 @@ async function run() {
     previous &&
     previous.postCount === totalPostCount &&
     previous.latestPostTimestamp === latestPostTimestamp &&
-    previous.date === target.targetDate
+    previous.date === target.targetDate &&
+    !isManual
   ) {
     console.log('Nothing new since last check — skipping AI call.');
     logCost('division-scores', { getxapiCalls: getCallCount() });

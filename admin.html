@@ -407,16 +407,21 @@
             'Authorization': `Bearer ${token}`,
             'Accept': 'application/vnd.github+json',
           },
-          body: JSON.stringify({ ref: 'main' }),
+          // manual=true tells the scripts this is a genuine click, not a cron-job.org run
+          body: JSON.stringify({ ref: 'main', inputs: { manual: 'true' } }),
         });
 
         if (res.status === 204) {
           btnEl.textContent = 'Triggered ✓';
           setTimeout(() => loadWorkflows(), 3000);
         } else {
-          btnEl.textContent = 'Failed — check token';
-          localStorage.removeItem('matchx_gh_token');
-          updateTokenStatus();
+          if (res.status === 401 || res.status === 403 || res.status === 404) {
+            btnEl.textContent = 'Failed — check token';
+            localStorage.removeItem('matchx_gh_token');
+            updateTokenStatus();
+          } else {
+            btnEl.textContent = `Failed (${res.status})`;
+          }
         }
       } catch (err) {
         btnEl.textContent = 'Failed';
