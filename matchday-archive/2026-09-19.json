@@ -8,7 +8,7 @@
   "imagesAnalyzedThisRun": 0,
   "totalImagesAnalyzed": 8,
   "match": {
-    "score": "2-1",
+    "score": "2-0",
     "scoreDiscrepancy": null,
     "finalScoreAnnounced": null,
     "halfTimeScoreAnnounced": "1-0",
@@ -218,6 +218,9 @@
         "note": "Match fairly competitive overall; Eccleshall pressed harder in second half but Sandbach's clinical finishing won it"
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
-    }
+    },
+    "scoreBeforeOverride": "2-1",
+    "scoreSource": "manual_override",
+    "scoreConfirmed": true
   }
 }

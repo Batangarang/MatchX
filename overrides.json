@@ -1,5 +1,17 @@
 {
-  "updatedAt": null,
-  "score": { "enabled": false },
-  "texts": {}
+  "updatedAt": "2026-09-26T10:00:20.094Z",
+  "score": {
+    "enabled": true,
+    "date": "2026-09-19",
+    "home": 2,
+    "away": 0
+  },
+  "texts": {
+    "recap:sandbachFocus": {
+      "enabled": true,
+      "hold": false,
+      "text": "Sandbach United maintained their excellent form with a hard-fought 2-0 home victory over fourth-placed Eccleshall on Saturday. Josh Fowles opened the scoring early in the first half, and despite Eccleshall pressing hard in the second half—particularly after Sandbach's Hatton was sin-binned—the Ramblers held firm to secure the three points. The win extends Sandbach's unbeaten run, though they remain level on 19 points with AFC Bridgnorth and Stafford Town at the top of the table.",
+      "base": "2026-09-19T16:30:56.359Z"
+    }
+  }
 }
