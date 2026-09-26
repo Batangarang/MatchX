@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MatchX Admin</title>
+  <style>
+    :root {
+      --navy: #0c2340;
+      --royal: #1c5fae;
+      --amber: #f2a71b;
+      --paper: #eef1f6;
+      --ink: #14202b;
+      --muted: #6b7785;
+      --line: #e3e7ee;
+      --green: #22c55e;
+      --red: #ef4444;
+      --yellow: #eab308;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: system-ui, sans-serif;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 20px 16px 60px;
+      background: var(--paper);
+      color: var(--ink);
+    }
+    h1 { color: var(--navy); font-size: 22px; margin-bottom: 4px; }
+    .sub { color: var(--muted); font-size: 13px; margin-bottom: 20px; }
+    .card {
+      background: white;
+      border-radius: 10px;
+      padding: 16px;
+      margin-bottom: 16px;
+      box-shadow: 0 1px 3px rgba(12,35,64,0.08);
+    }
+    .card h2 {
+      margin: 0 0 12px 0;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--navy);
+      display: inline-block;
+      padding-bottom: 6px;
+      border-bottom: 3px solid var(--amber);
+    }
+    .btn {
+      font-size: 12px;
+      padding: 6px 12px;
+      border-radius: 6px;
+      border: 1px solid var(--line);
+      background: white;
+      color: var(--navy);
+      cursor: pointer;
+      font-weight: 600;
+    }
+    .btn:hover { border-color: var(--royal); }
+    .btn.primary { background: var(--navy); color: white; border-color: var(--navy); }
+    .btn.small { font-size: 11px; padding: 4px 8px; }
+    input[type="password"], input[type="text"] {
+      font-size: 14px;
+      padding: 8px 10px;
+      border-radius: 6px;
+      border: 1px solid var(--line);
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+    #login-screen { max-width: 320px; margin: 80px auto; text-align: center; }
+    #login-screen .card { text-align: left; }
+    .login-error { color: var(--red); font-size: 12px; margin-top: 6px; display: none; }
+
+    #dashboard { display: none; }
+
+    .workflow-row { padding: 12px 0; border-bottom: 1px solid var(--line); }
+    .workflow-row:last-child { border-bottom: none; }
+    .workflow-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
+    .workflow-name { font-weight: 700; font-size: 14px; color: var(--navy); }
+    .workflow-meta { font-size: 12px; color: var(--muted); margin-top: 2px; }
+    .dot-row { display: flex; gap: 4px; margin: 6px 0; }
+    .dot { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
+    .dot.success { background: var(--green); }
+    .dot.failure { background: var(--red); }
+    .dot.unknown { background: var(--line); }
+    .status-badge { font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 10px; }
+    .status-badge.ok { background: rgba(34,197,94,0.15); color: #15803d; }
+    .status-badge.warn { background: rgba(234,179,8,0.15); color: #a16207; }
+    .status-badge.bad { background: rgba(239,68,68,0.15); color: #b91c1c; }
+
+    .toggle-row { display: flex; gap: 8px; margin-bottom: 14px; flex-wrap: wrap; }
+    .toggle-btn {
+      flex: 1; min-width: 70px;
+      padding: 8px;
+      border-radius: 6px;
+      border: 1px solid var(--line);
+      background: white;
+      color: var(--navy);
+      font-weight: 600;
+      font-size: 13px;
+      cursor: pointer;
+    }
+    .toggle-btn.active { background: var(--navy); color: white; border-color: var(--navy); }
+
+    .cost-total { font-size: 28px; font-weight: 700; color: var(--navy); }
+    .cost-caveat { font-size: 11px; color: var(--muted); font-style: italic; margin-top: 4px; }
+    .cost-breakdown-row {
+      display: flex; justify-content: space-between; padding: 6px 0;
+      border-bottom: 1px solid var(--line); font-size: 13px;
+    }
+    .cost-bar-bg { background: var(--paper); border-radius: 4px; height: 6px; margin-top: 4px; overflow: hidden; }
+    .cost-bar-fill { background: var(--amber); height: 100%; }
+
+    table.efficiency { width: 100%; border-collapse: collapse; font-size: 12px; }
+    table.efficiency th, table.efficiency td { padding: 6px 4px; text-align: left; border-bottom: 1px solid var(--line); vertical-align: top; }
+    table.efficiency th { color: var(--muted); font-weight: 600; }
+
+    .empty { color: var(--muted); font-size: 13px; }
+    .loading { color: var(--muted); font-size: 13px; }
+    a.back { color: var(--royal); text-decoration: none; font-size: 13px; display: inline-block; margin-bottom: 12px; }
+  </style>
+</head>
+<body>
+
+  <div id="login-screen">
+    <h1 style="text-align:center;">MatchX Admin</h1>
+    <div class="card">
+      <div class="sub" style="margin-bottom:12px;"> </div>
+      <input type="password" id="password-input" placeholder="Admin password">
+      <button class="btn primary" style="width:100%;" onclick="attemptLogin()">Enter</button>
+      <div class="login-error" id="login-error">Incorrect password.</div>
+    </div>
+  </div>
+
+  <div id="dashboard">
+    <a class="back" href="index.html">← Back to site</a>
+    <h1>MatchX Admin</h1>
+    <div class="sub">Live data pulled from GitHub Actions. Cost figures are estimates — see note below.</div>
+
+    <div class="card" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
+      <span style="font-size:12px; color:var(--muted);" id="token-status">Checking token status…</span>
+      <button class="btn small" onclick="setToken()">Set GitHub token</button>
+    </div>
+
+    <div class="card">
+      <h2>Workflows</h2>
+      <div id="workflows-list" class="loading">Loading workflow data from GitHub…</div>
+    </div>
+
+    <div class="card">
+      <h2>Real Logged Cost (last 14 days)</h2>
+      <div class="sub" id="real-cost-total">Loading…</div>
+      <div id="real-cost-chart" style="margin-top:10px;"></div>
+      <div class="cost-caveat" style="margin-top:10px;">
+        Built from real per-run call counts logged by each script (cost-log.json) — genuine data, not an estimate.
+        Blue = GetXAPI, amber = Anthropic. Bar length shows relative daily total across the last 14 days.
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Estimated Cost</h2>
+      <label style="display:flex; align-items:center; gap:8px; font-size:13px; margin-bottom:12px;">
+        <input type="checkbox" id="matchday-toggle" onchange="toggleMatchday()">
+        Today is a matchday (use matchday rate for Day/Month/Year)
+      </label>
+      <div class="toggle-row">
+        <button class="toggle-btn active" data-period="day" onclick="setCostPeriod('day')">Day</button>
+        <button class="toggle-btn" data-period="month" onclick="setCostPeriod('month')">Month</button>
+        <button class="toggle-btn" data-period="year" onclick="setCostPeriod('year')">Year</button>
+      </div>
+      <div class="cost-total" id="cost-total">—</div>
+      <div class="cost-caveat">
+        Day/Month/Year use real measured whole-day totals (last 3 matchdays and last 3 non-matchdays averaged),
+        not per-workflow guesses. The workflow breakdown below is an approximate proportional split of that real
+        total, not independently metered. Month/Year model 6 games/month or 50 games/year against the rest of
+        the year as non-matchdays. Includes the <span id="domain-cost-note">—</span>/year Cloudflare domain cost.
+      </div>
+      <div id="cost-breakdown" style="margin-top:14px;"></div>
+    </div>
+
+    <div class="card">
+      <h2>Refresh Schedule &amp; Efficiency Logic</h2>
+      <table class="efficiency">
+        <thead>
+          <tr><th>Workflow</th><th>Trigger</th><th>What it pulls</th><th>Skip logic</th></tr>
+        </thead>
+        <tbody id="efficiency-table"></tbody>
+      </table>
+    </div>
+
+    <div class="card">
+      <h2>Quick Links</h2>
+      <div style="display:flex; flex-direction:column; gap:8px; font-size:13px;">
+        <a href="https://github.com/Batangarang/MatchX/actions" target="_blank" rel="noopener">GitHub Actions (full history) →</a>
+        <a href="https://dashboard.getxapi.com" target="_blank" rel="noopener">GetXAPI billing dashboard →</a>
+        <a href="https://console.anthropic.com" target="_blank" rel="noopener">Anthropic console →</a>
+        <a href="https://console.cron-job.org" target="_blank" rel="noopener">cron-job.org dashboard →</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // ---------- Config ----------
+    const REPO = 'Batangarang/MatchX';
+    const ADMIN_PASSWORD_HASH = '17a3c1cc9792d6bbf28d8092e88c15953c73fb42f0e6a9499b6b7dc978e48954';
+
+    const X_SHARE = 0.45;
+    const AI_SHARE = 0.55;
+    const USD_TO_GBP = 0.7393; // real rate, checked 12 Sep 2026
+    const NONMATCHDAY_TOTAL_GBP = 0.066;
+    const MATCHDAY_TOTAL_GBP = 0.066 + 0.1815 + 0.0984;
+    const DOMAIN_YEARLY_GBP = 5.30 * USD_TO_GBP;
+    const DOMAIN_DAILY_GBP = DOMAIN_YEARLY_GBP / 365;
+
+    const WORKFLOWS = [
+      { file: 'scrape.yml', name: 'Scrape Sandbach Fixtures', pulls: 'nwcfl.com: fixtures, league table, player stats, attendance, position history', skipLogic: 'Hourly gate — real work only ~once/hour even though triggered every 5 min', shareOfDay: 0, staleAfterMinutes: 75 },
+      { file: 'matchday-live.yml', name: 'Matchday Live Tracker', pulls: 'X posts (home + away club) + vision analysis of new images, on Sandbach\'s own match day', skipLogic: 'Only active kickoff-90min to kickoff+150/240min; skips if nothing new; retries on GetXAPI rate-limit', shareOfDay: 0.098, matchdayOnly: true, staleAfterMinutes: 15 },
+      { file: 'division-scores.yml', name: 'Division Scores', pulls: 'X posts from ~19 division clubs, on any day with First Division South fixtures', skipLogic: 'Resets to fixture-only before 11am; polls only within match window; skips if nothing new; retries on GetXAPI rate-limit', shareOfDay: 0.1815, matchdayOnly: true, staleAfterMinutes: 15 },
+      { file: 'x-live.yml', name: 'Poll X (Fan Briefing)', pulls: 'Sandbach\'s own X posts + NWCFL news articles + Fan Briefing regeneration', skipLogic: 'x-posts.js gated to 60min/180min tiers; x-insights.js skips if underlying posts unchanged', shareOfDay: 0.033, nonMatchday: true, staleAfterMinutes: 15 },
+      { file: 'division-recap-preview.yml', name: 'Division Preview', pulls: 'Coming week\'s division fixtures (incl. any midweek game) + recent club posts + league table', skipLogic: 'Skips if no fixtures in the coming week', shareOfDay: 0.15, nonMatchday: true, staleAfterMinutes: 60 * 24 },
+      { file: 'division-recap-recap.yml', name: 'Division Recap', pulls: 'Past week\'s played fixtures (incl. any midweek game) + club posts + league table', skipLogic: 'Skips if no fixtures in the past week; only proceeds ~2.5hrs after the latest kickoff in that period; once per period', shareOfDay: 0.2, nonMatchday: true, staleAfterMinutes: 60 * 24 },
+    ];
+
+    const SCRIPT_DISPLAY_NAMES = {
+      'matchday-live': 'Matchday Live Tracker',
+      'division-scores': 'Division Scores',
+      'x-posts': 'Poll X (own posts)',
+      'x-insights': 'Fan Briefing',
+      'division-posts': 'Division Posts (recap data)',
+      'recap-preview': 'Division Preview',
+      'recap-recap': 'Division Recap',
+    };
+
+    function displayName(script) {
+      return SCRIPT_DISPLAY_NAMES[script] || script;
+    }
+
+    let isMatchdayToday = false;
+
+    // ---------- Login ----------
+    async function sha256(text) {
+      const enc = new TextEncoder().encode(text);
+      const hash = await crypto.subtle.digest('SHA-256', enc);
+      return [...new Uint8Array(hash)].map(b => b.toString(16).padStart(2, '0')).join('');
+    }
+
+    async function attemptLogin() {
+      const input = document.getElementById('password-input').value;
+      const hash = await sha256(input);
+      if (hash === ADMIN_PASSWORD_HASH) {
+        sessionStorage.setItem('matchx_admin_ok', 'true');
+        showDashboard();
+      } else {
+        document.getElementById('login-error').style.display = 'block';
+      }
+    }
+
+    document.getElementById('password-input').addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') attemptLogin();
+    });
+
+    function showDashboard() {
+      document.getElementById('login-screen').style.display = 'none';
+      document.getElementById('dashboard').style.display = 'block';
+      updateTokenStatus();
+      loadWorkflows();
+      renderEfficiencyTable();
+      document.getElementById('domain-cost-note').textContent = `£${DOMAIN_YEARLY_GBP.toFixed(2)}`;
+      setCostPeriod('day');
+      loadRealCostData().then(renderRealCostChart);
+    }
+
+    if (sessionStorage.getItem('matchx_admin_ok') === 'true') {
+      showDashboard();
+    }
+
+    // ---------- Token management ----------
+    function setToken() {
+      const existing = localStorage.getItem('matchx_gh_token');
+      const token = prompt(existing ? 'Replace the saved GitHub token:' : 'Paste your GitHub token (same one used for cron-job.org). Saved on this device only.', '');
+      if (token) {
+        localStorage.setItem('matchx_gh_token', token);
+        updateTokenStatus();
+        loadWorkflows();
+      }
+    }
+
+    function updateTokenStatus() {
+      const hasToken = !!localStorage.getItem('matchx_gh_token');
+      document.getElementById('token-status').textContent = hasToken
+        ? '✓ GitHub token saved on this device'
+        : 'No token saved — status reads may be rate-limited, and manual triggers won\'t work';
+    }
+
+    // ---------- Workflow status (real, live data) ----------
+    async function fetchWorkflowRuns(workflowFile) {
+      const url = `https://api.github.com/repos/${REPO}/actions/workflows/${workflowFile}/runs?per_page=10`;
+      const token = localStorage.getItem('matchx_gh_token');
+      const headers = token ? { 'Authorization': `Bearer ${token}`, 'Accept': 'application/vnd.github+json' } : {};
+      const res = await fetch(url, { headers });
+      if (!res.ok) return null;
+      const data = await res.json();
+      return data.workflow_runs || [];
+    }
+
+    function timeAgo(dateStr) {
+      const diffMs = Date.now() - new Date(dateStr).getTime();
+      const mins = Math.floor(diffMs / 60000);
+      if (mins < 60) return `${mins}m ago`;
+      const hrs = Math.floor(mins / 60);
+      if (hrs < 24) return `${hrs}h ago`;
+      return `${Math.floor(hrs / 24)}d ago`;
+    }
+
+    async function loadWorkflows() {
+      const container = document.getElementById('workflows-list');
+      container.innerHTML = '';
+
+      for (const wf of WORKFLOWS) {
+        const runs = await fetchWorkflowRuns(wf.file);
+        const row = document.createElement('div');
+        row.className = 'workflow-row';
+
+        if (!runs || runs.length === 0) {
+          row.innerHTML = `
+            <div class="workflow-head">
+              <span class="workflow-name">${wf.name}</span>
+              <span class="status-badge warn">No data</span>
+            </div>
+            <div class="workflow-meta">Could not load run history (rate-limited or workflow not found).</div>
+          `;
+          container.appendChild(row);
+          continue;
+        }
+
+        const lastRun = runs[0];
+        const failures = runs.filter(r => r.conclusion === 'failure').length;
+        const successCount = runs.filter(r => r.conclusion === 'success').length;
+
+        const minutesSinceLastRun = (Date.now() - new Date(lastRun.created_at).getTime()) / 60000;
+        const isStale = minutesSinceLastRun > wf.staleAfterMinutes;
+
+        let badgeClass = 'ok';
+        let badgeText = 'Healthy';
+        if (failures >= 5) { badgeClass = 'bad'; badgeText = `${failures}/10 failed`; }
+        else if (failures >= 2) { badgeClass = 'warn'; badgeText = `${failures}/10 failed`; }
+        else if (isStale) { badgeClass = 'bad'; badgeText = `Stale (expected within ${wf.staleAfterMinutes < 120 ? wf.staleAfterMinutes + 'm' : Math.round(wf.staleAfterMinutes / 60) + 'h'})`; }
+
+        const dots = [...runs].reverse().map(r =>
+          `<span class="dot ${r.conclusion === 'success' ? 'success' : r.conclusion === 'failure' ? 'failure' : 'unknown'}" title="${r.conclusion || 'in progress'} — ${new Date(r.created_at).toLocaleString('en-GB')}"></span>`
+        ).join('');
+
+        const minutesUntilNext = wf.staleAfterMinutes - minutesSinceLastRun;
+        const nextRefreshText = minutesUntilNext > 0
+          ? (minutesUntilNext < 120 ? `~${Math.round(minutesUntilNext)}m` : `~${Math.round(minutesUntilNext / 60)}h`)
+          : 'due now';
+
+        const avgMinutesBetweenRuns = runs.length > 1
+          ? (new Date(runs[0].created_at) - new Date(runs[runs.length - 1].created_at)) / 60000 / (runs.length - 1)
+          : null;
+        const avgGapText = avgMinutesBetweenRuns
+          ? (avgMinutesBetweenRuns < 120 ? `~${Math.round(avgMinutesBetweenRuns)}m` : `~${Math.round(avgMinutesBetweenRuns / 60)}h`)
+          : '—';
+
+        row.innerHTML = `
+          <div class="workflow-head">
+            <span class="workflow-name">${wf.name}</span>
+            <span class="status-badge ${badgeClass}">${badgeText}</span>
+          </div>
+          <div class="workflow-meta">Last run: ${timeAgo(lastRun.created_at)} — ${lastRun.conclusion || lastRun.status}</div>
+          <div class="workflow-meta">Next expected: ${nextRefreshText}</div>
+          <div class="dot-row">${dots}</div>
+          <table style="width:100%; font-size:11px; margin-top:8px; border-collapse:collapse;">
+            <tr>
+              <td style="padding:3px 6px 3px 0; color:var(--muted);">Runs (last 10)</td>
+              <td style="padding:3px 0; font-weight:600;">${successCount} success / ${runs.length}</td>
+            </tr>
+            <tr>
+              <td style="padding:3px 6px 3px 0; color:var(--muted);">Avg gap between runs</td>
+              <td style="padding:3px 0; font-weight:600;">${avgGapText}</td>
+            </tr>
+          </table>
+          <button class="btn small" style="margin-top:8px;" onclick="triggerWorkflow('${wf.file}', this)">Run now</button>
+        `;
+        container.appendChild(row);
+      }
+    }
+
+    // ---------- Manual trigger ----------
+    async function triggerWorkflow(workflowFile, btnEl) {
+      let token = localStorage.getItem('matchx_gh_token');
+      if (!token) {
+        token = prompt('Paste your GitHub token (the same one used for cron-job.org). This will be saved on this device so you only need to enter it once.');
+        if (!token) return;
+        localStorage.setItem('matchx_gh_token', token);
+        updateTokenStatus();
+      }
+
+      btnEl.textContent = 'Triggering…';
+      btnEl.disabled = true;
+
+      try {
+        const res = await fetch(`https://api.github.com/repos/${REPO}/actions/workflows/${workflowFile}/dispatches`, {
+          method: 'POST',
+          headers: {
+            'Authorization': `Bearer ${token}`,
+            'Accept': 'application/vnd.github+json',
+          },
+          // manual=true tells the scripts this is a genuine click, not a cron-job.org run
+          body: JSON.stringify({ ref: 'main', inputs: { manual: 'true' } }),
+        });
+
+        if (res.status === 204) {
+          btnEl.textContent = 'Triggered ✓';
+          setTimeout(() => loadWorkflows(), 3000);
+        } else {
+          if (res.status === 401 || res.status === 403 || res.status === 404) {
+            btnEl.textContent = 'Failed — check token';
+            localStorage.removeItem('matchx_gh_token');
+            updateTokenStatus();
+          } else {
+            btnEl.textContent = `Failed (${res.status})`;
+          }
+        }
+      } catch (err) {
+        btnEl.textContent = 'Failed';
+      }
+      setTimeout(() => { btnEl.textContent = 'Run now'; btnEl.disabled = false; }, 3000);
+    }
+
+    // ---------- Actual Cost ----------
+    async function loadRealCostData() {
+      try {
+        const res = await fetch('cost-log.json?t=' + Date.now());
+        if (!res.ok) return null;
+        return await res.json();
+      } catch {
+        return null;
+      }
+    }
+
+    function renderRealCostChart(log) {
+      if (!log || !log.entries || log.entries.length === 0) {
+        document.getElementById('real-cost-chart').innerHTML = '<div class="empty">No real cost data logged yet — this builds up as workflows run.</div>';
+        return;
+      }
+
+      const byDay = {};
+      log.entries.forEach(e => {
+        const day = e.timestamp.slice(0, 10);
+        if (!byDay[day]) byDay[day] = {};
+        if (!byDay[day][e.script]) byDay[day][e.script] = { x: 0, ai: 0, xCalls: 0, aiCalls: 0, aiTokens: 0 };
+        byDay[day][e.script].x += e.xCostGBP;
+        byDay[day][e.script].ai += e.aiCostGBP;
+        byDay[day][e.script].xCalls += e.getxapiCalls || 0;
+        byDay[day][e.script].aiCalls += e.claudeCalls || 0;
+        byDay[day][e.script].aiTokens += (e.inputTokens || 0) + (e.outputTokens || 0);
+      });
+
+      const days = Object.keys(byDay).sort().slice(-14);
+      const allScriptCosts = days.flatMap(d => Object.values(byDay[d]).map(s => s.x + s.ai));
+      const maxScriptCost = Math.max(...allScriptCosts, 0.001);
+
+      document.getElementById('real-cost-chart').innerHTML = days.map(day => {
+        const scripts = byDay[day];
+        const dayTotal = Object.values(scripts).reduce((sum, s) => sum + s.x + s.ai, 0);
+        const dateLabel = new Date(day).toLocaleDateString('en-GB', { day: 'numeric', month: 'short' });
+
+        const scriptRows = Object.entries(scripts)
+          .sort((a, b) => (b[1].x + b[1].ai) - (a[1].x + a[1].ai))
+          .map(([script, cost]) => {
+            const scriptTotal = cost.x + cost.ai;
+            const barWidth = (scriptTotal / maxScriptCost) * 100;
+            return `
+              <div style="display:flex; justify-content:space-between; font-size:11px; margin-top:4px;">
+                <span>${displayName(script)}</span><span>£${scriptTotal.toFixed(4)}</span>
+              </div>
+              <div style="display:flex; justify-content:space-between; font-size:10px; color:var(--muted); margin-bottom:2px;">
+                <span>${cost.xCalls} GetXAPI call${cost.xCalls === 1 ? '' : 's'} · ${cost.aiCalls} Anthropic call${cost.aiCalls === 1 ? '' : 's'}${cost.aiTokens ? ` (${cost.aiTokens.toLocaleString()} tokens)` : ''}</span>
+              </div>
+              <div style="background:var(--paper); border-radius:4px; height:10px; overflow:hidden; display:flex; width:${barWidth}%; min-width:2px;">
+                <div style="background:var(--royal); height:100%; width:${scriptTotal > 0 ? (cost.x / scriptTotal) * 100 : 0}%;" title="GetXAPI: £${cost.x.toFixed(4)} (${cost.xCalls} calls)"></div>
+                <div style="background:var(--amber); height:100%; width:${scriptTotal > 0 ? (cost.ai / scriptTotal) * 100 : 0}%;" title="Anthropic: £${cost.ai.toFixed(4)} (${cost.aiCalls} calls)"></div>
+              </div>
+            `;
+          }).join('');
+
+        return `
+          <div style="margin-bottom:16px; padding-bottom:8px; border-bottom:1px solid var(--line);">
+            <div style="display:flex; justify-content:space-between; font-size:13px; font-weight:700; margin-bottom:4px;">
+              <span>${dateLabel}</span><span>£${dayTotal.toFixed(4)}</span>
+            </div>
+            ${scriptRows}
+          </div>
+        `;
+      }).join('');
+
+      const recentDays = new Set(days);
+      const recentEntries = log.entries.filter(e => recentDays.has(e.timestamp.slice(0, 10)));
+      const totalAllTime = recentEntries.reduce((s, e) => s + e.xCostGBP + e.aiCostGBP, 0);
+      const totalX = recentEntries.reduce((s, e) => s + e.xCostGBP, 0);
+      const totalAI = recentEntries.reduce((s, e) => s + e.aiCostGBP, 0);
+      document.getElementById('real-cost-total').textContent =
+        `£${totalAllTime.toFixed(2)} logged over last ${days.length} day(s) (£${totalX.toFixed(2)} GetXAPI · £${totalAI.toFixed(2)} Anthropic)`;
+    }
+
+    // ---------- Cost estimate ----------
+    function toggleMatchday() {
+      isMatchdayToday = document.getElementById('matchday-toggle').checked;
+      const activePeriod = document.querySelector('.toggle-btn.active').dataset.period;
+      setCostPeriod(activePeriod === 'day' ? 'day' : activePeriod);
+    }
+
+    function setCostPeriod(period) {
+      document.querySelectorAll('.toggle-btn').forEach(b => b.classList.toggle('active', b.dataset.period === period));
+
+      if (period === 'day') {
+        const domainCost = DOMAIN_DAILY_GBP;
+        if (isMatchdayToday) {
+          const total = MATCHDAY_TOTAL_GBP + NONMATCHDAY_TOTAL_GBP + domainCost;
+          document.getElementById('cost-total').textContent = `£${total.toFixed(2)} / day (matchday)`;
+          renderGroupedBreakdown([
+            { label: 'Matchday activity', total: MATCHDAY_TOTAL_GBP },
+            { label: 'Non-matchday activity', total: NONMATCHDAY_TOTAL_GBP },
+          ], domainCost, total);
+        } else {
+          const total = NONMATCHDAY_TOTAL_GBP + domainCost;
+          document.getElementById('cost-total').textContent = `£${total.toFixed(2)} / day`;
+          renderGroupedBreakdown([
+            { label: 'Non-matchday activity', total: NONMATCHDAY_TOTAL_GBP },
+          ], domainCost, total);
+        }
+        return;
+      }
+
+      let gamesCount, totalDays, domainCost, label;
+      if (period === 'month') {
+        gamesCount = 6; totalDays = 30; domainCost = DOMAIN_DAILY_GBP * 30;
+        label = 'month';
+      } else {
+        gamesCount = 50; totalDays = 365; domainCost = DOMAIN_YEARLY_GBP;
+        label = 'year';
+      }
+
+      const nonMatchdayDays = totalDays - gamesCount;
+      const matchdayTotal = gamesCount * MATCHDAY_TOTAL_GBP;
+      const nonMatchdayTotal = nonMatchdayDays * NONMATCHDAY_TOTAL_GBP;
+      const grandTotal = matchdayTotal + nonMatchdayTotal + domainCost;
+
+      document.getElementById('cost-total').textContent = `£${grandTotal.toFixed(2)} / ${label}`;
+      renderGroupedBreakdown([
+        { label: 'Matchday activity', total: matchdayTotal },
+        { label: 'Non-matchday activity', total: nonMatchdayTotal },
+      ], domainCost, grandTotal);
+    }
+
+    function renderGroupedBreakdown(groups, domainCost, grandTotal) {
+      const allValues = groups.flatMap(g => [g.total, g.total * X_SHARE, g.total * AI_SHARE]);
+      const maxCost = Math.max(...allValues, domainCost, 0.01);
+
+      const groupsHtml = groups.map(g => {
+        const xCost = g.total * X_SHARE;
+        const aiCost = g.total * AI_SHARE;
+        return `
+          <div class="cost-breakdown-row" style="font-weight:700;"><span>${g.label}</span><span>£${g.total.toFixed(3)}</span></div>
+          <div class="cost-bar-bg"><div class="cost-bar-fill" style="width:${(g.total / maxCost) * 100}%"></div></div>
+          <div class="cost-breakdown-row" style="padding-left:12px; font-size:12px;"><span>— GetXAPI (est.)</span><span>£${xCost.toFixed(3)}</span></div>
+          <div class="cost-bar-bg"><div class="cost-bar-fill" style="background:var(--royal); width:${(xCost / maxCost) * 100}%"></div></div>
+          <div class="cost-breakdown-row" style="padding-left:12px; font-size:12px;"><span>— Anthropic (est.)</span><span>£${aiCost.toFixed(3)}</span></div>
+          <div class="cost-bar-bg"><div class="cost-bar-fill" style="background:var(--amber); width:${(aiCost / maxCost) * 100}%"></div></div>
+        `;
+      }).join('<div style="height:8px;"></div>');
+
+      document.getElementById('cost-breakdown').innerHTML = groupsHtml + `
+        <div class="cost-breakdown-row" style="color:var(--muted); margin-top:8px;"><span>Domain / DNS (Cloudflare)</span><span>£${domainCost.toFixed(3)}</span></div>
+        <div style="margin-top:10px; padding-top:10px; border-top:2px solid var(--navy); display:flex; justify-content:space-between; font-weight:700;">
+          <span>Total</span><span>£${grandTotal.toFixed(2)}</span>
+        </div>
+      `;
+    }
+
+    // ---------- Efficiency table ----------
+    function renderEfficiencyTable() {
+      document.getElementById('efficiency-table').innerHTML = WORKFLOWS.map(wf => `
+        <tr>
+          <td><strong>${wf.name}</strong></td>
+          <td>Every 5 min (cron-job.org)</td>
+          <td>${wf.pulls}</td>
+          <td>${wf.skipLogic}</td>
+        </tr>
+      `).join('');
+    }
+  </script>
+</body>
+</html>
