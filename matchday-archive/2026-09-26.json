@@ -1,23 +1,23 @@
 {
-  "generatedAt": "2026-09-26T13:55:42.520Z",
+  "generatedAt": "2026-09-26T14:01:15.652Z",
   "fixtureDate": "2026-09-26",
   "kickoff": "15:00",
   "homeTeam": "Sandbach United",
   "awayTeam": "Alsager Town",
-  "postsUsed": 8,
+  "postsUsed": 11,
   "imagesAnalyzedThisRun": 0,
   "totalImagesAnalyzed": 2,
   "match": {
-    "score": null,
-    "scoreSource": "none",
-    "scoreConfirmed": false,
-    "feedScore": null,
+    "score": "0-0",
+    "scoreSource": "match_feed_stated",
+    "scoreConfirmed": true,
+    "feedScore": "0-0",
     "scoreDiscrepancy": null,
     "unconfirmedGoals": [],
     "finalScoreAnnounced": null,
     "halfTimeScoreAnnounced": null,
     "htDiscrepancy": null,
-    "matchStage": "scheduled",
+    "matchStage": "first_half",
     "lineups": {
       "home": {
         "players": [],
@@ -27,17 +27,17 @@
       },
       "away": {
         "players": [
-          "1. Peake",
-          "2. Hall",
-          "3. Denny",
-          "4. Watts",
-          "5. Cartwright",
-          "6. Parry",
-          "7. O'Mara",
-          "8. Fitton",
-          "9. Hurst",
-          "10. Butt",
-          "11. Renshaw"
+          "Peake (GK)",
+          "Hall",
+          "Denny",
+          "Watts",
+          "Cartwright",
+          "Parry",
+          "O'Mara",
+          "Fitton (C)",
+          "Hurst",
+          "Butt",
+          "Renshaw"
         ],
         "substitutes": [
           "Guiver",
@@ -45,7 +45,7 @@
           "Cowley",
           "Brown"
         ],
-        "manager": null,
+        "manager": "Wayne and Josh",
         "officials": []
       }
     },
@@ -73,22 +73,22 @@
       "firstHalf": {
         "home": 0,
         "away": 0,
-        "note": "Match had not kicked off at time of final post"
+        "note": "Match just kicked off; no shots or chances reported"
       },
       "secondHalf": {
         "home": 0,
         "away": 0,
-        "note": "No match data available"
+        "note": "Match still in first half"
       },
       "extraTime": {
         "home": 0,
         "away": 0,
-        "note": "No match data available"
+        "note": "Match did not reach extra time"
       },
       "total": {
         "home": 0,
         "away": 0,
-        "note": "No match data available"
+        "note": "Match just kicked off; no shots or chances reported"
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
@@ -96,22 +96,22 @@
       "firstHalf": {
         "home": 50,
         "away": 50,
-        "note": "Match had not started"
+        "note": "Match just kicked off; no tactical information available"
       },
       "secondHalf": {
         "home": 50,
         "away": 50,
-        "note": "No match data available"
+        "note": "Match still in first half"
       },
       "extraTime": {
         "home": 50,
         "away": 50,
-        "note": "No match data available"
+        "note": "Match did not reach extra time"
       },
       "total": {
         "home": 50,
         "away": 50,
-        "note": "No match data available"
+        "note": "Match just kicked off; no tactical information available"
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
