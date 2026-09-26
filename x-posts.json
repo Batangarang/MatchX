@@ -1,7 +1,21 @@
 {
-  "scrapedAt": "2026-09-24T10:10:24.540Z",
+  "scrapedAt": "2026-09-26T09:30:33.748Z",
   "username": "SandbachFC_1st",
   "posts": [
+    {
+      "text": "Think you can take us to the top in the non league system! Well here is your chance with Sandbach featuring in the game.",
+      "createdAt": "2026-09-26T06:18:02.000Z",
+      "images": [],
+      "isMatchday": true
+    },
+    {
+      "text": "On Saturday we take on @alsagertown_fc in the Macron Cup. Everyone loves a local derby game. Get your selves down and enjoy the game. https://t.co/clDDmhnkg9",
+      "createdAt": "2026-09-24T21:59:10.000Z",
+      "images": [
+        "https://pbs.twimg.com/media/HTA4Mr7XAAACcqc.png"
+      ],
+      "isMatchday": false
+    },
     {
       "text": "The thoughts of Dec and Josh following our 2-0 win over Eccleshall https://t.co/mvfoHnV4XL",
       "createdAt": "2026-09-19T16:40:51.000Z",
@@ -54,20 +68,6 @@
       "text": "Great work by Fowles down the right hand side and his cross is met by Wilson who stings the keepers hands with a shot.\n\nSAN 1-0 ECC",
       "createdAt": "2026-09-19T14:26:40.000Z",
       "images": [],
-      "isMatchday": true
-    },
-    {
-      "text": "Goal - Josh Fowles slots home to open the scoring!!\n\nSAN 1-0 ECC",
-      "createdAt": "2026-09-19T14:18:48.000Z",
-      "images": [],
-      "isMatchday": true
-    },
-    {
-      "text": "An even opening ten minutes here in the Sandbach sunshine https://t.co/3aTv1IbJN8",
-      "createdAt": "2026-09-19T14:11:20.000Z",
-      "images": [
-        "https://pbs.twimg.com/media/HSldNg7WoAAOT05.jpg"
-      ],
       "isMatchday": true
     }
   ]
