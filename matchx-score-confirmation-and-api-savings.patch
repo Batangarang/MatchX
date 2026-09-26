@@ -1,0 +1,552 @@
+diff --git a/.github/workflows/division-scores.yml b/.github/workflows/division-scores.yml
+index cd5cb85..a994ad9 100644
+--- a/.github/workflows/division-scores.yml
++++ b/.github/workflows/division-scores.yml
+@@ -30,7 +30,7 @@ jobs:
+           git config user.email "github-actions[bot]@users.noreply.github.com"
+           git config core.editor true
+           
+-          for f in division-fixtures.json division-scores.json cost-log.json; do
++          for f in division-fixtures.json division-scores.json division-scores-cache.json cost-log.json; do
+             [ -f "$f" ] && git add "$f"
+           done
+           git diff --staged --quiet || git commit -m "..."
+diff --git a/division-posts.js b/division-posts.js
+index 752c350..fdf0b84 100644
+--- a/division-posts.js
++++ b/division-posts.js
+@@ -1,6 +1,6 @@
+ const fs = require('fs');
+ const CLUBS = require('./division-clubs.js');
+-const { getUserTweets } = require('./getxapi-client.js');
++const { getUserTweetsIncremental, getCallCount } = require('./getxapi-client.js');
+ const { logCost } = require('./cost-tracker.js');
+ 
+ const API_KEY = process.env.GETXAPI_KEY;
+@@ -26,17 +26,32 @@ async function run() {
+     return;
+   }
+ 
++  // Incremental: reuse posts already held in division-posts.json and only
++  // fetch what's newer, instead of re-paging 7 days for every club each run.
++  const previousByHandle = {};
++  try {
++    if (fs.existsSync('division-posts.json')) {
++      const prev = JSON.parse(fs.readFileSync('division-posts.json', 'utf-8'));
++      (prev.clubs || []).forEach(c => { previousByHandle[c.handle] = c.posts || []; });
++    }
++  } catch {}
++
+   const results = [];
+ 
+   for (const club of CLUBS) {
+     try {
+-      const posts = await getUserTweets(club.handle, API_KEY, { maxPages: 3, sinceDate: SEVEN_DAYS_AGO });
++      const posts = await getUserTweetsIncremental(club.handle, API_KEY, {
++        cached: previousByHandle[club.handle] || [],
++        floorDate: SEVEN_DAYS_AGO,
++        maxPagesFresh: 3,
++        maxPagesIncremental: 2,
++      });
+       const recentPosts = posts.filter(p => new Date(p.createdAt) >= SEVEN_DAYS_AGO);
+       results.push({ name: club.name, handle: club.handle, posts: recentPosts });
+       console.log(`${club.name}: ${recentPosts.length} posts`);
+     } catch (err) {
+       console.warn(`Skipping ${club.name} (@${club.handle}): ${err.message}`);
+-      results.push({ name: club.name, handle: club.handle, posts: [], error: err.message });
++      results.push({ name: club.name, handle: club.handle, posts: previousByHandle[club.handle] || [], error: err.message });
+     }
+   }
+ 
+@@ -47,7 +62,7 @@ async function run() {
+   };
+ 
+   fs.writeFileSync('division-posts.json', JSON.stringify(output, null, 2));
+-  logCost('division-posts', { getxapiCalls: CLUBS.length, claudeCalls: 0 });
++  logCost('division-posts', { getxapiCalls: getCallCount(), claudeCalls: 0 });
+   console.log('Saved division-posts.json');
+ }
+ 
+diff --git a/division-scores.js b/division-scores.js
+index 16726ff..8a3e114 100644
+--- a/division-scores.js
++++ b/division-scores.js
+@@ -1,6 +1,6 @@
+ const fs = require('fs');
+ const CLUBS = require('./division-clubs.js');
+-const { getUserTweets } = require('./getxapi-client.js');
++const { getUserTweetsIncremental, getCallCount } = require('./getxapi-client.js');
+ const API_KEY = process.env.GETXAPI_KEY;
+ const ANTHROPIC_KEY = process.env.ANTHROPIC_API_KEY;
+ const { getUKNow, getUKDateString } = require('./uk-time.js');
+@@ -174,16 +174,35 @@ async function run() {
+   });
+ 
+   const dayStart = new Date(now); dayStart.setUTCHours(0, 0, 0, 0);
++
++  // Incremental fetch: keep today's posts in a cache file and only ask
++  // GetXAPI for anything newer, so a normal poll is ~1 call per club instead
++  // of re-paging the whole day for every club on every run.
++  const CACHE_FILE = 'division-scores-cache.json';
++  let cache = { date: null, posts: {} };
++  try {
++    if (fs.existsSync(CACHE_FILE)) cache = JSON.parse(fs.readFileSync(CACHE_FILE, 'utf-8'));
++  } catch {}
++  if (cache.date !== target.targetDate) cache = { date: target.targetDate, posts: {} };
++
+   const postsByHandle = {};
+   for (const handle of handlesNeeded) {
+     try {
+-      const posts = await getUserTweets(handle, API_KEY, { maxPages: 2, sinceDate: dayStart });
+-      postsByHandle[handle] = posts.filter(p => new Date(p.createdAt) >= dayStart);
++      const posts = await getUserTweetsIncremental(handle, API_KEY, {
++        cached: cache.posts[handle] || [],
++        floorDate: dayStart,
++        maxPagesFresh: 2,
++        maxPagesIncremental: 2,
++      });
++      postsByHandle[handle] = posts;
++      cache.posts[handle] = posts;
+     } catch (err) {
+       console.warn(`Skipping @${handle}: ${err.message}`);
+-      postsByHandle[handle] = [];
++      // keep whatever we already had rather than treating a failed call as "posted nothing"
++      postsByHandle[handle] = cache.posts[handle] || [];
+     }
+   }
++  fs.writeFileSync(CACHE_FILE, JSON.stringify(cache));
+ 
+   const allPosts = Object.entries(postsByHandle).flatMap(([handle, posts]) =>
+     posts.map(p => ({ ...p, handle }))
+@@ -202,10 +221,12 @@ async function run() {
+     previous.date === target.targetDate
+   ) {
+     console.log('Nothing new since last check — skipping AI call.');
++    logCost('division-scores', { getxapiCalls: getCallCount() });
+     return;
+   }
+   if (allPosts.length === 0) {
+     console.log('No posts found from any club playing today.');
++    logCost('division-scores', { getxapiCalls: getCallCount() });
+     return;
+   }
+ 
+@@ -218,7 +239,7 @@ ${fixtureList}
+ Here are today's X posts from clubs playing today:
+ ${postsText}
+ 
+-Scorelines in these posts may be written without a dash, e.g. "2 1" instead of "2-1". Recognise these as valid too, and normalise to "X-Y" form.
++Scorelines in these posts may be written without a dash, e.g. "2 1" instead of "2-1", or with the word "nil" (e.g. "1 nil", "one-nil", "2-nil" = 2-0). Recognise these as valid too, and normalise to "X-Y" form (home-away).
+ 
+ IMPORTANT: A club's score can change multiple times as goals are scored throughout the match. Always use the MOST RECENT scoreline mentioned for each fixture — do not use an early or outdated scoreline just because it was clearly stated, if a later post shows a different, more current score for the same fixture.
+ 
+@@ -263,12 +284,13 @@ Only include a score if explicitly stated in the posts. Leave as null if not men
+   // If no explicit scoreline was stated but goals were extracted, derive a
+   // score from the goals count rather than showing nothing at all.
+     const fixturesWithDerivedScores = (parsed.fixtures || []).map(f => {
+-    if (f.score) return { ...f, matchStage: f.matchStage || 'scheduled' };
++    if (f.score) return { ...f, scoreSource: 'explicit', matchStage: f.matchStage || 'scheduled' };
+     const goals = f.goals || [];
+     if (goals.length === 0) return { ...f, matchStage: f.matchStage || 'scheduled' };
+     const home = goals.filter(g => g.team === 'home').length;
+     const away = goals.filter(g => g.team === 'away').length;
+-    return { ...f, score: `${home}-${away}`, matchStage: f.matchStage || 'scheduled' };
++    // scoreSource lets matchday-live tell a stated scoreline apart from one we only inferred by counting goals
++    return { ...f, score: `${home}-${away}`, scoreSource: 'derived', matchStage: f.matchStage || 'scheduled' };
+  });
+ 
+     const output = {
+@@ -283,7 +305,7 @@ Only include a score if explicitly stated in the posts. Leave as null if not men
+ 
+   fs.writeFileSync('division-scores.json', JSON.stringify(output, null, 2));
+   logCost('division-scores', {
+-    getxapiCalls: handlesNeeded.size,
++    getxapiCalls: getCallCount(),
+     claudeCalls: 1,
+     inputTokens: data.usage?.input_tokens || 0,
+     outputTokens: data.usage?.output_tokens || 0,
+diff --git a/getxapi-client.js b/getxapi-client.js
+index 4b1c4fd..390abf0 100644
+--- a/getxapi-client.js
++++ b/getxapi-client.js
+@@ -1,5 +1,10 @@
+ const BASE_URL = 'https://api.getxapi.com';
+ 
++// Real count of HTTP calls made to GetXAPI in this process (every page and
++// every 429 retry counts — that is what GetXAPI bills for).
++let callCount = 0;
++function getCallCount() { return callCount; }
++
+ function parseTwitterDate(dateStr) {
+   // GetXAPI returns dates like "Mon Jan 12 13:44:55 +0000 2026" — JS parses this natively
+   return new Date(dateStr).toISOString();
+@@ -31,6 +36,7 @@ async function getUserTweets(userName, apiKey, opts = {}) {
+     const params = new URLSearchParams({ userName });
+     if (cursor) params.set('cursor', cursor);
+ 
++    callCount++;
+     const res = await fetch(`${BASE_URL}/twitter/user/tweets?${params}`, {
+       headers: { Authorization: `Bearer ${apiKey}` },
+     });
+@@ -72,4 +78,29 @@ async function getUserTweets(userName, apiKey, opts = {}) {
+     }));
+ }
+ 
+-module.exports = { getUserTweets, parseTwitterDate };
++/**
++ * Incremental fetch: only asks GetXAPI for posts newer than what we already
++ * hold, so a normal poll costs ONE call per account instead of re-paging the
++ * whole day/week every time.
++ * @param {Array} cached  posts already held for this account (may be empty)
++ * @param {Date} floorDate  oldest post we ever care about
++ */
++async function getUserTweetsIncremental(userName, apiKey, { cached = [], floorDate, maxPagesFresh = 8, maxPagesIncremental = 3 } = {}) {
++  const cachedInRange = cached.filter(p => new Date(p.createdAt) >= floorDate);
++  let sinceDate = floorDate;
++  if (cachedInRange.length > 0) {
++    const newest = Math.max(...cachedInRange.map(p => new Date(p.createdAt).getTime()));
++    sinceDate = new Date(newest - 2 * 60000); // small overlap so nothing slips through
++  }
++  const fresh = await getUserTweets(userName, apiKey, {
++    maxPages: cachedInRange.length > 0 ? maxPagesIncremental : maxPagesFresh,
++    sinceDate,
++  });
++  const seen = new Set();
++  return [...cachedInRange, ...fresh]
++    .filter(p => new Date(p.createdAt) >= floorDate)
++    .filter(p => { const k = `${p.createdAt}|${p.text}`; if (seen.has(k)) return false; seen.add(k); return true; })
++    .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
++}
++
++module.exports = { getUserTweets, getUserTweetsIncremental, getCallCount, parseTwitterDate };
+diff --git a/matchday-live.js b/matchday-live.js
+index 274ceca..314a6b5 100644
+--- a/matchday-live.js
++++ b/matchday-live.js
+@@ -1,6 +1,6 @@
+ const fs = require('fs');
+ const CLUBS = require('./division-clubs.js');
+-const { getUserTweets } = require('./getxapi-client.js');
++const { getUserTweetsIncremental, getCallCount } = require('./getxapi-client.js');
+ const { logCost } = require('./cost-tracker.js');
+ 
+ const API_KEY = process.env.GETXAPI_KEY;
+@@ -56,10 +56,17 @@ function withinMatchWindow(kickoff, competitionNote) {
+   return minutesFromKickoff >= -90 && minutesFromKickoff <= maxMinutesAfter;
+ }
+ 
+-async function getPostsForHandle(handle, dateStr) {
++async function getPostsForHandle(handle, dateStr, cached = []) {
+   const dayStart = new Date(`${dateStr}T00:00:00Z`);
+   const dayEnd = new Date(`${dateStr}T23:59:59Z`);
+-  const tweets = await getUserTweets(handle, API_KEY, { maxPages: 8, sinceDate: dayStart });
++  // Incremental: reuse posts already saved earlier today and only ask GetXAPI
++  // for newer ones (normally ONE call per account instead of up to 8 pages).
++  const tweets = await getUserTweetsIncremental(handle, API_KEY, {
++    cached,
++    floorDate: dayStart,
++    maxPagesFresh: 8,
++    maxPagesIncremental: 3,
++  });
+   return tweets.filter(t => {
+     const d = new Date(t.createdAt);
+     return d >= dayStart && d <= dayEnd;
+@@ -238,15 +245,121 @@ function deriveHalfTimeScoreFromGoals(goals) {
+   return `${home}-${away}`;
+ }
+ 
+-function mergeMatchData(previous, incoming) {
++
++// ---------------------------------------------------------------------------
++// Score confirmation
++// The goal list alone is NOT trusted to define the score: both clubs often
++// post the same goal, and a duplicate/mis-attributed goal turns 1-0 into 1-1.
++// The score shown must be CONFIRMED by an explicitly stated scoreline —
++// the same evidence division-scores.js uses — and the goal list is trimmed
++// to agree with it. Goal-counting is only a last resort when nobody has
++// stated a score.
++// ---------------------------------------------------------------------------
++function parseScore(str) {
++  if (!str) return null;
++  const m = String(str).match(/(\d+)\s*[-–—:]\s*(\d+)/) || String(str).match(/^\s*(\d+)\s+(\d+)\s*$/);
++  return m ? [parseInt(m[1], 10), parseInt(m[2], 10)] : null;
++}
++
++function isUnnamedScorer(goal) {
++  return !normalizeIdentity(goal.scorer);
++}
++
++// Remove surplus goals so each side's count matches the confirmed score.
++// Unnamed goals go first, then the latest-minute goal. Removed goals are kept
++// in `unconfirmed` for debugging rather than silently lost.
++function trimGoalsToScore(goals, score) {
++  const target = parseScore(score);
++  if (!target) return { goals, unconfirmed: [] };
++  const kept = [...goals];
++  const unconfirmed = [];
++  ['home', 'away'].forEach((team, i) => {
++    let mine = kept.filter(g => g.team === team);
++    while (mine.length > target[i]) {
++      const victim = mine.find(isUnnamedScorer)
++        || mine.reduce((latest, g) => ((g.minute || 0) >= (latest.minute || 0) ? g : latest), mine[0]);
++      kept.splice(kept.indexOf(victim), 1);
++      unconfirmed.push(victim);
++      mine = kept.filter(g => g.team === team);
++    }
++  });
++  return { goals: kept, unconfirmed };
++}
++
++// Read Sandbach's fixture from division-scores.js's output (same day only).
++// Returns the score only when division-scores actually saw it STATED — a score
++// division-scores merely derived from counting goals is not independent evidence.
++function loadDivisionScore(dateStr, sandbachIsHome) {
++  try {
++    if (!fs.existsSync('division-scores.json')) return null;
++    const ds = JSON.parse(fs.readFileSync('division-scores.json', 'utf-8'));
++    if (!ds.isToday || ds.date !== dateStr) return null;
++    const f = (ds.fixtures || []).find(x => /sandbach/i.test(x.home || '') || /sandbach/i.test(x.away || ''));
++    if (!f || f.scoreSource !== 'explicit') return null;
++    const parsed = parseScore(f.score);
++    if (!parsed) return null;
++    const divHasSandbachHome = /sandbach/i.test(f.home || '');
++    const [h, a] = divHasSandbachHome === sandbachIsHome ? parsed : [parsed[1], parsed[0]];
++    return { score: `${h}-${a}`, matchStage: f.matchStage || null, generatedAt: ds.generatedAt };
++  } catch {
++    return null;
++  }
++}
++
++// Decide the score to display, and make the goal list agree with it.
++//   match: { goals, feedScore, finalScoreAnnounced, matchStage }
++function confirmScore(match, divisionScore, fallbackScore) {
++  const goals = match.goals || [];
++  const derived = deriveScoreFromGoals(goals);
++  const feed = match.feedScore && parseScore(match.feedScore) ? match.feedScore : null;
++  const division = divisionScore ? divisionScore.score : null;
++  const ft = match.matchStage === 'full_time' && match.finalScoreAnnounced && parseScore(match.finalScoreAnnounced)
++    ? match.finalScoreAnnounced : null;
++
++  let score, scoreSource, scoreConfirmed = true, note = null;
++  if (ft) {
++    score = ft; scoreSource = 'announced_full_time';
++  } else if (division && feed && division === feed) {
++    score = division; scoreSource = 'confirmed_by_both_feeds';
++  } else if (division && feed && division !== feed) {
++    score = division; scoreSource = 'division_scores';
++    note = `Match feed said ${feed} but the division live-scores feed said ${division} — showing ${division}.`;
++  } else if (division) {
++    score = division; scoreSource = 'division_scores';
++  } else if (feed) {
++    score = feed; scoreSource = 'match_feed_stated';
++  } else if (derived) {
++    score = derived; scoreSource = 'goal_count_only'; scoreConfirmed = false;
++  } else {
++    score = fallbackScore || null; scoreSource = 'none'; scoreConfirmed = false;
++  }
++
++  let finalGoals = goals;
++  let unconfirmedGoals = [];
++  if (scoreConfirmed) {
++    const trimmed = trimGoalsToScore(goals, score);
++    finalGoals = trimmed.goals;
++    unconfirmedGoals = trimmed.unconfirmed;
++    if (unconfirmedGoals.length && !note) {
++      note = `Goal reports suggested ${derived} but the confirmed score is ${score} — ${unconfirmedGoals.length} unconfirmed goal report(s) ignored.`;
++    }
++  } else if (scoreSource === 'goal_count_only') {
++    note = `Score inferred from goal reports only (${score}) — no scoreline has been stated yet to confirm it.`;
++  }
++
++  return { score, scoreSource, scoreConfirmed, scoreDiscrepancy: note, goals: finalGoals, unconfirmedGoals };
++}
++
++function mergeMatchData(previous, incoming, divisionScore) {
+   if (!previous) {
+     const dedupedGoals = dedupeSimilarGoals(incoming.goals || []);
+-    const derivedScore = deriveScoreFromGoals(dedupedGoals);
+     const announcedScore = incoming.finalScoreAnnounced || null;
+-    const finalScore = (incoming.matchStage === 'full_time' && announcedScore)
+-      ? announcedScore
+-      : (derivedScore || incoming.score);
+-    const derivedHT = deriveHalfTimeScoreFromGoals(dedupedGoals);
++    const feedScore = incoming.scoreEvidence ? (incoming.score || null) : null;
++    const confirmed = confirmScore(
++      { goals: dedupedGoals, feedScore, finalScoreAnnounced: announcedScore, matchStage: incoming.matchStage },
++      divisionScore, incoming.score
++    );
++    const derivedHT = deriveHalfTimeScoreFromGoals(confirmed.goals);
+     const announcedHT = incoming.halfTimeScoreAnnounced || null;
+     const htDiscrepancy = (announcedHT && derivedHT && announcedHT !== derivedHT)
+       ? `First-half goals suggest HT ${derivedHT}, but an announced HT score of ${announcedHT} was also seen.`
+@@ -254,9 +367,13 @@ function mergeMatchData(previous, incoming) {
+ 
+     return {
+       ...incoming,
+-      goals: dedupedGoals,
+-      score: finalScore,
+-      scoreDiscrepancy: null,
++      goals: confirmed.goals,
++      unconfirmedGoals: confirmed.unconfirmedGoals,
++      score: confirmed.score,
++      scoreSource: confirmed.scoreSource,
++      scoreConfirmed: confirmed.scoreConfirmed,
++      feedScore,
++      scoreDiscrepancy: confirmed.scoreDiscrepancy,
+       halfTimeScoreAnnounced: announcedHT,
+       htDiscrepancy,
+       finalScoreAnnounced: announcedScore,
+@@ -283,28 +400,31 @@ function mergeMatchData(previous, incoming) {
+     ['team', 'player']
+   );
+ 
+-  const derivedScore = deriveScoreFromGoals(mergedGoals);
+   const announcedScore = incoming.finalScoreAnnounced || previous.finalScoreAnnounced || null;
+-  const finalScore = (incoming.matchStage === 'full_time' && announcedScore)
+-    ? announcedScore
+-    : (derivedScore || incoming.score || previous.score);
+-  const scoreDiscrepancy = (announcedScore && derivedScore && announcedScore !== derivedScore)
+-    ? `Goals count suggests ${derivedScore}, but an announced score of ${announcedScore} was also seen — showing ${finalScore}.`
+-    : null;
++  const feedScore = incoming.scoreEvidence ? (incoming.score || null) : null;
++  const stageNow = incoming.matchStage && incoming.matchStage !== 'scheduled' ? incoming.matchStage : previous.matchStage;
++  const confirmed = confirmScore(
++    { goals: mergedGoals, feedScore, finalScoreAnnounced: announcedScore, matchStage: stageNow },
++    divisionScore, previous.score
++  );
+ 
+-  const derivedHT = deriveHalfTimeScoreFromGoals(mergedGoals);
++  const derivedHT = deriveHalfTimeScoreFromGoals(confirmed.goals);
+   const announcedHT = incoming.halfTimeScoreAnnounced || previous.halfTimeScoreAnnounced || null;
+   const htDiscrepancy = (announcedHT && derivedHT && announcedHT !== derivedHT)
+     ? `First-half goals suggest HT ${derivedHT}, but an announced HT score of ${announcedHT} was also seen.`
+     : null;
+ 
+   return {
+-    score: finalScore,
+-    scoreDiscrepancy,
++    score: confirmed.score,
++    scoreSource: confirmed.scoreSource,
++    scoreConfirmed: confirmed.scoreConfirmed,
++    feedScore,
++    scoreDiscrepancy: confirmed.scoreDiscrepancy,
++    unconfirmedGoals: confirmed.unconfirmedGoals,
+     finalScoreAnnounced: announcedScore,
+     halfTimeScoreAnnounced: announcedHT,
+     htDiscrepancy,
+-    matchStage: incoming.matchStage && incoming.matchStage !== 'scheduled' ? incoming.matchStage : previous.matchStage,
++    matchStage: stageNow,
+     lineups: {
+       home: {
+         players: incoming.lineups?.home?.players?.length ? incoming.lineups.home.players : previous.lineups?.home?.players || [],
+@@ -319,7 +439,7 @@ function mergeMatchData(previous, incoming) {
+         officials: incoming.lineups?.away?.officials?.length ? incoming.lineups.away.officials : previous.lineups?.away?.officials || [],
+       },
+     },
+-    goals: mergedGoals,
++    goals: confirmed.goals,
+     yellowCards: mergedYellowCards,
+     redCards: mergedRedCards,
+     substitutions: dedupeSimilarSubstitutions(
+@@ -390,11 +510,23 @@ async function run() {
+     return;
+   }
+ 
++  // Reuse posts saved earlier today so we only fetch what's new.
++  let cachedRaw = [];
++  try {
++    const rawFile = `matchday-archive/${dateStr}-raw-posts.json`;
++    if (fs.existsSync(rawFile)) cachedRaw = JSON.parse(fs.readFileSync(rawFile, 'utf-8'));
++  } catch {}
++  const cachedFor = h => cachedRaw.filter(p => p.handle === h);
++
+   const [homePosts, awayPosts] = await Promise.all([
+-    homeHandle ? getPostsForHandle(homeHandle, dateStr) : Promise.resolve([]),
+-    awayHandle ? getPostsForHandle(awayHandle, dateStr) : Promise.resolve([]),
++    homeHandle ? getPostsForHandle(homeHandle, dateStr, cachedFor(homeHandle)) : Promise.resolve([]),
++    awayHandle ? getPostsForHandle(awayHandle, dateStr, cachedFor(awayHandle)) : Promise.resolve([]),
+   ]);
+ 
++  // Independent second source for the score: what division-scores.js has
++  // confirmed from explicitly stated scorelines.
++  const divisionScore = loadDivisionScore(dateStr, fixture.homeAway === 'H');
++
+   const combinedRaw = [
+     ...homePosts.map(p => ({ ...p, side: 'home', handle: homeHandle })),
+     ...awayPosts.map(p => ({ ...p, side: 'away', handle: awayHandle })),
+@@ -407,6 +539,7 @@ async function run() {
+ 
+   if (combined.length === 0) {
+     console.log('No posts found from either account — skipping AI extraction.');
++    logCost('matchday-live', { getxapiCalls: getCallCount() });
+     return;
+   }
+ 
+@@ -421,6 +554,28 @@ async function run() {
+ 
+   if (newImagePairs.length === 0 && newTextCount <= 0 && previousOutput) {
+     console.log('Nothing new since last check — skipping AI call.');
++    // No new posts, but the division feed may have confirmed/corrected the
++    // score since last time — re-check it for free (no AI call).
++    const prevMatch = previousOutput.match;
++    if (prevMatch && divisionScore) {
++      const re = confirmScore(prevMatch, divisionScore, prevMatch.score);
++      if (re.score !== prevMatch.score || re.goals.length !== (prevMatch.goals || []).length) {
++        const updated = {
++          ...previousOutput,
++          generatedAt: new Date().toISOString(),
++          match: { ...prevMatch, score: re.score, scoreSource: re.scoreSource, scoreConfirmed: re.scoreConfirmed, scoreDiscrepancy: re.scoreDiscrepancy, goals: re.goals, unconfirmedGoals: re.unconfirmedGoals },
++        };
++        fs.writeFileSync(archiveFile, JSON.stringify(updated, null, 2));
++        if (!process.env.MATCHDAY_TEST_DATE) fs.writeFileSync('matchday-live.json', JSON.stringify(updated, null, 2));
++        if (fs.existsSync('matchday-index.json')) {
++          const idx = JSON.parse(fs.readFileSync('matchday-index.json', 'utf-8'));
++          const e = idx.find(x => x.date === dateStr);
++          if (e) { e.score = re.score; fs.writeFileSync('matchday-index.json', JSON.stringify(idx, null, 2)); }
++        }
++        console.log(`Score re-confirmed against division feed: ${prevMatch.score} -> ${re.score}`);
++      }
++    }
++    logCost('matchday-live', { getxapiCalls: getCallCount() });
+     return;
+   }
+ 
+@@ -440,7 +595,9 @@ IMPORTANT: When a post describes a foul or clash between two players before ment
+ 
+ IMPORTANT: When extracting "finalScoreAnnounced" or "halfTimeScoreAnnounced", only use a scoreline explicitly stated in a post that comes AT OR AFTER the point in the match it claims to describe. Do not use an outdated scoreline that predates goals also visible in these posts.
+ 
+-IMPORTANT: Scorelines in these posts may be written without a dash, e.g. "2 1" instead of "2-1". Recognise these as valid too, and normalise to "X-Y" form.
++IMPORTANT: Scorelines in these posts may be written without a dash, e.g. "2 1" instead of "2-1", or with the word "nil" (e.g. "1 nil", "one-nil", "2-nil" means 2-0). Recognise these as valid too, and normalise to "X-Y" form, HOME team first. Clubs often list their OWN score first even when playing away, so use the team names/context to put the home team's score first.
++
++IMPORTANT: For "score", use the MOST RECENT scoreline explicitly stated in the posts (from either club) — never add up goals yourself. If no post states a scoreline, "score" must be null. Put the exact wording of the post you took it from in "scoreEvidence".
+ 
+ Posts:
+ ${postsText}
+@@ -448,7 +605,8 @@ ${postsText}
+ Using information present in these posts AND any attached images, build a structured match summary. Respond with ONLY a JSON object, no other text, no markdown fences, in exactly this shape:
+ 
+ {
+-  "score": "string or null — the current or final score after 90 minutes",
++  "score": "string or null — the most recent scoreline EXPLICITLY STATED in a post (home-away), or null. Never calculate this from goal mentions.",
++  "scoreEvidence": "string or null — the exact text of the post that states that scoreline; null if score is null",
+   "finalScoreAnnounced": "string or null — ONLY if a post explicitly states the full-time score as a direct statement",
+   "halfTimeScoreAnnounced": "string or null — ONLY if a post explicitly states the half-time score as a direct statement",
+   "matchStage": "one of: scheduled, first_half, half_time, second_half, extra_time, penalties, full_time — ONLY set to half_time or full_time when a post EXPLICITLY ANNOUNCES it (including abbreviations like 'HT'/'FT'), never guess from elapsed time",
+@@ -532,7 +690,7 @@ IMPORTANT: If actual goals have been scored, roughXG must reflect that clearly 
+     throw new Error(`Failed to parse AI response as JSON: ${err.message}\nRaw: ${raw}`);
+   }
+ 
+-  const mergedMatch = mergeMatchData(previousOutput?.match, parsed);
++  const mergedMatch = mergeMatchData(previousOutput?.match, parsed, divisionScore);
+ 
+   const output = {
+     generatedAt: new Date().toISOString(),
+@@ -572,7 +730,7 @@ IMPORTANT: If actual goals have been scored, roughXG must reflect that clearly 
+     fs.writeFileSync('matchday-live.json', JSON.stringify(output, null, 2));
+   }
+   logCost('matchday-live', {
+-    getxapiCalls: 2,
++    getxapiCalls: getCallCount(),
+     claudeCalls: 1,
+     inputTokens: data.usage?.input_tokens || 0,
+     outputTokens: data.usage?.output_tokens || 0,
