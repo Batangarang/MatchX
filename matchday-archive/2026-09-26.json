@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-09-26T14:20:56.183Z",
+  "generatedAt": "2026-09-26T14:25:44.215Z",
   "fixtureDate": "2026-09-26",
   "kickoff": "15:00",
   "homeTeam": "Sandbach United",
   "awayTeam": "Alsager Town",
-  "postsUsed": 19,
+  "postsUsed": 20,
   "imagesAnalyzedThisRun": 0,
   "totalImagesAnalyzed": 3,
   "match": {
@@ -97,47 +97,47 @@
     },
     "roughXG": {
       "firstHalf": {
-        "home": 0.3,
-        "away": 0.4,
-        "note": "Sandbach had early effort from Kieran O'Connell (volley over); Alsager created two clear chances including Hurst's one-on-one that went wide and a shot that tested the keeper"
+        "home": 0.4,
+        "away": 0.5,
+        "note": "Sandbach had early chance (Kieran O'Connell volley over), Alsager had better quality chance (David Hurst one-on-one wide), plus Fowles header at back post for Sandbach. Several half-chances noted but no clear-cut finishes."
       },
       "secondHalf": {
         "home": 0,
         "away": 0,
-        "note": "No second-half action reported"
+        "note": "No second-half events reported in posts."
       },
       "extraTime": {
         "home": 0,
         "away": 0,
-        "note": "Match did not reach extra time"
+        "note": "Match did not reach extra time."
       },
       "total": {
-        "home": 0.3,
-        "away": 0.4,
-        "note": "Early chances for both sides in first 20 minutes; Alsager marginally more threatening"
+        "home": 0.4,
+        "away": 0.5,
+        "note": "Low-chance first half with clear-cut opportunities spurned. Posts end during first half (around 21 minutes)."
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
     "matchControl": {
       "firstHalf": {
-        "home": 45,
-        "away": 55,
-        "note": "Sandbach had slightly more shots early on, but Alsager created the better chances; described as 'promising start' for away side"
+        "home": 55,
+        "away": 45,
+        "note": "Sandbach described as having 'probably had the extra shot', but Alsager had the 'best chance' early on. Competitive opening but slight Sandbach edge."
       },
       "secondHalf": {
         "home": 50,
         "away": 50,
-        "note": "No second-half action reported"
+        "note": "No second-half events reported in posts."
       },
       "extraTime": {
         "home": 50,
         "away": 50,
-        "note": "Match did not reach extra time"
+        "note": "Match did not reach extra time."
       },
       "total": {
-        "home": 45,
-        "away": 55,
-        "note": "Slightly favours Alsager in the reported early passage of play"
+        "home": 55,
+        "away": 45,
+        "note": "Based on limited first-half data only; insufficient information for full-match assessment."
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
