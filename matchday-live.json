@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-09-26T15:35:43.831Z",
+  "generatedAt": "2026-09-26T15:40:50.808Z",
   "fixtureDate": "2026-09-26",
   "kickoff": "15:00",
   "homeTeam": "Sandbach United",
   "awayTeam": "Alsager Town",
-  "postsUsed": 40,
+  "postsUsed": 42,
   "imagesAnalyzedThisRun": 0,
   "totalImagesAnalyzed": 3,
   "match": {
@@ -80,7 +80,7 @@
       {
         "minute": 75,
         "team": "away",
-        "player": "Hurst"
+        "player": "9. Hurst"
       }
     ],
     "redCards": [],
@@ -104,13 +104,13 @@
         "playerOn": "Tatters"
       },
       {
-        "minute": 56,
+        "minute": 53,
         "team": "home",
         "playerOff": "Williams",
         "playerOn": "Vernon"
       },
       {
-        "minute": 56,
+        "minute": 53,
         "team": "home",
         "playerOff": "Shotton",
         "playerOn": "Tatters"
@@ -141,23 +141,23 @@
     "roughXG": {
       "firstHalf": {
         "home": 0.3,
-        "away": 0.7,
-        "note": "Alsager had more and better chances; Sandbach had efforts cleared off the line (Foley, Fowles) but few clear openings. Alsager's Hurst had a one-on-one chance."
+        "away": 0.6,
+        "note": "Alsager had clear chances (Hurst one-on-one, Renshaw missing from cross), Sandbach had Foley and Fowles efforts cleared off the line. Alsager created more quality chances."
       },
       "secondHalf": {
         "home": 0.4,
         "away": 0.5,
-        "note": "Sandbach had more possession but few clear chances. Hall made a vital save from Hurst/Renshaw counter-attack. Overall turgid display from both sides."
+        "note": "Sandbach had more possession but fewer clear-cut chances. Alsager had Renshaw's near-miss and Hurst's shot saved by Hall. Overall fairly open but few genuine goalscoring opportunities."
       },
       "extraTime": {
         "home": 0,
         "away": 0,
-        "note": "Match had not reached extra time by final post timestamp."
+        "note": "No extra time played"
       },
       "total": {
         "home": 0.7,
-        "away": 1.2,
-        "note": "Alsager dominated chances throughout, especially in first half. Sandbach improved second half but neither side found the net."
+        "away": 1.1,
+        "note": "Alsager created slightly more and clearer chances throughout, particularly in the first half. Sandbach improved second-half possession but remained relatively toothless in attack."
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
@@ -165,22 +165,22 @@
       "firstHalf": {
         "home": 40,
         "away": 60,
-        "note": "Alsager had the better chances and more threatening play; Sandbach described as needing to 'get a grip and get hold of the game'."
+        "note": "Alsager dominated early with better chances and movement. Sandbach described as needing to 'get a grip' on the game."
       },
       "secondHalf": {
         "home": 55,
         "away": 45,
-        "note": "Sandbach had 'definitely had more of the ball' in second half but lacked clear chances. Alsager still dangerous on counter."
+        "note": "Sandbach improved and had 'definitely more of the ball' in second half, though neither side created many big chances."
       },
       "extraTime": {
         "home": 50,
         "away": 50,
-        "note": "Match had not reached extra time by final post timestamp."
+        "note": "No extra time played"
       },
       "total": {
         "home": 47,
         "away": 53,
-        "note": "Alsager slightly edged the match overall but it was a close, turgid encounter with few clear opportunities for either side."
+        "note": "Alsager slightly edged control overall, particularly in first half. Match described as 'turgid' with limited quality from either side."
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
