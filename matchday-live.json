@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-09-26T15:31:11.186Z",
+  "generatedAt": "2026-09-26T15:35:43.831Z",
   "fixtureDate": "2026-09-26",
   "kickoff": "15:00",
   "homeTeam": "Sandbach United",
   "awayTeam": "Alsager Town",
-  "postsUsed": 39,
+  "postsUsed": 40,
   "imagesAnalyzedThisRun": 0,
   "totalImagesAnalyzed": 3,
   "match": {
@@ -50,14 +50,14 @@
       },
       "away": {
         "players": [
-          "1. Peake (GK)",
+          "1. Peake",
           "2. Hall",
           "3. Denny",
           "4. Watts",
           "5. Cartwright",
           "6. Parry",
           "7. O'Mara",
-          "8. Fitton (C)",
+          "8. Fitton",
           "9. Hurst",
           "10. Butt",
           "11. Renshaw"
@@ -76,7 +76,13 @@
       }
     },
     "goals": [],
-    "yellowCards": [],
+    "yellowCards": [
+      {
+        "minute": 75,
+        "team": "away",
+        "player": "Hurst"
+      }
+    ],
     "redCards": [],
     "substitutions": [
       {
@@ -98,13 +104,13 @@
         "playerOn": "Tatters"
       },
       {
-        "minute": 54,
+        "minute": 56,
         "team": "home",
         "playerOff": "Williams",
         "playerOn": "Vernon"
       },
       {
-        "minute": 54,
+        "minute": 56,
         "team": "home",
         "playerOff": "Shotton",
         "playerOn": "Tatters"
@@ -135,23 +141,23 @@
     "roughXG": {
       "firstHalf": {
         "home": 0.3,
-        "away": 0.6,
-        "note": "Alsager had two clear chances (Hurst one-on-one, Renshaw miss from O'Mara cross), Sandbach had Foley and Fowles efforts cleared off line but from closer range. Alsager appeared more threatening."
+        "away": 0.7,
+        "note": "Alsager had more and better chances; Sandbach had efforts cleared off the line (Foley, Fowles) but few clear openings. Alsager's Hurst had a one-on-one chance."
       },
       "secondHalf": {
-        "home": 0.2,
-        "away": 0.3,
-        "note": "Both sides struggled to create clear-cut chances. Cope header cleared, Hurst counter-attack saved by Hall. Little quality play from either side by 70 minutes."
+        "home": 0.4,
+        "away": 0.5,
+        "note": "Sandbach had more possession but few clear chances. Hall made a vital save from Hurst/Renshaw counter-attack. Overall turgid display from both sides."
       },
       "extraTime": {
         "home": 0,
         "away": 0,
-        "note": "No extra time played."
+        "note": "Match had not reached extra time by final post timestamp."
       },
       "total": {
-        "home": 0.5,
-        "away": 0.9,
-        "note": "Alsager had the better chances overall. Sandbach improved after half-time with more possession but limited creation. Match remains goalless at 70 minutes."
+        "home": 0.7,
+        "away": 1.2,
+        "note": "Alsager dominated chances throughout, especially in first half. Sandbach improved second half but neither side found the net."
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
@@ -159,22 +165,22 @@
       "firstHalf": {
         "home": 40,
         "away": 60,
-        "note": "Alsager dominated early, creating multiple clear chances. Sandbach had possession at times but limited threat. Posts describe Alsager as threatening and Sandbach needing to 'get a grip'."
+        "note": "Alsager had the better chances and more threatening play; Sandbach described as needing to 'get a grip and get hold of the game'."
       },
       "secondHalf": {
-        "home": 60,
-        "away": 40,
-        "note": "Sandbach improved with more possession after half-time but still ineffective. Post at 62 minutes notes Sandbach 'definitely had more of the ball' but lacked big chances. Described as 'turgid display'."
+        "home": 55,
+        "away": 45,
+        "note": "Sandbach had 'definitely had more of the ball' in second half but lacked clear chances. Alsager still dangerous on counter."
       },
       "extraTime": {
         "home": 50,
         "away": 50,
-        "note": "No extra time played."
+        "note": "Match had not reached extra time by final post timestamp."
       },
       "total": {
-        "home": 50,
-        "away": 50,
-        "note": "Closely contested cup tie. Alsager stronger first half, Sandbach better second half possession but neither side clinical. Match remained goalless at 70+ minutes."
+        "home": 47,
+        "away": 53,
+        "note": "Alsager slightly edged the match overall but it was a close, turgid encounter with few clear opportunities for either side."
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
