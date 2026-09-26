@@ -1,5 +1,5 @@
 {
-  "scrapedAt": "2026-09-26T20:00:52.963Z",
+  "scrapedAt": "2026-09-26T21:00:57.156Z",
   "nextFixture": {
     "date": "Sat 03/10/26",
     "opposition": "Alsager Town",
@@ -276,6 +276,16 @@
       "competitionNote": null
     },
     {
+      "date": "Sat 24/10/26",
+      "opposition": "AFC Bridgnorth",
+      "opponentUrl": "clubpage.php?id=936",
+      "homeAway": "A",
+      "kickoff": "15:00",
+      "score": null,
+      "scorers": null,
+      "competitionNote": null
+    },
+    {
       "date": "Sat 31/10/26",
       "opposition": "Dawley Town",
       "opponentUrl": "clubpage.php?id=635",
@@ -511,16 +521,6 @@
       "opponentUrl": "clubpage.php?id=91",
       "homeAway": "A",
       "kickoff": "15:00",
-      "score": null,
-      "scorers": null,
-      "competitionNote": null
-    },
-    {
-      "date": "TBC",
-      "opposition": "AFC Bridgnorth",
-      "opponentUrl": "clubpage.php?id=936",
-      "homeAway": "A",
-      "kickoff": "",
       "score": null,
       "scorers": null,
       "competitionNote": null
