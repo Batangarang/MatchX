@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-09-26T13:50:45.934Z",
+  "generatedAt": "2026-09-26T13:55:42.520Z",
   "fixtureDate": "2026-09-26",
   "kickoff": "15:00",
   "homeTeam": "Sandbach United",
   "awayTeam": "Alsager Town",
-  "postsUsed": 7,
+  "postsUsed": 8,
   "imagesAnalyzedThisRun": 0,
   "totalImagesAnalyzed": 2,
   "match": {
@@ -27,17 +27,17 @@
       },
       "away": {
         "players": [
-          "Peake (GK)",
-          "Hall",
-          "Denny",
-          "Watts",
-          "Cartwright",
-          "Parry",
-          "O'Mara",
-          "Fitton (C)",
-          "Hurst",
-          "Butt",
-          "Renshaw"
+          "1. Peake",
+          "2. Hall",
+          "3. Denny",
+          "4. Watts",
+          "5. Cartwright",
+          "6. Parry",
+          "7. O'Mara",
+          "8. Fitton",
+          "9. Hurst",
+          "10. Butt",
+          "11. Renshaw"
         ],
         "substitutes": [
           "Guiver",
@@ -96,7 +96,7 @@
       "firstHalf": {
         "home": 50,
         "away": 50,
-        "note": "Match had not started; no data available"
+        "note": "Match had not started"
       },
       "secondHalf": {
         "home": 50,
