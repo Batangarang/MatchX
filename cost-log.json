@@ -11281,14 +11281,14 @@
       "aiCostGBP": 0
     },
     {
-      "script": "x-insights",
-      "timestamp": "2026-09-27T00:00:47.191Z",
+      "script": "recap-preview",
+      "timestamp": "2026-09-27T00:00:59.766Z",
       "getxapiCalls": 0,
       "claudeCalls": 1,
-      "inputTokens": 936,
-      "outputTokens": 102,
+      "inputTokens": 2191,
+      "outputTokens": 328,
       "xCostGBP": 0,
-      "aiCostGBP": 0.0011
+      "aiCostGBP": 0.0029
     }
   ]
 }
