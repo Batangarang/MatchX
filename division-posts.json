@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-27T15:31:15.640Z",
-  "sinceDate": "2026-09-20T15:30:45.171Z",
+  "generatedAt": "2026-09-27T18:01:16.607Z",
+  "sinceDate": "2026-09-20T18:00:49.635Z",
   "clubs": [
     {
       "name": "Sandbach United",
@@ -560,6 +560,13 @@
       "name": "Stafford Town",
       "handle": "StaffordTown1st",
       "posts": [
+        {
+          "text": "⚽️ October Fixtures! ⚽️\n\nA busy month awaits the Town boys now cup fixtures and a rearranged league one have been added. \n\nDon’t miss them! \n\n#UpTheTown https://t.co/tQN0URNu70",
+          "createdAt": "2026-09-27T17:46:57.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HTPbRyrXsAAdICS.jpg"
+          ]
+        },
         {
           "text": "I caught up with Adam Wall to get his immediate reaction to today’s cup exit. https://t.co/Sz9KEHlFFs",
           "createdAt": "2026-09-26T16:21:46.000Z",
@@ -2163,11 +2170,6 @@
         {
           "text": "Big game for @LongridgeTownFC manager Lee Ashcroft on Saturday (Charnock Richard Away, Macron Cup)- it will be his 500th game in charge.",
           "createdAt": "2026-09-21T10:49:53.000Z",
-          "images": []
-        },
-        {
-          "text": "Did you know we are now advertising Club vacancies also? \n\nWe have vacancies at @GarstangFC @ashtontownfc and @CreweFC on our website. \n\nCan you help? \n\nhttps://www.nwcfl.com/league-vacancies.php",
-          "createdAt": "2026-09-20T17:21:44.000Z",
           "images": []
         }
       ]
