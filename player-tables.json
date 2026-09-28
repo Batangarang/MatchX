@@ -1,24 +1,12 @@
 {
-  "generatedAt": "2026-09-28T17:01:09.462Z",
+  "generatedAt": "2026-09-28T18:01:02.988Z",
   "division": "First Division South",
   "appearances": [
     {
       "rank": "1",
-      "player": "Luke Evans",
-      "club": "New Mills",
-      "total": "10"
-    },
-    {
-      "rank": "2",
       "player": "Ryan Taylor (GK)",
       "club": "Barnton",
       "total": "9"
-    },
-    {
-      "rank": "-",
-      "player": "Robbie Hatton",
-      "club": "Sandbach United",
-      "total": "10"
     },
     {
       "rank": "-",
@@ -31,12 +19,6 @@
       "player": "Luke Roscoe",
       "club": "Cheadle Heath Nomads",
       "total": "10"
-    },
-    {
-      "rank": "-",
-      "player": "Lawson Birch",
-      "club": "Wednesfield Community",
-      "total": "9"
     },
     {
       "rank": "-",
@@ -64,20 +46,8 @@
     },
     {
       "rank": "-",
-      "player": "James Sutton",
-      "club": "Market Drayton Town",
-      "total": "9"
-    },
-    {
-      "rank": "-",
       "player": "Jacob Welch",
       "club": "Allscott Heath",
-      "total": "10"
-    },
-    {
-      "rank": "-",
-      "player": "Jack Morris",
-      "club": "New Mills",
       "total": "10"
     },
     {
@@ -100,18 +70,6 @@
     },
     {
       "rank": "-",
-      "player": "Essa Faburay",
-      "club": "Eccleshall",
-      "total": "9"
-    },
-    {
-      "rank": "-",
-      "player": "Eshan Greer",
-      "club": "Stafford Town",
-      "total": "10"
-    },
-    {
-      "rank": "-",
       "player": "Daniel Cooper (GK)",
       "club": "Stafford Town",
       "total": "10"
@@ -124,38 +82,20 @@
     },
     {
       "rank": "-",
-      "player": "Ben Davies",
-      "club": "Allscott Heath",
-      "total": "10"
-    },
-    {
-      "rank": "-",
       "player": "Armando Wood",
       "club": "Market Drayton Town",
       "total": "9"
     },
     {
       "rank": "-",
-      "player": "Toby Humphries",
-      "club": "Barnton",
+      "player": "Essa Faburay",
+      "club": "Eccleshall",
       "total": "9"
     },
     {
       "rank": "-",
-      "player": "Nathan Barry",
-      "club": "Sandbach United",
-      "total": "10"
-    },
-    {
-      "rank": "-",
-      "player": "Matthew Beech",
+      "player": "Eshan Greer",
       "club": "Stafford Town",
-      "total": "10"
-    },
-    {
-      "rank": "-",
-      "player": "Stanley Tatters",
-      "club": "Sandbach United",
       "total": "10"
     },
     {
@@ -169,6 +109,12 @@
       "player": "Rio Tetsell",
       "club": "Wednesfield Community",
       "total": "9"
+    },
+    {
+      "rank": "-",
+      "player": "Matthew Beech",
+      "club": "Stafford Town",
+      "total": "10"
     },
     {
       "rank": "-",
@@ -196,7 +142,19 @@
     },
     {
       "rank": "-",
+      "player": "Stanley Tatters",
+      "club": "Sandbach United",
+      "total": "10"
+    },
+    {
+      "rank": "-",
       "player": "Sam Lynch",
+      "club": "Stafford Town",
+      "total": "10"
+    },
+    {
+      "rank": "-",
+      "player": "Callum Parker",
       "club": "Stafford Town",
       "total": "10"
     },
@@ -208,14 +166,332 @@
     },
     {
       "rank": "-",
-      "player": "Callum Parker",
-      "club": "Stafford Town",
+      "player": "Tyler Bishop",
+      "club": "Telford Town",
+      "total": "9"
+    },
+    {
+      "rank": "-",
+      "player": "Luke Evans",
+      "club": "New Mills",
+      "total": "10"
+    },
+    {
+      "rank": "30",
+      "player": "William Burns",
+      "club": "Brereton Social",
+      "total": "8"
+    },
+    {
+      "rank": "-",
+      "player": "Stanley Amos (GK)",
+      "club": "Wolverhampton Casuals",
+      "total": "9"
+    },
+    {
+      "rank": "-",
+      "player": "Samuel Fleming",
+      "club": "Brereton Social",
+      "total": "8"
+    },
+    {
+      "rank": "-",
+      "player": "Robbie Hatton",
+      "club": "Sandbach United",
       "total": "10"
     },
     {
       "rank": "-",
-      "player": "Tyler Bishop",
+      "player": "Oliver Cooper",
+      "club": "Shawbury United",
+      "total": "9"
+    },
+    {
+      "rank": "-",
+      "player": "Monty Parkes (GK)",
+      "club": "Foley Meir",
+      "total": "8"
+    },
+    {
+      "rank": "-",
+      "player": "Mitchell Nolan",
+      "club": "Sandbach United",
+      "total": "9"
+    },
+    {
+      "rank": "-",
+      "player": "Mitchell Evans",
+      "club": "AFC Bridgnorth",
+      "total": "8"
+    },
+    {
+      "rank": "-",
+      "player": "Maxwell Chimenes",
+      "club": "Eccleshall",
+      "total": "8"
+    },
+    {
+      "rank": "-",
+      "player": "Lawson Birch",
       "club": "Wednesfield Community",
+      "total": "9"
+    },
+    {
+      "rank": "-",
+      "player": "Kieron Cliff",
+      "club": "Brereton Social",
+      "total": "8"
+    },
+    {
+      "rank": "-",
+      "player": "Kieran Cook",
+      "club": "Wolverhampton Casuals",
+      "total": "9"
+    },
+    {
+      "rank": "-",
+      "player": "Kerr Dollochin",
+      "club": "Foley Meir",
+      "total": "8"
+    },
+    {
+      "rank": "-",
+      "player": "Joshua Maris",
+      "club": "Crewe",
+      "total": "8"
+    },
+    {
+      "rank": "-",
+      "player": "James Sutton",
+      "club": "Market Drayton Town",
+      "total": "9"
+    },
+    {
+      "rank": "-",
+      "player": "Jack Morris",
+      "club": "New Mills",
+      "total": "10"
+    },
+    {
+      "rank": "-",
+      "player": "Harvey Dangerfield",
+      "club": "Wednesfield Community",
+      "total": "8"
+    },
+    {
+      "rank": "-",
+      "player": "Harvey Evans",
+      "club": "AFC Bridgnorth",
+      "total": "8"
+    },
+    {
+      "rank": "-",
+      "player": "Harry Dabbs (GK)",
+      "club": "Allscott Heath",
+      "total": "9"
+    },
+    {
+      "rank": "-",
+      "player": "Godfred Summerville",
+      "club": "Telford Town",
+      "total": "8"
+    },
+    {
+      "rank": "-",
+      "player": "Ethan Pickford",
+      "club": "Shawbury United",
+      "total": "9"
+    },
+    {
+      "rank": "-",
+      "player": "Declan Hutchings",
+      "club": "Wolverhampton Casuals",
+      "total": "9"
+    },
+    {
+      "rank": "-",
+      "player": "Ben Davies",
+      "club": "Allscott Heath",
+      "total": "10"
+    },
+    {
+      "rank": "-",
+      "player": "Ben Mooney",
+      "club": "Barnton",
+      "total": "9"
+    },
+    {
+      "rank": "-",
+      "player": "Bailey Storey",
+      "club": "Wolverhampton Casuals",
+      "total": "9"
+    },
+    {
+      "rank": "-",
+      "player": "Aidan McCann",
+      "club": "Market Drayton Town",
+      "total": "8"
+    },
+    {
+      "rank": "-",
+      "player": "Adam Whitehouse (GK)",
+      "club": "Eccleshall",
+      "total": "8"
+    },
+    {
+      "rank": "-",
+      "player": "Toby Humphries",
+      "club": "Barnton",
+      "total": "9"
+    },
+    {
+      "rank": "-",
+      "player": "Suar Dedja",
+      "club": "AFC Bridgnorth",
+      "total": "8"
+    },
+    {
+      "rank": "-",
+      "player": "Patryk Mazurkiewicz",
+      "club": "Stafford Town",
+      "total": "9"
+    },
+    {
+      "rank": "-",
+      "player": "Nathan Barry",
+      "club": "Sandbach United",
+      "total": "10"
+    },
+    {
+      "rank": "-",
+      "player": "Kyle Vickers",
+      "club": "Crewe",
+      "total": "8"
+    },
+    {
+      "rank": "-",
+      "player": "Kieran OConnell",
+      "club": "Sandbach United",
+      "total": "9"
+    },
+    {
+      "rank": "-",
+      "player": "De Quarnai Williams",
+      "club": "AFC Bridgnorth",
+      "total": "8"
+    },
+    {
+      "rank": "-",
+      "player": "Conor Phillips",
+      "club": "Brereton Social",
+      "total": "8"
+    },
+    {
+      "rank": "-",
+      "player": "Callum James White",
+      "club": "Brereton Social",
+      "total": "8"
+    },
+    {
+      "rank": "-",
+      "player": "Trayvon Powell",
+      "club": "AFC Bridgnorth",
+      "total": "8"
+    },
+    {
+      "rank": "-",
+      "player": "Matthew  Jones",
+      "club": "Eccleshall",
+      "total": "9"
+    },
+    {
+      "rank": "-",
+      "player": "Luke Moran",
+      "club": "Widnes Town",
+      "total": "9"
+    },
+    {
+      "rank": "-",
+      "player": "Liam Connolly",
+      "club": "Foley Meir",
+      "total": "8"
+    },
+    {
+      "rank": "-",
+      "player": "Jack Finney",
+      "club": "Sandbach United",
+      "total": "9"
+    },
+    {
+      "rank": "-",
+      "player": "Gilbert Ocran",
+      "club": "New Mills",
+      "total": "9"
+    },
+    {
+      "rank": "-",
+      "player": "Benjamin Summers",
+      "club": "Allscott Heath",
+      "total": "9"
+    },
+    {
+      "rank": "-",
+      "player": "Solomon Ashworth",
+      "club": "Eccleshall",
+      "total": "8"
+    },
+    {
+      "rank": "-",
+      "player": "Finlay Murray",
+      "club": "Wednesfield Community",
+      "total": "8"
+    },
+    {
+      "rank": "-",
+      "player": "Joshua Taylor",
+      "club": "Allscott Heath",
+      "total": "9"
+    },
+    {
+      "rank": "-",
+      "player": "Harry Caffery",
+      "club": "Wednesfield Community",
+      "total": "8"
+    },
+    {
+      "rank": "-",
+      "player": "Archie Ellams",
+      "club": "Foley Meir",
+      "total": "8"
+    },
+    {
+      "rank": "-",
+      "player": "Max Raine",
+      "club": "Market Drayton Town",
+      "total": "8"
+    },
+    {
+      "rank": "-",
+      "player": "Leo Knight",
+      "club": "Cheadle Heath Nomads",
+      "total": "9"
+    },
+    {
+      "rank": "-",
+      "player": "Joshua Bird",
+      "club": "Brereton Social",
+      "total": "8"
+    },
+    {
+      "rank": "-",
+      "player": "Joseph Perry",
+      "club": "Stafford Town",
+      "total": "9"
+    },
+    {
+      "rank": "-",
+      "player": "Soms Sibanda",
+      "club": "Stafford Town",
       "total": "9"
     }
   ],
@@ -228,30 +504,24 @@
     },
     {
       "rank": "-",
-      "player": "Ross Jones",
-      "club": "Dawley Town",
-      "total": "8"
-    },
-    {
-      "rank": "3",
       "player": "Suar Dedja",
       "club": "AFC Bridgnorth",
       "total": "8"
     },
     {
       "rank": "-",
+      "player": "Ross Jones",
+      "club": "Dawley Town",
+      "total": "8"
+    },
+    {
+      "rank": "4",
       "player": "Ben Davies",
       "club": "Allscott Heath",
       "total": "8"
     },
     {
       "rank": "5",
-      "player": "Jordan Crump",
-      "club": "Bilston Town",
-      "total": "6"
-    },
-    {
-      "rank": "-",
       "player": "Harry Dixon",
       "club": "Bilston Town",
       "total": "6"
@@ -263,7 +533,19 @@
       "total": "5"
     },
     {
-      "rank": "8",
+      "rank": "7",
+      "player": "Jordan Crump",
+      "club": "Bilston Town",
+      "total": "6"
+    },
+    {
+      "rank": "-",
+      "player": "Maxwell Chimenes",
+      "club": "Eccleshall",
+      "total": "2"
+    },
+    {
+      "rank": "9",
       "player": "Luc Ferry",
       "club": "New Mills",
       "total": "5"
@@ -306,12 +588,24 @@
     },
     {
       "rank": "-",
+      "player": "Thomas Stanton",
+      "club": "Barnton",
+      "total": "4"
+    },
+    {
+      "rank": "-",
       "player": "Ablay Sowe",
       "club": "Shawbury United",
       "total": "3"
     },
     {
-      "rank": "16",
+      "rank": "-",
+      "player": "Joshua Maris",
+      "club": "Crewe",
+      "total": "2"
+    },
+    {
+      "rank": "19",
       "player": "Sam Preece",
       "club": "AFC Bridgnorth",
       "total": "4"
@@ -320,12 +614,6 @@
       "rank": "-",
       "player": "Fraser Geddes",
       "club": "Alsager Town",
-      "total": "4"
-    },
-    {
-      "rank": "-",
-      "player": "Thomas Stanton",
-      "club": "Barnton",
       "total": "4"
     },
     {
@@ -366,24 +654,24 @@
     },
     {
       "rank": "-",
-      "player": "Kieron Cliff",
-      "club": "Brereton Social",
-      "total": "2"
-    },
-    {
-      "rank": "-",
-      "player": "Maxwell Chimenes",
-      "club": "Eccleshall",
-      "total": "2"
-    },
-    {
-      "rank": "27",
       "player": "George Cross",
       "club": "Allscott Heath",
       "total": "3"
     },
     {
       "rank": "-",
+      "player": "Kieron Cliff",
+      "club": "Brereton Social",
+      "total": "2"
+    },
+    {
+      "rank": "-",
+      "player": "Armando Wood",
+      "club": "Market Drayton Town",
+      "total": "2"
+    },
+    {
+      "rank": "30",
       "player": "Benjamin Summers",
       "club": "Allscott Heath",
       "total": "3"
@@ -444,6 +732,12 @@
     },
     {
       "rank": "-",
+      "player": "Nathan Guest",
+      "club": "Bilston Town",
+      "total": "2"
+    },
+    {
+      "rank": "-",
       "player": "Brad Healey",
       "club": "Dawley Town",
       "total": "2"
@@ -456,8 +750,8 @@
     },
     {
       "rank": "-",
-      "player": "Armando Wood",
-      "club": "Market Drayton Town",
+      "player": "Freddy Lloyd",
+      "club": "Foley Meir",
       "total": "2"
     },
     {
