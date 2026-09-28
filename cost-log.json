@@ -11922,13 +11922,23 @@
     },
     {
       "script": "division-posts",
-      "timestamp": "2026-09-28T06:31:05.440Z",
+      "timestamp": "2026-09-28T06:31:09.755Z",
       "getxapiCalls": 21,
       "claudeCalls": 0,
       "inputTokens": 0,
       "outputTokens": 0,
       "xCostGBP": 0.0158,
       "aiCostGBP": 0
+    },
+    {
+      "script": "recap-preview",
+      "timestamp": "2026-09-28T06:31:14.684Z",
+      "getxapiCalls": 0,
+      "claudeCalls": 1,
+      "inputTokens": 2191,
+      "outputTokens": 336,
+      "xCostGBP": 0,
+      "aiCostGBP": 0.0029
     }
   ]
 }
