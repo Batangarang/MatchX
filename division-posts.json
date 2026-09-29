@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-29T10:01:23.014Z",
-  "sinceDate": "2026-09-22T10:00:55.856Z",
+  "generatedAt": "2026-09-29T10:01:34.419Z",
+  "sinceDate": "2026-09-22T10:00:50.684Z",
   "clubs": [
     {
       "name": "Sandbach United",
@@ -1238,6 +1238,16 @@
           ]
         },
         {
+          "text": "New Club Partnership⚫️⚪️\n\nAlex &amp; the team at Next Gen Coaching have joined the #JamtownRevolution! 🖤🤍\n\nWe can’t wait to work together. Some BIG plans are already in the works… 👀���️\n\nWatch this space.\n\n#80Years #UTV #OneClubOneCommunity\n\nWelcome to the club guys! ⚫️⚪️👌🇮🇹⚽️ https://t.co/3frlRM5ZDD",
+          "createdAt": "2026-09-29T07:18:08.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HTXeiHBWkAAmN4J.jpg",
+            "https://pbs.twimg.com/media/HTXeiHSXkAAk-9D.jpg",
+            "https://pbs.twimg.com/media/HTXeiG3WcAAS7VV.jpg",
+            "https://pbs.twimg.com/media/HTXeiHDXAAA9Gtq.jpg"
+          ]
+        },
+        {
           "text": "Good morning, Villagers! 👋🏻🖤🤍\n\n#UTV #FinoAllaFine https://t.co/1T13KQOACq",
           "createdAt": "2026-09-27T09:02:14.000Z",
           "images": [
@@ -1586,7 +1596,8 @@
             "https://pbs.twimg.com/media/HTEp62UX0AAL_Ie.jpg"
           ]
         }
-      ]
+      ],
+      "error": "GetXAPI error for @CheadleNomads: Please try again shortly."
     },
     {
       "name": "Dawley Town",
