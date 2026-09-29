@@ -1,5 +1,5 @@
 {
-  "scrapedAt": "2026-09-29T10:01:02.199Z",
+  "scrapedAt": "2026-09-29T11:01:01.733Z",
   "division": "First Division South",
   "standings": [
     {
@@ -14,7 +14,7 @@
       "goalDifference": "12",
       "points": "22",
       "clubUrl": "clubpage.php?id=803",
-      "form": "WDWWWW"
+      "form": "LWDWWW"
     },
     {
       "position": 2,
@@ -28,7 +28,7 @@
       "goalDifference": "11",
       "points": "20",
       "clubUrl": "clubpage.php?id=182",
-      "form": "DWWLWD"
+      "form": "LDWWLW"
     },
     {
       "position": 3,
@@ -42,7 +42,7 @@
       "goalDifference": "14",
       "points": "19",
       "clubUrl": "clubpage.php?id=936",
-      "form": "LWWWWW"
+      "form": "LLWWWW"
     },
     {
       "position": 4,
@@ -56,7 +56,7 @@
       "goalDifference": "9",
       "points": "19",
       "clubUrl": "clubpage.php?id=73",
-      "form": "WWDWLW"
+      "form": "WWWDWL"
     },
     {
       "position": 5,
@@ -70,7 +70,7 @@
       "goalDifference": "6",
       "points": "18",
       "clubUrl": "clubpage.php?id=30",
-      "form": "LWWWWL"
+      "form": "WLWWWW"
     },
     {
       "position": 6,
@@ -84,7 +84,7 @@
       "goalDifference": "13",
       "points": "17",
       "clubUrl": "clubpage.php?id=355",
-      "form": "WWDWDW"
+      "form": "WWWDWD"
     },
     {
       "position": 7,
@@ -98,7 +98,7 @@
       "goalDifference": "6",
       "points": "15",
       "clubUrl": "clubpage.php?id=266",
-      "form": "WLWDWD"
+      "form": "WWLWDW"
     },
     {
       "position": 8,
@@ -112,7 +112,7 @@
       "goalDifference": "2",
       "points": "14",
       "clubUrl": "clubpage.php?id=91",
-      "form": "LLDLWD"
+      "form": "WLLDLW"
     },
     {
       "position": 9,
@@ -126,7 +126,7 @@
       "goalDifference": "-8",
       "points": "13",
       "clubUrl": "clubpage.php?id=191",
-      "form": "WLWLLW"
+      "form": "WWLWLL"
     },
     {
       "position": 10,
@@ -140,7 +140,7 @@
       "goalDifference": "-6",
       "points": "12",
       "clubUrl": "clubpage.php?id=224",
-      "form": "LWWWLL"
+      "form": "LLWWWL"
     },
     {
       "position": 11,
@@ -154,7 +154,7 @@
       "goalDifference": "8",
       "points": "11",
       "clubUrl": "clubpage.php?id=816",
-      "form": "WWLLWD"
+      "form": "WWWLLW"
     },
     {
       "position": 12,
@@ -168,7 +168,7 @@
       "goalDifference": "2",
       "points": "11",
       "clubUrl": "clubpage.php?id=635",
-      "form": "WDLWWL"
+      "form": "LWDLWW"
     },
     {
       "position": 13,
@@ -182,7 +182,7 @@
       "goalDifference": "0",
       "points": "11",
       "clubUrl": "clubpage.php?id=898",
-      "form": "WDWLDW"
+      "form": "LWDWLD"
     },
     {
       "position": 14,
@@ -196,7 +196,7 @@
       "goalDifference": "0",
       "points": "11",
       "clubUrl": "clubpage.php?id=459",
-      "form": "WLDLLD"
+      "form": "LWLDLL"
     },
     {
       "position": 15,
@@ -210,7 +210,7 @@
       "goalDifference": "-7",
       "points": "10",
       "clubUrl": "clubpage.php?id=792",
-      "form": "LLLLLW"
+      "form": "LLLLLL"
     },
     {
       "position": 16,
@@ -224,7 +224,7 @@
       "goalDifference": "-10",
       "points": "9",
       "clubUrl": "clubpage.php?id=591",
-      "form": "LLWWLL"
+      "form": "WLLWWL"
     },
     {
       "position": 17,
@@ -238,7 +238,7 @@
       "goalDifference": "-8",
       "points": "7",
       "clubUrl": "clubpage.php?id=713",
-      "form": "DDLLLW"
+      "form": "LDDLLL"
     },
     {
       "position": 18,
@@ -252,7 +252,7 @@
       "goalDifference": "-10",
       "points": "6",
       "clubUrl": "clubpage.php?id=881",
-      "form": "LLLLDD"
+      "form": "WLLLLD"
     },
     {
       "position": 19,
@@ -266,7 +266,7 @@
       "goalDifference": "-11",
       "points": "4",
       "clubUrl": "clubpage.php?id=3",
-      "form": "LLLLLW"
+      "form": "WLLLLL"
     },
     {
       "position": 20,
@@ -280,7 +280,7 @@
       "goalDifference": "-23",
       "points": "2",
       "clubUrl": "clubpage.php?id=868",
-      "form": "LDLLLL"
+      "form": "LLDLLL"
     }
   ]
 }
