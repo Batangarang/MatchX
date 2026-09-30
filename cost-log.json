@@ -2,16 +2,6 @@
   "entries": [
     {
       "script": "x-posts",
-      "timestamp": "2026-08-26T15:46:07.933Z",
-      "getxapiCalls": 1,
-      "claudeCalls": 0,
-      "inputTokens": 0,
-      "outputTokens": 0,
-      "xCostGBP": 0.0008,
-      "aiCostGBP": 0
-    },
-    {
-      "script": "x-posts",
       "timestamp": "2026-08-26T16:50:29.075Z",
       "getxapiCalls": 1,
       "claudeCalls": 0,
@@ -13189,6 +13179,16 @@
       "outputTokens": 365,
       "xCostGBP": 0,
       "aiCostGBP": 0.003
+    },
+    {
+      "script": "recap-preview",
+      "timestamp": "2026-09-30T16:01:06.960Z",
+      "getxapiCalls": 0,
+      "claudeCalls": 1,
+      "inputTokens": 2222,
+      "outputTokens": 440,
+      "xCostGBP": 0,
+      "aiCostGBP": 0.0033
     }
   ]
 }
