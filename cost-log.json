@@ -12929,6 +12929,16 @@
       "outputTokens": 398,
       "xCostGBP": 0,
       "aiCostGBP": 0.0032
+    },
+    {
+      "script": "recap-preview",
+      "timestamp": "2026-09-30T03:30:54.908Z",
+      "getxapiCalls": 0,
+      "claudeCalls": 1,
+      "inputTokens": 2222,
+      "outputTokens": 360,
+      "xCostGBP": 0,
+      "aiCostGBP": 0.003
     }
   ]
 }
