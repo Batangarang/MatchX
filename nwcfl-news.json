@@ -1,6 +1,14 @@
 {
-  "generatedAt": "2026-09-29T13:00:50.702Z",
+  "generatedAt": "2026-09-30T08:00:45.623Z",
   "articles": [
+    {
+      "id": "10237",
+      "title": "Week 9: Stats Report",
+      "meta": "Wed 30th September 2026 | Statistics | By Kevin Lawton",
+      "body": "League Milestones and Statistics: 26/09/2026\n\nVery few league games (just two) played in the last seven days as the Macron Cup took centre stage.\n\nOverall Stats: Milestones reached so far this season\n\nGoal Heroes: All competitions\n\nPenalty Kings (All competitions)\n\nGeneral Stats\n\nManager Milestone\n\nAttendance Check (League games)\n\nDivision\n\nAverage\n\nHighest\n\nPremier\n\n227\n\n713 Glossop North End v Droylsden\n\nNorth\n\n149\n\n455 Maghull v AFC Knowsley\n\nSouth\n\n125\n\n316 Market Drayton Town v Telford Town",
+      "url": "https://www.nwcfl.com/news-articles.php?id=10237",
+      "scrapedAt": "2026-09-30T08:00:45.622Z"
+    },
     {
       "id": "10239",
       "title": "Maghull - PST Sport First Division North Club of the Month",
@@ -152,14 +160,6 @@
       "body": "The NWCFL can announce another raft of fixture amendments.\n\nThere have been a number of changes either agreed between clubs or due to progression in various cup competitions. The full list of changes is below:\n\nAmendment Date\n\nOriginal Date\n\nOriginal KO\n\nHome Team\n\nAway Team\n\nCompetition\n\nNew date\n\nNew KO\n\nReason\n\n01/09/2026\n\nInsert\n\nN/A\n\nDaisy Hill\n\nAtherton LR\n\nLancs Challenge Trophy\n\n21/09/2026\n\n19:45\n\nFirst Round Draw\n\n01/09/2026\n\n15/09/2026\n\n19:45\n\nAshton Athletic\n\nAtherton Collieries\n\nLancs Challenge Trophy\n\n20/10/2026\n\n19:45\n\nMoved by LFA due to Atherton Collieries availability\n\n01/09/2026\n\n05/09/2026\n\n15:00\n\nBarnoldswick Town\n\nTrafford\n\nPremier Division\n\n22/09/2026\n\n19:45\n\nTrafford in FA Cup on original date\n\n01/09/2026\n\n05/09/2026\n\n15:00\n\nPrestwich Heys\n\nAtherton LR\n\nPremier Division\n\n29/09/2026\n\n19:45\n\nPrestwich Heys in FA Cup on original date\n\n01/09/2026\n\n16/09/2026\n\n19:45\n\nAFC Blackpool\n\nThornton Cleveleys\n\nFirst Division North\n\n23/09/2026\n\n19:45\n\nThornton Cleveleys in County Cup on original date\n\n03/09/2026\n\nInsert\n\nN/A\n\nSandbach United\n\nStockport County\n\nCheshire Senior Cup\n\n13/10/2026\n\n19:45\n\nFirst Round Draw\n\n03/09/2026\n\n26/09/2026\n\n15:00\n\nBurscough\n\nCammell Laird 1907\n\nMacron Cup\n\n25/09/2026\n\n20:00\n\nBoth clubs agreed to bring forward to Friday evening\n\n03/09/2026\n\n05/09/2026\n\n15:00\n\nHalewood Apollo\n\nAshton Athletic\n\nFirst Division North\n\n03/04/2027\n\n15:00\n\nGames reversed as per MC decision\n\n03/09/2026\n\n03/04/2027\n\n15:00\n\nAshton Athletic\n\nHalewood Apollo\n\nFirst Division North\n\n05/09/2026\n\n15:00\n\nGames reversed as per MC decision\n\n07/09/2026\n\nInsert\n\nN/A\n\nPrestwich Heys\n\nSouth Liverpool\n\nFA Cup\n\n08/09/2026\n\n19:45\n\nFirst Qualifying Round Replay\n\n07/09/2026\n\nInsert\n\nN/A\n\nHeaton Stannington\n\nTrafford\n\nFA Cup\n\n19/09/2026\n\n15:00\n\nSecond Qualifying Round Draw\n\n07/09/2026\n\nInsert\n\nN/A\n\nGarstang\n\nSouthport\n\nLancs Challenge Trophy\n\n23/09/2026\n\n19:45\n\nFirst Round Draw\n\n07/09/2026\n\n19/09/2026\n\n15:00\n\nTrafford\n\nBurscough\n\nPremier Division\n\nTBA\n\nTBA\n\nTrafford in FA Cup on original date\n\n07/09/2026\n\n31/08/2026\n\n15:00\n\nMaine Road\n\nGarstang\n\nFirst Division North\n\n19/10/2026\n\n19:45\n\nWaterlogged Pitch\n\n09/09/2026\n\nInsert\n\nN/A\n\nWarrington Town\n\nSouth Liverpool\n\nFA Cup\n\n19/09/2026\n\n15:00\n\nSecond Qualifying Round Draw\n\n09/09/2026\n\n19/09/2026\n\n15:00\n\nFC St Helens\n\nSouth Liverpool\n\nPremier Division\n\nTBA\n\nTBA\n\nSouth Liverpool in FA Cup on original date",
       "url": "https://www.nwcfl.com/news-articles.php?id=10223",
       "scrapedAt": "2026-09-09T15:30:42.739Z"
-    },
-    {
-      "id": "10212",
-      "title": "Week 6: Player Registrations and Transfers",
-      "meta": "Wed 9th September 2026 | Player Movements | By Media Team",
-      "body": "The latest player movements and registrations around the NWCFL over the last week, from Sunday 30/08/2026 to Saturday 05/09/2026.\n\nPlayer Registrations to go here...",
-      "url": "https://www.nwcfl.com/news-articles.php?id=10212",
-      "scrapedAt": "2026-09-09T13:00:51.910Z"
     }
   ]
 }
