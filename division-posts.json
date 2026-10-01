@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-01T11:01:17.946Z",
-  "sinceDate": "2026-09-24T11:00:53.955Z",
+  "generatedAt": "2026-10-01T11:02:01.489Z",
+  "sinceDate": "2026-09-24T11:00:59.265Z",
   "clubs": [
     {
       "name": "Sandbach United",
@@ -739,13 +739,6 @@
       "handle": "TelfordTownFC",
       "posts": [
         {
-          "text": "October is a big one. 🔵⚪️\n\n8 fixtures. 4 competitions. 6 games at the Lionheart Security Services Stadium.\n\nIt all starts away at Cheadle Heath Nomads this Saturday. 👊 https://t.co/aRThrJY0h6",
-          "createdAt": "2026-10-01T10:45:57.000Z",
-          "images": [
-            "https://pbs.twimg.com/media/HTihR5_WMAAAy7c.jpg"
-          ]
-        },
-        {
           "text": "TELFORD TOWN SIGN BRETT TAYLOR\nhttps://www.telfordtownfc.co.uk/news/telford-town-sign-brett-taylor-3000553.html https://t.co/UhC1g1MLI8",
           "createdAt": "2026-09-30T09:13:56.000Z",
           "images": [
@@ -987,7 +980,8 @@
             "https://pbs.twimg.com/media/HTDWDsrW4AAfhzz.jpg"
           ]
         }
-      ]
+      ],
+      "error": "GetXAPI error for @TelfordTownFC: Please try again shortly."
     },
     {
       "name": "Crewe",
@@ -1698,7 +1692,8 @@
             "https://pbs.twimg.com/media/HTEp62UX0AAL_Ie.jpg"
           ]
         }
-      ]
+      ],
+      "error": "GetXAPI error for @CheadleNomads: Please try again shortly."
     },
     {
       "name": "Dawley Town",
