@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-01T11:02:01.489Z",
-  "sinceDate": "2026-09-24T11:00:59.265Z",
+  "generatedAt": "2026-10-01T13:31:11.232Z",
+  "sinceDate": "2026-09-24T13:30:46.222Z",
   "clubs": [
     {
       "name": "Sandbach United",
@@ -469,13 +469,6 @@
           "images": [
             "https://pbs.twimg.com/media/HTE-rq6WUAAGUIR.jpg"
           ]
-        },
-        {
-          "text": "Don’t forget that this Saturday after our Cup Clash with Shawbury we are welcoming anyone who wishes to join to the clubhouse for our football quiz, plus the England vs Spain game afterwards. \n\nAt just £10 per team, you can truly put your football knowledge to the test.\n\n1/2 https://t.co/5ZEdxnvtqU",
-          "createdAt": "2026-09-24T12:03:28.000Z",
-          "images": [
-            "https://pbs.twimg.com/media/HS-v5F2XEAAO_zX.jpg"
-          ]
         }
       ]
     },
@@ -483,6 +476,11 @@
       "name": "New Mills",
       "handle": "NewMillsFC",
       "posts": [
+        {
+          "text": "The 1st team are away this weekend but there is still football to watch down at Church Lane \nBollington v St Helens Town \n2pm ko \nSaturday 3rd October \n\nBar open from 12:30pm",
+          "createdAt": "2026-10-01T11:08:43.000Z",
+          "images": []
+        },
         {
           "text": "A busy month ahead for the 1st team with some great fixtures \n\n#UptheMillers https://t.co/WTwk8sDSRh",
           "createdAt": "2026-10-01T10:46:05.000Z",
@@ -739,6 +737,13 @@
       "handle": "TelfordTownFC",
       "posts": [
         {
+          "text": "October is a big one. 🔵⚪️\n\n8 fixtures. 4 competitions. 6 games at the Lionheart Security Services Stadium.\n\nIt all starts away at Cheadle Heath Nomads this Saturday. 👊 https://t.co/aRThrJY0h6",
+          "createdAt": "2026-10-01T10:45:57.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HTihR5_WMAAAy7c.jpg"
+          ]
+        },
+        {
           "text": "TELFORD TOWN SIGN BRETT TAYLOR\nhttps://www.telfordtownfc.co.uk/news/telford-town-sign-brett-taylor-3000553.html https://t.co/UhC1g1MLI8",
           "createdAt": "2026-09-30T09:13:56.000Z",
           "images": [
@@ -980,8 +985,7 @@
             "https://pbs.twimg.com/media/HTDWDsrW4AAfhzz.jpg"
           ]
         }
-      ],
-      "error": "GetXAPI error for @TelfordTownFC: Please try again shortly."
+      ]
     },
     {
       "name": "Crewe",
@@ -1423,14 +1427,6 @@
           "text": "👀 Something VERY BIG is coming…\n\nA little different. A little special. And very, very Barnton. 🔴⚪️\n\n2026/27… Are you ready? 👀🔥\n\n#80Years #BarntonAFC #TheCheshireJuve #Bianconeri #UTV #FinoAllaFine https://t.co/OZfQPaY7kN",
           "createdAt": "2026-09-25T11:00:25.000Z",
           "images": []
-        },
-        {
-          "text": "Pitch is looking 👌🏻🙌🏻\n\nRecovered brilliantly after a tough, dry summer. 🌱\n\nAll the hard graft from Mark, Dave &amp; both clubs volunteers is starting to pay off. 💪🏻\n\nGreat work, everyone, let’s keep it going throughout the season! 🤝🏻\n\n@nonleaguevol \n\n#NonLeague #workingtogether https://t.co/BBidHu27XX",
-          "createdAt": "2026-09-24T13:13:26.000Z",
-          "images": [
-            "https://pbs.twimg.com/media/HS-_500XUAANHvp.jpg",
-            "https://pbs.twimg.com/media/HS-_50yW4AAKVCB.jpg"
-          ]
         }
       ]
     },
@@ -1692,8 +1688,7 @@
             "https://pbs.twimg.com/media/HTEp62UX0AAL_Ie.jpg"
           ]
         }
-      ],
-      "error": "GetXAPI error for @CheadleNomads: Please try again shortly."
+      ]
     },
     {
       "name": "Dawley Town",
@@ -1948,16 +1943,6 @@
           "text": "A big thanks to the Shifnal Town and Shropshire Podcast for coming along this evening and sitting down with chairman Simon Line. \n\nhttps://youtu.be/T7uHfxPKwC8",
           "createdAt": "2026-09-24T20:45:01.000Z",
           "images": []
-        },
-        {
-          "text": "Today we had the pleasure of welcoming the Fozcast Podcast to Market Drayton Town FC. We’d like to thank @BenFoster and @tomochoafozcast the team for choosing us as a venue. 🔴⚪️ Finally a thankyou to their special guest @WesBrown24 https://t.co/7ZJVjVPANf",
-          "createdAt": "2026-09-24T13:10:30.000Z",
-          "images": [
-            "https://pbs.twimg.com/media/HS-_O9XXkAAS0fF.jpg",
-            "https://pbs.twimg.com/media/HS-_O95W0AAfpkT.jpg",
-            "https://pbs.twimg.com/media/HS-_O9fXUAAQSts.jpg",
-            "https://pbs.twimg.com/media/HS-_O9gW4AAr59I.jpg"
-          ]
         }
       ]
     },
@@ -1965,6 +1950,13 @@
       "name": "Shawbury United",
       "handle": "shawburyutd",
       "posts": [
+        {
+          "text": "NEXT UP! \nWe welcome @barntonfc this weekend as we return to @nwcfl action.\n⚫️⚪️🔵🟡 https://t.co/wGczLwL59i",
+          "createdAt": "2026-10-01T12:46:09.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HTi8yraXsAAvmE4.jpg"
+          ]
+        },
         {
           "text": "NEXT UP! TOMORROW!\n\nMacron Cup action as we visit @EccleshallFC https://t.co/MEfKUFQlvB",
           "createdAt": "2026-09-25T19:43:41.000Z",
@@ -1978,6 +1970,20 @@
       "name": "Wolverhampton Casuals",
       "handle": "WolvesCassies",
       "posts": [
+        {
+          "text": "Seats are available on the team coach for Monday night's trip to Cheadle Heath Nomads - BE QUICK SEATS ARE LIMITED\nhttps://www.wolverhamptoncasualsfc.co.uk/news/seats-are-available-on-the-team-coach-for-monday-n-3000746.html https://t.co/UwnrHiCv2d",
+          "createdAt": "2026-10-01T11:42:46.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HTiuSVhWgAAVckW.jpg"
+          ]
+        },
+        {
+          "text": "🟢🟢NEXT UP🟢🟢\n\nThis Saturday Wolverhampton Casuals return to NWCFL Division One South action in a huge local derby when Casuals travel to The Cottage ground home of Wednesfield Community\n\nKick off 3 pm\n\nWe hope there will be a large travelling contingent of Casuals supporters. https://t.co/pm5whnpmZd",
+          "createdAt": "2026-10-01T11:36:22.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HTis0RkWMAA2mLB.jpg"
+          ]
+        },
         {
           "text": "Goals from last night's victory over @WASFootballClub in the JW Hunt Cup 🟢 https://t.co/bswmf3ttgF",
           "createdAt": "2026-10-01T10:17:33.000Z",
@@ -2309,6 +2315,13 @@
         },
         {
           "text": "𝗧𝗘𝗔�� 𝗡𝗘𝗪𝗦 | 𝗨𝗧𝗧𝗢𝗫𝗘𝗧𝗘𝗥 𝗧𝗢𝗪𝗡 (𝗔) 🏆🔴⚫\n\nHere’s how Foley line up tonight as we travel to Uttoxeter Town in the Staffordshire Senior Challenge Cup!\n\n#UpTheFoley | #TeamNews | #StaffordshireSeniorCup https://t.co/MnNi1YwD40",
+          "createdAt": "2026-09-29T18:18:54.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HTZ1xNBXcAAQIbG.jpg"
+          ]
+        },
+        {
+          "text": "𝗧𝗘��𝗠 𝗡𝗘𝗪𝗦 | 𝗨𝗧𝗧𝗢𝗫𝗘𝗧𝗘𝗥 𝗧𝗢𝗪𝗡 (𝗔) 🏆🔴⚫\n\nHere’s how Foley line up tonight as we travel to Uttoxeter Town in the Staffordshire Senior Challenge Cup!\n\n#UpTheFoley | #TeamNews | #StaffordshireSeniorCup https://t.co/MnNi1YwD40",
           "createdAt": "2026-09-29T18:18:54.000Z",
           "images": [
             "https://pbs.twimg.com/media/HTZ1xNBXcAAQIbG.jpg"
