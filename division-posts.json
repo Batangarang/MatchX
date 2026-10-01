@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-01T16:01:43.802Z",
-  "sinceDate": "2026-09-24T16:00:57.446Z",
+  "generatedAt": "2026-10-01T18:31:28.945Z",
+  "sinceDate": "2026-09-24T18:30:41.246Z",
   "clubs": [
     {
       "name": "Sandbach United",
@@ -1099,6 +1099,13 @@
           ]
         },
         {
+          "text": "WE’RE THROUGH TO THE NEXT ROUND!! �� https://t.co/uNN5pJaYt4",
+          "createdAt": "2026-09-26T16:07:38.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HTJ69OlXUAAJPsw.jpg"
+          ]
+        },
+        {
           "text": "FT’ | 90 minutes played, penalties to come! ✊\n\n0-0 | @SandbachFC_1st",
           "createdAt": "2026-09-26T15:52:45.000Z",
           "images": []
@@ -1526,8 +1533,7 @@
             "https://pbs.twimg.com/media/HTD62FRWcAAvVyW.jpg"
           ]
         }
-      ],
-      "error": "GetXAPI error for @bilstontownfc: Please try again shortly."
+      ]
     },
     {
       "name": "AFC Bridgnorth",
@@ -1593,11 +1599,6 @@
           "images": [
             "https://pbs.twimg.com/media/HTJPQvpWkAEbfCy.jpg"
           ]
-        },
-        {
-          "text": "This Saturday we are away @CreweFC  in the Macron cup. West Street, Crewe, CW2 8SJ for any socialites wanting to back us🔴⚪",
-          "createdAt": "2026-09-24T18:27:43.000Z",
-          "images": []
         }
       ]
     },
@@ -1712,6 +1713,20 @@
       "name": "Dawley Town",
       "handle": "DawleyTownFC",
       "posts": [
+        {
+          "text": "WELCOME TO THE JOCKEYS, CORNSY! 🤝\n\nStuart Taylor-Corns joins as Assistant Manager! Massive experience across non-league — player, coach, manager. Huge asset to Whitey, the lads &amp; the whole club. Great to have you on board!\n\n#DawleyTown #TheJockeys #NothingGreatIsEasy https://t.co/rbaXPTMGcC",
+          "createdAt": "2026-10-01T18:09:47.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HTkG3SeWMAAe3kB.jpg"
+          ]
+        },
+        {
+          "text": "✍️ NEW SIGNING | JOE CUFF ✍️\n\nDelighted to welcome Joe Cuff to Dawley Town! Joins from Telford Town — previously at Hednesford, Stafford Rangers, Shawbury &amp; Shifnal. Goes straight into the squad for Saturday's game vs Stafford Town.\n\nWelcome to Dawley, Joe! 🤝⚽\n\n #TheJockeys https://t.co/l8YSViGNy5",
+          "createdAt": "2026-10-01T16:54:17.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HTj1la-WMAA872l.jpg"
+          ]
+        },
         {
           "text": "The Theatre of Jockeys has had some much needed TLC today ready for Sats game v Stafford Town. Huge thanks to Steve Barrow at Grass Matters for a job well done https://t.co/z7ZJLBwCYN",
           "createdAt": "2026-10-01T14:49:17.000Z",
@@ -1979,7 +1994,8 @@
           "createdAt": "2026-09-24T20:45:01.000Z",
           "images": []
         }
-      ]
+      ],
+      "error": "GetXAPI error for @MDTFC: Please try again shortly."
     },
     {
       "name": "Shawbury United",
@@ -2221,13 +2237,6 @@
           "createdAt": "2026-09-25T14:46:32.000Z",
           "images": [
             "https://pbs.twimg.com/media/HTEeznKWAAA9POT.jpg"
-          ]
-        },
-        {
-          "text": "🟢🟢NEXT UP🟢🟢\n\nWolverhampton Casuals are on their travels again this Saturday when they travel to Foley Meir to play a Macron Cup first round tie https://t.co/TzAYdUOPhZ",
-          "createdAt": "2026-09-24T16:23:20.000Z",
-          "images": [
-            "https://pbs.twimg.com/media/HS_rXzIXAAAkWqA.jpg"
           ]
         }
       ]
@@ -2496,6 +2505,32 @@
       "name": "NWCFL (League Official)",
       "handle": "nwcfl",
       "posts": [
+        {
+          "text": "Player Stats\nAs always, an extended list of scorers is on the league website\nhttps://www.nwcfl.com/player-tables.php",
+          "createdAt": "2026-10-01T17:53:58.000Z",
+          "images": []
+        },
+        {
+          "text": "Thursday Stat: Leading Scorers\nFirst Division South\nAlso on 7\nNicky Parker (@EccleshallFC ) https://t.co/HRQ2measoR",
+          "createdAt": "2026-10-01T17:31:48.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HTj-DB_W8AA3bq6.jpg"
+          ]
+        },
+        {
+          "text": "Thursday Stat: Leading Scorers\nFirst Division North\nAlso on 8\nSam Smith (@maghullfc )\nJoshua Coe (@Steetonfc )\nTyler Spence (@HOBAFC ) https://t.co/wdh4lYElNi",
+          "createdAt": "2026-10-01T17:30:53.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HTj9g-zXkAAm9Za.jpg"
+          ]
+        },
+        {
+          "text": "Thursday Stat: Leading Scorers\nPremier Division https://t.co/3T123pg3gg",
+          "createdAt": "2026-10-01T17:28:38.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HTj9YfmW0AExiWG.jpg"
+          ]
+        },
         {
           "text": "This week's stats report is now on the league website. Includes:\n@thorntonfc @EccleshallFC\n@EuxtonVillaFC @SandbachFC_1st\n@alsagertown_fc\n@AFCLiverpool @StaffordTown1st @LongridgeTownFC\n\nGoal heroes and penalty kings. \n\nhttps://nwcfl.com/news-articles.php?id=10237#google_vignette",
           "createdAt": "2026-09-30T09:30:21.000Z",
