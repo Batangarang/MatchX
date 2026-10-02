@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-02T12:01:23.325Z",
-  "sinceDate": "2026-09-25T12:00:51.676Z",
+  "generatedAt": "2026-10-02T12:01:37.770Z",
+  "sinceDate": "2026-09-25T12:00:52.622Z",
   "clubs": [
     {
       "name": "Sandbach United",
@@ -2317,7 +2317,8 @@
             "https://pbs.twimg.com/media/HTEeznKWAAA9POT.jpg"
           ]
         }
-      ]
+      ],
+      "error": "GetXAPI error for @WolvesCassies: Please try again shortly."
     },
     {
       "name": "Foley Meir",
