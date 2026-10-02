@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-02T22:01:32.416Z",
-  "sinceDate": "2026-09-25T22:00:50.436Z",
+  "generatedAt": "2026-10-02T22:01:33.862Z",
+  "sinceDate": "2026-09-25T22:00:51.647Z",
   "clubs": [
     {
       "name": "Sandbach United",
@@ -719,6 +719,13 @@
       "handle": "TelfordTownFC",
       "posts": [
         {
+          "text": "🚍 WE’RE ON THE ROAD TOMORROW! 🔵⚪️🔴\n\nMike Dunn and the boys travel to Cheadle Heath Nomads tomorrow.\n\nSafe journey to everyone making the trip — we’ll see you there! 💙\n\nCOME ON TOWN! 🔵⚪️🔴 https://t.co/lJOVxDKxNe",
+          "createdAt": "2026-10-02T21:33:24.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HTp_D7HWkAA1uV7.jpg"
+          ]
+        },
+        {
           "text": "NEW STRIKER IN TOWN, SOMS SIBANDA!\nhttps://www.telfordtownfc.co.uk/news/new-striker-in-town-soms-sibanda-3001047.html https://t.co/cZh8vJ5Ke7",
           "createdAt": "2026-10-02T18:47:20.000Z",
           "images": [
@@ -1002,8 +1009,7 @@
             "https://pbs.twimg.com/media/HTIoruEXoAEeVVp.jpg"
           ]
         }
-      ],
-      "error": "GetXAPI error for @TelfordTownFC: Please try again shortly."
+      ]
     },
     {
       "name": "Crewe",
@@ -2055,7 +2061,8 @@
             "https://pbs.twimg.com/media/HTIDYZgXEAAYOyZ.jpg"
           ]
         }
-      ]
+      ],
+      "error": "GetXAPI error for @MDTFC: Please try again shortly."
     },
     {
       "name": "Shawbury United",
