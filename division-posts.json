@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-02T12:01:37.770Z",
-  "sinceDate": "2026-09-25T12:00:52.622Z",
+  "generatedAt": "2026-10-02T14:31:12.106Z",
+  "sinceDate": "2026-09-25T14:30:43.571Z",
   "clubs": [
     {
       "name": "Sandbach United",
@@ -740,6 +740,13 @@
       "handle": "TelfordTownFC",
       "posts": [
         {
+          "text": "⚽️DISABILITY &amp; INCLUSIVE FOOTBALL AT TELFORD TOWN FC⚽️\n\nFor children &amp; young people of all abilities. A welcoming space to have fun, build confidence &amp; enjoy the game.\n\n⚽️Thursdays 6–7pm\n💷£4 per session\n📞Chris: 07970 662775\n\n#TelfordTownFC #DisabilityFootball #InclusiveFootball https://t.co/wltVdBvQH0",
+          "createdAt": "2026-10-02T12:07:23.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HTn9ghVXIAAfFBS.jpg"
+          ]
+        },
+        {
           "text": "⚽️MATCHDAY | OVER 35s VETERANS⚽️\n\n🔵Telford Town Veterans v Shawbury United📅Tonight\n⏰7:45pm KO\n📍Lionheart Security Services Stadium \n🚪Gates open 6:30pm\n\n🎟️ Adults £3 🎟️ Concessions £1.50\n\nCome down, support the lads!\n\n#TelfordTown #TelfordTownFC #Veterans #Matchday #UpTheTown https://t.co/GLrJMRYnLM",
           "createdAt": "2026-10-02T10:59:54.000Z",
           "images": [
@@ -1014,13 +1021,6 @@
           "createdAt": "2026-09-25T19:05:55.000Z",
           "images": [
             "https://pbs.twimg.com/media/HTFaLKKW8AARm2z.jpg"
-          ]
-        },
-        {
-          "text": "TELFORD TOWN SIGN TOM MORRIS\nhttps://www.telfordtownfc.co.uk/news/telford-town-sign-tom-morris-2999688.html https://t.co/dEXV3BCuYn",
-          "createdAt": "2026-09-25T12:14:43.000Z",
-          "images": [
-            "https://pbs.twimg.com/media/HTD8D7zXYAAiHqu.jpg"
           ]
         }
       ]
@@ -1322,6 +1322,13 @@
           ]
         },
         {
+          "text": "👀��� https://t.co/zNXj85ri38",
+          "createdAt": "2026-10-02T08:05:02.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HTnGCT6WEAArkUL.jpg"
+          ]
+        },
+        {
           "text": "🗓️ 🖤🤍 𝗢𝗖𝗧𝗢𝗕𝗘𝗥 𝗙𝗜𝗫𝗧𝗨𝗥𝗘𝗦 🤍🖤\n\nLeague action. 3 cup ties. 🔥\nAnd our 80th Anniversary on 10/10/26! 🎉\n\nPlenty going on at @CreativeHutEdu 🏟️\n\nGet behind the boys. Make some noise. Let’s make 𝗢𝗖𝗧𝗢𝗕𝗘𝗥 a BIG one! 👊🏻\n\n#UTV #FinoAllaFine #80Years https://t.co/jx50GAdRMW",
           "createdAt": "2026-10-01T08:00:03.000Z",
           "images": [
@@ -1548,13 +1555,6 @@
           "text": "Tune in and we can't wait to welcome everybody for this brilliant event next Sunday! 🤝",
           "createdAt": "2026-09-25T19:06:00.000Z",
           "images": []
-        },
-        {
-          "text": "POWELL JOINS. WELLS DEPARTS. \n\nWe can confirm that Cole Wells has departed Bilston Town.\n  \nEveryone at the club would like to thank Cole for his efforts in the famous orange shirt and we wish him all the very best for the future.  \n\nWe would also like to take the opportunity to welcome Callum Powell to Queen Street. \nCallum joins us from fellow Step 6 side Gornal Athletic.\n\nWe can't wait to see you in action.🧡",
-          "createdAt": "2026-09-25T12:09:25.000Z",
-          "images": [
-            "https://pbs.twimg.com/media/HTD62FRWcAAvVyW.jpg"
-          ]
         }
       ]
     },
@@ -2093,6 +2093,13 @@
       "handle": "WolvesCassies",
       "posts": [
         {
+          "text": "MATCH PREVIEW - It's Derby Day Tomorrow When Casuals travel to Wednesfield Community\nhttps://www.wolverhamptoncasualsfc.co.uk/news/match-preview-its-derby-day-tomorrow-when-casuals--3000991.html https://t.co/ZB4ZPy2fnZ",
+          "createdAt": "2026-10-02T14:23:42.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HToctWfWcAAn1vx.jpg"
+          ]
+        },
+        {
           "text": "Dean's thoughts following a fruitful September 🟢 https://t.co/dwCTUz9m41",
           "createdAt": "2026-10-01T19:38:43.000Z",
           "images": [
@@ -2317,8 +2324,7 @@
             "https://pbs.twimg.com/media/HTEeznKWAAA9POT.jpg"
           ]
         }
-      ],
-      "error": "GetXAPI error for @WolvesCassies: Please try again shortly."
+      ]
     },
     {
       "name": "Foley Meir",
