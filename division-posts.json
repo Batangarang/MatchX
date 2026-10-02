@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-02T19:31:26.932Z",
-  "sinceDate": "2026-09-25T19:30:41.274Z",
+  "generatedAt": "2026-10-02T22:01:32.416Z",
+  "sinceDate": "2026-09-25T22:00:50.436Z",
   "clubs": [
     {
       "name": "Sandbach United",
@@ -575,13 +575,6 @@
             "https://pbs.twimg.com/media/HTIN_uLXkAAQb4Z.jpg",
             "https://pbs.twimg.com/media/HTIN_uVXsAAGFXm.jpg"
           ]
-        },
-        {
-          "text": "£100 pound prize pot up for grabs for tomorrows game #UptheMillers https://t.co/NcKrrDSzkH",
-          "createdAt": "2026-09-25T21:45:35.000Z",
-          "images": [
-            "https://pbs.twimg.com/media/HTF-t2RWQAA1JQv.jpg"
-          ]
         }
       ]
     },
@@ -1009,7 +1002,8 @@
             "https://pbs.twimg.com/media/HTIoruEXoAEeVVp.jpg"
           ]
         }
-      ]
+      ],
+      "error": "GetXAPI error for @TelfordTownFC: Please try again shortly."
     },
     {
       "name": "Crewe",
@@ -1835,8 +1829,7 @@
             "https://pbs.twimg.com/media/HTIqwKqXYAAMMyo.jpg"
           ]
         }
-      ],
-      "error": "GetXAPI error for @DawleyTownFC: Please try again shortly."
+      ]
     },
     {
       "name": "Market Drayton Town",
@@ -2073,13 +2066,6 @@
           "createdAt": "2026-10-01T12:46:09.000Z",
           "images": [
             "https://pbs.twimg.com/media/HTi8yraXsAAvmE4.jpg"
-          ]
-        },
-        {
-          "text": "NEXT UP! TOMORROW!\n\nMacron Cup action as we visit @EccleshallFC https://t.co/MEfKUFQlvB",
-          "createdAt": "2026-09-25T19:43:41.000Z",
-          "images": [
-            "https://pbs.twimg.com/media/HTFi0aWWAAATsvd.jpg"
           ]
         }
       ]
@@ -2606,6 +2592,21 @@
       "handle": "nwcfl",
       "posts": [
         {
+          "text": "Friday night update https://t.co/AR6mgXZE0e",
+          "createdAt": "2026-10-02T21:01:54.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HTp3153XEAAzXo_.jpg",
+            "https://pbs.twimg.com/media/HTp316BX0AAlQfg.jpg"
+          ]
+        },
+        {
+          "text": "Half Time https://t.co/5uETGsu0ft",
+          "createdAt": "2026-10-02T19:55:46.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HTpotCXWcAAZTcC.jpg"
+          ]
+        },
+        {
           "text": "One game tonight in the Prem:\n@AFCLiverpool looking to get their first points of the season as they entertain @Chadderton https://t.co/4XC31l6orb",
           "createdAt": "2026-10-02T09:12:54.000Z",
           "images": [
@@ -2749,18 +2750,6 @@
             "https://pbs.twimg.com/media/HTDQcQpWsAAgiE7.jpg",
             "https://pbs.twimg.com/media/HTDQcQoWUAAAj08.jpg"
           ]
-        },
-        {
-          "text": "Friday result https://t.co/mJKCZNWJM1",
-          "createdAt": "2026-09-25T22:00:28.000Z",
-          "images": [
-            "https://pbs.twimg.com/media/HTGCICZWIAA_DOm.jpg"
-          ]
-        },
-        {
-          "text": "No goals at half time in tonight's Macron Cup tie",
-          "createdAt": "2026-09-25T19:50:01.000Z",
-          "images": []
         }
       ]
     }
