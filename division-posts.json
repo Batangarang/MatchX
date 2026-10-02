@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-02T19:31:07.061Z",
-  "sinceDate": "2026-09-25T19:30:42.575Z",
+  "generatedAt": "2026-10-02T19:31:26.932Z",
+  "sinceDate": "2026-09-25T19:30:41.274Z",
   "clubs": [
     {
       "name": "Sandbach United",
@@ -187,11 +187,6 @@
         },
         {
           "text": "Danny Glover and Nathan Wilkes assess today’s cup win. \n\nDanny is proudly supported by Gough Landscapes and D9 Academy and Nathan is supported by ABC Detailing and Vero Valore, as always we thank you for your continued support ����\n\n💙🦅\n\n#EccleshallFC https://t.co/LQpKG0i0cb",
-          "createdAt": "2026-09-28T16:11:02.000Z",
-          "images": []
-        },
-        {
-          "text": "Danny Glover and Nathan Wilkes assess today’s cup win. \n\nDanny is proudly supported by Gough Landscapes and D9 Academy and Nathan is supported by ABC Detailing and Vero Valore, as always we thank you for your continued support ��\n\n💙🦅\n\n#EccleshallFC https://t.co/LQpKG0i0cb",
           "createdAt": "2026-09-28T16:11:02.000Z",
           "images": []
         },
@@ -769,13 +764,6 @@
         },
         {
           "text": "October is a big one. 🔵⚪️\n\n8 fixtures. 4 competitions. 6 games at the Lionheart Security Services Stadium.\n\nIt all starts away at Cheadle Heath Nomads this Saturday. 👊 https://t.co/aRThrJY0h6",
-          "createdAt": "2026-10-01T10:45:57.000Z",
-          "images": [
-            "https://pbs.twimg.com/media/HTihR5_WMAAAy7c.jpg"
-          ]
-        },
-        {
-          "text": "October is a big one. 🔵⚪��\n\n8 fixtures. 4 competitions. 6 games at the Lionheart Security Services Stadium.\n\nIt all starts away at Cheadle Heath Nomads this Saturday. 👊 https://t.co/aRThrJY0h6",
           "createdAt": "2026-10-01T10:45:57.000Z",
           "images": [
             "https://pbs.twimg.com/media/HTihR5_WMAAAy7c.jpg"
@@ -1847,7 +1835,8 @@
             "https://pbs.twimg.com/media/HTIqwKqXYAAMMyo.jpg"
           ]
         }
-      ]
+      ],
+      "error": "GetXAPI error for @DawleyTownFC: Please try again shortly."
     },
     {
       "name": "Market Drayton Town",
