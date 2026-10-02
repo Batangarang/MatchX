@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-02T14:31:38.354Z",
-  "sinceDate": "2026-09-25T14:30:46.791Z",
+  "generatedAt": "2026-10-02T17:01:29.078Z",
+  "sinceDate": "2026-09-25T17:00:57.682Z",
   "clubs": [
     {
       "name": "Sandbach United",
@@ -1232,8 +1232,7 @@
             "https://pbs.twimg.com/media/HTIdJdvW4AAkp-e.jpg"
           ]
         }
-      ],
-      "error": "GetXAPI error for @alsagertown_fc: Please try again shortly."
+      ]
     },
     {
       "name": "Allscott Heath",
@@ -1564,6 +1563,13 @@
       "handle": "AFCBridgnorth",
       "posts": [
         {
+          "text": "AFC Bridgnorth take on Eccleshall on Saturday 3rd in a battle between 3rd and 5th in the league ⚽️⚽️ https://t.co/nqxotzfYzd",
+          "createdAt": "2026-10-02T15:33:40.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HTossJBW4AAhd2b.jpg"
+          ]
+        },
+        {
           "text": "AFC Bridgnorth would like to say a big welcome to Armando Wood who’s joined us from Market Drayton.\n\nWe really happy to Armando over the line. He goes straight into the squad for tomorrows big game away at Eccleshall \n\nWelcome Armando 💙 https://t.co/uk0y1GFreW",
           "createdAt": "2026-10-02T09:41:30.000Z",
           "images": [
@@ -1748,13 +1754,6 @@
           "createdAt": "2026-09-26T11:34:05.000Z",
           "images": [
             "https://pbs.twimg.com/media/HTI8WPsWsAABsOW.jpg"
-          ]
-        },
-        {
-          "text": "🔜 NEXT UP\n\nTomorrow, we’re back in action as we welcome @RamsbottomUtd to the Ideal Building Systems Stadium for the Macron Cup Round One! \n\n🕒 15:00 PM KO\n🆚 @RamsbottomUtd \n🏆 Macron Cup Round One\n📍  Ideal Building Systems Stadium, SK8 2ET\n🎟️ Adults £6 | Concessions £3\n\n#Wearenomads | @nwcfl | @NWCFLScores",
-          "createdAt": "2026-09-25T15:35:05.000Z",
-          "images": [
-            "https://pbs.twimg.com/media/HTEp62UX0AAL_Ie.jpg"
           ]
         }
       ]
@@ -2061,11 +2060,6 @@
           "images": [
             "https://pbs.twimg.com/media/HTIDYZgXEAAYOyZ.jpg"
           ]
-        },
-        {
-          "text": "AND ITS LIVE @BenFoster  The Fozcast from Market Drayton Towns very own club house \n\n https://open.spotify.com/episode/734cuA1L2IZcuiUpoeUvN3?si=g6cVfKwUSFeP-ezWjyo58g&utm_source=twitter",
-          "createdAt": "2026-09-25T15:44:56.000Z",
-          "images": []
         }
       ]
     },
@@ -2093,6 +2087,13 @@
       "name": "Wolverhampton Casuals",
       "handle": "WolvesCassies",
       "posts": [
+        {
+          "text": "Wolves Academy scholar joins up with the Cassies #Pitchero\nhttps://www.wolverhamptoncasualsfc.co.uk/news/wolves-academy-scholar-joins-up-with-the-cassies-3001022.html https://t.co/3D1i36bnfX",
+          "createdAt": "2026-10-02T17:01:19.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HTpAyVLWAAAtpjU.jpg"
+          ]
+        },
         {
           "text": "MATCH PREVIEW - It's Derby Day Tomorrow When Casuals travel to Wednesfield Community\nhttps://www.wolverhamptoncasualsfc.co.uk/news/match-preview-its-derby-day-tomorrow-when-casuals--3000991.html https://t.co/ZB4ZPy2fnZ",
           "createdAt": "2026-10-02T14:23:42.000Z",
@@ -2316,13 +2317,6 @@
           "createdAt": "2026-09-26T09:54:39.000Z",
           "images": [
             "https://pbs.twimg.com/media/HTIllzcWAAAjBPT.jpg"
-          ]
-        },
-        {
-          "text": "Match Preview -Casuals are back on the road tomorrow, they are traveling to Stoke for a Macron Cup First Round fixture at Foley Meir\nhttps://www.wolverhamptoncasualsfc.co.uk/news/match-preview-casuals-are-back-on-the-road-tomorro-2999725.html https://t.co/ha9jENRriB",
-          "createdAt": "2026-09-25T14:46:32.000Z",
-          "images": [
-            "https://pbs.twimg.com/media/HTEeznKWAAA9POT.jpg"
           ]
         }
       ]
