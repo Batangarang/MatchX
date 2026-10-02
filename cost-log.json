@@ -13901,13 +13901,13 @@
       "aiCostGBP": 0.0029
     },
     {
-      "script": "x-posts",
-      "timestamp": "2026-10-02T02:00:43.151Z",
-      "getxapiCalls": 1,
+      "script": "division-posts",
+      "timestamp": "2026-10-02T02:01:41.165Z",
+      "getxapiCalls": 21,
       "claudeCalls": 0,
       "inputTokens": 0,
       "outputTokens": 0,
-      "xCostGBP": 0.0008,
+      "xCostGBP": 0.0158,
       "aiCostGBP": 0
     }
   ]

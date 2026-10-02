@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-01T23:31:11.149Z",
-  "sinceDate": "2026-09-24T23:30:44.718Z",
+  "generatedAt": "2026-10-02T02:01:41.162Z",
+  "sinceDate": "2026-09-25T02:00:55.233Z",
   "clubs": [
     {
       "name": "Sandbach United",
@@ -2017,7 +2017,8 @@
           "createdAt": "2026-09-25T15:44:56.000Z",
           "images": []
         }
-      ]
+      ],
+      "error": "GetXAPI error for @MDTFC: Please try again shortly."
     },
     {
       "name": "Shawbury United",
@@ -2395,6 +2396,13 @@
         },
         {
           "text": "𝗧𝗘𝗔𝗠 𝗡𝗘𝗪𝗦 | 𝗨𝗧𝗧��𝗫𝗘𝗧𝗘𝗥 𝗧𝗢𝗪𝗡 (𝗔) 🏆🔴⚫\n\nHere’s how Foley line up tonight as we travel to Uttoxeter Town in the Staffordshire Senior Challenge Cup!\n\n#UpTheFoley | #TeamNews | #StaffordshireSeniorCup https://t.co/MnNi1YwD40",
+          "createdAt": "2026-09-29T18:18:54.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HTZ1xNBXcAAQIbG.jpg"
+          ]
+        },
+        {
+          "text": "𝗧𝗘��𝗠 𝗡𝗘𝗪𝗦 | 𝗨𝗧𝗧𝗢𝗫𝗘𝗧𝗘𝗥 𝗧𝗢𝗪𝗡 (𝗔) 🏆🔴⚫\n\nHere’s how Foley line up tonight as we travel to Uttoxeter Town in the Staffordshire Senior Challenge Cup!\n\n#UpTheFoley | #TeamNews | #StaffordshireSeniorCup https://t.co/MnNi1YwD40",
           "createdAt": "2026-09-29T18:18:54.000Z",
           "images": [
             "https://pbs.twimg.com/media/HTZ1xNBXcAAQIbG.jpg"
