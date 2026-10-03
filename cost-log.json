@@ -14371,24 +14371,24 @@
       "aiCostGBP": 0.0162
     },
     {
-      "script": "division-posts",
-      "timestamp": "2026-10-03T15:31:01.533Z",
-      "getxapiCalls": 22,
+      "script": "x-posts",
+      "timestamp": "2026-10-03T15:30:41.734Z",
+      "getxapiCalls": 1,
       "claudeCalls": 0,
       "inputTokens": 0,
       "outputTokens": 0,
-      "xCostGBP": 0.0165,
+      "xCostGBP": 0.0008,
       "aiCostGBP": 0
     },
     {
-      "script": "recap-preview",
-      "timestamp": "2026-10-03T15:31:09.160Z",
-      "getxapiCalls": 0,
+      "script": "matchday-live",
+      "timestamp": "2026-10-03T15:31:12.839Z",
+      "getxapiCalls": 2,
       "claudeCalls": 1,
-      "inputTokens": 12894,
-      "outputTokens": 577,
-      "xCostGBP": 0,
-      "aiCostGBP": 0.0118
+      "inputTokens": 4664,
+      "outputTokens": 1343,
+      "xCostGBP": 0.0015,
+      "aiCostGBP": 0.0085
     }
   ]
 }
