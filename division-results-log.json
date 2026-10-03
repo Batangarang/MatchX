@@ -4,7 +4,7 @@
       "home": "Brereton Social",
       "away": "Widnes Town",
       "score": "1-1",
-      "matchStage": "second_half",
+      "matchStage": "first_half",
       "scoreSource": "explicit"
     },
     "Cheadle Heath Nomads|Telford Town": {
@@ -25,7 +25,7 @@
       "home": "Dawley Town",
       "away": "Stafford Town",
       "score": "0-0",
-      "matchStage": "second_half",
+      "matchStage": "half_time",
       "scoreSource": "explicit"
     },
     "Eccleshall|AFC Bridgnorth": {
@@ -53,7 +53,7 @@
       "home": "Shawbury United",
       "away": "Barnton",
       "score": "0-1",
-      "matchStage": "second_half",
+      "matchStage": "half_time",
       "scoreSource": "explicit"
     },
     "Wednesfield Community|Wolverhampton Casuals": {

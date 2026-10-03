@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-10-03T15:01:13.169Z",
+  "generatedAt": "2026-10-03T15:05:46.181Z",
   "date": "2026-10-03",
   "isToday": true,
-  "postCount": 121,
-  "latestPostTimestamp": "2026-10-03T14:58:55.000Z",
+  "postCount": 128,
+  "latestPostTimestamp": "2026-10-03T15:04:58.000Z",
   "fixtures": [
     {
       "home": "Brereton Social",
       "away": "Widnes Town",
       "kickoff": "15:00",
       "score": "1-1",
-      "matchStage": "second_half",
+      "matchStage": "first_half",
       "goals": [
         {
           "minute": 28,
@@ -66,7 +66,7 @@
       "away": "Stafford Town",
       "kickoff": "15:00",
       "score": "0-0",
-      "matchStage": "second_half",
+      "matchStage": "half_time",
       "goals": [],
       "yellowCards": [
         {
@@ -96,12 +96,12 @@
         {
           "minute": 28,
           "team": "home",
-          "scorer": null
+          "scorer": "Matt Jones"
         },
         {
-          "minute": 36,
+          "minute": 35,
           "team": "home",
-          "scorer": null
+          "scorer": "Dylan"
         }
       ],
       "yellowCards": [],
@@ -160,14 +160,14 @@
           "scorer": "Edwin Parry"
         },
         {
-          "minute": 30,
+          "minute": 29,
           "team": "home",
           "scorer": "Birchall"
         },
         {
-          "minute": 35,
+          "minute": 36,
           "team": "away",
-          "scorer": null
+          "scorer": "Parry"
         }
       ],
       "yellowCards": [],
@@ -179,10 +179,10 @@
       "away": "Barnton",
       "kickoff": "15:00",
       "score": "0-1",
-      "matchStage": "second_half",
+      "matchStage": "half_time",
       "goals": [
         {
-          "minute": 44,
+          "minute": 45,
           "team": "away",
           "scorer": "Sigsworth"
         }
@@ -228,5 +228,5 @@
       "scoreSource": "explicit"
     }
   ],
-  "ticker": "@NewMillsFC: Half Time Sub for the Millers, Will Frankish off, Solomon Richards on #UptheMillers https://t.co/OdG3BmyGDZ"
+  "ticker": "@EccleshallFC: 47.00\nFreekick to Bridgnorth \n\n💙🦅\n#EccleshallFC"
 }
