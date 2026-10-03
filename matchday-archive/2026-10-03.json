@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-10-03T15:31:12.837Z",
+  "generatedAt": "2026-10-03T15:35:47.478Z",
   "fixtureDate": "2026-10-03",
   "kickoff": "15:00",
   "homeTeam": "Sandbach United",
   "awayTeam": "Alsager Town",
-  "postsUsed": 33,
+  "postsUsed": 35,
   "imagesAnalyzedThisRun": 0,
   "totalImagesAnalyzed": 6,
   "match": {
@@ -30,9 +30,15 @@
           "Matty Birchall",
           "Nathan Barry",
           "Robbie Hatton",
-          "Jacob Vernon"
+          "Jacob Vernon",
+          "Foley",
+          "Kieran O'Connell",
+          "Jack Finney",
+          "Hall"
         ],
-        "substitutes": [],
+        "substitutes": [
+          "Josh Fowles"
+        ],
         "manager": null,
         "officials": []
       },
@@ -95,7 +101,14 @@
     ],
     "yellowCards": [],
     "redCards": [],
-    "substitutions": [],
+    "substitutions": [
+      {
+        "minute": 75,
+        "team": "home",
+        "playerOff": "Nathan Barry",
+        "playerOn": "Josh Fowles"
+      }
+    ],
     "sinBins": [],
     "injuries": [],
     "addedTime": {
@@ -114,14 +127,14 @@
     },
     "roughXG": {
       "firstHalf": {
-        "home": 1.5,
+        "home": 2,
         "away": 1.5,
-        "note": "Sandbach scored twice (Foley, Birchall), Alsager twice (Parry header, own goal). Sandbach had better quality chances early. (raised to reflect goals actually scored)"
+        "note": "Sandbach scored 2 (Foley, Birchall) and had additional chances from Hatton and corners. Alsager scored 1 (Parry) plus an own goal deflection. (raised to reflect goals actually scored)"
       },
       "secondHalf": {
-        "home": 2.2,
-        "away": 1.2,
-        "note": "Sandbach scored twice more (O'Connell header, Finney header from corner). Alsager scored once (Finney). Sandbach dominated territory and set pieces."
+        "home": 2,
+        "away": 0.5,
+        "note": "Sandbach scored 2 (O'Connell diving header, Finney). Alsager scored 1 (Finney) and had limited clear chances, with Minshall's shot wide."
       },
       "extraTime": {
         "home": 0,
@@ -129,9 +142,9 @@
         "note": "No extra time played."
       },
       "total": {
-        "home": 3.7,
-        "away": 2,
-        "note": "Sandbach finished 4-2. Strong header threat and clinical finishing, particularly from set pieces. Alsager resilient but ultimately outplayed."
+        "home": 4,
+        "away": 1.5,
+        "note": "Sandbach scored 4 goals and created multiple chances. Alsager scored 2 but limited clear-cut opportunities."
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
@@ -139,22 +152,22 @@
       "firstHalf": {
         "home": 55,
         "away": 45,
-        "note": "Sandbach scored twice and took early lead, but Alsager fought back to equalize twice. Competitive first half with both sides creating chances."
+        "note": "Sandbach took early lead and created multiple chances from corners and open play; Alsager competitive but relied on set pieces."
       },
       "secondHalf": {
-        "home": 70,
-        "away": 30,
-        "note": "Sandbach dominated after half-time, scoring twice more to go 4-2 up. Alsager managed one goal but were clearly second best."
+        "home": 65,
+        "away": 35,
+        "note": "Sandbach dominated after 56th minute, scoring twice and maintaining control. Alsager limited to occasional chances."
       },
       "extraTime": {
         "home": 50,
         "away": 50,
-        "note": "No extra time played."
+        "note": "No extra time."
       },
       "total": {
-        "home": 62,
-        "away": 38,
-        "note": "Sandbach, as league leaders, controlled the match overall despite Alsager's competitive opening. Better organization and clinical finishing decided the game."
+        "home": 60,
+        "away": 40,
+        "note": "Sandbach controlled much of the match, particularly in the second half, despite Alsager competing in the first half with set-piece threats."
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
