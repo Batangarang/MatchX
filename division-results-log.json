@@ -10,8 +10,8 @@
     "Cheadle Heath Nomads|Telford Town": {
       "home": "Cheadle Heath Nomads",
       "away": "Telford Town",
-      "score": "1-0",
-      "matchStage": "half_time",
+      "score": "2-0",
+      "matchStage": "second_half",
       "scoreSource": "explicit"
     },
     "Crewe|Allscott Heath": {
@@ -45,7 +45,7 @@
     "Sandbach United|Alsager Town": {
       "home": "Sandbach United",
       "away": "Alsager Town",
-      "score": "4-2",
+      "score": "5-2",
       "matchStage": "second_half",
       "scoreSource": "explicit"
     },

@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-10-03T15:31:05.461Z",
+  "generatedAt": "2026-10-03T15:35:36.568Z",
   "date": "2026-10-03",
   "isToday": true,
-  "postCount": 169,
-  "latestPostTimestamp": "2026-10-03T15:30:48.000Z",
+  "postCount": 177,
+  "latestPostTimestamp": "2026-10-03T15:35:35.000Z",
   "fixtures": [
     {
       "home": "Brereton Social",
@@ -13,14 +13,9 @@
       "matchStage": "second_half",
       "goals": [
         {
-          "minute": null,
+          "minute": 28,
           "team": "home",
           "scorer": "Sam Mellor"
-        },
-        {
-          "minute": null,
-          "team": "away",
-          "scorer": null
         }
       ],
       "yellowCards": [],
@@ -31,13 +26,18 @@
       "home": "Cheadle Heath Nomads",
       "away": "Telford Town",
       "kickoff": "15:00",
-      "score": "1-0",
-      "matchStage": "half_time",
+      "score": "2-0",
+      "matchStage": "second_half",
       "goals": [
         {
           "minute": 1,
           "team": "home",
           "scorer": "Ewelike"
+        },
+        {
+          "minute": 69,
+          "team": "home",
+          "scorer": null
         }
       ],
       "yellowCards": [],
@@ -60,11 +60,6 @@
           "minute": 47,
           "team": "away",
           "scorer": "Eden Sears"
-        },
-        {
-          "minute": null,
-          "team": "home",
-          "scorer": null
         }
       ],
       "yellowCards": [],
@@ -103,7 +98,7 @@
       "matchStage": "second_half",
       "goals": [
         {
-          "minute": 24,
+          "minute": 23,
           "team": "away",
           "scorer": "Michael Williams"
         },
@@ -115,7 +110,7 @@
         {
           "minute": 35,
           "team": "home",
-          "scorer": "Dylan"
+          "scorer": null
         },
         {
           "minute": 51,
@@ -172,12 +167,7 @@
           "scorer": "Adam Dahou"
         }
       ],
-      "yellowCards": [
-        {
-          "team": "away",
-          "player": null
-        }
-      ],
+      "yellowCards": [],
       "redCards": [],
       "scoreSource": "explicit"
     },
@@ -185,7 +175,7 @@
       "home": "Sandbach United",
       "away": "Alsager Town",
       "kickoff": "15:00",
-      "score": "4-2",
+      "score": "5-2",
       "matchStage": "second_half",
       "goals": [
         {
@@ -211,12 +201,17 @@
         {
           "minute": 55,
           "team": "home",
-          "scorer": "Kieran O'Connell"
+          "scorer": "Kieran O'Cornell"
         },
         {
           "minute": 62,
           "team": "home",
           "scorer": "Jack Finney"
+        },
+        {
+          "minute": 77,
+          "team": "home",
+          "scorer": "Saul Shotton"
         }
       ],
       "yellowCards": [],
@@ -241,20 +236,30 @@
           "scorer": "Sigsworth"
         },
         {
+          "minute": 62,
+          "team": "home",
+          "scorer": null
+        },
+        {
           "minute": 65,
           "team": "home",
           "scorer": "Conor T Hughes"
         }
       ],
-      "yellowCards": [],
+      "yellowCards": [
+        {
+          "team": "away",
+          "player": "Sandle"
+        }
+      ],
       "redCards": [
         {
           "team": "home",
-          "player": "Boz"
+          "player": "Naj"
         },
         {
           "team": "home",
-          "player": "Naj"
+          "player": "Boz"
         }
       ],
       "scoreSource": "explicit"
@@ -284,17 +289,17 @@
       ],
       "yellowCards": [
         {
-          "team": "home",
-          "player": "Josh Banks"
-        },
-        {
           "team": "away",
           "player": "Leo Wood"
+        },
+        {
+          "team": "home",
+          "player": "Josh Banks"
         }
       ],
       "redCards": [],
       "scoreSource": "explicit"
     }
   ],
-  "ticker": "@EccleshallFC: 72.00\nSub for Bridgnorth \n10 off \n12 on\n\n💙🦅\n#EccleshallFC"
+  "ticker": "@SandbachFC_1st: 🔵⚪️ v 🔴🔴\n\nSandbach United v Alsager Town\n\nFree kick is well worked by The Bach and Saul Shotton scores our 5th as we look to secure the 3 points and leave Alsager in the bottom 3, get in!\n@alsagertown_fc \n5 2\n\n77 mins gone"
 }
