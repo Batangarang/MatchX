@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-10-03T14:45:44.854Z",
+  "generatedAt": "2026-10-03T14:50:56.172Z",
   "date": "2026-10-03",
   "isToday": true,
-  "postCount": 100,
-  "latestPostTimestamp": "2026-10-03T14:45:17.000Z",
+  "postCount": 115,
+  "latestPostTimestamp": "2026-10-03T14:51:05.000Z",
   "fixtures": [
     {
       "home": "Brereton Social",
@@ -27,7 +27,7 @@
       "away": "Telford Town",
       "kickoff": "15:00",
       "score": "1-0",
-      "matchStage": "second_half",
+      "matchStage": "half_time",
       "goals": [
         {
           "minute": 1,
@@ -54,7 +54,7 @@
       ],
       "yellowCards": [],
       "redCards": [],
-      "scoreSource": "explicit"
+      "scoreSource": "derived"
     },
     {
       "home": "Dawley Town",
@@ -81,7 +81,7 @@
       "away": "AFC Bridgnorth",
       "kickoff": "15:00",
       "score": "2-1",
-      "matchStage": "second_half",
+      "matchStage": "half_time",
       "goals": [
         {
           "minute": 24,
@@ -107,28 +107,30 @@
       "home": "Foley Meir",
       "away": "Bilston Town",
       "kickoff": "15:00",
-      "score": null,
-      "matchStage": "scheduled",
-      "goals": [],
+      "score": "1-0",
+      "matchStage": "second_half",
+      "goals": [
+        {
+          "minute": 45,
+          "team": "home",
+          "scorer": "Connor Lawton"
+        }
+      ],
       "yellowCards": [],
-      "redCards": []
+      "redCards": [],
+      "scoreSource": "explicit"
     },
     {
       "home": "Market Drayton Town",
       "away": "New Mills",
       "kickoff": "15:00",
-      "score": "0-2",
-      "matchStage": "second_half",
+      "score": "0-1",
+      "matchStage": "half_time",
       "goals": [
         {
           "minute": 17,
           "team": "away",
           "scorer": "Adam Dahou"
-        },
-        {
-          "minute": 39,
-          "team": "away",
-          "scorer": "Will Frankish"
         }
       ],
       "yellowCards": [],
@@ -140,7 +142,7 @@
       "away": "Alsager Town",
       "kickoff": "15:00",
       "score": "2-2",
-      "matchStage": "second_half",
+      "matchStage": "half_time",
       "goals": [
         {
           "minute": 2,
@@ -158,9 +160,9 @@
           "scorer": "Birchall"
         },
         {
-          "minute": 35,
+          "minute": 36,
           "team": "away",
-          "scorer": "Jordy Fitton"
+          "scorer": "Parry"
         }
       ],
       "yellowCards": [],
@@ -172,10 +174,10 @@
       "away": "Barnton",
       "kickoff": "15:00",
       "score": "0-1",
-      "matchStage": "second_half",
+      "matchStage": "half_time",
       "goals": [
         {
-          "minute": 45,
+          "minute": 44,
           "team": "away",
           "scorer": "Sigsworth"
         }
@@ -198,7 +200,7 @@
       "away": "Wolverhampton Casuals",
       "kickoff": "15:00",
       "score": "0-3",
-      "matchStage": "second_half",
+      "matchStage": "half_time",
       "goals": [
         {
           "minute": 7,
@@ -221,5 +223,5 @@
       "scoreSource": "explicit"
     }
   ],
-  "ticker": "@barntonfc: ⏱️45’ | Good ball in the box of a corner and Sigsworth flicks in.\n\n⚫️ SHA 0-1 BAR 🔵\n\n#UTV | #TheCheshireJuve | #FinoAllaFine https://t.co/fuYRcHYnXw"
+  "ticker": "@WolvesCassies: HALF TIME: \nWednesfield Community 0 - 3 Wolverhampton Casuals\n#WEDWOL https://t.co/EODAeGWKah"
 }

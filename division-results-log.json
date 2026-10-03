@@ -11,7 +11,7 @@
       "home": "Cheadle Heath Nomads",
       "away": "Telford Town",
       "score": "1-0",
-      "matchStage": "second_half",
+      "matchStage": "half_time",
       "scoreSource": "explicit"
     },
     "Crewe|Allscott Heath": {
@@ -32,34 +32,41 @@
       "home": "Eccleshall",
       "away": "AFC Bridgnorth",
       "score": "2-1",
-      "matchStage": "second_half",
+      "matchStage": "half_time",
       "scoreSource": "explicit"
     },
     "Market Drayton Town|New Mills": {
       "home": "Market Drayton Town",
       "away": "New Mills",
-      "score": "0-2",
-      "matchStage": "second_half",
+      "score": "0-1",
+      "matchStage": "half_time",
       "scoreSource": "explicit"
     },
     "Sandbach United|Alsager Town": {
       "home": "Sandbach United",
       "away": "Alsager Town",
       "score": "2-2",
-      "matchStage": "second_half",
+      "matchStage": "half_time",
       "scoreSource": "explicit"
     },
     "Shawbury United|Barnton": {
       "home": "Shawbury United",
       "away": "Barnton",
       "score": "0-1",
-      "matchStage": "second_half",
+      "matchStage": "half_time",
       "scoreSource": "explicit"
     },
     "Wednesfield Community|Wolverhampton Casuals": {
       "home": "Wednesfield Community",
       "away": "Wolverhampton Casuals",
       "score": "0-3",
+      "matchStage": "half_time",
+      "scoreSource": "explicit"
+    },
+    "Foley Meir|Bilston Town": {
+      "home": "Foley Meir",
+      "away": "Bilston Town",
+      "score": "1-0",
       "matchStage": "second_half",
       "scoreSource": "explicit"
     }
