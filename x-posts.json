@@ -1,7 +1,21 @@
 {
-  "scrapedAt": "2026-10-03T15:45:25.362Z",
+  "scrapedAt": "2026-10-03T15:50:22.481Z",
   "username": "SandbachFC_1st",
   "posts": [
+    {
+      "text": "6-2 https://t.co/NJHMTuBsUF",
+      "createdAt": "2026-10-03T15:50:10.000Z",
+      "images": [
+        "https://pbs.twimg.com/media/HTt6FowXMAAgq3U.jpg"
+      ],
+      "isMatchday": true
+    },
+    {
+      "text": "🔵⚪️ v 🔴🔴\n\nSandbach United v Alsager Town\n\nThe Bach make it 6 with another header from a corner, scorer to be confirmed!\n\n6 2\n\n@alsagertown_fc \n\n90 mins gone",
+      "createdAt": "2026-10-03T15:48:10.000Z",
+      "images": [],
+      "isMatchday": true
+    },
     {
       "text": "🔵⚪️ v 🔴🔴\n\nSandbach United v Alsager Town\n\nJordan Stafford replaces Mitchell Nolan\n\n@alsagertown_fc \n\n5 2\n\n86 mins gone",
       "createdAt": "2026-10-03T15:42:17.000Z",
@@ -50,20 +64,6 @@
       "images": [
         "https://pbs.twimg.com/media/HTtzkGHWwAAGycU.jpg"
       ],
-      "isMatchday": true
-    },
-    {
-      "text": "3-2 https://t.co/899TMZJzco",
-      "createdAt": "2026-10-03T15:21:01.000Z",
-      "images": [
-        "https://pbs.twimg.com/media/HTtza33WwAAXDl1.jpg"
-      ],
-      "isMatchday": true
-    },
-    {
-      "text": "🔵⚪️ v 🔴🔴\n\nSandbach United v Alsager Town\n\nWhat a goal as Sandbachs Basil Fawlty Kieran O’Cornell gets on to a Foley cross and his diving header is bullet like into the back of the net! Get in The Bach\n@alsagertown_fc \n3 2\n\n56 mins gone",
-      "createdAt": "2026-10-03T15:13:55.000Z",
-      "images": [],
       "isMatchday": true
     }
   ]
