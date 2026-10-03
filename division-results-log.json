@@ -4,7 +4,7 @@
       "home": "Brereton Social",
       "away": "Widnes Town",
       "score": "1-1",
-      "matchStage": "first_half",
+      "matchStage": "second_half",
       "scoreSource": "explicit"
     },
     "Cheadle Heath Nomads|Telford Town": {
@@ -31,8 +31,8 @@
     "Eccleshall|AFC Bridgnorth": {
       "home": "Eccleshall",
       "away": "AFC Bridgnorth",
-      "score": "2-1",
-      "matchStage": "half_time",
+      "score": "2-2",
+      "matchStage": "second_half",
       "scoreSource": "explicit"
     },
     "Market Drayton Town|New Mills": {
@@ -46,7 +46,7 @@
       "home": "Sandbach United",
       "away": "Alsager Town",
       "score": "2-2",
-      "matchStage": "half_time",
+      "matchStage": "second_half",
       "scoreSource": "explicit"
     },
     "Shawbury United|Barnton": {

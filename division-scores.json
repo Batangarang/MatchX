@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-10-03T15:05:46.181Z",
+  "generatedAt": "2026-10-03T15:10:42.961Z",
   "date": "2026-10-03",
   "isToday": true,
-  "postCount": 128,
-  "latestPostTimestamp": "2026-10-03T15:04:58.000Z",
+  "postCount": 134,
+  "latestPostTimestamp": "2026-10-03T15:10:38.000Z",
   "fixtures": [
     {
       "home": "Brereton Social",
       "away": "Widnes Town",
       "kickoff": "15:00",
       "score": "1-1",
-      "matchStage": "first_half",
+      "matchStage": "second_half",
       "goals": [
         {
           "minute": 28,
@@ -85,8 +85,8 @@
       "home": "Eccleshall",
       "away": "AFC Bridgnorth",
       "kickoff": "15:00",
-      "score": "2-1",
-      "matchStage": "half_time",
+      "score": "2-2",
+      "matchStage": "second_half",
       "goals": [
         {
           "minute": 24,
@@ -96,12 +96,17 @@
         {
           "minute": 28,
           "team": "home",
-          "scorer": "Matt Jones"
+          "scorer": null
         },
         {
           "minute": 35,
           "team": "home",
-          "scorer": "Dylan"
+          "scorer": null
+        },
+        {
+          "minute": 51,
+          "team": "away",
+          "scorer": "David Anani"
         }
       ],
       "yellowCards": [],
@@ -116,7 +121,7 @@
       "matchStage": "half_time",
       "goals": [
         {
-          "minute": 49,
+          "minute": 45,
           "team": "home",
           "scorer": "Connor Lawton"
         }
@@ -147,7 +152,7 @@
       "away": "Alsager Town",
       "kickoff": "15:00",
       "score": "2-2",
-      "matchStage": "half_time",
+      "matchStage": "second_half",
       "goals": [
         {
           "minute": 2,
@@ -165,9 +170,9 @@
           "scorer": "Birchall"
         },
         {
-          "minute": 36,
+          "minute": 35,
           "team": "away",
-          "scorer": "Parry"
+          "scorer": null
         }
       ],
       "yellowCards": [],
@@ -191,11 +196,11 @@
       "redCards": [
         {
           "team": "home",
-          "player": "Boz"
+          "player": "Naj"
         },
         {
           "team": "home",
-          "player": "Naj"
+          "player": "Boz"
         }
       ],
       "scoreSource": "explicit"
@@ -215,12 +220,12 @@
         {
           "minute": 23,
           "team": "away",
-          "scorer": "Jayden Kirk"
+          "scorer": "Liam Kirton"
         },
         {
           "minute": 30,
           "team": "away",
-          "scorer": "Liam Kirton"
+          "scorer": "Jayden Kirk"
         }
       ],
       "yellowCards": [],
@@ -228,5 +233,5 @@
       "scoreSource": "explicit"
     }
   ],
-  "ticker": "@EccleshallFC: 47.00\nFreekick to Bridgnorth \n\n💙🦅\n#EccleshallFC"
+  "ticker": "@AFCBridgnorth: Bridgnorth equaliser from David Anani"
 }
