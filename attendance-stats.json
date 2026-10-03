@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-03T15:01:10.252Z",
+  "generatedAt": "2026-10-03T16:01:13.251Z",
   "games": [
     {
       "opponent": "Wednesfield Community",
@@ -36,9 +36,15 @@
       "score": "2-0",
       "attendance": 166,
       "date": "Sat 19/09/26"
+    },
+    {
+      "opponent": "Alsager Town",
+      "score": "6-2",
+      "attendance": 237,
+      "date": "Sat 26/09/26"
     }
   ],
-  "average": 147,
+  "average": 160,
   "lowest": {
     "opponent": "Wednesfield Community",
     "score": "2-1",
@@ -46,9 +52,9 @@
     "date": "Sat 01/08/26"
   },
   "highest": {
-    "opponent": "Eccleshall",
-    "score": "2-0",
-    "attendance": 166,
-    "date": "Sat 19/09/26"
+    "opponent": "Alsager Town",
+    "score": "6-2",
+    "attendance": 237,
+    "date": "Sat 26/09/26"
   }
 }
