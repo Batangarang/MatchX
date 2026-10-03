@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-10-03T15:15:52.158Z",
+  "generatedAt": "2026-10-03T15:20:45.506Z",
   "date": "2026-10-03",
   "isToday": true,
-  "postCount": 139,
-  "latestPostTimestamp": "2026-10-03T15:15:57.000Z",
+  "postCount": 148,
+  "latestPostTimestamp": "2026-10-03T15:21:01.000Z",
   "fixtures": [
     {
       "home": "Brereton Social",
@@ -66,7 +66,7 @@
       "away": "Stafford Town",
       "kickoff": "15:00",
       "score": "0-0",
-      "matchStage": "second_half",
+      "matchStage": "half_time",
       "goals": [],
       "yellowCards": [
         {
@@ -85,7 +85,7 @@
       "home": "Eccleshall",
       "away": "AFC Bridgnorth",
       "kickoff": "15:00",
-      "score": "2-2",
+      "score": "2-1",
       "matchStage": "half_time",
       "goals": [
         {
@@ -96,17 +96,12 @@
         {
           "minute": 28,
           "team": "home",
-          "scorer": null
+          "scorer": "Matt Jones"
         },
         {
-          "minute": 35,
+          "minute": 36,
           "team": "home",
-          "scorer": null
-        },
-        {
-          "minute": 51,
-          "team": "away",
-          "scorer": "David Anani"
+          "scorer": "Dylan"
         }
       ],
       "yellowCards": [],
@@ -117,13 +112,18 @@
       "home": "Foley Meir",
       "away": "Bilston Town",
       "kickoff": "15:00",
-      "score": "1-0",
-      "matchStage": "half_time",
+      "score": "1-1",
+      "matchStage": "second_half",
       "goals": [
         {
           "minute": null,
           "team": "home",
           "scorer": "Connor Lawton"
+        },
+        {
+          "minute": 57,
+          "team": "away",
+          "scorer": "Bustin"
         }
       ],
       "yellowCards": [],
@@ -170,12 +170,12 @@
           "scorer": "Birchall"
         },
         {
-          "minute": 35,
+          "minute": 36,
           "team": "away",
           "scorer": null
         },
         {
-          "minute": 56,
+          "minute": 55,
           "team": "home",
           "scorer": "Kieran O'Connell"
         }
@@ -188,11 +188,16 @@
       "home": "Shawbury United",
       "away": "Barnton",
       "kickoff": "15:00",
-      "score": "0-1",
-      "matchStage": "half_time",
+      "score": "0-2",
+      "matchStage": "second_half",
       "goals": [
         {
           "minute": 44,
+          "team": "away",
+          "scorer": "Sigsworth"
+        },
+        {
+          "minute": 57,
           "team": "away",
           "scorer": "Sigsworth"
         }
@@ -201,11 +206,11 @@
       "redCards": [
         {
           "team": "home",
-          "player": null
+          "player": "Boz"
         },
         {
           "team": "home",
-          "player": null
+          "player": "Naj"
         }
       ],
       "scoreSource": "explicit"
@@ -238,5 +243,5 @@
       "scoreSource": "explicit"
     }
   ],
-  "ticker": "@foley_fc: Goal Bilston\n\nAnother a penalty but this time the taker made sure to send our Monty the wrong way"
+  "ticker": "@SandbachFC_1st: 3-2 https://t.co/899TMZJzco"
 }
