@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-03T08:01:14.157Z",
-  "sinceDate": "2026-09-26T08:00:47.510Z",
+  "generatedAt": "2026-10-03T08:01:36.060Z",
+  "sinceDate": "2026-09-26T08:00:50.310Z",
   "clubs": [
     {
       "name": "Sandbach United",
@@ -144,8 +144,14 @@
           "text": "🔵⚪️ v 🔴🔴\n\nSandbach United v Alsager - Macron Cup 1st Round\n\nLovely sunny afternoon here at Hind Heath Road, 30 minutes to kick off, looking forward to a local cup derby, can’t beat these games for an intense game with local pride at stake, Up the Bach!\n\n@alsagertown_fc",
           "createdAt": "2026-09-26T13:29:14.000Z",
           "images": []
+        },
+        {
+          "text": "Think you can take us to the top in the non league system! Well here is your chance with Sandbach featuring in the game.",
+          "createdAt": "2026-09-26T06:18:02.000Z",
+          "images": []
         }
-      ]
+      ],
+      "error": "GetXAPI error for @SandbachFC_1st: Please try again shortly."
     },
     {
       "name": "Eccleshall",
@@ -505,6 +511,14 @@
         },
         {
           "text": "SEPTEMBER 100 CLUB WINNERS! \n\nCongratulations to this month’s lucky 100 Club winners! 👏💰\n\n🥇 1st  – Dave O’Keefe \n🥈 2nd  – Ashley Thomas \n🥉 3rd – Luke Chattington \n\nA huge thank you to everyone who continues to support the 100 Club. Your support is greatly appreciated! 💛🖤 https://t.co/jgGkJOewHe",
+          "createdAt": "2026-09-28T15:37:15.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HTUHLqSWwAAagDw.jpg",
+            "https://pbs.twimg.com/media/HTUHLqUXcAA31rX.jpg"
+          ]
+        },
+        {
+          "text": "SEPTEMBER 100 CLUB WINNERS! \n\nCongratulations to this month’s lucky 100 Club winners! ���💰\n\n🥇 1st  – Dave O’Keefe \n🥈 2nd  – Ashley Thomas \n🥉 3rd – Luke Chattington \n\nA huge thank you to everyone who continues to support the 100 Club. Your support is greatly appreciated! 💛🖤 https://t.co/jgGkJOewHe",
           "createdAt": "2026-09-28T15:37:15.000Z",
           "images": [
             "https://pbs.twimg.com/media/HTUHLqSWwAAagDw.jpg",
@@ -1287,13 +1301,6 @@
         },
         {
           "text": "🟢⚫ STARTING XI 🟢⚫\n\nHere’s how the Monners line up for today’s cup clash against local rivals @MDTFC \n\nCOME ON YOU MONNERS! \n\n#themonners https://t.co/4LzU2f46h2",
-          "createdAt": "2026-09-26T13:58:42.000Z",
-          "images": [
-            "https://pbs.twimg.com/media/HTJdcvTXoAAaEAJ.jpg"
-          ]
-        },
-        {
-          "text": "��⚫ STARTING XI 🟢⚫\n\nHere’s how the Monners line up for today’s cup clash against local rivals @MDTFC \n\nCOME ON YOU MONNERS! \n\n#themonners https://t.co/4LzU2f46h2",
           "createdAt": "2026-09-26T13:58:42.000Z",
           "images": [
             "https://pbs.twimg.com/media/HTJdcvTXoAAaEAJ.jpg"
