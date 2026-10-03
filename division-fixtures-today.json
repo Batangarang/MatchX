@@ -1,98 +1,75 @@
 {
-  "generatedAt": "2026-10-03T00:01:13.885Z",
   "date": "2026-10-03",
-  "isToday": true,
   "fixtures": [
     {
+      "date": "Saturday 3 October 2026",
       "home": "Brereton Social",
       "away": "Widnes Town",
       "kickoff": "15:00",
-      "score": null,
-      "goals": [],
-      "yellowCards": [],
-      "redCards": []
+      "postponed": false
     },
     {
+      "date": "Saturday 3 October 2026",
       "home": "Cheadle Heath Nomads",
       "away": "Telford Town",
       "kickoff": "15:00",
-      "score": null,
-      "goals": [],
-      "yellowCards": [],
-      "redCards": []
+      "postponed": false
     },
     {
+      "date": "Saturday 3 October 2026",
       "home": "Crewe",
       "away": "Allscott Heath",
       "kickoff": "15:00",
-      "score": null,
-      "goals": [],
-      "yellowCards": [],
-      "redCards": []
+      "postponed": false
     },
     {
+      "date": "Saturday 3 October 2026",
       "home": "Dawley Town",
       "away": "Stafford Town",
       "kickoff": "15:00",
-      "score": null,
-      "goals": [],
-      "yellowCards": [],
-      "redCards": []
+      "postponed": false
     },
     {
+      "date": "Saturday 3 October 2026",
       "home": "Eccleshall",
       "away": "AFC Bridgnorth",
       "kickoff": "15:00",
-      "score": null,
-      "goals": [],
-      "yellowCards": [],
-      "redCards": []
+      "postponed": false
     },
     {
+      "date": "Saturday 3 October 2026",
       "home": "Foley Meir",
       "away": "Bilston Town",
       "kickoff": "15:00",
-      "score": null,
-      "goals": [],
-      "yellowCards": [],
-      "redCards": []
+      "postponed": false
     },
     {
+      "date": "Saturday 3 October 2026",
       "home": "Market Drayton Town",
       "away": "New Mills",
       "kickoff": "15:00",
-      "score": null,
-      "goals": [],
-      "yellowCards": [],
-      "redCards": []
+      "postponed": false
     },
     {
+      "date": "Saturday 3 October 2026",
       "home": "Sandbach United",
       "away": "Alsager Town",
       "kickoff": "15:00",
-      "score": null,
-      "goals": [],
-      "yellowCards": [],
-      "redCards": []
+      "postponed": false
     },
     {
+      "date": "Saturday 3 October 2026",
       "home": "Shawbury United",
       "away": "Barnton",
       "kickoff": "15:00",
-      "score": null,
-      "goals": [],
-      "yellowCards": [],
-      "redCards": []
+      "postponed": false
     },
     {
+      "date": "Saturday 3 October 2026",
       "home": "Wednesfield Community",
       "away": "Wolverhampton Casuals",
       "kickoff": "15:00",
-      "score": null,
-      "goals": [],
-      "yellowCards": [],
-      "redCards": []
+      "postponed": false
     }
-  ],
-  "ticker": null
+  ]
 }
