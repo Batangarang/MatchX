@@ -1,58 +1,114 @@
 {
-  "generatedAt": "2026-10-03T10:55:32.118Z",
+  "generatedAt": "2026-10-03T14:45:44.854Z",
   "date": "2026-10-03",
   "isToday": true,
+  "postCount": 100,
+  "latestPostTimestamp": "2026-10-03T14:45:17.000Z",
   "fixtures": [
     {
       "home": "Brereton Social",
       "away": "Widnes Town",
       "kickoff": "15:00",
-      "score": null,
-      "goals": [],
+      "score": "1-1",
+      "matchStage": "second_half",
+      "goals": [
+        {
+          "minute": 28,
+          "team": "home",
+          "scorer": "Sam Mellor"
+        }
+      ],
       "yellowCards": [],
-      "redCards": []
+      "redCards": [],
+      "scoreSource": "explicit"
     },
     {
       "home": "Cheadle Heath Nomads",
       "away": "Telford Town",
       "kickoff": "15:00",
-      "score": null,
-      "goals": [],
+      "score": "1-0",
+      "matchStage": "second_half",
+      "goals": [
+        {
+          "minute": 1,
+          "team": "home",
+          "scorer": "Ewelike"
+        }
+      ],
       "yellowCards": [],
-      "redCards": []
+      "redCards": [],
+      "scoreSource": "explicit"
     },
     {
       "home": "Crewe",
       "away": "Allscott Heath",
       "kickoff": "15:00",
-      "score": null,
-      "goals": [],
+      "score": "0-1",
+      "matchStage": "second_half",
+      "goals": [
+        {
+          "minute": 24,
+          "team": "away",
+          "scorer": "Carl Rogers"
+        }
+      ],
       "yellowCards": [],
-      "redCards": []
+      "redCards": [],
+      "scoreSource": "explicit"
     },
     {
       "home": "Dawley Town",
       "away": "Stafford Town",
       "kickoff": "15:00",
-      "score": null,
+      "score": "0-0",
+      "matchStage": "second_half",
       "goals": [],
-      "yellowCards": [],
-      "redCards": []
+      "yellowCards": [
+        {
+          "team": "away",
+          "player": "Taylor"
+        },
+        {
+          "team": "away",
+          "player": "Parker"
+        }
+      ],
+      "redCards": [],
+      "scoreSource": "explicit"
     },
     {
       "home": "Eccleshall",
       "away": "AFC Bridgnorth",
       "kickoff": "15:00",
-      "score": null,
-      "goals": [],
+      "score": "2-1",
+      "matchStage": "second_half",
+      "goals": [
+        {
+          "minute": 24,
+          "team": "away",
+          "scorer": null
+        },
+        {
+          "minute": 28,
+          "team": "home",
+          "scorer": null
+        },
+        {
+          "minute": 36,
+          "team": "home",
+          "scorer": null
+        }
+      ],
       "yellowCards": [],
-      "redCards": []
+      "redCards": [],
+      "scoreSource": "explicit"
     },
     {
       "home": "Foley Meir",
       "away": "Bilston Town",
       "kickoff": "15:00",
       "score": null,
+      "matchStage": "scheduled",
       "goals": [],
       "yellowCards": [],
       "redCards": []
@@ -61,38 +117,109 @@
       "home": "Market Drayton Town",
       "away": "New Mills",
       "kickoff": "15:00",
-      "score": null,
-      "goals": [],
+      "score": "0-2",
+      "matchStage": "second_half",
+      "goals": [
+        {
+          "minute": 17,
+          "team": "away",
+          "scorer": "Adam Dahou"
+        },
+        {
+          "minute": 39,
+          "team": "away",
+          "scorer": "Will Frankish"
+        }
+      ],
       "yellowCards": [],
-      "redCards": []
+      "redCards": [],
+      "scoreSource": "explicit"
     },
     {
       "home": "Sandbach United",
       "away": "Alsager Town",
       "kickoff": "15:00",
-      "score": null,
-      "goals": [],
+      "score": "2-2",
+      "matchStage": "second_half",
+      "goals": [
+        {
+          "minute": 2,
+          "team": "home",
+          "scorer": "Foley"
+        },
+        {
+          "minute": 17,
+          "team": "away",
+          "scorer": "Edwin Parry"
+        },
+        {
+          "minute": 29,
+          "team": "home",
+          "scorer": "Birchall"
+        },
+        {
+          "minute": 35,
+          "team": "away",
+          "scorer": "Jordy Fitton"
+        }
+      ],
       "yellowCards": [],
-      "redCards": []
+      "redCards": [],
+      "scoreSource": "explicit"
     },
     {
       "home": "Shawbury United",
       "away": "Barnton",
       "kickoff": "15:00",
-      "score": null,
-      "goals": [],
+      "score": "0-1",
+      "matchStage": "second_half",
+      "goals": [
+        {
+          "minute": 45,
+          "team": "away",
+          "scorer": "Sigsworth"
+        }
+      ],
       "yellowCards": [],
-      "redCards": []
+      "redCards": [
+        {
+          "team": "home",
+          "player": "Boz"
+        },
+        {
+          "team": "home",
+          "player": "Naj"
+        }
+      ],
+      "scoreSource": "explicit"
     },
     {
       "home": "Wednesfield Community",
       "away": "Wolverhampton Casuals",
       "kickoff": "15:00",
-      "score": null,
-      "goals": [],
+      "score": "0-3",
+      "matchStage": "second_half",
+      "goals": [
+        {
+          "minute": 7,
+          "team": "away",
+          "scorer": "Callum Knowles"
+        },
+        {
+          "minute": 23,
+          "team": "away",
+          "scorer": "Jayden Kirk"
+        },
+        {
+          "minute": 30,
+          "team": "away",
+          "scorer": "Liam Kirton"
+        }
+      ],
       "yellowCards": [],
-      "redCards": []
+      "redCards": [],
+      "scoreSource": "explicit"
     }
   ],
-  "ticker": null
+  "ticker": "@barntonfc: ⏱️45’ | Good ball in the box of a corner and Sigsworth flicks in.\n\n⚫️ SHA 0-1 BAR 🔵\n\n#UTV | #TheCheshireJuve | #FinoAllaFine https://t.co/fuYRcHYnXw"
 }

@@ -1,0 +1,67 @@
+{
+  "2026-10-03": {
+    "Brereton Social|Widnes Town": {
+      "home": "Brereton Social",
+      "away": "Widnes Town",
+      "score": "1-1",
+      "matchStage": "second_half",
+      "scoreSource": "explicit"
+    },
+    "Cheadle Heath Nomads|Telford Town": {
+      "home": "Cheadle Heath Nomads",
+      "away": "Telford Town",
+      "score": "1-0",
+      "matchStage": "second_half",
+      "scoreSource": "explicit"
+    },
+    "Crewe|Allscott Heath": {
+      "home": "Crewe",
+      "away": "Allscott Heath",
+      "score": "0-1",
+      "matchStage": "second_half",
+      "scoreSource": "explicit"
+    },
+    "Dawley Town|Stafford Town": {
+      "home": "Dawley Town",
+      "away": "Stafford Town",
+      "score": "0-0",
+      "matchStage": "second_half",
+      "scoreSource": "explicit"
+    },
+    "Eccleshall|AFC Bridgnorth": {
+      "home": "Eccleshall",
+      "away": "AFC Bridgnorth",
+      "score": "2-1",
+      "matchStage": "second_half",
+      "scoreSource": "explicit"
+    },
+    "Market Drayton Town|New Mills": {
+      "home": "Market Drayton Town",
+      "away": "New Mills",
+      "score": "0-2",
+      "matchStage": "second_half",
+      "scoreSource": "explicit"
+    },
+    "Sandbach United|Alsager Town": {
+      "home": "Sandbach United",
+      "away": "Alsager Town",
+      "score": "2-2",
+      "matchStage": "second_half",
+      "scoreSource": "explicit"
+    },
+    "Shawbury United|Barnton": {
+      "home": "Shawbury United",
+      "away": "Barnton",
+      "score": "0-1",
+      "matchStage": "second_half",
+      "scoreSource": "explicit"
+    },
+    "Wednesfield Community|Wolverhampton Casuals": {
+      "home": "Wednesfield Community",
+      "away": "Wolverhampton Casuals",
+      "score": "0-3",
+      "matchStage": "second_half",
+      "scoreSource": "explicit"
+    }
+  }
+}
