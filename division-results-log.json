@@ -17,8 +17,8 @@
     "Crewe|Allscott Heath": {
       "home": "Crewe",
       "away": "Allscott Heath",
-      "score": "0-1",
-      "matchStage": "second_half",
+      "score": "1-3",
+      "matchStage": "half_time",
       "scoreSource": "explicit"
     },
     "Dawley Town|Stafford Town": {
@@ -32,7 +32,7 @@
       "home": "Eccleshall",
       "away": "AFC Bridgnorth",
       "score": "2-1",
-      "matchStage": "half_time",
+      "matchStage": "second_half",
       "scoreSource": "explicit"
     },
     "Market Drayton Town|New Mills": {
@@ -67,7 +67,7 @@
       "home": "Foley Meir",
       "away": "Bilston Town",
       "score": "1-0",
-      "matchStage": "second_half",
+      "matchStage": "half_time",
       "scoreSource": "explicit"
     }
   }

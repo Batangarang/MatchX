@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-10-03T14:50:56.172Z",
+  "generatedAt": "2026-10-03T14:55:47.694Z",
   "date": "2026-10-03",
   "isToday": true,
-  "postCount": 115,
-  "latestPostTimestamp": "2026-10-03T14:51:05.000Z",
+  "postCount": 119,
+  "latestPostTimestamp": "2026-10-03T14:54:51.000Z",
   "fixtures": [
     {
       "home": "Brereton Social",
@@ -14,6 +14,11 @@
       "goals": [
         {
           "minute": 28,
+          "team": "away",
+          "scorer": "Unknown"
+        },
+        {
+          "minute": null,
           "team": "home",
           "scorer": "Sam Mellor"
         }
@@ -43,18 +48,23 @@
       "home": "Crewe",
       "away": "Allscott Heath",
       "kickoff": "15:00",
-      "score": "0-1",
-      "matchStage": "second_half",
+      "score": "1-3",
+      "matchStage": "half_time",
       "goals": [
         {
           "minute": 24,
           "team": "away",
           "scorer": "Carl Rogers"
+        },
+        {
+          "minute": 47,
+          "team": "away",
+          "scorer": "Eden Sears"
         }
       ],
       "yellowCards": [],
       "redCards": [],
-      "scoreSource": "derived"
+      "scoreSource": "explicit"
     },
     {
       "home": "Dawley Town",
@@ -81,22 +91,22 @@
       "away": "AFC Bridgnorth",
       "kickoff": "15:00",
       "score": "2-1",
-      "matchStage": "half_time",
+      "matchStage": "second_half",
       "goals": [
         {
           "minute": 24,
           "team": "away",
-          "scorer": null
+          "scorer": "Unknown"
         },
         {
           "minute": 28,
           "team": "home",
-          "scorer": null
+          "scorer": "Unknown"
         },
         {
           "minute": 36,
           "team": "home",
-          "scorer": null
+          "scorer": "Unknown"
         }
       ],
       "yellowCards": [],
@@ -108,10 +118,10 @@
       "away": "Bilston Town",
       "kickoff": "15:00",
       "score": "1-0",
-      "matchStage": "second_half",
+      "matchStage": "half_time",
       "goals": [
         {
-          "minute": 45,
+          "minute": null,
           "team": "home",
           "scorer": "Connor Lawton"
         }
@@ -131,6 +141,11 @@
           "minute": 17,
           "team": "away",
           "scorer": "Adam Dahou"
+        },
+        {
+          "minute": 39,
+          "team": "away",
+          "scorer": "Will Frankish"
         }
       ],
       "yellowCards": [],
@@ -223,5 +238,5 @@
       "scoreSource": "explicit"
     }
   ],
-  "ticker": "@WolvesCassies: HALF TIME: \nWednesfield Community 0 - 3 Wolverhampton Casuals\n#WEDWOL https://t.co/EODAeGWKah"
+  "ticker": "@foley_fc: We go into the break leading.\n\nConnor Lawton’s goal has us the happier side going to the break, we’ve hit the bar twice during the half once from New signing Jamie Turner and from Foley favourite Fin Foote also being denied by the woodwork. https://t.co/cLEZ60gFRq"
 }
