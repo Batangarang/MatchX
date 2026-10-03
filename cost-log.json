@@ -14379,6 +14379,16 @@
       "outputTokens": 1518,
       "xCostGBP": 0.015,
       "aiCostGBP": 0.0141
+    },
+    {
+      "script": "x-posts",
+      "timestamp": "2026-10-03T15:10:21.637Z",
+      "getxapiCalls": 1,
+      "claudeCalls": 0,
+      "inputTokens": 0,
+      "outputTokens": 0,
+      "xCostGBP": 0.0008,
+      "aiCostGBP": 0
     }
   ]
 }
