@@ -1,19 +1,19 @@
 {
-  "generatedAt": "2026-10-03T15:10:42.961Z",
+  "generatedAt": "2026-10-03T15:15:52.158Z",
   "date": "2026-10-03",
   "isToday": true,
-  "postCount": 134,
-  "latestPostTimestamp": "2026-10-03T15:10:38.000Z",
+  "postCount": 139,
+  "latestPostTimestamp": "2026-10-03T15:15:57.000Z",
   "fixtures": [
     {
       "home": "Brereton Social",
       "away": "Widnes Town",
       "kickoff": "15:00",
       "score": "1-1",
-      "matchStage": "second_half",
+      "matchStage": "full_time",
       "goals": [
         {
-          "minute": 28,
+          "minute": null,
           "team": "home",
           "scorer": "Sam Mellor"
         }
@@ -66,7 +66,7 @@
       "away": "Stafford Town",
       "kickoff": "15:00",
       "score": "0-0",
-      "matchStage": "half_time",
+      "matchStage": "second_half",
       "goals": [],
       "yellowCards": [
         {
@@ -86,7 +86,7 @@
       "away": "AFC Bridgnorth",
       "kickoff": "15:00",
       "score": "2-2",
-      "matchStage": "second_half",
+      "matchStage": "half_time",
       "goals": [
         {
           "minute": 24,
@@ -121,7 +121,7 @@
       "matchStage": "half_time",
       "goals": [
         {
-          "minute": 45,
+          "minute": null,
           "team": "home",
           "scorer": "Connor Lawton"
         }
@@ -151,7 +151,7 @@
       "home": "Sandbach United",
       "away": "Alsager Town",
       "kickoff": "15:00",
-      "score": "2-2",
+      "score": "3-2",
       "matchStage": "second_half",
       "goals": [
         {
@@ -165,7 +165,7 @@
           "scorer": "Edwin Parry"
         },
         {
-          "minute": 29,
+          "minute": 30,
           "team": "home",
           "scorer": "Birchall"
         },
@@ -173,6 +173,11 @@
           "minute": 35,
           "team": "away",
           "scorer": null
+        },
+        {
+          "minute": 56,
+          "team": "home",
+          "scorer": "Kieran O'Connell"
         }
       ],
       "yellowCards": [],
@@ -187,7 +192,7 @@
       "matchStage": "half_time",
       "goals": [
         {
-          "minute": 45,
+          "minute": 44,
           "team": "away",
           "scorer": "Sigsworth"
         }
@@ -196,11 +201,11 @@
       "redCards": [
         {
           "team": "home",
-          "player": "Naj"
+          "player": null
         },
         {
           "team": "home",
-          "player": "Boz"
+          "player": null
         }
       ],
       "scoreSource": "explicit"
@@ -220,12 +225,12 @@
         {
           "minute": 23,
           "team": "away",
-          "scorer": "Liam Kirton"
+          "scorer": "Jayden Kirk"
         },
         {
           "minute": 30,
           "team": "away",
-          "scorer": "Jayden Kirk"
+          "scorer": "Liam Kirton"
         }
       ],
       "yellowCards": [],
@@ -233,5 +238,5 @@
       "scoreSource": "explicit"
     }
   ],
-  "ticker": "@AFCBridgnorth: Bridgnorth equaliser from David Anani"
+  "ticker": "@foley_fc: Goal Bilston\n\nAnother a penalty but this time the taker made sure to send our Monty the wrong way"
 }
