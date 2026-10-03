@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-10-03T14:55:47.694Z",
+  "generatedAt": "2026-10-03T15:01:13.169Z",
   "date": "2026-10-03",
   "isToday": true,
-  "postCount": 119,
-  "latestPostTimestamp": "2026-10-03T14:54:51.000Z",
+  "postCount": 121,
+  "latestPostTimestamp": "2026-10-03T14:58:55.000Z",
   "fixtures": [
     {
       "home": "Brereton Social",
@@ -14,11 +14,6 @@
       "goals": [
         {
           "minute": 28,
-          "team": "away",
-          "scorer": "Unknown"
-        },
-        {
-          "minute": null,
           "team": "home",
           "scorer": "Sam Mellor"
         }
@@ -91,22 +86,22 @@
       "away": "AFC Bridgnorth",
       "kickoff": "15:00",
       "score": "2-1",
-      "matchStage": "second_half",
+      "matchStage": "half_time",
       "goals": [
         {
           "minute": 24,
           "team": "away",
-          "scorer": "Unknown"
+          "scorer": "Michael Williams"
         },
         {
           "minute": 28,
           "team": "home",
-          "scorer": "Unknown"
+          "scorer": null
         },
         {
           "minute": 36,
           "team": "home",
-          "scorer": "Unknown"
+          "scorer": null
         }
       ],
       "yellowCards": [],
@@ -121,7 +116,7 @@
       "matchStage": "half_time",
       "goals": [
         {
-          "minute": null,
+          "minute": 49,
           "team": "home",
           "scorer": "Connor Lawton"
         }
@@ -141,11 +136,6 @@
           "minute": 17,
           "team": "away",
           "scorer": "Adam Dahou"
-        },
-        {
-          "minute": 39,
-          "team": "away",
-          "scorer": "Will Frankish"
         }
       ],
       "yellowCards": [],
@@ -170,14 +160,14 @@
           "scorer": "Edwin Parry"
         },
         {
-          "minute": 29,
+          "minute": 30,
           "team": "home",
           "scorer": "Birchall"
         },
         {
-          "minute": 36,
+          "minute": 35,
           "team": "away",
-          "scorer": "Parry"
+          "scorer": null
         }
       ],
       "yellowCards": [],
@@ -189,7 +179,7 @@
       "away": "Barnton",
       "kickoff": "15:00",
       "score": "0-1",
-      "matchStage": "half_time",
+      "matchStage": "second_half",
       "goals": [
         {
           "minute": 44,
@@ -238,5 +228,5 @@
       "scoreSource": "explicit"
     }
   ],
-  "ticker": "@foley_fc: We go into the break leading.\n\nConnor Lawton’s goal has us the happier side going to the break, we’ve hit the bar twice during the half once from New signing Jamie Turner and from Foley favourite Fin Foote also being denied by the woodwork. https://t.co/cLEZ60gFRq"
+  "ticker": "@NewMillsFC: Half Time Sub for the Millers, Will Frankish off, Solomon Richards on #UptheMillers https://t.co/OdG3BmyGDZ"
 }
