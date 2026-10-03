@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-03T05:31:04.105Z",
-  "sinceDate": "2026-09-26T05:30:40.614Z",
+  "generatedAt": "2026-10-03T05:31:25.390Z",
+  "sinceDate": "2026-09-26T05:30:40.934Z",
   "clubs": [
     {
       "name": "Sandbach United",
@@ -724,13 +724,6 @@
       "handle": "TelfordTownFC",
       "posts": [
         {
-          "text": "🔵 MATCHDAY 🔵\n\nTelford Town FC travel to Cheadle Heath Nomads TODAY.\n\n📅 Saturday 3rd October\n⏰ 3pm KO\n📍 Ideal Building Systems Stadium, Cheadle, SK8 2ET\n\nCome on Town! 💙🤍❤️\n\n#TelfordTown #TelfordTownFC #Matchday #UpTheTown https://t.co/Ojm1qTeWE7",
-          "createdAt": "2026-10-03T05:02:06.000Z",
-          "images": [
-            "https://pbs.twimg.com/media/HTrlpBIW8AA56I2.jpg"
-          ]
-        },
-        {
           "text": "🚍 WE’RE ON THE ROAD TOMORROW! 🔵⚪️🔴\n\nMike Dunn and the boys travel to Cheadle Heath Nomads tomorrow.\n\nSafe journey to everyone making the trip — we’ll see you there! 💙\n\nCOME ON TOWN! 🔵⚪️🔴 https://t.co/lJOVxDKxNe",
           "createdAt": "2026-10-02T21:33:24.000Z",
           "images": [
@@ -1021,7 +1014,8 @@
             "https://pbs.twimg.com/media/HTIoruEXoAEeVVp.jpg"
           ]
         }
-      ]
+      ],
+      "error": "GetXAPI error for @TelfordTownFC: Please try again shortly."
     },
     {
       "name": "Crewe",
