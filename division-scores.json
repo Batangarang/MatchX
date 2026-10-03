@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-10-03T15:35:36.568Z",
+  "generatedAt": "2026-10-03T15:40:41.168Z",
   "date": "2026-10-03",
   "isToday": true,
-  "postCount": 177,
-  "latestPostTimestamp": "2026-10-03T15:35:35.000Z",
+  "postCount": 187,
+  "latestPostTimestamp": "2026-10-03T15:40:09.000Z",
   "fixtures": [
     {
       "home": "Brereton Social",
@@ -35,9 +35,14 @@
           "scorer": "Ewelike"
         },
         {
+          "minute": 70,
+          "team": "home",
+          "scorer": "Colville"
+        },
+        {
           "minute": 69,
           "team": "home",
-          "scorer": null
+          "scorer": "Colville"
         }
       ],
       "yellowCards": [],
@@ -94,18 +99,13 @@
       "home": "Eccleshall",
       "away": "AFC Bridgnorth",
       "kickoff": "15:00",
-      "score": "2-2",
+      "score": "2-1",
       "matchStage": "second_half",
       "goals": [
         {
           "minute": 23,
           "team": "away",
           "scorer": "Michael Williams"
-        },
-        {
-          "minute": 28,
-          "team": "home",
-          "scorer": null
         },
         {
           "minute": 35,
@@ -131,8 +131,8 @@
       "home": "Foley Meir",
       "away": "Bilston Town",
       "kickoff": "15:00",
-      "score": "1-2",
-      "matchStage": "second_half",
+      "score": "1-1",
+      "matchStage": "half_time",
       "goals": [
         {
           "minute": 44,
@@ -140,12 +140,7 @@
           "scorer": "Connor Lawton"
         },
         {
-          "minute": 56,
-          "team": "away",
-          "scorer": "Bustin"
-        },
-        {
-          "minute": 67,
+          "minute": 57,
           "team": "away",
           "scorer": "Bustin"
         }
@@ -201,12 +196,17 @@
         {
           "minute": 55,
           "team": "home",
-          "scorer": "Kieran O'Cornell"
+          "scorer": "Kieran O'Connell"
         },
         {
           "minute": 62,
           "team": "home",
           "scorer": "Jack Finney"
+        },
+        {
+          "minute": 76,
+          "team": "home",
+          "scorer": null
         },
         {
           "minute": 77,
@@ -226,7 +226,7 @@
       "matchStage": "second_half",
       "goals": [
         {
-          "minute": 44,
+          "minute": 45,
           "team": "away",
           "scorer": "Sigsworth"
         },
@@ -234,11 +234,6 @@
           "minute": 55,
           "team": "away",
           "scorer": "Sigsworth"
-        },
-        {
-          "minute": 62,
-          "team": "home",
-          "scorer": null
         },
         {
           "minute": 65,
@@ -255,11 +250,11 @@
       "redCards": [
         {
           "team": "home",
-          "player": "Naj"
+          "player": null
         },
         {
           "team": "home",
-          "player": "Boz"
+          "player": "Naj"
         }
       ],
       "scoreSource": "explicit"
@@ -301,5 +296,5 @@
       "scoreSource": "explicit"
     }
   ],
-  "ticker": "@SandbachFC_1st: 🔵⚪️ v 🔴🔴\n\nSandbach United v Alsager Town\n\nFree kick is well worked by The Bach and Saul Shotton scores our 5th as we look to secure the 3 points and leave Alsager in the bottom 3, get in!\n@alsagertown_fc \n5 2\n\n77 mins gone"
+  "ticker": "@SandbachFC_1st: ��⚪️ v 🔴🔴\n\nSandbach United v Alsager Town\n\nHarry Cain replaces Matty Birchall\n\n@alsagertown_fc \n\n5 2\n\n82 mins gone"
 }

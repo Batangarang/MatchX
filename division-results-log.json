@@ -31,7 +31,7 @@
     "Eccleshall|AFC Bridgnorth": {
       "home": "Eccleshall",
       "away": "AFC Bridgnorth",
-      "score": "2-2",
+      "score": "2-1",
       "matchStage": "second_half",
       "scoreSource": "explicit"
     },
@@ -66,8 +66,8 @@
     "Foley Meir|Bilston Town": {
       "home": "Foley Meir",
       "away": "Bilston Town",
-      "score": "1-2",
-      "matchStage": "second_half",
+      "score": "1-1",
+      "matchStage": "half_time",
       "scoreSource": "explicit"
     }
   }
