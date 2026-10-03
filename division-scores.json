@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-10-03T15:20:45.506Z",
+  "generatedAt": "2026-10-03T15:25:33.044Z",
   "date": "2026-10-03",
   "isToday": true,
-  "postCount": 148,
-  "latestPostTimestamp": "2026-10-03T15:21:01.000Z",
+  "postCount": 157,
+  "latestPostTimestamp": "2026-10-03T15:24:37.000Z",
   "fixtures": [
     {
       "home": "Brereton Social",
       "away": "Widnes Town",
       "kickoff": "15:00",
       "score": "1-1",
-      "matchStage": "full_time",
+      "matchStage": "second_half",
       "goals": [
         {
           "minute": null,
@@ -66,7 +66,7 @@
       "away": "Stafford Town",
       "kickoff": "15:00",
       "score": "0-0",
-      "matchStage": "half_time",
+      "matchStage": "second_half",
       "goals": [],
       "yellowCards": [
         {
@@ -94,12 +94,7 @@
           "scorer": "Michael Williams"
         },
         {
-          "minute": 28,
-          "team": "home",
-          "scorer": "Matt Jones"
-        },
-        {
-          "minute": 36,
+          "minute": 35,
           "team": "home",
           "scorer": "Dylan"
         }
@@ -113,10 +108,10 @@
       "away": "Bilston Town",
       "kickoff": "15:00",
       "score": "1-1",
-      "matchStage": "second_half",
+      "matchStage": "half_time",
       "goals": [
         {
-          "minute": null,
+          "minute": 45,
           "team": "home",
           "scorer": "Connor Lawton"
         },
@@ -151,7 +146,7 @@
       "home": "Sandbach United",
       "away": "Alsager Town",
       "kickoff": "15:00",
-      "score": "3-2",
+      "score": "4-2",
       "matchStage": "second_half",
       "goals": [
         {
@@ -165,12 +160,12 @@
           "scorer": "Edwin Parry"
         },
         {
-          "minute": 30,
+          "minute": 29,
           "team": "home",
           "scorer": "Birchall"
         },
         {
-          "minute": 36,
+          "minute": 35,
           "team": "away",
           "scorer": null
         },
@@ -178,6 +173,11 @@
           "minute": 55,
           "team": "home",
           "scorer": "Kieran O'Connell"
+        },
+        {
+          "minute": 64,
+          "team": "home",
+          "scorer": "Jack Finney"
         }
       ],
       "yellowCards": [],
@@ -192,12 +192,12 @@
       "matchStage": "second_half",
       "goals": [
         {
-          "minute": 44,
+          "minute": 45,
           "team": "away",
           "scorer": "Sigsworth"
         },
         {
-          "minute": 57,
+          "minute": 55,
           "team": "away",
           "scorer": "Sigsworth"
         }
@@ -238,10 +238,15 @@
           "scorer": "Liam Kirton"
         }
       ],
-      "yellowCards": [],
+      "yellowCards": [
+        {
+          "team": "home",
+          "player": "Josh Banks"
+        }
+      ],
       "redCards": [],
       "scoreSource": "explicit"
     }
   ],
-  "ticker": "@SandbachFC_1st: 3-2 https://t.co/899TMZJzco"
+  "ticker": "@barntonfc: ⏱️60’ | Substitutions for Barnton\n\nOn\n\n➡️ Sandle\n➡️ Humphries \n\nOff \n\n⬅️ Stanton\n⬅️ McKean\n\n⚫️ SHA 0-2 BAR 🔵\n\n#UTV | #TheCheshireJuve | #FinoAllaFine https://t.co/qeeNp8jyYe"
 }

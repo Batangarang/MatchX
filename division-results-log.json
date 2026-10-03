@@ -25,7 +25,7 @@
       "home": "Dawley Town",
       "away": "Stafford Town",
       "score": "0-0",
-      "matchStage": "half_time",
+      "matchStage": "second_half",
       "scoreSource": "explicit"
     },
     "Eccleshall|AFC Bridgnorth": {
@@ -45,7 +45,7 @@
     "Sandbach United|Alsager Town": {
       "home": "Sandbach United",
       "away": "Alsager Town",
-      "score": "3-2",
+      "score": "4-2",
       "matchStage": "second_half",
       "scoreSource": "explicit"
     },
@@ -67,7 +67,7 @@
       "home": "Foley Meir",
       "away": "Bilston Town",
       "score": "1-1",
-      "matchStage": "second_half",
+      "matchStage": "half_time",
       "scoreSource": "explicit"
     }
   }
