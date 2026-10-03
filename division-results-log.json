@@ -31,8 +31,8 @@
     "Eccleshall|AFC Bridgnorth": {
       "home": "Eccleshall",
       "away": "AFC Bridgnorth",
-      "score": "2-1",
-      "matchStage": "half_time",
+      "score": "2-2",
+      "matchStage": "second_half",
       "scoreSource": "explicit"
     },
     "Market Drayton Town|New Mills": {
@@ -52,7 +52,7 @@
     "Shawbury United|Barnton": {
       "home": "Shawbury United",
       "away": "Barnton",
-      "score": "0-2",
+      "score": "1-2",
       "matchStage": "second_half",
       "scoreSource": "explicit"
     },
@@ -66,8 +66,8 @@
     "Foley Meir|Bilston Town": {
       "home": "Foley Meir",
       "away": "Bilston Town",
-      "score": "1-1",
-      "matchStage": "half_time",
+      "score": "1-2",
+      "matchStage": "second_half",
       "scoreSource": "explicit"
     }
   }
