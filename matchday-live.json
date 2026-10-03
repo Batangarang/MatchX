@@ -1,25 +1,19 @@
 {
-  "generatedAt": "2026-10-03T15:35:47.478Z",
+  "generatedAt": "2026-10-03T15:41:03.930Z",
   "fixtureDate": "2026-10-03",
   "kickoff": "15:00",
   "homeTeam": "Sandbach United",
   "awayTeam": "Alsager Town",
-  "postsUsed": 35,
+  "postsUsed": 39,
   "imagesAnalyzedThisRun": 0,
   "totalImagesAnalyzed": 6,
   "match": {
-    "score": "4-2",
+    "score": "5-2",
     "scoreSource": "confirmed_by_both_feeds",
     "scoreConfirmed": true,
-    "feedScore": "4-2",
-    "scoreDiscrepancy": "Goal reports suggested 4-3 but the confirmed score is 4-2 — 1 unconfirmed goal report(s) ignored.",
-    "unconfirmedGoals": [
-      {
-        "minute": 62,
-        "team": "away",
-        "scorer": "Finney"
-      }
-    ],
+    "feedScore": "5-2",
+    "scoreDiscrepancy": null,
+    "unconfirmedGoals": [],
     "finalScoreAnnounced": null,
     "halfTimeScoreAnnounced": "2-2",
     "htDiscrepancy": null,
@@ -30,28 +24,27 @@
           "Matty Birchall",
           "Nathan Barry",
           "Robbie Hatton",
-          "Jacob Vernon",
-          "Foley",
-          "Kieran O'Connell",
-          "Jack Finney",
-          "Hall"
+          "Jacob Vernon"
         ],
         "substitutes": [
-          "Josh Fowles"
+          "Josh Fowles",
+          "Max Williams",
+          "Kieran Nolan",
+          "Harry Cain"
         ],
         "manager": null,
         "officials": []
       },
       "away": {
         "players": [
-          "James Peake",
+          "Peake (GK)",
           "Latter",
           "Denny",
           "Watts",
           "Cartwright",
           "Parry",
           "Cowley",
-          "Jordy Fitton",
+          "Fitton (C)",
           "Hurst",
           "Bush",
           "Renshaw"
@@ -97,6 +90,11 @@
         "minute": 64,
         "team": "home",
         "scorer": "Jack Finney"
+      },
+      {
+        "minute": 77,
+        "team": "home",
+        "scorer": "Saul Shotton"
       }
     ],
     "yellowCards": [],
@@ -107,6 +105,24 @@
         "team": "home",
         "playerOff": "Nathan Barry",
         "playerOn": "Josh Fowles"
+      },
+      {
+        "minute": 80,
+        "team": "home",
+        "playerOff": "Jacob Vernon",
+        "playerOn": "Max Williams"
+      },
+      {
+        "minute": 80,
+        "team": "home",
+        "playerOff": "Stan Tatters",
+        "playerOn": "Kieran Nolan"
+      },
+      {
+        "minute": 82,
+        "team": "home",
+        "playerOff": "Matty Birchall",
+        "playerOn": "Harry Cain"
       }
     ],
     "sinBins": [],
@@ -127,14 +143,14 @@
     },
     "roughXG": {
       "firstHalf": {
-        "home": 2,
+        "home": 1.8,
         "away": 1.5,
-        "note": "Sandbach scored 2 (Foley, Birchall) and had additional chances from Hatton and corners. Alsager scored 1 (Parry) plus an own goal deflection. (raised to reflect goals actually scored)"
+        "note": "Sandbach scored twice early with direct, clinical finishes (Foley minute 2, Birchall minute 29); Alsager equalised twice (Parry header minute 17, own goal minute 35). Home team showed more attacking threat. (raised to reflect goals actually scored)"
       },
       "secondHalf": {
-        "home": 2,
+        "home": 2.5,
         "away": 0.5,
-        "note": "Sandbach scored 2 (O'Connell diving header, Finney). Alsager scored 1 (Finney) and had limited clear chances, with Minshall's shot wide."
+        "note": "Sandbach dominated the second half, scoring three more goals (O'Connell header minute 56, Finney header minute 62, Shotton free kick minute 77) with Birchall's long-range shot hitting the bar. Alsager had minimal chances, Minshall's shot wide being the only clear attempt noted."
       },
       "extraTime": {
         "home": 0,
@@ -142,9 +158,9 @@
         "note": "No extra time played."
       },
       "total": {
-        "home": 4,
-        "away": 1.5,
-        "note": "Sandbach scored 4 goals and created multiple chances. Alsager scored 2 but limited clear-cut opportunities."
+        "home": 4.3,
+        "away": 1.7,
+        "note": "Sandbach's five goals reflect strong attacking performance throughout. Alsager competitive early but overwhelmed in second half."
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
@@ -152,22 +168,22 @@
       "firstHalf": {
         "home": 55,
         "away": 45,
-        "note": "Sandbach took early lead and created multiple chances from corners and open play; Alsager competitive but relied on set pieces."
+        "note": "Sandbach took early lead and scored twice but Alsager showed resilience, equalising twice through set pieces and defensive error."
       },
       "secondHalf": {
-        "home": 65,
-        "away": 35,
-        "note": "Sandbach dominated after 56th minute, scoring twice and maintaining control. Alsager limited to occasional chances."
+        "home": 75,
+        "away": 25,
+        "note": "Sandbach dominated; posts describe 'eventful' first half but second half saw home team pull away with clinical finishing. Alsager's opportunities described as 'limited'."
       },
       "extraTime": {
         "home": 50,
         "away": 50,
-        "note": "No extra time."
+        "note": "No extra time played."
       },
       "total": {
-        "home": 60,
-        "away": 40,
-        "note": "Sandbach controlled much of the match, particularly in the second half, despite Alsager competing in the first half with set-piece threats."
+        "home": 65,
+        "away": 35,
+        "note": "Overall Sandbach controlled much of the match, particularly the second half, despite Alsager's competitive start."
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
