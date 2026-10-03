@@ -14381,13 +14381,13 @@
       "aiCostGBP": 0.0162
     },
     {
-      "script": "x-posts",
-      "timestamp": "2026-10-03T15:30:41.734Z",
-      "getxapiCalls": 1,
+      "script": "division-posts",
+      "timestamp": "2026-10-03T15:31:05.408Z",
+      "getxapiCalls": 22,
       "claudeCalls": 0,
       "inputTokens": 0,
       "outputTokens": 0,
-      "xCostGBP": 0.0008,
+      "xCostGBP": 0.0165,
       "aiCostGBP": 0
     }
   ]
