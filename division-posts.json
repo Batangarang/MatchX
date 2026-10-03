@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-02T22:01:33.862Z",
-  "sinceDate": "2026-09-25T22:00:51.647Z",
+  "generatedAt": "2026-10-03T00:31:09.816Z",
+  "sinceDate": "2026-09-26T00:30:41.502Z",
   "clubs": [
     {
       "name": "Sandbach United",
@@ -783,6 +783,11 @@
         },
         {
           "text": "𝗦𝗔𝗧𝗨𝗥𝗗𝗔𝗬 𝗪𝗔𝗦 𝗔 𝗚𝗢𝗢𝗗 𝗗𝗔𝗬…\n\n𝗜𝗧 𝗠𝗜𝗚𝗛𝗧 𝗛𝗔𝗩𝗘 𝗝𝗨𝗦𝗧 𝗚𝗢𝗧 𝗘𝗩𝗘𝗡 𝗕𝗘𝗧𝗧𝗘𝗥. 👀\n\nKeep an eye on our channels today.\n\n✍️\n\n���🔵⚪️🔴\n\n#TelfordTown",
+          "createdAt": "2026-09-30T08:20:15.000Z",
+          "images": []
+        },
+        {
+          "text": "𝗦𝗔𝗧𝗨𝗥𝗗����𝗬 𝗪𝗔𝗦 𝗔 𝗚𝗢𝗢𝗗 𝗗𝗔𝗬…\n\n𝗜𝗧 𝗠𝗜𝗚𝗛𝗧 𝗛𝗔𝗩𝗘 𝗝𝗨𝗦𝗧 𝗚𝗢𝗧 𝗘𝗩𝗘𝗡 𝗕𝗘𝗧𝗧𝗘𝗥. 👀\n\nKeep an eye on our channels today.\n\n✍️\n\n⏳🔵⚪️🔴\n\n#TelfordTown",
           "createdAt": "2026-09-30T08:20:15.000Z",
           "images": []
         },
@@ -1740,6 +1745,13 @@
           ]
         },
         {
+          "text": "𝑻𝑬𝑨𝑴 𝑵𝑬𝑾𝑺 🗞️\n\nYour Nomads XI is locked in for today’s clash! ��\n\nHere’s how we line up as we look to progress in the Macron Cup this afternoon ⤵️\n\n#WeAreNomads | @nwcfl | @NWCFLScores https://t.co/eCQVThMVd2",
+          "createdAt": "2026-09-26T13:44:26.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HTJaLskWcAAQKCx.jpg"
+          ]
+        },
+        {
           "text": "Afternoon lads 👋\n\n#WeAreNomads | @nwcfl | @NWCFLScores https://t.co/n7Ze2P4GW6",
           "createdAt": "2026-09-26T13:17:57.000Z",
           "images": [
@@ -2061,8 +2073,7 @@
             "https://pbs.twimg.com/media/HTIDYZgXEAAYOyZ.jpg"
           ]
         }
-      ],
-      "error": "GetXAPI error for @MDTFC: Please try again shortly."
+      ]
     },
     {
       "name": "Shawbury United",
