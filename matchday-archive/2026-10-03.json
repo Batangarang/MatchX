@@ -1,23 +1,23 @@
 {
-  "generatedAt": "2026-10-03T14:40:56.825Z",
+  "generatedAt": "2026-10-03T14:50:56.599Z",
   "fixtureDate": "2026-10-03",
   "kickoff": "15:00",
   "homeTeam": "Sandbach United",
   "awayTeam": "Alsager Town",
-  "postsUsed": 21,
+  "postsUsed": 23,
   "imagesAnalyzedThisRun": 0,
   "totalImagesAnalyzed": 4,
   "match": {
     "score": "2-2",
-    "scoreSource": "match_feed_stated",
+    "scoreSource": "confirmed_by_both_feeds",
     "scoreConfirmed": true,
     "feedScore": "2-2",
     "scoreDiscrepancy": null,
     "unconfirmedGoals": [],
     "finalScoreAnnounced": null,
-    "halfTimeScoreAnnounced": null,
+    "halfTimeScoreAnnounced": "2-2",
     "htDiscrepancy": null,
-    "matchStage": "first_half",
+    "matchStage": "half_time",
     "lineups": {
       "home": {
         "players": [
@@ -32,14 +32,14 @@
       },
       "away": {
         "players": [
-          "Peake (GK)",
+          "James Peake (GK)",
           "Latter",
           "Denny",
           "Watts",
           "Cartwright",
           "Parry",
           "Cowley",
-          "Fitton (C)",
+          "Jordy Fitton (C)",
           "Hurst",
           "Bush",
           "Renshaw"
@@ -100,12 +100,12 @@
       "firstHalf": {
         "home": 1.8,
         "away": 1.5,
-        "note": "Sandbach scored 2 goals (Foley 2', Birchall 29') with additional chances from Hatton header and Birchall near miss. Alsager scored 1 goal (Parry 17') plus the own goal deflection at 35'."
+        "note": "Sandbach scored twice (Foley, Birchall) plus had other chances (Hatton header, Birchall wide). Alsager scored once from set-piece (Parry) plus own goal deflection. (raised to reflect goals actually scored)"
       },
       "secondHalf": {
         "home": 0,
         "away": 0,
-        "note": "Match posts end at 36 minutes; no second half data available."
+        "note": "Match ended at half-time in posts; no second-half data available."
       },
       "extraTime": {
         "home": 0,
@@ -115,20 +115,20 @@
       "total": {
         "home": 1.8,
         "away": 1.5,
-        "note": "Based on first half only. Sandbach 2 goals, Alsager 2 goals (1 direct + 1 own goal)."
+        "note": "Sandbach created more clear-cut chances and scored twice; Alsager equalized through set-piece play and benefited from a defensive deflection. (raised to reflect goals actually scored)"
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
     "matchControl": {
       "firstHalf": {
-        "home": 55,
-        "away": 45,
-        "note": "Sandbach started strongly with early goal, good pressure from corners, and Birchall's early start goal. Alsager responded with quick equaliser and own goal deflection near end of available coverage."
+        "home": 60,
+        "away": 40,
+        "note": "Sandbach took early lead and scored twice; posts describe 'good pressure' from corners and chances for Hatton and Birchall. Alsager responded twice but largely reactive."
       },
       "secondHalf": {
         "home": 50,
         "away": 50,
-        "note": "No second half data available."
+        "note": "Match ended at half-time in posts; no second-half data available."
       },
       "extraTime": {
         "home": 50,
@@ -136,9 +136,9 @@
         "note": "No extra time played."
       },
       "total": {
-        "home": 55,
-        "away": 45,
-        "note": "Sandbach appeared to have slight edge in first half based on available posts, but no second half data to assess overall control."
+        "home": 60,
+        "away": 40,
+        "note": "Sandbach dominated the opening 35 minutes despite Alsager's two equalizers; described as 'top takes on near the bottom' with Sandbach leading the league."
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
