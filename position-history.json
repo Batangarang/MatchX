@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-19T17:01:00.739Z",
+  "generatedAt": "2026-10-03T17:01:04.012Z",
   "history": [
     {
       "gamesPlayed": 1,
@@ -120,6 +120,18 @@
       "cumGoalsFor": 26,
       "cumGoalsAgainst": 14,
       "cumGoalDifference": 12
+    },
+    {
+      "gamesPlayed": 11,
+      "date": "Sat 03/10/26",
+      "opponent": "Alsager Town",
+      "position": 1,
+      "points": 25,
+      "gameGoalsFor": 6,
+      "gameGoalsAgainst": 2,
+      "cumGoalsFor": 32,
+      "cumGoalsAgainst": 16,
+      "cumGoalDifference": 16
     }
   ]
 }
