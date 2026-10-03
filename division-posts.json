@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-03T10:31:08.106Z",
-  "sinceDate": "2026-09-26T10:30:44.480Z",
+  "generatedAt": "2026-10-03T10:31:20.886Z",
+  "sinceDate": "2026-09-26T10:30:39.609Z",
   "clubs": [
     {
       "name": "Sandbach United",
@@ -587,14 +587,6 @@
       "handle": "StaffordTown1st",
       "posts": [
         {
-          "text": "⚽️ IT’S MATCHDAY!!! ⚽️\n\nBack to league action this week and the Stafford boys make their first ever trip to Dawley!\n\n🏟️: Theatre of Jockeys, Doseley Road, Telford, TF4 3AL\n\nPlease note there is no parking at the ground for supporters. There are 2 car parks just a short walk away. Please see the 2nd picture for guidence.\n\n#UpTheTown",
-          "createdAt": "2026-10-03T09:03:19.000Z",
-          "images": [
-            "https://pbs.twimg.com/media/HTsc-B5XwAAS7cu.jpg",
-            "https://pbs.twimg.com/media/HTsc-B8WkAAb_W0.jpg"
-          ]
-        },
-        {
           "text": "⚽️ Next Up! ⚽️\n\nWe begin October on the road, as we take on the recently promoted Dawley Town.\n\nDawley have made a solid start to life in the NWCFL, currently occupying a mid table spot. \n\nFrom what we can tell, this will be the first ever meeting between the 2 sides. \n\nDon’t miss it! \n\n🏟️: Theatre of Jockeys, Doseley Road, Telford, TF4 3AL\n\n#UpTheTown",
           "createdAt": "2026-09-29T18:53:48.000Z",
           "images": [
@@ -710,7 +702,8 @@
             "https://pbs.twimg.com/media/HTIynjdXsAAKYox.jpg"
           ]
         }
-      ]
+      ],
+      "error": "GetXAPI error for @StaffordTown1st: Please try again shortly."
     },
     {
       "name": "Telford Town",
@@ -2147,6 +2140,13 @@
         },
         {
           "text": "70': Leo Gill scores for Wolverhampton Casuals 🙌\n#WOLWOM #Pitchero\nhttps://www.wolverhamptoncasualsfc.co.uk/teams/294420/match-centre/0-6626402?utm_campaign=match_event&utm_medium=post&utm_source=twitter&utm_content=goal https://t.co/WAR1KS4SFT",
+          "createdAt": "2026-09-30T20:13:26.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HTfZj_cWAAAzfCv.jpg"
+          ]
+        },
+        {
+          "text": "70': Leo Gill scores for Wolverhampton Casuals ���\n#WOLWOM #Pitchero\nhttps://www.wolverhamptoncasualsfc.co.uk/teams/294420/match-centre/0-6626402?utm_campaign=match_event&utm_medium=post&utm_source=twitter&utm_content=goal https://t.co/WAR1KS4SFT",
           "createdAt": "2026-09-30T20:13:26.000Z",
           "images": [
             "https://pbs.twimg.com/media/HTfZj_cWAAAzfCv.jpg"
