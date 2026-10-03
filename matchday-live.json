@@ -1,17 +1,17 @@
 {
-  "generatedAt": "2026-10-03T14:01:14.300Z",
+  "generatedAt": "2026-10-03T14:05:44.794Z",
   "fixtureDate": "2026-10-03",
   "kickoff": "15:00",
   "homeTeam": "Sandbach United",
   "awayTeam": "Alsager Town",
-  "postsUsed": 6,
-  "imagesAnalyzedThisRun": 0,
-  "totalImagesAnalyzed": 2,
+  "postsUsed": 9,
+  "imagesAnalyzedThisRun": 1,
+  "totalImagesAnalyzed": 3,
   "match": {
-    "score": "0-0",
+    "score": "1-0",
     "scoreSource": "match_feed_stated",
     "scoreConfirmed": true,
-    "feedScore": "0-0",
+    "feedScore": "1-0",
     "scoreDiscrepancy": null,
     "unconfirmedGoals": [],
     "finalScoreAnnounced": null,
@@ -55,7 +55,13 @@
         "officials": []
       }
     },
-    "goals": [],
+    "goals": [
+      {
+        "minute": 2,
+        "team": "home",
+        "scorer": "Kyle Foley"
+      }
+    ],
     "yellowCards": [],
     "redCards": [],
     "substitutions": [],
@@ -77,14 +83,14 @@
     },
     "roughXG": {
       "firstHalf": {
-        "home": 0,
-        "away": 0,
-        "note": "No match action reported; match had just kicked off"
+        "home": 1.2,
+        "away": 0.1,
+        "note": "Sandbach scored early with a clinical finish from Foley; limited information on other chances"
       },
       "secondHalf": {
         "home": 0,
         "away": 0,
-        "note": "No posts from second half"
+        "note": "No second-half posts available"
       },
       "extraTime": {
         "home": 0,
@@ -92,22 +98,22 @@
         "note": "Match did not go to extra time"
       },
       "total": {
-        "home": 0,
-        "away": 0,
-        "note": "No match action reported in available posts"
+        "home": 1.2,
+        "away": 0.1,
+        "note": "Only first-half data available; Sandbach's goal is a hard floor for their xG"
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
     "matchControl": {
       "firstHalf": {
-        "home": 50,
-        "away": 50,
-        "note": "Match had just started; no information available"
+        "home": 65,
+        "away": 35,
+        "note": "Sandbach scored early and the tone suggests they were dominant in the opening stages"
       },
       "secondHalf": {
         "home": 50,
         "away": 50,
-        "note": "No posts from second half"
+        "note": "No second-half posts available"
       },
       "extraTime": {
         "home": 50,
@@ -115,9 +121,9 @@
         "note": "Match did not go to extra time"
       },
       "total": {
-        "home": 50,
-        "away": 50,
-        "note": "No match action reported in available posts"
+        "home": 58,
+        "away": 42,
+        "note": "Based on early Sandbach dominance; limited overall data"
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
