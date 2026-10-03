@@ -1,23 +1,28 @@
 {
-  "generatedAt": "2026-10-03T15:15:54.627Z",
+  "generatedAt": "2026-10-03T15:25:50.792Z",
   "fixtureDate": "2026-10-03",
   "kickoff": "15:00",
   "homeTeam": "Sandbach United",
   "awayTeam": "Alsager Town",
-  "postsUsed": 27,
-  "imagesAnalyzedThisRun": 0,
-  "totalImagesAnalyzed": 4,
+  "postsUsed": 32,
+  "imagesAnalyzedThisRun": 2,
+  "totalImagesAnalyzed": 6,
   "match": {
-    "score": "2-2",
+    "score": "3-2",
     "scoreSource": "division_scores",
     "scoreConfirmed": true,
-    "feedScore": "3-2",
-    "scoreDiscrepancy": "Match feed said 3-2 but the division live-scores feed said 2-2 — showing 2-2.",
+    "feedScore": "4-2",
+    "scoreDiscrepancy": "Match feed said 4-2 but the division live-scores feed said 3-2 — showing 3-2.",
     "unconfirmedGoals": [
       {
-        "minute": 55,
+        "minute": 64,
         "team": "home",
-        "scorer": "Kieran O'Connell"
+        "scorer": "Jack Finney"
+      },
+      {
+        "minute": 62,
+        "team": "away",
+        "scorer": "Finney"
       }
     ],
     "finalScoreAnnounced": null,
@@ -38,14 +43,14 @@
       },
       "away": {
         "players": [
-          "James Peake (GK)",
+          "James Peake",
           "Latter",
           "Denny",
           "Watts",
           "Cartwright",
           "Parry",
           "Cowley",
-          "Jordy Fitton (C)",
+          "Jordy Fitton",
           "Hurst",
           "Bush",
           "Renshaw"
@@ -81,6 +86,11 @@
         "minute": 35,
         "team": "away",
         "scorer": "Own goal (deflection off Sandbach defender)"
+      },
+      {
+        "minute": 56,
+        "team": "home",
+        "scorer": "Kieran O'Connell"
       }
     ],
     "yellowCards": [],
@@ -106,12 +116,12 @@
       "firstHalf": {
         "home": 1.8,
         "away": 1.5,
-        "note": "Sandbach scored 2 goals (Foley, Birchall); Alsager scored 1 real goal + 1 OG. Sandbach showed good attacking play with chances from Hatton headers and Birchall. Alsager had set-piece threat but less clear chance creation. (raised to reflect goals actually scored)"
+        "note": "Sandbach scored twice (Foley min 2, Birchall min 29), Alsager twice (Parry min 17, OG min 35). Sandbach had additional chances including Hatton header and Birchall chance that went wide. (raised to reflect goals actually scored)"
       },
       "secondHalf": {
-        "home": 1.2,
-        "away": 0.5,
-        "note": "Sandbach scored O'Connell's diving header at 55'. Limited match detail in posts for second half; Sandbach appeared to control proceedings after their goal."
+        "home": 1.5,
+        "away": 0.8,
+        "note": "Sandbach scored twice (O'Connell min 56, Finney min 64). Alsager scored once (Finney min 62). Sandbach dominated the second half based on goal output."
       },
       "extraTime": {
         "home": 0,
@@ -119,22 +129,22 @@
         "note": "No extra time played."
       },
       "total": {
-        "home": 3,
-        "away": 1.7,
-        "note": "Sandbach scored 3 goals (Foley, Birchall, O'Connell); Alsager scored 1 goal (Parry) plus 1 own goal conceded. Sandbach dominated attacking play throughout."
+        "home": 3.3,
+        "away": 2,
+        "note": "Sandbach scored 4 goals, Alsager scored 2. Quality of chances suggested Sandbach had superior xG throughout."
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
     "matchControl": {
       "firstHalf": {
-        "home": 60,
-        "away": 40,
-        "note": "Sandbach took an early lead and created multiple chances (Hatton header, Birchall shot wide, corners and pressure). Alsager equalized and had set-piece threat but less overall dominance. Posts indicate Sandbach 'top of league' vs 'near the bottom'."
+        "home": 55,
+        "away": 45,
+        "note": "Sandbach took the lead early but Alsager equalized. Sandbach regained the lead before half-time. Posts suggest Sandbach had good pressure with corners and chances."
       },
       "secondHalf": {
         "home": 65,
         "away": 35,
-        "note": "Sandbach retook lead at 55' with O'Connell's header. Posts describe Sandbach as having 'pressure' and maintaining lead; limited detail on Alsager's second-half play suggests they were more reactive."
+        "note": "Sandbach dominated the second half, scoring twice to Alsager's one goal. Sandbach clearly controlled proceedings and opened up a 2-goal lead."
       },
       "extraTime": {
         "home": 50,
@@ -142,9 +152,9 @@
         "note": "No extra time played."
       },
       "total": {
-        "home": 62,
-        "away": 38,
-        "note": "Sandbach (league leaders) controlled most of the match, created more chances, and scored more goals. Alsager competed well, especially via set-pieces, but were ultimately second best."
+        "home": 60,
+        "away": 40,
+        "note": "Sandbach overall controlled the match, particularly in the second half, scoring 4 goals and leading 4-2 at the 64-minute mark."
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
