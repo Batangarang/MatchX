@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-04T20:31:39.918Z",
-  "sinceDate": "2026-09-27T20:30:55.731Z",
+  "generatedAt": "2026-10-04T23:01:11.091Z",
+  "sinceDate": "2026-09-27T23:00:48.105Z",
   "clubs": [
     {
       "name": "Sandbach United",
@@ -464,11 +464,6 @@
           "text": "Danny Glover and Nathan Wilkes assess today’s cup win. \n\nDanny is proudly supported by Gough Landscapes and D9 Academy and Nathan is supported by ABC Detailing and Vero Valore, as always we thank you for your continued support ���\n\n💙🦅\n\n#EccleshallFC https://t.co/LQpKG0i0cb",
           "createdAt": "2026-09-28T16:11:02.000Z",
           "images": []
-        },
-        {
-          "text": "Will Silvester reviews today’s game against Shawbury Utd. \n\nWill is proudly supported by Leese Bros and Morgan Sindall, as always we thank you for your continued support🤝\n\n💙🦅\n\n#EccleshallFC https://t.co/A61JWOUP2Q",
-          "createdAt": "2026-09-27T20:38:49.000Z",
-          "images": []
         }
       ]
     },
@@ -739,6 +734,20 @@
       "name": "Telford Town",
       "handle": "TelfordTownFC",
       "posts": [
+        {
+          "text": "2026-27 Team photo from Telford Town Ladies as they cruise against Shrewsbury Up n Comers #Pitchero\nhttps://www.telfordtownfc.co.uk/news/ladies-win-again-3001354.html https://t.co/Tjrh3SReRf",
+          "createdAt": "2026-10-04T22:09:20.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HT0adyZWAAAD6jo.jpg"
+          ]
+        },
+        {
+          "text": "Phoenix U16s with emphatic victory at home #Pitchero\nhttps://www.telfordtownfc.co.uk/news/phoenix-u16s-with-emphatic-victory-at-home-3001351.html https://t.co/lT9ZP2IK6f",
+          "createdAt": "2026-10-04T21:40:49.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HT0T77TWwAAIw9D.jpg"
+          ]
+        },
         {
           "text": "Photos from this weeks Telford v Cheadle Heath Nomads match are now available online from the legendary #gtphotography #Pitchero\nhttps://www.telfordtownfc.co.uk/photos/telford-v-cheadle-heath-nomads-1179780.html?utm_campaign=event_share&utm_medium=post&utm_source=twitter https://t.co/lo1KdCRigt",
           "createdAt": "2026-10-04T19:39:27.000Z",
@@ -1645,6 +1654,13 @@
       "name": "Cheadle Heath Nomads",
       "handle": "CheadleNomads",
       "posts": [
+        {
+          "text": "🔜 NEXT UP\n\nNo rest for the Nomads! We’re back in cup action under the lights as we welcome @WolvesCassies to the Ideal Building Systems Stadium\n\n🕒 17:45 PM KO\n🆚 @WolvesCassies \n📍  Ideal Building Systems Stadium, SK8 2ET\n🏆 Edward Case Cup\n🎟️ Adults £6 | Concessions £3\n\n#Wearenomads | @nwcfl | @NWCFLScores",
+          "createdAt": "2026-10-04T21:26:52.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HT0QvvbXIAAkmfm.jpg"
+          ]
+        },
         {
           "text": "90’ | FULL-TIME\n\nA second half winner from George Colville seals all three points as the Nomads see out the final stages to secure a 2-0 victory!\n\n@CheadleNomads 2-0 @TelfordTownFC \n\n#WeAreNomads | @nwcfl | @NWCFLScores https://t.co/kKFcKkrjeB",
           "createdAt": "2026-10-03T16:16:10.000Z",
@@ -2629,8 +2645,7 @@
             "https://pbs.twimg.com/media/HTUCncMWYAA9PwG.jpg"
           ]
         }
-      ],
-      "error": "GetXAPI error for @foley_fc: Please try again shortly."
+      ]
     },
     {
       "name": "NWCFL (League Official)",
