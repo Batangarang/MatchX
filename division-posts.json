@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-04T05:31:21.944Z",
-  "sinceDate": "2026-09-27T05:30:37.656Z",
+  "generatedAt": "2026-10-04T08:01:13.243Z",
+  "sinceDate": "2026-09-27T08:00:48.973Z",
   "clubs": [
     {
       "name": "Sandbach United",
@@ -568,6 +568,11 @@
           "images": []
         },
         {
+          "text": "🗣���September player of the month🗣️\n \nTime to vote for your player of the month for September ⚽️",
+          "createdAt": "2026-09-29T15:48:46.000Z",
+          "images": []
+        },
+        {
           "text": "Check out our first post match interview of the season with our managers \n\nhttps://www.facebook.com/share/v/1Bp9zpHfNC/?mibextid=KsPBc6",
           "createdAt": "2026-09-28T20:21:21.000Z",
           "images": []
@@ -732,6 +737,13 @@
       "name": "Telford Town",
       "handle": "TelfordTownFC",
       "posts": [
+        {
+          "text": "🔥 𝐈𝐓’𝐒 𝐌𝐀𝐓𝐂𝐇𝐃𝐀𝐘!\n\nOur ladies host 𝐒𝐡𝐫𝐞𝐰𝐬𝐛𝐮𝐫𝐲 𝐔𝐩 𝐍 𝐂𝐨𝐦𝐞𝐫𝐬 today.\n\n🕑 2pm KO\n🏟️ Lionheart Security Services Stadium\n🎟️ £4 Adults | £2 Concessions | Kids £1\n\nGet behind the ladies! 🔵⚪🔴 https://t.co/5nMjGYKMsb",
+          "createdAt": "2026-10-04T07:51:33.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HTxWH2OX0AAZ_Gy.jpg"
+          ]
+        },
         {
           "text": "Meet some of the Away End 👊\n\nThe regulars who follow Telford Town home and away, through the highs, the lows and everything in between.\n\nNot the result we wanted today, but the support never stops. 💙⚽️\n\nUP THE TOWN 🔵🔴⚪️\n\n#TelfordTownFC #TheAwayEnd #AwayDay #UpTheTown #TheAms https://t.co/LDvGnvU2Fw",
           "createdAt": "2026-10-04T05:02:24.000Z",
@@ -1160,8 +1172,7 @@
             "https://pbs.twimg.com/media/HTOz8bEWcAE3z9s.jpg"
           ]
         }
-      ],
-      "error": "GetXAPI error for @alsagertown_fc: Please try again shortly."
+      ]
     },
     {
       "name": "Allscott Heath",
@@ -1863,6 +1874,13 @@
         },
         {
           "text": "WELCOME BACK, JORD! 🤝\n\nJordon Jones returns home! Key part of our Invincibles 22/23 squad, he’s already featured &amp; settled straight back in. Quality, experience &amp; character — huge for us this season.\n\nGreat to have you back where you belong, Jord! 👊\n\nOnce a Dawley boy… https://t.co/iTvUCFUXVe",
+          "createdAt": "2026-09-30T14:56:59.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HTeRJcsWkAAgw-R.jpg"
+          ]
+        },
+        {
+          "text": "WELCOME BACK, JORD! 🤝\n\nJordon Jones returns home! Key part of our Invincibles 22/23 squad, he’s already featured &amp; settled straight back in. Quality, experience &amp; character — huge for us this season.\n\nGreat to have you back where you belong, Jord! 👊\n\nOnce a Dawley boy�� https://t.co/iTvUCFUXVe",
           "createdAt": "2026-09-30T14:56:59.000Z",
           "images": [
             "https://pbs.twimg.com/media/HTeRJcsWkAAgw-R.jpg"
