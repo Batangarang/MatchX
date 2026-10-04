@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-04T15:31:25.423Z",
-  "sinceDate": "2026-09-27T15:30:42.475Z",
+  "generatedAt": "2026-10-04T18:01:09.230Z",
+  "sinceDate": "2026-09-27T18:00:44.344Z",
   "clubs": [
     {
       "name": "Sandbach United",
@@ -171,6 +171,13 @@
       "name": "Eccleshall",
       "handle": "EccleshallFC",
       "posts": [
+        {
+          "text": "🚨UP NEXT🚨\n\nOn the road for the first cup game of our cup run that we have this month. \n\n🏟️ | The Creative Hut Stadium, \n⏱️ | 7:45pm. \n\n💙🦅\n\n#EccleshallFC https://t.co/OWEKhADI6J",
+          "createdAt": "2026-10-04T17:40:02.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HTzc03mX0AAnmLG.jpg"
+          ]
+        },
         {
           "text": "🚨PLAYER OF THE MATCH🚨\n\nFollowing yesterday’s draw to AFC Bridgnorth, the opposition have been voting. \n\nNicky Parker takes home yesterday’s man of the match award. \n\nNicky is proudly supported by MM Bagnall Refactories Ltd, D.O.K Groundwork’s, Andrew Edge and Kelly Edge. \n\n💙🦅 https://t.co/1eO3VLADT2",
           "createdAt": "2026-10-04T11:35:20.000Z",
@@ -724,13 +731,6 @@
           "createdAt": "2026-09-29T18:53:48.000Z",
           "images": [
             "https://pbs.twimg.com/media/HTZ9wqPWkAAcEZb.jpg"
-          ]
-        },
-        {
-          "text": "⚽️ October Fixtures! ⚽️\n\nA busy month awaits the Town boys now cup fixtures and a rearranged league one have been added. \n\nDon’t miss them! \n\n#UpTheTown https://t.co/tQN0URNu70",
-          "createdAt": "2026-09-27T17:46:57.000Z",
-          "images": [
-            "https://pbs.twimg.com/media/HTPbRyrXsAAdICS.jpg"
           ]
         }
       ]
@@ -1297,6 +1297,11 @@
           "images": []
         },
         {
+          "text": "��️31’ | A red card for Shawbury’s No.8 &amp; one of there’s on the bench.\n\n⚫️ SHA 0-0 BAR 🔵\n\n#UTV | #TheCheshireJuve | #FinoAllaFine",
+          "createdAt": "2026-10-03T14:32:48.000Z",
+          "images": []
+        },
+        {
           "text": "⏱️6’ | Good first 5 minutes from the lads, creating plenty of opportunities.\n\n⚫️ SHA 0-0 BAR 🔵\n\n#UTV | #TheCheshireJuve | #FinoAllaFine",
           "createdAt": "2026-10-03T14:05:44.000Z",
           "images": []
@@ -1416,6 +1421,16 @@
       "name": "Bilston Town",
       "handle": "bilstontownfc",
       "posts": [
+        {
+          "text": "This afternoon we hosted a charity match YOUR RWTC FC Vs RWT Staff at Queen Street \n\nRaising money for the Royal Wolverhampton NHS Trust Charity.\n\nThank you to everyone that attended the match & made donations on the day 💙\n\nThe match finished 5-1 to Your RWTC FC.\n\nThank you for choosing Queen Street to host your match 🫱🏼‍🫲🏻",
+          "createdAt": "2026-10-04T16:49:50.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HTzRSAYWoAAHwM6.jpg",
+            "https://pbs.twimg.com/media/HTzRTDuW4AAp9wD.jpg",
+            "https://pbs.twimg.com/media/HTzRULNXQAAxqNd.jpg",
+            "https://pbs.twimg.com/media/HTzRVCJWMAAWsoO.jpg"
+          ]
+        },
         {
           "text": "We look forward to welcoming you to Queen Street 🧡",
           "createdAt": "2026-10-04T09:23:17.000Z",
@@ -1720,8 +1735,7 @@
             "https://pbs.twimg.com/media/HTpWOjGXEAEpkfB.jpg"
           ]
         }
-      ],
-      "error": "GetXAPI error for @CheadleNomads: Please try again shortly."
+      ]
     },
     {
       "name": "Dawley Town",
