@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-03T23:55:30.752Z",
+  "generatedAt": "2026-10-04T00:01:14.225Z",
   "fixtures": [
     {
       "date": "Wednesday 7 October 2026",
@@ -1965,76 +1965,6 @@
       "date": "Saturday 17 April 2027",
       "home": "Wolverhampton Casuals",
       "away": "Cheadle Heath Nomads",
-      "kickoff": "15:00",
-      "postponed": false
-    },
-    {
-      "date": "Saturday 3 October 2026",
-      "home": "Brereton Social",
-      "away": "Widnes Town",
-      "kickoff": "15:00",
-      "postponed": false
-    },
-    {
-      "date": "Saturday 3 October 2026",
-      "home": "Cheadle Heath Nomads",
-      "away": "Telford Town",
-      "kickoff": "15:00",
-      "postponed": false
-    },
-    {
-      "date": "Saturday 3 October 2026",
-      "home": "Crewe",
-      "away": "Allscott Heath",
-      "kickoff": "15:00",
-      "postponed": false
-    },
-    {
-      "date": "Saturday 3 October 2026",
-      "home": "Dawley Town",
-      "away": "Stafford Town",
-      "kickoff": "15:00",
-      "postponed": false
-    },
-    {
-      "date": "Saturday 3 October 2026",
-      "home": "Eccleshall",
-      "away": "AFC Bridgnorth",
-      "kickoff": "15:00",
-      "postponed": false
-    },
-    {
-      "date": "Saturday 3 October 2026",
-      "home": "Foley Meir",
-      "away": "Bilston Town",
-      "kickoff": "15:00",
-      "postponed": false
-    },
-    {
-      "date": "Saturday 3 October 2026",
-      "home": "Market Drayton Town",
-      "away": "New Mills",
-      "kickoff": "15:00",
-      "postponed": false
-    },
-    {
-      "date": "Saturday 3 October 2026",
-      "home": "Sandbach United",
-      "away": "Alsager Town",
-      "kickoff": "15:00",
-      "postponed": false
-    },
-    {
-      "date": "Saturday 3 October 2026",
-      "home": "Shawbury United",
-      "away": "Barnton",
-      "kickoff": "15:00",
-      "postponed": false
-    },
-    {
-      "date": "Saturday 3 October 2026",
-      "home": "Wednesfield Community",
-      "away": "Wolverhampton Casuals",
       "kickoff": "15:00",
       "postponed": false
     }
