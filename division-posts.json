@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-04T03:01:14.304Z",
-  "sinceDate": "2026-09-27T03:00:49.321Z",
+  "generatedAt": "2026-10-04T05:31:21.944Z",
+  "sinceDate": "2026-09-27T05:30:37.656Z",
   "clubs": [
     {
       "name": "Sandbach United",
@@ -733,6 +733,11 @@
       "handle": "TelfordTownFC",
       "posts": [
         {
+          "text": "Meet some of the Away End 👊\n\nThe regulars who follow Telford Town home and away, through the highs, the lows and everything in between.\n\nNot the result we wanted today, but the support never stops. 💙⚽️\n\nUP THE TOWN 🔵🔴⚪️\n\n#TelfordTownFC #TheAwayEnd #AwayDay #UpTheTown #TheAms https://t.co/LDvGnvU2Fw",
+          "createdAt": "2026-10-04T05:02:24.000Z",
+          "images": []
+        },
+        {
           "text": "https://t.co/7CZDZPddi8",
           "createdAt": "2026-10-03T15:32:56.000Z",
           "images": [
@@ -755,6 +760,13 @@
         },
         {
           "text": "Your Telford Town starting lineup for today’s game away to Cheadle Heath Nomads.\n\nUP THE TOWN https://t.co/8ipcUiaRae",
+          "createdAt": "2026-10-03T13:06:23.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HTtUmOgWcAAXKqs.jpg"
+          ]
+        },
+        {
+          "text": "Your Telford Town starting lineup for today���s game away to Cheadle Heath Nomads.\n\nUP THE TOWN https://t.co/8ipcUiaRae",
           "createdAt": "2026-10-03T13:06:23.000Z",
           "images": [
             "https://pbs.twimg.com/media/HTtUmOgWcAAXKqs.jpg"
@@ -1148,7 +1160,8 @@
             "https://pbs.twimg.com/media/HTOz8bEWcAE3z9s.jpg"
           ]
         }
-      ]
+      ],
+      "error": "GetXAPI error for @alsagertown_fc: Please try again shortly."
     },
     {
       "name": "Allscott Heath",
