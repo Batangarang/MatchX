@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-04T18:01:09.230Z",
-  "sinceDate": "2026-09-27T18:00:44.344Z",
+  "generatedAt": "2026-10-04T20:31:39.918Z",
+  "sinceDate": "2026-09-27T20:30:55.731Z",
   "clubs": [
     {
       "name": "Sandbach United",
@@ -740,6 +740,20 @@
       "handle": "TelfordTownFC",
       "posts": [
         {
+          "text": "Photos from this weeks Telford v Cheadle Heath Nomads match are now available online from the legendary #gtphotography #Pitchero\nhttps://www.telfordtownfc.co.uk/photos/telford-v-cheadle-heath-nomads-1179780.html?utm_campaign=event_share&utm_medium=post&utm_source=twitter https://t.co/lo1KdCRigt",
+          "createdAt": "2026-10-04T19:39:27.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HTz4KJkWgAA-vQ7.jpg"
+          ]
+        },
+        {
+          "text": "MATCH REPORT: CHEADLE HEATH NOMADS 2–0 TELFORD TOWN #Pitchero\nhttps://www.telfordtownfc.co.uk/teams/277817/match-centre/1-20008252/report?utm_campaign=match_report&utm_medium=post&utm_source=twitter https://t.co/6c96f29LaS",
+          "createdAt": "2026-10-04T19:37:30.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HTz3tonW8AAARSv.jpg"
+          ]
+        },
+        {
           "text": "This afternoon game was cut short sadly due to a serious injury to one of the Shrewsbury Up n Comers players, all at Telford Town FC wish her a speedy recovery\n\nTelford Town FC Ladies 4 - 0 Shrewsbury Up &amp; Comers Ladies\n#TELSHR https://t.co/m6LQRl00Hb",
           "createdAt": "2026-10-04T15:18:15.000Z",
           "images": [
@@ -987,13 +1001,6 @@
           "images": [
             "https://pbs.twimg.com/media/HTaTiI9XsAAi3i8.jpg"
           ]
-        },
-        {
-          "text": "Coaches Voice 🗣️\n\nManager Kyle Wainwright speaks about the teams victory over Dawley Town, the use of the full squad and the desire to continue pushing forwards https://t.co/4ihg0VHQFz",
-          "createdAt": "2026-09-27T18:21:56.000Z",
-          "images": [
-            "https://pbs.twimg.com/media/HTPjSVvW0AABOkj.jpg"
-          ]
         }
       ]
     },
@@ -1187,6 +1194,13 @@
       "name": "Barnton",
       "handle": "barntonfc",
       "posts": [
+        {
+          "text": "𝗡𝗲𝘅𝘁 𝗨𝗽\n\n🏡 WE RETURN HOME! \n\nThe first of 4 games at the Creative Hut 🏟️\n\n📓 | Wed 7 Oct\n🏆 | Edward Case \n🆚️ | @EccleshallFC \n🕢 | 19:45 KO\n🏟️ | @CreativeHutEdu Stadium \n📍 | CW8 4LH\n💵 | Entrance £6 | Cons £4 | 18-21yrs £2 | U18 £1 | U5s Free\n\n#FinoAllaFine #UTV https://t.co/bEj1FFtet2",
+          "createdAt": "2026-10-04T19:27:03.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HTz1T2cWkAEl1vs.jpg"
+          ]
+        },
         {
           "text": "Good morning, Villagers! 👋🏻💙💛\n\n#UTV #FinoAllaFine https://t.co/dG0o0oSG1K",
           "createdAt": "2026-10-04T10:00:04.000Z",
@@ -2095,6 +2109,13 @@
       "handle": "WolvesCassies",
       "posts": [
         {
+          "text": "Dean's Sunday reflection following a dominant display on the road at Wednesfield yesterday 🟢 https://t.co/U8vXnTToTN",
+          "createdAt": "2026-10-04T18:04:12.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HTziRAaWYAAV0rF.jpg"
+          ]
+        },
+        {
           "text": "MATCH PREVIEW - Casuals face a quick turnaround, tomorrow night they travel to Cheadle Heath Nomads\nhttps://www.wolverhamptoncasualsfc.co.uk/news/match-preview-casuals-face-a-quick-turnaround-tomo-3001240.html https://t.co/VhDttbaVQg",
           "createdAt": "2026-10-04T12:19:57.000Z",
           "images": [
@@ -2608,7 +2629,8 @@
             "https://pbs.twimg.com/media/HTUCncMWYAA9PwG.jpg"
           ]
         }
-      ]
+      ],
+      "error": "GetXAPI error for @foley_fc: Please try again shortly."
     },
     {
       "name": "NWCFL (League Official)",
