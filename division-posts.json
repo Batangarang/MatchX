@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-05T01:31:06.855Z",
-  "sinceDate": "2026-09-28T01:30:37.768Z",
+  "generatedAt": "2026-10-05T04:01:34.968Z",
+  "sinceDate": "2026-09-28T04:00:50.735Z",
   "clubs": [
     {
       "name": "Sandbach United",
@@ -1606,7 +1606,8 @@
             "https://pbs.twimg.com/media/HTnU3BKWYAEO1mP.jpg"
           ]
         }
-      ]
+      ],
+      "error": "GetXAPI error for @AFCBridgnorth: Please try again shortly."
     },
     {
       "name": "Brereton Social",
