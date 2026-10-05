@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-05T14:01:24.691Z",
-  "sinceDate": "2026-09-28T14:00:53.512Z",
+  "generatedAt": "2026-10-05T16:31:26.353Z",
+  "sinceDate": "2026-09-28T16:30:39.975Z",
   "clubs": [
     {
       "name": "Sandbach United",
@@ -449,21 +449,6 @@
             "https://pbs.twimg.com/media/HTVN9TaWcAIZsyP.jpg",
             "https://pbs.twimg.com/media/HTVN9TjXIAAr-30.jpg"
           ]
-        },
-        {
-          "text": "Danny Glover and Nathan Wilkes assess today’s cup win. \n\nDanny is proudly supported by Gough Landscapes and D9 Academy and Nathan is supported by ABC Detailing and Vero Valore, as always we thank you for your continued support 🤝\n\n💙🦅\n\n#EccleshallFC https://t.co/LQpKG0i0cb",
-          "createdAt": "2026-09-28T16:11:02.000Z",
-          "images": []
-        },
-        {
-          "text": "Danny Glover and Nathan Wilkes assess today’s cup win. \n\nDanny is proudly supported by Gough Landscapes and D9 Academy and Nathan is supported by ABC Detailing and Vero Valore, as always we thank you for your continued support ����\n\n💙🦅\n\n#EccleshallFC https://t.co/LQpKG0i0cb",
-          "createdAt": "2026-09-28T16:11:02.000Z",
-          "images": []
-        },
-        {
-          "text": "Danny Glover and Nathan Wilkes assess today’s cup win. \n\nDanny is proudly supported by Gough Landscapes and D9 Academy and Nathan is supported by ABC Detailing and Vero Valore, as always we thank you for your continued support ���\n\n💙🦅\n\n#EccleshallFC https://t.co/LQpKG0i0cb",
-          "createdAt": "2026-09-28T16:11:02.000Z",
-          "images": []
         }
       ]
     },
@@ -605,7 +590,8 @@
             "https://pbs.twimg.com/media/HTUHLqUXcAA31rX.jpg"
           ]
         }
-      ]
+      ],
+      "error": "GetXAPI error for @NewMillsFC: Please try again shortly."
     },
     {
       "name": "Stafford Town",
@@ -662,6 +648,11 @@
         },
         {
           "text": "59 - Sub for Town \n\nScott Wilding is on for Callum Parker \n\n🟣 0-0 🔘",
+          "createdAt": "2026-10-03T15:17:58.000Z",
+          "images": []
+        },
+        {
+          "text": "59 - Sub for Town \n\nScott Wilding is on for Callum Parker \n\n���� 0-0 🔘",
           "createdAt": "2026-10-03T15:17:58.000Z",
           "images": []
         },
@@ -1804,6 +1795,14 @@
       "handle": "DawleyTownFC",
       "posts": [
         {
+          "text": "With 232 spectators on Saturday we had to ensure parking was policed correctly. For players, staff &amp; spectators it is crucial you adhere to the no parking signs &amp; road closure signs and ensure you DO NOT park on double yellows. We thank you all for Saturday. Long may it continue https://t.co/e82TprSbe8",
+          "createdAt": "2026-10-05T15:48:55.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HT4M_F3WMAAKefG.jpg",
+            "https://pbs.twimg.com/media/HT4M_GOWIAA_F0V.jpg"
+          ]
+        },
+        {
           "text": "What a weekend and few days for The Jockeys. Well and truly a new era we are about to embark on.\n\nMassive thanks to all our volunteers on Saturday, a huge crowd, from clubhouse to food shack, to emptying bins and putting out traffic control signs, everyone played their part 🩷🩵",
           "createdAt": "2026-10-05T08:45:18.000Z",
           "images": []
@@ -1986,6 +1985,11 @@
       "name": "Market Drayton Town",
       "handle": "MDTFC",
       "posts": [
+        {
+          "text": "👏🏽👏🏽👏🏽👏🏽",
+          "createdAt": "2026-10-05T15:51:39.000Z",
+          "images": []
+        },
         {
           "text": "Tomorrow night we make the short trip to face Telford Town in Round 1 of the TJ Vickers Premier Cup\n\nAdults £6\nConcession £4 \n11-16 £2 \nU11’s FREE \n\nCome and support the lads in what will be a great Derby cup match. 🔴⚪️ https://t.co/3kqn2LtWi8",
           "createdAt": "2026-10-05T08:16:01.000Z",
@@ -2699,13 +2703,6 @@
           "createdAt": "2026-09-29T11:05:15.000Z",
           "images": [
             "https://pbs.twimg.com/media/HTYShIAX0AEPYag.jpg"
-          ]
-        },
-        {
-          "text": "𝗡𝗘𝗫𝗧 𝗨𝗣 | 𝗨𝗧𝗧𝗢𝗫𝗘𝗧𝗘𝗥 𝗧𝗢𝗪𝗡 🏆❤️🖤\n\nAnother cup competition awaits as we head up the A50 tomorrow evening to face Uttoxeter Town in the Staffordshire Senior Cup.\n\nThe lads will be looking to bounce back from Saturday’s penalty shootout disappointment and get another cup journey underway.\n\nIf you’re making the trip, we’ll see you there! 👊\n\n🆚 @UttoxeterTownFC \n🏆 Staffordshire Senior Challenge Vase\n📍 Oldfields Sports Club\n📅 Tuesday 29th September\n🕢 7:45pm Kick-Off\n🎟️ Admission\nAdults £6 | Under 16s £3\n\n#UpTheFoley | #StaffordshireCountyCup | #NextMatch",
-          "createdAt": "2026-09-28T15:17:18.000Z",
-          "images": [
-            "https://pbs.twimg.com/media/HTUCncMWYAA9PwG.jpg"
           ]
         }
       ]
