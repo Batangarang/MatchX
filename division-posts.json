@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-05T06:31:09.686Z",
-  "sinceDate": "2026-09-28T06:30:40.389Z",
+  "generatedAt": "2026-10-05T09:01:42.932Z",
+  "sinceDate": "2026-09-28T09:00:53.062Z",
   "clubs": [
     {
       "name": "Sandbach United",
@@ -923,13 +923,6 @@
           "images": [
             "https://pbs.twimg.com/media/HTV5X_JWoAAOT43.jpg"
           ]
-        },
-        {
-          "text": "MAKING MEMORIES COUNT – THANK YOU TO OUR SPONSORS #Pitchero #afcbrignorth #macroncup #macron #penatlies #shootout #sponsor #advertise #thecup #football #nwcfl #upset\nhttps://www.telfordtownfc.co.uk/news/making-memories-count-thank-you-to-our-sponsors-3000162.html https://t.co/LJLUK0C0NZ",
-          "createdAt": "2026-09-28T08:19:25.000Z",
-          "images": [
-            "https://pbs.twimg.com/media/HTSi-QeWcAAgIPC.jpg"
-          ]
         }
       ]
     },
@@ -1116,13 +1109,6 @@
           "createdAt": "2026-10-02T07:13:22.000Z",
           "images": [
             "https://pbs.twimg.com/media/HTm6NP5XAAEgmgE.jpg"
-          ]
-        },
-        {
-          "text": "James Peake vs Sandbach Utd: \n\n- 1 clean sheet\n- 1 penalty shootout save\n- 1 penalty shootout (winning) goal https://t.co/6amt0sOVvk",
-          "createdAt": "2026-09-28T07:27:29.000Z",
-          "images": [
-            "https://pbs.twimg.com/media/HTSXE0AXkAAx3n_.jpg"
           ]
         }
       ]
@@ -1618,6 +1604,13 @@
       "handle": "breretonsocialf",
       "posts": [
         {
+          "text": "⚽️🔴⚪️NEXT GAME 🔴⚪️⚽️\n\nWe’re back in league action this Wednesday evening under the floodlights as Brereton Social FC welcome Wednesfield Community FC to the Red Lion Ground in the next battle for points.\n\n🏆 NWCL First Division South\n📅 Wednesday 7th October 2026\n⏰ 19:45 Kick-Off\n📍 Red Lion Ground, WS15 1ED\n🍻Clubhouse bar is open before,     during & after the game.\n\n🎟️ Admission:\nAdults — £6\nConcessions — £3\nU16s — £1\n\nBring the family, bring your mates, bring your neighbours and let’s continue with the fantastic support & get behind the Social! \n\nLet’s be the 12th man!\n\n#upthesocial 🔴⚪️",
+          "createdAt": "2026-10-05T06:39:00.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HT2PHYzXkAAGEzk.jpg"
+          ]
+        },
+        {
           "text": "Another disappointment, great first 20 and last 20, need a full 90 though. 1-2 @WidnesTownFC best of luck to them in their season and search for a new home, thoroughly decent folks @NWCFLScores",
           "createdAt": "2026-10-03T17:20:53.000Z",
           "images": []
@@ -1659,6 +1652,13 @@
       "name": "Cheadle Heath Nomads",
       "handle": "CheadleNomads",
       "posts": [
+        {
+          "text": "MATCH DAY\n\nWe’re back at home tonight as we welcome @WolvesCassies to the Ideal Building Systems Stadium for our Edward Case Cup clash under the lights\n\n🕒 17:45 PM KO\n🆚 @WolvesCassies \n📍  Ideal Building Systems Stadium, SK8 2ET\n🏆 Edward Case Cup\n🎟️ Adults £6 | Concessions £3\n\n#Wearenomads | @nwcfl | @NWCFLScores",
+          "createdAt": "2026-10-05T07:51:46.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HT2fxc9WYAAZrOw.jpg"
+          ]
+        },
         {
           "text": "🔜 NEXT UP\n\nNo rest for the Nomads! We’re back in cup action under the lights as we welcome @WolvesCassies to the Ideal Building Systems Stadium\n\n🕒 17:45 PM KO\n🆚 @WolvesCassies \n📍  Ideal Building Systems Stadium, SK8 2ET\n🏆 Edward Case Cup\n🎟️ Adults £6 | Concessions £3\n\n#Wearenomads | @nwcfl | @NWCFLScores",
           "createdAt": "2026-10-04T21:26:52.000Z",
@@ -1776,6 +1776,11 @@
       "name": "Dawley Town",
       "handle": "DawleyTownFC",
       "posts": [
+        {
+          "text": "What a weekend and few days for The Jockeys. Well and truly a new era we are about to embark on.\n\nMassive thanks to all our volunteers on Saturday, a huge crowd, from clubhouse to food shack, to emptying bins and putting out traffic control signs, everyone played their part 🩷🩵",
+          "createdAt": "2026-10-05T08:45:18.000Z",
+          "images": []
+        },
         {
           "text": "ATCHDAY ⚡\n🆚 @AFCBridgnorth — AWAY\n📅 Tue 06 Oct | ⏰ 19:45 KO\n📍 Crown Meadow, WV16 4HS\n🎟️ £7 / £4 / U12s FREE\n\nFirst away game under the lights 💡\nNew faces in the mix — this one should be a cracker!\n\nSafe travels to everyone making the trip. \n\n#DawleyTown #TheJockeys #NWCL https://t.co/bCXgqtpZMm",
           "createdAt": "2026-10-04T14:05:18.000Z",
@@ -2055,7 +2060,8 @@
             "https://pbs.twimg.com/media/HTZy_Q9WsAAxb5Y.jpg"
           ]
         }
-      ]
+      ],
+      "error": "GetXAPI error for @MDTFC: Please try again shortly."
     },
     {
       "name": "Shawbury United",
