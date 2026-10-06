@@ -1,26 +1,16 @@
 {
-  "scrapedAt": "2026-10-06T20:30:50.756Z",
+  "scrapedAt": "2026-10-06T21:30:55.691Z",
   "nextFixture": {
-    "date": "Tue 06/10/26",
-    "opposition": "Foley Meir",
-    "opponentUrl": "clubpage.php?id=898",
+    "date": "Sat 10/10/26",
+    "opposition": "Cheadle Heath Nomads",
+    "opponentUrl": "clubpage.php?id=713",
     "homeAway": "H",
-    "kickoff": "19:45",
+    "kickoff": "15:00",
     "score": null,
     "scorers": null,
-    "competitionNote": "The Edward Case Cup 1 S"
+    "competitionNote": null
   },
   "nextFixtures": [
-    {
-      "date": "Tue 06/10/26",
-      "opposition": "Foley Meir",
-      "opponentUrl": "clubpage.php?id=898",
-      "homeAway": "H",
-      "kickoff": "19:45",
-      "score": null,
-      "scorers": null,
-      "competitionNote": "The Edward Case Cup 1 S"
-    },
     {
       "date": "Sat 10/10/26",
       "opposition": "Cheadle Heath Nomads",
@@ -60,19 +50,39 @@
       "score": null,
       "scorers": null,
       "competitionNote": null
+    },
+    {
+      "date": "Sat 31/10/26",
+      "opposition": "Dawley Town",
+      "opponentUrl": "clubpage.php?id=635",
+      "homeAway": "A",
+      "kickoff": "15:00",
+      "score": null,
+      "scorers": null,
+      "competitionNote": null
     }
   ],
   "lastResult": {
-    "date": "Sat 03/10/26",
-    "opposition": "Alsager Town",
-    "opponentUrl": "clubpage.php?id=3",
+    "date": "Tue 06/10/26",
+    "opposition": "Foley Meir",
+    "opponentUrl": "clubpage.php?id=898",
     "homeAway": "H",
-    "kickoff": "15:00",
-    "score": "W 6-2",
-    "scorers": "Kyle Foley (2) Matthew Birchall (29) Kieran OConnell (55) Jack Finney (64) Saul Shotton (77) Max Williams (89)",
-    "competitionNote": null
+    "kickoff": "19:45",
+    "score": "W 4-1",
+    "scorers": "Max Williams (9) Joshua Fowles (11) Kyle Foley (31) Matthew Birchall (88)",
+    "competitionNote": "The Edward Case Cup 1 S"
   },
   "lastResults": [
+    {
+      "date": "Tue 06/10/26",
+      "opposition": "Foley Meir",
+      "opponentUrl": "clubpage.php?id=898",
+      "homeAway": "H",
+      "kickoff": "19:45",
+      "score": "W 4-1",
+      "scorers": "Max Williams (9) Joshua Fowles (11) Kyle Foley (31) Matthew Birchall (88)",
+      "competitionNote": "The Edward Case Cup 1 S"
+    },
     {
       "date": "Sat 03/10/26",
       "opposition": "Alsager Town",
@@ -92,16 +102,6 @@
       "score": "LOST",
       "scorers": null,
       "competitionNote": "0-0 after 90 mins, Alsager Town won 2-4 on pens"
-    },
-    {
-      "date": "Sat 19/09/26",
-      "opposition": "Eccleshall",
-      "opponentUrl": "clubpage.php?id=30",
-      "homeAway": "H",
-      "kickoff": "15:00",
-      "score": "W 2-0",
-      "scorers": "Joshua Fowles (12) Kyle Foley (86)",
-      "competitionNote": null
     }
   ],
   "allFixtures": [
@@ -241,8 +241,8 @@
       "opponentUrl": "clubpage.php?id=898",
       "homeAway": "H",
       "kickoff": "19:45",
-      "score": null,
-      "scorers": null,
+      "score": "W 4-1",
+      "scorers": "Max Williams (9) Joshua Fowles (11) Kyle Foley (31) Matthew Birchall (88)",
       "competitionNote": "The Edward Case Cup 1 S"
     },
     {
