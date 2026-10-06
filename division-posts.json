@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-06T04:31:25.649Z",
-  "sinceDate": "2026-09-29T04:30:41.506Z",
+  "generatedAt": "2026-10-06T07:01:23.529Z",
+  "sinceDate": "2026-09-29T07:00:56.634Z",
   "clubs": [
     {
       "name": "Sandbach United",
@@ -35,6 +35,11 @@
         },
         {
           "text": "🔵⚪️ v 🔴🔴\n\nSandbach United v Alsager Town\n\nJordan Stafford replaces Mitchell Nolan\n\n@alsagertown_fc \n\n5 2\n\n86 mins gone",
+          "createdAt": "2026-10-03T15:42:17.000Z",
+          "images": []
+        },
+        {
+          "text": "🔵⚪️ v ���🔴\n\nSandbach United v Alsager Town\n\nJordan Stafford replaces Mitchell Nolan\n\n@alsagertown_fc \n\n5 2\n\n86 mins gone",
           "createdAt": "2026-10-03T15:42:17.000Z",
           "images": []
         },
@@ -454,6 +459,13 @@
       "handle": "NewMillsFC",
       "posts": [
         {
+          "text": "MATCH DAY \n\nTonight we take on @GlossopNorthEnd in the @DerbyshireFA Senior Cup at Surrey Street, under the lights for a place in the next round \n\nAs always your support would be greatly appreciated \n\n#UptheMillers #Derbyday https://t.co/4C0aa8rF6k",
+          "createdAt": "2026-10-06T06:49:19.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HT7bEOOWcAAj5Nc.jpg"
+          ]
+        },
+        {
           "text": "NEXT UP DERBYSHIRE SENIOR CUP\n\nOur attention now turns to a massive local derby in the Derbyshire cup as we travel to face @GlossopNorthEnd \n\n📅 Tuesday 6th Oct\n⏰ 7:45pm\n📍 Asgard Engineering Stadium SK13 8GG\n🎟️ Adults £10 | Concessions £6 | U16s £2\n\n#UptheMillers @DerbyshireFA",
           "createdAt": "2026-10-05T06:21:30.000Z",
           "images": []
@@ -691,13 +703,19 @@
             "https://pbs.twimg.com/media/HTZ9wqPWkAAcEZb.jpg"
           ]
         }
-      ],
-      "error": "GetXAPI error for @StaffordTown1st: Please try again shortly."
+      ]
     },
     {
       "name": "Telford Town",
       "handle": "TelfordTownFC",
       "posts": [
+        {
+          "text": "🔵 MATCHDAY 🔵\n\nTONIGHT we take on Market Drayton Town back on home soil.\n\n📅 Tuesday 6th October\n⏰ 7.45pm KO\n📍 Lionheart Security Services Stadium, Telford, TF2 6BQ\n\nCome on Town! 💙🤍❤️\n\n#TelfordTown #TelfordTownFC #Matchday #UpTheTown #TheAms https://t.co/6BvreLVpgd",
+          "createdAt": "2026-10-06T05:02:05.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HT7CaLLXIAASlTU.jpg"
+          ]
+        },
         {
           "text": "TOMORROW we take on Market Drayton Town back on home soil for the TJ Vickers Cup!\n\n📅 Tuesday 6th October\n⏰ 7.45pm KO\n📍 Lionheart Security Services Stadium, Telford, TF2 6BQ\n\nWho’s coming to cheer on the boys? 💙🤍❤️\n\n#TelfordTown #TelfordTownFC #Matchday #UpTheTown #TheAms https://t.co/PzlYp2k4Ui",
           "createdAt": "2026-10-05T13:36:53.000Z",
