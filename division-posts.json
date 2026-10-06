@@ -1,11 +1,91 @@
 {
-  "generatedAt": "2026-10-06T19:31:30.263Z",
-  "sinceDate": "2026-09-29T19:30:44.898Z",
+  "generatedAt": "2026-10-06T22:01:54.004Z",
+  "sinceDate": "2026-09-29T22:00:51.289Z",
   "clubs": [
     {
       "name": "Sandbach United",
       "handle": "SandbachFC_1st",
       "posts": [
+        {
+          "text": "Dec and JKD give their thoughts on tonight’s cup win. https://t.co/vkOI9OSqSl",
+          "createdAt": "2026-10-06T21:38:25.000Z",
+          "images": []
+        },
+        {
+          "text": "Thank you to Foley Meir for the game best of luck in the vase Saturday",
+          "createdAt": "2026-10-06T20:42:09.000Z",
+          "images": []
+        },
+        {
+          "text": "FT\nSandbach 4\nFoley Meir 1\n\nGoals from \nMax Williams\nJoshua Fowles\nKyle Foley\nMatthew Birchall\n\nTonight’s attendance 85",
+          "createdAt": "2026-10-06T20:41:37.000Z",
+          "images": []
+        },
+        {
+          "text": "88’ \nA delightful goal from Birchall who receives the ball 25yards out in the centre of the pitch and cool as you like picks out the bottom right corner. Precision strike. \n\n4-1 https://t.co/7O2Jm5aAR9",
+          "createdAt": "2026-10-06T20:33:34.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HT-XuOrWgAAo7w1.jpg"
+          ]
+        },
+        {
+          "text": "77’ \n\nFoley with a good phase work the ball forward nicely and get the reward \n\n3-1",
+          "createdAt": "2026-10-06T20:21:21.000Z",
+          "images": []
+        },
+        {
+          "text": "3-0 \nSandbach dominating this game now https://t.co/yS7BRHdhmc",
+          "createdAt": "2026-10-06T20:12:51.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HT-S-60W0AELB4C.jpg"
+          ]
+        },
+        {
+          "text": "Sub \n\nFowles off\nBirchall on",
+          "createdAt": "2026-10-06T20:09:00.000Z",
+          "images": []
+        },
+        {
+          "text": "Sub\n\nBedford off\nMitch Nolan on",
+          "createdAt": "2026-10-06T20:05:57.000Z",
+          "images": []
+        },
+        {
+          "text": "Second half begins with Sandbach 3-0 up and one change Hatton off Pollard on",
+          "createdAt": "2026-10-06T19:49:15.000Z",
+          "images": []
+        },
+        {
+          "text": "Sub\n\nO’Connell off\nBavington on",
+          "createdAt": "2026-10-06T19:26:13.000Z",
+          "images": []
+        },
+        {
+          "text": "11’ a clean strike and finish from Fowles through the middle makes it 2-0 https://t.co/olFuQqK2tw",
+          "createdAt": "2026-10-06T18:57:10.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HT-BqJ2W0AAE5G3.jpg"
+          ]
+        },
+        {
+          "text": "9’ A beautiful in swinging corner from Cope troubles the crowded keeper and Williams is there to stick it in https://t.co/hc68M9cJnP",
+          "createdAt": "2026-10-06T18:56:23.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HT-Bez0WcAABZ-1.jpg"
+          ]
+        },
+        {
+          "text": "The heavens opened for 30 mins prior to KO so it could make the pitch quick",
+          "createdAt": "2026-10-06T18:49:45.000Z",
+          "images": []
+        },
+        {
+          "text": "Plenty of change to the starting XI tonight https://t.co/3kdBiusBGT",
+          "createdAt": "2026-10-06T18:49:11.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HT9_1UbWcAERG9M.jpg"
+          ]
+        },
         {
           "text": "Great performance from The Bach as they smash local rivals from South Cheshire #fearless with a 6-2 win, it was Sandbach firing the bullets today, and the smoking gun was hot 🔥 https://t.co/hMVOUz6jnA",
           "createdAt": "2026-10-03T17:12:45.000Z",
@@ -170,8 +250,7 @@
             "https://pbs.twimg.com/media/HTeW92mXEAAJG_x.jpg"
           ]
         }
-      ],
-      "error": "GetXAPI error for @SandbachFC_1st: Please try again shortly."
+      ]
     },
     {
       "name": "Eccleshall",
@@ -463,6 +542,21 @@
       "handle": "NewMillsFC",
       "posts": [
         {
+          "text": "Glossop 2 - New Mills 1",
+          "createdAt": "2026-10-06T20:26:17.000Z",
+          "images": []
+        },
+        {
+          "text": "Glossop have equalised 1-1",
+          "createdAt": "2026-10-06T20:20:43.000Z",
+          "images": []
+        },
+        {
+          "text": "Half time  Glossop 0 New Mills 1",
+          "createdAt": "2026-10-06T19:33:27.000Z",
+          "images": []
+        },
+        {
           "text": "GOAL! \nAkim samms 1-0",
           "createdAt": "2026-10-06T19:20:20.000Z",
           "images": []
@@ -708,6 +802,34 @@
       "name": "Telford Town",
       "handle": "TelfordTownFC",
       "posts": [
+        {
+          "text": "Tyrone Ofori’s strike sees us through to the next round whilst Evan Brooks-Davies made history as the youngest ever player to play for the club at 16 years and 6 days old.\n\nUP THE TOWN\n\nFULL TIME: Telford Town 1 - 0 Market Drayton Town\n#FIRMAR #Pitchero https://t.co/nhNaoEDCpO",
+          "createdAt": "2026-10-06T20:42:46.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HT-Z0FAW4AAX6Cb.jpg"
+          ]
+        },
+        {
+          "text": "EVAN BROOKS-DAVIES BECOMES TELFORD TOWN’S YOUNGEST-EVER PLAYER #Pitchero #debut #pathway #progression\nhttps://www.telfordtownfc.co.uk/news/evan-brooks-davies-becomes-telford-towns-youngest--3001580.html https://t.co/hyHZURwnu1",
+          "createdAt": "2026-10-06T20:18:58.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HT-UYmkWgAAWMG-.jpg"
+          ]
+        },
+        {
+          "text": "53': Tyrone Ofori scores for Telford Town 🙌\n#FIRMAR #Pitchero https://t.co/nfIzudcj37",
+          "createdAt": "2026-10-06T19:56:40.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HT-PRlFWAAANcUi.jpg"
+          ]
+        },
+        {
+          "text": "HALF TIME: First Team 0 - 0 Market Drayton Town\n#FIRMAR #Pitchero https://t.co/ZjDNn84FG8",
+          "createdAt": "2026-10-06T19:36:32.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HT-Kq68XAAIOfYU.jpg"
+          ]
+        },
         {
           "text": "Your Telford Town starting lineup for tonight’s TJ Vickers Premier Cup 1st round game with Market Drayton Town.\n\nUP THE TOWN https://t.co/l0LUaxwWpt",
           "createdAt": "2026-10-06T18:26:15.000Z",
@@ -1010,13 +1132,6 @@
           "text": "It’s Derby Day -1 ⚔️\n\nAll in together. One club. One family. \n\nWenny Ay We! 🔴 https://t.co/9AB6YGniko",
           "createdAt": "2026-10-02T18:36:57.000Z",
           "images": []
-        },
-        {
-          "text": "🔴🔴🔴 NEXT UP ⚫️⚫️⚫️\n\nIts as local as derbies get on Saturday as we host Wolverhampton Casuals in the NWCFL ⚔️\n\n📆 03/10/26\n⏰ 3:00pm KO \n🏟️ Cottage Ground\n💰 £8 Adults, £5 Concessions \n\nBang the drum and support the lads! 🥁\n\n#explore #nwcfl #derbyday https://t.co/oVIBo7ZvZu",
-          "createdAt": "2026-09-29T20:28:56.000Z",
-          "images": [
-            "https://pbs.twimg.com/media/HTaTiI9XsAAi3i8.jpg"
-          ]
         }
       ]
     },
@@ -1125,12 +1240,48 @@
             "https://pbs.twimg.com/media/HTm6NP5XAAEgmgE.jpg"
           ]
         }
-      ]
+      ],
+      "error": "GetXAPI error for @alsagertown_fc: Please try again shortly."
     },
     {
       "name": "Allscott Heath",
       "handle": "AllscottHeathFC",
       "posts": [
+        {
+          "text": "FULL TIME: Allscott Heath 1 - 2 Shawbury United\n#ALLSHA #Pitchero https://t.co/rkAkINpZeJ",
+          "createdAt": "2026-10-06T20:41:25.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HT-ZhabWoAAm188.jpg"
+          ]
+        },
+        {
+          "text": "78': Liam Parkinson scores for Allscott Heath 🙌\n#ALLSHA #Pitchero https://t.co/hi8tOKIxKp",
+          "createdAt": "2026-10-06T20:22:35.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HT-VNj2WYAAJT9n.jpg"
+          ]
+        },
+        {
+          "text": "68': Goal for Shawbury United\n#ALLSHA #Pitchero https://t.co/RQPvClXUD0",
+          "createdAt": "2026-10-06T20:14:12.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HT-TSqxW8AAwbIs.jpg"
+          ]
+        },
+        {
+          "text": "65': Goal for Shawbury United\n#ALLSHA #Pitchero https://t.co/Q2xHnx0gpa",
+          "createdAt": "2026-10-06T20:11:50.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HT-SwLuWUAAMm9E.jpg"
+          ]
+        },
+        {
+          "text": "HALF TIME: Allscott Heath 0 - 0 Shawbury United\n#ALLSHA #Pitchero https://t.co/zzW4ozjC8g",
+          "createdAt": "2026-10-06T19:47:28.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HT-NK7jWYAAMY0b.jpg"
+          ]
+        },
         {
           "text": "🟢⚫ MATCHDAY 🟢⚫\n\nCup action under the lights!\n\nThe Monners are ready to go as we take on @shawburyutd in the Shropshire County Cup at the Peter Ford Stadium\n\nDon't forget we have fixture pin badges available get yours whilst we have them \n\n🟢⚫ #TheMonners https://t.co/3mAtjeRIOC",
           "createdAt": "2026-10-06T15:54:36.000Z",
@@ -1199,6 +1350,13 @@
         },
         {
           "text": "🟢⚫ OUR STARTING XI ��🟢\nHere’s how the Monners line up today! \n\nTime to get the job done. \n\n#TheMonners #UpTheMonners 🟢⚫ https://t.co/puQyLp6hQd",
+          "createdAt": "2026-10-03T13:56:44.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HTtgIE0W4AAIu__.jpg"
+          ]
+        },
+        {
+          "text": "🟢��� OUR STARTING XI ⚫🟢\nHere’s how the Monners line up today! \n\nTime to get the job done. \n\n#TheMonners #UpTheMonners 🟢⚫ https://t.co/puQyLp6hQd",
           "createdAt": "2026-10-03T13:56:44.000Z",
           "images": [
             "https://pbs.twimg.com/media/HTtgIE0W4AAIu__.jpg"
@@ -1569,13 +1727,6 @@
           "createdAt": "2026-10-01T06:58:11.000Z",
           "images": [
             "https://pbs.twimg.com/media/HThtJeTW0AA50Bu.jpg"
-          ]
-        },
-        {
-          "text": "We also have another steel birthday today too, happy 25th birthday @CallumBright16 🎂 https://t.co/MCN4cTHtcj",
-          "createdAt": "2026-09-29T21:13:14.000Z",
-          "images": [
-            "https://pbs.twimg.com/media/HTadrVFXQAIwTiZ.jpg"
           ]
         }
       ]
@@ -2097,12 +2248,90 @@
             "https://pbs.twimg.com/media/HTdMlF0XcAARHxz.jpg"
           ]
         }
-      ]
+      ],
+      "error": "GetXAPI error for @DawleyTownFC: Please try again shortly."
     },
     {
       "name": "Market Drayton Town",
       "handle": "MDTFC",
       "posts": [
+        {
+          "text": "FULL TIME \n\nTelford Town 1 - 0 Market Drayton \n\nDrayton are out of the TJ Vickers https://t.co/LJUuBV4GYc",
+          "createdAt": "2026-10-06T20:39:19.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HT-ZCeUWoAAwwnm.jpg"
+          ]
+        },
+        {
+          "text": "Drayton  down to 10 men as Maginness goes off with what looks like his hamstring \n\nWe’ve made all our subs",
+          "createdAt": "2026-10-06T20:31:56.000Z",
+          "images": []
+        },
+        {
+          "text": "82’ \n\nDrayton subs \nOFF OAKLEY \nON HIGGINS",
+          "createdAt": "2026-10-06T20:24:18.000Z",
+          "images": []
+        },
+        {
+          "text": "81’\nTELFORD TOWN SUBS \n\nOFF 9 \nOn 15",
+          "createdAt": "2026-10-06T20:22:55.000Z",
+          "images": []
+        },
+        {
+          "text": "75’ another good save by Rowley \n\n🔵🔵1-0⚪️⚪️",
+          "createdAt": "2026-10-06T20:18:10.000Z",
+          "images": []
+        },
+        {
+          "text": "73’ \n\nDRayton subs \n\nOFF \nKNOTT \nSUTTON\n\nON\nHOLT\nBUSH",
+          "createdAt": "2026-10-06T20:15:03.000Z",
+          "images": []
+        },
+        {
+          "text": "63’ Manhertz puts a great ball across the box … Maginness can’t steer it home. \n\n🔵🔵1-0⚪️⚪️",
+          "createdAt": "2026-10-06T20:04:45.000Z",
+          "images": []
+        },
+        {
+          "text": "60’ Raine has a good chance but misses the ball. A good chance infront of goal there. \n\n🔵🔵1-0⚪️⚪️",
+          "createdAt": "2026-10-06T20:02:39.000Z",
+          "images": []
+        },
+        {
+          "text": "58’ \n\nSubs for Telford Town\n\nOff 5 &amp; 10 \nON 14 &amp; 12\n\nSubs for Drayton \n\nOff Griffiths &amp; Brown \n\nON Gallet &amp; Raine",
+          "createdAt": "2026-10-06T20:01:11.000Z",
+          "images": []
+        },
+        {
+          "text": "52’ \nGOAL for Telford Town and it’s their Number 9 Ofori",
+          "createdAt": "2026-10-06T19:54:48.000Z",
+          "images": []
+        },
+        {
+          "text": "49’ Another corner for Drayton … Oakley swings it in and caught By the keeper \n\n🔵🔵0-0⚪️⚪️",
+          "createdAt": "2026-10-06T19:51:12.000Z",
+          "images": []
+        },
+        {
+          "text": "48’ Corner for Drayton taken by Oakley and it’s punched clear \n\n🔵🔵0-0⚪️⚪️",
+          "createdAt": "2026-10-06T19:50:19.000Z",
+          "images": []
+        },
+        {
+          "text": "Second Half is underway \n\n🔵🔵⚪️⚪️",
+          "createdAt": "2026-10-06T19:46:58.000Z",
+          "images": []
+        },
+        {
+          "text": "HALF TIME \n\nTELFORD TOWN 0-0 MARKET DRAYTON TOWN \n\nTelford Town have had 3 very good chances whilst Drayton have had the best chance of the half with a header from a few yards out over the bar.",
+          "createdAt": "2026-10-06T19:35:33.000Z",
+          "images": []
+        },
+        {
+          "text": "44+1  Manhertz loops a ball into the box, Oultram is Uncontested and heads over from 5yards out … arguably the best chance of the game \n\n🔵🔵 0-0 ⚪️⚪️",
+          "createdAt": "2026-10-06T19:33:29.000Z",
+          "images": []
+        },
         {
           "text": "42’ Maginness plays in Oulty who’s goes 1v1 with Telford Towns goalkeeper and puts wide \n\n🔵🔵 0-0 ⚪️⚪️",
           "createdAt": "2026-10-06T19:27:50.000Z",
@@ -2280,6 +2509,32 @@
       "name": "Shawbury United",
       "handle": "shawburyutd",
       "posts": [
+        {
+          "text": "FT\nAllscott Heath FC 1-2 SUFC https://t.co/Qj87Jg3MJ1",
+          "createdAt": "2026-10-06T20:50:39.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HT-boZGX0AApKh4.jpg"
+          ]
+        },
+        {
+          "text": "78’ GOAL!\n\n🟢🟢1-2🔵⚪️\n\nAllscott Heath FC",
+          "createdAt": "2026-10-06T20:23:07.000Z",
+          "images": []
+        },
+        {
+          "text": "73’ GOAL!!! It’s 2!! Bloor doubles our lead!\n\n🟢🟢0-2🔵⚪️\n\n@AllscottHeathFC https://t.co/3t3BF3g4tE",
+          "createdAt": "2026-10-06T20:15:32.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HT-Tl-7W4AAw4uQ.jpg"
+          ]
+        },
+        {
+          "text": "71’ GOAL!! Hess gives us the lead! \n\n🟢🟢0-1🔵⚪️\n\n@AllscottHeathFC https://t.co/yWx0ZpQZI4",
+          "createdAt": "2026-10-06T20:13:33.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HT-TJBHXEAAD_U8.jpg"
+          ]
+        },
         {
           "text": "TOMORROW!\n\nMidweek cup action!\nFirst Team travel to take on @AllscottHeathFC in the TJ Vickers Premier Cup.\n\n🗓️ Tues 6th Oct\n⏰ 7:45pm KO\n📍 The Peter Ford Stadium, TF6 5EQ\n\nA huge thank you to our sponsors, Embassy Joinery &amp; Refurbishment Ltd, for their continuous support! https://t.co/hi2cmbBNC5",
           "createdAt": "2026-10-05T12:06:37.000Z",
@@ -2718,6 +2973,42 @@
       "handle": "foley_fc",
       "posts": [
         {
+          "text": "We bow out the cup.\n\nDown to 10 men since the 25th minute, but the lads kept going, we move onto  another cup fixture Saturday.\n\nWe wish @SandbachFC_1st all the best in the next round. https://t.co/ff0Bw8gpFK",
+          "createdAt": "2026-10-06T20:37:29.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HT-Yn0HXEAA6p_9.jpg"
+          ]
+        },
+        {
+          "text": "88’ | Goal Sandbach \n\nThe hosts add a 4th late on",
+          "createdAt": "2026-10-06T20:31:37.000Z",
+          "images": []
+        },
+        {
+          "text": "GOAL!\n\nWardy pulls one back for us. https://t.co/76wao9ED8p",
+          "createdAt": "2026-10-06T20:24:53.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HT-Vu6lXEAAoCTe.jpg"
+          ]
+        },
+        {
+          "text": "51’ | Sandbach’s number 2 gets a yellow for diving.\n\n🔵⚪️3-0💛🩶",
+          "createdAt": "2026-10-06T19:55:23.000Z",
+          "images": []
+        },
+        {
+          "text": "Back out for the second half",
+          "createdAt": "2026-10-06T19:48:50.000Z",
+          "images": []
+        },
+        {
+          "text": "Behind at the break. https://t.co/WeU44TQba6",
+          "createdAt": "2026-10-06T19:35:56.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HT-KiEPXkAE0rMy.jpg"
+          ]
+        },
+        {
           "text": "35’ | Robbo gets a yellow card for a foul.\n\n🔵⚪️3-0💛￼🩶",
           "createdAt": "2026-10-06T19:20:23.000Z",
           "images": []
@@ -2890,94 +3181,6 @@
           "images": [
             "https://pbs.twimg.com/media/HTfBc2nX0AAJXaO.jpg"
           ]
-        },
-        {
-          "text": "🔥 MAN OF THE MATCH 🔥\n\nA disappointing night as we bow out of the cup on penalties, but another outstanding performance from...\n\n👏 Connor Withers 👏\nUp and down the pitch all night, showing his pace, determination and quality both defensively and going forward. Gave absolutely everything for the shirt! 💪⚽\n\n🚖 Sponsored by S.A.S. Travel\n\n🔴⚫ #UpTheFoley",
-          "createdAt": "2026-09-29T21:14:39.000Z",
-          "images": [
-            "https://pbs.twimg.com/media/HTad_9XWAAAPt-l.jpg"
-          ]
-        },
-        {
-          "text": "���� MAN OF THE MATCH 🔥\n\nA disappointing night as we bow out of the cup on penalties, but another outstanding performance from...\n\n👏 Connor Withers 👏\nUp and down the pitch all night, showing his pace, determination and quality both defensively and going forward. Gave absolutely everything for the shirt! 💪⚽\n\n🚖 Sponsored by S.A.S. Travel\n\n🔴⚫ #UpTheFoley",
-          "createdAt": "2026-09-29T21:14:39.000Z",
-          "images": [
-            "https://pbs.twimg.com/media/HTad_9XWAAAPt-l.jpg"
-          ]
-        },
-        {
-          "text": "We bow out on penalties again.\n\nSome very good chances for us to take the lead during the second half but a quality save from their keeper saw them to penalties.\n\nWe go again Saturday.\n\nWe wish @UttoxeterTownFC all the best in the next round. https://t.co/reaZOlSFge",
-          "createdAt": "2026-09-29T20:54:51.000Z",
-          "images": [
-            "https://pbs.twimg.com/media/HTaZd0hW4AAy9nF.jpg"
-          ]
-        },
-        {
-          "text": "🟢🔵✅✅✅✅\n❤️🖤❌✅❌✅",
-          "createdAt": "2026-09-29T20:50:34.000Z",
-          "images": []
-        },
-        {
-          "text": "🟢🔵✅✅✅\n❤️🖤❌✅❌✅",
-          "createdAt": "2026-09-29T20:49:48.000Z",
-          "images": []
-        },
-        {
-          "text": "🟢🔵✅✅✅\n❤️🖤❌✅❌",
-          "createdAt": "2026-09-29T20:49:10.000Z",
-          "images": []
-        },
-        {
-          "text": "🟢🔵✅✅\n❤️🖤❌✅❌",
-          "createdAt": "2026-09-29T20:48:33.000Z",
-          "images": []
-        },
-        {
-          "text": "🟢🔵✅✅\n❤️🖤❌✅",
-          "createdAt": "2026-09-29T20:47:46.000Z",
-          "images": []
-        },
-        {
-          "text": "🟢🔵✅\n❤️🖤❌✅",
-          "createdAt": "2026-09-29T20:47:12.000Z",
-          "images": []
-        },
-        {
-          "text": "🟢🔵✅\n❤️🖤❌",
-          "createdAt": "2026-09-29T20:46:28.000Z",
-          "images": []
-        },
-        {
-          "text": "🟢🔵\n❤️🖤❌",
-          "createdAt": "2026-09-29T20:45:43.000Z",
-          "images": []
-        },
-        {
-          "text": "It ends 0-0 penalties again!",
-          "createdAt": "2026-09-29T20:44:50.000Z",
-          "images": []
-        },
-        {
-          "text": "66’ | Uttoxeters number 4 gets a yellow for descent.\n\n🟢🔵0-0❤️🖤",
-          "createdAt": "2026-09-29T20:13:23.000Z",
-          "images": []
-        },
-        {
-          "text": "66’ | Uttoxeters number 4 gets a yellow for descent.\n\n🟢���0-0❤️🖤",
-          "createdAt": "2026-09-29T20:13:23.000Z",
-          "images": []
-        },
-        {
-          "text": "And we’re back out for the second half.",
-          "createdAt": "2026-09-29T19:51:30.000Z",
-          "images": []
-        },
-        {
-          "text": "Level at the break in Uttoxeter.\n\nBoth sides even so far with both creating some chances. https://t.co/sxamN0cqbN",
-          "createdAt": "2026-09-29T19:43:18.000Z",
-          "images": [
-            "https://pbs.twimg.com/media/HTaJF1GXMAE1VnJ.jpg"
-          ]
         }
       ]
     },
@@ -2985,6 +3188,53 @@
       "name": "NWCFL (League Official)",
       "handle": "nwcfl",
       "posts": [
+        {
+          "text": "Attendance 751",
+          "createdAt": "2026-10-06T21:03:47.000Z",
+          "images": []
+        },
+        {
+          "text": "County Cups https://t.co/K7gztnJJ7s",
+          "createdAt": "2026-10-06T21:02:11.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HT-eRW8XcAA07Xl.jpg",
+            "https://pbs.twimg.com/media/HT-eRXFXsAE0uXs.jpg"
+          ]
+        },
+        {
+          "text": "Edward Case Cup Results https://t.co/XxMXggNL4G",
+          "createdAt": "2026-10-06T21:01:57.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HT-eOGuXoAA3ytA.jpg",
+            "https://pbs.twimg.com/media/HT-eOG9WcAADTnN.jpg"
+          ]
+        },
+        {
+          "text": "Prem Update https://t.co/CxG7na7ko1",
+          "createdAt": "2026-10-06T21:01:39.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HT-eJbIXwAAB238.jpg",
+            "https://pbs.twimg.com/media/HT-eJbFXIAEfu54.jpg"
+          ]
+        },
+        {
+          "text": "Half times (2/2)\nNo updates from @AllscottHeathFC v @shawburyutd https://t.co/YJVZ3fgON2",
+          "createdAt": "2026-10-06T19:41:54.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HT-L1RtWIAAfMN3.jpg",
+            "https://pbs.twimg.com/media/HT-L1RsXQAAIlAx.jpg"
+          ]
+        },
+        {
+          "text": "Half Times (1/2) https://t.co/slC62EfvB2",
+          "createdAt": "2026-10-06T19:41:20.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HT-Lw-lXEAIZPea.jpg",
+            "https://pbs.twimg.com/media/HT-Lw-pXMAAby_3.jpg",
+            "https://pbs.twimg.com/media/HT-Lw-dXcAAzifx.jpg",
+            "https://pbs.twimg.com/media/HT-Lw-uXQAAtJ_l.jpg"
+          ]
+        },
         {
           "text": "One Derbyshire Senior Cup tie as Prem takes on North One and Six teams from the South Division are in TJ Vickers Cup action. https://t.co/a4FHAt0y4i",
           "createdAt": "2026-10-06T10:02:00.000Z",
@@ -3151,39 +3401,6 @@
           "text": "This week's stats report is now on the league website. Includes:\n@thorntonfc @EccleshallFC\n@EuxtonVillaFC @SandbachFC_1st\n@alsagertown_fc\n@AFCLiverpool @StaffordTown1st @LongridgeTownFC\n\nGoal heroes and penalty kings. \n\nhttps://nwcfl.com/news-articles.php?id=10237#google_vignette",
           "createdAt": "2026-09-30T09:30:21.000Z",
           "images": []
-        },
-        {
-          "text": "Staffs Sen Cup https://t.co/mZBvY4fRhC",
-          "createdAt": "2026-09-29T21:00:05.000Z",
-          "images": [
-            "https://pbs.twimg.com/media/HTaapyzXsAACGoN.jpg"
-          ]
-        },
-        {
-          "text": "North Update https://t.co/yr7BVGk3A6",
-          "createdAt": "2026-09-29T20:59:44.000Z",
-          "images": [
-            "https://pbs.twimg.com/media/HTaalSiX0AIvpty.jpg",
-            "https://pbs.twimg.com/media/HTaalSlXsAI1kCj.jpg"
-          ]
-        },
-        {
-          "text": "Prem Update https://t.co/9P6xXV5xr5",
-          "createdAt": "2026-09-29T20:59:27.000Z",
-          "images": [
-            "https://pbs.twimg.com/media/HTaaghJWcAAH4Yt.jpg",
-            "https://pbs.twimg.com/media/HTaaggqWgAEGYC1.jpg"
-          ]
-        },
-        {
-          "text": "Half times https://t.co/XgTnHRgM9k",
-          "createdAt": "2026-09-29T19:53:59.000Z",
-          "images": [
-            "https://pbs.twimg.com/media/HTaLhaBXgAE3QVJ.jpg",
-            "https://pbs.twimg.com/media/HTaLhrFWMAA_tb3.jpg",
-            "https://pbs.twimg.com/media/HTaLh8MWMAEmM-7.jpg",
-            "https://pbs.twimg.com/media/HTaLiNuW0AE41VG.jpg"
-          ]
         }
       ]
     }
