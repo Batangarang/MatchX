@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-06T17:01:36.094Z",
-  "sinceDate": "2026-09-29T17:00:52.109Z",
+  "generatedAt": "2026-10-06T19:31:30.263Z",
+  "sinceDate": "2026-09-29T19:30:44.898Z",
   "clubs": [
     {
       "name": "Sandbach United",
@@ -170,7 +170,8 @@
             "https://pbs.twimg.com/media/HTeW92mXEAAJG_x.jpg"
           ]
         }
-      ]
+      ],
+      "error": "GetXAPI error for @SandbachFC_1st: Please try again shortly."
     },
     {
       "name": "Eccleshall",
@@ -462,6 +463,18 @@
       "handle": "NewMillsFC",
       "posts": [
         {
+          "text": "GOAL! \nAkim samms 1-0",
+          "createdAt": "2026-10-06T19:20:20.000Z",
+          "images": []
+        },
+        {
+          "text": "https://t.co/YMjnK9zeiG",
+          "createdAt": "2026-10-06T19:19:35.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HT-GynTWoAA0AZD.jpg"
+          ]
+        },
+        {
           "text": "MATCH DAY \n\nTonight we take on @GlossopNorthEnd in the @DerbyshireFA Senior Cup at Surrey Street, under the lights for a place in the next round \n\nAs always your support would be greatly appreciated \n\n#UptheMillers #Derbyday https://t.co/4C0aa8rF6k",
           "createdAt": "2026-10-06T06:49:19.000Z",
           "images": [
@@ -562,19 +575,8 @@
           "images": [
             "https://pbs.twimg.com/media/HTihT6qWIAEFp6X.jpg"
           ]
-        },
-        {
-          "text": "🗣️September player of the month🗣️\n \nTime to vote for your player of the month for September ⚽️",
-          "createdAt": "2026-09-29T15:48:46.000Z",
-          "images": []
-        },
-        {
-          "text": "🗣���September player of the month🗣️\n \nTime to vote for your player of the month for September ⚽️",
-          "createdAt": "2026-09-29T15:48:46.000Z",
-          "images": []
         }
-      ],
-      "error": "GetXAPI error for @NewMillsFC: Please try again shortly."
+      ]
     },
     {
       "name": "Stafford Town",
@@ -699,20 +701,6 @@
             "https://pbs.twimg.com/media/HTsc-B5XwAAS7cu.jpg",
             "https://pbs.twimg.com/media/HTsc-B8WkAAb_W0.jpg"
           ]
-        },
-        {
-          "text": "⚽️ Next Up! ⚽️\n\nWe begin October on the road, as we take on the recently promoted Dawley Town.\n\nDawley have made a solid start to life in the NWCFL, currently occupying a mid table spot. \n\nFrom what we can tell, this will be the first ever meeting between the 2 sides. \n\nDon’t miss it! \n\n🏟️: Theatre of Jockeys, Doseley Road, Telford, TF4 3AL\n\n#UpTheTown",
-          "createdAt": "2026-09-29T18:53:48.000Z",
-          "images": [
-            "https://pbs.twimg.com/media/HTZ9wqPWkAAcEZb.jpg"
-          ]
-        },
-        {
-          "text": "⚽️ Next Up! ⚽️\n\nWe begin October on the road, as we take on the recently promoted Dawley Town.\n\nDawley have made a solid start to life in the NWCFL, currently occupying a mid table spot. \n\nFrom what we can tell, this will be the first ever meeting between the 2 sides. \n\nDon’t miss it! \n\n��️: Theatre of Jockeys, Doseley Road, Telford, TF4 3AL\n\n#UpTheTown",
-          "createdAt": "2026-09-29T18:53:48.000Z",
-          "images": [
-            "https://pbs.twimg.com/media/HTZ9wqPWkAAcEZb.jpg"
-          ]
         }
       ]
     },
@@ -720,6 +708,13 @@
       "name": "Telford Town",
       "handle": "TelfordTownFC",
       "posts": [
+        {
+          "text": "Your Telford Town starting lineup for tonight’s TJ Vickers Premier Cup 1st round game with Market Drayton Town.\n\nUP THE TOWN https://t.co/l0LUaxwWpt",
+          "createdAt": "2026-10-06T18:26:15.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HT96lEDWUAAxI-C.jpg"
+          ]
+        },
         {
           "text": "THE WAIT IS OVER – TELFORD TOWN REPLICA SHIRTS ARE HERE!\nhttps://www.telfordtownfc.co.uk/news/the-wait-is-over-telford-town-replica-shirts-are-h-3001633.html https://t.co/Spmj1CkA0Y",
           "createdAt": "2026-10-06T09:23:23.000Z",
@@ -1478,6 +1473,16 @@
           ]
         },
         {
+          "text": "This afternoon we hosted a charity match YOUR RWTC FC Vs RWT Staff at Queen Street \n\nRaising money for the Royal Wolverhampton NHS Trust Charity.\n\nThank you to everyone that attended the match & made donations on the day 💙\n\nThe match finished 5-1 to Your RWTC FC.\n\nThank you for choosing Queen Street to host your match 🫱🏼‍🫲��",
+          "createdAt": "2026-10-04T16:49:50.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HTzRSAYWoAAHwM6.jpg",
+            "https://pbs.twimg.com/media/HTzRTDuW4AAp9wD.jpg",
+            "https://pbs.twimg.com/media/HTzRULNXQAAxqNd.jpg",
+            "https://pbs.twimg.com/media/HTzRVCJWMAAWsoO.jpg"
+          ]
+        },
+        {
           "text": "We look forward to welcoming you to Queen Street 🧡",
           "createdAt": "2026-10-04T09:23:17.000Z",
           "images": []
@@ -1662,13 +1667,6 @@
           "createdAt": "2026-10-01T18:48:05.000Z",
           "images": [
             "https://pbs.twimg.com/media/HTkPoWjXIAAKgln.jpg"
-          ]
-        },
-        {
-          "text": "⚽️🔴⚪️NEXT GAME 🔴⚪️⚽️\n\nWe’re back in league action this Saturday on home turf as Brereton Social FC welcome Widnes FC to the Red Lion Ground in what promises to be a great battle for the points.\n\n🏆 NWCL First Division South\n📅 Saturday 3rd October 2026\n⏰ 3:00pm Kick-Off\n📍 Red Lion Ground, WS15 1ED\n🍻Clubhouse bar is open before,     during & after the game.\n\n🎟️ Admission:\nAdults — £6\nConcessions — £3\nU16s — £1\n\nBring the family, bring your mates, bring your neighbours and let’s continue with the fantastic support & get behind the Social! \n\nLet’s be the 12th man!\n\n#upthesocial 🔴⚪️",
-          "createdAt": "2026-09-29T19:21:53.000Z",
-          "images": [
-            "https://pbs.twimg.com/media/HTaEMD3W0AE5bDO.jpg"
           ]
         }
       ]
@@ -1886,6 +1884,28 @@
       "handle": "DawleyTownFC",
       "posts": [
         {
+          "text": "Hosts take the lead 1-0\n\nA breakaway goal down our left and the Bridgnorth no11 absolutely smashes it home",
+          "createdAt": "2026-10-06T19:30:10.000Z",
+          "images": []
+        },
+        {
+          "text": "32 mins in and we are forced into a change as Fishy has felt something in his hammy\n\nHe is replaced by Brodie Mcleod",
+          "createdAt": "2026-10-06T19:18:10.000Z",
+          "images": []
+        },
+        {
+          "text": "Good start by both sides here, nothing clear cut but both sides look bright going forward\n\nStill 0-0",
+          "createdAt": "2026-10-06T19:00:04.000Z",
+          "images": []
+        },
+        {
+          "text": "Tonights Starting XI for The Jockeys https://t.co/O63YwUsT3i",
+          "createdAt": "2026-10-06T18:23:46.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HT96BJnWMAArvtf.jpg"
+          ]
+        },
+        {
           "text": "MATCHDAY ⚡\n🆚 @AFCBridgnorth — AWAY\n📅 Tue 06 Oct | ⏰ 19:45 KO\n📍 Crown Meadow, WV16 4HS\n🎟️ £7 / £4 / U12s FREE\n\nFirst away game under the lights 💡\nNew faces in the mix — this one should be a cracker!\n\nSafe travels to everyone making the trip. \n\n#DawleyTown #TheJockeys #NWCL https://t.co/TBwGOJE3S3",
           "createdAt": "2026-10-06T12:33:30.000Z",
           "images": [
@@ -2084,6 +2104,73 @@
       "handle": "MDTFC",
       "posts": [
         {
+          "text": "42’ Maginness plays in Oulty who’s goes 1v1 with Telford Towns goalkeeper and puts wide \n\n🔵🔵 0-0 ⚪️⚪️",
+          "createdAt": "2026-10-06T19:27:50.000Z",
+          "images": []
+        },
+        {
+          "text": "27’ A freekick in a dangerous area for Drayton. Oakley puts the ball down. Straight at the keeper with no power \n\n🔵🔵 0-0 ⚪️⚪️",
+          "createdAt": "2026-10-06T19:13:35.000Z",
+          "images": []
+        },
+        {
+          "text": "24’ a great free kick whipped in for Telford town and Rowley makes a great save. \n\n3 very good chances for Telford Town \n\n🔵🔵 0-0 ⚪️⚪️",
+          "createdAt": "2026-10-06T19:10:36.000Z",
+          "images": []
+        },
+        {
+          "text": "21’ a stop in play whilst the Telford town goalkeeper changes his boots",
+          "createdAt": "2026-10-06T19:07:42.000Z",
+          "images": []
+        },
+        {
+          "text": "19’ Corner for Drayton taken by Oakley it’s headed clear",
+          "createdAt": "2026-10-06T19:05:26.000Z",
+          "images": []
+        },
+        {
+          "text": "16’ Number 11 for Telford looks offside from our Birds Eye view. Lino lets it go and his shot goes way over. \n\n🔵🔵 0-0 ⚪️⚪️",
+          "createdAt": "2026-10-06T19:02:36.000Z",
+          "images": []
+        },
+        {
+          "text": "14’ Telford Town go 1v1 on a tight angle with Rowley and the shot is right at him \n\n🔵🔵 0-0 ⚪️⚪️",
+          "createdAt": "2026-10-06T19:00:42.000Z",
+          "images": []
+        },
+        {
+          "text": "7’ first shot of the game Oakley sees his shot go well wide. \n\n🔵🔵 0-0 ⚪️⚪️",
+          "createdAt": "2026-10-06T18:52:48.000Z",
+          "images": []
+        },
+        {
+          "text": "3’ The lino has just brought the ball down like a prime Messi … sign him up \n\n🔵🔵 0-0 ⚪️⚪️",
+          "createdAt": "2026-10-06T18:50:15.000Z",
+          "images": []
+        },
+        {
+          "text": "2’ in and it’s long ball galore so far. \n\n🔵🔵 0-0 ⚪️⚪️",
+          "createdAt": "2026-10-06T18:48:35.000Z",
+          "images": []
+        },
+        {
+          "text": "KICK OFF \n\n⚪️⚪️vs🔵🔵",
+          "createdAt": "2026-10-06T18:46:12.000Z",
+          "images": []
+        },
+        {
+          "text": "Here’s the starting line up for tonight’s clash with Telford Town https://t.co/3J2mkAFHWa",
+          "createdAt": "2026-10-06T18:22:25.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HT95tOMWoAAheSJ.jpg"
+          ]
+        },
+        {
+          "text": "Here’s the starting line up for tonight’s clash with Telford Town",
+          "createdAt": "2026-10-06T18:22:12.000Z",
+          "images": []
+        },
+        {
           "text": "A look ahead to tonight’s Cup Derby at Telford Town \n\n https://www.pitchero.com/clubs/marketdraytontownfc/teams/295953/match-centre/0-6609807",
           "createdAt": "2026-10-06T13:33:03.000Z",
           "images": []
@@ -2186,20 +2273,6 @@
           "images": [
             "https://pbs.twimg.com/media/HTfMZoiW4AAqUyO.jpg"
           ]
-        },
-        {
-          "text": "NEW SIGNING\n\nMarket Drayton town are delighted to announce the signing of Obi Junior. \n\nObi made his debut on Saturday for the gingerbread men. After impressing Lloydy whilst Obi was at Hanley Town Reserves, he managed to secure his signature. \n\nObi is a forward attacking player and has scored 16 goals in 11 games for Hanley Town Reserves so far this season. \n\nWelcome to Market Drayton Town Obi 🔴⚪️",
-          "createdAt": "2026-09-29T19:22:01.000Z",
-          "images": [
-            "https://pbs.twimg.com/media/HTaBpHzXAAAFnf9.jpg"
-          ]
-        },
-        {
-          "text": "This Saturday we host New Mills at The Balufab Stadium. \n\nAfter a great away day a few weeks back where we came away 2-1 winners we will look to get the job done at home and do the double over New Mills. \n\nAs always your support is appreciated as you’ve came out in numbers this season to back the lads. \n\nAdults £5 \nConcession £3 \nU16 £1 \n\nAll market Drayton Tigers players and coaches are Free entry for this game 🔴⚪️",
-          "createdAt": "2026-09-29T18:06:44.000Z",
-          "images": [
-            "https://pbs.twimg.com/media/HTZy_Q9WsAAxb5Y.jpg"
-          ]
         }
       ]
     },
@@ -2289,6 +2362,20 @@
       "name": "Wolverhampton Casuals",
       "handle": "WolvesCassies",
       "posts": [
+        {
+          "text": "🟢🟢NEXT UP🟢🟢\n\nCasuals return to Brinsford Stadium this Saturday afternoon for a big FA Vase game against Southwell City from the GCE Hire Fleet United Counties League.\n\nKick off 3pm\n\nAdults £7, Concessions £4.\nProgramme £2\n\nLimited on site parking so be early https://t.co/ulapS266p4",
+          "createdAt": "2026-10-06T17:46:58.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HT9xl_dW4AA23cj.jpg"
+          ]
+        },
+        {
+          "text": "Dean's thoughts after another good display on the road for the Cassies 🟢 https://t.co/NlnxKEMVDd",
+          "createdAt": "2026-10-06T17:24:46.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HT9sTUUWYAEgkry.jpg"
+          ]
+        },
         {
           "text": "MATCH REPORT: Last-Gasp Cook Fires Casuals into the Second Round of the Edward Case Cup\nhttps://www.wolverhamptoncasualsfc.co.uk/teams/294420/match-centre/0-6553454/report?utm_campaign=match_report&utm_medium=post&utm_source=twitter https://t.co/D8lrjzsDAG",
           "createdAt": "2026-10-06T14:32:41.000Z",
@@ -2631,6 +2718,58 @@
       "handle": "foley_fc",
       "posts": [
         {
+          "text": "35’ | Robbo gets a yellow card for a foul.\n\n🔵⚪️3-0💛￼🩶",
+          "createdAt": "2026-10-06T19:20:23.000Z",
+          "images": []
+        },
+        {
+          "text": "32’ | Goal Sandbach \n\nA low ball into the box and it takes a deflection and in at the far post.",
+          "createdAt": "2026-10-06T19:17:43.000Z",
+          "images": []
+        },
+        {
+          "text": "So it turns out Josh was fouled twice and as he’s walked past he’s patted the offending player in the head and he was giving his marching orders.\n\n🔵⚪️2-0💛🩶",
+          "createdAt": "2026-10-06T19:15:58.000Z",
+          "images": []
+        },
+        {
+          "text": "25’ | Josh Bowden gets a red card  not sure why but it’s even more of an uphill battle now….\n\n🔵⚪️2-0💛🩶",
+          "createdAt": "2026-10-06T19:14:08.000Z",
+          "images": []
+        },
+        {
+          "text": "25’ | Sandbach’s number 10 gets a yellow for a foul.\n\n🔵⚪️2-0💛🩶",
+          "createdAt": "2026-10-06T19:10:09.000Z",
+          "images": []
+        },
+        {
+          "text": "19’ | Sandbach’s number 3 gets a yellow for a late challenge on Withers.\n\n🔵⚪️2-0💛🩶",
+          "createdAt": "2026-10-06T19:04:48.000Z",
+          "images": []
+        },
+        {
+          "text": "11’ | Goal Sandbach \n\nThe hosts double their lead in quick succession",
+          "createdAt": "2026-10-06T18:56:34.000Z",
+          "images": []
+        },
+        {
+          "text": "9’ | Goal Sandbach\n\nThe hosts take the lead from a corner",
+          "createdAt": "2026-10-06T18:55:41.000Z",
+          "images": []
+        },
+        {
+          "text": "And we’re off!!!",
+          "createdAt": "2026-10-06T18:45:25.000Z",
+          "images": []
+        },
+        {
+          "text": "𝗧𝗘𝗔𝗠 𝗡𝗘𝗪𝗦 | 𝗦𝗔𝗡𝗗𝗕𝗔𝗖𝗛 𝗨𝗡𝗜𝗧𝗘𝗗 (𝗔) 🏆🟡⚫️\n\nHere’s how Foley line up tonight as we make the trip to Sandbach United in the Edward Case Cup. https://t.co/zTb8dl4wvw",
+          "createdAt": "2026-10-06T18:45:11.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HT9-6zWXEAEcxwq.jpg"
+          ]
+        },
+        {
           "text": "𝗠𝗔𝗧𝗖𝗛𝗗𝗔𝗬 | 𝗦𝗔𝗡𝗗𝗕𝗔𝗖𝗛 𝗨𝗡𝗜𝗧𝗘𝗗 🏆💛🩶\n\nCup action under the lights tonight!\n\nWe’re back on the road as we make the trip to @SandbachFC_1st in the First Division Challenge Cup.\n\nTuesday night. Cup football. Everything to play for. Get behind the boys! 👊\n\n#UpTheFoley | #Matchday | #EdwardCaseCup",
           "createdAt": "2026-10-06T08:48:40.000Z",
           "images": [
@@ -2838,49 +2977,6 @@
           "createdAt": "2026-09-29T19:43:18.000Z",
           "images": [
             "https://pbs.twimg.com/media/HTaJF1GXMAE1VnJ.jpg"
-          ]
-        },
-        {
-          "text": "38’ | Uttoxeters number 10 goes in the book for a foul on Tyler.\n\n🟢🔵0-0❤️🖤",
-          "createdAt": "2026-09-29T19:26:33.000Z",
-          "images": []
-        },
-        {
-          "text": "29’ | Uttoxeters number 11 gets yellow for a foul on Withers.\n\n🟢🔵0-0❤️🖤",
-          "createdAt": "2026-09-29T19:15:50.000Z",
-          "images": []
-        },
-        {
-          "text": "And we’re off!!\n\nCome on FOLEY ❤️🖤",
-          "createdAt": "2026-09-29T18:47:16.000Z",
-          "images": []
-        },
-        {
-          "text": "𝗧𝗘𝗔𝗠 𝗡𝗘𝗪𝗦 | 𝗨𝗧𝗧𝗢𝗫𝗘𝗧𝗘𝗥 𝗧𝗢𝗪𝗡 (𝗔) 🏆🔴⚫\n\nHere’s how Foley line up tonight as we travel to Uttoxeter Town in the Staffordshire Senior Challenge Cup!\n\n#UpTheFoley | #TeamNews | #StaffordshireSeniorCup https://t.co/MnNi1YwD40",
-          "createdAt": "2026-09-29T18:18:54.000Z",
-          "images": [
-            "https://pbs.twimg.com/media/HTZ1xNBXcAAQIbG.jpg"
-          ]
-        },
-        {
-          "text": "𝗧𝗘𝗔�� 𝗡𝗘𝗪𝗦 | 𝗨𝗧𝗧𝗢𝗫𝗘𝗧𝗘𝗥 𝗧𝗢𝗪𝗡 (𝗔) 🏆🔴⚫\n\nHere’s how Foley line up tonight as we travel to Uttoxeter Town in the Staffordshire Senior Challenge Cup!\n\n#UpTheFoley | #TeamNews | #StaffordshireSeniorCup https://t.co/MnNi1YwD40",
-          "createdAt": "2026-09-29T18:18:54.000Z",
-          "images": [
-            "https://pbs.twimg.com/media/HTZ1xNBXcAAQIbG.jpg"
-          ]
-        },
-        {
-          "text": "𝗧𝗘𝗔𝗠 𝗡𝗘𝗪𝗦 | 𝗨𝗧𝗧��𝗫𝗘𝗧𝗘𝗥 𝗧𝗢𝗪𝗡 (𝗔) 🏆🔴⚫\n\nHere’s how Foley line up tonight as we travel to Uttoxeter Town in the Staffordshire Senior Challenge Cup!\n\n#UpTheFoley | #TeamNews | #StaffordshireSeniorCup https://t.co/MnNi1YwD40",
-          "createdAt": "2026-09-29T18:18:54.000Z",
-          "images": [
-            "https://pbs.twimg.com/media/HTZ1xNBXcAAQIbG.jpg"
-          ]
-        },
-        {
-          "text": "𝗧𝗘��𝗠 𝗡𝗘𝗪𝗦 | 𝗨𝗧𝗧𝗢𝗫𝗘𝗧𝗘𝗥 𝗧𝗢𝗪𝗡 (𝗔) 🏆🔴⚫\n\nHere’s how Foley line up tonight as we travel to Uttoxeter Town in the Staffordshire Senior Challenge Cup!\n\n#UpTheFoley | #TeamNews | #StaffordshireSeniorCup https://t.co/MnNi1YwD40",
-          "createdAt": "2026-09-29T18:18:54.000Z",
-          "images": [
-            "https://pbs.twimg.com/media/HTZ1xNBXcAAQIbG.jpg"
           ]
         }
       ]
