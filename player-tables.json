@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-06T21:30:58.878Z",
+  "generatedAt": "2026-10-06T22:30:56.980Z",
   "division": "First Division South",
   "appearances": [
     {
@@ -197,7 +197,7 @@
       "total": "9"
     },
     {
-      "rank": "-",
+      "rank": "2",
       "player": "Suar Dedja",
       "club": "AFC Bridgnorth",
       "total": "8"
@@ -228,21 +228,27 @@
     },
     {
       "rank": "-",
-      "player": "Nicky Parker",
-      "club": "Eccleshall",
-      "total": "5"
-    },
-    {
-      "rank": "8",
       "player": "Kyle Foley",
       "club": "Sandbach United",
       "total": "6"
     },
     {
       "rank": "-",
+      "player": "Nicky Parker",
+      "club": "Eccleshall",
+      "total": "5"
+    },
+    {
+      "rank": "9",
       "player": "Kieran OConnell",
       "club": "Sandbach United",
       "total": "6"
+    },
+    {
+      "rank": "-",
+      "player": "Chigozie Ewelike",
+      "club": "Cheadle Heath Nomads",
+      "total": "5"
     },
     {
       "rank": "-",
@@ -251,13 +257,7 @@
       "total": "2"
     },
     {
-      "rank": "11",
-      "player": "Chigozie Ewelike",
-      "club": "Cheadle Heath Nomads",
-      "total": "5"
-    },
-    {
-      "rank": "-",
+      "rank": "12",
       "player": "Luc Ferry",
       "club": "New Mills",
       "total": "5"
@@ -300,6 +300,12 @@
     },
     {
       "rank": "-",
+      "player": "Nehemia Zazi",
+      "club": "AFC Bridgnorth",
+      "total": "3"
+    },
+    {
+      "rank": "-",
       "player": "Ablay Sowe",
       "club": "Shawbury United",
       "total": "3"
@@ -311,7 +317,7 @@
       "total": "2"
     },
     {
-      "rank": "21",
+      "rank": "22",
       "player": "Sam Preece",
       "club": "AFC Bridgnorth",
       "total": "4"
@@ -345,12 +351,6 @@
       "player": "Cian McIntosh",
       "club": "Wolverhampton Casuals",
       "total": "4"
-    },
-    {
-      "rank": "-",
-      "player": "Nehemia Zazi",
-      "club": "AFC Bridgnorth",
-      "total": "3"
     },
     {
       "rank": "-",
@@ -504,6 +504,18 @@
     },
     {
       "rank": "-",
+      "player": "Matthew Birchall",
+      "club": "Sandbach United",
+      "total": "2"
+    },
+    {
+      "rank": "-",
+      "player": "Max Williams",
+      "club": "Sandbach United",
+      "total": "2"
+    },
+    {
+      "rank": "-",
       "player": "Rio Tetsell",
       "club": "Wednesfield Community",
       "total": "2"
@@ -608,12 +620,18 @@
     },
     {
       "rank": "-",
+      "player": "Monty Parkes",
+      "club": "Foley Meir",
+      "total": "3"
+    },
+    {
+      "rank": "-",
       "player": "George Scott",
       "club": "Telford Town",
       "total": "3"
     },
     {
-      "rank": "15",
+      "rank": "16",
       "player": "Suar Dedja",
       "club": "AFC Bridgnorth",
       "total": "2"
@@ -651,6 +669,12 @@
     {
       "rank": "-",
       "player": "Joseph Keyworth",
+      "club": "Barnton",
+      "total": "2"
+    },
+    {
+      "rank": "-",
+      "player": "Bailey Sherlock",
       "club": "Barnton",
       "total": "2"
     },
@@ -717,12 +741,6 @@
     {
       "rank": "-",
       "player": "Archie Ellams",
-      "club": "Foley Meir",
-      "total": "2"
-    },
-    {
-      "rank": "-",
-      "player": "Monty Parkes",
       "club": "Foley Meir",
       "total": "2"
     },
