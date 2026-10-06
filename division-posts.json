@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-06T12:01:21.705Z",
-  "sinceDate": "2026-09-29T12:00:52.274Z",
+  "generatedAt": "2026-10-06T14:31:26.609Z",
+  "sinceDate": "2026-09-29T14:30:41.947Z",
   "clubs": [
     {
       "name": "Sandbach United",
@@ -580,12 +580,20 @@
           "createdAt": "2026-09-29T15:48:46.000Z",
           "images": []
         }
-      ]
+      ],
+      "error": "GetXAPI error for @NewMillsFC: Please try again shortly."
     },
     {
       "name": "Stafford Town",
       "handle": "StaffordTown1st",
       "posts": [
+        {
+          "text": "⚽️ Next Up! ⚽️\n\nBack at home this Saturday as we welcome Wednesfield FC to Evans Park for the first time. \n\nWednesfield were moved laterally from the MFL this summer and have made a steady start to life in the NWCFL, sitting mid table after 10 games. \n\nTown will be looking to build some momentum after a dramatic last minute equaliser last Saturday. \n\nDon’t miss it!\n\n#UpTheTown",
+          "createdAt": "2026-10-06T12:26:03.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HT8oJDXWoAALazT.jpg"
+          ]
+        },
         {
           "text": "⚽️ Here they are! ⚽️\n\nHighlights from yesterday’s dramatic late draw with Dawley Town! \n\n#UpTheTown https://t.co/UJLKCG74ku",
           "createdAt": "2026-10-04T09:11:32.000Z",
@@ -1213,6 +1221,13 @@
       "name": "Barnton",
       "handle": "barntonfc",
       "posts": [
+        {
+          "text": "🍕🍰 LOCAL SUPPORT FOR OUR 80TH! 🖤🤍\n\nDelighted to have Cheshire Dough &amp; MerryFall Cakes joining us at the Creative Hut Stadium this Saturday! 🙌\n\nCome down, support two fantastic local businesses &amp; help us celebrate 80 YEARS of Barnton AFC! 🎉\n\n#UTV #Barnton80 #FinoAllaFine https://t.co/7Vd5EPGKXz",
+          "createdAt": "2026-10-06T13:28:02.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HT82VEBWQAAZmX6.jpg"
+          ]
+        },
         {
           "text": "🖤🤍 A VERY BIG WEEK 🖤🤍\n\nBarnton AFC turns 80 on Saturday! 🎉\n\nAnd we’ve got something SPECIAL planned… 👀\n\nKeep your eyes peeled this week. 👀🔥\n\n#BarntonAFC #80Years #UTV https://t.co/dNDFQHpl6O",
           "createdAt": "2026-10-05T09:16:11.000Z",
@@ -1863,6 +1878,13 @@
       "handle": "DawleyTownFC",
       "posts": [
         {
+          "text": "MATCHDAY ⚡\n🆚 @AFCBridgnorth — AWAY\n📅 Tue 06 Oct | ⏰ 19:45 KO\n📍 Crown Meadow, WV16 4HS\n🎟️ £7 / £4 / U12s FREE\n\nFirst away game under the lights 💡\nNew faces in the mix — this one should be a cracker!\n\nSafe travels to everyone making the trip. \n\n#DawleyTown #TheJockeys #NWCL https://t.co/TBwGOJE3S3",
+          "createdAt": "2026-10-06T12:33:30.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HT8p2Z8XUAAatn4.jpg"
+          ]
+        },
+        {
           "text": "With 232 spectators on Saturday we had to ensure parking was policed correctly. For players, staff &amp; spectators it is crucial you adhere to the no parking signs &amp; road closure signs and ensure you DO NOT park on double yellows. We thank you all for Saturday. Long may it continue https://t.co/e82TprSbe8",
           "createdAt": "2026-10-05T15:48:55.000Z",
           "images": [
@@ -2053,6 +2075,11 @@
       "name": "Market Drayton Town",
       "handle": "MDTFC",
       "posts": [
+        {
+          "text": "A look ahead to tonight’s Cup Derby at Telford Town \n\n https://www.pitchero.com/clubs/marketdraytontownfc/teams/295953/match-centre/0-6609807",
+          "createdAt": "2026-10-06T13:33:03.000Z",
+          "images": []
+        },
         {
           "text": "👏🏽👏🏽👏🏽👏🏽",
           "createdAt": "2026-10-05T15:51:39.000Z",
@@ -2254,6 +2281,13 @@
       "name": "Wolverhampton Casuals",
       "handle": "WolvesCassies",
       "posts": [
+        {
+          "text": "Cheadle Heath Nomads - Edward Case Cup 5 October 2026 \nImages by Button Oak Photography\nhttps://www.wolverhamptoncasualsfc.co.uk/photos/cheadle-heath-nomads-edward-case-cup-5-october-202-1179978.html?utm_campaign=event_share&utm_medium=post&utm_source=twitter https://t.co/uTqfkfYct1",
+          "createdAt": "2026-10-06T14:29:17.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HT9EWLHXAAAADyc.jpg"
+          ]
+        },
         {
           "text": "Goals from our dramatic victory away at Cheadle Heath Nomads to progress through the Edward Case Cup 🟢 https://t.co/OAQa0wjgaF",
           "createdAt": "2026-10-06T10:31:15.000Z",
