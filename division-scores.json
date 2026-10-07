@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-10-06T23:55:32.318Z",
+  "generatedAt": "2026-10-07T00:01:19.533Z",
   "date": "2026-10-07",
-  "isToday": false,
+  "isToday": true,
   "fixtures": [
     {
       "home": "Brereton Social",
@@ -9,6 +9,7 @@
       "kickoff": "19:45",
       "score": null,
       "goals": [],
+      "yellowCards": [],
       "redCards": []
     }
   ],
