@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-07T05:31:25.794Z",
-  "sinceDate": "2026-09-30T05:30:41.942Z",
+  "generatedAt": "2026-10-07T08:01:37.740Z",
+  "sinceDate": "2026-09-30T08:00:51.258Z",
   "clubs": [
     {
       "name": "Sandbach United",
@@ -1101,6 +1101,13 @@
       "handle": "WednesfieldCFC",
       "posts": [
         {
+          "text": "🔵🔵🔵 MATCH-DAY 🔵🔵🔵\n\nLet’s get to work under the lights in WS15 ⚔️ https://t.co/YsV3xNKu3k",
+          "createdAt": "2026-10-07T07:23:00.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HUAsXObWUAASqT9.jpg"
+          ]
+        },
+        {
           "text": "🔴🔴🔴 NEXT UP ⚫️⚫️⚫️\n\nA quick turnaround means an opportunity to respond this Wednesday evening. \n\n📆 07/10/26\n⏰ 7:45pm KO\n🏟️ Red Lion Ground, WS15 1ED\n💰 £6 Adults, £3 Concessions \n\nBang the drum and support the lads! 🥁\n\n#explore #nwcfl https://t.co/nSaiGvGIlP",
           "createdAt": "2026-10-05T20:35:15.000Z",
           "images": [
@@ -1362,6 +1369,13 @@
           ]
         },
         {
+          "text": "���⚫ OUR STARTING XI ⚫🟢\nHere’s how the Monners line up today! \n\nTime to get the job done. \n\n#TheMonners #UpTheMonners 🟢⚫ https://t.co/puQyLp6hQd",
+          "createdAt": "2026-10-03T13:56:44.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HTtgIE0W4AAIu__.jpg"
+          ]
+        },
+        {
           "text": "🟢⚫ MATCHDAY 🟢⚫\n\nIt’s Matchday, Monners! \n\nBack on the road as we look to make it five wins on the bounce! \n\n⚽ @CreweFC\n📍 The Excel,CW2 8SJ\n⏰ 3:00pm\n\nCome on, The Monners 🟢⚫\n\n#TheMonners #AHFC #Matchday https://t.co/TF5JL2GI6S",
           "createdAt": "2026-10-03T09:01:42.000Z",
           "images": [
@@ -1603,8 +1617,7 @@
             "https://pbs.twimg.com/media/HTczDTuXcAAsvk3.jpg"
           ]
         }
-      ],
-      "error": "GetXAPI error for @barntonfc: Please try again shortly."
+      ]
     },
     {
       "name": "Bilston Town",
@@ -1729,7 +1742,8 @@
             "https://pbs.twimg.com/media/HThtJeTW0AA50Bu.jpg"
           ]
         }
-      ]
+      ],
+      "error": "GetXAPI error for @bilstontownfc: Please try again shortly."
     },
     {
       "name": "AFC Bridgnorth",
