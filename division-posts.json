@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-06T22:01:54.004Z",
-  "sinceDate": "2026-09-29T22:00:51.289Z",
+  "generatedAt": "2026-10-07T00:31:25.831Z",
+  "sinceDate": "2026-09-30T00:30:42.468Z",
   "clubs": [
     {
       "name": "Sandbach United",
@@ -670,7 +670,8 @@
             "https://pbs.twimg.com/media/HTihT6qWIAEFp6X.jpg"
           ]
         }
-      ]
+      ],
+      "error": "GetXAPI error for @NewMillsFC: Please try again shortly."
     },
     {
       "name": "Stafford Town",
@@ -1240,8 +1241,7 @@
             "https://pbs.twimg.com/media/HTm6NP5XAAEgmgE.jpg"
           ]
         }
-      ],
-      "error": "GetXAPI error for @alsagertown_fc: Please try again shortly."
+      ]
     },
     {
       "name": "Allscott Heath",
@@ -1736,6 +1736,11 @@
       "handle": "AFCBridgnorth",
       "posts": [
         {
+          "text": "AFC Bridgnorth progress in The TJ Vickers County cup following a 2-1 win against Dawley Town. Goals from Zazi and Salmon.",
+          "createdAt": "2026-10-06T22:06:58.000Z",
+          "images": []
+        },
+        {
           "text": "AFC Bridgnorth entertain Dawley Town on Tuesday as they start the defence of The TJ Vickers County Cup https://t.co/JOBaPB8G36",
           "createdAt": "2026-10-04T11:10:00.000Z",
           "images": [
@@ -2035,6 +2040,41 @@
       "handle": "DawleyTownFC",
       "posts": [
         {
+          "text": "FT and we crash out of the cup to the holders 2-1.\n\nHuffed and puffed till the end against a very fit, well drilled Bridgo team. Good luck to them for the rest of the season",
+          "createdAt": "2026-10-06T20:40:46.000Z",
+          "images": []
+        },
+        {
+          "text": "Late drama but is it too late, Cain Patterson with a lovely strike first time into bottom corner\n\n2-1",
+          "createdAt": "2026-10-06T20:36:35.000Z",
+          "images": []
+        },
+        {
+          "text": "Final changes\n\nBuckley &amp; Brad off \nCain and Bedds on",
+          "createdAt": "2026-10-06T20:29:58.000Z",
+          "images": []
+        },
+        {
+          "text": "Second change for Dawley\n\nBennett-Tindall off\nJoey Byrne on",
+          "createdAt": "2026-10-06T20:15:30.000Z",
+          "images": []
+        },
+        {
+          "text": "Penalty missed for Dawley\n\nCuffy hits outside of the post after Hoddy got brought down",
+          "createdAt": "2026-10-06T19:58:58.000Z",
+          "images": []
+        },
+        {
+          "text": "HT 2-0\n\nTwo sucker punches at the end of the half have left us an uphill task in what was a fairly even first 45. Reaction needed\n\nUp the Jockeys",
+          "createdAt": "2026-10-06T19:38:43.000Z",
+          "images": []
+        },
+        {
+          "text": "2-0\n\n2 goals in a minute, the Bridgo no10 turns one way then another and puts a ball across the box for the right winger to tap in.\n\nBig 2nd half needed here",
+          "createdAt": "2026-10-06T19:33:21.000Z",
+          "images": []
+        },
+        {
           "text": "Hosts take the lead 1-0\n\nA breakaway goal down our left and the Bridgnorth no11 absolutely smashes it home",
           "createdAt": "2026-10-06T19:30:10.000Z",
           "images": []
@@ -2248,8 +2288,7 @@
             "https://pbs.twimg.com/media/HTdMlF0XcAARHxz.jpg"
           ]
         }
-      ],
-      "error": "GetXAPI error for @DawleyTownFC: Please try again shortly."
+      ]
     },
     {
       "name": "Market Drayton Town",
