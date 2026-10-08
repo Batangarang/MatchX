@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-07T23:55:32.934Z",
+  "generatedAt": "2026-10-08T00:01:15.701Z",
   "fixtures": [
     {
       "date": "Saturday 10 October 2026",
@@ -1959,13 +1959,6 @@
       "home": "Wolverhampton Casuals",
       "away": "Cheadle Heath Nomads",
       "kickoff": "15:00",
-      "postponed": false
-    },
-    {
-      "date": "Wednesday 7 October 2026",
-      "home": "Brereton Social",
-      "away": "Wednesfield Community",
-      "kickoff": "19:45",
       "postponed": false
     }
   ]
