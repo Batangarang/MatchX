@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-08T00:31:25.549Z",
-  "sinceDate": "2026-10-01T00:30:42.720Z",
+  "generatedAt": "2026-10-08T03:01:56.466Z",
+  "sinceDate": "2026-10-01T03:00:53.156Z",
   "clubs": [
     {
       "name": "Sandbach United",
@@ -2861,8 +2861,7 @@
             "https://pbs.twimg.com/media/HTi8yraXsAAvmE4.jpg"
           ]
         }
-      ],
-      "error": "GetXAPI error for @shawburyutd: Please try again shortly."
+      ]
     },
     {
       "name": "Wolverhampton Casuals",
