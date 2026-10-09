@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-09T04:01:14.143Z",
-  "sinceDate": "2026-10-02T04:00:47.896Z",
+  "generatedAt": "2026-10-09T06:31:00.837Z",
+  "sinceDate": "2026-10-02T06:30:38.690Z",
   "clubs": [
     {
       "name": "Sandbach United",
@@ -1414,6 +1414,13 @@
       "name": "Allscott Heath",
       "handle": "AllscottHeathFC",
       "posts": [
+        {
+          "text": "🟢⚫ UP NEXT ⚫🟢\n\nWe’re back at the Peter Ford Stadium this Saturday as we welcome @Brereton_Social  in NWCFL Division One South action! \n\nAnother big test awaits as the Monners look to bounce back and get back to winning ways!\n\n#TheMonners https://t.co/ZxRrCliJeV",
+          "createdAt": "2026-10-09T06:16:31.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HUKwVOoWgAAitYs.jpg"
+          ]
+        },
         {
           "text": "FULL TIME: Allscott Heath 1 - 2 Shawbury United\n#ALLSHA #Pitchero https://t.co/rkAkINpZeJ",
           "createdAt": "2026-10-06T20:41:25.000Z",
@@ -3276,11 +3283,6 @@
           "images": [
             "https://pbs.twimg.com/media/HTsL64eWgAAyYQ5.jpg"
           ]
-        },
-        {
-          "text": "❤️🖤",
-          "createdAt": "2026-10-02T05:05:54.000Z",
-          "images": []
         }
       ]
     },
