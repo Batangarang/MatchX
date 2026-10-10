@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-10T09:48:17.486Z",
+  "updatedAt": "2026-10-10T10:05:40.062Z",
   "score": {
     "enabled": false,
     "date": "2026-10-03"
@@ -16,6 +16,12 @@
       "hold": false,
       "text": "Sandbach United recently featured in a new football management game, giving fans the chance to take the club to the top of the non-league system.  Outside of the virtual football OConnell, Foley and Hatton have been leading the way in terms of goals but Fowles has also been in form and all will be keen to add to their tally against a struggling Alsager side that will be keen to prove themselves in a cup game under new management. Sandbach will be looking to build on their recent progress as the campaign continues.",
       "base": "2026-10-10T09:35:25.457Z"
+    },
+    "preview:sandbachFocus": {
+      "enabled": false,
+      "hold": false,
+      "text": "League leaders Sandbach United, who sit top with 25 points from 11 games on the back of a recent win, face Cheadle Heath Nomads at home on Saturday 10 October at 15:00. The in-form leaders will then host Stockport County in a Cheshire Senior Cup first-round tie on Tuesday 13 October at 19:45 before returning to league action at home against Bilston Town on Saturday 17 October at 15:00.",
+      "base": "2026-10-10T10:01:34.248Z"
     }
   }
 }
