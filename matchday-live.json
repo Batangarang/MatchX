@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-10-10T14:25:42.320Z",
+  "generatedAt": "2026-10-10T14:31:00.394Z",
   "fixtureDate": "2026-10-10",
   "kickoff": "15:00",
   "homeTeam": "Sandbach United",
   "awayTeam": "Cheadle Heath Nomads",
-  "postsUsed": 12,
-  "imagesAnalyzedThisRun": 0,
-  "totalImagesAnalyzed": 5,
+  "postsUsed": 15,
+  "imagesAnalyzedThisRun": 1,
+  "totalImagesAnalyzed": 6,
   "match": {
-    "score": "0-1",
+    "score": "1-1",
     "scoreSource": "match_feed_stated",
     "scoreConfirmed": true,
-    "feedScore": "0-1",
-    "scoreDiscrepancy": "Goal reports suggested 0-2 but the confirmed score is 0-1 — 1 unconfirmed goal report(s) ignored.",
+    "feedScore": "1-1",
+    "scoreDiscrepancy": "Goal reports suggested 1-2 but the confirmed score is 1-1 — 1 unconfirmed goal report(s) ignored.",
     "unconfirmedGoals": [
       {
         "minute": 18,
@@ -79,6 +79,11 @@
         "minute": 18,
         "team": "away",
         "scorer": "Chigozie Ewelike"
+      },
+      {
+        "minute": 27,
+        "team": "home",
+        "scorer": "Joshua Fowles"
       }
     ],
     "yellowCards": [],
@@ -102,9 +107,9 @@
     },
     "roughXG": {
       "firstHalf": {
-        "home": 0.5,
-        "away": 1.2,
-        "note": "Sandbach created a shot and rebound chance at 8-9 mins (both saved); Cheadle Heath scored from a well-executed chip and finish at 18 mins. Away team's clinical finishing evident."
+        "home": 1.2,
+        "away": 1.1,
+        "note": "Home team had a double chance in minute 9 (shot and rebound); away team scored from a chipped finish. Both sides showing clinical finishing."
       },
       "secondHalf": {
         "home": 0,
@@ -117,17 +122,17 @@
         "note": "Match did not go to extra time."
       },
       "total": {
-        "home": 0.5,
-        "away": 1.2,
-        "note": "Cheadle Heath's goal is a hard floor; rough estimate based on early play description only."
+        "home": 1.2,
+        "away": 1.1,
+        "note": "Two goals scored across the first 27 minutes; balanced early play with both teams creating clear-cut chances."
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
     "matchControl": {
       "firstHalf": {
-        "home": 45,
-        "away": 55,
-        "note": "Sandbach had early chances (8-9 mins) but Cheadle Heath took the lead with a well-executed counterattack at 18 mins, suggesting away team slight edge."
+        "home": 55,
+        "away": 45,
+        "note": "Sandbach created early chances and pushed forward; Cheadle Heath broke defensively and took the lead, then conceded an equalizer."
       },
       "secondHalf": {
         "home": 50,
@@ -140,9 +145,9 @@
         "note": "Match did not go to extra time."
       },
       "total": {
-        "home": 45,
-        "away": 55,
-        "note": "Based on first 18 minutes only; Cheadle Heath goal suggests slight momentum advantage."
+        "home": 55,
+        "away": 45,
+        "note": "Sandbach slightly on top in first 27 minutes based on early dominance and equalizer, but Cheadle Heath showed threat on the break."
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
