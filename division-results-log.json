@@ -117,8 +117,8 @@
     "Telford Town|New Mills": {
       "home": "Telford Town",
       "away": "New Mills",
-      "score": "0-0",
-      "matchStage": "half_time",
+      "score": "1-0",
+      "matchStage": "second_half",
       "scoreSource": "explicit"
     }
   }

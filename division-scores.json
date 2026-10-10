@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-10-10T15:05:29.549Z",
+  "generatedAt": "2026-10-10T15:10:32.881Z",
   "date": "2026-10-10",
   "isToday": true,
-  "postCount": 120,
-  "latestPostTimestamp": "2026-10-10T15:04:38.000Z",
+  "postCount": 129,
+  "latestPostTimestamp": "2026-10-10T15:10:41.000Z",
   "fixtures": [
     {
       "home": "Allscott Heath",
@@ -163,6 +163,10 @@
         {
           "team": "home",
           "player": "Stan Tatters"
+        },
+        {
+          "team": "away",
+          "player": null
         }
       ],
       "redCards": [],
@@ -209,13 +213,19 @@
       "home": "Telford Town",
       "away": "New Mills",
       "kickoff": "15:00",
-      "score": "0-0",
-      "matchStage": "half_time",
-      "goals": [],
+      "score": "1-0",
+      "matchStage": "second_half",
+      "goals": [
+        {
+          "minute": 53,
+          "team": "home",
+          "scorer": null
+        }
+      ],
       "yellowCards": [],
       "redCards": [],
       "scoreSource": "explicit"
     }
   ],
-  "ticker": "@AllscottHeathFC: 48': George Cross scores for Allscott Heath 🙌\n#ALLBRE #Pitchero https://t.co/Lg7P1Vy48a"
+  "ticker": "@MDTFC: 52’ Ezaye gets into space and flashes his shot wide of the left hand post \n\n🔴⚪️ 0-0 🟡⚫️"
 }
