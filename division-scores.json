@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-10-10T14:55:25.974Z",
+  "generatedAt": "2026-10-10T15:01:00.834Z",
   "date": "2026-10-10",
   "isToday": true,
-  "postCount": 111,
-  "latestPostTimestamp": "2026-10-10T14:53:23.000Z",
+  "postCount": 112,
+  "latestPostTimestamp": "2026-10-10T14:58:12.000Z",
   "fixtures": [
     {
       "home": "Allscott Heath",
@@ -20,7 +20,7 @@
         {
           "minute": 14,
           "team": "away",
-          "scorer": null
+          "scorer": "Unknown"
         },
         {
           "minute": 24,
@@ -74,7 +74,7 @@
         {
           "minute": 25,
           "team": "away",
-          "scorer": null
+          "scorer": "Unknown"
         },
         {
           "minute": 33,
@@ -136,7 +136,7 @@
         {
           "minute": 18,
           "team": "away",
-          "scorer": null
+          "scorer": "Unknown"
         },
         {
           "minute": 27,
@@ -178,7 +178,7 @@
         {
           "minute": 17,
           "team": "away",
-          "scorer": null
+          "scorer": "Unknown"
         },
         {
           "minute": 21,
@@ -212,5 +212,5 @@
       "scoreSource": "explicit"
     }
   ],
-  "ticker": "@CheadleNomads: 45’ | HALF-TIME\n\nA tough first half for the Nomads as we head into the break trailing by two goals. Plenty to do in the second half.\n\n@SandbachFC_1st 3-1 @CheadleNomads \n\n#WeAreNomads | @nwcfl | @NWCFLScores https://t.co/9VvMAUJyx0"
+  "ticker": "@TelfordTownFC: HALF TIME: Telford Town 0 - 0 New Mills\n#TELNEW https://t.co/Zbq2C1jysh"
 }
