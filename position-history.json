@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-03T17:01:04.012Z",
+  "generatedAt": "2026-10-10T16:30:55.272Z",
   "history": [
     {
       "gamesPlayed": 1,
@@ -132,6 +132,18 @@
       "cumGoalsFor": 32,
       "cumGoalsAgainst": 16,
       "cumGoalDifference": 16
+    },
+    {
+      "gamesPlayed": 12,
+      "date": "Sat 10/10/26",
+      "opponent": "Cheadle Heath Nomads",
+      "position": 1,
+      "points": 28,
+      "gameGoalsFor": 3,
+      "gameGoalsAgainst": 1,
+      "cumGoalsFor": 35,
+      "cumGoalsAgainst": 17,
+      "cumGoalDifference": 18
     }
   ]
 }

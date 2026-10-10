@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-10T15:30:59.631Z",
+  "generatedAt": "2026-10-10T16:30:57.864Z",
   "games": [
     {
       "opponent": "Wednesfield Community",
@@ -42,9 +42,15 @@
       "score": "6-2",
       "attendance": 237,
       "date": "Sat 26/09/26"
+    },
+    {
+      "opponent": "Cheadle Heath Nomads",
+      "score": "3-1",
+      "attendance": 164,
+      "date": "Sat 10/10/26"
     }
   ],
-  "average": 160,
+  "average": 161,
   "lowest": {
     "opponent": "Wednesfield Community",
     "score": "2-1",
