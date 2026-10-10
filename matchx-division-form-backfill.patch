@@ -1,0 +1,281 @@
+diff --git a/.github/workflows/scrape.yml b/.github/workflows/scrape.yml
+index 3bad07b85..ca1a56301 100644
+--- a/.github/workflows/scrape.yml
++++ b/.github/workflows/scrape.yml
+@@ -30,6 +30,8 @@ jobs:
+           " >> "$GITHUB_OUTPUT"
+       - if: steps.gate.outputs.run == 'true'
+         run: node scrape.js
++      - if: steps.gate.outputs.run == 'true'
++        run: node division-results.js
+       - if: steps.gate.outputs.run == 'true'
+         run: node league.js
+       - if: steps.gate.outputs.run == 'true'
+@@ -43,7 +45,7 @@ jobs:
+         run: |
+           git config user.name "github-actions[bot]"
+           git config user.email "github-actions[bot]@users.noreply.github.com"
+-          for f in data.json league.json player-tables.json position-history.json attendance-stats.json .scrape-lastrun.json cost-log.json; do
++          for f in data.json league.json division-results.json player-tables.json position-history.json attendance-stats.json .scrape-lastrun.json cost-log.json; do
+             [ -f "$f" ] && git add "$f"
+           done
+           git diff --staged --quiet || git commit -m "..."
+diff --git a/division-recap-engine.js b/division-recap-engine.js
+index 9cc6834d1..428587819 100644
+--- a/division-recap-engine.js
++++ b/division-recap-engine.js
+@@ -307,7 +307,7 @@ ${fixtureList}
+ ${sandbachOverrideNote}${sandbachFormNote}
+ IMPORTANT: In the fixture list above, the format is always "Home Team v Away Team" — the first team named is always playing at home, the second team is always the visitor. Do not reverse this or infer venue/direction from anything else in the posts — always trust this explicit home/away order from the fixture list.
+ IMPORTANT: You MUST reference every single fixture listed above at least briefly — do not skip or omit any fixture from the list, even if it seems minor. If there isn't much to say about a fixture, a single short sentence is fine, but every fixture must be mentioned somewhere in your response.
+-CRITICAL: Only state facts that are directly supported by the league table data or the X posts provided above. Do NOT invent results, a losing streak, a table position change, or a specific points gap unless it is explicitly confirmed by the data given. Do NOT invent a nickname for any club (e.g. "The Ramblers") unless that exact nickname appears explicitly in the X posts provided — always use the club's real name from the fixture list if you don't have an explicitly confirmed nickname. If you are not certain about a specific detail, describe the situation more generally rather than stating something specific that might be wrong. Cross-check any claim about recent form or results against the "form" field in the league table and the actual posts before stating it.
++CRITICAL: Only state facts that are directly supported by the league table data or the X posts provided above. Do NOT invent results, a losing streak, a table position change, or a specific points gap unless it is explicitly confirmed by the data given. Do NOT invent a nickname for any club (e.g. "The Ramblers") unless that exact nickname appears explicitly in the X posts provided — always use the club's real name from the fixture list if you don't have an explicitly confirmed nickname. If you are not certain about a specific detail, describe the situation more generally rather than stating something specific that might be wrong. Cross-check any claim about recent form or results against the "form" field in the league table and the actual posts before stating it. IMPORTANT: a club's recent-form line is marked either "ALL COMPETITIONS INCLUDING CUP" or "LEAGUE MATCHES ONLY" — never state a specific number of consecutive league wins, losses, draws or unbeaten/winless games for a club marked ALL COMPETITIONS (the figure may include a cup result); for those clubs describe form only in general terms (e.g. "in excellent form", "winless in their last few"), never with an exact league-game count.
+ Here is the current league table:
+ ${leagueContext}
+ Here are recent X posts from clubs in the division:
+@@ -322,7 +322,7 @@ ${fixtureList}
+ ${sandbachOverrideNote}${sandbachFormNote}${confirmedResultsNote}
+ IMPORTANT: In the fixture list above, the format is always "Home Team v Away Team" — the first team named is always playing at home, the second team is always the visitor. Do not reverse this or infer venue/direction from anything else in the posts — always trust this explicit home/away order from the fixture list.
+ IMPORTANT: You MUST reference every single fixture listed above at least briefly — do not skip or omit any fixture from the list, even if it seems minor. If there isn't much to say about a fixture, a single short sentence is fine, but every fixture must be mentioned somewhere in your response.
+-CRITICAL: Only state facts that are directly supported by the league table data or the X posts provided above. Do NOT invent results, a losing streak, a table position change, or a specific points gap unless it is explicitly confirmed by the data given. If you are not certain about a specific detail, describe the situation more generally rather than stating something specific that might be wrong. Cross-check any claim about recent form or results against the "form" field in the league table and the actual posts before stating it.
++CRITICAL: Only state facts that are directly supported by the league table data or the X posts provided above. Do NOT invent results, a losing streak, a table position change, or a specific points gap unless it is explicitly confirmed by the data given. If you are not certain about a specific detail, describe the situation more generally rather than stating something specific that might be wrong. Cross-check any claim about recent form or results against the "form" field in the league table and the actual posts before stating it. IMPORTANT: a club's recent-form line is marked either "ALL COMPETITIONS INCLUDING CUP" or "LEAGUE MATCHES ONLY" — never state a specific number of consecutive league wins, losses, draws or unbeaten/winless games for a club marked ALL COMPETITIONS (the figure may include a cup result); for those clubs describe form only in general terms (e.g. "in excellent form", "winless in their last few"), never with an exact league-game count.
+ Here is the current league table:
+ ${leagueContext}
+ Here are recent X posts from clubs in the division:
+diff --git a/division-results.js b/division-results.js
+new file mode 100644
+index 000000000..46e3f23d1
+--- /dev/null
++++ b/division-results.js
+@@ -0,0 +1,117 @@
++const cheerio = require('cheerio');
++const fs = require('fs');
++const { leagueOnlyForm } = require('./sandbach-form.js');
++
++const OUTPUT_FILE = 'division-results.json';
++const FRESHNESS_HOURS = 20; // results only change after matches are played — no need to re-scrape ~20 club pages every hour
++const DELAY_BETWEEN_CLUBS_MS = 400; // be polite to nwcfl.com rather than firing ~20 requests at once
++
++function isFreshEnough() {
++  if (!fs.existsSync(OUTPUT_FILE)) return false;
++  try {
++    const existing = JSON.parse(fs.readFileSync(OUTPUT_FILE, 'utf-8'));
++    const ageHours = (Date.now() - new Date(existing.scrapedAt).getTime()) / 3600000;
++    return ageHours < FRESHNESS_HOURS;
++  } catch {
++    return false;
++  }
++}
++
++function sleep(ms) {
++  return new Promise(resolve => setTimeout(resolve, ms));
++}
++
++// Same parsing approach as scrape.js's Sandbach-specific scraper (same site
++// template: a table whose header row mentions "Opposition" and "K.O.", and a
++// competition-note row in brackets that describes the fixture directly above
++// it) — generalised here to work for any club's page, not just Sandbach's.
++function parseClubFixtures(html) {
++  const $ = cheerio.load(html);
++
++  let targetTable = null;
++  $('table').each((i, table) => {
++    const headerText = $(table).find('tr').first().text();
++    if (headerText.includes('Opposition') && headerText.includes('K.O.')) {
++      targetTable = table;
++      return false;
++    }
++  });
++  if (!targetTable) return null;
++
++  const fixtures = [];
++  $(targetTable).find('tr').slice(1).each((i, row) => {
++    const cells = $(row).find('td');
++    if (cells.length === 0) return;
++
++    const firstCellText = $(cells[0]).text().trim();
++    const secondCellText = cells.length > 1 ? $(cells[1]).text().trim() : '';
++
++    const noteText = firstCellText.startsWith('(') ? firstCellText
++      : (secondCellText.startsWith('(') && !firstCellText) ? secondCellText
++      : null;
++
++    if (noteText) {
++      if (fixtures.length > 0) {
++        fixtures[fixtures.length - 1].competitionNote = noteText.replace(/[()]/g, '');
++      }
++      return;
++    }
++
++    const date = firstCellText;
++    const score = cells.length > 4 ? $(cells[4]).text().trim() : '';
++
++    fixtures.push({ date, score: score || null, competitionNote: null });
++  });
++
++  return fixtures;
++}
++
++async function run() {
++  if (isFreshEnough()) {
++    console.log('division-results.json is still fresh — skipping the division-wide re-scrape.');
++    return;
++  }
++  if (!fs.existsSync('league.json')) {
++    console.log('No league.json yet — run league.js first.');
++    return;
++  }
++
++  const { standings } = JSON.parse(fs.readFileSync('league.json', 'utf-8'));
++  const clubs = {};
++  let failures = 0;
++
++  for (const team of standings) {
++    // Sandbach's own league-only form is computed from data.json (already
++    // authoritative and already scraped every run) — no need to re-fetch it here.
++    if (team.team.includes('Sandbach')) continue;
++    if (!team.clubUrl) continue;
++
++    const url = `https://www.nwcfl.com/${team.clubUrl}`;
++    try {
++      const res = await fetch(url);
++      if (!res.ok) throw new Error(`HTTP ${res.status}`);
++      const html = await res.text();
++      const fixtures = parseClubFixtures(html);
++      if (!fixtures) throw new Error('fixtures table not found on club page');
++
++      const form = leagueOnlyForm(fixtures);
++      const leagueGamesPlayed = fixtures.filter(f => !f.competitionNote && f.score).length;
++      clubs[team.team] = { clubUrl: team.clubUrl, form, leagueGamesPlayed };
++      console.log(`${team.team}: ${form || '(no league results yet)'}`);
++    } catch (err) {
++      failures++;
++      console.warn(`Skipping ${team.team} (${team.clubUrl}): ${err.message}`);
++    }
++
++    await sleep(DELAY_BETWEEN_CLUBS_MS);
++  }
++
++  const output = { scrapedAt: new Date().toISOString(), clubs };
++  fs.writeFileSync(OUTPUT_FILE, JSON.stringify(output, null, 2));
++  console.log(`Saved ${OUTPUT_FILE} — ${Object.keys(clubs).length} club(s) covered, ${failures} failure(s).`);
++}
++
++run().catch(err => {
++  console.error('Failed:', err.message);
++  process.exit(1);
++});
+diff --git a/index.html b/index.html
+index 632bec22b..554b569db 100644
+--- a/index.html
++++ b/index.html
+@@ -400,6 +400,7 @@
+         <tr><td colspan="9">Loading...</td></tr>
+       </tbody>
+     </table>
++    <div style="font-size:11px; color:var(--muted); margin-top:6px;">&dagger; Form includes cup matches, as published by the league — a row without this marker has been checked against that club's results and shows league matches only.</div>
+     <button id="toggle-table-btn" class="btn" style="margin-top: 10px;">Show full table</button>
+   </div>
+ 
+@@ -1027,7 +1028,7 @@
+             <td>${t.lost}</td>
+             <td>${t.goalDifference}</td>
+             <td>${t.points}</td>
+-            <td style="overflow: hidden;">${formBadges(t.form)}</td>
++            <td style="overflow: hidden;">${formBadges(t.form)}${t.formIncludesCup ? '<span title="This form figure includes cup matches, not league games only" style="color:var(--muted); font-size:11px; margin-left:2px; cursor:help;">&dagger;</span>' : ''}</td>
+           </tr>
+         `;
+       }).join('');
+diff --git a/league.js b/league.js
+index d522bb34b..d5dc7dcf4 100644
+--- a/league.js
++++ b/league.js
+@@ -1,5 +1,6 @@
+ const cheerio = require('cheerio');
+ const fs = require('fs');
++const { computeSandbachLeagueForm } = require('./sandbach-form.js');
+ 
+ const URL = 'https://www.nwcfl.com/league-tables.php';
+ const DIVISION_NAME = 'First Division South';
+@@ -78,8 +79,29 @@ async function scrape() {
+     });
+   }
+ 
++  // nwcfl.com's "Last Six" form column includes cup results, not just the
++  // league (confirmed 10 Oct against Wolverhampton Casuals: it showed 5 wins
++  // when the league record was 4). Sandbach's own league-only form comes from
++  // data.json (already scraped every run); every other club's comes from
++  // division-results.json, a once-a-day sweep of each club's own page
++  // (division-results.js). A club is flagged all-competitions only when
++  // neither of those has a verified figure for it yet.
++  const sandbachLeagueForm = computeSandbachLeagueForm();
++  let divisionResults = {};
++  try {
++    divisionResults = JSON.parse(fs.readFileSync('division-results.json', 'utf-8')).clubs || {};
++  } catch {}
++
+   standings.forEach(team => {
+     team.form = formGuide[team.team] || null;
++    team.formIncludesCup = true;
++    if (team.team.includes('Sandbach') && sandbachLeagueForm) {
++      team.form = sandbachLeagueForm;
++      team.formIncludesCup = false;
++    } else if (divisionResults[team.team] && divisionResults[team.team].form) {
++      team.form = divisionResults[team.team].form;
++      team.formIncludesCup = false;
++    }
+   });
+ 
+   return {
+diff --git a/sandbach-form.js b/sandbach-form.js
+new file mode 100644
+index 000000000..6058e33d7
+--- /dev/null
++++ b/sandbach-form.js
+@@ -0,0 +1,46 @@
++const fs = require('fs');
++
++// nwcfl.com's own "Last Six" form column mixes cup games in with league games
++// (confirmed 10 Oct: Wolverhampton Casuals showed "WWWWWD" — 5 wins — when
++// their actual league record was 4 wins, the 5th being a cup win).
++//
++// Shared helper: given a list of played fixtures (each with a `score` like
++// "W 4-1" and a `competitionNote` that is null/empty for a league match),
++// returns a league-only form string, newest result first (e.g. "WDWWL"), or
++// null if there's nothing usable. Used both for Sandbach (from data.json,
++// which already has this shape) and, via division-results.js, for every
++// other club in the division (scraped from their own club page).
++function leagueOnlyForm(fixtures, maxGames = 6) {
++  const leagueResults = (fixtures || [])
++    .filter(f => !f.competitionNote && f.score && /^[WDL]\s/.test(f.score))
++    .map(f => ({ ...f, _sortKey: parseUkDate(f.date) }))
++    .filter(f => f._sortKey)
++    .sort((a, b) => a._sortKey - b._sortKey);
++
++  if (leagueResults.length === 0) return null;
++
++  const latest = leagueResults.slice(-maxGames).reverse(); // newest first
++  return latest.map(f => f.score.trim()[0]).join('');
++}
++
++// Sandbach United specifically: we already hold a full, competition-tagged
++// fixture history for our own club in data.json, so there is no need to
++// scrape anything extra — just read it and compute the league-only form.
++function computeSandbachLeagueForm(maxGames = 6) {
++  let data;
++  try {
++    data = JSON.parse(fs.readFileSync('data.json', 'utf-8'));
++  } catch {
++    return null;
++  }
++  return leagueOnlyForm(data.allFixtures || [], maxGames);
++}
++
++function parseUkDate(dateStr) {
++  // "Sat 19/09/26" style
++  const m = String(dateStr).match(/(\d{2})\/(\d{2})\/(\d{2})/);
++  if (!m) return null;
++  return new Date(2000 + parseInt(m[3], 10), parseInt(m[2], 10) - 1, parseInt(m[1], 10));
++}
++
++module.exports = { computeSandbachLeagueForm, leagueOnlyForm, parseUkDate };
