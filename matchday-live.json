@@ -1,23 +1,23 @@
 {
-  "generatedAt": "2026-10-10T13:35:32.672Z",
+  "generatedAt": "2026-10-10T14:01:05.701Z",
   "fixtureDate": "2026-10-10",
   "kickoff": "15:00",
   "homeTeam": "Sandbach United",
   "awayTeam": "Cheadle Heath Nomads",
-  "postsUsed": 4,
+  "postsUsed": 6,
   "imagesAnalyzedThisRun": 0,
   "totalImagesAnalyzed": 3,
   "match": {
-    "score": null,
-    "scoreSource": "none",
-    "scoreConfirmed": false,
-    "feedScore": null,
+    "score": "0-0",
+    "scoreSource": "match_feed_stated",
+    "scoreConfirmed": true,
+    "feedScore": "0-0",
     "scoreDiscrepancy": null,
     "unconfirmedGoals": [],
     "finalScoreAnnounced": null,
     "halfTimeScoreAnnounced": null,
     "htDiscrepancy": null,
-    "matchStage": "scheduled",
+    "matchStage": "first_half",
     "lineups": {
       "home": {
         "players": [],
@@ -74,22 +74,22 @@
       "firstHalf": {
         "home": 0,
         "away": 0,
-        "note": "No match action data available"
+        "note": "Match only just kicked off; no meaningful shot or chance data available"
       },
       "secondHalf": {
         "home": 0,
         "away": 0,
-        "note": "No match action data available"
+        "note": "Second half has not occurred"
       },
       "extraTime": {
         "home": 0,
         "away": 0,
-        "note": "No extra time played"
+        "note": "No extra time"
       },
       "total": {
         "home": 0,
         "away": 0,
-        "note": "No match action data available"
+        "note": "Insufficient data; match is at minute 1"
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
@@ -97,22 +97,22 @@
       "firstHalf": {
         "home": 50,
         "away": 50,
-        "note": "No match action data available"
+        "note": "Match just begun; no data on possession or dominance"
       },
       "secondHalf": {
         "home": 50,
         "away": 50,
-        "note": "No match action data available"
+        "note": "Second half has not occurred"
       },
       "extraTime": {
         "home": 50,
         "away": 50,
-        "note": "No extra time played"
+        "note": "No extra time"
       },
       "total": {
         "home": 50,
         "away": 50,
-        "note": "No match action data available"
+        "note": "Insufficient data; match is at minute 1"
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
