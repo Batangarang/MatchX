@@ -1,5 +1,5 @@
 {
-  "scrapedAt": "2026-10-10T11:35:19.590Z",
+  "scrapedAt": "2026-10-10T12:35:20.740Z",
   "username": "SandbachFC_1st",
   "posts": [
     {
@@ -9,6 +9,14 @@
         "https://pbs.twimg.com/media/HUDmlc4WgAAhBe7.jpg"
       ],
       "isMatchday": false
+    },
+    {
+      "text": "Sandbach United v Cheadle Heath Nomads\n\nKick off at 3pm today, we look forward to seeing you at the game as The Bach look to keep themselves in top spot with another win and 3 points, it will be a tough one and your support will spur the boys on! https://t.co/YSUF1YAZXl",
+      "createdAt": "2026-10-10T12:33:40.000Z",
+      "images": [
+        "https://pbs.twimg.com/media/HURQPlDWcAA6idr.jpg"
+      ],
+      "isMatchday": true
     },
     {
       "text": "11th home game of the season, and our 5th in a row. Last time out against @CheadleNomads it finished 3-3 can an in form Sandbach grab all three points this time round. Why not come down and see if we can keep ourselves at the top of the table. https://t.co/MvqYsmi0Gl",
@@ -61,12 +69,6 @@
     {
       "text": "Sub \n\nFowles off\nBirchall on",
       "createdAt": "2026-10-06T20:09:00.000Z",
-      "images": [],
-      "isMatchday": true
-    },
-    {
-      "text": "Sub\n\nBedford off\nMitch Nolan on",
-      "createdAt": "2026-10-06T20:05:57.000Z",
       "images": [],
       "isMatchday": true
     }
