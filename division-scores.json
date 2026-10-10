@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-10-10T15:20:35.616Z",
+  "generatedAt": "2026-10-10T15:25:26.984Z",
   "date": "2026-10-10",
   "isToday": true,
-  "postCount": 140,
-  "latestPostTimestamp": "2026-10-10T15:19:48.000Z",
+  "postCount": 144,
+  "latestPostTimestamp": "2026-10-10T15:25:42.000Z",
   "fixtures": [
     {
       "home": "Allscott Heath",
@@ -33,7 +33,7 @@
           "scorer": "George Cross"
         },
         {
-          "minute": null,
+          "minute": 66,
           "team": "home",
           "scorer": "Ben Davies"
         }
@@ -52,7 +52,7 @@
       "away": "Shawbury United",
       "kickoff": "15:00",
       "score": "0-1",
-      "matchStage": "half_time",
+      "matchStage": "second_half",
       "goals": [
         {
           "minute": 38,
@@ -64,6 +64,10 @@
         {
           "team": "home",
           "player": null
+        },
+        {
+          "team": "away",
+          "player": "Ethan"
         }
       ],
       "redCards": [],
@@ -74,7 +78,7 @@
       "away": "Dawley Town",
       "kickoff": "15:00",
       "score": "1-2",
-      "matchStage": "half_time",
+      "matchStage": "second_half",
       "goals": [
         {
           "minute": 11,
@@ -116,7 +120,7 @@
       "away": "Widnes Town",
       "kickoff": "15:00",
       "score": "0-0",
-      "matchStage": "second_half",
+      "matchStage": "half_time",
       "goals": [],
       "yellowCards": [
         {
@@ -125,7 +129,7 @@
         },
         {
           "team": "home",
-          "player": "Holt"
+          "player": null
         }
       ],
       "redCards": [
@@ -141,7 +145,7 @@
       "away": "Cheadle Heath Nomads",
       "kickoff": "15:00",
       "score": "3-1",
-      "matchStage": "half_time",
+      "matchStage": "second_half",
       "goals": [
         {
           "minute": 18,
@@ -197,12 +201,12 @@
         {
           "minute": 21,
           "team": "home",
-          "scorer": "Parker"
+          "scorer": "Callum Parker"
         },
         {
           "minute": 35,
           "team": "home",
-          "scorer": "Parker"
+          "scorer": "Callum Parker"
         },
         {
           "minute": 62,
@@ -213,7 +217,7 @@
       "yellowCards": [
         {
           "team": "home",
-          "player": "Parker"
+          "player": "Callum Parker"
         }
       ],
       "redCards": [],
@@ -223,13 +227,18 @@
       "home": "Telford Town",
       "away": "New Mills",
       "kickoff": "15:00",
-      "score": "1-0",
+      "score": "1-1",
       "matchStage": "second_half",
       "goals": [
         {
-          "minute": 54,
+          "minute": 53,
           "team": "home",
           "scorer": "Godfrey Summerville"
+        },
+        {
+          "minute": 66,
+          "team": "away",
+          "scorer": "Will Frankish"
         }
       ],
       "yellowCards": [],
@@ -237,5 +246,5 @@
       "scoreSource": "explicit"
     }
   ],
-  "ticker": "@MDTFC: 62’ Widnes Sub \n\nOFF \n9 - Pires \n\nON\n15 - Raoof"
+  "ticker": "@NewMillsFC: Will Frankish slots home on 66 Mins ⚽️ Telford 1-1 Millers #UptheMillers https://t.co/KZZnfmX4pj"
 }

@@ -83,28 +83,28 @@
       "home": "Alsager Town",
       "away": "Shawbury United",
       "score": "0-1",
-      "matchStage": "half_time",
+      "matchStage": "second_half",
       "scoreSource": "explicit"
     },
     "Barnton|Dawley Town": {
       "home": "Barnton",
       "away": "Dawley Town",
       "score": "1-2",
-      "matchStage": "half_time",
+      "matchStage": "second_half",
       "scoreSource": "explicit"
     },
     "Market Drayton Town|Widnes Town": {
       "home": "Market Drayton Town",
       "away": "Widnes Town",
       "score": "0-0",
-      "matchStage": "second_half",
+      "matchStage": "half_time",
       "scoreSource": "explicit"
     },
     "Sandbach United|Cheadle Heath Nomads": {
       "home": "Sandbach United",
       "away": "Cheadle Heath Nomads",
       "score": "3-1",
-      "matchStage": "half_time",
+      "matchStage": "second_half",
       "scoreSource": "manual_override"
     },
     "Stafford Town|Wednesfield Community": {
@@ -117,7 +117,7 @@
     "Telford Town|New Mills": {
       "home": "Telford Town",
       "away": "New Mills",
-      "score": "1-0",
+      "score": "1-1",
       "matchStage": "second_half",
       "scoreSource": "explicit"
     }
