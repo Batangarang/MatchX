@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-10-10T15:10:32.881Z",
+  "generatedAt": "2026-10-10T15:15:33.912Z",
   "date": "2026-10-10",
   "isToday": true,
-  "postCount": 129,
-  "latestPostTimestamp": "2026-10-10T15:10:41.000Z",
+  "postCount": 134,
+  "latestPostTimestamp": "2026-10-10T15:14:10.000Z",
   "fixtures": [
     {
       "home": "Allscott Heath",
       "away": "Brereton Social",
       "kickoff": "15:00",
-      "score": "2-1",
+      "score": "3-1",
       "matchStage": "half_time",
       "goals": [
         {
@@ -31,6 +31,11 @@
           "minute": 48,
           "team": "home",
           "scorer": "George Cross"
+        },
+        {
+          "minute": 53,
+          "team": "home",
+          "scorer": "Ben Davies (penalty)"
         }
       ],
       "yellowCards": [
@@ -59,6 +64,10 @@
         {
           "team": "away",
           "player": null
+        },
+        {
+          "team": "away",
+          "player": "Evans"
         }
       ],
       "redCards": [],
@@ -111,7 +120,7 @@
       "away": "Widnes Town",
       "kickoff": "15:00",
       "score": "0-0",
-      "matchStage": "half_time",
+      "matchStage": "second_half",
       "goals": [],
       "yellowCards": [
         {
@@ -156,7 +165,7 @@
         {
           "minute": 45,
           "team": "home",
-          "scorer": "Hatton"
+          "scorer": "Hatton (penalty)"
         }
       ],
       "yellowCards": [
@@ -166,7 +175,7 @@
         },
         {
           "team": "away",
-          "player": null
+          "player": "number 6"
         }
       ],
       "redCards": [],
@@ -177,7 +186,7 @@
       "away": "Wednesfield Community",
       "kickoff": "15:00",
       "score": "3-1",
-      "matchStage": "half_time",
+      "matchStage": "second_half",
       "goals": [
         {
           "minute": 4,
@@ -217,9 +226,9 @@
       "matchStage": "second_half",
       "goals": [
         {
-          "minute": 53,
+          "minute": 54,
           "team": "home",
-          "scorer": null
+          "scorer": "Godfrey Summerville"
         }
       ],
       "yellowCards": [],
@@ -227,5 +236,5 @@
       "scoreSource": "explicit"
     }
   ],
-  "ticker": "@MDTFC: 52’ Ezaye gets into space and flashes his shot wide of the left hand post \n\n🔴⚪️ 0-0 🟡⚫️"
+  "ticker": "@MDTFC: 56’ Brown tries a spectacular overhead kick but it’s straight into the keepers hands \n\n🔴⚪️ 0-0 🟡⚫️"
 }
