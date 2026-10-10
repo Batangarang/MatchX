@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-10-10T15:10:45.974Z",
+  "generatedAt": "2026-10-10T15:20:48.373Z",
   "fixtureDate": "2026-10-10",
   "kickoff": "15:00",
   "homeTeam": "Sandbach United",
   "awayTeam": "Cheadle Heath Nomads",
-  "postsUsed": 29,
-  "imagesAnalyzedThisRun": 1,
+  "postsUsed": 31,
+  "imagesAnalyzedThisRun": 0,
   "totalImagesAnalyzed": 11,
   "match": {
     "score": "3-1",
@@ -17,7 +17,7 @@
       {
         "minute": 18,
         "team": "away",
-        "scorer": "CHN 7"
+        "scorer": "CHN 7 (number 7)"
       }
     ],
     "finalScoreAnnounced": null,
@@ -27,26 +27,29 @@
     "lineups": {
       "home": {
         "players": [
+          "9. (number 9 - Sandbach equaliser scorer, likely Fowles based on description)",
           "1. Gregg Hall",
-          "9. Josh Fowles"
+          "(Josh Fowles - confirmed in starting 11)",
+          "(Birchall - confirmed in starting 11)",
+          "(Hatton - confirmed in starting 11)",
+          "(Finney - confirmed in starting 11)",
+          "(Stan - received yellow card at ~36 mins)"
         ],
         "substitutes": [
-          "Cope"
+          "Cope (replaced Stan Tatters)"
         ],
         "manager": null,
         "officials": []
       },
       "away": {
         "players": [
-          "7. CHN 7",
-          "1. Jones"
+          "1. AJ Jones",
+          "5. K.Osigwe",
+          "6. (defender - yellow card at 53 mins)",
+          "7. (CHN 7 - 18 minute goal scorer)"
         ],
         "substitutes": [
-          "12. C. Graham",
-          "14. K. Leckey",
-          "15. E. Rotimi",
-          "16. L. Knight",
-          "17. M. Lewenes"
+          "14. K.Leckey (replaced 5. K.Osigwe at 47 mins)"
         ],
         "manager": null,
         "officials": []
@@ -71,7 +74,7 @@
       {
         "minute": 45,
         "team": "home",
-        "scorer": "Hatton"
+        "scorer": "Hatton (penalty)"
       }
     ],
     "yellowCards": [
@@ -88,7 +91,12 @@
       {
         "minute": 53,
         "team": "away",
-        "player": "CHN 6"
+        "player": "CHN 6 (number 6)"
+      },
+      {
+        "minute": 62,
+        "team": "away",
+        "player": "CHN defender (number not specified)"
       }
     ],
     "redCards": [],
@@ -126,12 +134,12 @@
       "firstHalf": {
         "home": 2.3,
         "away": 0.8,
-        "note": "Home team scored twice (Fowles, Birchall) plus penalty; away team scored once early. Home dominated in terms of chances converted. (raised to reflect goals actually scored)"
+        "note": "Home team scored 3 goals (Fowles, Birchall, Hatton penalty); away team scored 1 (CHN 7). Home dominated after going down 0-1, creating multiple clear chances including Birchall's double save opportunity and strong build-up play. Away team caught out defensively multiple times. (raised to reflect goals actually scored)"
       },
       "secondHalf": {
-        "home": 0.3,
-        "away": 0.3,
-        "note": "Limited information from posts; match only covered to 53 minutes of second half."
+        "home": 0.4,
+        "away": 0.2,
+        "note": "Limited action described in second half posts; posts only cover up to 62 minutes. No goals or major chances noted."
       },
       "extraTime": {
         "home": 0,
@@ -140,21 +148,21 @@
       },
       "total": {
         "home": 2.3,
-        "away": 0.9,
-        "note": "Home team scored 3 goals (2 from open play + 1 penalty); away team scored 1. xG reflects the significant difference in chance creation. (raised to reflect goals actually scored)"
+        "away": 0.8,
+        "note": "Home team clearly superior, scoring 3 goals in first half. Away team conceded from defensive errors and lapses in concentration. (raised to reflect goals actually scored)"
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
     "matchControl": {
       "firstHalf": {
-        "home": 65,
-        "away": 35,
-        "note": "Home team came from 0-1 down to lead 3-1 by half-time, indicating dominance after early setback. Multiple quality finishes and a penalty conversion."
+        "home": 70,
+        "away": 30,
+        "note": "Away team scored first (18 min) but home team dominated thereafter, scoring 3 goals to take commanding 3-1 half-time lead. Home team controlled tempo and created clear scoring opportunities."
       },
       "secondHalf": {
-        "home": 55,
-        "away": 45,
-        "note": "Limited coverage; away team made a substitution suggesting tactical adjustment, but only 53 minutes posted."
+        "home": 60,
+        "away": 40,
+        "note": "Limited commentary available; posts only cover to 62 minutes. Home team appear to maintain control, free kicks awarded to Sandbach, substitutions suggest home team managing the game."
       },
       "extraTime": {
         "home": 50,
@@ -162,9 +170,9 @@
         "note": "No extra time played."
       },
       "total": {
-        "home": 60,
-        "away": 40,
-        "note": "Home team led throughout second half and controlled much of the first half after equalizing. Away team started well (early goal) but could not maintain pressure."
+        "home": 65,
+        "away": 35,
+        "note": "Home team dominated throughout, recovering from early deficit to establish 3-1 lead by half-time and maintaining control into second half."
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
