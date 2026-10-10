@@ -90,7 +90,7 @@
       "home": "Barnton",
       "away": "Dawley Town",
       "score": "1-2",
-      "matchStage": "second_half",
+      "matchStage": "half_time",
       "scoreSource": "explicit"
     },
     "Market Drayton Town|Widnes Town": {
@@ -111,7 +111,7 @@
       "home": "Stafford Town",
       "away": "Wednesfield Community",
       "score": "3-1",
-      "matchStage": "second_half",
+      "matchStage": "half_time",
       "scoreSource": "explicit"
     },
     "Telford Town|New Mills": {

@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-10-10T15:01:00.834Z",
+  "generatedAt": "2026-10-10T15:05:29.549Z",
   "date": "2026-10-10",
   "isToday": true,
-  "postCount": 112,
-  "latestPostTimestamp": "2026-10-10T14:58:12.000Z",
+  "postCount": 120,
+  "latestPostTimestamp": "2026-10-10T15:04:38.000Z",
   "fixtures": [
     {
       "home": "Allscott Heath",
@@ -20,12 +20,17 @@
         {
           "minute": 14,
           "team": "away",
-          "scorer": "Unknown"
+          "scorer": null
         },
         {
           "minute": 24,
           "team": "home",
           "scorer": "Ben Summers"
+        },
+        {
+          "minute": 48,
+          "team": "home",
+          "scorer": "George Cross"
         }
       ],
       "yellowCards": [
@@ -64,17 +69,17 @@
       "away": "Dawley Town",
       "kickoff": "15:00",
       "score": "1-2",
-      "matchStage": "second_half",
+      "matchStage": "half_time",
       "goals": [
         {
-          "minute": 9,
+          "minute": 11,
           "team": "away",
           "scorer": "Cian Fenlon"
         },
         {
           "minute": 25,
           "team": "away",
-          "scorer": "Unknown"
+          "scorer": null
         },
         {
           "minute": 33,
@@ -136,7 +141,7 @@
         {
           "minute": 18,
           "team": "away",
-          "scorer": "Unknown"
+          "scorer": null
         },
         {
           "minute": 27,
@@ -157,7 +162,7 @@
       "yellowCards": [
         {
           "team": "home",
-          "player": null
+          "player": "Stan Tatters"
         }
       ],
       "redCards": [],
@@ -168,7 +173,7 @@
       "away": "Wednesfield Community",
       "kickoff": "15:00",
       "score": "3-1",
-      "matchStage": "second_half",
+      "matchStage": "half_time",
       "goals": [
         {
           "minute": 4,
@@ -178,7 +183,7 @@
         {
           "minute": 17,
           "team": "away",
-          "scorer": "Unknown"
+          "scorer": null
         },
         {
           "minute": 21,
@@ -212,5 +217,5 @@
       "scoreSource": "explicit"
     }
   ],
-  "ticker": "@TelfordTownFC: HALF TIME: Telford Town 0 - 0 New Mills\n#TELNEW https://t.co/Zbq2C1jysh"
+  "ticker": "@AllscottHeathFC: 48': George Cross scores for Allscott Heath 🙌\n#ALLBRE #Pitchero https://t.co/Lg7P1Vy48a"
 }
