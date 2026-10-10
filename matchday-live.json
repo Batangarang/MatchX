@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-10-10T15:05:45.344Z",
+  "generatedAt": "2026-10-10T15:10:45.974Z",
   "fixtureDate": "2026-10-10",
   "kickoff": "15:00",
   "homeTeam": "Sandbach United",
   "awayTeam": "Cheadle Heath Nomads",
-  "postsUsed": 27,
-  "imagesAnalyzedThisRun": 0,
-  "totalImagesAnalyzed": 10,
+  "postsUsed": 29,
+  "imagesAnalyzedThisRun": 1,
+  "totalImagesAnalyzed": 11,
   "match": {
     "score": "3-1",
     "scoreSource": "manual_override",
@@ -84,6 +84,11 @@
         "minute": 36,
         "team": "away",
         "player": "Stan"
+      },
+      {
+        "minute": 53,
+        "team": "away",
+        "player": "CHN 6"
       }
     ],
     "redCards": [],
@@ -93,6 +98,12 @@
         "team": "home",
         "playerOff": "Stan Tatters",
         "playerOn": "Cope"
+      },
+      {
+        "minute": 47,
+        "team": "away",
+        "playerOff": "5. K.Osigwe",
+        "playerOn": "14. K.Leckey"
       }
     ],
     "sinBins": [],
@@ -115,45 +126,45 @@
       "firstHalf": {
         "home": 2.3,
         "away": 0.8,
-        "note": "Sandbach had early chances (Birchall shot and rebound miss), then scored twice. Cheadle had one well-taken goal. (raised to reflect goals actually scored)"
+        "note": "Home team scored twice (Fowles, Birchall) plus penalty; away team scored once early. Home dominated in terms of chances converted. (raised to reflect goals actually scored)"
       },
       "secondHalf": {
-        "home": 0,
-        "away": 0,
-        "note": "No match events reported in second half."
+        "home": 0.3,
+        "away": 0.3,
+        "note": "Limited information from posts; match only covered to 53 minutes of second half."
       },
       "extraTime": {
         "home": 0,
         "away": 0,
-        "note": "Match did not go to extra time."
+        "note": "No extra time played."
       },
       "total": {
         "home": 2.3,
-        "away": 0.8,
-        "note": "Sandbach dominated chances and converted three goals. Cheadle scored one well-executed goal but created little else. (raised to reflect goals actually scored)"
+        "away": 0.9,
+        "note": "Home team scored 3 goals (2 from open play + 1 penalty); away team scored 1. xG reflects the significant difference in chance creation. (raised to reflect goals actually scored)"
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
     "matchControl": {
       "firstHalf": {
-        "home": 60,
-        "away": 40,
-        "note": "Sandbach started strong with early chances; Cheadle scored on a counter but Sandbach took control and scored three by half-time."
+        "home": 65,
+        "away": 35,
+        "note": "Home team came from 0-1 down to lead 3-1 by half-time, indicating dominance after early setback. Multiple quality finishes and a penalty conversion."
       },
       "secondHalf": {
-        "home": 50,
-        "away": 50,
-        "note": "No match events reported; equal split assumed."
+        "home": 55,
+        "away": 45,
+        "note": "Limited coverage; away team made a substitution suggesting tactical adjustment, but only 53 minutes posted."
       },
       "extraTime": {
         "home": 50,
         "away": 50,
-        "note": "Match did not go to extra time."
+        "note": "No extra time played."
       },
       "total": {
         "home": 60,
         "away": 40,
-        "note": "Sandbach controlled the first half and led 3-1 at half-time; second half events not detailed in posts."
+        "note": "Home team led throughout second half and controlled much of the first half after equalizing. Away team started well (early goal) but could not maintain pressure."
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
