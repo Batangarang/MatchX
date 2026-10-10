@@ -1,0 +1,53 @@
+diff --git a/.github/workflows/scrape.yml b/.github/workflows/scrape.yml
+index ca1a56301..29be2deef 100644
+--- a/.github/workflows/scrape.yml
++++ b/.github/workflows/scrape.yml
+@@ -23,6 +23,8 @@ jobs:
+           node-version: 24
+       - run: npm install
+       - id: gate
++        env:
++          MANUAL_RUN: ${{ github.event.inputs.manual }}
+         run: |
+           node -e "
+             const { shouldRunHourlyTask } = require('./hourly-gate.js');
+diff --git a/division-recap-engine.js b/division-recap-engine.js
+index 428587819..12a3f7387 100644
+--- a/division-recap-engine.js
++++ b/division-recap-engine.js
+@@ -217,7 +217,13 @@ async function run() {
+     const currentStandings = (leagueData.standings || [])
+       .filter(t => CURRENT_CLUB_NAMES.has(t.team) || t.team.includes('Sandbach'));
+     leagueContext = currentStandings
+-      .map(t => `${t.position}. ${t.team} — P${t.played} W${t.won} D${t.drawn} L${t.lost} GD${t.goalDifference} Pts${t.points}${t.form ? ' — recent form (NEWEST result first, so the FIRST letter is their most recent result): ' + t.form.split('').join('-') : ''}`)
++      .map(t => {
++        if (!t.form) return `${t.position}. ${t.team} — P${t.played} W${t.won} D${t.drawn} L${t.lost} GD${t.goalDifference} Pts${t.points}`;
++        const formLabel = t.formIncludesCup
++          ? 'recent form, ALL COMPETITIONS INCLUDING CUP — do not describe this as a number of consecutive LEAGUE games or results'
++          : 'recent form, LEAGUE MATCHES ONLY — safe to state as a specific number of consecutive league results';
++        return `${t.position}. ${t.team} — P${t.played} W${t.won} D${t.drawn} L${t.lost} GD${t.goalDifference} Pts${t.points} — ${formLabel} (NEWEST result first, so the FIRST letter is their most recent result): ${t.form.split('').join('-')}`;
++      })
+       .join('\n');
+   }
+ 
+diff --git a/hourly-gate.js b/hourly-gate.js
+index f7150fc19..4a21031a6 100644
+--- a/hourly-gate.js
++++ b/hourly-gate.js
+@@ -3,6 +3,7 @@ const fs = require('fs');
+ function shouldRunHourlyTask() {
+   const stateFile = '.scrape-lastrun.json';
+   const now = new Date();
++  const manual = process.env.MANUAL_RUN === 'true';
+ 
+   let lastRun = null;
+   if (fs.existsSync(stateFile)) {
+@@ -10,7 +11,7 @@ function shouldRunHourlyTask() {
+   }
+ 
+   const minutesSinceLastRun = lastRun ? (now - lastRun) / 60000 : Infinity;
+-  if (minutesSinceLastRun < 55) return false;
++  if (!manual && minutesSinceLastRun < 55) return false;
+ 
+   fs.writeFileSync(stateFile, JSON.stringify({ lastRun: now.toISOString() }));
+   return true;
