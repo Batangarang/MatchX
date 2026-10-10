@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-10-10T15:25:41.016Z",
+  "generatedAt": "2026-10-10T15:31:03.552Z",
   "fixtureDate": "2026-10-10",
   "kickoff": "15:00",
   "homeTeam": "Sandbach United",
   "awayTeam": "Cheadle Heath Nomads",
-  "postsUsed": 32,
-  "imagesAnalyzedThisRun": 0,
-  "totalImagesAnalyzed": 11,
+  "postsUsed": 34,
+  "imagesAnalyzedThisRun": 1,
+  "totalImagesAnalyzed": 12,
   "match": {
     "score": "3-1",
     "scoreSource": "manual_override",
@@ -105,7 +105,7 @@
     "redCards": [],
     "substitutions": [
       {
-        "minute": 46,
+        "minute": 45,
         "team": "home",
         "playerOff": "Stan Tatters",
         "playerOn": "Cope"
@@ -121,6 +121,12 @@
         "team": "away",
         "playerOff": "5. K. Osigwe",
         "playerOn": "14. K. Leckey"
+      },
+      {
+        "minute": 69,
+        "team": "away",
+        "playerOff": "K. Depeiaza",
+        "playerOn": "E. Rotimi"
       }
     ],
     "sinBins": [],
@@ -142,13 +148,13 @@
     "roughXG": {
       "firstHalf": {
         "home": 2.3,
-        "away": 1.5,
-        "note": "Home team scored twice from open play plus a penalty; away team scored once from a chip/finish after a defensive error. Home showed more clinical finishing; away had a good early opportunity but conceded more. (raised to reflect goals actually scored)"
+        "away": 0.8,
+        "note": "Sandbach came from 0-1 down to lead 3-1 by half-time with quality finishing from Fowles, Birchall, and a penalty from Hatton. Cheadle Heath scored once early but limited thereafter. (raised to reflect goals actually scored)"
       },
       "secondHalf": {
         "home": 0.5,
-        "away": 0.5,
-        "note": "Limited clear chances recorded in posts. Home had a corner attempt that went over; away attempting to get back into the match but posts do not detail significant chances."
+        "away": 0.3,
+        "note": "Second half appeared more controlled by Sandbach with few clear-cut chances. Limited action in posts from 46 onwards."
       },
       "extraTime": {
         "home": 0,
@@ -156,9 +162,9 @@
         "note": "No extra time played."
       },
       "total": {
-        "home": 2.5,
-        "away": 2,
-        "note": "Home team dominated with 3 goals by half-time (two excellent finishes plus a penalty). Away team showed one moment of clinical play early but conceded heavily. Second half data limited in detail."
+        "home": 2.3,
+        "away": 0.8,
+        "note": "Sandbach scored 3 goals (one from open play, one from penalty), Cheadle Heath scored 1. Home team dominated quality throughout. (raised to reflect goals actually scored)"
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
@@ -166,12 +172,12 @@
       "firstHalf": {
         "home": 65,
         "away": 35,
-        "note": "Home team went behind early but responded strongly with two quality goals before half-time and a penalty conversion. Clearly dominated the half despite the early setback."
+        "note": "Sandbach dominated after early Cheadle Heath goal, scoring three times and going into half-time 3-1 up with control of the match."
       },
       "secondHalf": {
-        "home": 60,
-        "away": 40,
-        "note": "Home team maintained control with substitutions and defending a 3-1 lead. Away team made changes to try to get back into the match but limited clear chances mentioned in posts."
+        "home": 70,
+        "away": 30,
+        "note": "Sandbach maintained control in the second half with limited Cheadle Heath threat. Posts indicate Sandbach had chances while Cheadle Heath made substitutions."
       },
       "extraTime": {
         "home": 50,
@@ -179,9 +185,9 @@
         "note": "No extra time played."
       },
       "total": {
-        "home": 62,
-        "away": 38,
-        "note": "Home team (Sandbach United) controlled much of the match, particularly after going behind early. They showed excellent recovery and clinical finishing to build a 3-1 half-time lead."
+        "home": 68,
+        "away": 32,
+        "note": "Sandbach dominated the match, particularly after taking the lead. Cheadle Heath competitive early but unable to match hosts' control and quality."
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
