@@ -75,8 +75,8 @@
     "Allscott Heath|Brereton Social": {
       "home": "Allscott Heath",
       "away": "Brereton Social",
-      "score": "1-1",
-      "matchStage": "second_half",
+      "score": "2-1",
+      "matchStage": "half_time",
       "scoreSource": "explicit"
     },
     "Alsager Town|Shawbury United": {
@@ -97,14 +97,14 @@
       "home": "Market Drayton Town",
       "away": "Widnes Town",
       "score": "0-0",
-      "matchStage": "second_half",
+      "matchStage": "half_time",
       "scoreSource": "explicit"
     },
     "Sandbach United|Cheadle Heath Nomads": {
       "home": "Sandbach United",
       "away": "Cheadle Heath Nomads",
-      "score": "2-1",
-      "matchStage": "second_half",
+      "score": "3-1",
+      "matchStage": "half_time",
       "scoreSource": "explicit"
     },
     "Stafford Town|Wednesfield Community": {

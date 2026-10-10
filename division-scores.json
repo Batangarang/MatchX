@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-10-10T14:45:35.286Z",
+  "generatedAt": "2026-10-10T14:50:33.614Z",
   "date": "2026-10-10",
   "isToday": true,
-  "postCount": 98,
-  "latestPostTimestamp": "2026-10-10T14:45:59.000Z",
+  "postCount": 108,
+  "latestPostTimestamp": "2026-10-10T14:50:16.000Z",
   "fixtures": [
     {
       "home": "Allscott Heath",
       "away": "Brereton Social",
       "kickoff": "15:00",
-      "score": "1-1",
-      "matchStage": "second_half",
+      "score": "2-1",
+      "matchStage": "half_time",
       "goals": [
         {
           "minute": 6,
@@ -20,7 +20,7 @@
         {
           "minute": 14,
           "team": "away",
-          "scorer": "Unknown"
+          "scorer": null
         },
         {
           "minute": 24,
@@ -53,11 +53,7 @@
       "yellowCards": [
         {
           "team": "away",
-          "player": "Ethan"
-        },
-        {
-          "team": "home",
-          "player": "Unknown"
+          "player": null
         }
       ],
       "redCards": [],
@@ -78,7 +74,7 @@
         {
           "minute": 25,
           "team": "away",
-          "scorer": "Cuffy"
+          "scorer": null
         },
         {
           "minute": 33,
@@ -110,11 +106,15 @@
       "away": "Widnes Town",
       "kickoff": "15:00",
       "score": "0-0",
-      "matchStage": "second_half",
+      "matchStage": "half_time",
       "goals": [],
       "yellowCards": [
         {
           "team": "away",
+          "player": "Liam Evans"
+        },
+        {
+          "team": "home",
           "player": "Holt"
         }
       ],
@@ -130,13 +130,13 @@
       "home": "Sandbach United",
       "away": "Cheadle Heath Nomads",
       "kickoff": "15:00",
-      "score": "2-1",
-      "matchStage": "second_half",
+      "score": "3-1",
+      "matchStage": "half_time",
       "goals": [
         {
           "minute": 18,
           "team": "away",
-          "scorer": "Unknown"
+          "scorer": null
         },
         {
           "minute": 27,
@@ -144,20 +144,20 @@
           "scorer": "Fowles"
         },
         {
-          "minute": 37,
+          "minute": 35,
           "team": "home",
           "scorer": "Birchall"
         },
         {
           "minute": 45,
-          "team": "away",
-          "scorer": "Unknown"
+          "team": "home",
+          "scorer": "Hatton"
         }
       ],
       "yellowCards": [
         {
           "team": "home",
-          "player": "Stan"
+          "player": null
         }
       ],
       "redCards": [],
@@ -178,20 +178,25 @@
         {
           "minute": 17,
           "team": "away",
-          "scorer": "Unknown"
+          "scorer": null
         },
         {
           "minute": 21,
           "team": "home",
-          "scorer": "Callum Parker"
+          "scorer": "Parker"
         },
         {
           "minute": 35,
           "team": "home",
-          "scorer": "Callum Parker"
+          "scorer": "Parker"
         }
       ],
-      "yellowCards": [],
+      "yellowCards": [
+        {
+          "team": "home",
+          "player": "Parker"
+        }
+      ],
       "redCards": [],
       "scoreSource": "explicit"
     },
@@ -207,5 +212,5 @@
       "scoreSource": "explicit"
     }
   ],
-  "ticker": "@SandbachFC_1st: 🔵⚪️ v 🟣🟣\n\nSandbach United v Cheadle Heath Nomads\n\nPeno The Bach for a handball\n\n@CheadleNomads \n\n2 1\n\n45 gone"
+  "ticker": "@SandbachFC_1st: 🔵⚪️ v 🟣🟣\n\nSandbach United v Cheadle Heath Nomads\n\nHT here and The Bach after going 1 down have pulled it round with great goals from Fowles and Birchall finding the bottom corner and then on the stroke of HT Hatton buries his penalty and The Bach lead 3 1\n@CheadleNomads"
 }
