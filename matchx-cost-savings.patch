@@ -1,0 +1,93 @@
+diff --git a/.github/workflows/division-recap-preview.yml b/.github/workflows/division-recap-preview.yml
+index 31cc61452..5451b5020 100644
+--- a/.github/workflows/division-recap-preview.yml
++++ b/.github/workflows/division-recap-preview.yml
+@@ -33,6 +33,7 @@ jobs:
+         env:
+           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+           RECAP_MODE: preview
++          MANUAL_RUN: ${{ github.event.inputs.manual }}
+       - name: Commit updated data
+         run: |
+           git config user.name "github-actions[bot]"
+diff --git a/division-posts.js b/division-posts.js
+index fdf0b8475..f9fa804aa 100644
+--- a/division-posts.js
++++ b/division-posts.js
+@@ -5,14 +5,42 @@ const { logCost } = require('./cost-tracker.js');
+ 
+ const API_KEY = process.env.GETXAPI_KEY;
+ const SEVEN_DAYS_AGO = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000);
+-const FRESHNESS_MINUTES = 120; // widened from 60 given real-world evidence of overlapping-workflow cost
++// Widened from 60 given real-world evidence of overlapping-workflow cost.
++// On a day with NO First Division South fixtures, club posts barely change
++// between checks, so the window is widened further to cut background cost
++// (~190-210 GetXAPI calls/day was the single biggest non-matchday cost item).
++const FRESHNESS_MINUTES_MATCHDAY = 120;
++const FRESHNESS_MINUTES_QUIET = 240;
++
++function parseFixtureDate(dateStr) {
++  const match = dateStr.match(/(\d{1,2})\s+(\w+)\s+(\d{4})/);
++  if (!match) return null;
++  const months = ['january','february','march','april','may','june','july','august','september','october','november','december'];
++  const monthIndex = months.indexOf(match[2].toLowerCase());
++  if (monthIndex === -1) return null;
++  return new Date(parseInt(match[3]), monthIndex, parseInt(match[1]));
++}
++
++function isDivisionMatchdayToday() {
++  try {
++    const { fixtures } = JSON.parse(fs.readFileSync('division-fixtures.json', 'utf-8'));
++    const today = new Date();
++    return (fixtures || []).some(f => {
++      const d = parseFixtureDate(f.date);
++      return d && d.getFullYear() === today.getFullYear() && d.getMonth() === today.getMonth() && d.getDate() === today.getDate();
++    });
++  } catch {
++    return true; // unknown — err on the safer (shorter) freshness window
++  }
++}
+ 
+ function isDataFreshEnough() {
+   if (!fs.existsSync('division-posts.json')) return false;
+   try {
+     const existing = JSON.parse(fs.readFileSync('division-posts.json', 'utf-8'));
+     const age = (new Date() - new Date(existing.generatedAt)) / 60000;
+-    return age < FRESHNESS_MINUTES;
++    const limit = isDivisionMatchdayToday() ? FRESHNESS_MINUTES_MATCHDAY : FRESHNESS_MINUTES_QUIET;
++    return age < limit;
+   } catch {
+     return false;
+   }
+diff --git a/division-recap-engine.js b/division-recap-engine.js
+index da1effbd6..9cc6834d1 100644
+--- a/division-recap-engine.js
++++ b/division-recap-engine.js
+@@ -143,7 +143,26 @@ function shouldRunNow() {
+       return d && d >= range.start && d <= range.end;
+     });
+     if (weekFixtures.length === 0) return { proceed: false, reason: 'No fixtures in the coming week.' };
+-    return { proceed: true, periodKey: null, relevantFixtures: weekFixtures };
++
++    // Previously this ran on EVERY trigger (cron-job.org fires roughly every
++    // 30 min) with no throttle at all — confirmed in the cost log as 46-47
++    // Claude calls/day for a preview that only needs to change once a day.
++    // periodKey mixes today's date with a short signature of the fixture
++    // list, so it still regenerates the same day if a fixture is added,
++    // postponed or rescheduled, but not on every identical re-trigger.
++    const signature = weekFixtures
++      .map(f => `${f.home}|${f.away}|${f.date}|${f.kickoff}|${f.postponed ? 'PP' : ''}`)
++      .sort()
++      .join(';');
++    let hash = 0;
++    for (let i = 0; i < signature.length; i++) { hash = (hash * 31 + signature.charCodeAt(i)) >>> 0; }
++    const todayKey = now.toISOString().slice(0, 10);
++    const periodKey = `${todayKey}:${hash.toString(36)}`;
++
++    const manual = process.env.MANUAL_RUN === 'true';
++    if (!manual && alreadyRunForPeriod(periodKey)) return { proceed: false, reason: 'Already ran today for this fixture list.' };
++
++    return { proceed: true, periodKey, relevantFixtures: weekFixtures };
+   }
+ 
+   if (MODE === 'recap') {
