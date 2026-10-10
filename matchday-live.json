@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-10-10T14:01:05.701Z",
+  "generatedAt": "2026-10-10T14:10:40.368Z",
   "fixtureDate": "2026-10-10",
   "kickoff": "15:00",
   "homeTeam": "Sandbach United",
   "awayTeam": "Cheadle Heath Nomads",
-  "postsUsed": 6,
+  "postsUsed": 7,
   "imagesAnalyzedThisRun": 0,
   "totalImagesAnalyzed": 3,
   "match": {
@@ -72,14 +72,14 @@
     },
     "roughXG": {
       "firstHalf": {
-        "home": 0,
+        "home": 0.3,
         "away": 0,
-        "note": "Match only just kicked off; no meaningful shot or chance data available"
+        "note": "Sandbach had a shot saved by minute 9 with a rebound chance missed; minimal clear-cut opportunities reported so far"
       },
       "secondHalf": {
         "home": 0,
         "away": 0,
-        "note": "Second half has not occurred"
+        "note": "No second half data available"
       },
       "extraTime": {
         "home": 0,
@@ -87,22 +87,22 @@
         "note": "No extra time"
       },
       "total": {
-        "home": 0,
+        "home": 0.3,
         "away": 0,
-        "note": "Insufficient data; match is at minute 1"
+        "note": "Limited data; only early first-half chance reported"
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
     "matchControl": {
       "firstHalf": {
-        "home": 50,
-        "away": 50,
-        "note": "Match just begun; no data on possession or dominance"
+        "home": 55,
+        "away": 45,
+        "note": "Sandbach appear to have slight early control with shot attempt by minute 9"
       },
       "secondHalf": {
         "home": 50,
         "away": 50,
-        "note": "Second half has not occurred"
+        "note": "No second half data available"
       },
       "extraTime": {
         "home": 50,
@@ -110,9 +110,9 @@
         "note": "No extra time"
       },
       "total": {
-        "home": 50,
-        "away": 50,
-        "note": "Insufficient data; match is at minute 1"
+        "home": 55,
+        "away": 45,
+        "note": "Inferred from early first-half activity only"
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
