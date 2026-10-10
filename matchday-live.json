@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-10-10T15:31:03.552Z",
+  "generatedAt": "2026-10-10T15:40:49.104Z",
   "fixtureDate": "2026-10-10",
   "kickoff": "15:00",
   "homeTeam": "Sandbach United",
   "awayTeam": "Cheadle Heath Nomads",
-  "postsUsed": 34,
+  "postsUsed": 36,
   "imagesAnalyzedThisRun": 1,
-  "totalImagesAnalyzed": 12,
+  "totalImagesAnalyzed": 13,
   "match": {
     "score": "3-1",
     "scoreSource": "manual_override",
@@ -105,7 +105,7 @@
     "redCards": [],
     "substitutions": [
       {
-        "minute": 45,
+        "minute": 46,
         "team": "home",
         "playerOff": "Stan Tatters",
         "playerOn": "Cope"
@@ -127,6 +127,24 @@
         "team": "away",
         "playerOff": "K. Depeiaza",
         "playerOn": "E. Rotimi"
+      },
+      {
+        "minute": 69,
+        "team": "away",
+        "playerOff": "K.Depeiaza",
+        "playerOn": "E.Rotimi"
+      },
+      {
+        "minute": 78,
+        "team": "home",
+        "playerOff": "Kyle Foley",
+        "playerOn": "Harry Cain"
+      },
+      {
+        "minute": 78,
+        "team": "away",
+        "playerOff": "D.Lewis",
+        "playerOn": "L.Knight"
       }
     ],
     "sinBins": [],
@@ -149,12 +167,12 @@
       "firstHalf": {
         "home": 2.3,
         "away": 0.8,
-        "note": "Sandbach came from 0-1 down to lead 3-1 by half-time with quality finishing from Fowles, Birchall, and a penalty from Hatton. Cheadle Heath scored once early but limited thereafter. (raised to reflect goals actually scored)"
+        "note": "Sandbach scored 3 goals (Fowles, Birchall, penalty by Hatton) and created multiple chances including a double save situation. Cheadle Heath scored once early but appeared under pressure. (raised to reflect goals actually scored)"
       },
       "secondHalf": {
-        "home": 0.5,
-        "away": 0.3,
-        "note": "Second half appeared more controlled by Sandbach with few clear-cut chances. Limited action in posts from 46 onwards."
+        "home": 0.3,
+        "away": 0.2,
+        "note": "Second half was more controlled by Sandbach with limited clear-cut chances for either side. Birchall had one notable chance that forced a save."
       },
       "extraTime": {
         "home": 0,
@@ -163,21 +181,21 @@
       },
       "total": {
         "home": 2.3,
-        "away": 0.8,
-        "note": "Sandbach scored 3 goals (one from open play, one from penalty), Cheadle Heath scored 1. Home team dominated quality throughout. (raised to reflect goals actually scored)"
+        "away": 1,
+        "note": "Sandbach's 4 goals (3 in first half + 1 penalty) justified a significantly higher xG. Cheadle Heath's single goal in opening 20 minutes reflected limited overall threat."
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
     "matchControl": {
       "firstHalf": {
-        "home": 65,
-        "away": 35,
-        "note": "Sandbach dominated after early Cheadle Heath goal, scoring three times and going into half-time 3-1 up with control of the match."
-      },
-      "secondHalf": {
         "home": 70,
         "away": 30,
-        "note": "Sandbach maintained control in the second half with limited Cheadle Heath threat. Posts indicate Sandbach had chances while Cheadle Heath made substitutions."
+        "note": "Sandbach dominated after conceding early, creating multiple chances and scoring 3 goals including a penalty. Cheadle Heath's opening goal was against the run of play."
+      },
+      "secondHalf": {
+        "home": 65,
+        "away": 35,
+        "note": "Sandbach maintained control with Cheadle Heath attempting to claw back into the match but offering limited threat. Posts indicate Sandbach applying sustained pressure."
       },
       "extraTime": {
         "home": 50,
@@ -187,7 +205,7 @@
       "total": {
         "home": 68,
         "away": 32,
-        "note": "Sandbach dominated the match, particularly after taking the lead. Cheadle Heath competitive early but unable to match hosts' control and quality."
+        "note": "Sandbach in control for majority of match after early scare. Cheadle Heath never seriously threatened to level despite early goal."
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
