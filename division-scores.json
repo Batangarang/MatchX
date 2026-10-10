@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-10-10T15:30:50.610Z",
+  "generatedAt": "2026-10-10T15:35:26.352Z",
   "date": "2026-10-10",
   "isToday": true,
-  "postCount": 153,
-  "latestPostTimestamp": "2026-10-10T15:31:05.000Z",
+  "postCount": 159,
+  "latestPostTimestamp": "2026-10-10T15:35:37.000Z",
   "fixtures": [
     {
       "home": "Allscott Heath",
@@ -20,7 +20,7 @@
         {
           "minute": 14,
           "team": "away",
-          "scorer": "Unknown"
+          "scorer": "Brereton Social"
         },
         {
           "minute": 24,
@@ -47,7 +47,7 @@
       "away": "Shawbury United",
       "kickoff": "15:00",
       "score": "0-1",
-      "matchStage": "half_time",
+      "matchStage": "second_half",
       "goals": [
         {
           "minute": 38,
@@ -57,8 +57,8 @@
       ],
       "yellowCards": [
         {
-          "team": "away",
-          "player": "Unknown"
+          "team": "home",
+          "player": null
         }
       ],
       "redCards": [],
@@ -68,23 +68,28 @@
       "home": "Barnton",
       "away": "Dawley Town",
       "kickoff": "15:00",
-      "score": "1-2",
-      "matchStage": "half_time",
+      "score": "2-2",
+      "matchStage": "second_half",
       "goals": [
         {
-          "minute": 11,
+          "minute": 9,
           "team": "away",
           "scorer": "Cian Fenlon"
         },
         {
           "minute": 25,
           "team": "away",
-          "scorer": "Unknown"
+          "scorer": "Cuffy"
         },
         {
-          "minute": 33,
+          "minute": 31,
           "team": "home",
           "scorer": "Sigsworth"
+        },
+        {
+          "minute": 68,
+          "team": "home",
+          "scorer": "Stanton"
         }
       ],
       "yellowCards": [],
@@ -115,20 +120,16 @@
       "goals": [],
       "yellowCards": [
         {
-          "team": "home",
-          "player": "Manhertz"
-        },
-        {
           "team": "away",
           "player": "Liam Evans"
         },
         {
-          "team": "away",
-          "player": "Holt"
+          "team": "home",
+          "player": "Manhertz"
         },
         {
-          "team": "away",
-          "player": "Unknown"
+          "team": "home",
+          "player": "Holt"
         }
       ],
       "redCards": [
@@ -149,7 +150,7 @@
         {
           "minute": 18,
           "team": "away",
-          "scorer": "Unknown"
+          "scorer": null
         },
         {
           "minute": 27,
@@ -180,7 +181,7 @@
       "home": "Stafford Town",
       "away": "Wednesfield Community",
       "kickoff": "15:00",
-      "score": "4-2",
+      "score": "5-2",
       "matchStage": "second_half",
       "goals": [
         {
@@ -191,17 +192,17 @@
         {
           "minute": 17,
           "team": "away",
-          "scorer": "Unknown"
+          "scorer": null
         },
         {
           "minute": 21,
           "team": "home",
-          "scorer": "Parker"
+          "scorer": "Callum Parker"
         },
         {
           "minute": 35,
           "team": "home",
-          "scorer": "Parker"
+          "scorer": "Callum Parker"
         },
         {
           "minute": 62,
@@ -211,13 +212,18 @@
         {
           "minute": 74,
           "team": "home",
-          "scorer": "Wills"
+          "scorer": "Wilson"
+        },
+        {
+          "minute": 76,
+          "team": "home",
+          "scorer": "Taylor"
         }
       ],
       "yellowCards": [
         {
           "team": "home",
-          "player": "Parker"
+          "player": "Callum Parker"
         }
       ],
       "redCards": [],
@@ -231,7 +237,7 @@
       "matchStage": "second_half",
       "goals": [
         {
-          "minute": 53,
+          "minute": 54,
           "team": "home",
           "scorer": "Godfrey Summerville"
         },
@@ -243,7 +249,7 @@
         {
           "minute": 68,
           "team": "away",
-          "scorer": "Unknown"
+          "scorer": null
         }
       ],
       "yellowCards": [],
@@ -251,5 +257,5 @@
       "scoreSource": "explicit"
     }
   ],
-  "ticker": "@StaffordTown1st: 74 - WILLLSSSOONNN!!!\n\nIt goes straight in from the corner! \n\n🔴 4-2 🔵 https://t.co/3V4K3KM0Ki"
+  "ticker": "@StaffordTown1st: 76 - TAYYYLOOORRR!!!\n\nOh. My. Word!\n\nHe takes a quick freekick from just inside the Wednesfield half. He spotted the keeper off his line and lobs him! \n\nNot bad for his first goal for the club! \n\n🔴 5-2 🔵 https://t.co/JpilM3VEU9"
 }

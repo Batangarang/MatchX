@@ -83,14 +83,14 @@
       "home": "Alsager Town",
       "away": "Shawbury United",
       "score": "0-1",
-      "matchStage": "half_time",
+      "matchStage": "second_half",
       "scoreSource": "explicit"
     },
     "Barnton|Dawley Town": {
       "home": "Barnton",
       "away": "Dawley Town",
-      "score": "1-2",
-      "matchStage": "half_time",
+      "score": "2-2",
+      "matchStage": "second_half",
       "scoreSource": "explicit"
     },
     "Market Drayton Town|Widnes Town": {
@@ -110,7 +110,7 @@
     "Stafford Town|Wednesfield Community": {
       "home": "Stafford Town",
       "away": "Wednesfield Community",
-      "score": "4-2",
+      "score": "5-2",
       "matchStage": "second_half",
       "scoreSource": "explicit"
     },
