@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-10-10T14:10:40.368Z",
+  "generatedAt": "2026-10-10T14:15:39.603Z",
   "fixtureDate": "2026-10-10",
   "kickoff": "15:00",
   "homeTeam": "Sandbach United",
   "awayTeam": "Cheadle Heath Nomads",
-  "postsUsed": 7,
+  "postsUsed": 8,
   "imagesAnalyzedThisRun": 0,
   "totalImagesAnalyzed": 3,
   "match": {
@@ -74,45 +74,45 @@
       "firstHalf": {
         "home": 0.3,
         "away": 0,
-        "note": "Sandbach had a shot saved by minute 9 with a rebound chance missed; minimal clear-cut opportunities reported so far"
+        "note": "Sandbach had a shot and rebound chance early (minute 8-9), saved well by AJ. Minimal chances recorded."
       },
       "secondHalf": {
         "home": 0,
         "away": 0,
-        "note": "No second half data available"
+        "note": "No second-half action reported in posts."
       },
       "extraTime": {
         "home": 0,
         "away": 0,
-        "note": "No extra time"
+        "note": "No extra time."
       },
       "total": {
         "home": 0.3,
         "away": 0,
-        "note": "Limited data; only early first-half chance reported"
+        "note": "Very early in the match with minimal clear-cut chances. Only Sandbach shot recorded."
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
     "matchControl": {
       "firstHalf": {
-        "home": 55,
-        "away": 45,
-        "note": "Sandbach appear to have slight early control with shot attempt by minute 9"
+        "home": 60,
+        "away": 40,
+        "note": "Sandbach created an early chance (shot + rebound) in first 9 minutes, suggesting attacking intent and early dominance."
       },
       "secondHalf": {
         "home": 50,
         "away": 50,
-        "note": "No second half data available"
+        "note": "No second-half action reported in posts."
       },
       "extraTime": {
         "home": 50,
         "away": 50,
-        "note": "No extra time"
+        "note": "No extra time."
       },
       "total": {
         "home": 55,
         "away": 45,
-        "note": "Inferred from early first-half activity only"
+        "note": "Sandbach appeared to dominate early exchanges but match is very early with limited data."
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
