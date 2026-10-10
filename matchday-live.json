@@ -8,11 +8,11 @@
   "imagesAnalyzedThisRun": 1,
   "totalImagesAnalyzed": 9,
   "match": {
-    "score": "2-1",
-    "scoreSource": "division_scores",
+    "score": "3-1",
+    "scoreSource": "manual_override",
     "scoreConfirmed": true,
     "feedScore": "3-1",
-    "scoreDiscrepancy": "Match feed said 3-1 but the division live-scores feed said 2-1 — showing 2-1.",
+    "scoreDiscrepancy": null,
     "unconfirmedGoals": [
       {
         "minute": 45,
@@ -171,6 +171,7 @@
         "note": "Sandbach controlled the first half and turned the match around after falling behind, establishing a 3-1 lead by half-time."
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
-    }
+    },
+    "scoreBeforeOverride": "2-1"
   }
 }
