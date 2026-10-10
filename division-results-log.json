@@ -76,7 +76,7 @@
       "home": "Allscott Heath",
       "away": "Brereton Social",
       "score": "3-1",
-      "matchStage": "half_time",
+      "matchStage": "second_half",
       "scoreSource": "explicit"
     },
     "Alsager Town|Shawbury United": {
@@ -110,7 +110,7 @@
     "Stafford Town|Wednesfield Community": {
       "home": "Stafford Town",
       "away": "Wednesfield Community",
-      "score": "3-1",
+      "score": "3-2",
       "matchStage": "second_half",
       "scoreSource": "explicit"
     },

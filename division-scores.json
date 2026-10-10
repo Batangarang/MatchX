@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-10-10T15:15:33.912Z",
+  "generatedAt": "2026-10-10T15:20:35.616Z",
   "date": "2026-10-10",
   "isToday": true,
-  "postCount": 134,
-  "latestPostTimestamp": "2026-10-10T15:14:10.000Z",
+  "postCount": 140,
+  "latestPostTimestamp": "2026-10-10T15:19:48.000Z",
   "fixtures": [
     {
       "home": "Allscott Heath",
       "away": "Brereton Social",
       "kickoff": "15:00",
       "score": "3-1",
-      "matchStage": "half_time",
+      "matchStage": "second_half",
       "goals": [
         {
           "minute": 6,
@@ -20,7 +20,7 @@
         {
           "minute": 14,
           "team": "away",
-          "scorer": null
+          "scorer": "Unknown"
         },
         {
           "minute": 24,
@@ -33,9 +33,9 @@
           "scorer": "George Cross"
         },
         {
-          "minute": 53,
+          "minute": null,
           "team": "home",
-          "scorer": "Ben Davies (penalty)"
+          "scorer": "Ben Davies"
         }
       ],
       "yellowCards": [
@@ -62,12 +62,8 @@
       ],
       "yellowCards": [
         {
-          "team": "away",
+          "team": "home",
           "player": null
-        },
-        {
-          "team": "away",
-          "player": "Evans"
         }
       ],
       "redCards": [],
@@ -88,7 +84,7 @@
         {
           "minute": 25,
           "team": "away",
-          "scorer": null
+          "scorer": "Unknown"
         },
         {
           "minute": 33,
@@ -128,7 +124,7 @@
           "player": "Liam Evans"
         },
         {
-          "team": "away",
+          "team": "home",
           "player": "Holt"
         }
       ],
@@ -150,7 +146,7 @@
         {
           "minute": 18,
           "team": "away",
-          "scorer": null
+          "scorer": "Unknown"
         },
         {
           "minute": 27,
@@ -165,7 +161,7 @@
         {
           "minute": 45,
           "team": "home",
-          "scorer": "Hatton (penalty)"
+          "scorer": "Hatton"
         }
       ],
       "yellowCards": [
@@ -175,7 +171,7 @@
         },
         {
           "team": "away",
-          "player": "number 6"
+          "player": null
         }
       ],
       "redCards": [],
@@ -185,7 +181,7 @@
       "home": "Stafford Town",
       "away": "Wednesfield Community",
       "kickoff": "15:00",
-      "score": "3-1",
+      "score": "3-2",
       "matchStage": "second_half",
       "goals": [
         {
@@ -196,17 +192,22 @@
         {
           "minute": 17,
           "team": "away",
-          "scorer": null
+          "scorer": "Unknown"
         },
         {
           "minute": 21,
           "team": "home",
-          "scorer": "Callum Parker"
+          "scorer": "Parker"
         },
         {
           "minute": 35,
           "team": "home",
-          "scorer": "Callum Parker"
+          "scorer": "Parker"
+        },
+        {
+          "minute": 62,
+          "team": "away",
+          "scorer": "Dangerfield"
         }
       ],
       "yellowCards": [
@@ -236,5 +237,5 @@
       "scoreSource": "explicit"
     }
   ],
-  "ticker": "@MDTFC: 56’ Brown tries a spectacular overhead kick but it’s straight into the keepers hands \n\n🔴⚪️ 0-0 🟡⚫️"
+  "ticker": "@MDTFC: 62’ Widnes Sub \n\nOFF \n9 - Pires \n\nON\n15 - Raoof"
 }
