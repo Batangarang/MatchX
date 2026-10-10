@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-10-10T15:35:26.352Z",
+  "generatedAt": "2026-10-10T15:40:32.551Z",
   "date": "2026-10-10",
   "isToday": true,
-  "postCount": 159,
-  "latestPostTimestamp": "2026-10-10T15:35:37.000Z",
+  "postCount": 163,
+  "latestPostTimestamp": "2026-10-10T15:40:01.000Z",
   "fixtures": [
     {
       "home": "Allscott Heath",
@@ -31,6 +31,11 @@
           "minute": 48,
           "team": "home",
           "scorer": "George Cross"
+        },
+        {
+          "minute": 83,
+          "team": "away",
+          "scorer": "Brereton Social"
         }
       ],
       "yellowCards": [
@@ -47,7 +52,7 @@
       "away": "Shawbury United",
       "kickoff": "15:00",
       "score": "0-1",
-      "matchStage": "second_half",
+      "matchStage": "half_time",
       "goals": [
         {
           "minute": 38,
@@ -59,6 +64,10 @@
         {
           "team": "home",
           "player": null
+        },
+        {
+          "team": "away",
+          "player": null
         }
       ],
       "redCards": [],
@@ -68,11 +77,11 @@
       "home": "Barnton",
       "away": "Dawley Town",
       "kickoff": "15:00",
-      "score": "2-2",
-      "matchStage": "second_half",
+      "score": "1-2",
+      "matchStage": "half_time",
       "goals": [
         {
-          "minute": 9,
+          "minute": 11,
           "team": "away",
           "scorer": "Cian Fenlon"
         },
@@ -82,7 +91,7 @@
           "scorer": "Cuffy"
         },
         {
-          "minute": 31,
+          "minute": 33,
           "team": "home",
           "scorer": "Sigsworth"
         },
@@ -120,12 +129,12 @@
       "goals": [],
       "yellowCards": [
         {
-          "team": "away",
-          "player": "Liam Evans"
-        },
-        {
           "team": "home",
           "player": "Manhertz"
+        },
+        {
+          "team": "away",
+          "player": "Liam Evans"
         },
         {
           "team": "home",
@@ -150,7 +159,7 @@
         {
           "minute": 18,
           "team": "away",
-          "scorer": null
+          "scorer": "Cheadle Heath Nomads"
         },
         {
           "minute": 27,
@@ -171,7 +180,7 @@
       "yellowCards": [
         {
           "team": "home",
-          "player": "Stan Tatters"
+          "player": null
         }
       ],
       "redCards": [],
@@ -181,7 +190,7 @@
       "home": "Stafford Town",
       "away": "Wednesfield Community",
       "kickoff": "15:00",
-      "score": "5-2",
+      "score": "6-2",
       "matchStage": "second_half",
       "goals": [
         {
@@ -192,7 +201,7 @@
         {
           "minute": 17,
           "team": "away",
-          "scorer": null
+          "scorer": "Wednesfield Community"
         },
         {
           "minute": 21,
@@ -218,6 +227,11 @@
           "minute": 76,
           "team": "home",
           "scorer": "Taylor"
+        },
+        {
+          "minute": 82,
+          "team": "home",
+          "scorer": "Satchwell"
         }
       ],
       "yellowCards": [
@@ -237,7 +251,7 @@
       "matchStage": "second_half",
       "goals": [
         {
-          "minute": 54,
+          "minute": 53,
           "team": "home",
           "scorer": "Godfrey Summerville"
         },
@@ -249,7 +263,7 @@
         {
           "minute": 68,
           "team": "away",
-          "scorer": null
+          "scorer": "New Mills"
         }
       ],
       "yellowCards": [],
@@ -257,5 +271,5 @@
       "scoreSource": "explicit"
     }
   ],
-  "ticker": "@StaffordTown1st: 76 - TAYYYLOOORRR!!!\n\nOh. My. Word!\n\nHe takes a quick freekick from just inside the Wednesfield half. He spotted the keeper off his line and lobs him! \n\nNot bad for his first goal for the club! \n\n🔴 5-2 🔵 https://t.co/JpilM3VEU9"
+  "ticker": "@AllscottHeathFC: 83': Goal for Brereton Social\n#ALLBRE #Pitchero https://t.co/XlxIlITloK"
 }
