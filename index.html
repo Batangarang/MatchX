@@ -400,6 +400,7 @@
         <tr><td colspan="9">Loading...</td></tr>
       </tbody>
     </table>
+    <div style="font-size:11px; color:var(--muted); margin-top:6px;">&dagger; Form includes cup matches, as published by the league — a row without this marker has been checked against that club's results and shows league matches only.</div>
     <button id="toggle-table-btn" class="btn" style="margin-top: 10px;">Show full table</button>
   </div>
 
@@ -1027,7 +1028,7 @@
             <td>${t.lost}</td>
             <td>${t.goalDifference}</td>
             <td>${t.points}</td>
-            <td style="overflow: hidden;">${formBadges(t.form)}</td>
+            <td style="overflow: hidden;">${formBadges(t.form)}${t.formIncludesCup ? '<span title="This form figure includes cup matches, not league games only" style="color:var(--muted); font-size:11px; margin-left:2px; cursor:help;">&dagger;</span>' : ''}</td>
           </tr>
         `;
       }).join('');

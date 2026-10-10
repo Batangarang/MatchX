@@ -31,6 +31,8 @@ jobs:
       - if: steps.gate.outputs.run == 'true'
         run: node scrape.js
       - if: steps.gate.outputs.run == 'true'
+        run: node division-results.js
+      - if: steps.gate.outputs.run == 'true'
         run: node league.js
       - if: steps.gate.outputs.run == 'true'
         run: node position-history.js
@@ -43,7 +45,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          for f in data.json league.json player-tables.json position-history.json attendance-stats.json .scrape-lastrun.json cost-log.json; do
+          for f in data.json league.json division-results.json player-tables.json position-history.json attendance-stats.json .scrape-lastrun.json cost-log.json; do
             [ -f "$f" ] && git add "$f"
           done
           git diff --staged --quiet || git commit -m "..."

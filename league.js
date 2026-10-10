@@ -1,5 +1,6 @@
 const cheerio = require('cheerio');
 const fs = require('fs');
+const { computeSandbachLeagueForm } = require('./sandbach-form.js');
 
 const URL = 'https://www.nwcfl.com/league-tables.php';
 const DIVISION_NAME = 'First Division South';
@@ -78,8 +79,29 @@ async function scrape() {
     });
   }
 
+  // nwcfl.com's "Last Six" form column includes cup results, not just the
+  // league (confirmed 10 Oct against Wolverhampton Casuals: it showed 5 wins
+  // when the league record was 4). Sandbach's own league-only form comes from
+  // data.json (already scraped every run); every other club's comes from
+  // division-results.json, a once-a-day sweep of each club's own page
+  // (division-results.js). A club is flagged all-competitions only when
+  // neither of those has a verified figure for it yet.
+  const sandbachLeagueForm = computeSandbachLeagueForm();
+  let divisionResults = {};
+  try {
+    divisionResults = JSON.parse(fs.readFileSync('division-results.json', 'utf-8')).clubs || {};
+  } catch {}
+
   standings.forEach(team => {
     team.form = formGuide[team.team] || null;
+    team.formIncludesCup = true;
+    if (team.team.includes('Sandbach') && sandbachLeagueForm) {
+      team.form = sandbachLeagueForm;
+      team.formIncludesCup = false;
+    } else if (divisionResults[team.team] && divisionResults[team.team].form) {
+      team.form = divisionResults[team.team].form;
+      team.formIncludesCup = false;
+    }
   });
 
   return {
