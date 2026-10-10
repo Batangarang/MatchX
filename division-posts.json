@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-10T15:01:38.428Z",
-  "sinceDate": "2026-10-03T15:00:52.711Z",
+  "generatedAt": "2026-10-10T17:30:59.678Z",
+  "sinceDate": "2026-10-03T17:30:41.248Z",
   "clubs": [
     {
       "name": "Sandbach United",
@@ -278,7 +278,8 @@
           "createdAt": "2026-10-03T15:02:48.000Z",
           "images": []
         }
-      ]
+      ],
+      "error": "GetXAPI error for @SandbachFC_1st: Insufficient credits"
     },
     {
       "name": "Eccleshall",
@@ -740,7 +741,8 @@
           "createdAt": "2026-10-03T15:03:00.000Z",
           "images": []
         }
-      ]
+      ],
+      "error": "GetXAPI error for @EccleshallFC: Insufficient credits"
     },
     {
       "name": "New Mills",
@@ -863,7 +865,8 @@
           "createdAt": "2026-10-03T15:02:17.000Z",
           "images": []
         }
-      ]
+      ],
+      "error": "GetXAPI error for @NewMillsFC: Insufficient credits"
     },
     {
       "name": "Stafford Town",
@@ -1040,7 +1043,8 @@
           "createdAt": "2026-10-03T15:04:02.000Z",
           "images": []
         }
-      ]
+      ],
+      "error": "GetXAPI error for @StaffordTown1st: Insufficient credits"
     },
     {
       "name": "Telford Town",
@@ -1271,7 +1275,8 @@
             "https://pbs.twimg.com/media/HTt2JMlWwAAZLoi.jpg"
           ]
         }
-      ]
+      ],
+      "error": "GetXAPI error for @TelfordTownFC: Insufficient credits"
     },
     {
       "name": "Crewe",
@@ -1291,12 +1296,14 @@
             "https://pbs.twimg.com/media/HUNFOHUXQAAjXlL.jpg"
           ]
         }
-      ]
+      ],
+      "error": "GetXAPI error for @crewefc: Insufficient credits"
     },
     {
       "name": "Widnes Town",
       "handle": "Widnes_FC",
-      "posts": []
+      "posts": [],
+      "error": "GetXAPI error for @Widnes_FC: Insufficient credits"
     },
     {
       "name": "Wednesfield Community",
@@ -1351,7 +1358,8 @@
             "https://pbs.twimg.com/media/HTumyHlWgAAD-nX.jpg"
           ]
         }
-      ]
+      ],
+      "error": "GetXAPI error for @WednesfieldCFC: Insufficient credits"
     },
     {
       "name": "Alsager Town",
@@ -1448,7 +1456,8 @@
           "createdAt": "2026-10-03T15:02:16.000Z",
           "images": []
         }
-      ]
+      ],
+      "error": "GetXAPI error for @alsagertown_fc: Insufficient credits"
     },
     {
       "name": "Allscott Heath",
@@ -1584,7 +1593,8 @@
           "createdAt": "2026-10-03T15:41:31.000Z",
           "images": []
         }
-      ]
+      ],
+      "error": "GetXAPI error for @AllscottHeathFC: Insufficient credits"
     },
     {
       "name": "Barnton",
@@ -1936,7 +1946,8 @@
           "createdAt": "2026-10-03T15:08:25.000Z",
           "images": []
         }
-      ]
+      ],
+      "error": "GetXAPI error for @barntonfc: Insufficient credits"
     },
     {
       "name": "Bilston Town",
@@ -2067,7 +2078,8 @@
           "createdAt": "2026-10-03T15:08:31.000Z",
           "images": []
         }
-      ]
+      ],
+      "error": "GetXAPI error for @bilstontownfc: Insufficient credits"
     },
     {
       "name": "AFC Bridgnorth",
@@ -2107,7 +2119,8 @@
           "createdAt": "2026-10-03T15:10:38.000Z",
           "images": []
         }
-      ]
+      ],
+      "error": "GetXAPI error for @AFCBridgnorth: Insufficient credits"
     },
     {
       "name": "Brereton Social",
@@ -2137,7 +2150,8 @@
           "createdAt": "2026-10-03T17:20:53.000Z",
           "images": []
         }
-      ]
+      ],
+      "error": "GetXAPI error for @breretonsocialf: Insufficient credits"
     },
     {
       "name": "Cheadle Heath Nomads",
@@ -2379,7 +2393,8 @@
           "createdAt": "2026-10-03T15:17:25.000Z",
           "images": []
         }
-      ]
+      ],
+      "error": "GetXAPI error for @CheadleNomads: Insufficient credits"
     },
     {
       "name": "Dawley Town",
@@ -2634,7 +2649,8 @@
             "https://pbs.twimg.com/media/HTt6v4oWQAAFAh_.jpg"
           ]
         }
-      ]
+      ],
+      "error": "GetXAPI error for @DawleyTownFC: Insufficient credits"
     },
     {
       "name": "Market Drayton Town",
@@ -2930,7 +2946,8 @@
           "createdAt": "2026-10-03T15:58:08.000Z",
           "images": []
         }
-      ]
+      ],
+      "error": "GetXAPI error for @MDTFC: Insufficient credits"
     },
     {
       "name": "Shawbury United",
@@ -3029,7 +3046,8 @@
           "createdAt": "2026-10-03T15:04:56.000Z",
           "images": []
         }
-      ]
+      ],
+      "error": "GetXAPI error for @shawburyutd: Insufficient credits"
     },
     {
       "name": "Wolverhampton Casuals",
@@ -3255,7 +3273,8 @@
             "https://pbs.twimg.com/media/HTtzqDKXYAAA-C2.jpg"
           ]
         }
-      ]
+      ],
+      "error": "GetXAPI error for @WolvesCassies: Insufficient credits"
     },
     {
       "name": "Foley Meir",
@@ -3467,7 +3486,8 @@
           "createdAt": "2026-10-03T15:08:55.000Z",
           "images": []
         }
-      ]
+      ],
+      "error": "GetXAPI error for @foley_fc: Insufficient credits"
     },
     {
       "name": "NWCFL (League Official)",
@@ -3674,7 +3694,8 @@
             "https://pbs.twimg.com/media/HTt9lalW4AAcPzb.jpg"
           ]
         }
-      ]
+      ],
+      "error": "GetXAPI error for @nwcfl: Insufficient credits"
     }
   ]
 }
