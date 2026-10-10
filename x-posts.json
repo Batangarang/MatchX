@@ -1,5 +1,5 @@
 {
-  "scrapedAt": "2026-10-10T14:35:22.715Z",
+  "scrapedAt": "2026-10-10T14:40:25.476Z",
   "username": "SandbachFC_1st",
   "posts": [
     {
@@ -9,6 +9,28 @@
         "https://pbs.twimg.com/media/HUDmlc4WgAAhBe7.jpg"
       ],
       "isMatchday": false
+    },
+    {
+      "text": "2-1 https://t.co/Hp6Z1F2Dm1",
+      "createdAt": "2026-10-10T14:38:50.000Z",
+      "images": [
+        "https://pbs.twimg.com/media/HURs5EzW0AAIW7a.jpg"
+      ],
+      "isMatchday": true
+    },
+    {
+      "text": "🔵⚪️ v 🟣🟣\n\nSandbach United v Cheadle Heath Nomads\n\nJust a standard Saturday as Stan gets a yellow for a shirt pull.\n\nAnd at the other end, Birchall goes through the middle and smashes one from 25 yards into the bottom corner as Bach make it 2, get in!\n\n@CheadleNomads \n\n2 1",
+      "createdAt": "2026-10-10T14:38:14.000Z",
+      "images": [],
+      "isMatchday": true
+    },
+    {
+      "text": "Shirt pull https://t.co/8gICtrOWwj",
+      "createdAt": "2026-10-10T14:37:03.000Z",
+      "images": [
+        "https://pbs.twimg.com/media/HURsezMWsAAKPss.jpg"
+      ],
+      "isMatchday": true
     },
     {
       "text": "🔵⚪️ v 🟣🟣\n\nSandbach United v Cheadle Heath Nomads\n\nWhat a move that was, Finney with a peach of a ball down the left sets Fowles free and he rolls a lovely finish in to the far corner with Jones in the CHN goal well beaten.\n\n@CheadleNomads \n\n1 1\n\n27 mins gone",
@@ -49,28 +71,6 @@
       "createdAt": "2026-10-10T14:00:29.000Z",
       "images": [],
       "isMatchday": true
-    },
-    {
-      "text": "🔵⚪️ v 🟣🟣\n\nSandbach United v Cheadle Heath Nomads\n\nThe Bach see a return to the starting 11 for Josh Fowles, as The Bach look to extend our winning League run and a win will see us retain the top spot at 5pm this evening.\n\nCome on The Bach!",
-      "createdAt": "2026-10-10T13:30:52.000Z",
-      "images": [],
-      "isMatchday": true
-    },
-    {
-      "text": "Sandbach United v Cheadle Heath Nomads\n\nKick off at 3pm today, we look forward to seeing you at the game as The Bach look to keep themselves in top spot with another win and 3 points, it will be a tough one and your support will spur the boys on! https://t.co/YSUF1YAZXl",
-      "createdAt": "2026-10-10T12:33:40.000Z",
-      "images": [
-        "https://pbs.twimg.com/media/HURQPlDWcAA6idr.jpg"
-      ],
-      "isMatchday": true
-    },
-    {
-      "text": "11th home game of the season, and our 5th in a row. Last time out against @CheadleNomads it finished 3-3 can an in form Sandbach grab all three points this time round. Why not come down and see if we can keep ourselves at the top of the table. https://t.co/MvqYsmi0Gl",
-      "createdAt": "2026-10-09T18:36:20.000Z",
-      "images": [
-        "https://pbs.twimg.com/media/HUNZSVuXAAAksTT.png"
-      ],
-      "isMatchday": false
     }
   ]
 }
