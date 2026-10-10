@@ -83,7 +83,7 @@
       "home": "Alsager Town",
       "away": "Shawbury United",
       "score": "0-1",
-      "matchStage": "second_half",
+      "matchStage": "half_time",
       "scoreSource": "explicit"
     },
     "Barnton|Dawley Town": {
@@ -105,7 +105,7 @@
       "away": "Cheadle Heath Nomads",
       "score": "3-1",
       "matchStage": "half_time",
-      "scoreSource": "explicit"
+      "scoreSource": "manual_override"
     },
     "Stafford Town|Wednesfield Community": {
       "home": "Stafford Town",

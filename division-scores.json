@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-10-10T14:50:33.614Z",
+  "generatedAt": "2026-10-10T14:55:25.974Z",
   "date": "2026-10-10",
   "isToday": true,
-  "postCount": 108,
-  "latestPostTimestamp": "2026-10-10T14:50:16.000Z",
+  "postCount": 111,
+  "latestPostTimestamp": "2026-10-10T14:53:23.000Z",
   "fixtures": [
     {
       "home": "Allscott Heath",
@@ -42,7 +42,7 @@
       "away": "Shawbury United",
       "kickoff": "15:00",
       "score": "0-1",
-      "matchStage": "second_half",
+      "matchStage": "half_time",
       "goals": [
         {
           "minute": 38,
@@ -67,7 +67,7 @@
       "matchStage": "second_half",
       "goals": [
         {
-          "minute": 11,
+          "minute": 9,
           "team": "away",
           "scorer": "Cian Fenlon"
         },
@@ -114,7 +114,7 @@
           "player": "Liam Evans"
         },
         {
-          "team": "home",
+          "team": "away",
           "player": "Holt"
         }
       ],
@@ -144,7 +144,7 @@
           "scorer": "Fowles"
         },
         {
-          "minute": 35,
+          "minute": 37,
           "team": "home",
           "scorer": "Birchall"
         },
@@ -161,8 +161,7 @@
         }
       ],
       "redCards": [],
-      "scoreSource": "manual_override",
-      "scoreBeforeOverride": "3-1"
+      "scoreSource": "manual_override"
     },
     {
       "home": "Stafford Town",
@@ -184,12 +183,12 @@
         {
           "minute": 21,
           "team": "home",
-          "scorer": "Parker"
+          "scorer": "Callum Parker"
         },
         {
           "minute": 35,
           "team": "home",
-          "scorer": "Parker"
+          "scorer": "Callum Parker"
         }
       ],
       "yellowCards": [
@@ -213,5 +212,5 @@
       "scoreSource": "explicit"
     }
   ],
-  "ticker": "@SandbachFC_1st: 🔵⚪️ v 🟣🟣\n\nSandbach United v Cheadle Heath Nomads\n\nHT here and The Bach after going 1 down have pulled it round with great goals from Fowles and Birchall finding the bottom corner and then on the stroke of HT Hatton buries his penalty and The Bach lead 3 1\n@CheadleNomads"
+  "ticker": "@CheadleNomads: 45’ | HALF-TIME\n\nA tough first half for the Nomads as we head into the break trailing by two goals. Plenty to do in the second half.\n\n@SandbachFC_1st 3-1 @CheadleNomads \n\n#WeAreNomads | @nwcfl | @NWCFLScores https://t.co/9VvMAUJyx0"
 }
