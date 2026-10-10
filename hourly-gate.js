@@ -3,6 +3,7 @@ const fs = require('fs');
 function shouldRunHourlyTask() {
   const stateFile = '.scrape-lastrun.json';
   const now = new Date();
+  const manual = process.env.MANUAL_RUN === 'true';
 
   let lastRun = null;
   if (fs.existsSync(stateFile)) {
@@ -10,7 +11,7 @@ function shouldRunHourlyTask() {
   }
 
   const minutesSinceLastRun = lastRun ? (now - lastRun) / 60000 : Infinity;
-  if (minutesSinceLastRun < 55) return false;
+  if (!manual && minutesSinceLastRun < 55) return false;
 
   fs.writeFileSync(stateFile, JSON.stringify({ lastRun: now.toISOString() }));
   return true;

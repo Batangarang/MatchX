@@ -217,7 +217,13 @@ async function run() {
     const currentStandings = (leagueData.standings || [])
       .filter(t => CURRENT_CLUB_NAMES.has(t.team) || t.team.includes('Sandbach'));
     leagueContext = currentStandings
-      .map(t => `${t.position}. ${t.team} — P${t.played} W${t.won} D${t.drawn} L${t.lost} GD${t.goalDifference} Pts${t.points}${t.form ? ' — recent form (NEWEST result first, so the FIRST letter is their most recent result): ' + t.form.split('').join('-') : ''}`)
+      .map(t => {
+        if (!t.form) return `${t.position}. ${t.team} — P${t.played} W${t.won} D${t.drawn} L${t.lost} GD${t.goalDifference} Pts${t.points}`;
+        const formLabel = t.formIncludesCup
+          ? 'recent form, ALL COMPETITIONS INCLUDING CUP — do not describe this as a number of consecutive LEAGUE games or results'
+          : 'recent form, LEAGUE MATCHES ONLY — safe to state as a specific number of consecutive league results';
+        return `${t.position}. ${t.team} — P${t.played} W${t.won} D${t.drawn} L${t.lost} GD${t.goalDifference} Pts${t.points} — ${formLabel} (NEWEST result first, so the FIRST letter is their most recent result): ${t.form.split('').join('-')}`;
+      })
       .join('\n');
   }
 

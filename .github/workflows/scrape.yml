@@ -23,6 +23,8 @@ jobs:
           node-version: 24
       - run: npm install
       - id: gate
+        env:
+          MANUAL_RUN: ${{ github.event.inputs.manual }}
         run: |
           node -e "
             const { shouldRunHourlyTask } = require('./hourly-gate.js');
