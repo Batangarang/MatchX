@@ -1,17 +1,22 @@
 {
-  "generatedAt": "2026-10-10T13:31:00.320Z",
+  "generatedAt": "2026-10-10T13:35:32.672Z",
   "fixtureDate": "2026-10-10",
   "kickoff": "15:00",
   "homeTeam": "Sandbach United",
   "awayTeam": "Cheadle Heath Nomads",
-  "postsUsed": 3,
-  "imagesAnalyzedThisRun": 3,
+  "postsUsed": 4,
+  "imagesAnalyzedThisRun": 0,
   "totalImagesAnalyzed": 3,
   "match": {
     "score": null,
-    "scoreEvidence": null,
+    "scoreSource": "none",
+    "scoreConfirmed": false,
+    "feedScore": null,
+    "scoreDiscrepancy": null,
+    "unconfirmedGoals": [],
     "finalScoreAnnounced": null,
     "halfTimeScoreAnnounced": null,
+    "htDiscrepancy": null,
     "matchStage": "scheduled",
     "lineups": {
       "home": {
@@ -69,22 +74,22 @@
       "firstHalf": {
         "home": 0,
         "away": 0,
-        "note": "No match action reported yet"
+        "note": "No match action data available"
       },
       "secondHalf": {
         "home": 0,
         "away": 0,
-        "note": "No match action reported yet"
+        "note": "No match action data available"
       },
       "extraTime": {
         "home": 0,
         "away": 0,
-        "note": "No match action reported yet"
+        "note": "No extra time played"
       },
       "total": {
         "home": 0,
         "away": 0,
-        "note": "No match action reported yet"
+        "note": "No match action data available"
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
@@ -92,30 +97,24 @@
       "firstHalf": {
         "home": 50,
         "away": 50,
-        "note": "No match action reported yet"
+        "note": "No match action data available"
       },
       "secondHalf": {
         "home": 50,
         "away": 50,
-        "note": "No match action reported yet"
+        "note": "No match action data available"
       },
       "extraTime": {
         "home": 50,
         "away": 50,
-        "note": "No match action reported yet"
+        "note": "No extra time played"
       },
       "total": {
         "home": 50,
         "away": 50,
-        "note": "No match action reported yet"
+        "note": "No match action data available"
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
-    },
-    "unconfirmedGoals": [],
-    "scoreSource": "none",
-    "scoreConfirmed": false,
-    "feedScore": null,
-    "scoreDiscrepancy": null,
-    "htDiscrepancy": null
+    }
   }
 }
