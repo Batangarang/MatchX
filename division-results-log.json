@@ -70,5 +70,56 @@
       "matchStage": "half_time",
       "scoreSource": "explicit"
     }
+  },
+  "2026-10-10": {
+    "Allscott Heath|Brereton Social": {
+      "home": "Allscott Heath",
+      "away": "Brereton Social",
+      "score": "1-1",
+      "matchStage": "second_half",
+      "scoreSource": "explicit"
+    },
+    "Alsager Town|Shawbury United": {
+      "home": "Alsager Town",
+      "away": "Shawbury United",
+      "score": "0-1",
+      "matchStage": "second_half",
+      "scoreSource": "explicit"
+    },
+    "Barnton|Dawley Town": {
+      "home": "Barnton",
+      "away": "Dawley Town",
+      "score": "1-2",
+      "matchStage": "second_half",
+      "scoreSource": "explicit"
+    },
+    "Market Drayton Town|Widnes Town": {
+      "home": "Market Drayton Town",
+      "away": "Widnes Town",
+      "score": "0-0",
+      "matchStage": "second_half",
+      "scoreSource": "explicit"
+    },
+    "Sandbach United|Cheadle Heath Nomads": {
+      "home": "Sandbach United",
+      "away": "Cheadle Heath Nomads",
+      "score": "2-1",
+      "matchStage": "second_half",
+      "scoreSource": "explicit"
+    },
+    "Stafford Town|Wednesfield Community": {
+      "home": "Stafford Town",
+      "away": "Wednesfield Community",
+      "score": "3-1",
+      "matchStage": "second_half",
+      "scoreSource": "explicit"
+    },
+    "Telford Town|New Mills": {
+      "home": "Telford Town",
+      "away": "New Mills",
+      "score": "0-0",
+      "matchStage": "half_time",
+      "scoreSource": "explicit"
+    }
   }
 }

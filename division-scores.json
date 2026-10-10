@@ -1,40 +1,106 @@
 {
-  "generatedAt": "2026-10-10T10:55:27.032Z",
+  "generatedAt": "2026-10-10T14:45:35.286Z",
   "date": "2026-10-10",
   "isToday": true,
+  "postCount": 98,
+  "latestPostTimestamp": "2026-10-10T14:45:59.000Z",
   "fixtures": [
     {
       "home": "Allscott Heath",
       "away": "Brereton Social",
       "kickoff": "15:00",
-      "score": null,
-      "goals": [],
-      "yellowCards": [],
-      "redCards": []
+      "score": "1-1",
+      "matchStage": "second_half",
+      "goals": [
+        {
+          "minute": 6,
+          "team": "home",
+          "scorer": "Ben Summers"
+        },
+        {
+          "minute": 14,
+          "team": "away",
+          "scorer": "Unknown"
+        },
+        {
+          "minute": 24,
+          "team": "home",
+          "scorer": "Ben Summers"
+        }
+      ],
+      "yellowCards": [
+        {
+          "team": "home",
+          "player": "Max Morris"
+        }
+      ],
+      "redCards": [],
+      "scoreSource": "explicit"
     },
     {
       "home": "Alsager Town",
       "away": "Shawbury United",
       "kickoff": "15:00",
-      "score": null,
-      "goals": [],
-      "yellowCards": [],
-      "redCards": []
+      "score": "0-1",
+      "matchStage": "second_half",
+      "goals": [
+        {
+          "minute": 38,
+          "team": "away",
+          "scorer": "Conor T Hughes"
+        }
+      ],
+      "yellowCards": [
+        {
+          "team": "away",
+          "player": "Ethan"
+        },
+        {
+          "team": "home",
+          "player": "Unknown"
+        }
+      ],
+      "redCards": [],
+      "scoreSource": "explicit"
     },
     {
       "home": "Barnton",
       "away": "Dawley Town",
       "kickoff": "15:00",
-      "score": null,
-      "goals": [],
+      "score": "1-2",
+      "matchStage": "second_half",
+      "goals": [
+        {
+          "minute": 11,
+          "team": "away",
+          "scorer": "Cian Fenlon"
+        },
+        {
+          "minute": 25,
+          "team": "away",
+          "scorer": "Cuffy"
+        },
+        {
+          "minute": 33,
+          "team": "home",
+          "scorer": "Sigsworth"
+        }
+      ],
       "yellowCards": [],
-      "redCards": []
+      "redCards": [
+        {
+          "team": "away",
+          "player": "Cian Fenlon"
+        }
+      ],
+      "scoreSource": "explicit"
     },
     {
       "home": "Bilston Town",
       "away": "Crewe",
       "kickoff": "15:00",
       "score": null,
+      "matchStage": "scheduled",
       "goals": [],
       "yellowCards": [],
       "redCards": []
@@ -43,38 +109,103 @@
       "home": "Market Drayton Town",
       "away": "Widnes Town",
       "kickoff": "15:00",
-      "score": null,
+      "score": "0-0",
+      "matchStage": "second_half",
       "goals": [],
-      "yellowCards": [],
-      "redCards": []
+      "yellowCards": [
+        {
+          "team": "away",
+          "player": "Holt"
+        }
+      ],
+      "redCards": [
+        {
+          "team": "away",
+          "player": "Alfie Connor"
+        }
+      ],
+      "scoreSource": "explicit"
     },
     {
       "home": "Sandbach United",
       "away": "Cheadle Heath Nomads",
       "kickoff": "15:00",
-      "score": null,
-      "goals": [],
-      "yellowCards": [],
-      "redCards": []
+      "score": "2-1",
+      "matchStage": "second_half",
+      "goals": [
+        {
+          "minute": 18,
+          "team": "away",
+          "scorer": "Unknown"
+        },
+        {
+          "minute": 27,
+          "team": "home",
+          "scorer": "Fowles"
+        },
+        {
+          "minute": 37,
+          "team": "home",
+          "scorer": "Birchall"
+        },
+        {
+          "minute": 45,
+          "team": "away",
+          "scorer": "Unknown"
+        }
+      ],
+      "yellowCards": [
+        {
+          "team": "home",
+          "player": "Stan"
+        }
+      ],
+      "redCards": [],
+      "scoreSource": "explicit"
     },
     {
       "home": "Stafford Town",
       "away": "Wednesfield Community",
       "kickoff": "15:00",
-      "score": null,
-      "goals": [],
+      "score": "3-1",
+      "matchStage": "second_half",
+      "goals": [
+        {
+          "minute": 4,
+          "team": "home",
+          "scorer": "Greer"
+        },
+        {
+          "minute": 17,
+          "team": "away",
+          "scorer": "Unknown"
+        },
+        {
+          "minute": 21,
+          "team": "home",
+          "scorer": "Callum Parker"
+        },
+        {
+          "minute": 35,
+          "team": "home",
+          "scorer": "Callum Parker"
+        }
+      ],
       "yellowCards": [],
-      "redCards": []
+      "redCards": [],
+      "scoreSource": "explicit"
     },
     {
       "home": "Telford Town",
       "away": "New Mills",
       "kickoff": "15:00",
-      "score": null,
+      "score": "0-0",
+      "matchStage": "half_time",
       "goals": [],
       "yellowCards": [],
-      "redCards": []
+      "redCards": [],
+      "scoreSource": "explicit"
     }
   ],
-  "ticker": null
+  "ticker": "@SandbachFC_1st: 🔵⚪️ v 🟣🟣\n\nSandbach United v Cheadle Heath Nomads\n\nPeno The Bach for a handball\n\n@CheadleNomads \n\n2 1\n\n45 gone"
 }
