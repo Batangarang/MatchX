@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-10-10T14:55:38.480Z",
+  "generatedAt": "2026-10-10T15:05:45.344Z",
   "fixtureDate": "2026-10-10",
   "kickoff": "15:00",
   "homeTeam": "Sandbach United",
   "awayTeam": "Cheadle Heath Nomads",
-  "postsUsed": 25,
-  "imagesAnalyzedThisRun": 1,
+  "postsUsed": 27,
+  "imagesAnalyzedThisRun": 0,
   "totalImagesAnalyzed": 10,
   "match": {
     "score": "3-1",
@@ -23,45 +23,23 @@
     "finalScoreAnnounced": null,
     "halfTimeScoreAnnounced": "3-1",
     "htDiscrepancy": null,
-    "matchStage": "half_time",
+    "matchStage": "second_half",
     "lineups": {
       "home": {
         "players": [
-          "1. Hall",
-          "2. O'Connell",
-          "3. Vernon",
-          "4. Shotton",
-          "5. Finney",
-          "6. Tatters",
-          "7. Birchall",
-          "8. M Nolan",
-          "9. Fowles",
-          "10. Hatton",
-          "11. Foley"
+          "1. Gregg Hall",
+          "9. Josh Fowles"
         ],
         "substitutes": [
-          "Williams",
-          "Stafford",
-          "Cope",
-          "Cain",
-          "Barry"
+          "Cope"
         ],
         "manager": null,
         "officials": []
       },
       "away": {
         "players": [
-          "1. Andrew Jones",
-          "2. Harry St-Romaine",
-          "3. Luke Roscoe",
-          "4. Jack Higginbottom",
-          "5. Kwame Osigwe",
-          "6. Harvey Berry",
-          "7. Chigozie Ewelike",
-          "8. Owen Hesketh",
-          "9. Dan Lewis",
-          "10. George Colville",
-          "11. Kylan Depeiaza"
+          "7. CHN 7",
+          "1. Jones"
         ],
         "substitutes": [
           "12. C. Graham",
@@ -109,7 +87,14 @@
       }
     ],
     "redCards": [],
-    "substitutions": [],
+    "substitutions": [
+      {
+        "minute": 45,
+        "team": "home",
+        "playerOff": "Stan Tatters",
+        "playerOn": "Cope"
+      }
+    ],
     "sinBins": [],
     "injuries": [],
     "addedTime": {
@@ -130,12 +115,12 @@
       "firstHalf": {
         "home": 2.3,
         "away": 0.8,
-        "note": "Home team scored twice (Fowles, Birchall) plus a penalty (Hatton). Away team scored once (min 18) and had a double save in minute 8. (raised to reflect goals actually scored)"
+        "note": "Sandbach had early chances (Birchall shot and rebound miss), then scored twice. Cheadle had one well-taken goal. (raised to reflect goals actually scored)"
       },
       "secondHalf": {
         "home": 0,
         "away": 0,
-        "note": "No second-half activity reported in posts."
+        "note": "No match events reported in second half."
       },
       "extraTime": {
         "home": 0,
@@ -145,7 +130,7 @@
       "total": {
         "home": 2.3,
         "away": 0.8,
-        "note": "Sandbach scored 3 goals (2 from open play + 1 penalty). Cheadle Heath scored 1. (raised to reflect goals actually scored)"
+        "note": "Sandbach dominated chances and converted three goals. Cheadle scored one well-executed goal but created little else. (raised to reflect goals actually scored)"
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
@@ -153,12 +138,12 @@
       "firstHalf": {
         "home": 60,
         "away": 40,
-        "note": "Sandbach dominated after conceding early, scoring twice to take a 3-1 lead by half-time with chances created throughout."
+        "note": "Sandbach started strong with early chances; Cheadle scored on a counter but Sandbach took control and scored three by half-time."
       },
       "secondHalf": {
         "home": 50,
         "away": 50,
-        "note": "No second-half activity reported; assessment not possible."
+        "note": "No match events reported; equal split assumed."
       },
       "extraTime": {
         "home": 50,
@@ -168,7 +153,7 @@
       "total": {
         "home": 60,
         "away": 40,
-        "note": "Sandbach United controlled the first half after an early away goal, pulling back to dominate and lead 3-1 at the break."
+        "note": "Sandbach controlled the first half and led 3-1 at half-time; second half events not detailed in posts."
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
