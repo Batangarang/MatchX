@@ -13391,13 +13391,13 @@
       "aiCostGBP": 0.0069
     },
     {
-      "script": "x-posts",
-      "timestamp": "2026-10-10T14:45:28.243Z",
-      "getxapiCalls": 1,
+      "script": "matchday-live",
+      "timestamp": "2026-10-10T14:45:35.117Z",
+      "getxapiCalls": 2,
       "claudeCalls": 0,
       "inputTokens": 0,
       "outputTokens": 0,
-      "xCostGBP": 0.0008,
+      "xCostGBP": 0.0015,
       "aiCostGBP": 0
     }
   ]
