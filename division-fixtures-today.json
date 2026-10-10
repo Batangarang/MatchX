@@ -1,11 +1,60 @@
 {
-  "date": "2026-10-07",
+  "date": "2026-10-10",
   "fixtures": [
     {
-      "date": "Wednesday 7 October 2026",
-      "home": "Brereton Social",
+      "date": "Saturday 10 October 2026",
+      "home": "Allscott Heath",
+      "away": "Brereton Social",
+      "kickoff": "15:00",
+      "postponed": false
+    },
+    {
+      "date": "Saturday 10 October 2026",
+      "home": "Alsager Town",
+      "away": "Shawbury United",
+      "kickoff": "15:00",
+      "postponed": false
+    },
+    {
+      "date": "Saturday 10 October 2026",
+      "home": "Barnton",
+      "away": "Dawley Town",
+      "kickoff": "15:00",
+      "postponed": false
+    },
+    {
+      "date": "Saturday 10 October 2026",
+      "home": "Bilston Town",
+      "away": "Crewe",
+      "kickoff": "15:00",
+      "postponed": false
+    },
+    {
+      "date": "Saturday 10 October 2026",
+      "home": "Market Drayton Town",
+      "away": "Widnes Town",
+      "kickoff": "15:00",
+      "postponed": false
+    },
+    {
+      "date": "Saturday 10 October 2026",
+      "home": "Sandbach United",
+      "away": "Cheadle Heath Nomads",
+      "kickoff": "15:00",
+      "postponed": false
+    },
+    {
+      "date": "Saturday 10 October 2026",
+      "home": "Stafford Town",
       "away": "Wednesfield Community",
-      "kickoff": "19:45",
+      "kickoff": "15:00",
+      "postponed": false
+    },
+    {
+      "date": "Saturday 10 October 2026",
+      "home": "Telford Town",
+      "away": "New Mills",
+      "kickoff": "15:00",
       "postponed": false
     }
   ]
