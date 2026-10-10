@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-10-10T15:25:26.984Z",
+  "generatedAt": "2026-10-10T15:30:50.610Z",
   "date": "2026-10-10",
   "isToday": true,
-  "postCount": 144,
-  "latestPostTimestamp": "2026-10-10T15:25:42.000Z",
+  "postCount": 153,
+  "latestPostTimestamp": "2026-10-10T15:31:05.000Z",
   "fixtures": [
     {
       "home": "Allscott Heath",
       "away": "Brereton Social",
       "kickoff": "15:00",
-      "score": "3-1",
-      "matchStage": "second_half",
+      "score": "2-1",
+      "matchStage": "half_time",
       "goals": [
         {
           "minute": 6,
@@ -31,11 +31,6 @@
           "minute": 48,
           "team": "home",
           "scorer": "George Cross"
-        },
-        {
-          "minute": 66,
-          "team": "home",
-          "scorer": "Ben Davies"
         }
       ],
       "yellowCards": [
@@ -52,7 +47,7 @@
       "away": "Shawbury United",
       "kickoff": "15:00",
       "score": "0-1",
-      "matchStage": "second_half",
+      "matchStage": "half_time",
       "goals": [
         {
           "minute": 38,
@@ -62,12 +57,8 @@
       ],
       "yellowCards": [
         {
-          "team": "home",
-          "player": null
-        },
-        {
           "team": "away",
-          "player": "Ethan"
+          "player": "Unknown"
         }
       ],
       "redCards": [],
@@ -78,7 +69,7 @@
       "away": "Dawley Town",
       "kickoff": "15:00",
       "score": "1-2",
-      "matchStage": "second_half",
+      "matchStage": "half_time",
       "goals": [
         {
           "minute": 11,
@@ -120,16 +111,24 @@
       "away": "Widnes Town",
       "kickoff": "15:00",
       "score": "0-0",
-      "matchStage": "half_time",
+      "matchStage": "second_half",
       "goals": [],
       "yellowCards": [
+        {
+          "team": "home",
+          "player": "Manhertz"
+        },
         {
           "team": "away",
           "player": "Liam Evans"
         },
         {
-          "team": "home",
-          "player": null
+          "team": "away",
+          "player": "Holt"
+        },
+        {
+          "team": "away",
+          "player": "Unknown"
         }
       ],
       "redCards": [
@@ -145,7 +144,7 @@
       "away": "Cheadle Heath Nomads",
       "kickoff": "15:00",
       "score": "3-1",
-      "matchStage": "second_half",
+      "matchStage": "half_time",
       "goals": [
         {
           "minute": 18,
@@ -172,10 +171,6 @@
         {
           "team": "home",
           "player": "Stan Tatters"
-        },
-        {
-          "team": "away",
-          "player": null
         }
       ],
       "redCards": [],
@@ -185,7 +180,7 @@
       "home": "Stafford Town",
       "away": "Wednesfield Community",
       "kickoff": "15:00",
-      "score": "3-2",
+      "score": "4-2",
       "matchStage": "second_half",
       "goals": [
         {
@@ -201,23 +196,28 @@
         {
           "minute": 21,
           "team": "home",
-          "scorer": "Callum Parker"
+          "scorer": "Parker"
         },
         {
           "minute": 35,
           "team": "home",
-          "scorer": "Callum Parker"
+          "scorer": "Parker"
         },
         {
           "minute": 62,
           "team": "away",
           "scorer": "Dangerfield"
+        },
+        {
+          "minute": 74,
+          "team": "home",
+          "scorer": "Wills"
         }
       ],
       "yellowCards": [
         {
           "team": "home",
-          "player": "Callum Parker"
+          "player": "Parker"
         }
       ],
       "redCards": [],
@@ -239,6 +239,11 @@
           "minute": 66,
           "team": "away",
           "scorer": "Will Frankish"
+        },
+        {
+          "minute": 68,
+          "team": "away",
+          "scorer": "Unknown"
         }
       ],
       "yellowCards": [],
@@ -246,5 +251,5 @@
       "scoreSource": "explicit"
     }
   ],
-  "ticker": "@NewMillsFC: Will Frankish slots home on 66 Mins ⚽️ Telford 1-1 Millers #UptheMillers https://t.co/KZZnfmX4pj"
+  "ticker": "@StaffordTown1st: 74 - WILLLSSSOONNN!!!\n\nIt goes straight in from the corner! \n\n🔴 4-2 🔵 https://t.co/3V4K3KM0Ki"
 }
