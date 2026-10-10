@@ -143,7 +143,26 @@ function shouldRunNow() {
       return d && d >= range.start && d <= range.end;
     });
     if (weekFixtures.length === 0) return { proceed: false, reason: 'No fixtures in the coming week.' };
-    return { proceed: true, periodKey: null, relevantFixtures: weekFixtures };
+
+    // Previously this ran on EVERY trigger (cron-job.org fires roughly every
+    // 30 min) with no throttle at all — confirmed in the cost log as 46-47
+    // Claude calls/day for a preview that only needs to change once a day.
+    // periodKey mixes today's date with a short signature of the fixture
+    // list, so it still regenerates the same day if a fixture is added,
+    // postponed or rescheduled, but not on every identical re-trigger.
+    const signature = weekFixtures
+      .map(f => `${f.home}|${f.away}|${f.date}|${f.kickoff}|${f.postponed ? 'PP' : ''}`)
+      .sort()
+      .join(';');
+    let hash = 0;
+    for (let i = 0; i < signature.length; i++) { hash = (hash * 31 + signature.charCodeAt(i)) >>> 0; }
+    const todayKey = now.toISOString().slice(0, 10);
+    const periodKey = `${todayKey}:${hash.toString(36)}`;
+
+    const manual = process.env.MANUAL_RUN === 'true';
+    if (!manual && alreadyRunForPeriod(periodKey)) return { proceed: false, reason: 'Already ran today for this fixture list.' };
+
+    return { proceed: true, periodKey, relevantFixtures: weekFixtures };
   }
 
   if (MODE === 'recap') {

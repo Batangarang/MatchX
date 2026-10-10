@@ -5,14 +5,42 @@ const { logCost } = require('./cost-tracker.js');
 
 const API_KEY = process.env.GETXAPI_KEY;
 const SEVEN_DAYS_AGO = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000);
-const FRESHNESS_MINUTES = 120; // widened from 60 given real-world evidence of overlapping-workflow cost
+// Widened from 60 given real-world evidence of overlapping-workflow cost.
+// On a day with NO First Division South fixtures, club posts barely change
+// between checks, so the window is widened further to cut background cost
+// (~190-210 GetXAPI calls/day was the single biggest non-matchday cost item).
+const FRESHNESS_MINUTES_MATCHDAY = 120;
+const FRESHNESS_MINUTES_QUIET = 240;
+
+function parseFixtureDate(dateStr) {
+  const match = dateStr.match(/(\d{1,2})\s+(\w+)\s+(\d{4})/);
+  if (!match) return null;
+  const months = ['january','february','march','april','may','june','july','august','september','october','november','december'];
+  const monthIndex = months.indexOf(match[2].toLowerCase());
+  if (monthIndex === -1) return null;
+  return new Date(parseInt(match[3]), monthIndex, parseInt(match[1]));
+}
+
+function isDivisionMatchdayToday() {
+  try {
+    const { fixtures } = JSON.parse(fs.readFileSync('division-fixtures.json', 'utf-8'));
+    const today = new Date();
+    return (fixtures || []).some(f => {
+      const d = parseFixtureDate(f.date);
+      return d && d.getFullYear() === today.getFullYear() && d.getMonth() === today.getMonth() && d.getDate() === today.getDate();
+    });
+  } catch {
+    return true; // unknown — err on the safer (shorter) freshness window
+  }
+}
 
 function isDataFreshEnough() {
   if (!fs.existsSync('division-posts.json')) return false;
   try {
     const existing = JSON.parse(fs.readFileSync('division-posts.json', 'utf-8'));
     const age = (new Date() - new Date(existing.generatedAt)) / 60000;
-    return age < FRESHNESS_MINUTES;
+    const limit = isDivisionMatchdayToday() ? FRESHNESS_MINUTES_MATCHDAY : FRESHNESS_MINUTES_QUIET;
+    return age < limit;
   } catch {
     return false;
   }
