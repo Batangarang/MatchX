@@ -1,275 +1,32 @@
 {
-  "generatedAt": "2026-10-10T15:40:32.551Z",
-  "date": "2026-10-10",
-  "isToday": true,
-  "postCount": 163,
-  "latestPostTimestamp": "2026-10-10T15:40:01.000Z",
+  "generatedAt": "2026-10-11T00:01:04.563Z",
+  "date": "2026-10-13",
+  "isToday": false,
   "fixtures": [
     {
-      "home": "Allscott Heath",
-      "away": "Brereton Social",
-      "kickoff": "15:00",
-      "score": "2-1",
-      "matchStage": "half_time",
-      "goals": [
-        {
-          "minute": 6,
-          "team": "home",
-          "scorer": "Ben Summers"
-        },
-        {
-          "minute": 14,
-          "team": "away",
-          "scorer": "Brereton Social"
-        },
-        {
-          "minute": 24,
-          "team": "home",
-          "scorer": "Ben Summers"
-        },
-        {
-          "minute": 48,
-          "team": "home",
-          "scorer": "George Cross"
-        },
-        {
-          "minute": 83,
-          "team": "away",
-          "scorer": "Brereton Social"
-        }
-      ],
-      "yellowCards": [
-        {
-          "team": "home",
-          "player": "Max Morris"
-        }
-      ],
-      "redCards": [],
-      "scoreSource": "explicit"
-    },
-    {
-      "home": "Alsager Town",
-      "away": "Shawbury United",
-      "kickoff": "15:00",
-      "score": "0-1",
-      "matchStage": "half_time",
-      "goals": [
-        {
-          "minute": 38,
-          "team": "away",
-          "scorer": "Conor T Hughes"
-        }
-      ],
-      "yellowCards": [
-        {
-          "team": "home",
-          "player": null
-        },
-        {
-          "team": "away",
-          "player": null
-        }
-      ],
-      "redCards": [],
-      "scoreSource": "explicit"
-    },
-    {
-      "home": "Barnton",
-      "away": "Dawley Town",
-      "kickoff": "15:00",
-      "score": "1-2",
-      "matchStage": "half_time",
-      "goals": [
-        {
-          "minute": 11,
-          "team": "away",
-          "scorer": "Cian Fenlon"
-        },
-        {
-          "minute": 25,
-          "team": "away",
-          "scorer": "Cuffy"
-        },
-        {
-          "minute": 33,
-          "team": "home",
-          "scorer": "Sigsworth"
-        },
-        {
-          "minute": 68,
-          "team": "home",
-          "scorer": "Stanton"
-        }
-      ],
-      "yellowCards": [],
-      "redCards": [
-        {
-          "team": "away",
-          "player": "Cian Fenlon"
-        }
-      ],
-      "scoreSource": "explicit"
-    },
-    {
-      "home": "Bilston Town",
-      "away": "Crewe",
-      "kickoff": "15:00",
+      "home": "AFC Bridgnorth",
+      "away": "Market Drayton Town",
+      "kickoff": "19:45",
       "score": null,
-      "matchStage": "scheduled",
       "goals": [],
-      "yellowCards": [],
       "redCards": []
     },
     {
-      "home": "Market Drayton Town",
-      "away": "Widnes Town",
-      "kickoff": "15:00",
-      "score": "0-0",
-      "matchStage": "second_half",
-      "goals": [],
-      "yellowCards": [
-        {
-          "team": "home",
-          "player": "Manhertz"
-        },
-        {
-          "team": "away",
-          "player": "Liam Evans"
-        },
-        {
-          "team": "home",
-          "player": "Holt"
-        }
-      ],
-      "redCards": [
-        {
-          "team": "away",
-          "player": "Alfie Connor"
-        }
-      ],
-      "scoreSource": "explicit"
-    },
-    {
-      "home": "Sandbach United",
+      "home": "Foley Meir",
       "away": "Cheadle Heath Nomads",
-      "kickoff": "15:00",
-      "score": "3-1",
-      "matchStage": "half_time",
-      "goals": [
-        {
-          "minute": 18,
-          "team": "away",
-          "scorer": "Cheadle Heath Nomads"
-        },
-        {
-          "minute": 27,
-          "team": "home",
-          "scorer": "Fowles"
-        },
-        {
-          "minute": 37,
-          "team": "home",
-          "scorer": "Birchall"
-        },
-        {
-          "minute": 45,
-          "team": "home",
-          "scorer": "Hatton"
-        }
-      ],
-      "yellowCards": [
-        {
-          "team": "home",
-          "player": null
-        }
-      ],
-      "redCards": [],
-      "scoreSource": "manual_override"
+      "kickoff": "19:45",
+      "score": null,
+      "goals": [],
+      "redCards": []
     },
     {
-      "home": "Stafford Town",
-      "away": "Wednesfield Community",
-      "kickoff": "15:00",
-      "score": "6-2",
-      "matchStage": "second_half",
-      "goals": [
-        {
-          "minute": 4,
-          "team": "home",
-          "scorer": "Greer"
-        },
-        {
-          "minute": 17,
-          "team": "away",
-          "scorer": "Wednesfield Community"
-        },
-        {
-          "minute": 21,
-          "team": "home",
-          "scorer": "Callum Parker"
-        },
-        {
-          "minute": 35,
-          "team": "home",
-          "scorer": "Callum Parker"
-        },
-        {
-          "minute": 62,
-          "team": "away",
-          "scorer": "Dangerfield"
-        },
-        {
-          "minute": 74,
-          "team": "home",
-          "scorer": "Wilson"
-        },
-        {
-          "minute": 76,
-          "team": "home",
-          "scorer": "Taylor"
-        },
-        {
-          "minute": 82,
-          "team": "home",
-          "scorer": "Satchwell"
-        }
-      ],
-      "yellowCards": [
-        {
-          "team": "home",
-          "player": "Callum Parker"
-        }
-      ],
-      "redCards": [],
-      "scoreSource": "explicit"
-    },
-    {
-      "home": "Telford Town",
-      "away": "New Mills",
-      "kickoff": "15:00",
-      "score": "1-1",
-      "matchStage": "second_half",
-      "goals": [
-        {
-          "minute": 53,
-          "team": "home",
-          "scorer": "Godfrey Summerville"
-        },
-        {
-          "minute": 66,
-          "team": "away",
-          "scorer": "Will Frankish"
-        },
-        {
-          "minute": 68,
-          "team": "away",
-          "scorer": "New Mills"
-        }
-      ],
-      "yellowCards": [],
-      "redCards": [],
-      "scoreSource": "explicit"
+      "home": "Crewe",
+      "away": "Widnes Town",
+      "kickoff": "20:00",
+      "score": null,
+      "goals": [],
+      "redCards": []
     }
   ],
-  "ticker": "@AllscottHeathFC: 83': Goal for Brereton Social\n#ALLBRE #Pitchero https://t.co/XlxIlITloK"
+  "ticker": null
 }
