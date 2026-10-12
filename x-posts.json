@@ -1,5 +1,5 @@
 {
-  "scrapedAt": "2026-10-12T19:30:42.616Z",
+  "scrapedAt": "2026-10-12T20:35:20.003Z",
   "username": "SandbachFC_1st",
   "posts": [
     {
@@ -7,6 +7,14 @@
       "createdAt": "2026-10-07T20:57:07.000Z",
       "images": [
         "https://pbs.twimg.com/media/HUDmlc4WgAAhBe7.jpg"
+      ],
+      "isMatchday": false
+    },
+    {
+      "text": "It's the game you have been waiting for, tomorrow we face @StockportCounty for the first time in the @Cheshire_FA senior cup and club history. Lets make it a game to remember as we welcome the EFL league one side to Hind Heath Road. \nPlease arrive early to avoid queing. https://t.co/jU4UUxCnYP",
+      "createdAt": "2026-10-12T20:02:26.000Z",
+      "images": [
+        "https://pbs.twimg.com/media/HUdJXHfXYAA1gd9.png"
       ],
       "isMatchday": false
     },
@@ -55,12 +63,6 @@
     {
       "text": "🔵⚪️ v 🟣🟣\n\nSandbach United v Cheadle Heath Nomads\n\nShotton with a chance from a corner but blazes it over the bar.\n\n@CheadleNomads \n\n3 1\n\n65 mins gone",
       "createdAt": "2026-10-10T15:23:35.000Z",
-      "images": [],
-      "isMatchday": true
-    },
-    {
-      "text": "🔵⚪️ v 🟣🟣\n\nSandbach United v Cheadle Heath Nomads\n\nAnother yellow card for a CHN defender and a free kick to The Bach, which Foley delivers but it’s cleared \n\n@CheadleNomads \n\n3 1\n\n62 mins gone",
-      "createdAt": "2026-10-10T15:19:23.000Z",
       "images": [],
       "isMatchday": true
     }
