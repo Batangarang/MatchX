@@ -12,7 +12,7 @@
     "scoreSource": "manual_override",
     "scoreConfirmed": true,
     "feedScore": "3-1",
-    "scoreDiscrepancy": "Goal reports suggested 3-2 but the confirmed score is 3-1 — 1 unconfirmed goal report(s) ignored.",
+    "scoreDiscrepancy": null,
     "unconfirmedGoals": [
       {
         "minute": 18,
