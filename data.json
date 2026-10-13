@@ -1,9 +1,9 @@
 {
-  "scrapedAt": "2026-10-13T18:30:55.851Z",
+  "scrapedAt": "2026-10-13T19:31:04.808Z",
   "nextFixture": {
     "date": "Tue 13/10/26",
     "opposition": "Stockport County",
-    "opponentUrl": null,
+    "opponentUrl": "lineups.php?id=23397",
     "homeAway": "H",
     "kickoff": "19:45",
     "score": null,
@@ -14,7 +14,7 @@
     {
       "date": "Tue 13/10/26",
       "opposition": "Stockport County",
-      "opponentUrl": null,
+      "opponentUrl": "lineups.php?id=23397",
       "homeAway": "H",
       "kickoff": "19:45",
       "score": null,
@@ -258,7 +258,7 @@
     {
       "date": "Tue 13/10/26",
       "opposition": "Stockport County",
-      "opponentUrl": null,
+      "opponentUrl": "lineups.php?id=23397",
       "homeAway": "H",
       "kickoff": "19:45",
       "score": null,
