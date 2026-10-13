@@ -13531,13 +13531,13 @@
       "aiCostGBP": 0
     },
     {
-      "script": "division-scores",
-      "timestamp": "2026-10-13T20:01:11.114Z",
-      "getxapiCalls": 6,
+      "script": "division-posts",
+      "timestamp": "2026-10-13T20:01:14.850Z",
+      "getxapiCalls": 21,
       "claudeCalls": 0,
       "inputTokens": 0,
       "outputTokens": 0,
-      "xCostGBP": 0.0045,
+      "xCostGBP": 0.0158,
       "aiCostGBP": 0
     }
   ]
