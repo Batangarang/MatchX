@@ -1,5 +1,5 @@
 {
-  "scrapedAt": "2026-10-13T00:31:30.979Z",
+  "scrapedAt": "2026-10-13T21:31:34.429Z",
   "clubs": {
     "Stafford Town": {
       "clubUrl": "clubpage.php?id=182",
@@ -23,8 +23,8 @@
     },
     "AFC Bridgnorth": {
       "clubUrl": "clubpage.php?id=936",
-      "form": "DLWWWW",
-      "leagueGamesPlayed": 9
+      "form": "WDLWWW",
+      "leagueGamesPlayed": 10
     },
     "Eccleshall": {
       "clubUrl": "clubpage.php?id=30",
@@ -48,8 +48,8 @@
     },
     "Market Drayton Town": {
       "clubUrl": "clubpage.php?id=224",
-      "form": "DLLWWW",
-      "leagueGamesPlayed": 11
+      "form": "LDLLWW",
+      "leagueGamesPlayed": 12
     },
     "Shawbury United": {
       "clubUrl": "clubpage.php?id=792",
@@ -68,18 +68,18 @@
     },
     "Foley Meir": {
       "clubUrl": "clubpage.php?id=898",
-      "form": "LDWLDW",
-      "leagueGamesPlayed": 10
+      "form": "DLDWLD",
+      "leagueGamesPlayed": 11
     },
     "Cheadle Heath Nomads": {
       "clubUrl": "clubpage.php?id=713",
-      "form": "LWDDLL",
-      "leagueGamesPlayed": 13
+      "form": "DLWDDL",
+      "leagueGamesPlayed": 14
     },
     "Crewe": {
       "clubUrl": "clubpage.php?id=591",
-      "form": "LLLWWL",
-      "leagueGamesPlayed": 10
+      "form": "WLLLWW",
+      "leagueGamesPlayed": 11
     },
     "Telford Town": {
       "clubUrl": "clubpage.php?id=881",
@@ -88,8 +88,8 @@
     },
     "Widnes Town": {
       "clubUrl": "clubpage.php?id=868",
-      "form": "DWLDLL",
-      "leagueGamesPlayed": 10
+      "form": "LDWLDL",
+      "leagueGamesPlayed": 11
     },
     "Alsager Town": {
       "clubUrl": "clubpage.php?id=3",
