@@ -1,5 +1,5 @@
 {
-  "scrapedAt": "2026-10-14T21:30:55.974Z",
+  "scrapedAt": "2026-10-14T22:30:56.634Z",
   "division": "First Division South",
   "standings": [
     {
@@ -19,6 +19,21 @@
     },
     {
       "position": 2,
+      "team": "Bilston Town",
+      "played": "11",
+      "won": "8",
+      "drawn": "2",
+      "lost": "1",
+      "for": "31",
+      "against": "10",
+      "goalDifference": "21",
+      "points": "26",
+      "clubUrl": "clubpage.php?id=355",
+      "form": "WWWWDW",
+      "formIncludesCup": false
+    },
+    {
+      "position": 3,
       "team": "Stafford Town",
       "played": "12",
       "won": "7",
@@ -30,21 +45,6 @@
       "points": "24",
       "clubUrl": "clubpage.php?id=182",
       "form": "WDDWWL",
-      "formIncludesCup": false
-    },
-    {
-      "position": 3,
-      "team": "Bilston Town",
-      "played": "10",
-      "won": "7",
-      "drawn": "2",
-      "lost": "1",
-      "for": "27",
-      "against": "10",
-      "goalDifference": "17",
-      "points": "23",
-      "clubUrl": "clubpage.php?id=355",
-      "form": "WWWWDW",
       "formIncludesCup": false
     },
     {
@@ -184,21 +184,6 @@
     },
     {
       "position": 13,
-      "team": "Dawley Town",
-      "played": "10",
-      "won": "3",
-      "drawn": "3",
-      "lost": "4",
-      "for": "16",
-      "against": "15",
-      "goalDifference": "1",
-      "points": "12",
-      "clubUrl": "clubpage.php?id=635",
-      "form": "LDWDLW",
-      "formIncludesCup": false
-    },
-    {
-      "position": 14,
       "team": "Foley Meir",
       "played": "10",
       "won": "3",
@@ -213,7 +198,7 @@
       "formIncludesCup": false
     },
     {
-      "position": 15,
+      "position": 14,
       "team": "Brereton Social",
       "played": "11",
       "won": "3",
@@ -225,6 +210,21 @@
       "points": "12",
       "clubUrl": "clubpage.php?id=459",
       "form": "LDLWDL",
+      "formIncludesCup": false
+    },
+    {
+      "position": 15,
+      "team": "Dawley Town",
+      "played": "11",
+      "won": "3",
+      "drawn": "3",
+      "lost": "5",
+      "for": "16",
+      "against": "19",
+      "goalDifference": "-3",
+      "points": "12",
+      "clubUrl": "clubpage.php?id=635",
+      "form": "LDWDLW",
       "formIncludesCup": false
     },
     {
