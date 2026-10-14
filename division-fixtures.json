@@ -1,13 +1,6 @@
 {
-  "generatedAt": "2026-10-14T18:40:40.129Z",
+  "generatedAt": "2026-10-14T18:45:35.532Z",
   "fixtures": [
-    {
-      "date": "Wednesday 14 October 2026",
-      "home": "Bilston Town",
-      "away": "Dawley Town",
-      "kickoff": "19:45",
-      "postponed": false
-    },
     {
       "date": "Saturday 17 October 2026",
       "home": "Allscott Heath",
@@ -1868,6 +1861,13 @@
       "home": "Wolverhampton Casuals",
       "away": "Cheadle Heath Nomads",
       "kickoff": "15:00",
+      "postponed": false
+    },
+    {
+      "date": "Wednesday 14 October 2026",
+      "home": "Bilston Town",
+      "away": "Dawley Town",
+      "kickoff": "19:45",
       "postponed": false
     }
   ]
