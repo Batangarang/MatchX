@@ -1,5 +1,5 @@
 {
-  "scrapedAt": "2026-10-13T21:31:34.429Z",
+  "scrapedAt": "2026-10-14T18:31:31.052Z",
   "clubs": {
     "Stafford Town": {
       "clubUrl": "clubpage.php?id=182",
@@ -11,6 +11,11 @@
       "form": "WWWWDW",
       "leagueGamesPlayed": 10
     },
+    "AFC Bridgnorth": {
+      "clubUrl": "clubpage.php?id=936",
+      "form": "WDLWWW",
+      "leagueGamesPlayed": 10
+    },
     "Wolverhampton Casuals": {
       "clubUrl": "clubpage.php?id=73",
       "form": "WWDWLW",
@@ -20,11 +25,6 @@
       "clubUrl": "clubpage.php?id=266",
       "form": "WWWWDW",
       "leagueGamesPlayed": 12
-    },
-    "AFC Bridgnorth": {
-      "clubUrl": "clubpage.php?id=936",
-      "form": "WDLWWW",
-      "leagueGamesPlayed": 10
     },
     "Eccleshall": {
       "clubUrl": "clubpage.php?id=30",
@@ -46,40 +46,40 @@
       "form": "LDLWLW",
       "leagueGamesPlayed": 12
     },
-    "Market Drayton Town": {
-      "clubUrl": "clubpage.php?id=224",
-      "form": "LDLLWW",
-      "leagueGamesPlayed": 12
-    },
     "Shawbury United": {
       "clubUrl": "clubpage.php?id=792",
       "form": "WLLLLL",
       "leagueGamesPlayed": 11
+    },
+    "Market Drayton Town": {
+      "clubUrl": "clubpage.php?id=224",
+      "form": "LDLLWW",
+      "leagueGamesPlayed": 12
     },
     "Dawley Town": {
       "clubUrl": "clubpage.php?id=635",
       "form": "LDWDLW",
       "leagueGamesPlayed": 10
     },
+    "Foley Meir": {
+      "clubUrl": "clubpage.php?id=898",
+      "form": "DLDWLD",
+      "leagueGamesPlayed": 11
+    },
     "Brereton Social": {
       "clubUrl": "clubpage.php?id=459",
       "form": "LDLWDL",
       "leagueGamesPlayed": 11
     },
-    "Foley Meir": {
-      "clubUrl": "clubpage.php?id=898",
-      "form": "DLDWLD",
+    "Crewe": {
+      "clubUrl": "clubpage.php?id=591",
+      "form": "WLLLWW",
       "leagueGamesPlayed": 11
     },
     "Cheadle Heath Nomads": {
       "clubUrl": "clubpage.php?id=713",
       "form": "DLWDDL",
       "leagueGamesPlayed": 14
-    },
-    "Crewe": {
-      "clubUrl": "clubpage.php?id=591",
-      "form": "WLLLWW",
-      "leagueGamesPlayed": 11
     },
     "Telford Town": {
       "clubUrl": "clubpage.php?id=881",
