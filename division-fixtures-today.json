@@ -1,25 +1,11 @@
 {
-  "date": "2026-10-13",
+  "date": "2026-10-14",
   "fixtures": [
     {
-      "date": "Tuesday 13 October 2026",
-      "home": "AFC Bridgnorth",
-      "away": "Market Drayton Town",
+      "date": "Wednesday 14 October 2026",
+      "home": "Bilston Town",
+      "away": "Dawley Town",
       "kickoff": "19:45",
-      "postponed": false
-    },
-    {
-      "date": "Tuesday 13 October 2026",
-      "home": "Foley Meir",
-      "away": "Cheadle Heath Nomads",
-      "kickoff": "19:45",
-      "postponed": false
-    },
-    {
-      "date": "Tuesday 13 October 2026",
-      "home": "Crewe",
-      "away": "Widnes Town",
-      "kickoff": "20:00",
       "postponed": false
     }
   ]

@@ -1,30 +1,12 @@
 {
-  "generatedAt": "2026-10-13T10:55:29.820Z",
-  "date": "2026-10-13",
+  "generatedAt": "2026-10-14T00:01:05.601Z",
+  "date": "2026-10-14",
   "isToday": true,
   "fixtures": [
     {
-      "home": "AFC Bridgnorth",
-      "away": "Market Drayton Town",
+      "home": "Bilston Town",
+      "away": "Dawley Town",
       "kickoff": "19:45",
-      "score": null,
-      "goals": [],
-      "yellowCards": [],
-      "redCards": []
-    },
-    {
-      "home": "Foley Meir",
-      "away": "Cheadle Heath Nomads",
-      "kickoff": "19:45",
-      "score": null,
-      "goals": [],
-      "yellowCards": [],
-      "redCards": []
-    },
-    {
-      "home": "Crewe",
-      "away": "Widnes Town",
-      "kickoff": "20:00",
       "score": null,
       "goals": [],
       "yellowCards": [],
