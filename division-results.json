@@ -1,15 +1,15 @@
 {
-  "scrapedAt": "2026-10-14T18:31:31.052Z",
+  "scrapedAt": "2026-10-15T15:31:30.263Z",
   "clubs": {
+    "Bilston Town": {
+      "clubUrl": "clubpage.php?id=355",
+      "form": "WWWWWD",
+      "leagueGamesPlayed": 11
+    },
     "Stafford Town": {
       "clubUrl": "clubpage.php?id=182",
       "form": "WDDWWL",
       "leagueGamesPlayed": 12
-    },
-    "Bilston Town": {
-      "clubUrl": "clubpage.php?id=355",
-      "form": "WWWWDW",
-      "leagueGamesPlayed": 10
     },
     "AFC Bridgnorth": {
       "clubUrl": "clubpage.php?id=936",
@@ -56,11 +56,6 @@
       "form": "LDLLWW",
       "leagueGamesPlayed": 12
     },
-    "Dawley Town": {
-      "clubUrl": "clubpage.php?id=635",
-      "form": "LDWDLW",
-      "leagueGamesPlayed": 10
-    },
     "Foley Meir": {
       "clubUrl": "clubpage.php?id=898",
       "form": "DLDWLD",
@@ -69,6 +64,11 @@
     "Brereton Social": {
       "clubUrl": "clubpage.php?id=459",
       "form": "LDLWDL",
+      "leagueGamesPlayed": 11
+    },
+    "Dawley Town": {
+      "clubUrl": "clubpage.php?id=635",
+      "form": "LLDWDL",
       "leagueGamesPlayed": 11
     },
     "Crewe": {
