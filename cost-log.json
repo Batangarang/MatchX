@@ -2,66 +2,6 @@
   "entries": [
     {
       "script": "x-posts",
-      "timestamp": "2026-09-11T16:35:19.795Z",
-      "getxapiCalls": 1,
-      "claudeCalls": 0,
-      "inputTokens": 0,
-      "outputTokens": 0,
-      "xCostGBP": 0.0008,
-      "aiCostGBP": 0
-    },
-    {
-      "script": "division-posts",
-      "timestamp": "2026-09-11T17:02:07.660Z",
-      "getxapiCalls": 21,
-      "claudeCalls": 0,
-      "inputTokens": 0,
-      "outputTokens": 0,
-      "xCostGBP": 0.0158,
-      "aiCostGBP": 0
-    },
-    {
-      "script": "recap-weekend-preview",
-      "timestamp": "2026-09-11T17:02:12.872Z",
-      "getxapiCalls": 0,
-      "claudeCalls": 1,
-      "inputTokens": 1324,
-      "outputTokens": 361,
-      "xCostGBP": 0,
-      "aiCostGBP": 0.0023
-    },
-    {
-      "script": "x-posts",
-      "timestamp": "2026-09-11T17:35:25.079Z",
-      "getxapiCalls": 1,
-      "claudeCalls": 0,
-      "inputTokens": 0,
-      "outputTokens": 0,
-      "xCostGBP": 0.0008,
-      "aiCostGBP": 0
-    },
-    {
-      "script": "x-posts",
-      "timestamp": "2026-09-11T18:40:22.330Z",
-      "getxapiCalls": 1,
-      "claudeCalls": 0,
-      "inputTokens": 0,
-      "outputTokens": 0,
-      "xCostGBP": 0.0008,
-      "aiCostGBP": 0
-    },
-    {
-      "script": "x-posts",
-      "timestamp": "2026-09-11T19:40:26.013Z",
-      "getxapiCalls": 1,
-      "claudeCalls": 0,
-      "inputTokens": 0,
-      "outputTokens": 0,
-      "xCostGBP": 0.0008,
-      "aiCostGBP": 0
-    },
-    {
-      "script": "x-posts",
       "timestamp": "2026-09-11T20:45:28.431Z",
       "getxapiCalls": 1,
       "claudeCalls": 0,
@@ -14143,6 +14083,16 @@
     {
       "script": "division-posts",
       "timestamp": "2026-10-16T16:01:14.288Z",
+      "getxapiCalls": 21,
+      "claudeCalls": 0,
+      "inputTokens": 0,
+      "outputTokens": 0,
+      "xCostGBP": 0.0158,
+      "aiCostGBP": 0
+    },
+    {
+      "script": "division-posts",
+      "timestamp": "2026-10-16T20:31:05.771Z",
       "getxapiCalls": 21,
       "claudeCalls": 0,
       "inputTokens": 0,
