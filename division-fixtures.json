@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-16T15:20:37.432Z",
+  "generatedAt": "2026-10-16T15:25:30.010Z",
   "fixtures": [
     {
       "date": "Saturday 17 October 2026",
@@ -159,6 +159,13 @@
       "date": "Saturday 31 October 2026",
       "home": "Stafford Town",
       "away": "Telford Town",
+      "kickoff": "15:00",
+      "postponed": false
+    },
+    {
+      "date": "Saturday 31 October 2026",
+      "home": "Widnes Town",
+      "away": "Alsager Town",
       "kickoff": "15:00",
       "postponed": false
     },
@@ -1216,13 +1223,6 @@
       "date": "Saturday 20 February 2027",
       "home": "Wednesfield Community",
       "away": "Sandbach United",
-      "kickoff": "15:00",
-      "postponed": false
-    },
-    {
-      "date": "Saturday 20 February 2027",
-      "home": "Widnes Town",
-      "away": "Alsager Town",
       "kickoff": "15:00",
       "postponed": false
     },
