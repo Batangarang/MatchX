@@ -13681,24 +13681,14 @@
       "aiCostGBP": 0
     },
     {
-      "script": "division-posts",
-      "timestamp": "2026-10-17T17:30:59.141Z",
-      "getxapiCalls": 21,
+      "script": "division-scores",
+      "timestamp": "2026-10-17T17:31:06.252Z",
+      "getxapiCalls": 20,
       "claudeCalls": 0,
       "inputTokens": 0,
       "outputTokens": 0,
-      "xCostGBP": 0.0158,
+      "xCostGBP": 0.015,
       "aiCostGBP": 0
-    },
-    {
-      "script": "recap-recap",
-      "timestamp": "2026-10-17T17:31:04.599Z",
-      "getxapiCalls": 0,
-      "claudeCalls": 1,
-      "inputTokens": 2650,
-      "outputTokens": 391,
-      "xCostGBP": 0,
-      "aiCostGBP": 0.0035
     }
   ]
 }
