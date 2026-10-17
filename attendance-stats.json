@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-17T15:30:55.731Z",
+  "generatedAt": "2026-10-17T16:30:55.679Z",
   "games": [
     {
       "opponent": "Wednesfield Community",
@@ -48,9 +48,15 @@
       "score": "3-1",
       "attendance": 164,
       "date": "Sat 10/10/26"
+    },
+    {
+      "opponent": "Bilston Town",
+      "score": "1-0",
+      "attendance": 237,
+      "date": "Sat 17/10/26"
     }
   ],
-  "average": 161,
+  "average": 169,
   "lowest": {
     "opponent": "Wednesfield Community",
     "score": "2-1",

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-10T16:30:55.272Z",
+  "generatedAt": "2026-10-17T16:30:52.864Z",
   "history": [
     {
       "gamesPlayed": 1,
@@ -144,6 +144,18 @@
       "cumGoalsFor": 35,
       "cumGoalsAgainst": 17,
       "cumGoalDifference": 18
+    },
+    {
+      "gamesPlayed": 13,
+      "date": "Sat 17/10/26",
+      "opponent": "Bilston Town",
+      "position": 1,
+      "points": 31,
+      "gameGoalsFor": 1,
+      "gameGoalsAgainst": 0,
+      "cumGoalsFor": 36,
+      "cumGoalsAgainst": 17,
+      "cumGoalDifference": 19
     }
   ]
 }

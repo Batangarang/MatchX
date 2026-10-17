@@ -1,26 +1,16 @@
 {
-  "scrapedAt": "2026-10-17T15:30:51.545Z",
+  "scrapedAt": "2026-10-17T16:30:51.342Z",
   "nextFixture": {
-    "date": "Sat 17/10/26",
-    "opposition": "Bilston Town",
-    "opponentUrl": "clubpage.php?id=355",
-    "homeAway": "H",
+    "date": "Sat 24/10/26",
+    "opposition": "AFC Bridgnorth",
+    "opponentUrl": "clubpage.php?id=936",
+    "homeAway": "A",
     "kickoff": "15:00",
     "score": null,
     "scorers": null,
     "competitionNote": null
   },
   "nextFixtures": [
-    {
-      "date": "Sat 17/10/26",
-      "opposition": "Bilston Town",
-      "opponentUrl": "clubpage.php?id=355",
-      "homeAway": "H",
-      "kickoff": "15:00",
-      "score": null,
-      "scorers": null,
-      "competitionNote": null
-    },
     {
       "date": "Sat 24/10/26",
       "opposition": "AFC Bridgnorth",
@@ -60,19 +50,39 @@
       "score": null,
       "scorers": null,
       "competitionNote": null
+    },
+    {
+      "date": "Sat 21/11/26",
+      "opposition": "Shawbury United",
+      "opponentUrl": "clubpage.php?id=792",
+      "homeAway": "H",
+      "kickoff": "15:00",
+      "score": null,
+      "scorers": null,
+      "competitionNote": null
     }
   ],
   "lastResult": {
-    "date": "Tue 13/10/26",
-    "opposition": "Stockport County",
-    "opponentUrl": "lineups.php?id=23397",
+    "date": "Sat 17/10/26",
+    "opposition": "Bilston Town",
+    "opponentUrl": "clubpage.php?id=355",
     "homeAway": "H",
-    "kickoff": "19:45",
-    "score": "L 1-3",
-    "scorers": "Jake Pollard (14)",
-    "competitionNote": "Cheshire Senior Cup 1"
+    "kickoff": "15:00",
+    "score": "W 1-0",
+    "scorers": "Matthew Birchall (84)",
+    "competitionNote": null
   },
   "lastResults": [
+    {
+      "date": "Sat 17/10/26",
+      "opposition": "Bilston Town",
+      "opponentUrl": "clubpage.php?id=355",
+      "homeAway": "H",
+      "kickoff": "15:00",
+      "score": "W 1-0",
+      "scorers": "Matthew Birchall (84)",
+      "competitionNote": null
+    },
     {
       "date": "Tue 13/10/26",
       "opposition": "Stockport County",
@@ -92,16 +102,6 @@
       "score": "W 3-1",
       "scorers": "Joshua Fowles (27) Matthew Birchall (37) Robbie Hatton (45+1p)",
       "competitionNote": null
-    },
-    {
-      "date": "Tue 06/10/26",
-      "opposition": "Foley Meir",
-      "opponentUrl": "clubpage.php?id=898",
-      "homeAway": "H",
-      "kickoff": "19:45",
-      "score": "W 4-1",
-      "scorers": "Max Williams (9) Joshua Fowles (11) Kyle Foley (31) Matthew Birchall (88)",
-      "competitionNote": "The Edward Case Cup 1 S"
     }
   ],
   "allFixtures": [
@@ -271,8 +271,8 @@
       "opponentUrl": "clubpage.php?id=355",
       "homeAway": "H",
       "kickoff": "15:00",
-      "score": null,
-      "scorers": null,
+      "score": "W 1-0",
+      "scorers": "Matthew Birchall (84)",
       "competitionNote": null
     },
     {
