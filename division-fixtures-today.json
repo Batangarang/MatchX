@@ -1,11 +1,74 @@
 {
-  "date": "2026-10-14",
+  "date": "2026-10-17",
   "fixtures": [
     {
-      "date": "Wednesday 14 October 2026",
-      "home": "Bilston Town",
+      "date": "Saturday 17 October 2026",
+      "home": "Allscott Heath",
+      "away": "Foley Meir",
+      "kickoff": "15:00",
+      "postponed": false
+    },
+    {
+      "date": "Saturday 17 October 2026",
+      "home": "Barnton",
+      "away": "AFC Bridgnorth",
+      "kickoff": "15:00",
+      "postponed": false
+    },
+    {
+      "date": "Saturday 17 October 2026",
+      "home": "Brereton Social",
+      "away": "Stafford Town",
+      "kickoff": "15:00",
+      "postponed": false
+    },
+    {
+      "date": "Saturday 17 October 2026",
+      "home": "Crewe",
+      "away": "Eccleshall",
+      "kickoff": "15:00",
+      "postponed": false
+    },
+    {
+      "date": "Saturday 17 October 2026",
+      "home": "New Mills",
+      "away": "Alsager Town",
+      "kickoff": "15:00",
+      "postponed": false
+    },
+    {
+      "date": "Saturday 17 October 2026",
+      "home": "Sandbach United",
+      "away": "Bilston Town",
+      "kickoff": "15:00",
+      "postponed": false
+    },
+    {
+      "date": "Saturday 17 October 2026",
+      "home": "Shawbury United",
+      "away": "Cheadle Heath Nomads",
+      "kickoff": "15:00",
+      "postponed": false
+    },
+    {
+      "date": "Saturday 17 October 2026",
+      "home": "Telford Town",
+      "away": "Wolverhampton Casuals",
+      "kickoff": "15:00",
+      "postponed": false
+    },
+    {
+      "date": "Saturday 17 October 2026",
+      "home": "Wednesfield Community",
+      "away": "Market Drayton Town",
+      "kickoff": "15:00",
+      "postponed": false
+    },
+    {
+      "date": "Saturday 17 October 2026",
+      "home": "Widnes Town",
       "away": "Dawley Town",
-      "kickoff": "19:45",
+      "kickoff": "15:00",
       "postponed": false
     }
   ]
