@@ -1,5 +1,5 @@
 {
-  "scrapedAt": "2026-10-18T05:30:50.811Z",
+  "scrapedAt": "2026-10-18T06:31:31.323Z",
   "division": "First Division South",
   "standings": [
     {
@@ -29,7 +29,7 @@
       "goalDifference": "20",
       "points": "26",
       "clubUrl": "clubpage.php?id=355",
-      "form": "WWWWWD",
+      "form": "LWWWWW",
       "formIncludesCup": false
     },
     {
@@ -44,7 +44,7 @@
       "goalDifference": "15",
       "points": "25",
       "clubUrl": "clubpage.php?id=182",
-      "form": "WDDWWL",
+      "form": "DWDDWW",
       "formIncludesCup": false
     },
     {
@@ -59,7 +59,7 @@
       "goalDifference": "13",
       "points": "25",
       "clubUrl": "clubpage.php?id=73",
-      "form": "WWDWLW",
+      "form": "WWWDWL",
       "formIncludesCup": false
     },
     {
@@ -74,7 +74,7 @@
       "goalDifference": "16",
       "points": "24",
       "clubUrl": "clubpage.php?id=936",
-      "form": "WDLWWW",
+      "form": "DWDLWW",
       "formIncludesCup": false
     },
     {
@@ -89,7 +89,7 @@
       "goalDifference": "9",
       "points": "22",
       "clubUrl": "clubpage.php?id=266",
-      "form": "WWWWDW",
+      "form": "DWWWWD",
       "formIncludesCup": false
     },
     {
@@ -104,7 +104,7 @@
       "goalDifference": "7",
       "points": "22",
       "clubUrl": "clubpage.php?id=30",
-      "form": "DLWWWL",
+      "form": "WDLWWW",
       "formIncludesCup": false
     },
     {
@@ -119,7 +119,7 @@
       "goalDifference": "18",
       "points": "20",
       "clubUrl": "clubpage.php?id=816",
-      "form": "WWWWLL",
+      "form": "WWWWWL",
       "formIncludesCup": false
     },
     {
@@ -134,7 +134,7 @@
       "goalDifference": "2",
       "points": "18",
       "clubUrl": "clubpage.php?id=91",
-      "form": "DWLLDL",
+      "form": "LDWLLD",
       "formIncludesCup": false
     },
     {
@@ -149,7 +149,7 @@
       "goalDifference": "-2",
       "points": "15",
       "clubUrl": "clubpage.php?id=635",
-      "form": "LLDWDL",
+      "form": "WLLDWD",
       "formIncludesCup": false
     },
     {
@@ -164,7 +164,7 @@
       "goalDifference": "-15",
       "points": "15",
       "clubUrl": "clubpage.php?id=191",
-      "form": "LDLWLW",
+      "form": "DLDLWL",
       "formIncludesCup": false
     },
     {
@@ -179,7 +179,7 @@
       "goalDifference": "-7",
       "points": "14",
       "clubUrl": "clubpage.php?id=713",
-      "form": "DLWDDL",
+      "form": "WDLWDD",
       "formIncludesCup": false
     },
     {
@@ -194,7 +194,7 @@
       "goalDifference": "-9",
       "points": "14",
       "clubUrl": "clubpage.php?id=224",
-      "form": "LDLLWW",
+      "form": "DLDLLW",
       "formIncludesCup": false
     },
     {
@@ -209,7 +209,7 @@
       "goalDifference": "-2",
       "points": "13",
       "clubUrl": "clubpage.php?id=459",
-      "form": "LDLWDL",
+      "form": "DLDLWD",
       "formIncludesCup": false
     },
     {
@@ -224,7 +224,7 @@
       "goalDifference": "-9",
       "points": "13",
       "clubUrl": "clubpage.php?id=792",
-      "form": "WLLLLL",
+      "form": "LWLLLL",
       "formIncludesCup": false
     },
     {
@@ -239,7 +239,7 @@
       "goalDifference": "-8",
       "points": "12",
       "clubUrl": "clubpage.php?id=898",
-      "form": "DLDWLD",
+      "form": "LDLDWL",
       "formIncludesCup": false
     },
     {
@@ -254,7 +254,7 @@
       "goalDifference": "-14",
       "points": "12",
       "clubUrl": "clubpage.php?id=591",
-      "form": "WLLLWW",
+      "form": "LWLLLW",
       "formIncludesCup": false
     },
     {
@@ -269,7 +269,7 @@
       "goalDifference": "-13",
       "points": "7",
       "clubUrl": "clubpage.php?id=881",
-      "form": "DLLLLD",
+      "form": "LDLLLL",
       "formIncludesCup": false
     },
     {
@@ -284,7 +284,7 @@
       "goalDifference": "-15",
       "points": "7",
       "clubUrl": "clubpage.php?id=3",
-      "form": "LLLLLL",
+      "form": "WLLLLL",
       "formIncludesCup": false
     },
     {
@@ -299,7 +299,7 @@
       "goalDifference": "-25",
       "points": "6",
       "clubUrl": "clubpage.php?id=868",
-      "form": "LDWLDL",
+      "form": "LLDWLD",
       "formIncludesCup": false
     }
   ]
