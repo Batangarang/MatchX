@@ -1,96 +1,46 @@
 {
-  "generatedAt": "2026-10-17T10:55:30.813Z",
-  "date": "2026-10-17",
-  "isToday": true,
+  "generatedAt": "2026-10-18T00:01:04.883Z",
+  "date": "2026-10-24",
+  "isToday": false,
   "fixtures": [
     {
-      "home": "Allscott Heath",
-      "away": "Foley Meir",
+      "home": "AFC Bridgnorth",
+      "away": "Sandbach United",
       "kickoff": "15:00",
       "score": null,
       "goals": [],
-      "yellowCards": [],
-      "redCards": []
-    },
-    {
-      "home": "Barnton",
-      "away": "AFC Bridgnorth",
-      "kickoff": "15:00",
-      "score": null,
-      "goals": [],
-      "yellowCards": [],
       "redCards": []
     },
     {
       "home": "Brereton Social",
-      "away": "Stafford Town",
-      "kickoff": "15:00",
-      "score": null,
-      "goals": [],
-      "yellowCards": [],
-      "redCards": []
-    },
-    {
-      "home": "Crewe",
-      "away": "Eccleshall",
-      "kickoff": "15:00",
-      "score": null,
-      "goals": [],
-      "yellowCards": [],
-      "redCards": []
-    },
-    {
-      "home": "New Mills",
-      "away": "Alsager Town",
-      "kickoff": "15:00",
-      "score": null,
-      "goals": [],
-      "yellowCards": [],
-      "redCards": []
-    },
-    {
-      "home": "Sandbach United",
-      "away": "Bilston Town",
-      "kickoff": "15:00",
-      "score": null,
-      "goals": [],
-      "yellowCards": [],
-      "redCards": []
-    },
-    {
-      "home": "Shawbury United",
-      "away": "Cheadle Heath Nomads",
-      "kickoff": "15:00",
-      "score": null,
-      "goals": [],
-      "yellowCards": [],
-      "redCards": []
-    },
-    {
-      "home": "Telford Town",
-      "away": "Wolverhampton Casuals",
-      "kickoff": "15:00",
-      "score": null,
-      "goals": [],
-      "yellowCards": [],
-      "redCards": []
-    },
-    {
-      "home": "Wednesfield Community",
-      "away": "Market Drayton Town",
-      "kickoff": "15:00",
-      "score": null,
-      "goals": [],
-      "yellowCards": [],
-      "redCards": []
-    },
-    {
-      "home": "Widnes Town",
       "away": "Dawley Town",
       "kickoff": "15:00",
       "score": null,
       "goals": [],
-      "yellowCards": [],
+      "redCards": []
+    },
+    {
+      "home": "Cheadle Heath Nomads",
+      "away": "Market Drayton Town",
+      "kickoff": "15:00",
+      "score": null,
+      "goals": [],
+      "redCards": []
+    },
+    {
+      "home": "Foley Meir",
+      "away": "Widnes Town",
+      "kickoff": "15:00",
+      "score": null,
+      "goals": [],
+      "redCards": []
+    },
+    {
+      "home": "Shawbury United",
+      "away": "Stafford Town",
+      "kickoff": "15:00",
+      "score": null,
+      "goals": [],
       "redCards": []
     }
   ],
