@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-19T07:30:56.228Z",
+  "generatedAt": "2026-10-19T08:30:55.924Z",
   "division": "First Division South",
   "appearances": [
     {
@@ -195,7 +195,194 @@
       "total": "12"
     }
   ],
-  "goalscorers": [],
+  "goalscorers": [
+    {
+      "rank": "1",
+      "player": "Ben Davies",
+      "club": "Allscott Heath",
+      "total": "12"
+    },
+    {
+      "rank": "-",
+      "player": "Harry Dixon",
+      "club": "Bilston Town",
+      "total": "11"
+    },
+    {
+      "rank": "-",
+      "player": "Ross Jones",
+      "club": "Dawley Town",
+      "total": "11"
+    },
+    {
+      "rank": "4",
+      "player": "Kieran Cook",
+      "club": "Wolverhampton Casuals",
+      "total": "9"
+    },
+    {
+      "rank": "5",
+      "player": "Suar Dedja",
+      "club": "AFC Bridgnorth",
+      "total": "8"
+    },
+    {
+      "rank": "6",
+      "player": "Chigozie Ewelike",
+      "club": "Cheadle Heath Nomads",
+      "total": "7"
+    },
+    {
+      "rank": "-",
+      "player": "Lewis McGill",
+      "club": "New Mills",
+      "total": "6"
+    },
+    {
+      "rank": "-",
+      "player": "Nicky Parker",
+      "club": "Eccleshall",
+      "total": "5"
+    },
+    {
+      "rank": "9",
+      "player": "Jordan Crump",
+      "club": "Bilston Town",
+      "total": "7"
+    },
+    {
+      "rank": "-",
+      "player": "Callum Parker",
+      "club": "Stafford Town",
+      "total": "7"
+    },
+    {
+      "rank": "-",
+      "player": "Kyle Foley",
+      "club": "Sandbach United",
+      "total": "6"
+    },
+    {
+      "rank": "-",
+      "player": "Eshan Greer",
+      "club": "Stafford Town",
+      "total": "6"
+    },
+    {
+      "rank": "-",
+      "player": "Nehemia Zazi",
+      "club": "AFC Bridgnorth",
+      "total": "4"
+    },
+    {
+      "rank": "14",
+      "player": "Benjamin Summers",
+      "club": "Allscott Heath",
+      "total": "6"
+    },
+    {
+      "rank": "-",
+      "player": "Fraser Geddes",
+      "club": "Alsager Town",
+      "total": "6"
+    },
+    {
+      "rank": "-",
+      "player": "Kieran OConnell",
+      "club": "Sandbach United",
+      "total": "6"
+    },
+    {
+      "rank": "-",
+      "player": "Sam Preece",
+      "club": "AFC Bridgnorth",
+      "total": "5"
+    },
+    {
+      "rank": "-",
+      "player": "Thomas Stanton",
+      "club": "Barnton",
+      "total": "5"
+    },
+    {
+      "rank": "-",
+      "player": "Sam Lynch",
+      "club": "Stafford Town",
+      "total": "5"
+    },
+    {
+      "rank": "-",
+      "player": "Ablay Sowe",
+      "club": "Shawbury United",
+      "total": "3"
+    },
+    {
+      "rank": "-",
+      "player": "Callum Sandle",
+      "club": "Barnton",
+      "total": "2"
+    },
+    {
+      "rank": "-",
+      "player": "Maxwell Chimenes",
+      "club": "Eccleshall",
+      "total": "2"
+    },
+    {
+      "rank": "-",
+      "player": "Will Frankish",
+      "club": "New Mills",
+      "total": "2"
+    },
+    {
+      "rank": "24",
+      "player": "Luc Ferry",
+      "club": "New Mills",
+      "total": "5"
+    },
+    {
+      "rank": "-",
+      "player": "Robbie Hatton",
+      "club": "Sandbach United",
+      "total": "5"
+    },
+    {
+      "rank": "-",
+      "player": "Patryk Mazurkiewicz",
+      "club": "Stafford Town",
+      "total": "5"
+    },
+    {
+      "rank": "-",
+      "player": "Liam Kirton",
+      "club": "Wolverhampton Casuals",
+      "total": "5"
+    },
+    {
+      "rank": "-",
+      "player": "Matthew Birchall",
+      "club": "Sandbach United",
+      "total": "4"
+    },
+    {
+      "rank": "-",
+      "player": "Charley Jarrald",
+      "club": "Barnton",
+      "total": "3"
+    },
+    {
+      "rank": "-",
+      "player": "Joshua Maris",
+      "club": "Crewe",
+      "total": "2"
+    },
+    {
+      "rank": "-",
+      "player": "Harry Woodburn",
+      "club": "Shawbury United",
+      "total": "1"
+    }
+  ],
   "manOfTheMatch": [
     {
       "rank": "1",
