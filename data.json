@@ -1,5 +1,5 @@
 {
-  "scrapedAt": "2026-10-21T17:40:39.673Z",
+  "scrapedAt": "2026-10-21T18:40:39.586Z",
   "nextFixture": {
     "date": "Sat 24/10/26",
     "opposition": "AFC Bridgnorth",
@@ -42,9 +42,9 @@
       "competitionNote": null
     },
     {
-      "date": "Sat 14/11/26",
-      "opposition": "Brereton Social",
-      "opponentUrl": "clubpage.php?id=459",
+      "date": "Sat 21/11/26",
+      "opposition": "Shawbury United",
+      "opponentUrl": "clubpage.php?id=792",
       "homeAway": "H",
       "kickoff": "15:00",
       "score": null,
@@ -52,10 +52,10 @@
       "competitionNote": null
     },
     {
-      "date": "Sat 21/11/26",
-      "opposition": "Shawbury United",
-      "opponentUrl": "clubpage.php?id=792",
-      "homeAway": "H",
+      "date": "Sat 28/11/26",
+      "opposition": "Stafford Town",
+      "opponentUrl": "clubpage.php?id=182",
+      "homeAway": "A",
       "kickoff": "15:00",
       "score": null,
       "scorers": null,
@@ -306,16 +306,6 @@
       "competitionNote": null
     },
     {
-      "date": "Sat 14/11/26",
-      "opposition": "Brereton Social",
-      "opponentUrl": "clubpage.php?id=459",
-      "homeAway": "H",
-      "kickoff": "15:00",
-      "score": null,
-      "scorers": null,
-      "competitionNote": null
-    },
-    {
       "date": "Sat 21/11/26",
       "opposition": "Shawbury United",
       "opponentUrl": "clubpage.php?id=792",
@@ -521,6 +511,16 @@
       "opponentUrl": "clubpage.php?id=91",
       "homeAway": "A",
       "kickoff": "15:00",
+      "score": null,
+      "scorers": null,
+      "competitionNote": null
+    },
+    {
+      "date": "TBC",
+      "opposition": "Brereton Social",
+      "opponentUrl": "clubpage.php?id=459",
+      "homeAway": "H",
+      "kickoff": "",
       "score": null,
       "scorers": null,
       "competitionNote": null
