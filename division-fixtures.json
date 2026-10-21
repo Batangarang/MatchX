@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-21T18:25:57.653Z",
+  "generatedAt": "2026-10-21T18:30:54.133Z",
   "fixtures": [
     {
       "date": "Saturday 24 October 2026",
@@ -220,36 +220,8 @@
     },
     {
       "date": "Saturday 14 November 2026",
-      "home": "Sandbach United",
-      "away": "Brereton Social",
-      "kickoff": "15:00",
-      "postponed": false
-    },
-    {
-      "date": "Saturday 14 November 2026",
-      "home": "Shawbury United",
-      "away": "AFC Bridgnorth",
-      "kickoff": "15:00",
-      "postponed": false
-    },
-    {
-      "date": "Saturday 14 November 2026",
       "home": "Telford Town",
       "away": "Cheadle Heath Nomads",
-      "kickoff": "15:00",
-      "postponed": false
-    },
-    {
-      "date": "Saturday 14 November 2026",
-      "home": "Wednesfield Community",
-      "away": "Barnton",
-      "kickoff": "15:00",
-      "postponed": false
-    },
-    {
-      "date": "Saturday 14 November 2026",
-      "home": "Widnes Town",
-      "away": "Wolverhampton Casuals",
       "kickoff": "15:00",
       "postponed": false
     },
