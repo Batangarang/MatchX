@@ -1,48 +1,7 @@
 {
-  "generatedAt": "2026-10-21T23:25:29.712Z",
-  "date": "2026-10-24",
+  "generatedAt": "2026-10-21T23:30:53.469Z",
+  "date": null,
   "isToday": false,
-  "fixtures": [
-    {
-      "home": "AFC Bridgnorth",
-      "away": "Sandbach United",
-      "kickoff": "15:00",
-      "score": null,
-      "goals": [],
-      "redCards": []
-    },
-    {
-      "home": "Brereton Social",
-      "away": "Dawley Town",
-      "kickoff": "15:00",
-      "score": null,
-      "goals": [],
-      "redCards": []
-    },
-    {
-      "home": "Cheadle Heath Nomads",
-      "away": "Market Drayton Town",
-      "kickoff": "15:00",
-      "score": null,
-      "goals": [],
-      "redCards": []
-    },
-    {
-      "home": "Foley Meir",
-      "away": "Widnes Town",
-      "kickoff": "15:00",
-      "score": null,
-      "goals": [],
-      "redCards": []
-    },
-    {
-      "home": "Shawbury United",
-      "away": "Stafford Town",
-      "kickoff": "15:00",
-      "score": null,
-      "goals": [],
-      "redCards": []
-    }
-  ],
+  "fixtures": [],
   "ticker": null
 }
