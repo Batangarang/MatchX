@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-21T18:20:39.631Z",
+  "generatedAt": "2026-10-21T18:25:57.653Z",
   "fixtures": [
     {
       "date": "Saturday 24 October 2026",
@@ -215,13 +215,6 @@
       "date": "Saturday 14 November 2026",
       "home": "Foley Meir",
       "away": "Market Drayton Town",
-      "kickoff": "15:00",
-      "postponed": false
-    },
-    {
-      "date": "Saturday 14 November 2026",
-      "home": "New Mills",
-      "away": "Crewe",
       "kickoff": "15:00",
       "postponed": false
     },
