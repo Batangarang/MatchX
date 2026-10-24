@@ -1,0 +1,69 @@
+diff --git a/division-scores.js b/division-scores.js
+index 868d4016c..b7740fd36 100644
+--- a/division-scores.js
++++ b/division-scores.js
+@@ -335,10 +335,13 @@ For each fixture above, determine ONLY if a score has been EXPLICITLY stated in
+ IMPORTANT: Clubs often use colour-coded circle emoji instead of names in their live scoreline updates (e.g. "🔴🔵0-0⚫️⚪️"). These emoji colours can look similar or identical across different clubs and different fixtures happening on the same day — do NOT rely on emoji colour alone to decide which fixture a scoreline belongs to. Always match a post to the correct fixture using the ACCOUNT HANDLE that posted it (shown in brackets before each post) cross-referenced against the fixture list's home/away clubs — never assume from emoji colour alone. If genuinely unsure which fixture a scoreline update belongs to, prefer matching by handle over emoji.
+ 
+ IMPORTANT: Distinguish clearly between yellow cards and red cards — only put a card in "redCards" if it's explicitly a red card, straight red, or second yellow leading to a sending off. A single yellow card booking belongs in "yellowCards", never "redCards".
++
++IMPORTANT: For each fixture, also report "scoreSourceTime" — the timestamp of the SPECIFIC post (shown in square brackets, e.g. "[2026-10-24T14:12:03.000Z]") that most recently told you something new about that fixture (its score, a goal, a card, or a match-stage change like HT/FT). Copy that timestamp EXACTLY as it appears in brackets above — do not reformat it, do not calculate or estimate one, and do not use the newest post from that club if it wasn't actually about this fixture. If nothing has been explicitly posted about a fixture yet, set "scoreSourceTime" to null.
++
+ Respond with ONLY a JSON object, no other text, no markdown fences:
+ {
+   "fixtures": [
+-    { "home": "string", "away": "string", "kickoff": "string", "score": "string or null", "matchStage": "one of: scheduled, first_half, half_time, second_half, full_time — ONLY set half_time or full_time when a post EXPLICITLY announces it (e.g. 'HT', 'Half time score:', 'FT', 'Full time:') — never guess from elapsed time or infer from a lack of updates", "goals": [{ "minute": null, "team": "home or away", "scorer": "string" }], "yellowCards": [{ "team": "home or away", "player": "string or null" }], "redCards": [{ "team": "home or away", "player": "string or null" }] }
++    { "home": "string", "away": "string", "kickoff": "string", "score": "string or null", "matchStage": "one of: scheduled, first_half, half_time, second_half, full_time — ONLY set half_time or full_time when a post EXPLICITLY announces it (e.g. 'HT', 'Half time score:', 'FT', 'Full time:') — never guess from elapsed time or infer from a lack of updates", "goals": [{ "minute": null, "team": "home or away", "scorer": "string" }], "yellowCards": [{ "team": "home or away", "player": "string or null" }], "redCards": [{ "team": "home or away", "player": "string or null" }], "scoreSourceTime": "string (exact timestamp copied from brackets) or null" }
+   ]
+ }
+ 
+@@ -389,25 +392,34 @@ Only include a score if explicitly stated in the posts. Leave as null if not men
+     : fixturesWithDerivedScores;
+   recordResults(target.targetDate, finalFixtures);
+ 
+-  // Per-fixture "last update received" — stamps the moment THIS fixture's
+-  // own score/goals/cards actually changed, not just the moment the script
+-  // last ran (the AI call covers every fixture at once, so a run that only
+-  // brought news for one game shouldn't make every OTHER game look freshly
+-  // updated too).
++  // Per-fixture "last update received" — this is the timestamp of the
++  // actual X post that informed the score/goal/card, NOT the time this
++  // script happened to run (the AI call covers every fixture at once, so a
++  // run that only brought news for one game shouldn't make every OTHER game
++  // look freshly updated too, and a re-run with nothing new shouldn't bump
++  // the time at all). The AI is asked to copy the post's bracketed
++  // timestamp verbatim rather than calculate anything itself.
++  function parseValidDate(s) {
++    if (!s || typeof s !== 'string') return null;
++    const d = new Date(s);
++    return isNaN(d.getTime()) ? null : d;
++  }
+   const previousFixturesByKey = {};
+   (previous?.fixtures || []).forEach(f => { previousFixturesByKey[`${f.home}|${f.away}`] = f; });
+-  const fixtureContentKey = f => JSON.stringify({
+-    score: f.score || null,
+-    matchStage: f.matchStage || null,
+-    goals: f.goals || [],
+-    yellowCards: f.yellowCards || [],
+-    redCards: f.redCards || [],
+-  });
+   const finalFixturesWithTimestamps = finalFixtures.map(f => {
++    const { scoreSourceTime, ...rest } = f;
+     const prev = previousFixturesByKey[`${f.home}|${f.away}`];
+-    const changed = !prev || fixtureContentKey(prev) !== fixtureContentKey(f);
+-    const lastUpdated = changed ? REAL_NOW.toISOString() : (prev.lastUpdated || REAL_NOW.toISOString());
+-    return { ...f, lastUpdated };
++
++    let lastUpdated;
++    if (f.scoreSource === 'manual_override') {
++      // No tweet behind an admin override — stamp it with the moment it was applied.
++      lastUpdated = REAL_NOW.toISOString();
++    } else {
++      const aiReported = parseValidDate(scoreSourceTime);
++      lastUpdated = aiReported ? aiReported.toISOString() : (prev?.lastUpdated || null);
++    }
++
++    return lastUpdated ? { ...rest, lastUpdated } : rest;
+   });
+ 
+     const output = {
