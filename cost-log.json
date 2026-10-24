@@ -12651,13 +12651,13 @@
       "aiCostGBP": 0.0052
     },
     {
-      "script": "x-posts",
-      "timestamp": "2026-10-24T14:35:20.097Z",
-      "getxapiCalls": 1,
+      "script": "matchday-live",
+      "timestamp": "2026-10-24T14:35:32.661Z",
+      "getxapiCalls": 2,
       "claudeCalls": 0,
       "inputTokens": 0,
       "outputTokens": 0,
-      "xCostGBP": 0.0008,
+      "xCostGBP": 0.0015,
       "aiCostGBP": 0
     }
   ]
