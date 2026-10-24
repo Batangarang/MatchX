@@ -150,6 +150,13 @@
       "score": "0-0",
       "matchStage": "first_half",
       "scoreSource": "explicit"
+    },
+    "Brereton Social|Dawley Town": {
+      "home": "Brereton Social",
+      "away": "Dawley Town",
+      "score": "1-0",
+      "matchStage": "first_half",
+      "scoreSource": "explicit"
     }
   }
 }

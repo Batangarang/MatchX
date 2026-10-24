@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-10-24T14:31:23.461Z",
+  "generatedAt": "2026-10-24T14:45:06.118Z",
   "date": "2026-10-24",
   "isToday": true,
-  "postCount": 37,
-  "latestPostTimestamp": "2026-10-24T14:26:43.000Z",
+  "postCount": 46,
+  "latestPostTimestamp": "2026-10-24T14:44:44.000Z",
   "fixtures": [
     {
       "home": "AFC Bridgnorth",
@@ -27,11 +27,18 @@
       "home": "Brereton Social",
       "away": "Dawley Town",
       "kickoff": "15:00",
-      "score": null,
-      "matchStage": "scheduled",
-      "goals": [],
+      "score": "1-0",
+      "matchStage": "first_half",
+      "goals": [
+        {
+          "minute": "31",
+          "team": "home",
+          "scorer": null
+        }
+      ],
       "yellowCards": [],
       "redCards": [],
+      "scoreSource": "explicit",
       "lastUpdated": "2026-10-24T14:31:23.461Z"
     },
     {
@@ -42,7 +49,7 @@
       "matchStage": "first_half",
       "goals": [
         {
-          "minute": 12,
+          "minute": "12",
           "team": "home",
           "scorer": "Clarkson"
         }
@@ -63,6 +70,10 @@
         {
           "team": "home",
           "player": "Saul"
+        },
+        {
+          "team": "away",
+          "player": null
         }
       ],
       "redCards": [],
@@ -78,6 +89,10 @@
       "goals": [],
       "yellowCards": [
         {
+          "team": "away",
+          "player": null
+        },
+        {
           "team": "home",
           "player": "Daley"
         }
@@ -87,5 +102,5 @@
       "lastUpdated": "2026-10-24T14:31:23.461Z"
     }
   ],
-  "ticker": "@MDTFC: 26’ Drayton sub. \n\nArchie Russell goes off with a knock \n\nON\nMcKee"
+  "ticker": "@MDTFC: 45’ \n\nDouble save from Rowley \n\nCheadle player looked offside. Nether the less 2 superb saves \n\n @cheadleNomads 1-0 @MDTFC"
 }
