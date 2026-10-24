@@ -1,5 +1,5 @@
 {
-  "scrapedAt": "2026-10-24T15:35:18.961Z",
+  "scrapedAt": "2026-10-24T15:40:23.479Z",
   "username": "SandbachFC_1st",
   "posts": [
     {
@@ -9,6 +9,12 @@
         "https://pbs.twimg.com/media/HUDmlc4WgAAhBe7.jpg"
       ],
       "isMatchday": false
+    },
+    {
+      "text": "🔵🔵 v 🟢🟢\n\nAFC Bridgnorth v Sandbach United\n\n@AFCBridgnorth \n\n Brad Forrester replaces Nathan Barry\n\n1 1",
+      "createdAt": "2026-10-24T15:35:57.000Z",
+      "images": [],
+      "isMatchday": true
     },
     {
       "text": "🔵🔵 v 🟢🟢\n\nAFC Bridgnorth v Sandbach United\n\n@AFCBridgnorth \n\nJake Pollard replaces Robbie Hatton\n\n1 1",
@@ -62,14 +68,6 @@
       "text": "🔵🔵 v 🟢🟢\n\nAFC Bridgnorth v Sandbach United \n\nIt’s gunna be a wet one, let’s hope it’s gunna be a good one, come on The Bach, let’s get the 3 points!",
       "createdAt": "2026-10-24T13:32:33.000Z",
       "images": [],
-      "isMatchday": true
-    },
-    {
-      "text": "The Ramblers line up for this west windy fixture @AFCBridgnorth for an important game to keep the momentum going. https://t.co/tTRY4HIHRm",
-      "createdAt": "2026-10-24T13:28:37.000Z",
-      "images": [
-        "https://pbs.twimg.com/media/HVZjExLXIAAQuxF.jpg"
-      ],
       "isMatchday": true
     }
   ]
