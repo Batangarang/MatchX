@@ -19,5 +19,9 @@ module.exports = [
   { name: 'Shawbury United', handle: 'shawburyutd' },
   { name: 'Wolverhampton Casuals', handle: 'WolvesCassies' },
   { name: 'Foley Meir', handle: 'foley_fc' },
-  { name: 'NWCFL (League Official)', handle: 'nwcfl' },
+  // 'NWCFL (League Official)' (handle 'nwcfl') removed — it was being
+  // fetched by division-posts.js on every run (a GetXAPI call for nothing),
+  // but can never match a fixture's home/away team name, so its posts were
+  // never actually read anywhere (checked division-recap-engine.js's
+  // relevantClubNames filter and every other CLUBS lookup in the codebase).
 ];

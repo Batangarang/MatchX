@@ -235,6 +235,27 @@ async function run() {
     return;
   }
 
+  // cron-job.org still dispatches this workflow every 5 minutes during the
+  // match window, but polling clubs' X accounts that often burns through
+  // GetXAPI credits fast (confirmed 17 Oct: 1020 calls in one day). Enforce
+  // a floor here rather than relying on the external cron schedule being
+  // changed — 10 minutes is still plenty responsive for live scores.
+  const POLL_STATE_FILE = 'division-scores-lastpoll.json';
+  const MIN_POLL_INTERVAL_MINUTES = 10;
+  if (!isManual) {
+    try {
+      if (fs.existsSync(POLL_STATE_FILE)) {
+        const { lastPoll } = JSON.parse(fs.readFileSync(POLL_STATE_FILE, 'utf-8'));
+        const minutesSincePoll = (now - new Date(lastPoll)) / 60000;
+        if (minutesSincePoll < MIN_POLL_INTERVAL_MINUTES) {
+          console.log(`Last poll was ${minutesSincePoll.toFixed(1)} min ago — under the ${MIN_POLL_INTERVAL_MINUTES}-min floor, skipping to save GetXAPI calls.`);
+          return;
+        }
+      }
+    } catch {}
+  }
+  fs.writeFileSync(POLL_STATE_FILE, JSON.stringify({ lastPoll: now.toISOString() }));
+
   const handlesNeeded = new Set();
   todaysFixtures.forEach(f => {
     const h1 = findHandle(f.home);

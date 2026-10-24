@@ -180,6 +180,10 @@
 
     <div class="card">
       <h2>Workflows</h2>
+      <div style="margin-bottom:12px;">
+        <button class="btn small" onclick="refreshAllAI(this)">Refresh all AI content</button>
+        <span class="sub" style="margin-left:8px;">Forces the Fan Briefing, Division Preview and Division Recap past their once-a-day throttles in one go — e.g. after a gap of not running things.</span>
+      </div>
       <div id="workflows-list" class="loading">Loading workflow data from GitHub…</div>
     </div>
 
@@ -252,9 +256,9 @@
       { file: 'scrape.yml', name: 'Scrape Sandbach Fixtures', pulls: 'nwcfl.com: fixtures, league table, player stats, attendance, position history', skipLogic: 'Hourly gate — real work only ~once/hour even though triggered every 5 min', shareOfDay: 0, staleAfterMinutes: 75 },
       { file: 'matchday-live.yml', name: 'Matchday Live Tracker', pulls: 'X posts (home + away club) + vision analysis of new images, on Sandbach\'s own match day', skipLogic: 'Only active kickoff-90min to kickoff+150/240min; skips if nothing new; retries on GetXAPI rate-limit', shareOfDay: 0.098, matchdayOnly: true, staleAfterMinutes: 15 },
       { file: 'division-scores.yml', name: 'Division Scores', pulls: 'X posts from ~19 division clubs, on any day with First Division South fixtures', skipLogic: 'Resets to fixture-only before 11am; polls only within match window; skips if nothing new; retries on GetXAPI rate-limit', shareOfDay: 0.1815, matchdayOnly: true, staleAfterMinutes: 15 },
-      { file: 'x-live.yml', name: 'Poll X (Fan Briefing)', pulls: 'Sandbach\'s own X posts + NWCFL news articles + Fan Briefing regeneration', skipLogic: 'x-posts.js gated to 60min/180min tiers; x-insights.js skips if underlying posts unchanged', shareOfDay: 0.033, nonMatchday: true, staleAfterMinutes: 15 },
-      { file: 'division-recap-preview.yml', name: 'Division Preview', pulls: 'Coming week\'s division fixtures (incl. any midweek game) + recent club posts + league table', skipLogic: 'Skips if no fixtures in the coming week', shareOfDay: 0.15, nonMatchday: true, staleAfterMinutes: 60 * 24 },
-      { file: 'division-recap-recap.yml', name: 'Division Recap', pulls: 'Past week\'s played fixtures (incl. any midweek game) + club posts + league table', skipLogic: 'Skips if no fixtures in the past week; only proceeds ~2.5hrs after the latest kickoff in that period; once per period', shareOfDay: 0.2, nonMatchday: true, staleAfterMinutes: 60 * 24 },
+      { file: 'x-live.yml', name: 'Poll X (Fan Briefing)', pulls: 'Sandbach\'s own X posts + NWCFL news articles + Fan Briefing regeneration', skipLogic: 'x-posts.js gated to 60min/180min tiers; x-insights.js skips if underlying posts unchanged', shareOfDay: 0.033, nonMatchday: true, staleAfterMinutes: 15, ai: true },
+      { file: 'division-recap-preview.yml', name: 'Division Preview', pulls: 'Coming week\'s division fixtures (incl. any midweek game) + recent club posts + league table', skipLogic: 'Skips if no fixtures in the coming week', shareOfDay: 0.15, nonMatchday: true, staleAfterMinutes: 60 * 24, ai: true },
+      { file: 'division-recap-recap.yml', name: 'Division Recap', pulls: 'Past week\'s played fixtures (incl. any midweek game) + club posts + league table', skipLogic: 'Skips if no fixtures in the past week; only proceeds ~2.5hrs after the latest kickoff in that period; once per period', shareOfDay: 0.2, nonMatchday: true, staleAfterMinutes: 60 * 24, ai: true },
     ];
 
     const SCRIPT_DISPLAY_NAMES = {
@@ -424,29 +428,39 @@
     }
 
     // ---------- Manual trigger ----------
-    async function triggerWorkflow(workflowFile, btnEl) {
+    function getGhToken() {
       let token = localStorage.getItem('matchx_gh_token');
       if (!token) {
         token = prompt('Paste your GitHub token (the same one used for cron-job.org). This will be saved on this device so you only need to enter it once.');
-        if (!token) return;
-        localStorage.setItem('matchx_gh_token', token);
-        updateTokenStatus();
+        if (token) {
+          localStorage.setItem('matchx_gh_token', token);
+          updateTokenStatus();
+        }
       }
+      return token;
+    }
+
+    async function dispatchWorkflow(workflowFile, token) {
+      return fetch(`https://api.github.com/repos/${REPO}/actions/workflows/${workflowFile}/dispatches`, {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${token}`,
+          'Accept': 'application/vnd.github+json',
+        },
+        // manual=true tells the scripts this is a genuine click, not a cron-job.org run
+        body: JSON.stringify({ ref: 'main', inputs: { manual: 'true' } }),
+      });
+    }
+
+    async function triggerWorkflow(workflowFile, btnEl) {
+      const token = getGhToken();
+      if (!token) return;
 
       btnEl.textContent = 'Triggering…';
       btnEl.disabled = true;
 
       try {
-        const res = await fetch(`https://api.github.com/repos/${REPO}/actions/workflows/${workflowFile}/dispatches`, {
-          method: 'POST',
-          headers: {
-            'Authorization': `Bearer ${token}`,
-            'Accept': 'application/vnd.github+json',
-          },
-          // manual=true tells the scripts this is a genuine click, not a cron-job.org run
-          body: JSON.stringify({ ref: 'main', inputs: { manual: 'true' } }),
-        });
-
+        const res = await dispatchWorkflow(workflowFile, token);
         if (res.status === 204) {
           btnEl.textContent = 'Triggered ✓';
           setTimeout(() => loadWorkflows(), 3000);
@@ -463,6 +477,48 @@
         btnEl.textContent = 'Failed';
       }
       setTimeout(() => { btnEl.textContent = 'Run now'; btnEl.disabled = false; }, 3000);
+    }
+
+    // Bulk-trigger every workflow that produces AI-written content (Fan
+    // Briefing, Division Preview, Division Recap — flagged `ai: true` in
+    // WORKFLOWS above) with manual=true, so each one bypasses its own
+    // once-per-day/once-per-period throttle. Useful after a gap of not
+    // running things (e.g. API credits ran out) instead of clicking "Run
+    // now" on each one separately. Matchday-only workflows (Matchday Live,
+    // Division Scores) are deliberately left out — forcing those outside an
+    // actual match window has nothing to analyse and just burns calls.
+    async function refreshAllAI(btnEl) {
+      const token = getGhToken();
+      if (!token) return;
+
+      const targets = WORKFLOWS.filter(w => w.ai);
+      btnEl.disabled = true;
+
+      for (let i = 0; i < targets.length; i++) {
+        const wf = targets[i];
+        btnEl.textContent = `Triggering ${wf.name}… (${i + 1}/${targets.length})`;
+        try {
+          const res = await dispatchWorkflow(wf.file, token);
+          if (res.status !== 204) {
+            if (res.status === 401 || res.status === 403 || res.status === 404) {
+              btnEl.textContent = 'Failed — check token';
+              localStorage.removeItem('matchx_gh_token');
+              updateTokenStatus();
+              btnEl.disabled = false;
+              return;
+            }
+            console.warn(`${wf.name} failed to trigger: ${res.status}`);
+          }
+        } catch (err) {
+          console.warn(`${wf.name} failed to trigger:`, err);
+        }
+        // Small gap between dispatches so GitHub doesn't secondary-rate-limit rapid POSTs.
+        if (i < targets.length - 1) await new Promise(r => setTimeout(r, 1500));
+      }
+
+      btnEl.textContent = `Triggered all ${targets.length} ✓`;
+      setTimeout(() => loadWorkflows(), 3000);
+      setTimeout(() => { btnEl.textContent = 'Refresh all AI content'; btnEl.disabled = false; }, 4000);
     }
 
     // ---------- Manual overrides ----------
