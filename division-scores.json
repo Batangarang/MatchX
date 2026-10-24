@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-10-24T15:20:41.895Z",
+  "generatedAt": "2026-10-24T15:25:44.578Z",
   "date": "2026-10-24",
   "isToday": true,
-  "postCount": 72,
-  "latestPostTimestamp": "2026-10-24T15:16:24.000Z",
+  "postCount": 81,
+  "latestPostTimestamp": "2026-10-24T15:25:16.000Z",
   "fixtures": [
     {
       "home": "AFC Bridgnorth",
@@ -13,7 +13,7 @@
       "matchStage": "second_half",
       "goals": [
         {
-          "minute": null,
+          "minute": "~12",
           "team": "home",
           "scorer": "Zazi"
         },
@@ -26,19 +26,24 @@
       "yellowCards": [],
       "redCards": [],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-24T15:20:41.895Z"
+      "lastUpdated": "2026-10-24T15:25:44.578Z"
     },
     {
       "home": "Brereton Social",
       "away": "Dawley Town",
       "kickoff": "15:00",
-      "score": "1-0",
-      "matchStage": "half_time",
+      "score": "1-1",
+      "matchStage": "second_half",
       "goals": [
         {
           "minute": "31",
           "team": "home",
-          "scorer": "Cam Jackson"
+          "scorer": null
+        },
+        {
+          "minute": "64",
+          "team": "away",
+          "scorer": "Joe Cuff"
         }
       ],
       "yellowCards": [],
@@ -49,7 +54,7 @@
         }
       ],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-24T15:20:41.895Z"
+      "lastUpdated": "2026-10-24T15:25:44.578Z"
     },
     {
       "home": "Cheadle Heath Nomads",
@@ -78,20 +83,21 @@
       "home": "Foley Meir",
       "away": "Widnes Town",
       "kickoff": "15:00",
-      "score": "1-0",
+      "score": "2-0",
       "matchStage": "second_half",
       "goals": [
         {
-          "minute": null,
+          "minute": "~50",
           "team": "home",
           "scorer": "Kerr"
+        },
+        {
+          "minute": "~68",
+          "team": "home",
+          "scorer": "Archie"
         }
       ],
       "yellowCards": [
-        {
-          "team": "home",
-          "player": "Saul"
-        },
         {
           "team": "home",
           "player": "Robo"
@@ -103,11 +109,19 @@
         {
           "team": "away",
           "player": null
+        },
+        {
+          "team": "home",
+          "player": "Saul"
+        },
+        {
+          "team": "away",
+          "player": null
         }
       ],
       "redCards": [],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-24T15:20:41.895Z"
+      "lastUpdated": "2026-10-24T15:25:44.578Z"
     },
     {
       "home": "Shawbury United",
@@ -117,7 +131,7 @@
       "matchStage": "second_half",
       "goals": [
         {
-          "minute": "57",
+          "minute": "56",
           "team": "away",
           "scorer": "Brenden Parker"
         }
@@ -130,8 +144,8 @@
       ],
       "redCards": [],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-24T15:20:41.895Z"
+      "lastUpdated": "2026-10-24T15:25:44.578Z"
     }
   ],
-  "ticker": "@MDTFC: 59’\n\nOFF \nHIGGINS\n\nON\nRAINE"
+  "ticker": "@StaffordTown1st: 68 - Sub for Town\n\nSatchwell is on for Lynch\n\n⚪️⚫️ 0-1 🔴🔴"
 }

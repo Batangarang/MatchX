@@ -147,15 +147,15 @@
     "Foley Meir|Widnes Town": {
       "home": "Foley Meir",
       "away": "Widnes Town",
-      "score": "1-0",
+      "score": "2-0",
       "matchStage": "second_half",
       "scoreSource": "explicit"
     },
     "Brereton Social|Dawley Town": {
       "home": "Brereton Social",
       "away": "Dawley Town",
-      "score": "1-0",
-      "matchStage": "half_time",
+      "score": "1-1",
+      "matchStage": "second_half",
       "scoreSource": "explicit"
     }
   }
