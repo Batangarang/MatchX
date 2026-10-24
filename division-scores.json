@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-10-24T16:01:09.729Z",
+  "generatedAt": "2026-10-24T16:15:38.881Z",
   "date": "2026-10-24",
   "isToday": true,
-  "postCount": 111,
-  "latestPostTimestamp": "2026-10-24T15:59:40.000Z",
+  "postCount": 113,
+  "latestPostTimestamp": "2026-10-24T16:14:31.000Z",
   "fixtures": [
     {
       "home": "AFC Bridgnorth",
@@ -41,22 +41,22 @@
       "matchStage": "full_time",
       "goals": [
         {
-          "minute": "31",
+          "minute": 31,
           "team": "home",
           "scorer": null
         },
         {
-          "minute": "64",
+          "minute": 64,
           "team": "away",
           "scorer": "Joe Cuff"
         },
         {
-          "minute": "82",
+          "minute": 82,
           "team": "away",
           "scorer": "Cain Patterson"
         },
         {
-          "minute": "86",
+          "minute": 86,
           "team": "home",
           "scorer": null
         }
@@ -69,7 +69,7 @@
         }
       ],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-24T16:01:09.729Z"
+      "lastUpdated": "2026-10-24T16:15:38.881Z"
     },
     {
       "home": "Cheadle Heath Nomads",
@@ -79,12 +79,12 @@
       "matchStage": "full_time",
       "goals": [
         {
-          "minute": "12",
+          "minute": 12,
           "team": "home",
           "scorer": "Clarkson"
         },
         {
-          "minute": "74",
+          "minute": 74,
           "team": "home",
           "scorer": "Higgy"
         }
@@ -97,7 +97,7 @@
         }
       ],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-24T16:01:09.729Z"
+      "lastUpdated": "2026-10-24T16:15:38.881Z"
     },
     {
       "home": "Foley Meir",
@@ -144,12 +144,12 @@
       "matchStage": "full_time",
       "goals": [
         {
-          "minute": "57",
+          "minute": 57,
           "team": "away",
           "scorer": "Brenden Parker"
         },
         {
-          "minute": "90+2",
+          "minute": 90,
           "team": "home",
           "scorer": "Conor"
         }
@@ -162,8 +162,8 @@
       ],
       "redCards": [],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-24T16:01:09.729Z"
+      "lastUpdated": "2026-10-24T16:15:38.881Z"
     }
   ],
-  "ticker": "@DawleyTownFC: The Jockeys leave with a point as the game finishes in a 2-2 draw! Thank you to all the supporters who made the trip today and braved the wind and the rain! 🐎 https://t.co/KYxq7JQQ4W"
+  "ticker": "@CheadleNomads: 90’ | FULL-TIME\n\nA battling performance in difficult conditions sees us take all 3 points!\n\nAn early Clarkson strike and a Higgy winner seal a hard fought 2-0 victory! \n\n@CheadleNomads 2-0 @MDTFC \n\n#WeAreNomads | @nwcfl | @NWCFLScores https://t.co/ZSohlYGWmU"
 }
