@@ -121,5 +121,21 @@
       "matchStage": "second_half",
       "scoreSource": "explicit"
     }
+  },
+  "2026-10-24": {
+    "Cheadle Heath Nomads|Market Drayton Town": {
+      "home": "Cheadle Heath Nomads",
+      "away": "Market Drayton Town",
+      "score": "1-0",
+      "matchStage": "first_half",
+      "scoreSource": "explicit"
+    },
+    "Shawbury United|Stafford Town": {
+      "home": "Shawbury United",
+      "away": "Stafford Town",
+      "score": "0-0",
+      "matchStage": "first_half",
+      "scoreSource": "explicit"
+    }
   }
 }

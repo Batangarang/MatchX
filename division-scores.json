@@ -1,22 +1,33 @@
 {
-  "generatedAt": "2026-10-24T10:55:33.180Z",
+  "generatedAt": "2026-10-24T14:19:48.124Z",
   "date": "2026-10-24",
   "isToday": true,
+  "postCount": 33,
+  "latestPostTimestamp": "2026-10-24T14:19:21.000Z",
   "fixtures": [
     {
       "home": "AFC Bridgnorth",
       "away": "Sandbach United",
       "kickoff": "15:00",
-      "score": null,
-      "goals": [],
+      "score": "1-0",
+      "matchStage": "scheduled",
+      "goals": [
+        {
+          "minute": null,
+          "team": "home",
+          "scorer": "Zazi"
+        }
+      ],
       "yellowCards": [],
-      "redCards": []
+      "redCards": [],
+      "scoreSource": "derived"
     },
     {
       "home": "Brereton Social",
       "away": "Dawley Town",
       "kickoff": "15:00",
       "score": null,
+      "matchStage": "scheduled",
       "goals": [],
       "yellowCards": [],
       "redCards": []
@@ -25,16 +36,25 @@
       "home": "Cheadle Heath Nomads",
       "away": "Market Drayton Town",
       "kickoff": "15:00",
-      "score": null,
-      "goals": [],
+      "score": "1-0",
+      "matchStage": "first_half",
+      "goals": [
+        {
+          "minute": 12,
+          "team": "home",
+          "scorer": "Clarkson"
+        }
+      ],
       "yellowCards": [],
-      "redCards": []
+      "redCards": [],
+      "scoreSource": "explicit"
     },
     {
       "home": "Foley Meir",
       "away": "Widnes Town",
       "kickoff": "15:00",
       "score": null,
+      "matchStage": "scheduled",
       "goals": [],
       "yellowCards": [],
       "redCards": []
@@ -43,11 +63,18 @@
       "home": "Shawbury United",
       "away": "Stafford Town",
       "kickoff": "15:00",
-      "score": null,
+      "score": "0-0",
+      "matchStage": "first_half",
       "goals": [],
-      "yellowCards": [],
-      "redCards": []
+      "yellowCards": [
+        {
+          "team": "home",
+          "player": "Daley"
+        }
+      ],
+      "redCards": [],
+      "scoreSource": "explicit"
     }
   ],
-  "ticker": null
+  "ticker": "@MDTFC: 19’ \n\nGood work down the left from Drayton. Ball falls to J.Russell on the edge of the box and his shot goes wide of the left hand post \n\n@cheadleNomads 1-0 @MDTFC"
 }
