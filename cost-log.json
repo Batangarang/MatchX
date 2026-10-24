@@ -1,76 +1,6 @@
 {
   "entries": [
     {
-      "script": "division-scores",
-      "timestamp": "2026-09-19T16:46:19.847Z",
-      "getxapiCalls": 20,
-      "claudeCalls": 1,
-      "inputTokens": 15804,
-      "outputTokens": 1989,
-      "xCostGBP": 0.015,
-      "aiCostGBP": 0.0193
-    },
-    {
-      "script": "division-scores",
-      "timestamp": "2026-09-19T16:56:07.885Z",
-      "getxapiCalls": 20,
-      "claudeCalls": 1,
-      "inputTokens": 15938,
-      "outputTokens": 1951,
-      "xCostGBP": 0.015,
-      "aiCostGBP": 0.0193
-    },
-    {
-      "script": "recap-preview",
-      "timestamp": "2026-09-19T17:00:56.460Z",
-      "getxapiCalls": 0,
-      "claudeCalls": 1,
-      "inputTokens": 11975,
-      "outputTokens": 409,
-      "xCostGBP": 0,
-      "aiCostGBP": 0.0105
-    },
-    {
-      "script": "x-posts",
-      "timestamp": "2026-09-19T17:10:21.304Z",
-      "getxapiCalls": 1,
-      "claudeCalls": 0,
-      "inputTokens": 0,
-      "outputTokens": 0,
-      "xCostGBP": 0.0008,
-      "aiCostGBP": 0
-    },
-    {
-      "script": "x-insights",
-      "timestamp": "2026-09-19T17:10:24.627Z",
-      "getxapiCalls": 0,
-      "claudeCalls": 1,
-      "inputTokens": 1019,
-      "outputTokens": 96,
-      "xCostGBP": 0,
-      "aiCostGBP": 0.0011
-    },
-    {
-      "script": "division-scores",
-      "timestamp": "2026-09-19T17:16:23.630Z",
-      "getxapiCalls": 20,
-      "claudeCalls": 1,
-      "inputTokens": 16007,
-      "outputTokens": 1700,
-      "xCostGBP": 0.015,
-      "aiCostGBP": 0.0184
-    },
-    {
-      "script": "division-scores",
-      "timestamp": "2026-09-19T17:26:08.633Z",
-      "getxapiCalls": 20,
-      "claudeCalls": 1,
-      "inputTokens": 16168,
-      "outputTokens": 1984,
-      "xCostGBP": 0.015,
-      "aiCostGBP": 0.0196
-    },
-    {
       "script": "recap-preview",
       "timestamp": "2026-09-19T17:30:45.016Z",
       "getxapiCalls": 0,
@@ -12699,6 +12629,16 @@
       "outputTokens": 1079,
       "xCostGBP": 0.0075,
       "aiCostGBP": 0.0116
+    },
+    {
+      "script": "x-posts",
+      "timestamp": "2026-10-24T17:30:42.266Z",
+      "getxapiCalls": 1,
+      "claudeCalls": 0,
+      "inputTokens": 0,
+      "outputTokens": 0,
+      "xCostGBP": 0.0008,
+      "aiCostGBP": 0
     }
   ]
 }
