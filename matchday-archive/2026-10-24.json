@@ -1,23 +1,23 @@
 {
-  "generatedAt": "2026-10-24T15:10:48.803Z",
+  "generatedAt": "2026-10-24T15:25:40.112Z",
   "fixtureDate": "2026-10-24",
   "kickoff": "15:00",
   "homeTeam": "AFC Bridgnorth",
   "awayTeam": "Sandbach United",
-  "postsUsed": 10,
-  "imagesAnalyzedThisRun": 1,
+  "postsUsed": 11,
+  "imagesAnalyzedThisRun": 0,
   "totalImagesAnalyzed": 4,
   "match": {
-    "score": "1-0",
-    "scoreSource": "division_scores",
+    "score": "1-1",
+    "scoreSource": "confirmed_by_both_feeds",
     "scoreConfirmed": true,
     "feedScore": "1-1",
-    "scoreDiscrepancy": "Match feed said 1-1 but the division live-scores feed said 1-0 — showing 1-0.",
+    "scoreDiscrepancy": "Goal reports suggested 2-1 but the confirmed score is 1-1 — 1 unconfirmed goal report(s) ignored.",
     "unconfirmedGoals": [
       {
-        "minute": 46,
-        "team": "away",
-        "scorer": "Kyle Foley"
+        "minute": 12,
+        "team": "home",
+        "scorer": "Zazi"
       }
     ],
     "finalScoreAnnounced": null,
@@ -61,11 +61,23 @@
         "minute": null,
         "team": "home",
         "scorer": "Zazi"
+      },
+      {
+        "minute": 46,
+        "team": "away",
+        "scorer": "Kyle Foley"
       }
     ],
     "yellowCards": [],
     "redCards": [],
-    "substitutions": [],
+    "substitutions": [
+      {
+        "minute": null,
+        "team": "away",
+        "playerOff": "Callum Besford",
+        "playerOn": "Harry Cain"
+      }
+    ],
     "sinBins": [],
     "injuries": [],
     "addedTime": {
@@ -86,35 +98,35 @@
       "firstHalf": {
         "home": 0.8,
         "away": 0.3,
-        "note": "AFC Bridgnorth scored from a corner header early; Sandbach had a relatively disappointing display"
+        "note": "AFC Bridgnorth scored from a corner header early; Sandbach described as having a 'relatively disappointing display' in first half"
       },
       "secondHalf": {
-        "home": 0.5,
-        "away": 0.6,
-        "note": "Sandbach equalized immediately after half-time with a composed finish into the bottom corner"
+        "home": 0.4,
+        "away": 0.9,
+        "note": "Sandbach equalized immediately after half-time; both sides described as end-to-end with no clear chances in final 15 minutes"
       },
       "extraTime": {
         "home": 0,
         "away": 0,
-        "note": "No extra time played"
+        "note": "Match did not go to extra time"
       },
       "total": {
-        "home": 1.3,
-        "away": 0.9,
-        "note": "AFC Bridgnorth dominated first half with early goal; Sandbach improved after half-time to equalize"
+        "home": 1.2,
+        "away": 1.2,
+        "note": "Both teams scored one goal each; xG estimates reflect actual goal tally and general match flow described in posts"
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
     "matchControl": {
       "firstHalf": {
-        "home": 65,
-        "away": 35,
-        "note": "AFC Bridgnorth took early lead from corner; Sandbach described as having 'relatively disappointing display'"
+        "home": 60,
+        "away": 40,
+        "note": "AFC Bridgnorth scored early from a corner; Sandbach acknowledged a 'relatively disappointing display' in first half"
       },
       "secondHalf": {
-        "home": 50,
-        "away": 50,
-        "note": "Sandbach showed 'reaction needed, reaction got' with immediate equalizer at 46 minutes"
+        "home": 45,
+        "away": 55,
+        "note": "Sandbach showed 'reaction' and equalized immediately after half-time; described as 'end to end' with balanced play thereafter"
       },
       "extraTime": {
         "home": 50,
@@ -122,9 +134,9 @@
         "note": "No extra time played"
       },
       "total": {
-        "home": 57,
-        "away": 43,
-        "note": "AFC Bridgnorth controlled first half; match evened up after Sandbach's second-half equalizer"
+        "home": 52,
+        "away": 48,
+        "note": "AFC Bridgnorth led for most of the match but Sandbach equalized; overall fairly competitive encounter"
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
