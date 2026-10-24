@@ -1,0 +1,45 @@
+diff --git a/.github/workflows/division-scores.yml b/.github/workflows/division-scores.yml
+index 315842f49..73fd8f1a0 100644
+--- a/.github/workflows/division-scores.yml
++++ b/.github/workflows/division-scores.yml
+@@ -36,7 +36,7 @@ jobs:
+           git config user.email "github-actions[bot]@users.noreply.github.com"
+           git config core.editor true
+           
+-          for f in division-fixtures.json division-scores.json division-scores-cache.json division-fixtures-today.json division-results-log.json cost-log.json; do
++          for f in division-fixtures.json division-scores.json division-scores-cache.json division-scores-lastpoll.json division-fixtures-today.json division-results-log.json cost-log.json; do
+             [ -f "$f" ] && git add "$f"
+           done
+           git diff --staged --quiet || git commit -m "..."
+diff --git a/division-scores.js b/division-scores.js
+index 1cae230a0..71fd9a4b3 100644
+--- a/division-scores.js
++++ b/division-scores.js
+@@ -235,6 +235,27 @@ async function run() {
+     return;
+   }
+ 
++  // cron-job.org still dispatches this workflow every 5 minutes during the
++  // match window, but polling clubs' X accounts that often burns through
++  // GetXAPI credits fast (confirmed 17 Oct: 1020 calls in one day). Enforce
++  // a floor here rather than relying on the external cron schedule being
++  // changed — 10 minutes is still plenty responsive for live scores.
++  const POLL_STATE_FILE = 'division-scores-lastpoll.json';
++  const MIN_POLL_INTERVAL_MINUTES = 10;
++  if (!isManual) {
++    try {
++      if (fs.existsSync(POLL_STATE_FILE)) {
++        const { lastPoll } = JSON.parse(fs.readFileSync(POLL_STATE_FILE, 'utf-8'));
++        const minutesSincePoll = (now - new Date(lastPoll)) / 60000;
++        if (minutesSincePoll < MIN_POLL_INTERVAL_MINUTES) {
++          console.log(`Last poll was ${minutesSincePoll.toFixed(1)} min ago — under the ${MIN_POLL_INTERVAL_MINUTES}-min floor, skipping to save GetXAPI calls.`);
++          return;
++        }
++      }
++    } catch {}
++  }
++  fs.writeFileSync(POLL_STATE_FILE, JSON.stringify({ lastPoll: now.toISOString() }));
++
+   const handlesNeeded = new Set();
+   todaysFixtures.forEach(f => {
+     const h1 = findHandle(f.home);
