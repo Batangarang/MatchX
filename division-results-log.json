@@ -133,28 +133,28 @@
     "Shawbury United|Stafford Town": {
       "home": "Shawbury United",
       "away": "Stafford Town",
-      "score": "0-1",
+      "score": "1-1",
       "matchStage": "second_half",
       "scoreSource": "explicit"
     },
     "AFC Bridgnorth|Sandbach United": {
       "home": "AFC Bridgnorth",
       "away": "Sandbach United",
-      "score": "1-1",
+      "score": "2-2",
       "matchStage": "second_half",
       "scoreSource": "explicit"
     },
     "Foley Meir|Widnes Town": {
       "home": "Foley Meir",
       "away": "Widnes Town",
-      "score": "2-0",
+      "score": "3-0",
       "matchStage": "second_half",
       "scoreSource": "explicit"
     },
     "Brereton Social|Dawley Town": {
       "home": "Brereton Social",
       "away": "Dawley Town",
-      "score": "1-1",
+      "score": "2-2",
       "matchStage": "second_half",
       "scoreSource": "explicit"
     }

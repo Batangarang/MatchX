@@ -1,21 +1,31 @@
 {
-  "generatedAt": "2026-10-24T15:37:29.577Z",
+  "generatedAt": "2026-10-24T15:50:42.880Z",
   "date": "2026-10-24",
   "isToday": true,
-  "postCount": 92,
-  "latestPostTimestamp": "2026-10-24T15:37:29.000Z",
+  "postCount": 104,
+  "latestPostTimestamp": "2026-10-24T15:50:24.000Z",
   "fixtures": [
     {
       "home": "AFC Bridgnorth",
       "away": "Sandbach United",
       "kickoff": "15:00",
-      "score": "1-1",
+      "score": "2-2",
       "matchStage": "second_half",
       "goals": [
         {
           "minute": null,
           "team": "home",
           "scorer": "Zazi"
+        },
+        {
+          "minute": null,
+          "team": "home",
+          "scorer": "Tukka"
+        },
+        {
+          "minute": null,
+          "team": "away",
+          "scorer": null
         },
         {
           "minute": null,
@@ -26,24 +36,34 @@
       "yellowCards": [],
       "redCards": [],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-24T15:37:29.577Z"
+      "lastUpdated": "2026-10-24T15:50:42.880Z"
     },
     {
       "home": "Brereton Social",
       "away": "Dawley Town",
       "kickoff": "15:00",
-      "score": "1-1",
+      "score": "2-2",
       "matchStage": "second_half",
       "goals": [
         {
-          "minute": 31,
+          "minute": "31",
           "team": "home",
           "scorer": null
         },
         {
-          "minute": 64,
+          "minute": "64",
           "team": "away",
           "scorer": "Joe Cuff"
+        },
+        {
+          "minute": "82",
+          "team": "away",
+          "scorer": "Cain Patterson"
+        },
+        {
+          "minute": "86",
+          "team": "home",
+          "scorer": null
         }
       ],
       "yellowCards": [],
@@ -54,7 +74,7 @@
         }
       ],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-24T15:37:29.577Z"
+      "lastUpdated": "2026-10-24T15:50:42.880Z"
     },
     {
       "home": "Cheadle Heath Nomads",
@@ -64,14 +84,14 @@
       "matchStage": "second_half",
       "goals": [
         {
-          "minute": 12,
+          "minute": "12",
           "team": "home",
-          "scorer": "L. Clarkson"
+          "scorer": "Clarkson"
         },
         {
-          "minute": 74,
+          "minute": "74",
           "team": "home",
-          "scorer": null
+          "scorer": "Higgy"
         }
       ],
       "yellowCards": [],
@@ -82,13 +102,13 @@
         }
       ],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-24T15:37:29.577Z"
+      "lastUpdated": "2026-10-24T15:50:42.880Z"
     },
     {
       "home": "Foley Meir",
       "away": "Widnes Town",
       "kickoff": "15:00",
-      "score": "2-0",
+      "score": "3-0",
       "matchStage": "second_half",
       "goals": [
         {
@@ -100,33 +120,51 @@
           "minute": null,
           "team": "home",
           "scorer": "Archie"
+        },
+        {
+          "minute": null,
+          "team": "home",
+          "scorer": "Archie"
         }
       ],
       "yellowCards": [
+        {
+          "team": "home",
+          "player": "Robo"
+        },
         {
           "team": "away",
           "player": null
         },
         {
-          "team": "home",
+          "team": "away",
+          "player": null
+        },
+        {
+          "team": "away",
           "player": null
         }
       ],
       "redCards": [],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-24T15:37:29.577Z"
+      "lastUpdated": "2026-10-24T15:50:42.880Z"
     },
     {
       "home": "Shawbury United",
       "away": "Stafford Town",
       "kickoff": "15:00",
-      "score": "0-1",
+      "score": "1-1",
       "matchStage": "second_half",
       "goals": [
         {
-          "minute": 57,
+          "minute": "57",
           "team": "away",
           "scorer": "Brenden Parker"
+        },
+        {
+          "minute": "90+",
+          "team": "home",
+          "scorer": "Conor"
         }
       ],
       "yellowCards": [
@@ -137,8 +175,8 @@
       ],
       "redCards": [],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-24T15:37:29.577Z"
+      "lastUpdated": "2026-10-24T15:50:42.880Z"
     }
   ],
-  "ticker": "@foley_fc: GGGGGOOOOOAAAAALLLLL!!!!!\n\nArchie adds the third and his second of the match, he gets his shot away on the angle and squeezed is past the keeper at the near post! https://t.co/0q3PfUDmm4"
+  "ticker": "@DawleyTownFC: The hosts make it 2-2 after a shot is deflected past our goalkeeper into the back of the net.\n\n2-2 on 86’"
 }
