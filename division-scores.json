@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-10-24T14:19:48.124Z",
+  "generatedAt": "2026-10-24T14:30:35.849Z",
   "date": "2026-10-24",
   "isToday": true,
-  "postCount": 33,
-  "latestPostTimestamp": "2026-10-24T14:19:21.000Z",
+  "postCount": 37,
+  "latestPostTimestamp": "2026-10-24T14:26:43.000Z",
   "fixtures": [
     {
       "home": "AFC Bridgnorth",
       "away": "Sandbach United",
       "kickoff": "15:00",
       "score": "1-0",
-      "matchStage": "scheduled",
+      "matchStage": "first_half",
       "goals": [
         {
           "minute": null,
@@ -20,7 +20,8 @@
       ],
       "yellowCards": [],
       "redCards": [],
-      "scoreSource": "derived"
+      "scoreSource": "explicit",
+      "lastUpdated": "2026-10-24T14:30:35.849Z"
     },
     {
       "home": "Brereton Social",
@@ -30,7 +31,8 @@
       "matchStage": "scheduled",
       "goals": [],
       "yellowCards": [],
-      "redCards": []
+      "redCards": [],
+      "lastUpdated": "2026-10-24T14:30:35.849Z"
     },
     {
       "home": "Cheadle Heath Nomads",
@@ -40,24 +42,32 @@
       "matchStage": "first_half",
       "goals": [
         {
-          "minute": 12,
+          "minute": "12",
           "team": "home",
           "scorer": "Clarkson"
         }
       ],
       "yellowCards": [],
       "redCards": [],
-      "scoreSource": "explicit"
+      "scoreSource": "explicit",
+      "lastUpdated": "2026-10-24T14:30:35.849Z"
     },
     {
       "home": "Foley Meir",
       "away": "Widnes Town",
       "kickoff": "15:00",
-      "score": null,
-      "matchStage": "scheduled",
+      "score": "0-0",
+      "matchStage": "first_half",
       "goals": [],
-      "yellowCards": [],
-      "redCards": []
+      "yellowCards": [
+        {
+          "team": "home",
+          "player": "Saul"
+        }
+      ],
+      "redCards": [],
+      "scoreSource": "explicit",
+      "lastUpdated": "2026-10-24T14:30:35.849Z"
     },
     {
       "home": "Shawbury United",
@@ -73,8 +83,9 @@
         }
       ],
       "redCards": [],
-      "scoreSource": "explicit"
+      "scoreSource": "explicit",
+      "lastUpdated": "2026-10-24T14:30:35.849Z"
     }
   ],
-  "ticker": "@MDTFC: 19’ \n\nGood work down the left from Drayton. Ball falls to J.Russell on the edge of the box and his shot goes wide of the left hand post \n\n@cheadleNomads 1-0 @MDTFC"
+  "ticker": "@MDTFC: 26’ Drayton sub. \n\nArchie Russell goes off with a knock \n\nON\nMcKee"
 }

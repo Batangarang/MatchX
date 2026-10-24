@@ -136,6 +136,20 @@
       "score": "0-0",
       "matchStage": "first_half",
       "scoreSource": "explicit"
+    },
+    "AFC Bridgnorth|Sandbach United": {
+      "home": "AFC Bridgnorth",
+      "away": "Sandbach United",
+      "score": "1-0",
+      "matchStage": "first_half",
+      "scoreSource": "explicit"
+    },
+    "Foley Meir|Widnes Town": {
+      "home": "Foley Meir",
+      "away": "Widnes Town",
+      "score": "0-0",
+      "matchStage": "first_half",
+      "scoreSource": "explicit"
     }
   }
 }
