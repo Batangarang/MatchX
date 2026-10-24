@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-17T16:30:52.864Z",
+  "generatedAt": "2026-10-24T16:30:54.134Z",
   "history": [
     {
       "gamesPlayed": 1,
@@ -156,6 +156,18 @@
       "cumGoalsFor": 36,
       "cumGoalsAgainst": 17,
       "cumGoalDifference": 19
+    },
+    {
+      "gamesPlayed": 14,
+      "date": "Sat 24/10/26",
+      "opponent": "AFC Bridgnorth",
+      "position": 1,
+      "points": 31,
+      "gameGoalsFor": 2,
+      "gameGoalsAgainst": 1,
+      "cumGoalsFor": 37,
+      "cumGoalsAgainst": 19,
+      "cumGoalDifference": 18
     }
   ]
 }
