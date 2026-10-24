@@ -389,13 +389,34 @@ Only include a score if explicitly stated in the posts. Leave as null if not men
     : fixturesWithDerivedScores;
   recordResults(target.targetDate, finalFixtures);
 
+  // Per-fixture "last update received" — stamps the moment THIS fixture's
+  // own score/goals/cards actually changed, not just the moment the script
+  // last ran (the AI call covers every fixture at once, so a run that only
+  // brought news for one game shouldn't make every OTHER game look freshly
+  // updated too).
+  const previousFixturesByKey = {};
+  (previous?.fixtures || []).forEach(f => { previousFixturesByKey[`${f.home}|${f.away}`] = f; });
+  const fixtureContentKey = f => JSON.stringify({
+    score: f.score || null,
+    matchStage: f.matchStage || null,
+    goals: f.goals || [],
+    yellowCards: f.yellowCards || [],
+    redCards: f.redCards || [],
+  });
+  const finalFixturesWithTimestamps = finalFixtures.map(f => {
+    const prev = previousFixturesByKey[`${f.home}|${f.away}`];
+    const changed = !prev || fixtureContentKey(prev) !== fixtureContentKey(f);
+    const lastUpdated = changed ? REAL_NOW.toISOString() : (prev.lastUpdated || REAL_NOW.toISOString());
+    return { ...f, lastUpdated };
+  });
+
     const output = {
     generatedAt: REAL_NOW.toISOString(),
     date: target.targetDate,
     isToday: true,
     postCount: totalPostCount,
     latestPostTimestamp,
-    fixtures: finalFixtures,
+    fixtures: finalFixturesWithTimestamps,
     ticker,
   };
 
