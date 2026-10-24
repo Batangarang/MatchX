@@ -12661,24 +12661,14 @@
       "aiCostGBP": 0
     },
     {
-      "script": "x-posts",
-      "timestamp": "2026-10-24T14:04:38.565Z",
-      "getxapiCalls": 1,
-      "claudeCalls": 0,
-      "inputTokens": 0,
-      "outputTokens": 0,
-      "xCostGBP": 0.0008,
-      "aiCostGBP": 0
-    },
-    {
-      "script": "x-insights",
-      "timestamp": "2026-10-24T14:04:44.107Z",
-      "getxapiCalls": 0,
+      "script": "matchday-live",
+      "timestamp": "2026-10-24T14:04:44.686Z",
+      "getxapiCalls": 2,
       "claudeCalls": 1,
-      "inputTokens": 773,
-      "outputTokens": 82,
-      "xCostGBP": 0,
-      "aiCostGBP": 0.0009
+      "inputTokens": 5093,
+      "outputTokens": 893,
+      "xCostGBP": 0.0015,
+      "aiCostGBP": 0.0072
     }
   ]
 }
