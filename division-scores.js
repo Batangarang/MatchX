@@ -392,18 +392,33 @@ Only include a score if explicitly stated in the posts. Leave as null if not men
     : fixturesWithDerivedScores;
   recordResults(target.targetDate, finalFixtures);
 
-  // Per-fixture "last update received" — this is the timestamp of the
+  // Per-fixture "last update received" — ideally the timestamp of the
   // actual X post that informed the score/goal/card, NOT the time this
   // script happened to run (the AI call covers every fixture at once, so a
   // run that only brought news for one game shouldn't make every OTHER game
   // look freshly updated too, and a re-run with nothing new shouldn't bump
   // the time at all). The AI is asked to copy the post's bracketed
-  // timestamp verbatim rather than calculate anything itself.
+  // timestamp verbatim, but a small model asked for a new field alongside a
+  // lot of other instructions doesn't always fill it in reliably — confirmed
+  // live: cards were clearly being picked up from new posts, but the
+  // per-fixture time stayed frozen because scoreSourceTime kept coming back
+  // empty. So: prefer the AI's exact post time when it gives us one, but
+  // fall back to detecting that THIS fixture's own content changed since
+  // last run and stamping it with "now" — less precise than a real tweet
+  // time, but still correct about whether something changed, which is what
+  // was actually broken.
   function parseValidDate(s) {
     if (!s || typeof s !== 'string') return null;
     const d = new Date(s);
     return isNaN(d.getTime()) ? null : d;
   }
+  const fixtureContentKey = f => JSON.stringify({
+    score: f.score || null,
+    matchStage: f.matchStage || null,
+    goals: f.goals || [],
+    yellowCards: f.yellowCards || [],
+    redCards: f.redCards || [],
+  });
   const previousFixturesByKey = {};
   (previous?.fixtures || []).forEach(f => { previousFixturesByKey[`${f.home}|${f.away}`] = f; });
   const finalFixturesWithTimestamps = finalFixtures.map(f => {
@@ -416,7 +431,12 @@ Only include a score if explicitly stated in the posts. Leave as null if not men
       lastUpdated = REAL_NOW.toISOString();
     } else {
       const aiReported = parseValidDate(scoreSourceTime);
-      lastUpdated = aiReported ? aiReported.toISOString() : (prev?.lastUpdated || null);
+      if (aiReported) {
+        lastUpdated = aiReported.toISOString();
+      } else {
+        const changed = !prev || fixtureContentKey(prev) !== fixtureContentKey(rest);
+        lastUpdated = changed ? REAL_NOW.toISOString() : (prev?.lastUpdated || null);
+      }
     }
 
     return lastUpdated ? { ...rest, lastUpdated } : rest;
