@@ -3,6 +3,7 @@ const CLUBS = require('./division-clubs.js');
 const { getUserTweetsIncremental, getCallCount } = require('./getxapi-client.js');
 const { logCost } = require('./cost-tracker.js');
 const { activeScoreOverride } = require('./overrides-node.js');
+const { isBST } = require('./uk-time.js');
 
 const API_KEY = process.env.GETXAPI_KEY;
 const ANTHROPIC_KEY = process.env.ANTHROPIC_API_KEY;
@@ -51,8 +52,7 @@ function withinMatchWindow(kickoff, competitionNote) {
   const kickoffToday = new Date();
   kickoffToday.setUTCHours(parseInt(hh), parseInt(min), 0, 0);
 
-  const isBST = now.getUTCMonth() > 2 && now.getUTCMonth() < 9;
-  if (isBST) kickoffToday.setUTCHours(kickoffToday.getUTCHours() - 1);
+  if (isBST(now)) kickoffToday.setUTCHours(kickoffToday.getUTCHours() - 1);
 
   const minutesFromKickoff = (now - kickoffToday) / 60000;
   return minutesFromKickoff >= -90 && minutesFromKickoff <= maxMinutesAfter;

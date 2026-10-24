@@ -3,7 +3,7 @@ const CLUBS = require('./division-clubs.js');
 const { getUserTweetsIncremental, getCallCount } = require('./getxapi-client.js');
 const API_KEY = process.env.GETXAPI_KEY;
 const ANTHROPIC_KEY = process.env.ANTHROPIC_API_KEY;
-const { getUKNow, getUKDateString } = require('./uk-time.js');
+const { getUKNow, getUKDateString, isBST } = require('./uk-time.js');
 const REAL_NOW = new Date();
 const { logCost } = require('./cost-tracker.js');
 const { activeScoreOverride } = require('./overrides-node.js');
@@ -29,11 +29,6 @@ function isSameDate(a, b) {
 
 function isToday(date) {
   return date && isSameDate(date, getUKNow());
-}
-
-function isBST() {
-  const m = getUKNow().getUTCMonth();
-  return m > 2 && m < 9;
 }
 
 function getTodaysWindow(fixtures) {

@@ -2,6 +2,7 @@ const fs = require('fs');
 const CLUBS = require('./division-clubs.js');
 const { logCost } = require('./cost-tracker.js');
 const { activeScoreOverride } = require('./overrides-node.js');
+const { isBST } = require('./uk-time.js');
 const API_KEY = process.env.ANTHROPIC_API_KEY;
 const MODE = process.env.RECAP_MODE; // 'preview' or 'recap'
 const CURRENT_CLUB_NAMES = new Set(CLUBS.map(c => c.name));
@@ -13,11 +14,6 @@ function parseFixtureDate(dateStr) {
   const monthIndex = months.indexOf(match[2].toLowerCase());
   if (monthIndex === -1) return null;
   return new Date(parseInt(match[3]), monthIndex, parseInt(match[1]));
-}
-
-function isBST() {
-  const m = new Date().getUTCMonth();
-  return m > 2 && m < 9;
 }
 
 function kickoffToUTC(dateObj, kickoff) {

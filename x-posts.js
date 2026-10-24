@@ -1,6 +1,7 @@
 const fs = require('fs');
 const { getUserTweets } = require('./getxapi-client.js');
 const { logCost } = require('./cost-tracker.js');
+const { isBST } = require('./uk-time.js');
 
 const USERNAME = 'SandbachFC_1st';
 const API_KEY = process.env.GETXAPI_KEY;
@@ -21,8 +22,7 @@ function getTodayFixtureWindow() {
     if (!isToday) return null;
 
     const kickoffUTC = new Date(Date.UTC(2000 + parseInt(yy), parseInt(mm) - 1, parseInt(dd), parseInt(hh), parseInt(min)));
-    const isBST = kickoffUTC.getUTCMonth() > 2 && kickoffUTC.getUTCMonth() < 9;
-    if (isBST) kickoffUTC.setUTCHours(kickoffUTC.getUTCHours() - 1);
+    if (isBST(kickoffUTC)) kickoffUTC.setUTCHours(kickoffUTC.getUTCHours() - 1);
 
     return {
       start: new Date(kickoffUTC.getTime() - 30 * 60000),
