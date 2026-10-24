@@ -1,73 +1,38 @@
 {
-  "date": "2026-10-17",
+  "date": "2026-10-24",
   "fixtures": [
     {
-      "date": "Saturday 17 October 2026",
-      "home": "Allscott Heath",
-      "away": "Foley Meir",
+      "date": "Saturday 24 October 2026",
+      "home": "AFC Bridgnorth",
+      "away": "Sandbach United",
       "kickoff": "15:00",
       "postponed": false
     },
     {
-      "date": "Saturday 17 October 2026",
-      "home": "Barnton",
-      "away": "AFC Bridgnorth",
-      "kickoff": "15:00",
-      "postponed": false
-    },
-    {
-      "date": "Saturday 17 October 2026",
+      "date": "Saturday 24 October 2026",
       "home": "Brereton Social",
-      "away": "Stafford Town",
+      "away": "Dawley Town",
       "kickoff": "15:00",
       "postponed": false
     },
     {
-      "date": "Saturday 17 October 2026",
-      "home": "Crewe",
-      "away": "Eccleshall",
-      "kickoff": "15:00",
-      "postponed": false
-    },
-    {
-      "date": "Saturday 17 October 2026",
-      "home": "New Mills",
-      "away": "Alsager Town",
-      "kickoff": "15:00",
-      "postponed": false
-    },
-    {
-      "date": "Saturday 17 October 2026",
-      "home": "Sandbach United",
-      "away": "Bilston Town",
-      "kickoff": "15:00",
-      "postponed": false
-    },
-    {
-      "date": "Saturday 17 October 2026",
-      "home": "Shawbury United",
-      "away": "Cheadle Heath Nomads",
-      "kickoff": "15:00",
-      "postponed": false
-    },
-    {
-      "date": "Saturday 17 October 2026",
-      "home": "Telford Town",
-      "away": "Wolverhampton Casuals",
-      "kickoff": "15:00",
-      "postponed": false
-    },
-    {
-      "date": "Saturday 17 October 2026",
-      "home": "Wednesfield Community",
+      "date": "Saturday 24 October 2026",
+      "home": "Cheadle Heath Nomads",
       "away": "Market Drayton Town",
       "kickoff": "15:00",
       "postponed": false
     },
     {
-      "date": "Saturday 17 October 2026",
-      "home": "Widnes Town",
-      "away": "Dawley Town",
+      "date": "Saturday 24 October 2026",
+      "home": "Foley Meir",
+      "away": "Widnes Town",
+      "kickoff": "15:00",
+      "postponed": false
+    },
+    {
+      "date": "Saturday 24 October 2026",
+      "home": "Shawbury United",
+      "away": "Stafford Town",
       "kickoff": "15:00",
       "postponed": false
     }

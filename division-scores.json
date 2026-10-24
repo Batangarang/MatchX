@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-10-23T23:55:33.038Z",
+  "generatedAt": "2026-10-24T00:01:08.132Z",
   "date": "2026-10-24",
-  "isToday": false,
+  "isToday": true,
   "fixtures": [
     {
       "home": "AFC Bridgnorth",
@@ -9,6 +9,7 @@
       "kickoff": "15:00",
       "score": null,
       "goals": [],
+      "yellowCards": [],
       "redCards": []
     },
     {
@@ -17,6 +18,7 @@
       "kickoff": "15:00",
       "score": null,
       "goals": [],
+      "yellowCards": [],
       "redCards": []
     },
     {
@@ -25,6 +27,7 @@
       "kickoff": "15:00",
       "score": null,
       "goals": [],
+      "yellowCards": [],
       "redCards": []
     },
     {
@@ -33,6 +36,7 @@
       "kickoff": "15:00",
       "score": null,
       "goals": [],
+      "yellowCards": [],
       "redCards": []
     },
     {
@@ -41,6 +45,7 @@
       "kickoff": "15:00",
       "score": null,
       "goals": [],
+      "yellowCards": [],
       "redCards": []
     }
   ],
