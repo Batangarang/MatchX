@@ -1,155 +1,16 @@
 {
-  "generatedAt": "2026-10-24T16:45:41.546Z",
-  "date": "2026-10-24",
-  "isToday": true,
-  "postCount": 114,
-  "latestPostTimestamp": "2026-10-24T16:32:07.000Z",
+  "generatedAt": "2026-10-24T23:01:01.292Z",
+  "date": "2026-10-27",
+  "isToday": false,
   "fixtures": [
     {
-      "home": "AFC Bridgnorth",
-      "away": "Sandbach United",
-      "kickoff": "15:00",
-      "score": "2-1",
-      "matchStage": "full_time",
-      "goals": [
-        {
-          "minute": null,
-          "team": "home",
-          "scorer": "Zazi"
-        },
-        {
-          "minute": null,
-          "team": "away",
-          "scorer": "Kyle Foley"
-        },
-        {
-          "minute": null,
-          "team": "home",
-          "scorer": "Tukka"
-        }
-      ],
-      "yellowCards": [],
-      "redCards": [],
-      "scoreSource": "explicit",
-      "lastUpdated": "2026-10-24T16:01:09.729Z"
-    },
-    {
-      "home": "Brereton Social",
-      "away": "Dawley Town",
-      "kickoff": "15:00",
-      "score": "2-2",
-      "matchStage": "full_time",
-      "goals": [
-        {
-          "minute": 31,
-          "team": "home",
-          "scorer": null
-        },
-        {
-          "minute": 64,
-          "team": "away",
-          "scorer": "Joe Cuff"
-        },
-        {
-          "minute": 82,
-          "team": "away",
-          "scorer": "Cain Patterson"
-        },
-        {
-          "minute": 86,
-          "team": "home",
-          "scorer": null
-        }
-      ],
-      "yellowCards": [],
-      "redCards": [
-        {
-          "team": "away",
-          "player": "Danar Saber"
-        }
-      ],
-      "scoreSource": "explicit",
-      "lastUpdated": "2026-10-24T16:15:38.881Z"
-    },
-    {
-      "home": "Cheadle Heath Nomads",
-      "away": "Market Drayton Town",
-      "kickoff": "15:00",
-      "score": "2-0",
-      "matchStage": "full_time",
-      "goals": [
-        {
-          "minute": 12,
-          "team": "home",
-          "scorer": "Clarkson"
-        },
-        {
-          "minute": 74,
-          "team": "home",
-          "scorer": "Higgy"
-        }
-      ],
-      "yellowCards": [],
-      "redCards": [
-        {
-          "team": "away",
-          "player": "Woodroffe"
-        }
-      ],
-      "scoreSource": "explicit",
-      "lastUpdated": "2026-10-24T16:15:38.881Z"
-    },
-    {
-      "home": "Foley Meir",
-      "away": "Widnes Town",
-      "kickoff": "15:00",
-      "score": "3-0",
-      "matchStage": "full_time",
-      "goals": [
-        {
-          "minute": null,
-          "team": "home",
-          "scorer": "Kerr"
-        },
-        {
-          "minute": null,
-          "team": "home",
-          "scorer": "Archie Ellams"
-        },
-        {
-          "minute": null,
-          "team": "home",
-          "scorer": "Archie Ellams"
-        }
-      ],
-      "yellowCards": [],
-      "redCards": [],
-      "scoreSource": "explicit",
-      "lastUpdated": "2026-10-24T16:45:41.546Z"
-    },
-    {
-      "home": "Shawbury United",
-      "away": "Stafford Town",
-      "kickoff": "15:00",
-      "score": "1-1",
-      "matchStage": "full_time",
-      "goals": [
-        {
-          "minute": 57,
-          "team": "away",
-          "scorer": "Brenden Parker"
-        },
-        {
-          "minute": 90,
-          "team": "home",
-          "scorer": "Conor"
-        }
-      ],
-      "yellowCards": [],
-      "redCards": [],
-      "scoreSource": "explicit",
-      "lastUpdated": "2026-10-24T16:45:41.546Z"
+      "home": "Telford Town",
+      "away": "Eccleshall",
+      "kickoff": "19:45",
+      "score": null,
+      "goals": [],
+      "redCards": []
     }
   ],
-  "ticker": "@foley_fc: 🔥 MAN OF THE MATCH 🔥\n\nPlenty of shouts for it today after a brilliant 3-0 win, with Jay Lovatt, Wardy and new signing Lago all putting in top performances.\n\nBut with two goals to his name, today’s award goes to…\n\n👏 Archie Ellams 👏\n\nTwo goals, a quality performance and a massive contribution to all three points. Fully deserved, Archie! ⚽⚽🔥\n\n🤝 Sponsored by Dylan & Wyn James\n\n#UpTheFoley | #ManOfTheMatch"
+  "ticker": null
 }
