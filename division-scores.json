@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-10-24T15:25:44.578Z",
+  "generatedAt": "2026-10-24T15:37:29.577Z",
   "date": "2026-10-24",
   "isToday": true,
-  "postCount": 81,
-  "latestPostTimestamp": "2026-10-24T15:25:16.000Z",
+  "postCount": 92,
+  "latestPostTimestamp": "2026-10-24T15:37:29.000Z",
   "fixtures": [
     {
       "home": "AFC Bridgnorth",
@@ -13,20 +13,20 @@
       "matchStage": "second_half",
       "goals": [
         {
-          "minute": "~12",
+          "minute": null,
           "team": "home",
           "scorer": "Zazi"
         },
         {
-          "minute": "46",
+          "minute": null,
           "team": "away",
-          "scorer": "Kyle Foley"
+          "scorer": null
         }
       ],
       "yellowCards": [],
       "redCards": [],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-24T15:25:44.578Z"
+      "lastUpdated": "2026-10-24T15:37:29.577Z"
     },
     {
       "home": "Brereton Social",
@@ -36,12 +36,12 @@
       "matchStage": "second_half",
       "goals": [
         {
-          "minute": "31",
+          "minute": 31,
           "team": "home",
           "scorer": null
         },
         {
-          "minute": "64",
+          "minute": 64,
           "team": "away",
           "scorer": "Joe Cuff"
         }
@@ -54,19 +54,24 @@
         }
       ],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-24T15:25:44.578Z"
+      "lastUpdated": "2026-10-24T15:37:29.577Z"
     },
     {
       "home": "Cheadle Heath Nomads",
       "away": "Market Drayton Town",
       "kickoff": "15:00",
-      "score": "1-0",
+      "score": "2-0",
       "matchStage": "second_half",
       "goals": [
         {
-          "minute": "12",
+          "minute": 12,
           "team": "home",
-          "scorer": "Clarkson"
+          "scorer": "L. Clarkson"
+        },
+        {
+          "minute": 74,
+          "team": "home",
+          "scorer": null
         }
       ],
       "yellowCards": [],
@@ -77,7 +82,7 @@
         }
       ],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-24T15:20:41.895Z"
+      "lastUpdated": "2026-10-24T15:37:29.577Z"
     },
     {
       "home": "Foley Meir",
@@ -87,41 +92,29 @@
       "matchStage": "second_half",
       "goals": [
         {
-          "minute": "~50",
+          "minute": null,
           "team": "home",
           "scorer": "Kerr"
         },
         {
-          "minute": "~68",
+          "minute": null,
           "team": "home",
           "scorer": "Archie"
         }
       ],
       "yellowCards": [
         {
-          "team": "home",
-          "player": "Robo"
-        },
-        {
-          "team": "away",
-          "player": null
-        },
-        {
           "team": "away",
           "player": null
         },
         {
           "team": "home",
-          "player": "Saul"
-        },
-        {
-          "team": "away",
           "player": null
         }
       ],
       "redCards": [],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-24T15:25:44.578Z"
+      "lastUpdated": "2026-10-24T15:37:29.577Z"
     },
     {
       "home": "Shawbury United",
@@ -131,7 +124,7 @@
       "matchStage": "second_half",
       "goals": [
         {
-          "minute": "56",
+          "minute": 57,
           "team": "away",
           "scorer": "Brenden Parker"
         }
@@ -144,8 +137,8 @@
       ],
       "redCards": [],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-24T15:25:44.578Z"
+      "lastUpdated": "2026-10-24T15:37:29.577Z"
     }
   ],
-  "ticker": "@StaffordTown1st: 68 - Sub for Town\n\nSatchwell is on for Lynch\n\n⚪️⚫️ 0-1 🔴🔴"
+  "ticker": "@foley_fc: GGGGGOOOOOAAAAALLLLL!!!!!\n\nArchie adds the third and his second of the match, he gets his shot away on the angle and squeezed is past the keeper at the near post! https://t.co/0q3PfUDmm4"
 }
