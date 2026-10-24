@@ -1,41 +1,6 @@
 {
-  "generatedAt": "2026-10-24T13:55:33.302Z",
+  "generatedAt": "2026-10-24T14:01:07.115Z",
   "fixtures": [
-    {
-      "date": "Saturday 24 October 2026",
-      "home": "AFC Bridgnorth",
-      "away": "Sandbach United",
-      "kickoff": "15:00",
-      "postponed": false
-    },
-    {
-      "date": "Saturday 24 October 2026",
-      "home": "Brereton Social",
-      "away": "Dawley Town",
-      "kickoff": "15:00",
-      "postponed": false
-    },
-    {
-      "date": "Saturday 24 October 2026",
-      "home": "Cheadle Heath Nomads",
-      "away": "Market Drayton Town",
-      "kickoff": "15:00",
-      "postponed": false
-    },
-    {
-      "date": "Saturday 24 October 2026",
-      "home": "Foley Meir",
-      "away": "Widnes Town",
-      "kickoff": "15:00",
-      "postponed": false
-    },
-    {
-      "date": "Saturday 24 October 2026",
-      "home": "Shawbury United",
-      "away": "Stafford Town",
-      "kickoff": "15:00",
-      "postponed": false
-    },
     {
       "date": "Tuesday 27 October 2026",
       "home": "Telford Town",
@@ -1769,6 +1734,41 @@
       "date": "Saturday 17 April 2027",
       "home": "Wolverhampton Casuals",
       "away": "Cheadle Heath Nomads",
+      "kickoff": "15:00",
+      "postponed": false
+    },
+    {
+      "date": "Saturday 24 October 2026",
+      "home": "AFC Bridgnorth",
+      "away": "Sandbach United",
+      "kickoff": "15:00",
+      "postponed": false
+    },
+    {
+      "date": "Saturday 24 October 2026",
+      "home": "Brereton Social",
+      "away": "Dawley Town",
+      "kickoff": "15:00",
+      "postponed": false
+    },
+    {
+      "date": "Saturday 24 October 2026",
+      "home": "Cheadle Heath Nomads",
+      "away": "Market Drayton Town",
+      "kickoff": "15:00",
+      "postponed": false
+    },
+    {
+      "date": "Saturday 24 October 2026",
+      "home": "Foley Meir",
+      "away": "Widnes Town",
+      "kickoff": "15:00",
+      "postponed": false
+    },
+    {
+      "date": "Saturday 24 October 2026",
+      "home": "Shawbury United",
+      "away": "Stafford Town",
       "kickoff": "15:00",
       "postponed": false
     }
