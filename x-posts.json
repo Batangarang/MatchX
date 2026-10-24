@@ -1,5 +1,5 @@
 {
-  "scrapedAt": "2026-10-24T15:40:23.479Z",
+  "scrapedAt": "2026-10-24T15:45:27.114Z",
   "username": "SandbachFC_1st",
   "posts": [
     {
@@ -9,6 +9,12 @@
         "https://pbs.twimg.com/media/HUDmlc4WgAAhBe7.jpg"
       ],
       "isMatchday": false
+    },
+    {
+      "text": "🔵🔵 v 🟢🟢\n\nAFC Bridgnorth v Sandbach United\n\n@AFCBridgnorth \n\nFantastic goal from the Bridgnorth 2 who does well to keep the ball and cuts back and curls one into the far corner.\n\n2 1",
+      "createdAt": "2026-10-24T15:41:34.000Z",
+      "images": [],
+      "isMatchday": true
     },
     {
       "text": "🔵🔵 v 🟢🟢\n\nAFC Bridgnorth v Sandbach United\n\n@AFCBridgnorth \n\n Brad Forrester replaces Nathan Barry\n\n1 1",
@@ -62,12 +68,6 @@
       "images": [
         "https://pbs.twimg.com/media/HVZqRCTWkAAR-Uv.jpg"
       ],
-      "isMatchday": true
-    },
-    {
-      "text": "🔵🔵 v 🟢🟢\n\nAFC Bridgnorth v Sandbach United \n\nIt’s gunna be a wet one, let’s hope it’s gunna be a good one, come on The Bach, let’s get the 3 points!",
-      "createdAt": "2026-10-24T13:32:33.000Z",
-      "images": [],
       "isMatchday": true
     }
   ]
