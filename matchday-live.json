@@ -1,29 +1,29 @@
 {
-  "generatedAt": "2026-10-24T15:50:52.510Z",
+  "generatedAt": "2026-10-24T15:55:45.164Z",
   "fixtureDate": "2026-10-24",
   "kickoff": "15:00",
   "homeTeam": "AFC Bridgnorth",
   "awayTeam": "Sandbach United",
-  "postsUsed": 16,
-  "imagesAnalyzedThisRun": 0,
-  "totalImagesAnalyzed": 4,
+  "postsUsed": 17,
+  "imagesAnalyzedThisRun": 1,
+  "totalImagesAnalyzed": 5,
   "match": {
-    "score": "1-1",
-    "scoreSource": "division_scores",
+    "score": "2-1",
+    "scoreSource": "announced_full_time",
     "scoreConfirmed": true,
     "feedScore": "2-1",
-    "scoreDiscrepancy": "Match feed said 2-1 but the division live-scores feed said 1-1 — showing 1-1.",
+    "scoreDiscrepancy": "Goal reports suggested 3-1 but the confirmed score is 2-1 — 1 unconfirmed goal report(s) ignored.",
     "unconfirmedGoals": [
       {
-        "minute": null,
+        "minute": "~65",
         "team": "home",
-        "scorer": "Zazi"
+        "scorer": "Tukka"
       }
     ],
-    "finalScoreAnnounced": null,
-    "halfTimeScoreAnnounced": "1 0",
+    "finalScoreAnnounced": "2-1",
+    "halfTimeScoreAnnounced": "1-0",
     "htDiscrepancy": null,
-    "matchStage": "second_half",
+    "matchStage": "full_time",
     "lineups": {
       "home": {
         "players": [],
@@ -63,9 +63,14 @@
         "scorer": "Kyle Foley"
       },
       {
-        "minute": "~65",
+        "minute": 9,
         "team": "home",
-        "scorer": "Tukka"
+        "scorer": "Nehemia Zazi"
+      },
+      {
+        "minute": 83,
+        "team": "home",
+        "scorer": "Craig Tuckley"
       }
     ],
     "yellowCards": [],
@@ -120,24 +125,24 @@
     },
     "roughXG": {
       "firstHalf": {
-        "home": 1.2,
+        "home": 1,
         "away": 0.3,
-        "note": "AFC Bridgnorth scored early from a corner; Sandbach had a 'relatively disappointing display'"
+        "note": "Home team scored early header from corner; away side had disappointing display and limited chances"
       },
       "secondHalf": {
-        "home": 1,
-        "away": 1.2,
-        "note": "Sandbach equalized immediately after half-time; Bridgnorth scored again mid-second half; 'end to end' with 'no clear chances' in later stages"
+        "home": 1.2,
+        "away": 0.8,
+        "note": "Away team equalized early in second half; game became end-to-end with both sides searching for winner; home team scored again late"
       },
       "extraTime": {
         "home": 0,
         "away": 0,
-        "note": "No extra time"
+        "note": "No extra time played"
       },
       "total": {
         "home": 2.2,
-        "away": 1.5,
-        "note": "AFC Bridgnorth dominated early and added a second goal; Sandbach showed reaction but limited clear-cut chances"
+        "away": 1.1,
+        "note": "Home team scored 2 goals (Zazi 9', Tuckley 83'); away team scored 1 (Foley 46'). Limited detail on chance quality from social media posts."
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
@@ -145,22 +150,22 @@
       "firstHalf": {
         "home": 65,
         "away": 35,
-        "note": "AFC Bridgnorth scored early from a corner; Sandbach described as having a 'relatively disappointing display'"
+        "note": "Home team dominant early, scoring from corner; away team described as having 'relatively disappointing display'"
       },
       "secondHalf": {
-        "home": 50,
-        "away": 50,
-        "note": "Sandbach equalized straight after half-time; game became 'end to end' with both sides seeking ascendancy; eventually Bridgnorth regained control to score second goal"
+        "home": 55,
+        "away": 45,
+        "note": "Away team improved after half-time to equalize; described as 'end to end' with both sides trying to gain ascendancy"
       },
       "extraTime": {
         "home": 50,
         "away": 50,
-        "note": "No extra time"
+        "note": "No extra time played"
       },
       "total": {
-        "home": 58,
-        "away": 42,
-        "note": "AFC Bridgnorth controlled the first half and ultimately prevailed; Sandbach showed resilience and reaction but were unable to sustain it"
+        "home": 60,
+        "away": 40,
+        "note": "Home team controlled majority of match, scoring twice to away team's one goal"
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
