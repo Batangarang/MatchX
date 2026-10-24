@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-10-24T16:15:38.881Z",
+  "generatedAt": "2026-10-24T16:45:41.546Z",
   "date": "2026-10-24",
   "isToday": true,
-  "postCount": 113,
-  "latestPostTimestamp": "2026-10-24T16:14:31.000Z",
+  "postCount": 114,
+  "latestPostTimestamp": "2026-10-24T16:32:07.000Z",
   "fixtures": [
     {
       "home": "AFC Bridgnorth",
@@ -114,27 +114,18 @@
         {
           "minute": null,
           "team": "home",
-          "scorer": "Archie"
+          "scorer": "Archie Ellams"
         },
         {
           "minute": null,
           "team": "home",
-          "scorer": "Archie"
+          "scorer": "Archie Ellams"
         }
       ],
-      "yellowCards": [
-        {
-          "team": "away",
-          "player": null
-        },
-        {
-          "team": "home",
-          "player": null
-        }
-      ],
+      "yellowCards": [],
       "redCards": [],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-24T16:01:09.729Z"
+      "lastUpdated": "2026-10-24T16:45:41.546Z"
     },
     {
       "home": "Shawbury United",
@@ -154,16 +145,11 @@
           "scorer": "Conor"
         }
       ],
-      "yellowCards": [
-        {
-          "team": "home",
-          "player": "Daley"
-        }
-      ],
+      "yellowCards": [],
       "redCards": [],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-24T16:15:38.881Z"
+      "lastUpdated": "2026-10-24T16:45:41.546Z"
     }
   ],
-  "ticker": "@CheadleNomads: 90’ | FULL-TIME\n\nA battling performance in difficult conditions sees us take all 3 points!\n\nAn early Clarkson strike and a Higgy winner seal a hard fought 2-0 victory! \n\n@CheadleNomads 2-0 @MDTFC \n\n#WeAreNomads | @nwcfl | @NWCFLScores https://t.co/ZSohlYGWmU"
+  "ticker": "@foley_fc: 🔥 MAN OF THE MATCH 🔥\n\nPlenty of shouts for it today after a brilliant 3-0 win, with Jay Lovatt, Wardy and new signing Lago all putting in top performances.\n\nBut with two goals to his name, today’s award goes to…\n\n👏 Archie Ellams 👏\n\nTwo goals, a quality performance and a massive contribution to all three points. Fully deserved, Archie! ⚽⚽🔥\n\n🤝 Sponsored by Dylan & Wyn James\n\n#UpTheFoley | #ManOfTheMatch"
 }
