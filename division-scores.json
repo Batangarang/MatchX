@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-24T14:30:35.849Z",
+  "generatedAt": "2026-10-24T14:31:23.461Z",
   "date": "2026-10-24",
   "isToday": true,
   "postCount": 37,
@@ -21,7 +21,7 @@
       "yellowCards": [],
       "redCards": [],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-24T14:30:35.849Z"
+      "lastUpdated": "2026-10-24T14:31:23.461Z"
     },
     {
       "home": "Brereton Social",
@@ -32,7 +32,7 @@
       "goals": [],
       "yellowCards": [],
       "redCards": [],
-      "lastUpdated": "2026-10-24T14:30:35.849Z"
+      "lastUpdated": "2026-10-24T14:31:23.461Z"
     },
     {
       "home": "Cheadle Heath Nomads",
@@ -42,7 +42,7 @@
       "matchStage": "first_half",
       "goals": [
         {
-          "minute": "12",
+          "minute": 12,
           "team": "home",
           "scorer": "Clarkson"
         }
@@ -50,7 +50,7 @@
       "yellowCards": [],
       "redCards": [],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-24T14:30:35.849Z"
+      "lastUpdated": "2026-10-24T14:31:23.461Z"
     },
     {
       "home": "Foley Meir",
@@ -67,7 +67,7 @@
       ],
       "redCards": [],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-24T14:30:35.849Z"
+      "lastUpdated": "2026-10-24T14:31:23.461Z"
     },
     {
       "home": "Shawbury United",
@@ -84,7 +84,7 @@
       ],
       "redCards": [],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-24T14:30:35.849Z"
+      "lastUpdated": "2026-10-24T14:31:23.461Z"
     }
   ],
   "ticker": "@MDTFC: 26’ Drayton sub. \n\nArchie Russell goes off with a knock \n\nON\nMcKee"
