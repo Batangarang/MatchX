@@ -12631,14 +12631,14 @@
       "aiCostGBP": 0.0046
     },
     {
-      "script": "division-scores",
-      "timestamp": "2026-10-24T14:45:25.211Z",
-      "getxapiCalls": 10,
-      "claudeCalls": 1,
-      "inputTokens": 4961,
-      "outputTokens": 755,
-      "xCostGBP": 0.0075,
-      "aiCostGBP": 0.0066
+      "script": "x-posts",
+      "timestamp": "2026-10-24T14:45:26.085Z",
+      "getxapiCalls": 1,
+      "claudeCalls": 0,
+      "inputTokens": 0,
+      "outputTokens": 0,
+      "xCostGBP": 0.0008,
+      "aiCostGBP": 0
     }
   ]
 }
