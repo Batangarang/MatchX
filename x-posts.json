@@ -1,5 +1,5 @@
 {
-  "scrapedAt": "2026-10-24T15:25:19.366Z",
+  "scrapedAt": "2026-10-24T15:30:41.931Z",
   "username": "SandbachFC_1st",
   "posts": [
     {
@@ -9,6 +9,12 @@
         "https://pbs.twimg.com/media/HUDmlc4WgAAhBe7.jpg"
       ],
       "isMatchday": false
+    },
+    {
+      "text": "🔵🔵 v 🟢🟢\n\nAFC Bridgnorth v Sandbach United\n\n@AFCBridgnorth \n\nJake Pollard replaces Robbie Hatton\n\n1 1",
+      "createdAt": "2026-10-24T15:27:47.000Z",
+      "images": [],
+      "isMatchday": true
     },
     {
       "text": "🔵🔵 v 🟢🟢\n\nAFC Bridgnorth v Sandbach United\n\n@AFCBridgnorth \n\nGames settled down as both sides try to get the ascendancy in the game, end to end, but no clear chances for either side in the last 15 minutes.\n\nCallum Besford replaced by Harry Cain\n\n1 1",
@@ -64,12 +70,6 @@
       "images": [
         "https://pbs.twimg.com/media/HVZjExLXIAAQuxF.jpg"
       ],
-      "isMatchday": true
-    },
-    {
-      "text": "🔵🔵 v 🟢🟢\n\nAFC Bridgnorth v Sandbach United \n\nAnother top 5 clash for The Bach on consecutive Saturday’s, and it’s another early season 6 pointer and sure to be a compelling affair.  Bach welcome Callum Besford as well as a return to the starting 11 for Nathan Barry.",
-      "createdAt": "2026-10-24T13:09:50.000Z",
-      "images": [],
       "isMatchday": true
     }
   ]
