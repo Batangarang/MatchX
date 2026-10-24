@@ -1,19 +1,25 @@
 {
-  "generatedAt": "2026-10-24T15:40:50.629Z",
+  "generatedAt": "2026-10-24T15:45:53.064Z",
   "fixtureDate": "2026-10-24",
   "kickoff": "15:00",
   "homeTeam": "AFC Bridgnorth",
   "awayTeam": "Sandbach United",
-  "postsUsed": 13,
+  "postsUsed": 15,
   "imagesAnalyzedThisRun": 0,
   "totalImagesAnalyzed": 4,
   "match": {
     "score": "1-1",
-    "scoreSource": "confirmed_by_both_feeds",
+    "scoreSource": "division_scores",
     "scoreConfirmed": true,
-    "feedScore": "1-1",
-    "scoreDiscrepancy": null,
-    "unconfirmedGoals": [],
+    "feedScore": "2-1",
+    "scoreDiscrepancy": "Match feed said 2-1 but the division live-scores feed said 1-1 — showing 1-1.",
+    "unconfirmedGoals": [
+      {
+        "minute": null,
+        "team": "home",
+        "scorer": "Tukka"
+      }
+    ],
     "finalScoreAnnounced": null,
     "halfTimeScoreAnnounced": "1 0",
     "htDiscrepancy": "First-half goals suggest HT 1-0, but an announced HT score of 1 0 was also seen.",
@@ -108,19 +114,24 @@
     },
     "roughXG": {
       "firstHalf": {
-        "home": 1.2,
+        "home": 0.8,
         "away": 0.2,
-        "note": "AFC Bridgnorth scored early header from corner; Sandbach had disappointing first half"
+        "note": "AFC Bridgnorth scored from an early corner header; Sandbach described as having a 'relatively disappointing display'"
       },
       "secondHalf": {
-        "home": 0.3,
-        "away": 1,
-        "note": "Sandbach equalized early in second half; end-to-end play with no clear chances in final 15 minutes"
+        "home": 1,
+        "away": 0.8,
+        "note": "Sandbach equalized early in second half; Bridgnorth went ahead again. Both sides described as end-to-end with no clear chances in final 15 minutes"
+      },
+      "extraTime": {
+        "home": 0,
+        "away": 0,
+        "note": "Match did not go to extra time"
       },
       "total": {
-        "home": 1.5,
-        "away": 1.2,
-        "note": "Both teams scored once; match became more balanced after half-time"
+        "home": 1.8,
+        "away": 1,
+        "note": "Three goals scored (2 home, 1 away); xG estimates reflect actual goal outcomes"
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
@@ -128,17 +139,22 @@
       "firstHalf": {
         "home": 65,
         "away": 35,
-        "note": "AFC Bridgnorth dominated early with goal from corner; Sandbach described as having 'relatively disappointing display'"
+        "note": "AFC Bridgnorth scored early; Sandbach had a 'relatively disappointing display'"
       },
       "secondHalf": {
+        "home": 55,
+        "away": 45,
+        "note": "Game settled down with end-to-end play; both sides seeking ascendancy but no clear dominance described"
+      },
+      "extraTime": {
         "home": 50,
         "away": 50,
-        "note": "Games settled down end-to-end with both sides trying to get ascendancy; no clear dominance"
+        "note": "Match did not go to extra time"
       },
       "total": {
-        "home": 57,
-        "away": 43,
-        "note": "AFC Bridgnorth stronger in first half but second half was more balanced"
+        "home": 60,
+        "away": 40,
+        "note": "AFC Bridgnorth edged the match overall, winning 2-1"
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
