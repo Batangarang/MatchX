@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-10-24T14:55:33.083Z",
+  "generatedAt": "2026-10-24T15:05:39.647Z",
   "date": "2026-10-24",
   "isToday": true,
-  "postCount": 54,
-  "latestPostTimestamp": "2026-10-24T14:54:09.000Z",
+  "postCount": 58,
+  "latestPostTimestamp": "2026-10-24T15:02:21.000Z",
   "fixtures": [
     {
       "home": "AFC Bridgnorth",
       "away": "Sandbach United",
       "kickoff": "15:00",
       "score": "1-0",
-      "matchStage": "half_time",
+      "matchStage": "first_half",
       "goals": [
         {
           "minute": null,
@@ -21,7 +21,7 @@
       "yellowCards": [],
       "redCards": [],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-24T14:31:23.461Z"
+      "lastUpdated": "2026-10-24T15:05:39.647Z"
     },
     {
       "home": "Brereton Social",
@@ -33,20 +33,20 @@
         {
           "minute": 31,
           "team": "home",
-          "scorer": "Cam Jackson"
+          "scorer": null
         }
       ],
       "yellowCards": [],
       "redCards": [],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-24T14:31:23.461Z"
+      "lastUpdated": "2026-10-24T15:05:39.647Z"
     },
     {
       "home": "Cheadle Heath Nomads",
       "away": "Market Drayton Town",
       "kickoff": "15:00",
       "score": "1-0",
-      "matchStage": "half_time",
+      "matchStage": "second_half",
       "goals": [
         {
           "minute": 12,
@@ -57,14 +57,14 @@
       "yellowCards": [],
       "redCards": [],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-24T14:31:23.461Z"
+      "lastUpdated": "2026-10-24T15:05:39.647Z"
     },
     {
       "home": "Foley Meir",
       "away": "Widnes Town",
       "kickoff": "15:00",
       "score": "0-0",
-      "matchStage": "half_time",
+      "matchStage": "second_half",
       "goals": [],
       "yellowCards": [
         {
@@ -90,14 +90,14 @@
       ],
       "redCards": [],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-24T14:31:23.461Z"
+      "lastUpdated": "2026-10-24T15:05:39.647Z"
     },
     {
       "home": "Shawbury United",
       "away": "Stafford Town",
       "kickoff": "15:00",
       "score": "0-0",
-      "matchStage": "half_time",
+      "matchStage": "second_half",
       "goals": [],
       "yellowCards": [
         {
@@ -107,8 +107,8 @@
       ],
       "redCards": [],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-24T14:31:23.461Z"
+      "lastUpdated": "2026-10-24T15:05:39.647Z"
     }
   ],
-  "ticker": "@foley_fc: We go into the break level.\n\nPlenty of chances for us to go in front, but either just wide or denied by the keeper. https://t.co/W5JWN2o0PY"
+  "ticker": "@foley_fc: We’re back out now for the second half."
 }

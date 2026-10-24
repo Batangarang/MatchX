@@ -127,28 +127,28 @@
       "home": "Cheadle Heath Nomads",
       "away": "Market Drayton Town",
       "score": "1-0",
-      "matchStage": "half_time",
+      "matchStage": "second_half",
       "scoreSource": "explicit"
     },
     "Shawbury United|Stafford Town": {
       "home": "Shawbury United",
       "away": "Stafford Town",
       "score": "0-0",
-      "matchStage": "half_time",
+      "matchStage": "second_half",
       "scoreSource": "explicit"
     },
     "AFC Bridgnorth|Sandbach United": {
       "home": "AFC Bridgnorth",
       "away": "Sandbach United",
       "score": "1-0",
-      "matchStage": "half_time",
+      "matchStage": "first_half",
       "scoreSource": "explicit"
     },
     "Foley Meir|Widnes Town": {
       "home": "Foley Meir",
       "away": "Widnes Town",
       "score": "0-0",
-      "matchStage": "half_time",
+      "matchStage": "second_half",
       "scoreSource": "explicit"
     },
     "Brereton Social|Dawley Town": {
