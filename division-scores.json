@@ -1,27 +1,32 @@
 {
-  "generatedAt": "2026-10-24T15:05:39.647Z",
+  "generatedAt": "2026-10-24T15:20:41.895Z",
   "date": "2026-10-24",
   "isToday": true,
-  "postCount": 58,
-  "latestPostTimestamp": "2026-10-24T15:02:21.000Z",
+  "postCount": 72,
+  "latestPostTimestamp": "2026-10-24T15:16:24.000Z",
   "fixtures": [
     {
       "home": "AFC Bridgnorth",
       "away": "Sandbach United",
       "kickoff": "15:00",
-      "score": "1-0",
-      "matchStage": "first_half",
+      "score": "1-1",
+      "matchStage": "second_half",
       "goals": [
         {
           "minute": null,
           "team": "home",
           "scorer": "Zazi"
+        },
+        {
+          "minute": "46",
+          "team": "away",
+          "scorer": "Kyle Foley"
         }
       ],
       "yellowCards": [],
       "redCards": [],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-24T15:05:39.647Z"
+      "lastUpdated": "2026-10-24T15:20:41.895Z"
     },
     {
       "home": "Brereton Social",
@@ -31,15 +36,20 @@
       "matchStage": "half_time",
       "goals": [
         {
-          "minute": 31,
+          "minute": "31",
           "team": "home",
-          "scorer": null
+          "scorer": "Cam Jackson"
         }
       ],
       "yellowCards": [],
-      "redCards": [],
+      "redCards": [
+        {
+          "team": "away",
+          "player": "Danar Saber"
+        }
+      ],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-24T15:05:39.647Z"
+      "lastUpdated": "2026-10-24T15:20:41.895Z"
     },
     {
       "home": "Cheadle Heath Nomads",
@@ -49,39 +59,46 @@
       "matchStage": "second_half",
       "goals": [
         {
-          "minute": 12,
+          "minute": "12",
           "team": "home",
           "scorer": "Clarkson"
         }
       ],
       "yellowCards": [],
-      "redCards": [],
+      "redCards": [
+        {
+          "team": "away",
+          "player": "Woodroffe"
+        }
+      ],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-24T15:05:39.647Z"
+      "lastUpdated": "2026-10-24T15:20:41.895Z"
     },
     {
       "home": "Foley Meir",
       "away": "Widnes Town",
       "kickoff": "15:00",
-      "score": "0-0",
+      "score": "1-0",
       "matchStage": "second_half",
-      "goals": [],
+      "goals": [
+        {
+          "minute": null,
+          "team": "home",
+          "scorer": "Kerr"
+        }
+      ],
       "yellowCards": [
         {
-          "team": "away",
-          "player": null
-        },
-        {
-          "team": "away",
-          "player": null
+          "team": "home",
+          "player": "Saul"
         },
         {
           "team": "home",
           "player": "Robo"
         },
         {
-          "team": "home",
-          "player": "Saul"
+          "team": "away",
+          "player": null
         },
         {
           "team": "away",
@@ -90,15 +107,21 @@
       ],
       "redCards": [],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-24T15:05:39.647Z"
+      "lastUpdated": "2026-10-24T15:20:41.895Z"
     },
     {
       "home": "Shawbury United",
       "away": "Stafford Town",
       "kickoff": "15:00",
-      "score": "0-0",
+      "score": "0-1",
       "matchStage": "second_half",
-      "goals": [],
+      "goals": [
+        {
+          "minute": "57",
+          "team": "away",
+          "scorer": "Brenden Parker"
+        }
+      ],
       "yellowCards": [
         {
           "team": "home",
@@ -107,8 +130,8 @@
       ],
       "redCards": [],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-24T15:05:39.647Z"
+      "lastUpdated": "2026-10-24T15:20:41.895Z"
     }
   ],
-  "ticker": "@foley_fc: We’re back out now for the second half."
+  "ticker": "@MDTFC: 59’\n\nOFF \nHIGGINS\n\nON\nRAINE"
 }
