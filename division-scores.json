@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-10-24T14:45:06.118Z",
+  "generatedAt": "2026-10-24T14:55:33.083Z",
   "date": "2026-10-24",
   "isToday": true,
-  "postCount": 46,
-  "latestPostTimestamp": "2026-10-24T14:44:44.000Z",
+  "postCount": 54,
+  "latestPostTimestamp": "2026-10-24T14:54:09.000Z",
   "fixtures": [
     {
       "home": "AFC Bridgnorth",
       "away": "Sandbach United",
       "kickoff": "15:00",
       "score": "1-0",
-      "matchStage": "first_half",
+      "matchStage": "half_time",
       "goals": [
         {
           "minute": null,
@@ -28,12 +28,12 @@
       "away": "Dawley Town",
       "kickoff": "15:00",
       "score": "1-0",
-      "matchStage": "first_half",
+      "matchStage": "half_time",
       "goals": [
         {
-          "minute": "31",
+          "minute": 31,
           "team": "home",
-          "scorer": null
+          "scorer": "Cam Jackson"
         }
       ],
       "yellowCards": [],
@@ -46,10 +46,10 @@
       "away": "Market Drayton Town",
       "kickoff": "15:00",
       "score": "1-0",
-      "matchStage": "first_half",
+      "matchStage": "half_time",
       "goals": [
         {
-          "minute": "12",
+          "minute": 12,
           "team": "home",
           "scorer": "Clarkson"
         }
@@ -64,9 +64,21 @@
       "away": "Widnes Town",
       "kickoff": "15:00",
       "score": "0-0",
-      "matchStage": "first_half",
+      "matchStage": "half_time",
       "goals": [],
       "yellowCards": [
+        {
+          "team": "away",
+          "player": null
+        },
+        {
+          "team": "away",
+          "player": null
+        },
+        {
+          "team": "home",
+          "player": "Robo"
+        },
         {
           "team": "home",
           "player": "Saul"
@@ -85,13 +97,9 @@
       "away": "Stafford Town",
       "kickoff": "15:00",
       "score": "0-0",
-      "matchStage": "first_half",
+      "matchStage": "half_time",
       "goals": [],
       "yellowCards": [
-        {
-          "team": "away",
-          "player": null
-        },
         {
           "team": "home",
           "player": "Daley"
@@ -102,5 +110,5 @@
       "lastUpdated": "2026-10-24T14:31:23.461Z"
     }
   ],
-  "ticker": "@MDTFC: 45’ \n\nDouble save from Rowley \n\nCheadle player looked offside. Nether the less 2 superb saves \n\n @cheadleNomads 1-0 @MDTFC"
+  "ticker": "@foley_fc: We go into the break level.\n\nPlenty of chances for us to go in front, but either just wide or denied by the keeper. https://t.co/W5JWN2o0PY"
 }
