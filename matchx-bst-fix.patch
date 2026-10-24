@@ -1,0 +1,142 @@
+diff --git a/division-recap-engine.js b/division-recap-engine.js
+index 12a3f7387..5cccec1b4 100644
+--- a/division-recap-engine.js
++++ b/division-recap-engine.js
+@@ -2,6 +2,7 @@ const fs = require('fs');
+ const CLUBS = require('./division-clubs.js');
+ const { logCost } = require('./cost-tracker.js');
+ const { activeScoreOverride } = require('./overrides-node.js');
++const { isBST } = require('./uk-time.js');
+ const API_KEY = process.env.ANTHROPIC_API_KEY;
+ const MODE = process.env.RECAP_MODE; // 'preview' or 'recap'
+ const CURRENT_CLUB_NAMES = new Set(CLUBS.map(c => c.name));
+@@ -15,11 +16,6 @@ function parseFixtureDate(dateStr) {
+   return new Date(parseInt(match[3]), monthIndex, parseInt(match[1]));
+ }
+ 
+-function isBST() {
+-  const m = new Date().getUTCMonth();
+-  return m > 2 && m < 9;
+-}
+-
+ function kickoffToUTC(dateObj, kickoff) {
+   if (!kickoff || typeof kickoff !== 'string') return new Date(dateObj);
+   const [hh, min] = kickoff.split(':');
+diff --git a/division-scores.js b/division-scores.js
+index 71fd9a4b3..b148b3d36 100644
+--- a/division-scores.js
++++ b/division-scores.js
+@@ -3,7 +3,7 @@ const CLUBS = require('./division-clubs.js');
+ const { getUserTweetsIncremental, getCallCount } = require('./getxapi-client.js');
+ const API_KEY = process.env.GETXAPI_KEY;
+ const ANTHROPIC_KEY = process.env.ANTHROPIC_API_KEY;
+-const { getUKNow, getUKDateString } = require('./uk-time.js');
++const { getUKNow, getUKDateString, isBST } = require('./uk-time.js');
+ const REAL_NOW = new Date();
+ const { logCost } = require('./cost-tracker.js');
+ const { activeScoreOverride } = require('./overrides-node.js');
+@@ -31,11 +31,6 @@ function isToday(date) {
+   return date && isSameDate(date, getUKNow());
+ }
+ 
+-function isBST() {
+-  const m = getUKNow().getUTCMonth();
+-  return m > 2 && m < 9;
+-}
+-
+ function getTodaysWindow(fixtures) {
+   if (fixtures.length === 0) return null;
+   const kickoffs = fixtures.map(f => {
+diff --git a/matchday-live.js b/matchday-live.js
+index 68605f94f..29d644453 100644
+--- a/matchday-live.js
++++ b/matchday-live.js
+@@ -3,6 +3,7 @@ const CLUBS = require('./division-clubs.js');
+ const { getUserTweetsIncremental, getCallCount } = require('./getxapi-client.js');
+ const { logCost } = require('./cost-tracker.js');
+ const { activeScoreOverride } = require('./overrides-node.js');
++const { isBST } = require('./uk-time.js');
+ 
+ const API_KEY = process.env.GETXAPI_KEY;
+ const ANTHROPIC_KEY = process.env.ANTHROPIC_API_KEY;
+@@ -51,8 +52,7 @@ function withinMatchWindow(kickoff, competitionNote) {
+   const kickoffToday = new Date();
+   kickoffToday.setUTCHours(parseInt(hh), parseInt(min), 0, 0);
+ 
+-  const isBST = now.getUTCMonth() > 2 && now.getUTCMonth() < 9;
+-  if (isBST) kickoffToday.setUTCHours(kickoffToday.getUTCHours() - 1);
++  if (isBST(now)) kickoffToday.setUTCHours(kickoffToday.getUTCHours() - 1);
+ 
+   const minutesFromKickoff = (now - kickoffToday) / 60000;
+   return minutesFromKickoff >= -90 && minutesFromKickoff <= maxMinutesAfter;
+diff --git a/uk-time.js b/uk-time.js
+index 3231fb985..1c8daea5c 100644
+--- a/uk-time.js
++++ b/uk-time.js
+@@ -1,10 +1,33 @@
++// Returns whether a given moment (default: now) falls within British Summer
++// Time. BST runs from 01:00 UTC on the last Sunday of March to 01:00 UTC on
++// the last Sunday of October.
++//
++// Previously this (and four other copies of the same check scattered across
++// division-scores.js, division-recap-engine.js, matchday-live.js and
++// x-posts.js) used a crude "April through September" month range, which is
++// wrong at both ends: it misses the back half of March (BST can start as
++// early as the 25th) and misses ALL of October (BST runs until as late as
++// the 31st). Confirmed live on 24 Oct 2026 — division-scores.js thought GMT
++// was already in effect, miscalculated kickoff times by an hour, and
++// decided the match hadn't started yet, so live scores stopped updating.
++function isBST(date = new Date()) {
++  const year = date.getUTCFullYear();
++
++  // Last Sunday of March, 01:00 UTC — clocks go forward.
++  const marchEnd = new Date(Date.UTC(year, 2, 31, 1, 0, 0));
++  marchEnd.setUTCDate(31 - marchEnd.getUTCDay());
++
++  // Last Sunday of October, 01:00 UTC — clocks go back.
++  const octEnd = new Date(Date.UTC(year, 9, 31, 1, 0, 0));
++  octEnd.setUTCDate(31 - octEnd.getUTCDay());
++
++  return date >= marchEnd && date < octEnd;
++}
++
+ // Returns the current date/time as if it were UK local time, accounting for BST/GMT.
+-// BST runs late March to late October (approximately) — this uses the same
+-// simple month-based heuristic already used elsewhere in the project.
+ function getUKNow() {
+   const now = new Date();
+-  const isBST = now.getUTCMonth() > 2 && now.getUTCMonth() < 9;
+-  const offsetHours = isBST ? 1 : 0;
++  const offsetHours = isBST(now) ? 1 : 0;
+   return new Date(now.getTime() + offsetHours * 60 * 60 * 1000);
+ }
+ 
+@@ -14,4 +37,4 @@ function getUKDateString(date = getUKNow()) {
+     String(date.getUTCDate()).padStart(2, '0');
+ }
+ 
+-module.exports = { getUKNow, getUKDateString };
+\ No newline at end of file
++module.exports = { getUKNow, getUKDateString, isBST };
+diff --git a/x-posts.js b/x-posts.js
+index 2ffcafdc5..83bfe14cf 100644
+--- a/x-posts.js
++++ b/x-posts.js
+@@ -1,6 +1,7 @@
+ const fs = require('fs');
+ const { getUserTweets } = require('./getxapi-client.js');
+ const { logCost } = require('./cost-tracker.js');
++const { isBST } = require('./uk-time.js');
+ 
+ const USERNAME = 'SandbachFC_1st';
+ const API_KEY = process.env.GETXAPI_KEY;
+@@ -21,8 +22,7 @@ function getTodayFixtureWindow() {
+     if (!isToday) return null;
+ 
+     const kickoffUTC = new Date(Date.UTC(2000 + parseInt(yy), parseInt(mm) - 1, parseInt(dd), parseInt(hh), parseInt(min)));
+-    const isBST = kickoffUTC.getUTCMonth() > 2 && kickoffUTC.getUTCMonth() < 9;
+-    if (isBST) kickoffUTC.setUTCHours(kickoffUTC.getUTCHours() - 1);
++    if (isBST(kickoffUTC)) kickoffUTC.setUTCHours(kickoffUTC.getUTCHours() - 1);
+ 
+     return {
+       start: new Date(kickoffUTC.getTime() - 30 * 60000),
