@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25T21:20:35.424Z",
+  "generatedAt": "2026-10-25T21:25:27.882Z",
   "fixtures": [
     {
       "date": "Tuesday 27 October 2026",
@@ -222,13 +222,6 @@
       "date": "Saturday 21 November 2026",
       "home": "Dawley Town",
       "away": "Foley Meir",
-      "kickoff": "15:00",
-      "postponed": false
-    },
-    {
-      "date": "Saturday 21 November 2026",
-      "home": "Eccleshall",
-      "away": "Telford Town",
       "kickoff": "15:00",
       "postponed": false
     },
