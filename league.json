@@ -1,5 +1,5 @@
 {
-  "scrapedAt": "2026-10-25T04:30:55.841Z",
+  "scrapedAt": "2026-10-25T05:31:39.492Z",
   "division": "First Division South",
   "standings": [
     {
@@ -29,7 +29,7 @@
       "goalDifference": "17",
       "points": "27",
       "clubUrl": "clubpage.php?id=936",
-      "form": "DWDLWW",
+      "form": "WDWDLW",
       "formIncludesCup": false
     },
     {
@@ -59,7 +59,7 @@
       "goalDifference": "15",
       "points": "26",
       "clubUrl": "clubpage.php?id=182",
-      "form": "DWDDWW",
+      "form": "DDWDDW",
       "formIncludesCup": false
     },
     {
@@ -149,7 +149,7 @@
       "goalDifference": "-5",
       "points": "17",
       "clubUrl": "clubpage.php?id=713",
-      "form": "WDLWDD",
+      "form": "WWDLWD",
       "formIncludesCup": false
     },
     {
@@ -164,7 +164,7 @@
       "goalDifference": "-2",
       "points": "16",
       "clubUrl": "clubpage.php?id=635",
-      "form": "WLLDWD",
+      "form": "DWLLDW",
       "formIncludesCup": false
     },
     {
@@ -179,7 +179,7 @@
       "goalDifference": "-5",
       "points": "15",
       "clubUrl": "clubpage.php?id=898",
-      "form": "LDLDWL",
+      "form": "WLDLDW",
       "formIncludesCup": false
     },
     {
@@ -209,7 +209,7 @@
       "goalDifference": "-2",
       "points": "14",
       "clubUrl": "clubpage.php?id=459",
-      "form": "DLDLWD",
+      "form": "DDLDLW",
       "formIncludesCup": false
     },
     {
@@ -224,7 +224,7 @@
       "goalDifference": "-9",
       "points": "14",
       "clubUrl": "clubpage.php?id=792",
-      "form": "LWLLLL",
+      "form": "DLWLLL",
       "formIncludesCup": false
     },
     {
@@ -239,7 +239,7 @@
       "goalDifference": "-11",
       "points": "14",
       "clubUrl": "clubpage.php?id=224",
-      "form": "DLDLLW",
+      "form": "LDLDLL",
       "formIncludesCup": false
     },
     {
@@ -299,7 +299,7 @@
       "goalDifference": "-28",
       "points": "6",
       "clubUrl": "clubpage.php?id=868",
-      "form": "LLDWLD",
+      "form": "LLLDWL",
       "formIncludesCup": false
     }
   ]
