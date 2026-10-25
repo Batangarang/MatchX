@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25T21:25:27.882Z",
+  "generatedAt": "2026-10-25T21:30:49.611Z",
   "fixtures": [
     {
       "date": "Tuesday 27 October 2026",
@@ -234,22 +234,8 @@
     },
     {
       "date": "Saturday 21 November 2026",
-      "home": "New Mills",
-      "away": "Wolverhampton Casuals",
-      "kickoff": "15:00",
-      "postponed": false
-    },
-    {
-      "date": "Saturday 21 November 2026",
       "home": "Sandbach United",
       "away": "Shawbury United",
-      "kickoff": "15:00",
-      "postponed": false
-    },
-    {
-      "date": "Saturday 21 November 2026",
-      "home": "Widnes Town",
-      "away": "Allscott Heath",
       "kickoff": "15:00",
       "postponed": false
     },
