@@ -1,11 +1,11 @@
 {
-  "scrapedAt": "2026-10-26T16:30:59.783Z",
+  "scrapedAt": "2026-10-26T17:30:56.718Z",
   "nextFixture": {
     "date": "Sat 31/10/26",
     "opposition": "Dawley Town",
     "opponentUrl": "clubpage.php?id=635",
     "homeAway": "A",
-    "kickoff": "15:00",
+    "kickoff": "14:00",
     "score": null,
     "scorers": null,
     "competitionNote": null
@@ -16,7 +16,7 @@
       "opposition": "Dawley Town",
       "opponentUrl": "clubpage.php?id=635",
       "homeAway": "A",
-      "kickoff": "15:00",
+      "kickoff": "14:00",
       "score": null,
       "scorers": null,
       "competitionNote": null
@@ -290,7 +290,7 @@
       "opposition": "Dawley Town",
       "opponentUrl": "clubpage.php?id=635",
       "homeAway": "A",
-      "kickoff": "15:00",
+      "kickoff": "14:00",
       "score": null,
       "scorers": null,
       "competitionNote": null
