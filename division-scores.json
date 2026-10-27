@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-10-27T21:25:28.948Z",
+  "generatedAt": "2026-10-27T21:35:29.558Z",
   "date": "2026-10-27",
   "isToday": true,
-  "postCount": 29,
-  "latestPostTimestamp": "2026-10-27T21:20:38.000Z",
+  "postCount": 30,
+  "latestPostTimestamp": "2026-10-27T21:30:09.000Z",
   "fixtures": [
     {
       "home": "Telford Town",
       "away": "Eccleshall",
       "kickoff": "19:45",
-      "score": "0-10",
-      "matchStage": "second_half",
+      "score": "0-11",
+      "matchStage": "full_time",
       "goals": [
         {
           "minute": 9,
@@ -25,7 +25,7 @@
         {
           "minute": 15,
           "team": "away",
-          "scorer": "Own goal"
+          "scorer": "Telford (own goal)"
         },
         {
           "minute": 21,
@@ -61,6 +61,11 @@
           "minute": 74,
           "team": "away",
           "scorer": "Nicky"
+        },
+        {
+          "minute": null,
+          "team": "away",
+          "scorer": "Mikey"
         }
       ],
       "yellowCards": [
@@ -79,8 +84,8 @@
       ],
       "redCards": [],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-27T21:25:28.948Z"
+      "lastUpdated": "2026-10-27T21:35:29.558Z"
     }
   ],
-  "ticker": "@EccleshallFC: 74' its Nicky again... Goal\n\n0-10\n\n💙🦅\n\n#EccleshallFC"
+  "ticker": "@EccleshallFC: Pentaly to Eccy, Mikey scores\n\n0-11\n\n💙🦅\n\n#EccleshallFC"
 }
