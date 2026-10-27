@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-10-27T20:45:35.456Z",
+  "generatedAt": "2026-10-27T21:01:00.808Z",
   "date": "2026-10-27",
   "isToday": true,
-  "postCount": 22,
-  "latestPostTimestamp": "2026-10-27T20:43:22.000Z",
+  "postCount": 23,
+  "latestPostTimestamp": "2026-10-27T20:51:17.000Z",
   "fixtures": [
     {
       "home": "Telford Town",
@@ -14,11 +14,6 @@
       "goals": [
         {
           "minute": 2,
-          "team": "away",
-          "scorer": null
-        },
-        {
-          "minute": 7,
           "team": "away",
           "scorer": null
         },
@@ -39,13 +34,8 @@
         },
         {
           "minute": 15,
-          "team": "away",
+          "team": "home",
           "scorer": null
-        },
-        {
-          "minute": 21,
-          "team": "away",
-          "scorer": "Nicky"
         },
         {
           "minute": 27,
@@ -75,8 +65,8 @@
       ],
       "redCards": [],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-27T20:45:35.456Z"
+      "lastUpdated": "2026-10-27T21:01:00.808Z"
     }
   ],
-  "ticker": "@EccleshallFC: HT here at Lionheart Security Services Stadium \n\n0-7\n\n💙🦅\n\n#EccleshallFC"
+  "ticker": "@EccleshallFC: 46' eccy subs Mikey and Will on - Phil and Charlie off\n\n0-7\n\n💙🦅\n\n#EccleshallFC"
 }
