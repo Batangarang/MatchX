@@ -1,31 +1,26 @@
 {
-  "generatedAt": "2026-10-27T21:11:00.835Z",
+  "generatedAt": "2026-10-27T21:25:28.948Z",
   "date": "2026-10-27",
   "isToday": true,
-  "postCount": 26,
-  "latestPostTimestamp": "2026-10-27T21:09:31.000Z",
+  "postCount": 29,
+  "latestPostTimestamp": "2026-10-27T21:20:38.000Z",
   "fixtures": [
     {
       "home": "Telford Town",
       "away": "Eccleshall",
       "kickoff": "19:45",
-      "score": "0-8",
+      "score": "0-10",
       "matchStage": "second_half",
       "goals": [
         {
-          "minute": 2,
+          "minute": 9,
           "team": "away",
           "scorer": "Phil"
         },
         {
-          "minute": 7,
+          "minute": 13,
           "team": "away",
-          "scorer": null
-        },
-        {
-          "minute": 9,
-          "team": "away",
-          "scorer": null
+          "scorer": "Danny"
         },
         {
           "minute": 15,
@@ -36,11 +31,6 @@
           "minute": 21,
           "team": "away",
           "scorer": "Nicky"
-        },
-        {
-          "minute": 24,
-          "team": "away",
-          "scorer": null
         },
         {
           "minute": 27,
@@ -61,6 +51,16 @@
           "minute": 57,
           "team": "away",
           "scorer": "Nicky"
+        },
+        {
+          "minute": 66,
+          "team": "away",
+          "scorer": "Nicky"
+        },
+        {
+          "minute": 74,
+          "team": "away",
+          "scorer": "Nicky"
         }
       ],
       "yellowCards": [
@@ -79,8 +79,8 @@
       ],
       "redCards": [],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-27T21:11:00.835Z"
+      "lastUpdated": "2026-10-27T21:25:28.948Z"
     }
   ],
-  "ticker": "@EccleshallFC: 63' yellow card to Telford \n\n0-8\n\n💙🦅\n\n#EccleshallFC"
+  "ticker": "@EccleshallFC: 74' its Nicky again... Goal\n\n0-10\n\n💙🦅\n\n#EccleshallFC"
 }
