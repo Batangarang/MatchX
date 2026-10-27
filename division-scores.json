@@ -1,21 +1,48 @@
 {
-  "generatedAt": "2026-10-27T19:45:37.932Z",
+  "generatedAt": "2026-10-27T20:01:06.228Z",
   "date": "2026-10-27",
   "isToday": true,
-  "postCount": 7,
-  "latestPostTimestamp": "2026-10-27T19:35:37.000Z",
+  "postCount": 12,
+  "latestPostTimestamp": "2026-10-27T20:00:06.000Z",
   "fixtures": [
     {
       "home": "Telford Town",
       "away": "Eccleshall",
       "kickoff": "19:45",
-      "score": null,
-      "matchStage": "scheduled",
-      "goals": [],
-      "yellowCards": [],
+      "score": "0-2",
+      "matchStage": "first_half",
+      "goals": [
+        {
+          "minute": 2,
+          "team": "away",
+          "scorer": null
+        },
+        {
+          "minute": 7,
+          "team": "away",
+          "scorer": null
+        },
+        {
+          "minute": 9,
+          "team": "away",
+          "scorer": "Phil"
+        },
+        {
+          "minute": 13,
+          "team": "away",
+          "scorer": "Danny"
+        }
+      ],
+      "yellowCards": [
+        {
+          "team": "home",
+          "player": null
+        }
+      ],
       "redCards": [],
-      "lastUpdated": "2026-10-27T19:30:49.880Z"
+      "scoreSource": "explicit",
+      "lastUpdated": "2026-10-27T20:01:06.228Z"
     }
   ],
-  "ticker": "@EccleshallFC: This evenings lineup. \n\n💙🦅\n\n#EccleshallFC https://t.co/CnNFyGAJal"
+  "ticker": "@TelfordTownFC: 7': Goal for Eccleshall\n#TELECC #Pitchero https://t.co/JoKrqH8LV0"
 }

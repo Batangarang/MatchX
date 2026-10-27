@@ -159,5 +159,13 @@
       "scoreSource": "explicit"
     }
   },
-  "2026-10-27": {}
+  "2026-10-27": {
+    "Telford Town|Eccleshall": {
+      "home": "Telford Town",
+      "away": "Eccleshall",
+      "score": "0-2",
+      "matchStage": "first_half",
+      "scoreSource": "explicit"
+    }
+  }
 }
