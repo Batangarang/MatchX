@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-27T22:55:31.268Z",
+  "generatedAt": "2026-10-27T23:01:08.472Z",
   "fixtures": [
     {
       "date": "Saturday 31 October 2026",
@@ -201,13 +201,6 @@
       "date": "Saturday 21 November 2026",
       "home": "AFC Bridgnorth",
       "away": "Wednesfield Community",
-      "kickoff": "15:00",
-      "postponed": false
-    },
-    {
-      "date": "Saturday 21 November 2026",
-      "home": "Alsager Town",
-      "away": "Barnton",
       "kickoff": "15:00",
       "postponed": false
     },
