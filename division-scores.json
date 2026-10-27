@@ -1,40 +1,45 @@
 {
-  "generatedAt": "2026-10-27T21:01:00.808Z",
+  "generatedAt": "2026-10-27T21:11:00.835Z",
   "date": "2026-10-27",
   "isToday": true,
-  "postCount": 23,
-  "latestPostTimestamp": "2026-10-27T20:51:17.000Z",
+  "postCount": 26,
+  "latestPostTimestamp": "2026-10-27T21:09:31.000Z",
   "fixtures": [
     {
       "home": "Telford Town",
       "away": "Eccleshall",
       "kickoff": "19:45",
-      "score": "0-7",
-      "matchStage": "half_time",
+      "score": "0-8",
+      "matchStage": "second_half",
       "goals": [
         {
           "minute": 2,
+          "team": "away",
+          "scorer": "Phil"
+        },
+        {
+          "minute": 7,
           "team": "away",
           "scorer": null
         },
         {
           "minute": 9,
           "team": "away",
-          "scorer": "Phil"
-        },
-        {
-          "minute": 13,
-          "team": "away",
-          "scorer": "Danny"
+          "scorer": null
         },
         {
           "minute": 15,
+          "team": "away",
+          "scorer": "Own goal"
+        },
+        {
+          "minute": 21,
           "team": "away",
           "scorer": "Nicky"
         },
         {
-          "minute": 15,
-          "team": "home",
+          "minute": 24,
+          "team": "away",
           "scorer": null
         },
         {
@@ -51,9 +56,18 @@
           "minute": 39,
           "team": "away",
           "scorer": "Dylan"
+        },
+        {
+          "minute": 57,
+          "team": "away",
+          "scorer": "Nicky"
         }
       ],
       "yellowCards": [
+        {
+          "team": "home",
+          "player": null
+        },
         {
           "team": "home",
           "player": null
@@ -65,8 +79,8 @@
       ],
       "redCards": [],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-27T21:01:00.808Z"
+      "lastUpdated": "2026-10-27T21:11:00.835Z"
     }
   ],
-  "ticker": "@EccleshallFC: 46' eccy subs Mikey and Will on - Phil and Charlie off\n\n0-7\n\n💙🦅\n\n#EccleshallFC"
+  "ticker": "@EccleshallFC: 63' yellow card to Telford \n\n0-8\n\n💙🦅\n\n#EccleshallFC"
 }
