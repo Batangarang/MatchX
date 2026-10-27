@@ -1,39 +1,11 @@
 {
-  "date": "2026-10-24",
+  "date": "2026-10-27",
   "fixtures": [
     {
-      "date": "Saturday 24 October 2026",
-      "home": "AFC Bridgnorth",
-      "away": "Sandbach United",
-      "kickoff": "15:00",
-      "postponed": false
-    },
-    {
-      "date": "Saturday 24 October 2026",
-      "home": "Brereton Social",
-      "away": "Dawley Town",
-      "kickoff": "15:00",
-      "postponed": false
-    },
-    {
-      "date": "Saturday 24 October 2026",
-      "home": "Cheadle Heath Nomads",
-      "away": "Market Drayton Town",
-      "kickoff": "15:00",
-      "postponed": false
-    },
-    {
-      "date": "Saturday 24 October 2026",
-      "home": "Foley Meir",
-      "away": "Widnes Town",
-      "kickoff": "15:00",
-      "postponed": false
-    },
-    {
-      "date": "Saturday 24 October 2026",
-      "home": "Shawbury United",
-      "away": "Stafford Town",
-      "kickoff": "15:00",
+      "date": "Tuesday 27 October 2026",
+      "home": "Telford Town",
+      "away": "Eccleshall",
+      "kickoff": "19:45",
       "postponed": false
     }
   ]

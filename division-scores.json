@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-10-26T23:55:31.533Z",
+  "generatedAt": "2026-10-27T00:01:03.987Z",
   "date": "2026-10-27",
-  "isToday": false,
+  "isToday": true,
   "fixtures": [
     {
       "home": "Telford Town",
@@ -9,6 +9,7 @@
       "kickoff": "19:45",
       "score": null,
       "goals": [],
+      "yellowCards": [],
       "redCards": []
     }
   ],
