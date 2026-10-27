@@ -1,59 +1,78 @@
 {
-  "generatedAt": "2026-10-27T20:15:35.515Z",
+  "generatedAt": "2026-10-27T20:30:52.982Z",
   "date": "2026-10-27",
   "isToday": true,
-  "postCount": 18,
-  "latestPostTimestamp": "2026-10-27T20:14:26.000Z",
+  "postCount": 21,
+  "latestPostTimestamp": "2026-10-27T20:25:26.000Z",
   "fixtures": [
     {
       "home": "Telford Town",
       "away": "Eccleshall",
       "kickoff": "19:45",
-      "score": "0-5",
+      "score": "0-7",
       "matchStage": "second_half",
       "goals": [
         {
-          "minute": 2,
+          "minute": "2",
           "team": "away",
-          "scorer": null
+          "scorer": "unknown"
         },
         {
-          "minute": 7,
+          "minute": "7",
           "team": "away",
-          "scorer": null
+          "scorer": "unknown"
         },
         {
-          "minute": 10,
+          "minute": "9",
           "team": "away",
-          "scorer": null
+          "scorer": "Phil"
         },
         {
-          "minute": 15,
-          "team": "home",
-          "scorer": null
-        },
-        {
-          "minute": 16,
+          "minute": "13",
           "team": "away",
-          "scorer": null
+          "scorer": "Danny"
         },
         {
-          "minute": 21,
+          "minute": "16",
+          "team": "away",
+          "scorer": "unknown"
+        },
+        {
+          "minute": "15",
+          "team": "away",
+          "scorer": "own goal"
+        },
+        {
+          "minute": "21",
           "team": "away",
           "scorer": "Nicky"
         },
         {
-          "minute": 24,
+          "minute": "24",
           "team": "away",
-          "scorer": null
+          "scorer": "unknown"
         },
         {
-          "minute": 27,
+          "minute": "27",
           "team": "away",
           "scorer": "Joe"
+        },
+        {
+          "minute": "35",
+          "team": "away",
+          "scorer": "Dylan"
+        },
+        {
+          "minute": "39",
+          "team": "away",
+          "scorer": "Dylan"
         }
       ],
       "yellowCards": [
+        {
+          "team": "home",
+          "player": null
+        },
         {
           "team": "home",
           "player": null
@@ -61,8 +80,8 @@
       ],
       "redCards": [],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-27T20:15:35.515Z"
+      "lastUpdated": "2026-10-27T20:30:52.982Z"
     }
   ],
-  "ticker": "@TelfordTownFC: 24': Goal for Eccleshall\n#TELECC #Pitchero https://t.co/VbVSnsL08c"
+  "ticker": "@EccleshallFC: 39' Brace for Dylan\n\n0-7\n\n💙🦅\n\n#EccleshallFC"
 }
