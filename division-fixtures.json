@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-27T14:20:42.002Z",
+  "generatedAt": "2026-10-27T14:25:30.723Z",
   "fixtures": [
     {
       "date": "Tuesday 27 October 2026",
@@ -447,6 +447,20 @@
       "home": "Widnes Town",
       "away": "Stafford Town",
       "kickoff": "15:00",
+      "postponed": false
+    },
+    {
+      "date": "Tuesday 15 December 2026",
+      "home": "Sandbach United",
+      "away": "Brereton Social",
+      "kickoff": "19:45",
+      "postponed": false
+    },
+    {
+      "date": "Tuesday 15 December 2026",
+      "home": "Widnes Town",
+      "away": "Wolverhampton Casuals",
+      "kickoff": "19:45",
       "postponed": false
     },
     {
