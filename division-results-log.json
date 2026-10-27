@@ -163,8 +163,8 @@
     "Telford Town|Eccleshall": {
       "home": "Telford Town",
       "away": "Eccleshall",
-      "score": "0-2",
-      "matchStage": "first_half",
+      "score": "0-5",
+      "matchStage": "second_half",
       "scoreSource": "explicit"
     }
   }
