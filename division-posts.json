@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-27T15:01:27.397Z",
-  "sinceDate": "2026-10-20T15:01:00.353Z",
+  "generatedAt": "2026-10-27T17:31:09.731Z",
+  "sinceDate": "2026-10-20T17:30:48.047Z",
   "clubs": [
     {
       "name": "Sandbach United",
@@ -104,6 +104,11 @@
       "name": "Eccleshall",
       "handle": "EccleshallFC",
       "posts": [
+        {
+          "text": "GAME ON !",
+          "createdAt": "2026-10-27T15:50:50.000Z",
+          "images": []
+        },
         {
           "text": "🚨MATCHDAY🚨\n\nWe return to league action tonight as we face Telford Town. \n\n🏟️ | Lionheart Security Services Stadium, TF2 6BQ, \n⏱️ | 7:45pm, \n💷 | £6 (Adults), £4 (Concessions), £2 (U16s),\n📲 | Live updates on X (formally known as Twitter). \n\n‼️Pitch inspection expected this afternoon.‼️\n\nWho will be joining us in TF2? \n\n💙🦅\n\n#EccleshallFC",
           "createdAt": "2026-10-27T08:52:57.000Z",
@@ -749,13 +754,6 @@
           "images": [
             "https://pbs.twimg.com/media/HVF-0sqWgAAQsJD.jpg"
           ]
-        },
-        {
-          "text": "📰 Match day Programme! 📰\n\nToday’s edition of the Town Times is now live! \n\nFollow the link below or scan the QR codes round the groud.\n\nhttps://drive.google.com/file/d/18gyGHTPXyHtpUQrly5WaTVQ3XcVOAUMX/view?usp=sharing https://t.co/Bhkf2QijJO",
-          "createdAt": "2026-10-20T17:24:27.000Z",
-          "images": [
-            "https://pbs.twimg.com/media/HVFysQ2XYAAesLP.jpg"
-          ]
         }
       ]
     },
@@ -763,6 +761,13 @@
       "name": "Telford Town",
       "handle": "TelfordTownFC",
       "posts": [
+        {
+          "text": "Following a pitch inspection this afternoon this evenings game with Eccleshall is ON.\n\nWe look forward to welcoming you all to the Lionheart Security Services Stadium https://t.co/ueCHe6BSSj",
+          "createdAt": "2026-10-27T15:46:31.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HVpfadnXUAA33So.jpg"
+          ]
+        },
         {
           "text": "TELFORD TOWN FC ANNOUNCE NEW FIRST-TEAM MANAGEMENT TEAM\nhttps://www.telfordtownfc.co.uk/news/telford-town-fc-announce-new-first-team-management-3005463.html https://t.co/K7yvlzzJYY",
           "createdAt": "2026-10-27T12:57:59.000Z",
@@ -904,6 +909,13 @@
       "name": "Wednesfield Community",
       "handle": "WednesfieldCFC",
       "posts": [
+        {
+          "text": "🔴🔴🔴 NEW SIGNING! ⚫️⚫️⚫️\n\nWe are delighted to welcome Charlie Swingwood to Wednesfield Community FC following his transfer from Telford Town FC ✍️\n\nCharlie has put pen to paper and joins as part of our ongoing development and growth as a club ⚽️ https://t.co/pRJI4Krpq9",
+          "createdAt": "2026-10-27T16:37:24.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HVprDr8XkAIEkl8.jpg"
+          ]
+        },
         {
           "text": "https://t.co/yrK8k96yDg",
           "createdAt": "2026-10-24T13:48:20.000Z",
@@ -1416,6 +1428,13 @@
       "handle": "AFCBridgnorth",
       "posts": [
         {
+          "text": "The Road to Wembley!!\nAFC Bridgnorth take on Desborough Town at the Crown Meadow - Make it a Halloween to remember https://t.co/UlIAzs2Muv",
+          "createdAt": "2026-10-27T17:15:07.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HVpzsIEXUAATmpK.jpg"
+          ]
+        },
+        {
           "text": "Tukka makes it 2-1 to Bridgnorth",
           "createdAt": "2026-10-24T15:43:00.000Z",
           "images": []
@@ -1507,6 +1526,13 @@
       "name": "Cheadle Heath Nomads",
       "handle": "CheadleNomads",
       "posts": [
+        {
+          "text": "MATCH DAY\n\nWE’RE GOOD TO GO! ✅\n\nFollowing a pitch inspection, we’re all set for this evening as we welcome @OfficialSGFC to the Ideal Building Systems Stadium under the lights in the Cheshire Senior Cup! \n\n🕒 19:45 PM KO\n🆚 @OfficialSGFC \n🏆 Cheshire Senior Cup\n📍 Ideal Building Systems Stadium, SK8 2ET\n🎟️ Adults £6 | Concessions £3\n\n#Wearenomads | @nwcfl | @NWCFLScores",
+          "createdAt": "2026-10-27T16:01:06.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HVpiv5HXwAAHMc2.jpg"
+          ]
+        },
         {
           "text": "🔜 NEXT UP\n\nSubject to passing the pitch inspection, we welcome our neighbours @OfficialSGFC to the Ideal Building Systems Stadium tomorrow night for a Cheshire Senior Cup clash! 🏆\n\n🕒 19:45 PM KO\n🆚 @OfficialSGFC \n🏆 Cheshire Senior Cup\n📍 Ideal Building Systems Stadium, SK8 2ET\n🎟️ Adults £6 | Concessions £3\n\n#Wearenomads | @nwcfl | @NWCFLScores",
           "createdAt": "2026-10-26T22:35:25.000Z",
@@ -1769,11 +1795,6 @@
           "images": [
             "https://pbs.twimg.com/media/HVKOhOBXAAAHB_8.jpg"
           ]
-        },
-        {
-          "text": "Keep your eyes peeled over the next few days for two MASSIVE pieces of news.\n\nHuge for the future of Dawley and the community",
-          "createdAt": "2026-10-20T16:48:53.000Z",
-          "images": []
         }
       ]
     },
@@ -1999,6 +2020,13 @@
       "name": "Wolverhampton Casuals",
       "handle": "WolvesCassies",
       "posts": [
+        {
+          "text": "Casuals are drawn at home in The Edward Case Cup and Away against Premier Division opposition in the Macron Cup\nhttps://www.wolverhamptoncasualsfc.co.uk/news/casuals-are-drawn-at-home-in-the-edward-case-cup-a-3005501.html https://t.co/6RTA0s6rSP",
+          "createdAt": "2026-10-27T17:29:09.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HVp251wXwAEHlUP.jpg"
+          ]
+        },
         {
           "text": "Yesterday’s pulsating Macron Cup tie at Brinsford. Stadium saw Casuals book a place in the Third Round Draw after scoring three goals in the last 10 minutes of the game to beat Crewe.\n\nCasuals Manager Dean Gill said following the game https://t.co/AMzPZ7hVKA",
           "createdAt": "2026-10-25T12:03:42.000Z",
