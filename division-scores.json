@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-10-27T21:35:29.558Z",
+  "generatedAt": "2026-10-27T21:45:42.036Z",
   "date": "2026-10-27",
   "isToday": true,
-  "postCount": 30,
-  "latestPostTimestamp": "2026-10-27T21:30:09.000Z",
+  "postCount": 32,
+  "latestPostTimestamp": "2026-10-27T21:38:55.000Z",
   "fixtures": [
     {
       "home": "Telford Town",
@@ -13,59 +13,59 @@
       "matchStage": "full_time",
       "goals": [
         {
-          "minute": 9,
+          "minute": 2,
           "team": "away",
-          "scorer": "Phil"
+          "scorer": "Phil McKerdy"
         },
         {
-          "minute": 13,
+          "minute": 7,
           "team": "away",
-          "scorer": "Danny"
+          "scorer": "Danny Glover"
         },
         {
           "minute": 15,
           "team": "away",
-          "scorer": "Telford (own goal)"
+          "scorer": "Own Goal"
         },
         {
           "minute": 21,
           "team": "away",
-          "scorer": "Nicky"
+          "scorer": "Nicky Parker"
         },
         {
           "minute": 27,
           "team": "away",
-          "scorer": "Joe"
+          "scorer": "Joe Drakeley"
         },
         {
           "minute": 35,
           "team": "away",
-          "scorer": "Dylan"
+          "scorer": "Dylan Bath"
         },
         {
           "minute": 39,
           "team": "away",
-          "scorer": "Dylan"
+          "scorer": "Dylan Bath"
         },
         {
           "minute": 57,
           "team": "away",
-          "scorer": "Nicky"
+          "scorer": "Nicky Parker"
         },
         {
           "minute": 66,
           "team": "away",
-          "scorer": "Nicky"
+          "scorer": "Nicky Parker"
         },
         {
           "minute": 74,
           "team": "away",
-          "scorer": "Nicky"
+          "scorer": "Nicky Parker"
         },
         {
           "minute": null,
           "team": "away",
-          "scorer": "Mikey"
+          "scorer": "Mikey Dempsey"
         }
       ],
       "yellowCards": [
@@ -84,8 +84,8 @@
       ],
       "redCards": [],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-27T21:35:29.558Z"
+      "lastUpdated": "2026-10-27T21:45:42.036Z"
     }
   ],
-  "ticker": "@EccleshallFC: Pentaly to Eccy, Mikey scores\n\n0-11\n\n💙🦅\n\n#EccleshallFC"
+  "ticker": "@EccleshallFC: Eleven goals, seven goal-scorers. Three points. \n\nOur goalscorers for this evening, Phil McKerdy, Danny Glover, Own Goal, Nicky Parker(X4), Joe Drakeley, Dylan Bath(X2) and Mikey Dempsey.\n💙🦅\n\n#EccleshallFC https://t.co/IUla2Jrzwb"
 }
