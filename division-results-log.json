@@ -164,7 +164,7 @@
       "home": "Telford Town",
       "away": "Eccleshall",
       "score": "0-7",
-      "matchStage": "second_half",
+      "matchStage": "half_time",
       "scoreSource": "explicit"
     }
   }

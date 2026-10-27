@@ -1,69 +1,64 @@
 {
-  "generatedAt": "2026-10-27T20:30:52.982Z",
+  "generatedAt": "2026-10-27T20:45:35.456Z",
   "date": "2026-10-27",
   "isToday": true,
-  "postCount": 21,
-  "latestPostTimestamp": "2026-10-27T20:25:26.000Z",
+  "postCount": 22,
+  "latestPostTimestamp": "2026-10-27T20:43:22.000Z",
   "fixtures": [
     {
       "home": "Telford Town",
       "away": "Eccleshall",
       "kickoff": "19:45",
       "score": "0-7",
-      "matchStage": "second_half",
+      "matchStage": "half_time",
       "goals": [
         {
-          "minute": "2",
+          "minute": 2,
           "team": "away",
-          "scorer": "unknown"
+          "scorer": null
         },
         {
-          "minute": "7",
+          "minute": 7,
           "team": "away",
-          "scorer": "unknown"
+          "scorer": null
         },
         {
-          "minute": "9",
+          "minute": 9,
           "team": "away",
           "scorer": "Phil"
         },
         {
-          "minute": "13",
+          "minute": 13,
           "team": "away",
           "scorer": "Danny"
         },
         {
-          "minute": "16",
-          "team": "away",
-          "scorer": "unknown"
-        },
-        {
-          "minute": "15",
-          "team": "away",
-          "scorer": "own goal"
-        },
-        {
-          "minute": "21",
+          "minute": 15,
           "team": "away",
           "scorer": "Nicky"
         },
         {
-          "minute": "24",
+          "minute": 15,
           "team": "away",
-          "scorer": "unknown"
+          "scorer": null
         },
         {
-          "minute": "27",
+          "minute": 21,
+          "team": "away",
+          "scorer": "Nicky"
+        },
+        {
+          "minute": 27,
           "team": "away",
           "scorer": "Joe"
         },
         {
-          "minute": "35",
+          "minute": 35,
           "team": "away",
           "scorer": "Dylan"
         },
         {
-          "minute": "39",
+          "minute": 39,
           "team": "away",
           "scorer": "Dylan"
         }
@@ -80,8 +75,8 @@
       ],
       "redCards": [],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-27T20:30:52.982Z"
+      "lastUpdated": "2026-10-27T20:45:35.456Z"
     }
   ],
-  "ticker": "@EccleshallFC: 39' Brace for Dylan\n\n0-7\n\n💙🦅\n\n#EccleshallFC"
+  "ticker": "@EccleshallFC: HT here at Lionheart Security Services Stadium \n\n0-7\n\n💙🦅\n\n#EccleshallFC"
 }
