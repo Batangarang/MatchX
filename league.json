@@ -1,5 +1,5 @@
 {
-  "scrapedAt": "2026-10-28T04:30:54.708Z",
+  "scrapedAt": "2026-10-28T05:30:55.506Z",
   "division": "First Division South",
   "standings": [
     {
@@ -64,6 +64,21 @@
     },
     {
       "position": 5,
+      "team": "Eccleshall",
+      "played": "12",
+      "won": "8",
+      "drawn": "1",
+      "lost": "3",
+      "for": "32",
+      "against": "14",
+      "goalDifference": "18",
+      "points": "25",
+      "clubUrl": "clubpage.php?id=30",
+      "form": "WDLWWW",
+      "formIncludesCup": false
+    },
+    {
+      "position": 6,
       "team": "Wolverhampton Casuals",
       "played": "11",
       "won": "8",
@@ -78,7 +93,7 @@
       "formIncludesCup": false
     },
     {
-      "position": 6,
+      "position": 7,
       "team": "Barnton",
       "played": "12",
       "won": "6",
@@ -90,21 +105,6 @@
       "points": "22",
       "clubUrl": "clubpage.php?id=266",
       "form": "DWWWWD",
-      "formIncludesCup": false
-    },
-    {
-      "position": 7,
-      "team": "Eccleshall",
-      "played": "11",
-      "won": "7",
-      "drawn": "1",
-      "lost": "3",
-      "for": "21",
-      "against": "14",
-      "goalDifference": "7",
-      "points": "22",
-      "clubUrl": "clubpage.php?id=30",
-      "form": "WDLWWW",
       "formIncludesCup": false
     },
     {
@@ -259,21 +259,6 @@
     },
     {
       "position": 18,
-      "team": "Telford Town",
-      "played": "12",
-      "won": "1",
-      "drawn": "4",
-      "lost": "7",
-      "for": "10",
-      "against": "23",
-      "goalDifference": "-13",
-      "points": "7",
-      "clubUrl": "clubpage.php?id=881",
-      "form": "LDLLLL",
-      "formIncludesCup": false
-    },
-    {
-      "position": 19,
       "team": "Alsager Town",
       "played": "13",
       "won": "2",
@@ -285,6 +270,21 @@
       "points": "7",
       "clubUrl": "clubpage.php?id=3",
       "form": "WLLLLL",
+      "formIncludesCup": false
+    },
+    {
+      "position": 19,
+      "team": "Telford Town",
+      "played": "13",
+      "won": "1",
+      "drawn": "4",
+      "lost": "8",
+      "for": "10",
+      "against": "34",
+      "goalDifference": "-24",
+      "points": "7",
+      "clubUrl": "clubpage.php?id=881",
+      "form": "LDLLLL",
       "formIncludesCup": false
     },
     {
