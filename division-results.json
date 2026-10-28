@@ -1,5 +1,5 @@
 {
-  "scrapedAt": "2026-10-27T20:31:33.978Z",
+  "scrapedAt": "2026-10-28T17:31:41.847Z",
   "clubs": {
     "AFC Bridgnorth": {
       "clubUrl": "clubpage.php?id=936",
@@ -16,6 +16,11 @@
       "form": "DDWDDW",
       "leagueGamesPlayed": 14
     },
+    "Eccleshall": {
+      "clubUrl": "clubpage.php?id=30",
+      "form": "WWDLWW",
+      "leagueGamesPlayed": 12
+    },
     "Wolverhampton Casuals": {
       "clubUrl": "clubpage.php?id=73",
       "form": "WWWDWL",
@@ -25,11 +30,6 @@
       "clubUrl": "clubpage.php?id=266",
       "form": "DWWWWD",
       "leagueGamesPlayed": 13
-    },
-    "Eccleshall": {
-      "clubUrl": "clubpage.php?id=30",
-      "form": "WDLWWW",
-      "leagueGamesPlayed": 11
     },
     "Allscott Heath": {
       "clubUrl": "clubpage.php?id=816",
@@ -81,14 +81,14 @@
       "form": "LWLLLW",
       "leagueGamesPlayed": 12
     },
-    "Telford Town": {
-      "clubUrl": "clubpage.php?id=881",
-      "form": "LDLLLL",
-      "leagueGamesPlayed": 12
-    },
     "Alsager Town": {
       "clubUrl": "clubpage.php?id=3",
       "form": "WLLLLL",
+      "leagueGamesPlayed": 13
+    },
+    "Telford Town": {
+      "clubUrl": "clubpage.php?id=881",
+      "form": "LLDLLL",
       "leagueGamesPlayed": 13
     },
     "Widnes Town": {
