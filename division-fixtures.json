@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-29T17:45:40.324Z",
+  "generatedAt": "2026-10-29T17:50:43.012Z",
   "fixtures": [
     {
       "date": "Saturday 31 October 2026",
@@ -251,6 +251,13 @@
       "home": "Widnes Town",
       "away": "Brereton Social",
       "kickoff": "15:00",
+      "postponed": false
+    },
+    {
+      "date": "Tuesday 24 November 2026",
+      "home": "Alsager Town",
+      "away": "Barnton",
+      "kickoff": "19:45",
       "postponed": false
     },
     {
