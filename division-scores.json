@@ -1,8 +1,16 @@
 {
-  "generatedAt": "2026-10-29T17:35:30.535Z",
+  "generatedAt": "2026-10-29T17:40:38.984Z",
   "date": "2026-10-31",
   "isToday": false,
   "fixtures": [
+    {
+      "home": "15:00 Widnes Town",
+      "away": "Alsager Town  The Marine Travel Arena",
+      "kickoff": null,
+      "score": null,
+      "goals": [],
+      "redCards": []
+    },
     {
       "home": "Dawley Town",
       "away": "Sandbach United",
@@ -61,8 +69,8 @@
     },
     {
       "home": "Widnes Town",
-      "away": "Alsager Town",
-      "kickoff": "15:00",
+      "away": "Alsager Town (15:00)",
+      "kickoff": null,
       "score": null,
       "goals": [],
       "redCards": []

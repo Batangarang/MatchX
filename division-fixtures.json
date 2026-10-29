@@ -1,6 +1,13 @@
 {
-  "generatedAt": "2026-10-29T17:35:30.484Z",
+  "generatedAt": "2026-10-29T17:40:38.915Z",
   "fixtures": [
+    {
+      "date": "Saturday 31 October 2026",
+      "home": "15:00 Widnes Town",
+      "away": "Alsager Town  The Marine Travel Arena",
+      "kickoff": null,
+      "postponed": true
+    },
     {
       "date": "Saturday 31 October 2026",
       "home": "Dawley Town",
@@ -53,9 +60,9 @@
     {
       "date": "Saturday 31 October 2026",
       "home": "Widnes Town",
-      "away": "Alsager Town",
-      "kickoff": "15:00",
-      "postponed": false
+      "away": "Alsager Town (15:00)",
+      "kickoff": null,
+      "postponed": true
     },
     {
       "date": "Saturday 31 October 2026",
@@ -206,6 +213,13 @@
     },
     {
       "date": "Saturday 21 November 2026",
+      "home": "Alsager Town",
+      "away": "New Mills",
+      "kickoff": "15:00",
+      "postponed": false
+    },
+    {
+      "date": "Saturday 21 November 2026",
       "home": "Crewe",
       "away": "Cheadle Heath Nomads",
       "kickoff": "15:00",
@@ -229,6 +243,13 @@
       "date": "Saturday 21 November 2026",
       "home": "Sandbach United",
       "away": "Shawbury United",
+      "kickoff": "15:00",
+      "postponed": false
+    },
+    {
+      "date": "Saturday 21 November 2026",
+      "home": "Widnes Town",
+      "away": "Brereton Social",
       "kickoff": "15:00",
       "postponed": false
     },
@@ -1081,6 +1102,13 @@
     },
     {
       "date": "Saturday 20 February 2027",
+      "home": "Widnes Town",
+      "away": "Alsager Town",
+      "kickoff": "15:00",
+      "postponed": false
+    },
+    {
+      "date": "Saturday 20 February 2027",
       "home": "Wolverhampton Casuals",
       "away": "Shawbury United",
       "kickoff": "15:00",
@@ -1160,13 +1188,6 @@
       "date": "Saturday 6 March 2027",
       "home": "AFC Bridgnorth",
       "away": "Widnes Town",
-      "kickoff": "15:00",
-      "postponed": false
-    },
-    {
-      "date": "Saturday 6 March 2027",
-      "home": "Alsager Town",
-      "away": "New Mills",
       "kickoff": "15:00",
       "postponed": false
     },
@@ -1566,13 +1587,6 @@
       "date": "Saturday 3 April 2027",
       "home": "Wednesfield Community",
       "away": "Alsager Town",
-      "kickoff": "15:00",
-      "postponed": false
-    },
-    {
-      "date": "Saturday 3 April 2027",
-      "home": "Widnes Town",
-      "away": "Brereton Social",
       "kickoff": "15:00",
       "postponed": false
     },
