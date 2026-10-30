@@ -1,5 +1,5 @@
 {
-  "scrapedAt": "2026-10-29T14:31:29.995Z",
+  "scrapedAt": "2026-10-30T11:31:28.817Z",
   "clubs": {
     "AFC Bridgnorth": {
       "clubUrl": "clubpage.php?id=936",
@@ -84,7 +84,7 @@
     "Alsager Town": {
       "clubUrl": "clubpage.php?id=3",
       "form": "WLLLLL",
-      "leagueGamesPlayed": 13
+      "leagueGamesPlayed": 14
     },
     "Telford Town": {
       "clubUrl": "clubpage.php?id=881",
@@ -94,7 +94,7 @@
     "Widnes Town": {
       "clubUrl": "clubpage.php?id=868",
       "form": "LLLDWL",
-      "leagueGamesPlayed": 13
+      "leagueGamesPlayed": 14
     }
   }
 }
