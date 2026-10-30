@@ -1,5 +1,5 @@
 {
-  "scrapedAt": "2026-10-30T19:50:24.446Z",
+  "scrapedAt": "2026-10-30T20:50:24.610Z",
   "username": "SandbachFC_1st",
   "posts": [
     {
@@ -7,6 +7,14 @@
       "createdAt": "2026-10-07T20:57:07.000Z",
       "images": [
         "https://pbs.twimg.com/media/HUDmlc4WgAAhBe7.jpg"
+      ],
+      "isMatchday": false
+    },
+    {
+      "text": "On Saturday we face a tough away test against @DawleyTownFC as we make our first ever trip to the theatre of Jockeys. Please not that the kick off has a revised time of 2pm. https://t.co/4XohpXjgF6",
+      "createdAt": "2026-10-30T20:36:13.000Z",
+      "images": [
+        "https://pbs.twimg.com/media/HV5-Q0lWoAAQIV7.png"
       ],
       "isMatchday": false
     },
@@ -58,14 +66,6 @@
       "text": "🔵🔵 v 🟢🟢\n\nAFC Bridgnorth v Sandbach United\n\n@AFCBridgnorth \n\nReaction needed, reaction got and it’s Kyle Foley who buries one into the bottom corner to equalise straight after half time, get in!!!!!’\n\n1 1",
       "createdAt": "2026-10-24T15:06:22.000Z",
       "images": [],
-      "isMatchday": true
-    },
-    {
-      "text": "46’ https://t.co/DqCjbb80Er",
-      "createdAt": "2026-10-24T15:05:44.000Z",
-      "images": [
-        "https://pbs.twimg.com/media/HVZ5TlUW0AA5LB7.jpg"
-      ],
       "isMatchday": true
     }
   ]
