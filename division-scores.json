@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-10-31T17:25:32.080Z",
+  "generatedAt": "2026-10-31T17:50:38.835Z",
   "date": "2026-10-31",
   "isToday": true,
-  "postCount": 190,
-  "latestPostTimestamp": "2026-10-31T17:13:34.000Z",
+  "postCount": 193,
+  "latestPostTimestamp": "2026-10-31T17:50:17.000Z",
   "fixtures": [
     {
       "home": "Widnes Town",
@@ -44,7 +44,7 @@
         {
           "minute": 25,
           "team": "home",
-          "scorer": null
+          "scorer": "Danny"
         },
         {
           "minute": 36,
@@ -75,7 +75,7 @@
       ],
       "redCards": [],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-31T17:25:32.080Z"
+      "lastUpdated": "2026-10-31T17:50:38.835Z"
     },
     {
       "home": "Foley Meir",
@@ -126,7 +126,7 @@
         {
           "minute": 22,
           "team": "home",
-          "scorer": "Captain Macca"
+          "scorer": "Macca"
         },
         {
           "minute": 34,
@@ -162,7 +162,7 @@
       ],
       "redCards": [],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-31T17:25:32.080Z"
+      "lastUpdated": "2026-10-31T17:50:38.835Z"
     },
     {
       "home": "Stafford Town",
@@ -215,19 +215,19 @@
           "scorer": "Kieran Cook"
         },
         {
-          "minute": 59,
-          "team": "home",
-          "scorer": "Callum Knowles"
-        },
-        {
           "minute": 79,
           "team": "home",
           "scorer": "Callum Knowles"
         },
         {
           "minute": 82,
-          "team": "home",
+          "team": "away",
           "scorer": null
+        },
+        {
+          "minute": 82,
+          "team": "home",
+          "scorer": "Callum Knowles"
         }
       ],
       "yellowCards": [
@@ -243,7 +243,7 @@
         }
       ],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-31T17:25:32.080Z"
+      "lastUpdated": "2026-10-31T17:50:38.835Z"
     },
     {
       "home": "Dawley Town",
@@ -276,7 +276,7 @@
       "yellowCards": [
         {
           "team": "home",
-          "player": null
+          "player": "Kane Lewis"
         },
         {
           "team": "away",
@@ -285,8 +285,8 @@
       ],
       "redCards": [],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-31T17:25:32.080Z"
+      "lastUpdated": "2026-10-31T17:50:38.835Z"
     }
   ],
-  "ticker": "@DawleyTownFC: We had Alan speak to Tom and Con after today’s amazing victory against Sandbach! Definitely worth a watch!!! Thank you everyone for your support ❤️\n\nhttps://youtu.be/V988y6T-Ij0?feature=shared https://t.co/g3t1xsuyu6"
+  "ticker": "@DawleyTownFC: WOW! 7 points out of a possible 9 in our last 3 and that wouldn’t have been possible without all your support 🐎\n\n#alljockeysarentwe https://t.co/Q5ocZWkIMu"
 }
