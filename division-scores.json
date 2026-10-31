@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-10-31T17:50:38.835Z",
+  "generatedAt": "2026-10-31T21:45:40.630Z",
   "date": "2026-10-31",
   "isToday": true,
-  "postCount": 193,
-  "latestPostTimestamp": "2026-10-31T17:50:17.000Z",
+  "postCount": 202,
+  "latestPostTimestamp": "2026-10-31T21:22:59.000Z",
   "fixtures": [
     {
       "home": "Widnes Town",
@@ -42,9 +42,9 @@
       "matchStage": "full_time",
       "goals": [
         {
-          "minute": 25,
+          "minute": 26,
           "team": "home",
-          "scorer": "Danny"
+          "scorer": "Danny Glovers"
         },
         {
           "minute": 36,
@@ -52,7 +52,7 @@
           "scorer": "Nicky Parker"
         },
         {
-          "minute": 38,
+          "minute": 39,
           "team": "home",
           "scorer": "Levi Hunter"
         },
@@ -75,7 +75,7 @@
       ],
       "redCards": [],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-31T17:50:38.835Z"
+      "lastUpdated": "2026-10-31T21:45:40.630Z"
     },
     {
       "home": "Foley Meir",
@@ -104,12 +104,13 @@
       "home": "Market Drayton Town",
       "away": "Crewe",
       "kickoff": "15:00",
-      "score": null,
-      "matchStage": "scheduled",
+      "score": "0-2",
+      "matchStage": "full_time",
       "goals": [],
       "yellowCards": [],
       "redCards": [],
-      "lastUpdated": "2026-10-31T11:01:01.804Z"
+      "scoreSource": "explicit",
+      "lastUpdated": "2026-10-31T21:45:40.630Z"
     },
     {
       "home": "New Mills",
@@ -134,6 +135,11 @@
           "scorer": "Akim Samms"
         },
         {
+          "minute": 44,
+          "team": "home",
+          "scorer": "Will Frankish"
+        },
+        {
           "minute": 56,
           "team": "away",
           "scorer": null
@@ -147,11 +153,6 @@
           "minute": 74,
           "team": "home",
           "scorer": "Lewis McGill"
-        },
-        {
-          "minute": 87,
-          "team": "home",
-          "scorer": "Glebs Klujevs"
         }
       ],
       "yellowCards": [
@@ -162,7 +163,7 @@
       ],
       "redCards": [],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-31T17:50:38.835Z"
+      "lastUpdated": "2026-10-31T21:45:40.630Z"
     },
     {
       "home": "Stafford Town",
@@ -215,19 +216,19 @@
           "scorer": "Kieran Cook"
         },
         {
+          "minute": 59,
+          "team": "home",
+          "scorer": "Callum Knowles"
+        },
+        {
           "minute": 79,
           "team": "home",
           "scorer": "Callum Knowles"
         },
         {
           "minute": 82,
-          "team": "away",
-          "scorer": null
-        },
-        {
-          "minute": 82,
           "team": "home",
-          "scorer": "Callum Knowles"
+          "scorer": null
         }
       ],
       "yellowCards": [
@@ -243,7 +244,7 @@
         }
       ],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-31T17:50:38.835Z"
+      "lastUpdated": "2026-10-31T21:45:40.630Z"
     },
     {
       "home": "Dawley Town",
@@ -277,16 +278,12 @@
         {
           "team": "home",
           "player": "Kane Lewis"
-        },
-        {
-          "team": "away",
-          "player": null
         }
       ],
       "redCards": [],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-31T17:50:38.835Z"
+      "lastUpdated": "2026-10-31T21:45:40.630Z"
     }
   ],
-  "ticker": "@DawleyTownFC: WOW! 7 points out of a possible 9 in our last 3 and that wouldn’t have been possible without all your support 🐎\n\n#alljockeysarentwe https://t.co/Q5ocZWkIMu"
+  "ticker": "@DawleyTownFC: More than just a football club, This is a family and a community who stick together and have each others backs! Thank you ❤️ https://t.co/mJX1eHwTC6"
 }
