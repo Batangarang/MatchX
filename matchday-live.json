@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-10-31T14:15:48.264Z",
+  "generatedAt": "2026-10-31T14:20:47.111Z",
   "fixtureDate": "2026-10-31",
   "kickoff": "14:00",
   "homeTeam": "Dawley Town",
   "awayTeam": "Sandbach United",
-  "postsUsed": 11,
-  "imagesAnalyzedThisRun": 1,
+  "postsUsed": 12,
+  "imagesAnalyzedThisRun": 0,
   "totalImagesAnalyzed": 7,
   "match": {
     "score": "1-0",
-    "scoreSource": "match_feed_stated",
+    "scoreSource": "confirmed_by_both_feeds",
     "scoreConfirmed": true,
     "feedScore": "1-0",
     "scoreDiscrepancy": null,
@@ -77,9 +77,23 @@
     ],
     "yellowCards": [],
     "redCards": [],
-    "substitutions": [],
+    "substitutions": [
+      {
+        "minute": 16,
+        "team": "away",
+        "playerOff": "Saul Shotton",
+        "playerOn": "Jack Finney"
+      }
+    ],
     "sinBins": [],
-    "injuries": [],
+    "injuries": [
+      {
+        "minute": 16,
+        "team": "away",
+        "player": "Saul Shotton",
+        "note": "Left field injured"
+      }
+    ],
     "addedTime": {
       "firstHalf": null,
       "secondHalf": null
@@ -97,46 +111,46 @@
     "roughXG": {
       "firstHalf": {
         "home": 1.2,
-        "away": 0.5,
-        "note": "Home scored via own goal from Powell cross; Sandbach had one chance that went wide early on"
+        "away": 0.3,
+        "note": "Dawley scored from a Powell cross; Sandbach had one early chance that went wide"
       },
       "secondHalf": {
         "home": 0,
         "away": 0,
-        "note": "No second-half data available"
+        "note": "No events reported in second half"
       },
       "extraTime": {
         "home": 0,
         "away": 0,
-        "note": "No extra time played"
+        "note": "Match did not go to extra time"
       },
       "total": {
         "home": 1.2,
-        "away": 0.5,
-        "note": "One real goal to home (own goal); Sandbach had an early chance wide"
+        "away": 0.3,
+        "note": "Dawley's goal came from a well-executed cross; limited data for full match"
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
     "matchControl": {
       "firstHalf": {
-        "home": 55,
-        "away": 45,
-        "note": "Home took the lead from a cross; Sandbach had one early chance but posts suggest home controlled after that"
+        "home": 60,
+        "away": 40,
+        "note": "Sandbach had early chance but Dawley took control and scored"
       },
       "secondHalf": {
         "home": 50,
         "away": 50,
-        "note": "No second-half data available"
+        "note": "No events reported; match still in progress at last update"
       },
       "extraTime": {
         "home": 50,
         "away": 50,
-        "note": "No extra time played"
+        "note": "Match did not go to extra time"
       },
       "total": {
         "home": 55,
         "away": 45,
-        "note": "Home appeared to have slight edge in early first half before posts end"
+        "note": "Limited data; Dawley ahead with goal and likely momentum"
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
