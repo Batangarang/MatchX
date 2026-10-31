@@ -1,5 +1,5 @@
 {
-  "scrapedAt": "2026-10-31T14:30:36.470Z",
+  "scrapedAt": "2026-10-31T14:35:18.198Z",
   "username": "SandbachFC_1st",
   "posts": [
     {
@@ -9,6 +9,12 @@
         "https://pbs.twimg.com/media/HUDmlc4WgAAhBe7.jpg"
       ],
       "isMatchday": false
+    },
+    {
+      "text": "🔴🔵 v 🟡🟡\n\nDawley Town v Sandbach United\n\n@DawleyTownFC \n\nJake Pollard replaces Harry Cain who has gone off injured 🤕 \n\n1 0",
+      "createdAt": "2026-10-31T14:35:15.000Z",
+      "images": [],
+      "isMatchday": true
     },
     {
       "text": "🔴🔵 v 🟡🟡\n\nDawley Town v Sandbach United\n\n@DawleyTownFC \n\nSaul Shotton leaves the field injured and is replaced by Jack Finney\n\n1 0",
@@ -62,12 +68,6 @@
       "images": [
         "https://pbs.twimg.com/media/HVaEVk5XEAARBVa.jpg"
       ],
-      "isMatchday": true
-    },
-    {
-      "text": "🔵🔵 v 🟢🟢\n\nAFC Bridgnorth v Sandbach United\n\n@AFCBridgnorth \n\nBavington replaces Vernon \n\n2 1",
-      "createdAt": "2026-10-24T15:47:13.000Z",
-      "images": [],
       "isMatchday": true
     }
   ]
