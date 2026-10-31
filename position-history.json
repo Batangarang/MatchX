@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-24T16:30:54.134Z",
+  "generatedAt": "2026-10-31T17:30:49.682Z",
   "history": [
     {
       "gamesPlayed": 1,
@@ -168,6 +168,18 @@
       "cumGoalsFor": 37,
       "cumGoalsAgainst": 19,
       "cumGoalDifference": 18
+    },
+    {
+      "gamesPlayed": 15,
+      "date": "Sat 31/10/26",
+      "opponent": "Dawley Town",
+      "position": 1,
+      "points": 31,
+      "gameGoalsFor": 3,
+      "gameGoalsAgainst": 1,
+      "cumGoalsFor": 38,
+      "cumGoalsAgainst": 22,
+      "cumGoalDifference": 16
     }
   ]
 }
