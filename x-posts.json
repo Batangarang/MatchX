@@ -1,5 +1,5 @@
 {
-  "scrapedAt": "2026-10-31T15:20:24.520Z",
+  "scrapedAt": "2026-10-31T15:25:21.185Z",
   "username": "SandbachFC_1st",
   "posts": [
     {
@@ -9,6 +9,12 @@
         "https://pbs.twimg.com/media/HUDmlc4WgAAhBe7.jpg"
       ],
       "isMatchday": false
+    },
+    {
+      "text": "🔴🔵 v 🟡🟡\n\nDawley Town v Sandbach United\n\n@DawleyTownFC \n\nHatton with a header from a Nolan corner but it clears the bar\n\n3 0",
+      "createdAt": "2026-10-31T15:22:26.000Z",
+      "images": [],
+      "isMatchday": true
     },
     {
       "text": "🔴🔵 v 🟡🟡\n\nDawley Town v Sandbach United\n\n@DawleyTownFC \n\nBirchall replaced by Cope\n\n3 0",
@@ -57,12 +63,6 @@
     {
       "text": "🔴🔵 v 🟡🟡\n\nDawley Town v Sandbach United\n\n@DawleyTownFC \n\nSaul Shotton leaves the field injured and is replaced by Jack Finney\n\n1 0",
       "createdAt": "2026-10-31T14:16:21.000Z",
-      "images": [],
-      "isMatchday": true
-    },
-    {
-      "text": "🔴🔵 v 🟡🟡\n\nDawley Town v Sandbach United\n\n@DawleyTownFC \n\nCross in from the Dawley left is finished at the far post and the hosts take the lead.\n\n1 0",
-      "createdAt": "2026-10-31T14:13:00.000Z",
       "images": [],
       "isMatchday": true
     }
