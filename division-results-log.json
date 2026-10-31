@@ -200,22 +200,22 @@
     "Eccleshall|Shawbury United": {
       "home": "Eccleshall",
       "away": "Shawbury United",
-      "score": "3-0",
+      "score": "5-0",
       "matchStage": "full_time",
       "scoreSource": "explicit"
     },
     "Wolverhampton Casuals|Allscott Heath": {
       "home": "Wolverhampton Casuals",
       "away": "Allscott Heath",
-      "score": "1-0",
-      "matchStage": "half_time",
+      "score": "4-0",
+      "matchStage": "full_time",
       "scoreSource": "explicit"
     },
     "Cheadle Heath Nomads|Brereton Social": {
       "home": "Cheadle Heath Nomads",
       "away": "Brereton Social",
-      "score": "1-0",
-      "matchStage": "half_time",
+      "score": "1-1",
+      "matchStage": "full_time",
       "scoreSource": "explicit"
     }
   }

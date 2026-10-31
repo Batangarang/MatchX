@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-10-31T16:35:31.604Z",
+  "generatedAt": "2026-10-31T17:10:40.958Z",
   "date": "2026-10-31",
   "isToday": true,
-  "postCount": 159,
-  "latestPostTimestamp": "2026-10-31T16:33:56.000Z",
+  "postCount": 189,
+  "latestPostTimestamp": "2026-10-31T17:03:41.000Z",
   "fixtures": [
     {
       "home": "Widnes Town",
@@ -20,52 +20,62 @@
       "home": "Cheadle Heath Nomads",
       "away": "Brereton Social",
       "kickoff": "15:00",
-      "score": "1-0",
-      "matchStage": "half_time",
+      "score": "1-1",
+      "matchStage": "full_time",
       "goals": [
         {
           "minute": null,
           "team": "home",
-          "scorer": "Flem (captain)"
+          "scorer": "Captain Flem"
+        },
+        {
+          "minute": null,
+          "team": "away",
+          "scorer": null
         }
       ],
       "yellowCards": [],
       "redCards": [],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-31T16:10:44.630Z"
+      "lastUpdated": "2026-10-31T17:10:40.958Z"
     },
     {
       "home": "Eccleshall",
       "away": "Shawbury United",
       "kickoff": "15:00",
-      "score": "3-0",
+      "score": "5-0",
       "matchStage": "full_time",
       "goals": [
         {
-          "minute": 26,
+          "minute": 25,
           "team": "home",
-          "scorer": "Danny"
+          "scorer": null
         },
         {
-          "minute": 35,
+          "minute": 36,
           "team": "home",
-          "scorer": "Parker"
+          "scorer": "Nicky Parker"
         },
         {
-          "minute": 39,
+          "minute": 38,
           "team": "home",
           "scorer": "Levi Hunter"
-        }
-      ],
-      "yellowCards": [
+        },
         {
-          "team": "away",
-          "player": null
+          "minute": 83,
+          "team": "home",
+          "scorer": "Charlie Padania"
+        },
+        {
+          "minute": 88,
+          "team": "home",
+          "scorer": "Charlie Padania"
         }
       ],
+      "yellowCards": [],
       "redCards": [],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-31T16:35:31.604Z"
+      "lastUpdated": "2026-10-31T17:10:40.958Z"
     },
     {
       "home": "Foley Meir",
@@ -116,12 +126,17 @@
         {
           "minute": 22,
           "team": "home",
-          "scorer": "Macca"
+          "scorer": "Captain Macca"
         },
         {
           "minute": 34,
           "team": "home",
           "scorer": "Akim Samms"
+        },
+        {
+          "minute": 44,
+          "team": "home",
+          "scorer": "Will Frankish"
         },
         {
           "minute": 56,
@@ -137,17 +152,17 @@
           "minute": 74,
           "team": "home",
           "scorer": "Lewis McGill"
-        }
-      ],
-      "yellowCards": [
+        },
         {
-          "team": "away",
-          "player": null
+          "minute": 87,
+          "team": "home",
+          "scorer": "Glebs Klujevs"
         }
       ],
+      "yellowCards": [],
       "redCards": [],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-31T16:35:31.604Z"
+      "lastUpdated": "2026-10-31T17:10:40.958Z"
     },
     {
       "home": "Stafford Town",
@@ -172,7 +187,7 @@
           "scorer": "Brenden Parker"
         },
         {
-          "minute": 70,
+          "minute": 71,
           "team": "away",
           "scorer": "Logan Whittaker"
         }
@@ -185,19 +200,34 @@
       ],
       "redCards": [],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-31T16:35:31.604Z"
+      "lastUpdated": "2026-10-31T17:10:40.958Z"
     },
     {
       "home": "Wolverhampton Casuals",
       "away": "Allscott Heath",
       "kickoff": "15:00",
-      "score": "1-0",
-      "matchStage": "half_time",
+      "score": "4-0",
+      "matchStage": "full_time",
       "goals": [
         {
           "minute": 19,
           "team": "home",
           "scorer": "Kieran Cook"
+        },
+        {
+          "minute": 59,
+          "team": "home",
+          "scorer": "Callum Knowles"
+        },
+        {
+          "minute": 79,
+          "team": "home",
+          "scorer": "Callum Knowles"
+        },
+        {
+          "minute": 82,
+          "team": "home",
+          "scorer": "Own Goal"
         }
       ],
       "yellowCards": [
@@ -206,9 +236,14 @@
           "player": "Declan Hutchings"
         }
       ],
-      "redCards": [],
+      "redCards": [
+        {
+          "team": "away",
+          "player": "Josh Taylor"
+        }
+      ],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-31T16:35:31.604Z"
+      "lastUpdated": "2026-10-31T17:10:40.958Z"
     },
     {
       "home": "Dawley Town",
@@ -220,7 +255,7 @@
         {
           "minute": 11,
           "team": "home",
-          "scorer": null
+          "scorer": "Own Goal"
         },
         {
           "minute": 45,
@@ -235,19 +270,19 @@
         {
           "minute": 76,
           "team": "away",
-          "scorer": null
+          "scorer": "Hatton"
         }
       ],
       "yellowCards": [
         {
           "team": "home",
-          "player": null
+          "player": "Kane Lewis"
         }
       ],
       "redCards": [],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-31T16:35:31.604Z"
+      "lastUpdated": "2026-10-31T17:10:40.958Z"
     }
   ],
-  "ticker": "@StaffordTown1st: 75 - Sub for Town\n\nTom Duffy replaces Brenden Parker \n\n🔴 3-1 🟣"
+  "ticker": "@AllscottHeathFC: 4-0 loss on the road against @WolvCassies \n\nScore line generous, Allscott just not at the races today 3 sloppy goals conceded with the Wolves keeper having a superb game keeping a clean sheet."
 }
