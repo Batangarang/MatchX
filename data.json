@@ -1,26 +1,16 @@
 {
-  "scrapedAt": "2026-10-31T15:30:57.621Z",
+  "scrapedAt": "2026-10-31T16:30:46.613Z",
   "nextFixture": {
-    "date": "Sat 31/10/26",
-    "opposition": "Dawley Town",
-    "opponentUrl": "clubpage.php?id=635",
+    "date": "Sat 07/11/26",
+    "opposition": "Telford Town",
+    "opponentUrl": "clubpage.php?id=881",
     "homeAway": "A",
-    "kickoff": "14:00",
+    "kickoff": "15:00",
     "score": null,
     "scorers": null,
     "competitionNote": null
   },
   "nextFixtures": [
-    {
-      "date": "Sat 31/10/26",
-      "opposition": "Dawley Town",
-      "opponentUrl": "clubpage.php?id=635",
-      "homeAway": "A",
-      "kickoff": "14:00",
-      "score": null,
-      "scorers": null,
-      "competitionNote": null
-    },
     {
       "date": "Sat 07/11/26",
       "opposition": "Telford Town",
@@ -60,19 +50,39 @@
       "score": null,
       "scorers": null,
       "competitionNote": null
+    },
+    {
+      "date": "Sat 12/12/26",
+      "opposition": "Barnton",
+      "opponentUrl": "clubpage.php?id=266",
+      "homeAway": "H",
+      "kickoff": "15:00",
+      "score": null,
+      "scorers": null,
+      "competitionNote": null
     }
   ],
   "lastResult": {
-    "date": "Sat 24/10/26",
-    "opposition": "AFC Bridgnorth",
-    "opponentUrl": "clubpage.php?id=936",
+    "date": "Sat 31/10/26",
+    "opposition": "Dawley Town",
+    "opponentUrl": "clubpage.php?id=635",
     "homeAway": "A",
-    "kickoff": "15:00",
-    "score": "L 1-2",
-    "scorers": "Kyle Foley (46)",
+    "kickoff": "14:00",
+    "score": "L 1-3",
+    "scorers": "Robbie Hatton (75p)",
     "competitionNote": null
   },
   "lastResults": [
+    {
+      "date": "Sat 31/10/26",
+      "opposition": "Dawley Town",
+      "opponentUrl": "clubpage.php?id=635",
+      "homeAway": "A",
+      "kickoff": "14:00",
+      "score": "L 1-3",
+      "scorers": "Robbie Hatton (75p)",
+      "competitionNote": null
+    },
     {
       "date": "Sat 24/10/26",
       "opposition": "AFC Bridgnorth",
@@ -92,16 +102,6 @@
       "score": "W 1-0",
       "scorers": "Matthew Birchall (84)",
       "competitionNote": null
-    },
-    {
-      "date": "Tue 13/10/26",
-      "opposition": "Stockport County",
-      "opponentUrl": "lineups.php?id=23397",
-      "homeAway": "H",
-      "kickoff": "19:45",
-      "score": "L 1-3",
-      "scorers": "Jake Pollard (14)",
-      "competitionNote": "Cheshire Senior Cup 1"
     }
   ],
   "allFixtures": [
@@ -291,8 +291,8 @@
       "opponentUrl": "clubpage.php?id=635",
       "homeAway": "A",
       "kickoff": "14:00",
-      "score": null,
-      "scorers": null,
+      "score": "L 1-3",
+      "scorers": "Robbie Hatton (75p)",
       "competitionNote": null
     },
     {
