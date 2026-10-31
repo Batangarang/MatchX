@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-10-31T16:10:44.630Z",
+  "generatedAt": "2026-10-31T16:25:29.267Z",
   "date": "2026-10-31",
   "isToday": true,
-  "postCount": 131,
-  "latestPostTimestamp": "2026-10-31T16:10:23.000Z",
+  "postCount": 147,
+  "latestPostTimestamp": "2026-10-31T16:24:59.000Z",
   "fixtures": [
     {
       "home": "Widnes Town",
@@ -42,25 +42,35 @@
       "matchStage": "full_time",
       "goals": [
         {
-          "minute": "26",
+          "minute": "25",
           "team": "home",
           "scorer": "Danny"
         },
         {
-          "minute": "36",
+          "minute": "35",
           "team": "home",
           "scorer": "Nicky"
         },
         {
-          "minute": "39",
+          "minute": "38",
           "team": "home",
           "scorer": "Levi Hunter"
+        },
+        {
+          "minute": "68",
+          "team": "home",
+          "scorer": "Care"
         }
       ],
-      "yellowCards": [],
+      "yellowCards": [
+        {
+          "team": "away",
+          "player": null
+        }
+      ],
       "redCards": [],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-31T16:10:44.630Z"
+      "lastUpdated": "2026-10-31T16:25:29.267Z"
     },
     {
       "home": "Foley Meir",
@@ -100,8 +110,8 @@
       "home": "New Mills",
       "away": "Wednesfield Community",
       "kickoff": "15:00",
-      "score": "4-0",
-      "matchStage": "half_time",
+      "score": "4-2",
+      "matchStage": "second_half",
       "goals": [
         {
           "minute": "19",
@@ -111,7 +121,7 @@
         {
           "minute": "22",
           "team": "home",
-          "scorer": "Macca (captain)"
+          "scorer": "Macca"
         },
         {
           "minute": "34",
@@ -121,7 +131,17 @@
         {
           "minute": "44",
           "team": "home",
-          "scorer": "Will Frankishtein"
+          "scorer": "Will Frankish"
+        },
+        {
+          "minute": "56",
+          "team": "away",
+          "scorer": null
+        },
+        {
+          "minute": "63",
+          "team": "away",
+          "scorer": null
         }
       ],
       "yellowCards": [
@@ -132,7 +152,7 @@
       ],
       "redCards": [],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-31T16:10:44.630Z"
+      "lastUpdated": "2026-10-31T16:25:29.267Z"
     },
     {
       "home": "Stafford Town",
@@ -144,7 +164,7 @@
         {
           "minute": "18",
           "team": "home",
-          "scorer": "Callum Parker"
+          "scorer": "Callum"
         },
         {
           "minute": "21",
@@ -165,7 +185,7 @@
       ],
       "redCards": [],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-31T16:10:44.630Z"
+      "lastUpdated": "2026-10-31T16:25:29.267Z"
     },
     {
       "home": "Wolverhampton Casuals",
@@ -200,7 +220,7 @@
         {
           "minute": "11",
           "team": "home",
-          "scorer": "Sandbach defender (own goal)"
+          "scorer": "own goal"
         },
         {
           "minute": "45",
@@ -215,7 +235,7 @@
         {
           "minute": "76",
           "team": "away",
-          "scorer": "Hatton (penalty)"
+          "scorer": "penalty"
         }
       ],
       "yellowCards": [
@@ -225,17 +245,13 @@
         },
         {
           "team": "home",
-          "player": "Dawley #2"
-        },
-        {
-          "team": "away",
-          "player": "Dawley keeper"
+          "player": null
         }
       ],
       "redCards": [],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-31T16:10:44.630Z"
+      "lastUpdated": "2026-10-31T16:25:29.267Z"
     }
   ],
-  "ticker": "@DawleyTownFC: A special Win for a very special person! ❤️ https://t.co/mdiGN8ITaM"
+  "ticker": "@shawburyutd: 68’ Care \n\n🔵🔵3-0⚪️⚫️ https://t.co/LKJGKUPrm1"
 }
