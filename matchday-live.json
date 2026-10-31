@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-10-31T13:10:47.455Z",
+  "generatedAt": "2026-10-31T13:15:46.857Z",
   "fixtureDate": "2026-10-31",
   "kickoff": "14:00",
   "homeTeam": "Dawley Town",
   "awayTeam": "Sandbach United",
-  "postsUsed": 5,
+  "postsUsed": 6,
   "imagesAnalyzedThisRun": 1,
-  "totalImagesAnalyzed": 4,
+  "totalImagesAnalyzed": 5,
   "match": {
     "score": null,
     "scoreSource": "none",
@@ -20,8 +20,26 @@
     "matchStage": "scheduled",
     "lineups": {
       "home": {
-        "players": [],
-        "substitutes": [],
+        "players": [
+          "1. R. Asson",
+          "2. A. Humphreys",
+          "3. J. Bennett-Tindall (C)",
+          "4. J. Fishman",
+          "13. K. Lewis",
+          "16. K. Buckley",
+          "7. E. Bagry",
+          "10. J. Hodnett",
+          "6. A. Powell",
+          "11. R. Jones",
+          "9. M. Taylor"
+        ],
+        "substitutes": [
+          "J. Simcox",
+          "D. Beddows",
+          "J. Jones",
+          "J. Cuff",
+          "C. Patterson"
+        ],
         "manager": null,
         "officials": []
       },
@@ -74,22 +92,22 @@
       "firstHalf": {
         "home": 0,
         "away": 0,
-        "note": "No match commentary available yet"
+        "note": "Match scheduled for 2pm; no in-match activity reported in these posts."
       },
       "secondHalf": {
         "home": 0,
         "away": 0,
-        "note": "No match commentary available yet"
+        "note": "No in-match activity reported."
       },
       "extraTime": {
         "home": 0,
         "away": 0,
-        "note": "Not applicable"
+        "note": "No extra time played."
       },
       "total": {
         "home": 0,
         "away": 0,
-        "note": "No match commentary available yet"
+        "note": "No match data available; posts are pre-match only."
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
@@ -97,22 +115,22 @@
       "firstHalf": {
         "home": 50,
         "away": 50,
-        "note": "No match data available"
+        "note": "No match data available."
       },
       "secondHalf": {
         "home": 50,
         "away": 50,
-        "note": "No match data available"
+        "note": "No match data available."
       },
       "extraTime": {
         "home": 50,
         "away": 50,
-        "note": "Not applicable"
+        "note": "No extra time played."
       },
       "total": {
         "home": 50,
         "away": 50,
-        "note": "No match data available"
+        "note": "Posts are pre-match only; no in-match commentary available."
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
