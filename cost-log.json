@@ -13131,13 +13131,13 @@
       "aiCostGBP": 0
     },
     {
-      "script": "x-posts",
-      "timestamp": "2026-10-31T13:35:27.338Z",
-      "getxapiCalls": 1,
+      "script": "matchday-live",
+      "timestamp": "2026-10-31T13:35:31.832Z",
+      "getxapiCalls": 2,
       "claudeCalls": 0,
       "inputTokens": 0,
       "outputTokens": 0,
-      "xCostGBP": 0.0008,
+      "xCostGBP": 0.0015,
       "aiCostGBP": 0
     }
   ]
