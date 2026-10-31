@@ -1,25 +1,19 @@
 {
-  "generatedAt": "2026-10-31T15:45:51.153Z",
+  "generatedAt": "2026-10-31T15:50:56.031Z",
   "fixtureDate": "2026-10-31",
   "kickoff": "14:00",
   "homeTeam": "Dawley Town",
   "awayTeam": "Sandbach United",
-  "postsUsed": 36,
-  "imagesAnalyzedThisRun": 0,
-  "totalImagesAnalyzed": 13,
+  "postsUsed": 38,
+  "imagesAnalyzedThisRun": 2,
+  "totalImagesAnalyzed": 15,
   "match": {
-    "score": "3-0",
-    "scoreSource": "division_scores",
+    "score": "3-1",
+    "scoreSource": "confirmed_by_both_feeds",
     "scoreConfirmed": true,
     "feedScore": "3-1",
-    "scoreDiscrepancy": "Match feed said 3-1 but the division live-scores feed said 3-0 — showing 3-0.",
-    "unconfirmedGoals": [
-      {
-        "minute": 76,
-        "team": "away",
-        "scorer": "Hatton"
-      }
-    ],
+    "scoreDiscrepancy": null,
+    "unconfirmedGoals": [],
     "finalScoreAnnounced": null,
     "halfTimeScoreAnnounced": "2-0",
     "htDiscrepancy": null,
@@ -82,6 +76,11 @@
         "minute": 49,
         "team": "home",
         "scorer": "Ross Jones"
+      },
+      {
+        "minute": 76,
+        "team": "away",
+        "scorer": "Hatton (penalty)"
       }
     ],
     "yellowCards": [
@@ -93,17 +92,27 @@
       {
         "minute": 76,
         "team": "home",
+        "player": "Dawley player 2"
+      },
+      {
+        "minute": 81,
+        "team": "home",
+        "player": "Dawley player 11"
+      },
+      {
+        "minute": 81,
+        "team": "away",
+        "player": "Jake Pollard"
+      },
+      {
+        "minute": 79,
+        "team": "away",
         "player": "Dawley keeper"
       },
       {
-        "minute": 82,
-        "team": "home",
-        "player": "Dawley 11"
-      },
-      {
-        "minute": 82,
+        "minute": 81,
         "team": "away",
-        "player": "Pollard"
+        "player": "Greg"
       }
     ],
     "redCards": [],
@@ -121,7 +130,7 @@
         "playerOn": "Jake Pollard"
       },
       {
-        "minute": 46,
+        "minute": 45,
         "team": "away",
         "playerOff": "Kieran Nolan",
         "playerOn": "Stan Tatters"
@@ -167,6 +176,12 @@
         "team": "away",
         "playerOff": "Saul Shotton",
         "playerOn": "Jack Finney"
+      },
+      {
+        "minute": 83,
+        "team": "home",
+        "playerOff": "Macauley Taylor",
+        "playerOn": "Cain Patterson"
       }
     ],
     "sinBins": [
@@ -215,7 +230,7 @@
       }
     ],
     "addedTime": {
-      "firstHalf": "5",
+      "firstHalf": 5,
       "secondHalf": null
     },
     "wentToExtraTime": false,
@@ -230,24 +245,24 @@
     },
     "roughXG": {
       "firstHalf": {
-        "home": 2,
-        "away": 0.5,
-        "note": "Dawley scored twice (own goal and Ross Jones); Sandbach had early chance that went wide"
+        "home": 1.8,
+        "away": 0.4,
+        "note": "Dawley scored 2 goals (own goal + Ross Jones), Sandbach had early chance but fired wide"
       },
       "secondHalf": {
-        "home": 1.2,
-        "away": 1.5,
-        "note": "Dawley added a third early in second half; Sandbach created several chances including header, blocked shot, and penalty conversion"
+        "home": 0.8,
+        "away": 1.2,
+        "note": "Dawley scored 1 goal early in second half, Sandbach had several chances including blocked shots and penalty conversion (raised to reflect goals actually scored)"
       },
       "extraTime": {
         "home": 0,
         "away": 0,
-        "note": "No extra time"
+        "note": "No extra time played"
       },
       "total": {
-        "home": 3.2,
-        "away": 2,
-        "note": "Dawley dominated scoring with 3 goals; Sandbach showed improvement in second half with penalty goal and multiple chances"
+        "home": 2.4,
+        "away": 1.6,
+        "note": "Dawley 3 goals, Sandbach 1 goal; quality reflected by 3-1 final scoreline and clear defensive dominance by home side"
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
@@ -255,12 +270,12 @@
       "firstHalf": {
         "home": 70,
         "away": 30,
-        "note": "Dawley scored twice, were dominant, forced Sandbach into two injury substitutions; Sandbach had early chance but were largely outplayed"
+        "note": "Dawley dominated, scoring early and adding second before HT; Sandbach struggled, conceded own goal and defensive error"
       },
       "secondHalf": {
         "home": 60,
         "away": 40,
-        "note": "Dawley continued dominance with third goal early, but Sandbach improved with better attacking play, created multiple chances, and scored from penalty"
+        "note": "Dawley continued to dominate but Sandbach improved, created chances and scored penalty; Dawley made multiple substitutions"
       },
       "extraTime": {
         "home": 50,
@@ -270,7 +285,7 @@
       "total": {
         "home": 65,
         "away": 35,
-        "note": "Dawley were clearly superior throughout, dominating first half and maintaining control despite Sandbach's second-half improvement"
+        "note": "Dawley dominated throughout, controlling match from 11th minute onwards; Sandbach acknowledged poor performance and being 'out muscled' in their HT commentary"
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
