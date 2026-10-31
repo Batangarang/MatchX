@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-31T13:55:33.005Z",
+  "generatedAt": "2026-10-31T14:01:02.170Z",
   "fixtures": [
     {
       "date": "Saturday 31 October 2026",
@@ -7,13 +7,6 @@
       "away": "Alsager Town  The Marine Travel Arena",
       "kickoff": null,
       "postponed": true
-    },
-    {
-      "date": "Saturday 31 October 2026",
-      "home": "Dawley Town",
-      "away": "Sandbach United",
-      "kickoff": "14:00",
-      "postponed": false
     },
     {
       "date": "Saturday 31 October 2026",
@@ -1735,6 +1728,13 @@
       "home": "Wolverhampton Casuals",
       "away": "Cheadle Heath Nomads",
       "kickoff": "15:00",
+      "postponed": false
+    },
+    {
+      "date": "Saturday 31 October 2026",
+      "home": "Dawley Town",
+      "away": "Sandbach United",
+      "kickoff": "14:00",
       "postponed": false
     }
   ]
