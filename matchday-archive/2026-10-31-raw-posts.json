@@ -73,5 +73,31 @@
     "side": "home",
     "handle": "DawleyTownFC",
     "isDuplicateCommentary": true
+  },
+  {
+    "text": "The first chance of the game goes to Sandbach as they Fire just wide of the post. \n\n0-0 on 8’",
+    "createdAt": "2026-10-31T14:10:58.000Z",
+    "images": [],
+    "side": "home",
+    "handle": "DawleyTownFC",
+    "isDuplicateCommentary": false
+  },
+  {
+    "text": "🔴🔵 v 🟡🟡\n\nDawley Town v Sandbach United\n\n@DawleyTownFC \n\nCross in from the Dawley left is finished at the far post and the hosts take the lead.\n\n1 0",
+    "createdAt": "2026-10-31T14:13:00.000Z",
+    "images": [],
+    "side": "away",
+    "handle": "SandbachFC_1st",
+    "isDuplicateCommentary": false
+  },
+  {
+    "text": "We take the lead on a special day!! Powell whips the ball into the box and the Sandbach defender flicks it into his own net! \n\n1-0 on 11’ https://t.co/rqUbaTmO1H",
+    "createdAt": "2026-10-31T14:14:34.000Z",
+    "images": [
+      "https://pbs.twimg.com/media/HV9wumUWgAA8ftt.jpg"
+    ],
+    "side": "home",
+    "handle": "DawleyTownFC",
+    "isDuplicateCommentary": false
   }
 ]
