@@ -1,19 +1,25 @@
 {
-  "generatedAt": "2026-10-31T15:35:42.717Z",
+  "generatedAt": "2026-10-31T15:40:52.199Z",
   "fixtureDate": "2026-10-31",
   "kickoff": "14:00",
   "homeTeam": "Dawley Town",
   "awayTeam": "Sandbach United",
-  "postsUsed": 32,
-  "imagesAnalyzedThisRun": 1,
+  "postsUsed": 35,
+  "imagesAnalyzedThisRun": 0,
   "totalImagesAnalyzed": 13,
   "match": {
     "score": "3-0",
-    "scoreSource": "confirmed_by_both_feeds",
+    "scoreSource": "division_scores",
     "scoreConfirmed": true,
-    "feedScore": "3-0",
-    "scoreDiscrepancy": null,
-    "unconfirmedGoals": [],
+    "feedScore": "3-1",
+    "scoreDiscrepancy": "Match feed said 3-1 but the division live-scores feed said 3-0 — showing 3-0.",
+    "unconfirmedGoals": [
+      {
+        "minute": 76,
+        "team": "away",
+        "scorer": "Hatton"
+      }
+    ],
     "finalScoreAnnounced": null,
     "halfTimeScoreAnnounced": "2-0",
     "htDiscrepancy": null,
@@ -83,12 +89,17 @@
         "minute": 34,
         "team": "home",
         "player": "Kane Lewis"
+      },
+      {
+        "minute": 76,
+        "team": "home",
+        "player": "Dawley keeper"
       }
     ],
     "redCards": [],
     "substitutions": [
       {
-        "minute": 14,
+        "minute": 11,
         "team": "away",
         "playerOff": "Saul Shotton",
         "playerOn": "Jack Finney"
@@ -100,19 +111,13 @@
         "playerOn": "Jake Pollard"
       },
       {
-        "minute": 11,
-        "team": "away",
-        "playerOff": "Saul Shotton",
-        "playerOn": "Jack Finney"
-      },
-      {
         "minute": 45,
         "team": "away",
         "playerOff": "Kieran Nolan",
         "playerOn": "Stan Tatters"
       },
       {
-        "minute": 51,
+        "minute": 54,
         "team": "away",
         "playerOff": "Birchall",
         "playerOn": "Cope"
@@ -209,24 +214,24 @@
     },
     "roughXG": {
       "firstHalf": {
-        "home": 1.5,
-        "away": 0.3,
-        "note": "Dawley scored 2 goals; Sandbach had early chance that went wide"
+        "home": 1.8,
+        "away": 0.4,
+        "note": "Dawley scored 2 goals (own goal + Ross Jones curled effort); Sandbach had early chance that went wide"
       },
       "secondHalf": {
         "home": 1.2,
-        "away": 0.4,
-        "note": "Dawley scored 1 goal; Sandbach had header and close chances but no conversion"
+        "away": 1.5,
+        "note": "Dawley scored 1 goal in 49'; Sandbach had multiple attempts including blocked shot, header over bar, and converted penalty"
       },
       "extraTime": {
         "home": 0,
         "away": 0,
-        "note": "No extra time played"
+        "note": "No extra time"
       },
       "total": {
-        "home": 2.7,
-        "away": 0.7,
-        "note": "Dawley scored 3 goals (including own goal); Sandbach created some chances but limited conversion"
+        "home": 3,
+        "away": 1.9,
+        "note": "Dawley dominated with 3 goals; Sandbach pulled one back late from penalty"
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
@@ -234,22 +239,22 @@
       "firstHalf": {
         "home": 65,
         "away": 35,
-        "note": "Dawley took control after early Sandbach chance, scored twice"
+        "note": "Dawley took early lead and dominated; Sandbach had one early chance but were outplayed"
       },
       "secondHalf": {
-        "home": 70,
-        "away": 30,
-        "note": "Dawley dominated, scored again early; Sandbach tried to respond but Dawley remained in control"
+        "home": 60,
+        "away": 40,
+        "note": "Dawley continued dominance with 3rd goal early; Sandbach improved and created chances, scoring penalty late"
       },
       "extraTime": {
         "home": 50,
         "away": 50,
-        "note": "No extra time played"
+        "note": "No extra time"
       },
       "total": {
-        "home": 67,
-        "away": 33,
-        "note": "Dawley controlled the match throughout, despite Sandbach being pre-match league leaders"
+        "home": 63,
+        "away": 37,
+        "note": "Dawley controlled match throughout; Sandbach acknowledged being 'outmuscled' and made defensive errors"
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
