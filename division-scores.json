@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-10-31T15:01:00.844Z",
+  "generatedAt": "2026-10-31T15:15:37.873Z",
   "date": "2026-10-31",
   "isToday": true,
-  "postCount": 53,
-  "latestPostTimestamp": "2026-10-31T15:00:56.000Z",
+  "postCount": 61,
+  "latestPostTimestamp": "2026-10-31T15:13:20.000Z",
   "fixtures": [
     {
       "home": "Widnes Town",
@@ -42,12 +42,13 @@
       "home": "Foley Meir",
       "away": "Barnton",
       "kickoff": "15:00",
-      "score": null,
+      "score": "0-0",
       "matchStage": "first_half",
       "goals": [],
       "yellowCards": [],
       "redCards": [],
-      "lastUpdated": "2026-10-31T15:01:00.844Z"
+      "scoreSource": "explicit",
+      "lastUpdated": "2026-10-31T15:15:37.873Z"
     },
     {
       "home": "Market Drayton Town",
@@ -64,23 +65,25 @@
       "home": "New Mills",
       "away": "Wednesfield Community",
       "kickoff": "15:00",
-      "score": null,
+      "score": "0-0",
       "matchStage": "first_half",
       "goals": [],
       "yellowCards": [],
       "redCards": [],
-      "lastUpdated": "2026-10-31T15:01:00.844Z"
+      "scoreSource": "explicit",
+      "lastUpdated": "2026-10-31T15:15:37.873Z"
     },
     {
       "home": "Stafford Town",
       "away": "Telford Town",
       "kickoff": "15:00",
-      "score": null,
-      "matchStage": "scheduled",
+      "score": "0-0",
+      "matchStage": "first_half",
       "goals": [],
       "yellowCards": [],
       "redCards": [],
-      "lastUpdated": "2026-10-31T11:01:01.804Z"
+      "scoreSource": "explicit",
+      "lastUpdated": "2026-10-31T15:15:37.873Z"
     },
     {
       "home": "Wolverhampton Casuals",
@@ -97,16 +100,21 @@
       "home": "Dawley Town",
       "away": "Sandbach United",
       "kickoff": "14:00",
-      "score": "2-0",
-      "matchStage": "half_time",
+      "score": "3-0",
+      "matchStage": "second_half",
       "goals": [
         {
-          "minute": 11,
+          "minute": "11",
           "team": "home",
-          "scorer": "own goal (Sandbach defender)"
+          "scorer": "Sandbach defender (own goal)"
         },
         {
-          "minute": 45,
+          "minute": "45",
+          "team": "home",
+          "scorer": "Ross Jones"
+        },
+        {
+          "minute": "49",
           "team": "home",
           "scorer": "Ross Jones"
         }
@@ -119,8 +127,8 @@
       ],
       "redCards": [],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-31T15:01:00.844Z"
+      "lastUpdated": "2026-10-31T15:15:37.873Z"
     }
   ],
-  "ticker": "@breretonsocialf: 1 Rhys Williams \n2 Will Burns\n3 SanKnappton\n4 Harv Deebank \n5 Sam Fleming (c) \n6 Max Marshall \n7 Beckham Fulton \n8 Conor Phillips \n9 Cam Jackson \n10 Call White\n11 Sam Mellor starting 11 v Cheadle Heath Nomads in the @nwcfl"
+  "ticker": "@NewMillsFC: 10 Minutes gone, Big chance for Jimmy Green at the far post after a fantastic cross from Big Will. Millers 0-0 WCFC #UptheMillers"
 }

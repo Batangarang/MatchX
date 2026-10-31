@@ -172,8 +172,29 @@
     "Dawley Town|Sandbach United": {
       "home": "Dawley Town",
       "away": "Sandbach United",
-      "score": "2-0",
-      "matchStage": "half_time",
+      "score": "3-0",
+      "matchStage": "second_half",
+      "scoreSource": "explicit"
+    },
+    "Foley Meir|Barnton": {
+      "home": "Foley Meir",
+      "away": "Barnton",
+      "score": "0-0",
+      "matchStage": "first_half",
+      "scoreSource": "explicit"
+    },
+    "New Mills|Wednesfield Community": {
+      "home": "New Mills",
+      "away": "Wednesfield Community",
+      "score": "0-0",
+      "matchStage": "first_half",
+      "scoreSource": "explicit"
+    },
+    "Stafford Town|Telford Town": {
+      "home": "Stafford Town",
+      "away": "Telford Town",
+      "score": "0-0",
+      "matchStage": "first_half",
       "scoreSource": "explicit"
     }
   }
