@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-10-31T15:31:04.505Z",
+  "generatedAt": "2026-10-31T15:35:42.717Z",
   "fixtureDate": "2026-10-31",
   "kickoff": "14:00",
   "homeTeam": "Dawley Town",
   "awayTeam": "Sandbach United",
-  "postsUsed": 30,
+  "postsUsed": 32,
   "imagesAnalyzedThisRun": 1,
-  "totalImagesAnalyzed": 12,
+  "totalImagesAnalyzed": 13,
   "match": {
     "score": "3-0",
     "scoreSource": "confirmed_by_both_feeds",
@@ -88,7 +88,7 @@
     "redCards": [],
     "substitutions": [
       {
-        "minute": 16,
+        "minute": 14,
         "team": "away",
         "playerOff": "Saul Shotton",
         "playerOn": "Jack Finney"
@@ -106,13 +106,13 @@
         "playerOn": "Jack Finney"
       },
       {
-        "minute": 46,
+        "minute": 45,
         "team": "away",
         "playerOff": "Kieran Nolan",
         "playerOn": "Stan Tatters"
       },
       {
-        "minute": 54,
+        "minute": 51,
         "team": "away",
         "playerOff": "Birchall",
         "playerOn": "Cope"
@@ -134,6 +134,18 @@
         "team": "home",
         "playerOff": "Jack Hodnett",
         "playerOn": "Joe Cuff"
+      },
+      {
+        "minute": 74,
+        "team": "home",
+        "playerOff": "Evan Bagry",
+        "playerOn": "Josh Simcox"
+      },
+      {
+        "minute": 75,
+        "team": "away",
+        "playerOff": "Mitch Nolan",
+        "playerOn": "Callum Besford"
       }
     ],
     "sinBins": [
@@ -199,12 +211,12 @@
       "firstHalf": {
         "home": 1.5,
         "away": 0.3,
-        "note": "Dawley scored twice in first half (one own goal, one Ross Jones finish); Sandbach had an early chance that went wide (raised to reflect goals actually scored)"
+        "note": "Dawley scored 2 goals; Sandbach had early chance that went wide"
       },
       "secondHalf": {
-        "home": 0.8,
+        "home": 1.2,
         "away": 0.4,
-        "note": "Dawley scored once more early in second half; Sandbach had a header off target and a blocked shot with clearance off the line"
+        "note": "Dawley scored 1 goal; Sandbach had header and close chances but no conversion"
       },
       "extraTime": {
         "home": 0,
@@ -212,9 +224,9 @@
         "note": "No extra time played"
       },
       "total": {
-        "home": 2.3,
+        "home": 2.7,
         "away": 0.7,
-        "note": "Dawley dominated with three goals scored; Sandbach created limited chances (raised to reflect goals actually scored)"
+        "note": "Dawley scored 3 goals (including own goal); Sandbach created some chances but limited conversion"
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
@@ -222,12 +234,12 @@
       "firstHalf": {
         "home": 65,
         "away": 35,
-        "note": "Dawley took the lead early and controlled proceedings; Sandbach struggled and were described as 'out muscled'"
+        "note": "Dawley took control after early Sandbach chance, scored twice"
       },
       "secondHalf": {
         "home": 70,
         "away": 30,
-        "note": "Dawley extended their lead quickly; Sandbach made defensive errors but had some attacking moments"
+        "note": "Dawley dominated, scored again early; Sandbach tried to respond but Dawley remained in control"
       },
       "extraTime": {
         "home": 50,
@@ -237,7 +249,7 @@
       "total": {
         "home": 67,
         "away": 33,
-        "note": "Dawley dominated the match from start to finish, scoring three goals with Sandbach limited to occasional chances"
+        "note": "Dawley controlled the match throughout, despite Sandbach being pre-match league leaders"
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
