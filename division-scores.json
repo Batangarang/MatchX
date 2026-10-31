@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-10-31T15:15:37.873Z",
+  "generatedAt": "2026-10-31T15:30:52.006Z",
   "date": "2026-10-31",
   "isToday": true,
-  "postCount": 61,
-  "latestPostTimestamp": "2026-10-31T15:13:20.000Z",
+  "postCount": 86,
+  "latestPostTimestamp": "2026-10-31T15:30:14.000Z",
   "fixtures": [
     {
       "home": "Widnes Town",
@@ -31,24 +31,37 @@
       "home": "Eccleshall",
       "away": "Shawbury United",
       "kickoff": "15:00",
-      "score": null,
-      "matchStage": "first_half",
-      "goals": [],
+      "score": "1-0",
+      "matchStage": "second_half",
+      "goals": [
+        {
+          "minute": "25",
+          "team": "home",
+          "scorer": "Danny"
+        }
+      ],
       "yellowCards": [],
       "redCards": [],
-      "lastUpdated": "2026-10-31T15:01:00.844Z"
+      "scoreSource": "explicit",
+      "lastUpdated": "2026-10-31T15:30:52.006Z"
     },
     {
       "home": "Foley Meir",
       "away": "Barnton",
       "kickoff": "15:00",
-      "score": "0-0",
-      "matchStage": "first_half",
-      "goals": [],
+      "score": "0-1",
+      "matchStage": "second_half",
+      "goals": [
+        {
+          "minute": "29",
+          "team": "away",
+          "scorer": null
+        }
+      ],
       "yellowCards": [],
       "redCards": [],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-31T15:15:37.873Z"
+      "lastUpdated": "2026-10-31T15:30:52.006Z"
     },
     {
       "home": "Market Drayton Town",
@@ -65,36 +78,70 @@
       "home": "New Mills",
       "away": "Wednesfield Community",
       "kickoff": "15:00",
-      "score": "0-0",
-      "matchStage": "first_half",
-      "goals": [],
+      "score": "2-0",
+      "matchStage": "second_half",
+      "goals": [
+        {
+          "minute": "19",
+          "team": "home",
+          "scorer": "Jimmy Green"
+        },
+        {
+          "minute": "22",
+          "team": "home",
+          "scorer": "Captain Macca"
+        }
+      ],
       "yellowCards": [],
       "redCards": [],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-31T15:15:37.873Z"
+      "lastUpdated": "2026-10-31T15:30:52.006Z"
     },
     {
       "home": "Stafford Town",
       "away": "Telford Town",
       "kickoff": "15:00",
-      "score": "0-0",
-      "matchStage": "first_half",
-      "goals": [],
-      "yellowCards": [],
+      "score": "2-1",
+      "matchStage": "second_half",
+      "goals": [
+        {
+          "minute": "18",
+          "team": "home",
+          "scorer": "Callum"
+        },
+        {
+          "minute": "21",
+          "team": "home",
+          "scorer": "Jordan Darlington"
+        }
+      ],
+      "yellowCards": [
+        {
+          "team": "away",
+          "player": "Alex Allen"
+        }
+      ],
       "redCards": [],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-31T15:15:37.873Z"
+      "lastUpdated": "2026-10-31T15:30:52.006Z"
     },
     {
       "home": "Wolverhampton Casuals",
       "away": "Allscott Heath",
       "kickoff": "15:00",
-      "score": null,
-      "matchStage": "scheduled",
-      "goals": [],
+      "score": "1-0",
+      "matchStage": "second_half",
+      "goals": [
+        {
+          "minute": "19",
+          "team": "home",
+          "scorer": "Kieran Cook"
+        }
+      ],
       "yellowCards": [],
       "redCards": [],
-      "lastUpdated": "2026-10-31T11:01:01.804Z"
+      "scoreSource": "explicit",
+      "lastUpdated": "2026-10-31T15:30:52.006Z"
     },
     {
       "home": "Dawley Town",
@@ -106,7 +153,7 @@
         {
           "minute": "11",
           "team": "home",
-          "scorer": "Sandbach defender (own goal)"
+          "scorer": null
         },
         {
           "minute": "45",
@@ -119,16 +166,11 @@
           "scorer": "Ross Jones"
         }
       ],
-      "yellowCards": [
-        {
-          "team": "home",
-          "player": "Kane Lewis"
-        }
-      ],
+      "yellowCards": [],
       "redCards": [],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-31T15:15:37.873Z"
+      "lastUpdated": "2026-10-31T15:30:52.006Z"
     }
   ],
-  "ticker": "@NewMillsFC: 10 Minutes gone, Big chance for Jimmy Green at the far post after a fantastic cross from Big Will. Millers 0-0 WCFC #UptheMillers"
+  "ticker": "@TelfordTownFC: 29': Alex Allen is yellow carded for Telford Town\n#STATEL #Pitchero https://t.co/OabgLIct9r"
 }
