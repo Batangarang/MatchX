@@ -172,7 +172,7 @@
     "Dawley Town|Sandbach United": {
       "home": "Dawley Town",
       "away": "Sandbach United",
-      "score": "3-0",
+      "score": "3-1",
       "matchStage": "second_half",
       "scoreSource": "explicit"
     },
@@ -186,21 +186,21 @@
     "New Mills|Wednesfield Community": {
       "home": "New Mills",
       "away": "Wednesfield Community",
-      "score": "2-0",
+      "score": "3-0",
       "matchStage": "second_half",
       "scoreSource": "explicit"
     },
     "Stafford Town|Telford Town": {
       "home": "Stafford Town",
       "away": "Telford Town",
-      "score": "2-1",
+      "score": "3-0",
       "matchStage": "second_half",
       "scoreSource": "explicit"
     },
     "Eccleshall|Shawbury United": {
       "home": "Eccleshall",
       "away": "Shawbury United",
-      "score": "1-0",
+      "score": "3-0",
       "matchStage": "second_half",
       "scoreSource": "explicit"
     },

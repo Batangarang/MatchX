@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-10-31T15:30:52.006Z",
+  "generatedAt": "2026-10-31T15:45:37.527Z",
   "date": "2026-10-31",
   "isToday": true,
-  "postCount": 86,
-  "latestPostTimestamp": "2026-10-31T15:30:14.000Z",
+  "postCount": 107,
+  "latestPostTimestamp": "2026-10-31T15:45:10.000Z",
   "fixtures": [
     {
       "home": "Widnes Town",
@@ -31,19 +31,29 @@
       "home": "Eccleshall",
       "away": "Shawbury United",
       "kickoff": "15:00",
-      "score": "1-0",
+      "score": "3-0",
       "matchStage": "second_half",
       "goals": [
         {
           "minute": "25",
           "team": "home",
+          "scorer": "Unknown"
+        },
+        {
+          "minute": "26",
+          "team": "home",
           "scorer": "Danny"
+        },
+        {
+          "minute": "38",
+          "team": "home",
+          "scorer": "Levi Hunter"
         }
       ],
       "yellowCards": [],
       "redCards": [],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-31T15:30:52.006Z"
+      "lastUpdated": "2026-10-31T15:45:37.527Z"
     },
     {
       "home": "Foley Meir",
@@ -55,13 +65,13 @@
         {
           "minute": "29",
           "team": "away",
-          "scorer": null
+          "scorer": "Humphries"
         }
       ],
       "yellowCards": [],
       "redCards": [],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-31T15:30:52.006Z"
+      "lastUpdated": "2026-10-31T15:45:37.527Z"
     },
     {
       "home": "Market Drayton Town",
@@ -78,7 +88,7 @@
       "home": "New Mills",
       "away": "Wednesfield Community",
       "kickoff": "15:00",
-      "score": "2-0",
+      "score": "3-0",
       "matchStage": "second_half",
       "goals": [
         {
@@ -89,19 +99,29 @@
         {
           "minute": "22",
           "team": "home",
-          "scorer": "Captain Macca"
+          "scorer": "Macca"
+        },
+        {
+          "minute": "34",
+          "team": "home",
+          "scorer": "Akim Samms"
         }
       ],
-      "yellowCards": [],
+      "yellowCards": [
+        {
+          "team": "away",
+          "player": null
+        }
+      ],
       "redCards": [],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-31T15:30:52.006Z"
+      "lastUpdated": "2026-10-31T15:45:37.527Z"
     },
     {
       "home": "Stafford Town",
       "away": "Telford Town",
       "kickoff": "15:00",
-      "score": "2-1",
+      "score": "3-0",
       "matchStage": "second_half",
       "goals": [
         {
@@ -113,6 +133,11 @@
           "minute": "21",
           "team": "home",
           "scorer": "Jordan Darlington"
+        },
+        {
+          "minute": "35",
+          "team": "home",
+          "scorer": "Brenden Parker"
         }
       ],
       "yellowCards": [
@@ -123,7 +148,7 @@
       ],
       "redCards": [],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-31T15:30:52.006Z"
+      "lastUpdated": "2026-10-31T15:45:37.527Z"
     },
     {
       "home": "Wolverhampton Casuals",
@@ -147,13 +172,13 @@
       "home": "Dawley Town",
       "away": "Sandbach United",
       "kickoff": "14:00",
-      "score": "3-0",
+      "score": "3-1",
       "matchStage": "second_half",
       "goals": [
         {
           "minute": "11",
           "team": "home",
-          "scorer": null
+          "scorer": "Own Goal"
         },
         {
           "minute": "45",
@@ -164,13 +189,39 @@
           "minute": "49",
           "team": "home",
           "scorer": "Ross Jones"
+        },
+        {
+          "minute": "76",
+          "team": "away",
+          "scorer": "Unknown"
         }
       ],
-      "yellowCards": [],
+      "yellowCards": [
+        {
+          "team": "home",
+          "player": "Dawley keeper"
+        },
+        {
+          "team": "home",
+          "player": "Dawley 11"
+        },
+        {
+          "team": "home",
+          "player": "Kane Lewis"
+        },
+        {
+          "team": "away",
+          "player": "Greg"
+        },
+        {
+          "team": "away",
+          "player": "Pollard"
+        }
+      ],
       "redCards": [],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-31T15:30:52.006Z"
+      "lastUpdated": "2026-10-31T15:45:37.527Z"
     }
   ],
-  "ticker": "@TelfordTownFC: 29': Alex Allen is yellow carded for Telford Town\n#STATEL #Pitchero https://t.co/OabgLIct9r"
+  "ticker": "@StaffordTown1st: 42 - Off the bar!!!\n\nDarlo has bought his shooting boots today.\n\nPat lays it off for him and he hits a half volley from the angle of the box. Inches from finding the top corner but it bounces down and out, \n\n🔴 3-0 🟣"
 }
