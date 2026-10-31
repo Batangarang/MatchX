@@ -173,14 +173,14 @@
       "home": "Dawley Town",
       "away": "Sandbach United",
       "score": "3-1",
-      "matchStage": "second_half",
+      "matchStage": "full_time",
       "scoreSource": "explicit"
     },
     "Foley Meir|Barnton": {
       "home": "Foley Meir",
       "away": "Barnton",
-      "score": "0-1",
-      "matchStage": "half_time",
+      "score": "0-2",
+      "matchStage": "full_time",
       "scoreSource": "explicit"
     },
     "New Mills|Wednesfield Community": {
@@ -201,12 +201,19 @@
       "home": "Eccleshall",
       "away": "Shawbury United",
       "score": "3-0",
-      "matchStage": "half_time",
+      "matchStage": "full_time",
       "scoreSource": "explicit"
     },
     "Wolverhampton Casuals|Allscott Heath": {
       "home": "Wolverhampton Casuals",
       "away": "Allscott Heath",
+      "score": "1-0",
+      "matchStage": "half_time",
+      "scoreSource": "explicit"
+    },
+    "Cheadle Heath Nomads|Brereton Social": {
+      "home": "Cheadle Heath Nomads",
+      "away": "Brereton Social",
       "score": "1-0",
       "matchStage": "half_time",
       "scoreSource": "explicit"

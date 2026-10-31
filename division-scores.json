@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-10-31T15:55:39.368Z",
+  "generatedAt": "2026-10-31T16:10:44.630Z",
   "date": "2026-10-31",
   "isToday": true,
-  "postCount": 119,
-  "latestPostTimestamp": "2026-10-31T15:51:03.000Z",
+  "postCount": 131,
+  "latestPostTimestamp": "2026-10-31T16:10:23.000Z",
   "fixtures": [
     {
       "home": "Widnes Town",
@@ -20,19 +20,26 @@
       "home": "Cheadle Heath Nomads",
       "away": "Brereton Social",
       "kickoff": "15:00",
-      "score": null,
-      "matchStage": "scheduled",
-      "goals": [],
+      "score": "1-0",
+      "matchStage": "half_time",
+      "goals": [
+        {
+          "minute": null,
+          "team": "home",
+          "scorer": "Flem (captain)"
+        }
+      ],
       "yellowCards": [],
       "redCards": [],
-      "lastUpdated": "2026-10-31T11:01:01.804Z"
+      "scoreSource": "explicit",
+      "lastUpdated": "2026-10-31T16:10:44.630Z"
     },
     {
       "home": "Eccleshall",
       "away": "Shawbury United",
       "kickoff": "15:00",
       "score": "3-0",
-      "matchStage": "half_time",
+      "matchStage": "full_time",
       "goals": [
         {
           "minute": "26",
@@ -40,12 +47,12 @@
           "scorer": "Danny"
         },
         {
-          "minute": "35",
+          "minute": "36",
           "team": "home",
-          "scorer": "Parker"
+          "scorer": "Nicky"
         },
         {
-          "minute": "38",
+          "minute": "39",
           "team": "home",
           "scorer": "Levi Hunter"
         }
@@ -53,25 +60,30 @@
       "yellowCards": [],
       "redCards": [],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-31T15:55:39.368Z"
+      "lastUpdated": "2026-10-31T16:10:44.630Z"
     },
     {
       "home": "Foley Meir",
       "away": "Barnton",
       "kickoff": "15:00",
-      "score": "0-1",
-      "matchStage": "half_time",
+      "score": "0-2",
+      "matchStage": "full_time",
       "goals": [
         {
           "minute": "29",
           "team": "away",
           "scorer": "Humphries"
+        },
+        {
+          "minute": "51",
+          "team": "away",
+          "scorer": "Stanton"
         }
       ],
       "yellowCards": [],
       "redCards": [],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-31T15:55:39.368Z"
+      "lastUpdated": "2026-10-31T16:10:44.630Z"
     },
     {
       "home": "Market Drayton Town",
@@ -99,7 +111,7 @@
         {
           "minute": "22",
           "team": "home",
-          "scorer": "Macca"
+          "scorer": "Macca (captain)"
         },
         {
           "minute": "34",
@@ -120,7 +132,7 @@
       ],
       "redCards": [],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-31T15:55:39.368Z"
+      "lastUpdated": "2026-10-31T16:10:44.630Z"
     },
     {
       "home": "Stafford Town",
@@ -132,7 +144,7 @@
         {
           "minute": "18",
           "team": "home",
-          "scorer": "Callum"
+          "scorer": "Callum Parker"
         },
         {
           "minute": "21",
@@ -153,7 +165,7 @@
       ],
       "redCards": [],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-31T15:55:39.368Z"
+      "lastUpdated": "2026-10-31T16:10:44.630Z"
     },
     {
       "home": "Wolverhampton Casuals",
@@ -183,12 +195,12 @@
       "away": "Sandbach United",
       "kickoff": "14:00",
       "score": "3-1",
-      "matchStage": "second_half",
+      "matchStage": "full_time",
       "goals": [
         {
           "minute": "11",
           "team": "home",
-          "scorer": "Powell"
+          "scorer": "Sandbach defender (own goal)"
         },
         {
           "minute": "45",
@@ -203,7 +215,7 @@
         {
           "minute": "76",
           "team": "away",
-          "scorer": "Hatton"
+          "scorer": "Hatton (penalty)"
         }
       ],
       "yellowCards": [
@@ -212,22 +224,18 @@
           "player": "Kane Lewis"
         },
         {
-          "team": "away",
-          "player": "Greg"
-        },
-        {
-          "team": "away",
-          "player": "Pollard"
-        },
-        {
           "team": "home",
-          "player": "Keeper"
+          "player": "Dawley #2"
+        },
+        {
+          "team": "away",
+          "player": "Dawley keeper"
         }
       ],
       "redCards": [],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-31T15:55:39.368Z"
+      "lastUpdated": "2026-10-31T16:10:44.630Z"
     }
   ],
-  "ticker": "@TelfordTownFC: HALF TIME: Stafford Town 3 - 0 Telford Town\n#STATEL #Pitchero https://t.co/WJ5QLFP11c"
+  "ticker": "@DawleyTownFC: A special Win for a very special person! ❤️ https://t.co/mdiGN8ITaM"
 }
