@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-10-31T15:45:37.527Z",
+  "generatedAt": "2026-10-31T15:55:39.368Z",
   "date": "2026-10-31",
   "isToday": true,
-  "postCount": 107,
-  "latestPostTimestamp": "2026-10-31T15:45:10.000Z",
+  "postCount": 119,
+  "latestPostTimestamp": "2026-10-31T15:51:03.000Z",
   "fixtures": [
     {
       "home": "Widnes Town",
@@ -32,17 +32,17 @@
       "away": "Shawbury United",
       "kickoff": "15:00",
       "score": "3-0",
-      "matchStage": "second_half",
+      "matchStage": "half_time",
       "goals": [
-        {
-          "minute": "25",
-          "team": "home",
-          "scorer": "Unknown"
-        },
         {
           "minute": "26",
           "team": "home",
           "scorer": "Danny"
+        },
+        {
+          "minute": "35",
+          "team": "home",
+          "scorer": "Parker"
         },
         {
           "minute": "38",
@@ -53,14 +53,14 @@
       "yellowCards": [],
       "redCards": [],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-31T15:45:37.527Z"
+      "lastUpdated": "2026-10-31T15:55:39.368Z"
     },
     {
       "home": "Foley Meir",
       "away": "Barnton",
       "kickoff": "15:00",
       "score": "0-1",
-      "matchStage": "second_half",
+      "matchStage": "half_time",
       "goals": [
         {
           "minute": "29",
@@ -71,7 +71,7 @@
       "yellowCards": [],
       "redCards": [],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-31T15:45:37.527Z"
+      "lastUpdated": "2026-10-31T15:55:39.368Z"
     },
     {
       "home": "Market Drayton Town",
@@ -88,8 +88,8 @@
       "home": "New Mills",
       "away": "Wednesfield Community",
       "kickoff": "15:00",
-      "score": "3-0",
-      "matchStage": "second_half",
+      "score": "4-0",
+      "matchStage": "half_time",
       "goals": [
         {
           "minute": "19",
@@ -105,6 +105,11 @@
           "minute": "34",
           "team": "home",
           "scorer": "Akim Samms"
+        },
+        {
+          "minute": "44",
+          "team": "home",
+          "scorer": "Will Frankishtein"
         }
       ],
       "yellowCards": [
@@ -115,14 +120,14 @@
       ],
       "redCards": [],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-31T15:45:37.527Z"
+      "lastUpdated": "2026-10-31T15:55:39.368Z"
     },
     {
       "home": "Stafford Town",
       "away": "Telford Town",
       "kickoff": "15:00",
       "score": "3-0",
-      "matchStage": "second_half",
+      "matchStage": "half_time",
       "goals": [
         {
           "minute": "18",
@@ -148,14 +153,14 @@
       ],
       "redCards": [],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-31T15:45:37.527Z"
+      "lastUpdated": "2026-10-31T15:55:39.368Z"
     },
     {
       "home": "Wolverhampton Casuals",
       "away": "Allscott Heath",
       "kickoff": "15:00",
       "score": "1-0",
-      "matchStage": "second_half",
+      "matchStage": "half_time",
       "goals": [
         {
           "minute": "19",
@@ -163,10 +168,15 @@
           "scorer": "Kieran Cook"
         }
       ],
-      "yellowCards": [],
+      "yellowCards": [
+        {
+          "team": "home",
+          "player": "Declan Hutchings"
+        }
+      ],
       "redCards": [],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-31T15:30:52.006Z"
+      "lastUpdated": "2026-10-31T15:55:39.368Z"
     },
     {
       "home": "Dawley Town",
@@ -178,7 +188,7 @@
         {
           "minute": "11",
           "team": "home",
-          "scorer": "Own Goal"
+          "scorer": "Powell"
         },
         {
           "minute": "45",
@@ -193,18 +203,10 @@
         {
           "minute": "76",
           "team": "away",
-          "scorer": "Unknown"
+          "scorer": "Hatton"
         }
       ],
       "yellowCards": [
-        {
-          "team": "home",
-          "player": "Dawley keeper"
-        },
-        {
-          "team": "home",
-          "player": "Dawley 11"
-        },
         {
           "team": "home",
           "player": "Kane Lewis"
@@ -216,12 +218,16 @@
         {
           "team": "away",
           "player": "Pollard"
+        },
+        {
+          "team": "home",
+          "player": "Keeper"
         }
       ],
       "redCards": [],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-31T15:45:37.527Z"
+      "lastUpdated": "2026-10-31T15:55:39.368Z"
     }
   ],
-  "ticker": "@StaffordTown1st: 42 - Off the bar!!!\n\nDarlo has bought his shooting boots today.\n\nPat lays it off for him and he hits a half volley from the angle of the box. Inches from finding the top corner but it bounces down and out, \n\n🔴 3-0 🟣"
+  "ticker": "@TelfordTownFC: HALF TIME: Stafford Town 3 - 0 Telford Town\n#STATEL #Pitchero https://t.co/WJ5QLFP11c"
 }

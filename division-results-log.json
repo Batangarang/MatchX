@@ -180,35 +180,35 @@
       "home": "Foley Meir",
       "away": "Barnton",
       "score": "0-1",
-      "matchStage": "second_half",
+      "matchStage": "half_time",
       "scoreSource": "explicit"
     },
     "New Mills|Wednesfield Community": {
       "home": "New Mills",
       "away": "Wednesfield Community",
-      "score": "3-0",
-      "matchStage": "second_half",
+      "score": "4-0",
+      "matchStage": "half_time",
       "scoreSource": "explicit"
     },
     "Stafford Town|Telford Town": {
       "home": "Stafford Town",
       "away": "Telford Town",
       "score": "3-0",
-      "matchStage": "second_half",
+      "matchStage": "half_time",
       "scoreSource": "explicit"
     },
     "Eccleshall|Shawbury United": {
       "home": "Eccleshall",
       "away": "Shawbury United",
       "score": "3-0",
-      "matchStage": "second_half",
+      "matchStage": "half_time",
       "scoreSource": "explicit"
     },
     "Wolverhampton Casuals|Allscott Heath": {
       "home": "Wolverhampton Casuals",
       "away": "Allscott Heath",
       "score": "1-0",
-      "matchStage": "second_half",
+      "matchStage": "half_time",
       "scoreSource": "explicit"
     }
   }
