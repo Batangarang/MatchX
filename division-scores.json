@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-10-31T14:30:52.127Z",
+  "generatedAt": "2026-10-31T14:45:37.372Z",
   "date": "2026-10-31",
   "isToday": true,
-  "postCount": 34,
-  "latestPostTimestamp": "2026-10-31T14:29:49.000Z",
+  "postCount": 39,
+  "latestPostTimestamp": "2026-10-31T14:37:56.000Z",
   "fixtures": [
     {
       "home": "Widnes Town",
@@ -103,14 +103,19 @@
         {
           "minute": "11",
           "team": "home",
-          "scorer": "own goal (Sandbach defender)"
+          "scorer": "Own goal (Sandbach defender)"
         }
       ],
-      "yellowCards": [],
+      "yellowCards": [
+        {
+          "team": "away",
+          "player": "Kane Lewis"
+        }
+      ],
       "redCards": [],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-31T14:30:52.127Z"
+      "lastUpdated": "2026-10-31T14:45:37.372Z"
     }
   ],
-  "ticker": "@MDTFC: Here’s your line up for today’s game vs Crewe https://t.co/ewq0E7jTBI"
+  "ticker": "@foley_fc: 𝗧𝗘𝗔𝗠 𝗡𝗘𝗪𝗦 | 𝗕𝗔𝗥𝗡𝗧𝗢𝗡 (𝗛) 🔴⚫️\n\nHere’s how Foley line up this afternoon as we welcome Barnton to the Trentham Foods Stadium.\n\nThe lads are ready to go as we look to build on last weekend’s 3-0 win over Widnes Town and make it back-to-back victories on home soil. 💪 https://t.co/tc96ZLA8Tn"
 }
