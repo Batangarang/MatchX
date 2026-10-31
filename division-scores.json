@@ -1,98 +1,109 @@
 {
-  "generatedAt": "2026-10-31T10:55:31.003Z",
+  "generatedAt": "2026-10-31T11:01:01.804Z",
   "date": "2026-10-31",
   "isToday": true,
+  "postCount": 13,
+  "latestPostTimestamp": "2026-10-31T10:19:02.000Z",
   "fixtures": [
     {
-      "home": "15:00 Widnes Town",
-      "away": "Alsager Town  The Marine Travel Arena",
-      "kickoff": null,
+      "home": "Widnes Town",
+      "away": "Alsager Town",
+      "kickoff": "15:00",
       "score": null,
+      "matchStage": "scheduled",
       "goals": [],
       "yellowCards": [],
-      "redCards": []
+      "redCards": [],
+      "lastUpdated": "2026-10-31T11:01:01.804Z"
     },
     {
       "home": "Dawley Town",
       "away": "Sandbach United",
       "kickoff": "14:00",
       "score": null,
+      "matchStage": "scheduled",
       "goals": [],
       "yellowCards": [],
-      "redCards": []
+      "redCards": [],
+      "lastUpdated": "2026-10-31T11:01:01.804Z"
     },
     {
       "home": "Cheadle Heath Nomads",
       "away": "Brereton Social",
       "kickoff": "15:00",
       "score": null,
+      "matchStage": "scheduled",
       "goals": [],
       "yellowCards": [],
-      "redCards": []
+      "redCards": [],
+      "lastUpdated": "2026-10-31T11:01:01.804Z"
     },
     {
       "home": "Eccleshall",
       "away": "Shawbury United",
       "kickoff": "15:00",
       "score": null,
+      "matchStage": "scheduled",
       "goals": [],
       "yellowCards": [],
-      "redCards": []
+      "redCards": [],
+      "lastUpdated": "2026-10-31T11:01:01.804Z"
     },
     {
       "home": "Foley Meir",
       "away": "Barnton",
       "kickoff": "15:00",
       "score": null,
+      "matchStage": "scheduled",
       "goals": [],
       "yellowCards": [],
-      "redCards": []
+      "redCards": [],
+      "lastUpdated": "2026-10-31T11:01:01.804Z"
     },
     {
       "home": "Market Drayton Town",
       "away": "Crewe",
       "kickoff": "15:00",
       "score": null,
+      "matchStage": "scheduled",
       "goals": [],
       "yellowCards": [],
-      "redCards": []
+      "redCards": [],
+      "lastUpdated": "2026-10-31T11:01:01.804Z"
     },
     {
       "home": "New Mills",
       "away": "Wednesfield Community",
       "kickoff": "15:00",
       "score": null,
+      "matchStage": "scheduled",
       "goals": [],
       "yellowCards": [],
-      "redCards": []
+      "redCards": [],
+      "lastUpdated": "2026-10-31T11:01:01.804Z"
     },
     {
       "home": "Stafford Town",
       "away": "Telford Town",
       "kickoff": "15:00",
       "score": null,
+      "matchStage": "scheduled",
       "goals": [],
       "yellowCards": [],
-      "redCards": []
-    },
-    {
-      "home": "Widnes Town",
-      "away": "Alsager Town (15:00)",
-      "kickoff": null,
-      "score": null,
-      "goals": [],
-      "yellowCards": [],
-      "redCards": []
+      "redCards": [],
+      "lastUpdated": "2026-10-31T11:01:01.804Z"
     },
     {
       "home": "Wolverhampton Casuals",
       "away": "Allscott Heath",
       "kickoff": "15:00",
       "score": null,
+      "matchStage": "scheduled",
       "goals": [],
       "yellowCards": [],
-      "redCards": []
+      "redCards": [],
+      "lastUpdated": "2026-10-31T11:01:01.804Z"
     }
   ],
-  "ticker": null
+  "ticker": "@crewefc: 𝗠𝗮𝘁𝗰𝗵𝗱𝗮𝘆! \n\n⚽️@MDTFC v @CreweFC \n\n🗓 31/10/26\n\n🏆 @nwcfl First Division South \n\n🕒 3pm Kick Off\n\n📍Balufab Stadium, Market Drayton, TF9 3SL\n\n🎟£5 - Adults / £3 - Concessions / £1 - U16s\n\n👋🏻 See you there! https://t.co/bCIENlJi1d"
 }
