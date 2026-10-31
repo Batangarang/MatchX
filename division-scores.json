@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-10-31T21:45:40.630Z",
+  "generatedAt": "2026-10-31T23:45:42.173Z",
   "date": "2026-10-31",
   "isToday": true,
-  "postCount": 202,
-  "latestPostTimestamp": "2026-10-31T21:22:59.000Z",
+  "postCount": 204,
+  "latestPostTimestamp": "2026-10-31T22:17:23.000Z",
   "fixtures": [
     {
       "home": "Widnes Town",
@@ -135,11 +135,6 @@
           "scorer": "Akim Samms"
         },
         {
-          "minute": 44,
-          "team": "home",
-          "scorer": "Will Frankish"
-        },
-        {
           "minute": 56,
           "team": "away",
           "scorer": null
@@ -153,6 +148,11 @@
           "minute": 74,
           "team": "home",
           "scorer": "Lewis McGill"
+        },
+        {
+          "minute": 87,
+          "team": "home",
+          "scorer": "Glebs Klujevs"
         }
       ],
       "yellowCards": [
@@ -163,7 +163,7 @@
       ],
       "redCards": [],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-31T21:45:40.630Z"
+      "lastUpdated": "2026-10-31T23:45:42.173Z"
     },
     {
       "home": "Stafford Town",
@@ -277,13 +277,13 @@
       "yellowCards": [
         {
           "team": "home",
-          "player": "Kane Lewis"
+          "player": null
         }
       ],
       "redCards": [],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-31T21:45:40.630Z"
+      "lastUpdated": "2026-10-31T23:45:42.173Z"
     }
   ],
-  "ticker": "@DawleyTownFC: More than just a football club, This is a family and a community who stick together and have each others backs! Thank you ❤️ https://t.co/mJX1eHwTC6"
+  "ticker": "@DawleyTownFC: Wow! What an amazing day. Again, Thank you for your continued support especially today!\n\nGoodnight jockey’s ❤️ https://t.co/CrGBN3AkkN"
 }
