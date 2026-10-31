@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-10-31T14:15:40.202Z",
+  "generatedAt": "2026-10-31T14:30:52.127Z",
   "date": "2026-10-31",
   "isToday": true,
-  "postCount": 28,
-  "latestPostTimestamp": "2026-10-31T14:14:34.000Z",
+  "postCount": 34,
+  "latestPostTimestamp": "2026-10-31T14:29:49.000Z",
   "fixtures": [
     {
       "home": "Widnes Town",
@@ -103,14 +103,14 @@
         {
           "minute": "11",
           "team": "home",
-          "scorer": "Sandbach defender (own goal)"
+          "scorer": "own goal (Sandbach defender)"
         }
       ],
       "yellowCards": [],
       "redCards": [],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-31T14:15:40.202Z"
+      "lastUpdated": "2026-10-31T14:30:52.127Z"
     }
   ],
-  "ticker": "@DawleyTownFC: We take the lead on a special day!! Powell whips the ball into the box and the Sandbach defender flicks it into his own net! \n\n1-0 on 11’ https://t.co/rqUbaTmO1H"
+  "ticker": "@MDTFC: Here’s your line up for today’s game vs Crewe https://t.co/ewq0E7jTBI"
 }
