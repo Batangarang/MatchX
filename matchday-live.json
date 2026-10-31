@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-10-31T14:20:47.111Z",
+  "generatedAt": "2026-10-31T14:25:39.982Z",
   "fixtureDate": "2026-10-31",
   "kickoff": "14:00",
   "homeTeam": "Dawley Town",
   "awayTeam": "Sandbach United",
-  "postsUsed": 12,
+  "postsUsed": 13,
   "imagesAnalyzedThisRun": 0,
   "totalImagesAnalyzed": 7,
   "match": {
@@ -45,17 +45,9 @@
       },
       "away": {
         "players": [
-          "1. Greg Hall",
-          "2. Kieran O'Connell",
-          "3. Jacob Vernon",
-          "4. Saul Shotton",
-          "5. Jordan Stafford",
-          "6. Kieran Nolan",
-          "7. Matthew Birchall",
-          "8. Mitch Nolan",
-          "9. Harry Cain",
-          "10. Robbie Hatton",
-          "11. Kyle Foley"
+          "Harry Cain",
+          "Kieran O'Connell",
+          "Stan Tatters"
         ],
         "substitutes": [
           "Callum Besford",
@@ -111,13 +103,13 @@
     "roughXG": {
       "firstHalf": {
         "home": 1.2,
-        "away": 0.3,
+        "away": 0.8,
         "note": "Dawley scored from a Powell cross; Sandbach had one early chance that went wide"
       },
       "secondHalf": {
         "home": 0,
         "away": 0,
-        "note": "No events reported in second half"
+        "note": "No match data available"
       },
       "extraTime": {
         "home": 0,
@@ -126,21 +118,21 @@
       },
       "total": {
         "home": 1.2,
-        "away": 0.3,
-        "note": "Dawley's goal came from a well-executed cross; limited data for full match"
+        "away": 0.8,
+        "note": "Based on first-half action only; match ongoing"
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
     "matchControl": {
       "firstHalf": {
-        "home": 60,
-        "away": 40,
-        "note": "Sandbach had early chance but Dawley took control and scored"
+        "home": 55,
+        "away": 45,
+        "note": "Sandbach had early chance but Dawley scored and took control"
       },
       "secondHalf": {
         "home": 50,
         "away": 50,
-        "note": "No events reported; match still in progress at last update"
+        "note": "No match data available"
       },
       "extraTime": {
         "home": 50,
@@ -150,7 +142,7 @@
       "total": {
         "home": 55,
         "away": 45,
-        "note": "Limited data; Dawley ahead with goal and likely momentum"
+        "note": "Based on first-half action only; match ongoing"
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
