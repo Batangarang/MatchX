@@ -1,25 +1,19 @@
 {
-  "generatedAt": "2026-10-31T15:15:50.369Z",
+  "generatedAt": "2026-10-31T15:20:53.256Z",
   "fixtureDate": "2026-10-31",
   "kickoff": "14:00",
   "homeTeam": "Dawley Town",
   "awayTeam": "Sandbach United",
-  "postsUsed": 26,
-  "imagesAnalyzedThisRun": 1,
+  "postsUsed": 27,
+  "imagesAnalyzedThisRun": 0,
   "totalImagesAnalyzed": 11,
   "match": {
-    "score": "2-0",
-    "scoreSource": "division_scores",
+    "score": "3-0",
+    "scoreSource": "confirmed_by_both_feeds",
     "scoreConfirmed": true,
     "feedScore": "3-0",
-    "scoreDiscrepancy": "Match feed said 3-0 but the division live-scores feed said 2-0 — showing 2-0.",
-    "unconfirmedGoals": [
-      {
-        "minute": 49,
-        "team": "home",
-        "scorer": "Ross Jones"
-      }
-    ],
+    "scoreDiscrepancy": null,
+    "unconfirmedGoals": [],
     "finalScoreAnnounced": null,
     "halfTimeScoreAnnounced": "2-0",
     "htDiscrepancy": null,
@@ -74,6 +68,11 @@
         "minute": 45,
         "team": "home",
         "scorer": "Ross Jones"
+      },
+      {
+        "minute": 49,
+        "team": "home",
+        "scorer": "Ross Jones"
       }
     ],
     "yellowCards": [
@@ -104,10 +103,16 @@
         "playerOn": "Jack Finney"
       },
       {
-        "minute": 45,
+        "minute": 46,
         "team": "away",
         "playerOff": "Kieran Nolan",
         "playerOn": "Tatters"
+      },
+      {
+        "minute": 53,
+        "team": "away",
+        "playerOff": "Birchall",
+        "playerOn": "Cope"
       }
     ],
     "sinBins": [
@@ -171,14 +176,14 @@
     },
     "roughXG": {
       "firstHalf": {
-        "home": 2,
-        "away": 0.5,
-        "note": "Dawley scored twice (including own goal); Sandbach had one close chance that went wide"
+        "home": 1.8,
+        "away": 0.3,
+        "note": "Dawley scored twice (one own goal, one quality finish); Sandbach had one early chance that went wide"
       },
       "secondHalf": {
-        "home": 1,
-        "away": 0,
-        "note": "Ross Jones added a third goal in early second half; Sandbach offered minimal attacking threat"
+        "home": 1.2,
+        "away": 0.1,
+        "note": "Dawley added a third from a defensive error; Sandbach offered minimal threat"
       },
       "extraTime": {
         "home": 0,
@@ -187,21 +192,21 @@
       },
       "total": {
         "home": 3,
-        "away": 0.5,
-        "note": "Dawley dominated throughout; Sandbach struggled and conceded defensive errors"
+        "away": 0.4,
+        "note": "Dawley dominated; three goals and clear control; Sandbach struggled defensively"
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
     "matchControl": {
       "firstHalf": {
-        "home": 70,
-        "away": 30,
-        "note": "Dawley took control after early chance for Sandbach; scored twice and limited visitors"
+        "home": 65,
+        "away": 35,
+        "note": "Dawley took control after early Sandbach chance; scored twice including own goal from pressure"
       },
       "secondHalf": {
-        "home": 80,
-        "away": 20,
-        "note": "Dawley extended lead early in second half; Sandbach made substitution at HT but remained ineffective"
+        "home": 75,
+        "away": 25,
+        "note": "Dawley continued to dominate; Sandbach made multiple substitutions and offered little resistance"
       },
       "extraTime": {
         "home": 50,
@@ -209,9 +214,9 @@
         "note": "No extra time played"
       },
       "total": {
-        "home": 75,
-        "away": 25,
-        "note": "Decisive home dominance; Sandbach described their performance as 'poor' and 'out muscled'"
+        "home": 70,
+        "away": 30,
+        "note": "Clear Dawley dominance throughout; Sandbach 'out muscled' and vulnerable defensively per their own post"
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
