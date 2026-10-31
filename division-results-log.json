@@ -172,8 +172,8 @@
     "Dawley Town|Sandbach United": {
       "home": "Dawley Town",
       "away": "Sandbach United",
-      "score": "1-0",
-      "matchStage": "first_half",
+      "score": "2-0",
+      "matchStage": "half_time",
       "scoreSource": "explicit"
     }
   }

@@ -1,69 +1,6 @@
 {
-  "generatedAt": "2026-10-31T14:55:32.495Z",
+  "generatedAt": "2026-10-31T15:01:00.793Z",
   "fixtures": [
-    {
-      "date": "Saturday 31 October 2026",
-      "home": "15:00 Widnes Town",
-      "away": "Alsager Town  The Marine Travel Arena",
-      "kickoff": null,
-      "postponed": true
-    },
-    {
-      "date": "Saturday 31 October 2026",
-      "home": "Cheadle Heath Nomads",
-      "away": "Brereton Social",
-      "kickoff": "15:00",
-      "postponed": false
-    },
-    {
-      "date": "Saturday 31 October 2026",
-      "home": "Eccleshall",
-      "away": "Shawbury United",
-      "kickoff": "15:00",
-      "postponed": false
-    },
-    {
-      "date": "Saturday 31 October 2026",
-      "home": "Foley Meir",
-      "away": "Barnton",
-      "kickoff": "15:00",
-      "postponed": false
-    },
-    {
-      "date": "Saturday 31 October 2026",
-      "home": "Market Drayton Town",
-      "away": "Crewe",
-      "kickoff": "15:00",
-      "postponed": false
-    },
-    {
-      "date": "Saturday 31 October 2026",
-      "home": "New Mills",
-      "away": "Wednesfield Community",
-      "kickoff": "15:00",
-      "postponed": false
-    },
-    {
-      "date": "Saturday 31 October 2026",
-      "home": "Stafford Town",
-      "away": "Telford Town",
-      "kickoff": "15:00",
-      "postponed": false
-    },
-    {
-      "date": "Saturday 31 October 2026",
-      "home": "Widnes Town",
-      "away": "Alsager Town (15:00)",
-      "kickoff": null,
-      "postponed": true
-    },
-    {
-      "date": "Saturday 31 October 2026",
-      "home": "Wolverhampton Casuals",
-      "away": "Allscott Heath",
-      "kickoff": "15:00",
-      "postponed": false
-    },
     {
       "date": "Saturday 7 November 2026",
       "home": "AFC Bridgnorth",
@@ -1727,6 +1664,69 @@
       "date": "Saturday 17 April 2027",
       "home": "Wolverhampton Casuals",
       "away": "Cheadle Heath Nomads",
+      "kickoff": "15:00",
+      "postponed": false
+    },
+    {
+      "date": "Saturday 31 October 2026",
+      "home": "15:00 Widnes Town",
+      "away": "Alsager Town  The Marine Travel Arena",
+      "kickoff": null,
+      "postponed": true
+    },
+    {
+      "date": "Saturday 31 October 2026",
+      "home": "Cheadle Heath Nomads",
+      "away": "Brereton Social",
+      "kickoff": "15:00",
+      "postponed": false
+    },
+    {
+      "date": "Saturday 31 October 2026",
+      "home": "Eccleshall",
+      "away": "Shawbury United",
+      "kickoff": "15:00",
+      "postponed": false
+    },
+    {
+      "date": "Saturday 31 October 2026",
+      "home": "Foley Meir",
+      "away": "Barnton",
+      "kickoff": "15:00",
+      "postponed": false
+    },
+    {
+      "date": "Saturday 31 October 2026",
+      "home": "Market Drayton Town",
+      "away": "Crewe",
+      "kickoff": "15:00",
+      "postponed": false
+    },
+    {
+      "date": "Saturday 31 October 2026",
+      "home": "New Mills",
+      "away": "Wednesfield Community",
+      "kickoff": "15:00",
+      "postponed": false
+    },
+    {
+      "date": "Saturday 31 October 2026",
+      "home": "Stafford Town",
+      "away": "Telford Town",
+      "kickoff": "15:00",
+      "postponed": false
+    },
+    {
+      "date": "Saturday 31 October 2026",
+      "home": "Widnes Town",
+      "away": "Alsager Town (15:00)",
+      "kickoff": null,
+      "postponed": true
+    },
+    {
+      "date": "Saturday 31 October 2026",
+      "home": "Wolverhampton Casuals",
+      "away": "Allscott Heath",
       "kickoff": "15:00",
       "postponed": false
     },
