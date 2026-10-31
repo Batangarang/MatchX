@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-10-31T17:10:40.958Z",
+  "generatedAt": "2026-10-31T17:25:32.080Z",
   "date": "2026-10-31",
   "isToday": true,
-  "postCount": 189,
-  "latestPostTimestamp": "2026-10-31T17:03:41.000Z",
+  "postCount": 190,
+  "latestPostTimestamp": "2026-10-31T17:13:34.000Z",
   "fixtures": [
     {
       "home": "Widnes Town",
@@ -27,17 +27,12 @@
           "minute": null,
           "team": "home",
           "scorer": "Captain Flem"
-        },
-        {
-          "minute": null,
-          "team": "away",
-          "scorer": null
         }
       ],
       "yellowCards": [],
       "redCards": [],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-31T17:10:40.958Z"
+      "lastUpdated": "2026-10-31T17:25:32.080Z"
     },
     {
       "home": "Eccleshall",
@@ -72,10 +67,15 @@
           "scorer": "Charlie Padania"
         }
       ],
-      "yellowCards": [],
+      "yellowCards": [
+        {
+          "team": "away",
+          "player": null
+        }
+      ],
       "redCards": [],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-31T17:10:40.958Z"
+      "lastUpdated": "2026-10-31T17:25:32.080Z"
     },
     {
       "home": "Foley Meir",
@@ -134,11 +134,6 @@
           "scorer": "Akim Samms"
         },
         {
-          "minute": 44,
-          "team": "home",
-          "scorer": "Will Frankish"
-        },
-        {
           "minute": 56,
           "team": "away",
           "scorer": null
@@ -159,10 +154,15 @@
           "scorer": "Glebs Klujevs"
         }
       ],
-      "yellowCards": [],
+      "yellowCards": [
+        {
+          "team": "away",
+          "player": null
+        }
+      ],
       "redCards": [],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-31T17:10:40.958Z"
+      "lastUpdated": "2026-10-31T17:25:32.080Z"
     },
     {
       "home": "Stafford Town",
@@ -227,7 +227,7 @@
         {
           "minute": 82,
           "team": "home",
-          "scorer": "Own Goal"
+          "scorer": null
         }
       ],
       "yellowCards": [
@@ -243,7 +243,7 @@
         }
       ],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-31T17:10:40.958Z"
+      "lastUpdated": "2026-10-31T17:25:32.080Z"
     },
     {
       "home": "Dawley Town",
@@ -255,7 +255,7 @@
         {
           "minute": 11,
           "team": "home",
-          "scorer": "Own Goal"
+          "scorer": null
         },
         {
           "minute": 45,
@@ -276,13 +276,17 @@
       "yellowCards": [
         {
           "team": "home",
-          "player": "Kane Lewis"
+          "player": null
+        },
+        {
+          "team": "away",
+          "player": null
         }
       ],
       "redCards": [],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-31T17:10:40.958Z"
+      "lastUpdated": "2026-10-31T17:25:32.080Z"
     }
   ],
-  "ticker": "@AllscottHeathFC: 4-0 loss on the road against @WolvCassies \n\nScore line generous, Allscott just not at the races today 3 sloppy goals conceded with the Wolves keeper having a superb game keeping a clean sheet."
+  "ticker": "@DawleyTownFC: We had Alan speak to Tom and Con after today’s amazing victory against Sandbach! Definitely worth a watch!!! Thank you everyone for your support ❤️\n\nhttps://youtu.be/V988y6T-Ij0?feature=shared https://t.co/g3t1xsuyu6"
 }
