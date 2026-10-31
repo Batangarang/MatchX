@@ -13021,14 +13021,14 @@
       "aiCostGBP": 0.0193
     },
     {
-      "script": "x-posts",
-      "timestamp": "2026-10-31T17:30:38.553Z",
-      "getxapiCalls": 1,
-      "claudeCalls": 0,
-      "inputTokens": 0,
-      "outputTokens": 0,
-      "xCostGBP": 0.0008,
-      "aiCostGBP": 0
+      "script": "recap-recap",
+      "timestamp": "2026-10-31T17:30:46.606Z",
+      "getxapiCalls": 0,
+      "claudeCalls": 1,
+      "inputTokens": 11171,
+      "outputTokens": 331,
+      "xCostGBP": 0,
+      "aiCostGBP": 0.0096
     }
   ]
 }
