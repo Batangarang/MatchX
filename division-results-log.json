@@ -168,5 +168,13 @@
       "scoreSource": "explicit"
     }
   },
-  "2026-10-31": {}
+  "2026-10-31": {
+    "Dawley Town|Sandbach United": {
+      "home": "Dawley Town",
+      "away": "Sandbach United",
+      "score": "1-0",
+      "matchStage": "first_half",
+      "scoreSource": "explicit"
+    }
+  }
 }
