@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-31T15:01:27.048Z",
+  "generatedAt": "2026-10-31T15:05:31.246Z",
   "fixtureDate": "2026-10-31",
   "kickoff": "14:00",
   "homeTeam": "Dawley Town",
@@ -8,23 +8,12 @@
   "imagesAnalyzedThisRun": 1,
   "totalImagesAnalyzed": 10,
   "match": {
-    "score": "1-0",
-    "scoreSource": "division_scores",
+    "score": "2-0",
+    "scoreSource": "confirmed_by_both_feeds",
     "scoreConfirmed": true,
     "feedScore": "2-0",
-    "scoreDiscrepancy": "Match feed said 2-0 but the division live-scores feed said 1-0 — showing 1-0.",
-    "unconfirmedGoals": [
-      {
-        "minute": 45,
-        "team": "home",
-        "scorer": "Ross Jones"
-      },
-      {
-        "minute": 11,
-        "team": "home",
-        "scorer": "Own Goal (Sandbach defender)"
-      }
-    ],
+    "scoreDiscrepancy": null,
+    "unconfirmedGoals": [],
     "finalScoreAnnounced": null,
     "halfTimeScoreAnnounced": "2-0",
     "htDiscrepancy": "First-half goals suggest HT 1-0, but an announced HT score of 2-0 was also seen.",
