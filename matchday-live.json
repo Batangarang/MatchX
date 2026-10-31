@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-10-31T14:35:38.747Z",
+  "generatedAt": "2026-10-31T14:40:50.110Z",
   "fixtureDate": "2026-10-31",
   "kickoff": "14:00",
   "homeTeam": "Dawley Town",
   "awayTeam": "Sandbach United",
-  "postsUsed": 15,
+  "postsUsed": 17,
   "imagesAnalyzedThisRun": 0,
   "totalImagesAnalyzed": 7,
   "match": {
@@ -51,10 +51,7 @@
           "Saul Shotton"
         ],
         "substitutes": [
-          "Callum Besford",
           "Jack Finney",
-          "Stanley Tatters",
-          "Niall Cope",
           "Jake Pollard"
         ],
         "manager": null,
@@ -65,14 +62,14 @@
       {
         "minute": 11,
         "team": "home",
-        "scorer": "Sandbach defender own goal (from Powell cross)"
+        "scorer": "Sandbach defender (own goal), from Powell cross"
       }
     ],
     "yellowCards": [],
     "redCards": [],
     "substitutions": [
       {
-        "minute": 14,
+        "minute": 13,
         "team": "away",
         "playerOff": "Saul Shotton",
         "playerOn": "Jack Finney"
@@ -84,7 +81,13 @@
         "playerOn": "Jake Pollard"
       }
     ],
-    "sinBins": [],
+    "sinBins": [
+      {
+        "minute": 34,
+        "team": "home",
+        "player": "Kane Lewis"
+      }
+    ],
     "injuries": [
       {
         "minute": 16,
@@ -103,6 +106,12 @@
         "team": "away",
         "player": "Harry Cain",
         "note": "gone off injured"
+      },
+      {
+        "minute": 13,
+        "team": "away",
+        "player": "Saul Shotton",
+        "note": "Forced to leave field"
       }
     ],
     "addedTime": {
@@ -123,12 +132,12 @@
       "firstHalf": {
         "home": 1.2,
         "away": 0.4,
-        "note": "Sandbach had an early chance that went wide; Dawley scored via own goal from a cross from the left. Limited clear-cut chances reported."
+        "note": "Dawley scored from a Powell cross (own goal). Sandbach had one early chance that went wide."
       },
       "secondHalf": {
         "home": 0,
         "away": 0,
-        "note": "No second-half action reported in posts."
+        "note": "No second half data available in posts."
       },
       "extraTime": {
         "home": 0,
@@ -138,7 +147,7 @@
       "total": {
         "home": 1.2,
         "away": 0.4,
-        "note": "Home team ahead 1-0 from own goal; Sandbach had one early chance wide of post."
+        "note": "Limited data; first half only. Dawley 1-0 up from own goal. Sandbach had early chance wide."
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
@@ -146,12 +155,12 @@
       "firstHalf": {
         "home": 55,
         "away": 45,
-        "note": "Sandbach had the first chance but Dawley scored early and appeared to control the game thereafter. Multiple Sandbach injuries suggest reactive defending."
+        "note": "Sandbach had early chance but Dawley took the lead and appeared to control proceedings. Sandbach forced into two substitutions due to injuries by minute 30."
       },
       "secondHalf": {
         "home": 50,
         "away": 50,
-        "note": "No second-half data available in posts."
+        "note": "No second half data in posts."
       },
       "extraTime": {
         "home": 50,
@@ -161,7 +170,7 @@
       "total": {
         "home": 55,
         "away": 45,
-        "note": "Inferred from first-half events only; Sandbach forced into multiple injury substitutions."
+        "note": "Based on first half only. Dawley ahead and seemingly in control; Sandbach dealing with injuries."
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
