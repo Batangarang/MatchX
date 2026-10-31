@@ -13101,13 +13101,33 @@
       "aiCostGBP": 0
     },
     {
-      "script": "division-posts",
-      "timestamp": "2026-10-31T13:31:07.420Z",
-      "getxapiCalls": 20,
+      "script": "x-posts",
+      "timestamp": "2026-10-31T13:30:38.598Z",
+      "getxapiCalls": 1,
       "claudeCalls": 0,
       "inputTokens": 0,
       "outputTokens": 0,
-      "xCostGBP": 0.015,
+      "xCostGBP": 0.0008,
+      "aiCostGBP": 0
+    },
+    {
+      "script": "x-insights",
+      "timestamp": "2026-10-31T13:30:41.186Z",
+      "getxapiCalls": 0,
+      "claudeCalls": 1,
+      "inputTokens": 647,
+      "outputTokens": 78,
+      "xCostGBP": 0,
+      "aiCostGBP": 0.0008
+    },
+    {
+      "script": "division-scores",
+      "timestamp": "2026-10-31T13:31:10.636Z",
+      "getxapiCalls": 18,
+      "claudeCalls": 0,
+      "inputTokens": 0,
+      "outputTokens": 0,
+      "xCostGBP": 0.0135,
       "aiCostGBP": 0
     }
   ]
