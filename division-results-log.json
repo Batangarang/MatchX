@@ -186,15 +186,15 @@
     "New Mills|Wednesfield Community": {
       "home": "New Mills",
       "away": "Wednesfield Community",
-      "score": "4-2",
-      "matchStage": "second_half",
+      "score": "5-2",
+      "matchStage": "full_time",
       "scoreSource": "explicit"
     },
     "Stafford Town|Telford Town": {
       "home": "Stafford Town",
       "away": "Telford Town",
-      "score": "3-0",
-      "matchStage": "half_time",
+      "score": "3-1",
+      "matchStage": "full_time",
       "scoreSource": "explicit"
     },
     "Eccleshall|Shawbury United": {

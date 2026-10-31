@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-10-31T16:25:29.267Z",
+  "generatedAt": "2026-10-31T16:35:31.604Z",
   "date": "2026-10-31",
   "isToday": true,
-  "postCount": 147,
-  "latestPostTimestamp": "2026-10-31T16:24:59.000Z",
+  "postCount": 159,
+  "latestPostTimestamp": "2026-10-31T16:33:56.000Z",
   "fixtures": [
     {
       "home": "Widnes Town",
@@ -42,24 +42,19 @@
       "matchStage": "full_time",
       "goals": [
         {
-          "minute": "25",
+          "minute": 26,
           "team": "home",
           "scorer": "Danny"
         },
         {
-          "minute": "35",
+          "minute": 35,
           "team": "home",
-          "scorer": "Nicky"
+          "scorer": "Parker"
         },
         {
-          "minute": "38",
+          "minute": 39,
           "team": "home",
           "scorer": "Levi Hunter"
-        },
-        {
-          "minute": "68",
-          "team": "home",
-          "scorer": "Care"
         }
       ],
       "yellowCards": [
@@ -70,7 +65,7 @@
       ],
       "redCards": [],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-31T16:25:29.267Z"
+      "lastUpdated": "2026-10-31T16:35:31.604Z"
     },
     {
       "home": "Foley Meir",
@@ -80,12 +75,12 @@
       "matchStage": "full_time",
       "goals": [
         {
-          "minute": "29",
+          "minute": 29,
           "team": "away",
           "scorer": "Humphries"
         },
         {
-          "minute": "51",
+          "minute": 51,
           "team": "away",
           "scorer": "Stanton"
         }
@@ -93,7 +88,7 @@
       "yellowCards": [],
       "redCards": [],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-31T16:10:44.630Z"
+      "lastUpdated": "2026-10-31T16:35:31.604Z"
     },
     {
       "home": "Market Drayton Town",
@@ -110,38 +105,38 @@
       "home": "New Mills",
       "away": "Wednesfield Community",
       "kickoff": "15:00",
-      "score": "4-2",
-      "matchStage": "second_half",
+      "score": "5-2",
+      "matchStage": "full_time",
       "goals": [
         {
-          "minute": "19",
+          "minute": 19,
           "team": "home",
           "scorer": "Jimmy Green"
         },
         {
-          "minute": "22",
+          "minute": 22,
           "team": "home",
           "scorer": "Macca"
         },
         {
-          "minute": "34",
+          "minute": 34,
           "team": "home",
           "scorer": "Akim Samms"
         },
         {
-          "minute": "44",
+          "minute": 56,
+          "team": "away",
+          "scorer": null
+        },
+        {
+          "minute": 63,
+          "team": "away",
+          "scorer": null
+        },
+        {
+          "minute": 74,
           "team": "home",
-          "scorer": "Will Frankish"
-        },
-        {
-          "minute": "56",
-          "team": "away",
-          "scorer": null
-        },
-        {
-          "minute": "63",
-          "team": "away",
-          "scorer": null
+          "scorer": "Lewis McGill"
         }
       ],
       "yellowCards": [
@@ -152,29 +147,34 @@
       ],
       "redCards": [],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-31T16:25:29.267Z"
+      "lastUpdated": "2026-10-31T16:35:31.604Z"
     },
     {
       "home": "Stafford Town",
       "away": "Telford Town",
       "kickoff": "15:00",
-      "score": "3-0",
-      "matchStage": "half_time",
+      "score": "3-1",
+      "matchStage": "full_time",
       "goals": [
         {
-          "minute": "18",
+          "minute": 18,
           "team": "home",
           "scorer": "Callum"
         },
         {
-          "minute": "21",
+          "minute": 21,
           "team": "home",
           "scorer": "Jordan Darlington"
         },
         {
-          "minute": "35",
+          "minute": 35,
           "team": "home",
           "scorer": "Brenden Parker"
+        },
+        {
+          "minute": 70,
+          "team": "away",
+          "scorer": "Logan Whittaker"
         }
       ],
       "yellowCards": [
@@ -185,7 +185,7 @@
       ],
       "redCards": [],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-31T16:25:29.267Z"
+      "lastUpdated": "2026-10-31T16:35:31.604Z"
     },
     {
       "home": "Wolverhampton Casuals",
@@ -195,7 +195,7 @@
       "matchStage": "half_time",
       "goals": [
         {
-          "minute": "19",
+          "minute": 19,
           "team": "home",
           "scorer": "Kieran Cook"
         }
@@ -208,7 +208,7 @@
       ],
       "redCards": [],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-31T15:55:39.368Z"
+      "lastUpdated": "2026-10-31T16:35:31.604Z"
     },
     {
       "home": "Dawley Town",
@@ -218,31 +218,27 @@
       "matchStage": "full_time",
       "goals": [
         {
-          "minute": "11",
+          "minute": 11,
           "team": "home",
-          "scorer": "own goal"
+          "scorer": null
         },
         {
-          "minute": "45",
-          "team": "home",
-          "scorer": "Ross Jones"
-        },
-        {
-          "minute": "49",
+          "minute": 45,
           "team": "home",
           "scorer": "Ross Jones"
         },
         {
-          "minute": "76",
+          "minute": 49,
+          "team": "home",
+          "scorer": "Ross Jones"
+        },
+        {
+          "minute": 76,
           "team": "away",
-          "scorer": "penalty"
+          "scorer": null
         }
       ],
       "yellowCards": [
-        {
-          "team": "home",
-          "player": "Kane Lewis"
-        },
         {
           "team": "home",
           "player": null
@@ -250,8 +246,8 @@
       ],
       "redCards": [],
       "scoreSource": "explicit",
-      "lastUpdated": "2026-10-31T16:25:29.267Z"
+      "lastUpdated": "2026-10-31T16:35:31.604Z"
     }
   ],
-  "ticker": "@shawburyutd: 68’ Care \n\n🔵🔵3-0⚪️⚫️ https://t.co/LKJGKUPrm1"
+  "ticker": "@StaffordTown1st: 75 - Sub for Town\n\nTom Duffy replaces Brenden Parker \n\n🔴 3-1 🟣"
 }
