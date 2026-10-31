@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-10-31T15:25:42.149Z",
+  "generatedAt": "2026-10-31T15:31:04.505Z",
   "fixtureDate": "2026-10-31",
   "kickoff": "14:00",
   "homeTeam": "Dawley Town",
   "awayTeam": "Sandbach United",
-  "postsUsed": 28,
-  "imagesAnalyzedThisRun": 0,
-  "totalImagesAnalyzed": 11,
+  "postsUsed": 30,
+  "imagesAnalyzedThisRun": 1,
+  "totalImagesAnalyzed": 12,
   "match": {
     "score": "3-0",
     "scoreSource": "confirmed_by_both_feeds",
@@ -106,13 +106,13 @@
         "playerOn": "Jack Finney"
       },
       {
-        "minute": 45,
+        "minute": 46,
         "team": "away",
         "playerOff": "Kieran Nolan",
         "playerOn": "Stan Tatters"
       },
       {
-        "minute": 53,
+        "minute": 54,
         "team": "away",
         "playerOff": "Birchall",
         "playerOn": "Cope"
@@ -122,6 +122,18 @@
         "team": "away",
         "playerOff": "Birchall",
         "playerOn": "Cope"
+      },
+      {
+        "minute": 66,
+        "team": "home",
+        "playerOff": "Kieran Buckley",
+        "playerOn": "Dan Beddows"
+      },
+      {
+        "minute": 66,
+        "team": "home",
+        "playerOff": "Jack Hodnett",
+        "playerOn": "Joe Cuff"
       }
     ],
     "sinBins": [
@@ -170,7 +182,7 @@
       }
     ],
     "addedTime": {
-      "firstHalf": "5",
+      "firstHalf": 5,
       "secondHalf": null
     },
     "wentToExtraTime": false,
@@ -185,14 +197,14 @@
     },
     "roughXG": {
       "firstHalf": {
-        "home": 2,
+        "home": 1.5,
         "away": 0.3,
-        "note": "Home side scored 2 goals (own goal + Ross Jones finish from good position); away side had one early chance that went wide"
+        "note": "Dawley scored twice in first half (one own goal, one Ross Jones finish); Sandbach had an early chance that went wide (raised to reflect goals actually scored)"
       },
       "secondHalf": {
-        "home": 1.5,
-        "away": 0.2,
-        "note": "Home side scored 1 goal quickly; away side had defensive errors but limited attacking threat evident"
+        "home": 0.8,
+        "away": 0.4,
+        "note": "Dawley scored once more early in second half; Sandbach had a header off target and a blocked shot with clearance off the line"
       },
       "extraTime": {
         "home": 0,
@@ -200,9 +212,9 @@
         "note": "No extra time played"
       },
       "total": {
-        "home": 3.5,
-        "away": 0.5,
-        "note": "Home side dominated, scoring 3 goals from defensive errors and clinical finishing; away side created minimal clear chances"
+        "home": 2.3,
+        "away": 0.7,
+        "note": "Dawley dominated with three goals scored; Sandbach created limited chances (raised to reflect goals actually scored)"
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
@@ -210,12 +222,12 @@
       "firstHalf": {
         "home": 65,
         "away": 35,
-        "note": "Home side took early lead and controlled proceedings; away side had one early chance but were generally outmuscled"
+        "note": "Dawley took the lead early and controlled proceedings; Sandbach struggled and were described as 'out muscled'"
       },
       "secondHalf": {
-        "home": 75,
-        "away": 25,
-        "note": "Home side continued dominance, scoring quickly after restart; away side struggled and defensive errors led to third goal"
+        "home": 70,
+        "away": 30,
+        "note": "Dawley extended their lead quickly; Sandbach made defensive errors but had some attacking moments"
       },
       "extraTime": {
         "home": 50,
@@ -223,9 +235,9 @@
         "note": "No extra time played"
       },
       "total": {
-        "home": 70,
-        "away": 30,
-        "note": "Home side dominated throughout, clearly the superior team on the day with away side described as 'outmuscled' and error-prone"
+        "home": 67,
+        "away": 33,
+        "note": "Dawley dominated the match from start to finish, scoring three goals with Sandbach limited to occasional chances"
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
