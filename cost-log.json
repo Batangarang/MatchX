@@ -1,36 +1,6 @@
 {
   "entries": [
     {
-      "script": "recap-preview",
-      "timestamp": "2026-09-27T11:30:46.675Z",
-      "getxapiCalls": 0,
-      "claudeCalls": 1,
-      "inputTokens": 2191,
-      "outputTokens": 446,
-      "xCostGBP": 0,
-      "aiCostGBP": 0.0033
-    },
-    {
-      "script": "recap-preview",
-      "timestamp": "2026-09-27T12:00:57.317Z",
-      "getxapiCalls": 0,
-      "claudeCalls": 1,
-      "inputTokens": 2191,
-      "outputTokens": 369,
-      "xCostGBP": 0,
-      "aiCostGBP": 0.003
-    },
-    {
-      "script": "recap-preview",
-      "timestamp": "2026-09-27T12:30:46.436Z",
-      "getxapiCalls": 0,
-      "claudeCalls": 1,
-      "inputTokens": 2191,
-      "outputTokens": 379,
-      "xCostGBP": 0,
-      "aiCostGBP": 0.0031
-    },
-    {
       "script": "division-posts",
       "timestamp": "2026-09-27T13:01:19.321Z",
       "getxapiCalls": 21,
@@ -12683,6 +12653,16 @@
     {
       "script": "x-posts",
       "timestamp": "2026-11-01T11:30:41.581Z",
+      "getxapiCalls": 1,
+      "claudeCalls": 0,
+      "inputTokens": 0,
+      "outputTokens": 0,
+      "xCostGBP": 0.0008,
+      "aiCostGBP": 0
+    },
+    {
+      "script": "x-posts",
+      "timestamp": "2026-11-01T12:35:19.507Z",
       "getxapiCalls": 1,
       "claudeCalls": 0,
       "inputTokens": 0,
