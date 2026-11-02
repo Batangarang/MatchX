@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-02T18:20:38.029Z",
+  "generatedAt": "2026-11-02T18:25:31.385Z",
   "fixtures": [
     {
       "date": "Saturday 7 November 2026",
@@ -135,6 +135,20 @@
       "postponed": false
     },
     {
+      "date": "Tuesday 17 November 2026",
+      "home": "New Mills",
+      "away": "Crewe",
+      "kickoff": "19:45",
+      "postponed": false
+    },
+    {
+      "date": "Tuesday 17 November 2026",
+      "home": "Shawbury United",
+      "away": "AFC Bridgnorth",
+      "kickoff": "19:45",
+      "postponed": false
+    },
+    {
       "date": "Saturday 21 November 2026",
       "home": "AFC Bridgnorth",
       "away": "Wednesfield Community",
@@ -257,6 +271,13 @@
       "date": "Tuesday 1 December 2026",
       "home": "New Mills",
       "away": "Wolverhampton Casuals",
+      "kickoff": "19:45",
+      "postponed": false
+    },
+    {
+      "date": "Tuesday 1 December 2026",
+      "home": "Wednesfield Community",
+      "away": "Barnton",
       "kickoff": "19:45",
       "postponed": false
     },
