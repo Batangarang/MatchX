@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-02T16:05:35.015Z",
+  "generatedAt": "2026-11-02T16:10:48.520Z",
   "fixtures": [
     {
       "date": "Saturday 7 November 2026",
@@ -222,13 +222,6 @@
       "date": "Saturday 28 November 2026",
       "home": "Foley Meir",
       "away": "New Mills",
-      "kickoff": "15:00",
-      "postponed": false
-    },
-    {
-      "date": "Saturday 28 November 2026",
-      "home": "Market Drayton Town",
-      "away": "Bilston Town",
       "kickoff": "15:00",
       "postponed": false
     },
