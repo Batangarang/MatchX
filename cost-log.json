@@ -2,66 +2,6 @@
   "entries": [
     {
       "script": "division-posts",
-      "timestamp": "2026-09-29T02:31:04.614Z",
-      "getxapiCalls": 21,
-      "claudeCalls": 0,
-      "inputTokens": 0,
-      "outputTokens": 0,
-      "xCostGBP": 0.0158,
-      "aiCostGBP": 0
-    },
-    {
-      "script": "recap-preview",
-      "timestamp": "2026-09-29T02:31:09.656Z",
-      "getxapiCalls": 0,
-      "claudeCalls": 1,
-      "inputTokens": 2191,
-      "outputTokens": 348,
-      "xCostGBP": 0,
-      "aiCostGBP": 0.0029
-    },
-    {
-      "script": "recap-preview",
-      "timestamp": "2026-09-29T03:00:58.971Z",
-      "getxapiCalls": 0,
-      "claudeCalls": 1,
-      "inputTokens": 2191,
-      "outputTokens": 360,
-      "xCostGBP": 0,
-      "aiCostGBP": 0.003
-    },
-    {
-      "script": "recap-preview",
-      "timestamp": "2026-09-29T03:30:45.799Z",
-      "getxapiCalls": 0,
-      "claudeCalls": 1,
-      "inputTokens": 2191,
-      "outputTokens": 419,
-      "xCostGBP": 0,
-      "aiCostGBP": 0.0032
-    },
-    {
-      "script": "recap-preview",
-      "timestamp": "2026-09-29T04:00:52.863Z",
-      "getxapiCalls": 0,
-      "claudeCalls": 1,
-      "inputTokens": 2191,
-      "outputTokens": 440,
-      "xCostGBP": 0,
-      "aiCostGBP": 0.0033
-    },
-    {
-      "script": "recap-preview",
-      "timestamp": "2026-09-29T04:30:46.082Z",
-      "getxapiCalls": 0,
-      "claudeCalls": 1,
-      "inputTokens": 2191,
-      "outputTokens": 374,
-      "xCostGBP": 0,
-      "aiCostGBP": 0.003
-    },
-    {
-      "script": "division-posts",
       "timestamp": "2026-09-29T05:01:14.728Z",
       "getxapiCalls": 21,
       "claudeCalls": 0,
@@ -11943,6 +11883,16 @@
     {
       "script": "x-posts",
       "timestamp": "2026-11-03T02:05:20.646Z",
+      "getxapiCalls": 1,
+      "claudeCalls": 0,
+      "inputTokens": 0,
+      "outputTokens": 0,
+      "xCostGBP": 0.0008,
+      "aiCostGBP": 0
+    },
+    {
+      "script": "x-posts",
+      "timestamp": "2026-11-03T05:00:57.950Z",
       "getxapiCalls": 1,
       "claudeCalls": 0,
       "inputTokens": 0,
