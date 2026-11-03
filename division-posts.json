@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-03T19:01:30.110Z",
-  "sinceDate": "2026-10-27T19:00:57.557Z",
+  "generatedAt": "2026-11-03T19:01:36.021Z",
+  "sinceDate": "2026-10-27T19:01:09.804Z",
   "clubs": [
     {
       "name": "Sandbach United",
@@ -2317,8 +2317,7 @@
             "https://pbs.twimg.com/media/HV96ShUWgAAkVEc.jpg"
           ]
         }
-      ],
-      "error": "Unexpected end of JSON input"
+      ]
     },
     {
       "name": "Wolverhampton Casuals",
