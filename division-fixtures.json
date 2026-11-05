@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-05T17:50:35.115Z",
+  "generatedAt": "2026-11-05T17:55:30.901Z",
   "fixtures": [
     {
       "date": "Saturday 7 November 2026",
@@ -348,6 +348,13 @@
       "date": "Tuesday 8 December 2026",
       "home": "Eccleshall",
       "away": "Telford Town",
+      "kickoff": "19:45",
+      "postponed": false
+    },
+    {
+      "date": "Wednesday 9 December 2026",
+      "home": "Bilston Town",
+      "away": "Brereton Social",
       "kickoff": "19:45",
       "postponed": false
     },
