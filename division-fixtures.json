@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-05T17:55:30.901Z",
+  "generatedAt": "2026-11-05T18:00:56.560Z",
   "fixtures": [
     {
       "date": "Saturday 7 November 2026",
@@ -278,6 +278,13 @@
       "date": "Tuesday 1 December 2026",
       "home": "Wednesfield Community",
       "away": "Barnton",
+      "kickoff": "19:45",
+      "postponed": false
+    },
+    {
+      "date": "Tuesday 1 December 2026",
+      "home": "Widnes Town",
+      "away": "Allscott Heath",
       "kickoff": "19:45",
       "postponed": false
     },
