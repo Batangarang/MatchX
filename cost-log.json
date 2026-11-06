@@ -2,16 +2,6 @@
   "entries": [
     {
       "script": "recap-preview",
-      "timestamp": "2026-10-02T00:01:01.502Z",
-      "getxapiCalls": 0,
-      "claudeCalls": 1,
-      "inputTokens": 2222,
-      "outputTokens": 341,
-      "xCostGBP": 0,
-      "aiCostGBP": 0.0029
-    },
-    {
-      "script": "recap-preview",
       "timestamp": "2026-10-02T00:30:52.423Z",
       "getxapiCalls": 0,
       "claudeCalls": 1,
@@ -10609,6 +10599,16 @@
       "outputTokens": 0,
       "xCostGBP": 0.0008,
       "aiCostGBP": 0
+    },
+    {
+      "script": "recap-preview",
+      "timestamp": "2026-11-06T00:01:03.404Z",
+      "getxapiCalls": 0,
+      "claudeCalls": 1,
+      "inputTokens": 2763,
+      "outputTokens": 454,
+      "xCostGBP": 0,
+      "aiCostGBP": 0.0038
     }
   ]
 }
