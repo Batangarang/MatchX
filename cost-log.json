@@ -9661,14 +9661,14 @@
       "aiCostGBP": 0
     },
     {
-      "script": "x-posts",
-      "timestamp": "2026-11-07T15:50:25.019Z",
-      "getxapiCalls": 1,
-      "claudeCalls": 0,
-      "inputTokens": 0,
-      "outputTokens": 0,
-      "xCostGBP": 0.0008,
-      "aiCostGBP": 0
+      "script": "matchday-live",
+      "timestamp": "2026-11-07T15:50:44.229Z",
+      "getxapiCalls": 2,
+      "claudeCalls": 1,
+      "inputTokens": 4890,
+      "outputTokens": 857,
+      "xCostGBP": 0.0015,
+      "aiCostGBP": 0.0069
     }
   ]
 }

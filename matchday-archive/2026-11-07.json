@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-11-07T15:40:46.597Z",
+  "generatedAt": "2026-11-07T15:50:44.227Z",
   "fixtureDate": "2026-11-07",
   "kickoff": "15:00",
   "homeTeam": "Telford Town",
   "awayTeam": "Sandbach United",
-  "postsUsed": 18,
+  "postsUsed": 20,
   "imagesAnalyzedThisRun": 1,
-  "totalImagesAnalyzed": 11,
+  "totalImagesAnalyzed": 12,
   "match": {
     "score": "0-3",
     "scoreSource": "match_feed_stated",
@@ -15,15 +15,15 @@
     "scoreDiscrepancy": "Goal reports suggested 0-4 but the confirmed score is 0-3 — 1 unconfirmed goal report(s) ignored.",
     "unconfirmedGoals": [
       {
-        "minute": 13,
+        "minute": 30,
         "team": "away",
-        "scorer": "Unknown"
+        "scorer": "Kieran O'Connell"
       }
     ],
     "finalScoreAnnounced": null,
-    "halfTimeScoreAnnounced": null,
+    "halfTimeScoreAnnounced": "0-3",
     "htDiscrepancy": null,
-    "matchStage": "first_half",
+    "matchStage": "half_time",
     "lineups": {
       "home": {
         "players": [
@@ -79,9 +79,9 @@
         "scorer": "Foley"
       },
       {
-        "minute": 30,
+        "minute": 13,
         "team": "away",
-        "scorer": "Kieran O'Connell"
+        "scorer": "Foley"
       }
     ],
     "yellowCards": [],
@@ -106,46 +106,46 @@
     "roughXG": {
       "firstHalf": {
         "home": 0.2,
-        "away": 2.5,
-        "note": "Sandbach scored 3 goals in the first half; Telford kept the ball in possession early but were dominated after conceding, with Hall making a save at 38 mins."
+        "away": 3.5,
+        "note": "Away team scored 3 goals; home team had minimal clear chances mentioned"
       },
       "secondHalf": {
         "home": 0,
         "away": 0,
-        "note": "No second half data available in posts."
+        "note": "No second half data available"
       },
       "extraTime": {
         "home": 0,
         "away": 0,
-        "note": "No extra time played."
+        "note": "Match did not reach extra time"
       },
       "total": {
         "home": 0.2,
-        "away": 2.5,
-        "note": "Sandbach United clearly dominant, scoring 3 goals. Telford offered minimal threat."
+        "away": 3.5,
+        "note": "Away team dominated; home team offered little attacking threat in first half"
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
     "matchControl": {
       "firstHalf": {
-        "home": 30,
-        "away": 70,
-        "note": "Sandbach forced the game early and scored three goals by 30 minutes. Telford attempted to respond but were overwhelmed."
+        "home": 20,
+        "away": 80,
+        "note": "Sandbach dominated from the start, scoring 3 goals; Telford struggled to contain them"
       },
       "secondHalf": {
         "home": 50,
         "away": 50,
-        "note": "No second half data available in posts."
+        "note": "No second half information available"
       },
       "extraTime": {
         "home": 50,
         "away": 50,
-        "note": "No extra time played."
+        "note": "Match did not reach extra time"
       },
       "total": {
-        "home": 30,
-        "away": 70,
-        "note": "Sandbach United dominated; Telford were unable to stem the flow of goals."
+        "home": 20,
+        "away": 80,
+        "note": "Away team controlled the match decisively in the first half"
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
