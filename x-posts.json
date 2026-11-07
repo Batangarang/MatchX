@@ -1,5 +1,5 @@
 {
-  "scrapedAt": "2026-11-07T15:45:32.599Z",
+  "scrapedAt": "2026-11-07T15:50:25.016Z",
   "username": "SandbachFC_1st",
   "posts": [
     {
@@ -9,6 +9,14 @@
         "https://pbs.twimg.com/media/HUDmlc4WgAAhBe7.jpg"
       ],
       "isMatchday": false
+    },
+    {
+      "text": ". https://t.co/xadhq3dLmn",
+      "createdAt": "2026-11-07T15:50:22.000Z",
+      "images": [
+        "https://pbs.twimg.com/media/HWiJyBjXEAAkGMI.jpg"
+      ],
+      "isMatchday": true
     },
     {
       "text": "🔵⚪️ v 🟡🟡\n\nTelford Town v Sandbach United\n\nHall smartly palms away a cross shot to maintain the 3 goal lead\n\n0 3\n\n38 mins",
@@ -60,14 +68,6 @@
       "text": "🔵⚪️ v 🟡🟡\n\nTelford Town v Sandbach United\n\nFollowing a minutes service, impeccably observed, the games is underway here at Telford, with The Bach needing a win to guarantee to be top of the division at 5pm this afternoon!\n\n0 0",
       "createdAt": "2026-11-07T15:00:16.000Z",
       "images": [],
-      "isMatchday": true
-    },
-    {
-      "text": "Sandbach line up for today’s away fixture https://t.co/x5JNd3IYbp",
-      "createdAt": "2026-11-07T14:08:02.000Z",
-      "images": [
-        "https://pbs.twimg.com/media/HWhyXAMWAAA6gYX.jpg"
-      ],
       "isMatchday": true
     }
   ]
