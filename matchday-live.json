@@ -1,23 +1,23 @@
 {
-  "generatedAt": "2026-11-07T16:40:53.588Z",
+  "generatedAt": "2026-11-07T16:45:51.936Z",
   "fixtureDate": "2026-11-07",
   "kickoff": "15:00",
   "homeTeam": "Telford Town",
   "awayTeam": "Sandbach United",
-  "postsUsed": 36,
-  "imagesAnalyzedThisRun": 3,
-  "totalImagesAnalyzed": 19,
+  "postsUsed": 39,
+  "imagesAnalyzedThisRun": 1,
+  "totalImagesAnalyzed": 20,
   "match": {
-    "score": "0-5",
+    "score": "0-6",
     "scoreSource": "match_feed_stated",
     "scoreConfirmed": true,
-    "feedScore": "0-5",
-    "scoreDiscrepancy": "Goal reports suggested 0-6 but the confirmed score is 0-5 — 1 unconfirmed goal report(s) ignored.",
+    "feedScore": "0-6",
+    "scoreDiscrepancy": "Goal reports suggested 0-7 but the confirmed score is 0-6 — 1 unconfirmed goal report(s) ignored.",
     "unconfirmedGoals": [
       {
-        "minute": 79,
+        "minute": 83,
         "team": "away",
-        "scorer": "Matthew Birchall"
+        "scorer": "Robbie Hatton"
       }
     ],
     "finalScoreAnnounced": null,
@@ -89,6 +89,11 @@
         "minute": 64,
         "team": "away",
         "scorer": "Kyle Foley"
+      },
+      {
+        "minute": 79,
+        "team": "away",
+        "scorer": "Birchall"
       }
     ],
     "yellowCards": [
@@ -169,6 +174,12 @@
         "team": "away",
         "player": "Mitch Nolan",
         "note": "Went off injured just before half-time, replaced by Lieran Nolan"
+      },
+      {
+        "minute": 80,
+        "team": "home",
+        "player": "Keeper",
+        "note": "Went down injured after saving a shot"
       }
     ],
     "addedTime": {
@@ -187,14 +198,14 @@
     },
     "roughXG": {
       "firstHalf": {
-        "home": 0.2,
+        "home": 0.1,
         "away": 3,
-        "note": "Sandbach dominated and scored 3 goals; Telford had one ruled out for offside (Birchall) suggesting minimal threat (raised to reflect goals actually scored)"
+        "note": "Sandbach scored 3 goals in first half. Telford had very limited attacking threat. (raised to reflect goals actually scored)"
       },
       "secondHalf": {
         "home": 0.1,
-        "away": 2.8,
-        "note": "Sandbach continued to control; Finney had a shot just wide (63'); Telford offered little; Sandbach added 2 more goals"
+        "away": 2.2,
+        "note": "Sandbach scored 3 more goals. Telford barely threatened, with only speculative efforts."
       },
       "extraTime": {
         "home": 0,
@@ -202,32 +213,32 @@
         "note": "No extra time played"
       },
       "total": {
-        "home": 0.3,
-        "away": 5.3,
-        "note": "Sandbach's 5 goals reflect dominant performance; Telford created minimal chances"
+        "home": 0.2,
+        "away": 4.7,
+        "note": "Sandbach scored 6 goals and created multiple clear-cut chances. Telford created virtually nothing."
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
     "matchControl": {
       "firstHalf": {
-        "home": 15,
-        "away": 85,
-        "note": "Sandbach forced the game early with Foley's early crosses and open play dominance; scored 3 goals by halftime"
+        "home": 20,
+        "away": 80,
+        "note": "Sandbach dominated from the start, scoring 3 goals. Posts describe Sandbach 'forcing the game early doors' and maintaining control."
       },
       "secondHalf": {
-        "home": 10,
-        "away": 90,
-        "note": "Sandbach maintained complete control; Hall made key saves; Finney and Nolan had chances; Sandbach added 2 more"
+        "home": 15,
+        "away": 85,
+        "note": "Sandbach continued to dominate, adding 3 more goals. Telford offered minimal resistance."
       },
       "extraTime": {
         "home": 50,
         "away": 50,
-        "note": "No extra time"
+        "note": "No extra time played"
       },
       "total": {
-        "home": 12,
-        "away": 88,
-        "note": "Sandbach dominated throughout; Telford offered minimal resistance"
+        "home": 18,
+        "away": 82,
+        "note": "Sandbach were comprehensively dominant throughout, controlling the match and scoring 6 goals."
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
