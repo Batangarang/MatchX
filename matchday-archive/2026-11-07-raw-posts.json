@@ -216,5 +216,15 @@
     "side": "away",
     "handle": "SandbachFC_1st",
     "isDuplicateCommentary": false
+  },
+  {
+    "text": "55': Alex Allen is yellow carded for Telford Town\n#TELSAN #Pitchero https://t.co/7mb9Lodvfk",
+    "createdAt": "2026-11-07T16:16:20.000Z",
+    "images": [
+      "https://pbs.twimg.com/media/HWiPtopWwAA_itp.jpg"
+    ],
+    "side": "home",
+    "handle": "TelfordTownFC",
+    "isDuplicateCommentary": false
   }
 ]

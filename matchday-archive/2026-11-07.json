@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-11-07T16:15:45.732Z",
+  "generatedAt": "2026-11-07T16:20:51.520Z",
   "fixtureDate": "2026-11-07",
   "kickoff": "15:00",
   "homeTeam": "Telford Town",
   "awayTeam": "Sandbach United",
-  "postsUsed": 24,
-  "imagesAnalyzedThisRun": 0,
-  "totalImagesAnalyzed": 13,
+  "postsUsed": 25,
+  "imagesAnalyzedThisRun": 1,
+  "totalImagesAnalyzed": 14,
   "match": {
     "score": "0-3",
     "scoreSource": "match_feed_stated",
@@ -93,9 +93,9 @@
         "player": "Robbie Hatton"
       },
       {
-        "minute": 56,
+        "minute": 55,
         "team": "home",
-        "player": "unknown"
+        "player": "Alex Allen"
       }
     ],
     "redCards": [],
@@ -107,7 +107,7 @@
         "playerOn": "Lieran Nolan"
       },
       {
-        "minute": 45,
+        "minute": 46,
         "team": "away",
         "playerOff": "Mitch Nolan",
         "playerOn": "Lieran Nolan"
@@ -126,6 +126,12 @@
         "team": "away",
         "player": "Mitch Nolan",
         "note": "went off injured at half-time"
+      },
+      {
+        "minute": 46,
+        "team": "away",
+        "player": "Mitch Nolan",
+        "note": "Went off injured just before half-time, replaced by Lieran Nolan"
       }
     ],
     "addedTime": {
@@ -146,22 +152,22 @@
       "firstHalf": {
         "home": 0.1,
         "away": 2.5,
-        "note": "Sandbach scored 3 goals; Telford offered minimal threat. Foley's first goal came from a cross after keeper misjudgement; second goal unclear but part of dominant display; third was a powerful free-kick finish by O'Connell. Telford had a disallowed goal attempt late in half."
+        "note": "Sandbach scored 3 goals with a deflection on one; Telford had limited chances, one save by Hall"
       },
       "secondHalf": {
         "home": 0,
         "away": 0.3,
-        "note": "Posts only cover first 56 minutes of second half; match appeared to be managed rather than contested, with Sandbach maintaining lead and Foley attempting a shot that was saved."
+        "note": "Match incomplete; only first 56 minutes of second half covered in posts"
       },
       "extraTime": {
         "home": 0,
         "away": 0,
-        "note": "No extra time played"
+        "note": "Not applicable"
       },
       "total": {
         "home": 0.1,
         "away": 2.8,
-        "note": "Sandbach thoroughly dominant, scoring 3 goals by half-time. Telford rarely threatened."
+        "note": "Sandbach dominant; 3 goals reflects strong attacking performance"
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
@@ -169,22 +175,22 @@
       "firstHalf": {
         "home": 20,
         "away": 80,
-        "note": "Sandbach completely dominated early, forcing the game and scoring 3 goals. Telford had one disallowed goal but otherwise offered little threat."
+        "note": "Sandbach in control, scoring 3 goals and forcing the play early"
       },
       "secondHalf": {
         "home": 30,
         "away": 70,
-        "note": "Based on limited posts (first 56 minutes only), Sandbach maintained control with Foley attempting shots; Telford showed minimal attacking threat."
+        "note": "Sandbach maintaining dominance; posts indicate limited Telford chances"
       },
       "extraTime": {
         "home": 50,
         "away": 50,
-        "note": "No extra time played"
+        "note": "Not applicable"
       },
       "total": {
         "home": 25,
         "away": 75,
-        "note": "Sandbach clearly the dominant force throughout, establishing a 3-0 lead by half-time and maintaining control."
+        "note": "Sandbach controlled the match throughout"
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
