@@ -1,17 +1,22 @@
 {
-  "generatedAt": "2026-11-07T13:30:55.676Z",
+  "generatedAt": "2026-11-07T14:10:44.413Z",
   "fixtureDate": "2026-11-07",
   "kickoff": "15:00",
   "homeTeam": "Telford Town",
   "awayTeam": "Sandbach United",
-  "postsUsed": 4,
-  "imagesAnalyzedThisRun": 4,
-  "totalImagesAnalyzed": 4,
+  "postsUsed": 6,
+  "imagesAnalyzedThisRun": 1,
+  "totalImagesAnalyzed": 5,
   "match": {
     "score": null,
-    "scoreEvidence": null,
+    "scoreSource": "none",
+    "scoreConfirmed": false,
+    "feedScore": null,
+    "scoreDiscrepancy": null,
+    "unconfirmedGoals": [],
     "finalScoreAnnounced": null,
     "halfTimeScoreAnnounced": null,
+    "htDiscrepancy": null,
     "matchStage": "scheduled",
     "lineups": {
       "home": {
@@ -21,8 +26,26 @@
         "officials": []
       },
       "away": {
-        "players": [],
-        "substitutes": [],
+        "players": [
+          "1. Greg Hall",
+          "2. Kieran O'Connell",
+          "3. Jacob Vernon",
+          "4. Jordan Stafford",
+          "5. Jack Finney",
+          "6. Stanley Tatters",
+          "7. Matthew Birchall",
+          "8. Mitch Nolan",
+          "9. Niall Cope",
+          "10. Robbie Hatton",
+          "11. Kyle Foley"
+        ],
+        "substitutes": [
+          "Max Williams",
+          "Oliver Bavington",
+          "Kieran Nolan",
+          "Jake Pollard",
+          "Joshua Klien-Davies"
+        ],
         "manager": null,
         "officials": []
       }
@@ -51,22 +74,22 @@
       "firstHalf": {
         "home": 0,
         "away": 0,
-        "note": "No match events yet; match scheduled for 3pm KO."
+        "note": "No match action posts available"
       },
       "secondHalf": {
         "home": 0,
         "away": 0,
-        "note": "Match not yet played."
+        "note": "No match action posts available"
       },
       "extraTime": {
         "home": 0,
         "away": 0,
-        "note": "Match not yet played."
+        "note": "Match did not go to extra time"
       },
       "total": {
         "home": 0,
         "away": 0,
-        "note": "Match not yet played."
+        "note": "No match action posts available"
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
@@ -74,30 +97,24 @@
       "firstHalf": {
         "home": 50,
         "away": 50,
-        "note": "Match not yet played."
+        "note": "No match commentary available"
       },
       "secondHalf": {
         "home": 50,
         "away": 50,
-        "note": "Match not yet played."
+        "note": "No match commentary available"
       },
       "extraTime": {
         "home": 50,
         "away": 50,
-        "note": "Match not yet played."
+        "note": "Match did not go to extra time"
       },
       "total": {
         "home": 50,
         "away": 50,
-        "note": "Match not yet played."
+        "note": "No match commentary available"
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
-    },
-    "unconfirmedGoals": [],
-    "scoreSource": "none",
-    "scoreConfirmed": false,
-    "feedScore": null,
-    "scoreDiscrepancy": null,
-    "htDiscrepancy": null
+    }
   }
 }
