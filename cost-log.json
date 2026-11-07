@@ -9781,14 +9781,24 @@
       "aiCostGBP": 0
     },
     {
-      "script": "matchday-live",
-      "timestamp": "2026-11-07T14:30:46.789Z",
-      "getxapiCalls": 2,
+      "script": "x-posts",
+      "timestamp": "2026-11-07T14:30:44.082Z",
+      "getxapiCalls": 1,
       "claudeCalls": 0,
       "inputTokens": 0,
       "outputTokens": 0,
-      "xCostGBP": 0.0015,
+      "xCostGBP": 0.0008,
       "aiCostGBP": 0
+    },
+    {
+      "script": "x-insights",
+      "timestamp": "2026-11-07T14:30:46.629Z",
+      "getxapiCalls": 0,
+      "claudeCalls": 1,
+      "inputTokens": 691,
+      "outputTokens": 71,
+      "xCostGBP": 0,
+      "aiCostGBP": 0.0008
     }
   ]
 }
