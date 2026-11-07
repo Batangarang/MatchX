@@ -1,23 +1,23 @@
 {
-  "generatedAt": "2026-11-07T16:35:42.930Z",
+  "generatedAt": "2026-11-07T16:40:53.588Z",
   "fixtureDate": "2026-11-07",
   "kickoff": "15:00",
   "homeTeam": "Telford Town",
   "awayTeam": "Sandbach United",
-  "postsUsed": 31,
-  "imagesAnalyzedThisRun": 0,
-  "totalImagesAnalyzed": 16,
+  "postsUsed": 36,
+  "imagesAnalyzedThisRun": 3,
+  "totalImagesAnalyzed": 19,
   "match": {
-    "score": "0-4",
+    "score": "0-5",
     "scoreSource": "match_feed_stated",
     "scoreConfirmed": true,
-    "feedScore": "0-4",
-    "scoreDiscrepancy": "Goal reports suggested 0-5 but the confirmed score is 0-4 — 1 unconfirmed goal report(s) ignored.",
+    "feedScore": "0-5",
+    "scoreDiscrepancy": "Goal reports suggested 0-6 but the confirmed score is 0-5 — 1 unconfirmed goal report(s) ignored.",
     "unconfirmedGoals": [
       {
-        "minute": 64,
+        "minute": 79,
         "team": "away",
-        "scorer": "Foley"
+        "scorer": "Matthew Birchall"
       }
     ],
     "finalScoreAnnounced": null,
@@ -73,7 +73,7 @@
       {
         "minute": 8,
         "team": "away",
-        "scorer": "Foley"
+        "scorer": "Kyle Foley"
       },
       {
         "minute": 13,
@@ -84,6 +84,11 @@
         "minute": 30,
         "team": "away",
         "scorer": "Kieran O'Connell"
+      },
+      {
+        "minute": 64,
+        "team": "away",
+        "scorer": "Kyle Foley"
       }
     ],
     "yellowCards": [
@@ -110,7 +115,12 @@
       {
         "minute": 70,
         "team": "away",
-        "player": "Birchall"
+        "player": "Matthew Birchall"
+      },
+      {
+        "minute": 78,
+        "team": "home",
+        "player": "Renelle Davis-Lawrence"
       }
     ],
     "redCards": [],
@@ -132,6 +142,12 @@
         "team": "away",
         "playerOff": "Kieran O'Connell",
         "playerOn": "Max Williams"
+      },
+      {
+        "minute": 76,
+        "team": "away",
+        "playerOff": "Kyle Foley",
+        "playerOn": "Pollard"
       }
     ],
     "sinBins": [],
@@ -173,12 +189,12 @@
       "firstHalf": {
         "home": 0.2,
         "away": 3,
-        "note": "Sandbach scored 3 goals in first half; one disallowed for offside. Telford offered minimal threat. (raised to reflect goals actually scored)"
+        "note": "Sandbach dominated and scored 3 goals; Telford had one ruled out for offside (Birchall) suggesting minimal threat (raised to reflect goals actually scored)"
       },
       "secondHalf": {
         "home": 0.1,
-        "away": 1.2,
-        "note": "Sandbach added 1 goal via corner; Telford created only one clear chance (Finney shot wide). Match largely one-sided."
+        "away": 2.8,
+        "note": "Sandbach continued to control; Finney had a shot just wide (63'); Telford offered little; Sandbach added 2 more goals"
       },
       "extraTime": {
         "home": 0,
@@ -187,31 +203,31 @@
       },
       "total": {
         "home": 0.3,
-        "away": 3.7,
-        "note": "Sandbach dominant throughout, scoring 4 goals with limited resistance from Telford."
+        "away": 5.3,
+        "note": "Sandbach's 5 goals reflect dominant performance; Telford created minimal chances"
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
     "matchControl": {
       "firstHalf": {
-        "home": 20,
-        "away": 80,
-        "note": "Sandbach forced the game early, scored 3 goals. Telford offered little except Hall's save."
-      },
-      "secondHalf": {
         "home": 15,
         "away": 85,
-        "note": "Sandbach continued dominance; Telford rarely threatened. Only Finney shot mentioned as clear chance."
+        "note": "Sandbach forced the game early with Foley's early crosses and open play dominance; scored 3 goals by halftime"
+      },
+      "secondHalf": {
+        "home": 10,
+        "away": 90,
+        "note": "Sandbach maintained complete control; Hall made key saves; Finney and Nolan had chances; Sandbach added 2 more"
       },
       "extraTime": {
         "home": 50,
         "away": 50,
-        "note": "No extra time played"
+        "note": "No extra time"
       },
       "total": {
-        "home": 17,
-        "away": 83,
-        "note": "Sandbach in complete control from start to finish; Telford rarely created meaningful play."
+        "home": 12,
+        "away": 88,
+        "note": "Sandbach dominated throughout; Telford offered minimal resistance"
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
