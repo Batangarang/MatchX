@@ -9681,13 +9681,13 @@
       "aiCostGBP": 0
     },
     {
-      "script": "matchday-live",
-      "timestamp": "2026-11-07T15:30:48.858Z",
-      "getxapiCalls": 2,
+      "script": "division-posts",
+      "timestamp": "2026-11-07T15:31:04.717Z",
+      "getxapiCalls": 20,
       "claudeCalls": 0,
       "inputTokens": 0,
       "outputTokens": 0,
-      "xCostGBP": 0.0015,
+      "xCostGBP": 0.015,
       "aiCostGBP": 0
     }
   ]
