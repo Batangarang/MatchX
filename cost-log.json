@@ -9731,14 +9731,14 @@
       "aiCostGBP": 0.0081
     },
     {
-      "script": "x-posts",
-      "timestamp": "2026-11-07T16:35:18.311Z",
-      "getxapiCalls": 1,
-      "claudeCalls": 0,
-      "inputTokens": 0,
-      "outputTokens": 0,
-      "xCostGBP": 0.0008,
-      "aiCostGBP": 0
+      "script": "matchday-live",
+      "timestamp": "2026-11-07T16:35:42.932Z",
+      "getxapiCalls": 2,
+      "claudeCalls": 1,
+      "inputTokens": 4288,
+      "outputTokens": 1325,
+      "xCostGBP": 0.0015,
+      "aiCostGBP": 0.0082
     }
   ]
 }
