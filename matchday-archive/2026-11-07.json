@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-11-07T16:55:42.259Z",
+  "generatedAt": "2026-11-07T17:01:10.450Z",
   "fixtureDate": "2026-11-07",
   "kickoff": "15:00",
   "homeTeam": "Telford Town",
   "awayTeam": "Sandbach United",
-  "postsUsed": 42,
-  "imagesAnalyzedThisRun": 2,
+  "postsUsed": 43,
+  "imagesAnalyzedThisRun": 0,
   "totalImagesAnalyzed": 22,
   "match": {
     "score": "0-6",
@@ -186,6 +186,12 @@
         "team": "home",
         "player": "Keeper",
         "note": "Went down injured after saving a shot"
+      },
+      {
+        "minute": 80,
+        "team": "home",
+        "player": "Goalkeeper",
+        "note": "Went down injured after saving a low shot"
       }
     ],
     "addedTime": {
@@ -204,14 +210,14 @@
     },
     "roughXG": {
       "firstHalf": {
-        "home": 0.3,
+        "home": 0.1,
         "away": 3,
-        "note": "Sandbach scored 3 goals in first half; Telford created minimal chances (raised to reflect goals actually scored)"
+        "note": "Sandbach scored 3 goals (Foley, unknown, O'Connell) plus a disallowed Birchall offside chance. One early Foley disallowed chance also noted. (raised to reflect goals actually scored)"
       },
       "secondHalf": {
-        "home": 0.2,
-        "away": 2.5,
-        "note": "Sandbach scored 3 more goals in second half; Telford had one disallowed effort and limited threat"
+        "home": 0.1,
+        "away": 2.8,
+        "note": "Sandbach scored 3 more goals (Foley hat-trick, Birchall, Hatton) plus a Hatton shot that was saved and a Finney chance that went wide."
       },
       "extraTime": {
         "home": 0,
@@ -219,22 +225,22 @@
         "note": "No extra time played"
       },
       "total": {
-        "home": 0.5,
-        "away": 4.5,
-        "note": "Sandbach dominated throughout with 6 goals; Telford created very few clear opportunities"
+        "home": 0.2,
+        "away": 5.3,
+        "note": "Sandbach United completely dominated with 6 goals scored across both halves. Telford created minimal chances throughout."
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
     "matchControl": {
       "firstHalf": {
-        "home": 20,
-        "away": 80,
-        "note": "Sandbach dominated early, scoring 3 goals quickly; Telford under heavy pressure"
-      },
-      "secondHalf": {
         "home": 15,
         "away": 85,
-        "note": "Sandbach continued to control the match, scoring 3 more goals; Telford offered little resistance"
+        "note": "Sandbach forced the game early and were clearly dominant, scoring 3 goals by half-time with Telford unable to create meaningful chances."
+      },
+      "secondHalf": {
+        "home": 10,
+        "away": 90,
+        "note": "Sandbach continued to control the match completely, adding 3 more goals in the second half. Telford offered minimal resistance."
       },
       "extraTime": {
         "home": 50,
@@ -242,9 +248,9 @@
         "note": "No extra time played"
       },
       "total": {
-        "home": 18,
-        "away": 82,
-        "note": "Sandbach dominated the entire match from start to finish with a commanding performance"
+        "home": 12,
+        "away": 88,
+        "note": "Sandbach United dominated the entire match from start to finish, securing a comprehensive 6-0 victory with ruthless attacking play and defensive solidity."
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
