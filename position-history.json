@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-31T17:30:49.682Z",
+  "generatedAt": "2026-11-07T17:40:43.387Z",
   "history": [
     {
       "gamesPlayed": 1,
@@ -180,6 +180,18 @@
       "cumGoalsFor": 38,
       "cumGoalsAgainst": 22,
       "cumGoalDifference": 16
+    },
+    {
+      "gamesPlayed": 16,
+      "date": "Sat 07/11/26",
+      "opponent": "Telford Town",
+      "position": 1,
+      "points": 34,
+      "gameGoalsFor": 0,
+      "gameGoalsAgainst": 6,
+      "cumGoalsFor": 44,
+      "cumGoalsAgainst": 22,
+      "cumGoalDifference": 22
     }
   ]
 }

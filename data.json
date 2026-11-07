@@ -1,26 +1,16 @@
 {
-  "scrapedAt": "2026-11-07T16:40:38.087Z",
+  "scrapedAt": "2026-11-07T17:40:42.185Z",
   "nextFixture": {
-    "date": "Sat 07/11/26",
-    "opposition": "Telford Town",
-    "opponentUrl": "clubpage.php?id=881",
+    "date": "Sat 14/11/26",
+    "opposition": "New Mills",
+    "opponentUrl": "clubpage.php?id=91",
     "homeAway": "A",
     "kickoff": "15:00",
     "score": null,
     "scorers": null,
-    "competitionNote": null
+    "competitionNote": "The Edward Case Cup 2 S"
   },
   "nextFixtures": [
-    {
-      "date": "Sat 07/11/26",
-      "opposition": "Telford Town",
-      "opponentUrl": "clubpage.php?id=881",
-      "homeAway": "A",
-      "kickoff": "15:00",
-      "score": null,
-      "scorers": null,
-      "competitionNote": null
-    },
     {
       "date": "Sat 14/11/26",
       "opposition": "New Mills",
@@ -60,19 +50,39 @@
       "score": null,
       "scorers": null,
       "competitionNote": null
+    },
+    {
+      "date": "Tue 15/12/26",
+      "opposition": "Brereton Social",
+      "opponentUrl": "clubpage.php?id=459",
+      "homeAway": "H",
+      "kickoff": "19:45",
+      "score": null,
+      "scorers": null,
+      "competitionNote": null
     }
   ],
   "lastResult": {
-    "date": "Sat 31/10/26",
-    "opposition": "Dawley Town",
-    "opponentUrl": "clubpage.php?id=635",
+    "date": "Sat 07/11/26",
+    "opposition": "Telford Town",
+    "opponentUrl": "clubpage.php?id=881",
     "homeAway": "A",
-    "kickoff": "14:00",
-    "score": "L 1-3",
-    "scorers": "Robbie Hatton (75p)",
+    "kickoff": "15:00",
+    "score": "W 6-0",
+    "scorers": "Kyle Foley (8) Kyle Foley (13) Kieran OConnell (30) Kyle Foley (65) Matthew Birchall (79) Robbie Hatton (83)",
     "competitionNote": null
   },
   "lastResults": [
+    {
+      "date": "Sat 07/11/26",
+      "opposition": "Telford Town",
+      "opponentUrl": "clubpage.php?id=881",
+      "homeAway": "A",
+      "kickoff": "15:00",
+      "score": "W 6-0",
+      "scorers": "Kyle Foley (8) Kyle Foley (13) Kieran OConnell (30) Kyle Foley (65) Matthew Birchall (79) Robbie Hatton (83)",
+      "competitionNote": null
+    },
     {
       "date": "Sat 31/10/26",
       "opposition": "Dawley Town",
@@ -91,16 +101,6 @@
       "kickoff": "15:00",
       "score": "L 1-2",
       "scorers": "Kyle Foley (46)",
-      "competitionNote": null
-    },
-    {
-      "date": "Sat 17/10/26",
-      "opposition": "Bilston Town",
-      "opponentUrl": "clubpage.php?id=355",
-      "homeAway": "H",
-      "kickoff": "15:00",
-      "score": "W 1-0",
-      "scorers": "Matthew Birchall (84)",
       "competitionNote": null
     }
   ],
@@ -301,8 +301,8 @@
       "opponentUrl": "clubpage.php?id=881",
       "homeAway": "A",
       "kickoff": "15:00",
-      "score": null,
-      "scorers": null,
+      "score": "W 6-0",
+      "scorers": "Kyle Foley (8) Kyle Foley (13) Kieran OConnell (30) Kyle Foley (65) Matthew Birchall (79) Robbie Hatton (83)",
       "competitionNote": null
     },
     {
