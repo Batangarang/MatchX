@@ -1,19 +1,25 @@
 {
-  "generatedAt": "2026-11-07T15:05:35.428Z",
+  "generatedAt": "2026-11-07T15:10:44.264Z",
   "fixtureDate": "2026-11-07",
   "kickoff": "15:00",
   "homeTeam": "Telford Town",
   "awayTeam": "Sandbach United",
-  "postsUsed": 9,
-  "imagesAnalyzedThisRun": 0,
-  "totalImagesAnalyzed": 6,
+  "postsUsed": 11,
+  "imagesAnalyzedThisRun": 1,
+  "totalImagesAnalyzed": 7,
   "match": {
     "score": "0-1",
-    "scoreSource": "goal_count_only",
-    "scoreConfirmed": false,
-    "feedScore": null,
-    "scoreDiscrepancy": "Score inferred from goal reports only (0-1) — no scoreline has been stated yet to confirm it.",
-    "unconfirmedGoals": [],
+    "scoreSource": "match_feed_stated",
+    "scoreConfirmed": true,
+    "feedScore": "0-1",
+    "scoreDiscrepancy": "Goal reports suggested 0-2 but the confirmed score is 0-1 — 1 unconfirmed goal report(s) ignored.",
+    "unconfirmedGoals": [
+      {
+        "minute": 8,
+        "team": "away",
+        "scorer": "Kyle Foley"
+      }
+    ],
     "finalScoreAnnounced": null,
     "halfTimeScoreAnnounced": null,
     "htDiscrepancy": null,
@@ -47,7 +53,10 @@
         "players": [
           "Stan Tatters",
           "Jack Finney",
-          "Niall Cope"
+          "Niall Cope",
+          "Kyle Foley",
+          "Birchall",
+          "Hall"
         ],
         "substitutes": [
           "Max Williams",
@@ -87,46 +96,46 @@
     "roughXG": {
       "firstHalf": {
         "home": 0,
-        "away": 0.8,
-        "note": "Sandbach had an early chance ruled offside; very early in match (raised to reflect goals actually scored)"
+        "away": 1.2,
+        "note": "Sandbach scored early; one disallowed goal (Birchall offside) suggests they created chances early. Telford minimal information provided."
       },
       "secondHalf": {
         "home": 0,
         "away": 0,
-        "note": "No data available"
+        "note": "No posts covering second half."
       },
       "extraTime": {
         "home": 0,
         "away": 0,
-        "note": "Not played"
+        "note": "Match did not go to extra time."
       },
       "total": {
         "home": 0,
-        "away": 0.8,
-        "note": "Only early first-half action reported (raised to reflect goals actually scored)"
+        "away": 1.2,
+        "note": "Sandbach scored one goal in first 8 minutes; one disallowed goal suggests early dominance. Limited data for Telford."
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
     "matchControl": {
       "firstHalf": {
-        "home": 40,
-        "away": 60,
-        "note": "Sandbach described as 'forcing the game early doors'"
+        "home": 30,
+        "away": 70,
+        "note": "Sandbach described as 'forcing the game early doors' with an early goal; Telford described as keeping lead via save but no attacking mention."
       },
       "secondHalf": {
         "home": 50,
         "away": 50,
-        "note": "No data available"
+        "note": "No posts covering second half; unable to assess."
       },
       "extraTime": {
         "home": 50,
         "away": 50,
-        "note": "Not played"
+        "note": "Match did not go to extra time."
       },
       "total": {
-        "home": 45,
-        "away": 55,
-        "note": "Sandbach appearing dominant early, but match only 4 minutes old"
+        "home": 40,
+        "away": 60,
+        "note": "Sandbach appeared to dominate early; limited information beyond 8 minutes."
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
