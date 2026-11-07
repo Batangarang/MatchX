@@ -1,5 +1,5 @@
 {
-  "scrapedAt": "2026-11-07T16:35:18.309Z",
+  "scrapedAt": "2026-11-07T16:40:27.000Z",
   "username": "SandbachFC_1st",
   "posts": [
     {
@@ -9,6 +9,26 @@
         "https://pbs.twimg.com/media/HUDmlc4WgAAhBe7.jpg"
       ],
       "isMatchday": false
+    },
+    {
+      "text": "0-5 https://t.co/t3k9HfkoEj",
+      "createdAt": "2026-11-07T16:40:04.000Z",
+      "images": [
+        "https://pbs.twimg.com/media/HWiVKGjXcAAA7Ns.jpg"
+      ],
+      "isMatchday": true
+    },
+    {
+      "text": "🔵⚪️ v 🟡🟡\n\nTelford Town v Sandbach United\n\nKieran Nolan now with a screamer that the keeper parries away.\n\nAnd then it’s 5 as Pollard gets in, finds Birchall who makes no mistake and blasts another in for The Bach!\n\n0 5\n\n79 mins",
+      "createdAt": "2026-11-07T16:39:55.000Z",
+      "images": [],
+      "isMatchday": true
+    },
+    {
+      "text": "🔵⚪️ v 🟡🟡\n\nTelford Town v Sandbach United\n\nPollard replaces hat trick hero Kyle Foley, take a bow Kyle, great performance and a well deserved 3 goals\n\n0 4",
+      "createdAt": "2026-11-07T16:37:47.000Z",
+      "images": [],
+      "isMatchday": true
     },
     {
       "text": "🔵⚪️ v 🟡🟡\n\nTelford Town v Sandbach United\n\nGoalscorer Kieran O’Connell is replaced by Max Williams\n\n 0 4\n\n74 mins",
@@ -45,24 +65,6 @@
     {
       "text": "🔵⚪️ v 🟡🟡\n\nTelford Town v Sandbach United\n\nRobbie Hatton gets a yellow for kicking the ball away and the Telford 11 gets one for grappling Kieran O’Connell to the floor.\n\n0 3\n\n56 mins",
       "createdAt": "2026-11-07T16:15:27.000Z",
-      "images": [],
-      "isMatchday": true
-    },
-    {
-      "text": "🔵⚪️ v 🟡🟡\n\nTelford Town v Sandbach United\n\nKieran Nolan gets a yellow for a shirt pull\n\n0 3\n\n52 mins",
-      "createdAt": "2026-11-07T16:11:39.000Z",
-      "images": [],
-      "isMatchday": true
-    },
-    {
-      "text": "🔵⚪️ v 🟡🟡\n\nTelford Town v Sandbach United\n\nSecond half underway, Lieran Nolan replaced Mitch Nolan just before HT with Mitch going off injured\n\n0 3",
-      "createdAt": "2026-11-07T16:07:12.000Z",
-      "images": [],
-      "isMatchday": true
-    },
-    {
-      "text": "🔵⚪️ v 🟡🟡\n\nTelford Town v Sandbach United\n\nFoley with a shot from distance, takes a deflection and the keeper saves, from the corner Hatton nods the corner in but it’s ruled out by the liner, Sandbach players not happy with that decision.\n\n0 3\n\nHT",
-      "createdAt": "2026-11-07T15:50:29.000Z",
       "images": [],
       "isMatchday": true
     }
