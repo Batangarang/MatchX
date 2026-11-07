@@ -182,5 +182,15 @@
     "side": "away",
     "handle": "SandbachFC_1st",
     "isDuplicateCommentary": false
+  },
+  {
+    "text": "HALF TIME: Telford Town 0 - 3 Sandbach United\n#TELSAN #Pitchero https://t.co/tkC3el792A",
+    "createdAt": "2026-11-07T15:51:41.000Z",
+    "images": [
+      "https://pbs.twimg.com/media/HWiKE_1WYAA5q3Q.jpg"
+    ],
+    "side": "home",
+    "handle": "TelfordTownFC",
+    "isDuplicateCommentary": false
   }
 ]

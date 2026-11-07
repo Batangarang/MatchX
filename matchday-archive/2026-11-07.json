@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-11-07T15:50:44.227Z",
+  "generatedAt": "2026-11-07T15:55:37.565Z",
   "fixtureDate": "2026-11-07",
   "kickoff": "15:00",
   "homeTeam": "Telford Town",
   "awayTeam": "Sandbach United",
-  "postsUsed": 20,
+  "postsUsed": 21,
   "imagesAnalyzedThisRun": 1,
-  "totalImagesAnalyzed": 12,
+  "totalImagesAnalyzed": 13,
   "match": {
     "score": "0-3",
     "scoreSource": "match_feed_stated",
@@ -106,23 +106,23 @@
     "roughXG": {
       "firstHalf": {
         "home": 0.2,
-        "away": 3.5,
-        "note": "Away team scored 3 goals; home team had minimal clear chances mentioned"
+        "away": 2.8,
+        "note": "Sandbach scored 3 goals; Telford had limited clear chances, with one Hall save mentioned"
       },
       "secondHalf": {
         "home": 0,
         "away": 0,
-        "note": "No second half data available"
+        "note": "No second half data available in posts"
       },
       "extraTime": {
         "home": 0,
         "away": 0,
-        "note": "Match did not reach extra time"
+        "note": "Match did not go to extra time"
       },
       "total": {
         "home": 0.2,
-        "away": 3.5,
-        "note": "Away team dominated; home team offered little attacking threat in first half"
+        "away": 2.8,
+        "note": "Based on first half only; Sandbach dominated with 3 goals scored"
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
@@ -130,22 +130,22 @@
       "firstHalf": {
         "home": 20,
         "away": 80,
-        "note": "Sandbach dominated from the start, scoring 3 goals; Telford struggled to contain them"
+        "note": "Sandbach United dominated, scoring 3 goals while Telford created minimal chances"
       },
       "secondHalf": {
         "home": 50,
         "away": 50,
-        "note": "No second half information available"
+        "note": "No second half data available in posts"
       },
       "extraTime": {
         "home": 50,
         "away": 50,
-        "note": "Match did not reach extra time"
+        "note": "Match did not go to extra time"
       },
       "total": {
         "home": 20,
         "away": 80,
-        "note": "Away team controlled the match decisively in the first half"
+        "note": "Based on first half performance only; Sandbach clearly in control"
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
