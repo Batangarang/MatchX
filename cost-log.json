@@ -9791,14 +9791,14 @@
       "aiCostGBP": 0.0006
     },
     {
-      "script": "recap-preview",
-      "timestamp": "2026-11-07T10:41:25.049Z",
+      "script": "recap-recap",
+      "timestamp": "2026-11-07T10:41:29.142Z",
       "getxapiCalls": 0,
       "claudeCalls": 1,
-      "inputTokens": 5092,
-      "outputTokens": 415,
+      "inputTokens": 4762,
+      "outputTokens": 390,
       "xCostGBP": 0,
-      "aiCostGBP": 0.0054
+      "aiCostGBP": 0.005
     }
   ]
 }
