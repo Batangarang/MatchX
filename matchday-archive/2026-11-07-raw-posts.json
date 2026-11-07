@@ -358,5 +358,25 @@
     "side": "away",
     "handle": "SandbachFC_1st",
     "isDuplicateCommentary": false
+  },
+  {
+    "text": "3 POINTS https://t.co/BYK1IyqdEc",
+    "createdAt": "2026-11-07T16:53:30.000Z",
+    "images": [
+      "https://pbs.twimg.com/media/HWiYOtpXQAAMRuW.jpg"
+    ],
+    "side": "away",
+    "handle": "SandbachFC_1st",
+    "isDuplicateCommentary": false
+  },
+  {
+    "text": "FULL TIME: Telford Town 0 - 6 Sandbach United\n#TELSAN https://t.co/0b0nHCjppY",
+    "createdAt": "2026-11-07T16:54:52.000Z",
+    "images": [
+      "https://pbs.twimg.com/media/HWiYiO9XwAA5Ih9.jpg"
+    ],
+    "side": "home",
+    "handle": "TelfordTownFC",
+    "isDuplicateCommentary": false
   }
 ]
