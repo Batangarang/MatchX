@@ -1,5 +1,5 @@
 {
-  "scrapedAt": "2026-11-07T15:00:57.176Z",
+  "scrapedAt": "2026-11-07T15:05:19.487Z",
   "username": "SandbachFC_1st",
   "posts": [
     {
@@ -9,6 +9,12 @@
         "https://pbs.twimg.com/media/HUDmlc4WgAAhBe7.jpg"
       ],
       "isMatchday": false
+    },
+    {
+      "text": "🔵⚪️ v 🟡🟡\n\nTelford Town v Sandbach United\n\nFoley crosses, Birchall taps it home but it’s ruled offside….\n\nThe Bach forcing the game early doors\n\n0 0",
+      "createdAt": "2026-11-07T15:04:53.000Z",
+      "images": [],
+      "isMatchday": true
     },
     {
       "text": "🔵⚪️ v 🟡🟡\n\nTelford Town v Sandbach United\n\nFollowing a minutes service, impeccably observed, the games is underway here at Telford, with The Bach needing a win to guarantee to be top of the division at 5pm this afternoon!\n\n0 0",
@@ -64,12 +70,6 @@
       "images": [
         "https://pbs.twimg.com/media/HV-IfEnXkAAD2Dc.jpg"
       ],
-      "isMatchday": true
-    },
-    {
-      "text": "🔴🔵 v 🟡🟡\n\nDawley Town v Sandbach United\n\n@DawleyTownFC \n\nDawley 11 and Greg get a yellow for a handbags clash.\n\nPollard gets a yellow for a pull back\n\n3 1",
-      "createdAt": "2026-10-31T15:44:46.000Z",
-      "images": [],
       "isMatchday": true
     }
   ]
