@@ -1,5 +1,5 @@
 {
-  "scrapedAt": "2026-11-06T13:25:20.577Z",
+  "scrapedAt": "2026-11-07T10:40:33.407Z",
   "username": "SandbachFC_1st",
   "posts": [
     {
@@ -9,6 +9,14 @@
         "https://pbs.twimg.com/media/HUDmlc4WgAAhBe7.jpg"
       ],
       "isMatchday": false
+    },
+    {
+      "text": "Another away trip for the Ramblers as we look to get back on form against @TelfordTownFC https://t.co/XXhAD6qOt8",
+      "createdAt": "2026-11-07T09:10:44.000Z",
+      "images": [
+        "https://pbs.twimg.com/media/HWguUCdXIAAm6ZR.jpg"
+      ],
+      "isMatchday": true
     },
     {
       "text": ". https://t.co/BGmGLw7eRr",
@@ -59,12 +67,6 @@
     {
       "text": "🔴🔵 v 🟡🟡\n\nDawley Town v Sandbach United\n\n@DawleyTownFC \n\nMitch Nolan replaced by Callum Besford\n\n3 0",
       "createdAt": "2026-10-31T15:35:22.000Z",
-      "images": [],
-      "isMatchday": true
-    },
-    {
-      "text": "🔴🔵 v 🟡🟡\n\nDawley Town v Sandbach United\n\n@DawleyTownFC \n\nClose but no cigar as Pollard has a shot blocked and Finney has shot from the rebound cleared off the line and eventually Dawley get the ball away.\n\n3 0",
-      "createdAt": "2026-10-31T15:26:28.000Z",
       "images": [],
       "isMatchday": true
     }
