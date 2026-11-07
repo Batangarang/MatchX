@@ -1,5 +1,5 @@
 {
-  "scrapedAt": "2026-11-07T16:50:24.069Z",
+  "scrapedAt": "2026-11-07T16:55:19.041Z",
   "username": "SandbachFC_1st",
   "posts": [
     {
@@ -9,6 +9,14 @@
         "https://pbs.twimg.com/media/HUDmlc4WgAAhBe7.jpg"
       ],
       "isMatchday": false
+    },
+    {
+      "text": "3 POINTS https://t.co/BYK1IyqdEc",
+      "createdAt": "2026-11-07T16:53:30.000Z",
+      "images": [
+        "https://pbs.twimg.com/media/HWiYOtpXQAAMRuW.jpg"
+      ],
+      "isMatchday": true
     },
     {
       "text": "🔵⚪️ v 🟡🟡\n\nTelford Town v Sandbach United\n\nJacob Vernon replaced by Oli Bavington \n\n0 6\n\n89 mins",
@@ -57,12 +65,6 @@
     {
       "text": "🔵⚪️ v 🟡🟡\n\nTelford Town v Sandbach United\n\nBirchall gets a yellow for kicking the ball away\n\n0 4\n\n70 mins",
       "createdAt": "2026-11-07T16:28:35.000Z",
-      "images": [],
-      "isMatchday": true
-    },
-    {
-      "text": "🔵⚪️ v 🟡🟡\n\nTelford Town v Sandbach United\n\nFoley gets his hat trick with a corner that curls in and the liner adjudges it had crossed, the line, Foley 33333, The Bach 44444 gets in!!!\n\n0 4\n\n64 mins gone",
-      "createdAt": "2026-11-07T16:24:51.000Z",
       "images": [],
       "isMatchday": true
     }
