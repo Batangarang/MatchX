@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-06T13:01:05.969Z",
+  "generatedAt": "2026-11-07T10:41:31.607Z",
   "division": "First Division South",
   "appearances": [
     {
@@ -432,6 +432,12 @@
     },
     {
       "rank": "-",
+      "player": "Darragh Bustin",
+      "club": "Bilston Town",
+      "total": "3"
+    },
+    {
+      "rank": "-",
       "player": "Harry Woodburn",
       "club": "Shawbury United",
       "total": "1"
@@ -442,7 +448,7 @@
       "rank": "1",
       "player": "Nicky Parker",
       "club": "Eccleshall",
-      "total": "6"
+      "total": "7"
     },
     {
       "rank": "2",
@@ -584,6 +590,12 @@
     },
     {
       "rank": "-",
+      "player": "Jack Boswell",
+      "club": "Shawbury United",
+      "total": "3"
+    },
+    {
+      "rank": "-",
       "player": "Daniel Cooper",
       "club": "Stafford Town",
       "total": "3"
@@ -601,7 +613,7 @@
       "total": "3"
     },
     {
-      "rank": "28",
+      "rank": "29",
       "player": "Suar Dedja",
       "club": "AFC Bridgnorth",
       "total": "2"
@@ -710,12 +722,6 @@
     },
     {
       "rank": "-",
-      "player": "Rhyce Brown",
-      "club": "Market Drayton Town",
-      "total": "2"
-    },
-    {
-      "rank": "-",
       "player": "Shaun Rowley",
       "club": "Market Drayton Town",
       "total": "2"
@@ -758,12 +764,6 @@
     },
     {
       "rank": "-",
-      "player": "Jack Boswell",
-      "club": "Shawbury United",
-      "total": "2"
-    },
-    {
-      "rank": "-",
       "player": "Joe Care",
       "club": "Shawbury United",
       "total": "2"
@@ -784,6 +784,12 @@
       "rank": "-",
       "player": "Eshan Greer",
       "club": "Stafford Town",
+      "total": "2"
+    },
+    {
+      "rank": "-",
+      "player": "Rhyce Brown",
+      "club": "Telford Town",
       "total": "2"
     },
     {
@@ -814,6 +820,12 @@
       "rank": "-",
       "player": "Gus Pearson",
       "club": "Widnes Town",
+      "total": "2"
+    },
+    {
+      "rank": "-",
+      "player": "Callum Knowles",
+      "club": "Wolverhampton Casuals",
       "total": "2"
     }
   ]
