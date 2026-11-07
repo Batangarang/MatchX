@@ -9761,13 +9761,13 @@
       "aiCostGBP": 0
     },
     {
-      "script": "x-posts",
-      "timestamp": "2026-11-07T14:50:24.625Z",
-      "getxapiCalls": 1,
+      "script": "matchday-live",
+      "timestamp": "2026-11-07T14:50:36.356Z",
+      "getxapiCalls": 2,
       "claudeCalls": 0,
       "inputTokens": 0,
       "outputTokens": 0,
-      "xCostGBP": 0.0008,
+      "xCostGBP": 0.0015,
       "aiCostGBP": 0
     }
   ]
