@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-09T08:40:41.075Z",
+  "generatedAt": "2026-11-09T09:40:42.608Z",
   "division": "First Division South",
   "appearances": [
     {
@@ -388,10 +388,16 @@
       "rank": "1",
       "player": "Nicky Parker",
       "club": "Eccleshall",
-      "total": "7"
+      "total": "8"
     },
     {
       "rank": "2",
+      "player": "Rio Tetsell",
+      "club": "Wednesfield Community",
+      "total": "6"
+    },
+    {
+      "rank": "3",
       "player": "Armando Wood",
       "club": "AFC Bridgnorth",
       "total": "5"
@@ -400,12 +406,6 @@
       "rank": "-",
       "player": "Ross Jones",
       "club": "Dawley Town",
-      "total": "5"
-    },
-    {
-      "rank": "-",
-      "player": "Rio Tetsell",
-      "club": "Wednesfield Community",
       "total": "5"
     },
     {
