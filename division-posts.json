@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-10T10:01:17.817Z",
-  "sinceDate": "2026-11-03T10:00:55.643Z",
+  "generatedAt": "2026-11-10T12:31:10.003Z",
+  "sinceDate": "2026-11-03T12:30:45.597Z",
   "clubs": [
     {
       "name": "Sandbach United",
@@ -384,7 +384,8 @@
             "https://pbs.twimg.com/media/HWNIEhEWYAAVCfH.jpg"
           ]
         }
-      ]
+      ],
+      "error": "GetXAPI error for @EccleshallFC: Upstream returned an unexpected response — please retry."
     },
     {
       "name": "New Mills",
@@ -1182,6 +1183,11 @@
       "handle": "bilstontownfc",
       "posts": [
         {
+          "text": "You’re welcome 🤝🧡",
+          "createdAt": "2026-11-10T10:58:32.000Z",
+          "images": []
+        },
+        {
           "text": "This Wednesday sees us back in @nwcfl action against @alsagertown_fc \n\nA special evening as we, as a club, remember the fallen. \n\n⚽️ 7.45pm kick off\n\n📍Queen Street, WV14 7EX\n\nMatchday entrance is through the turnstile.\nAdults: £8.00\nConcessions: £6.00\n\nBar opens at 6pm with hot and cold food available.\n\nEnter our 50/50 to WIN a cash prize at the match! \n\nPrincipal partners: @wolvcoll",
           "createdAt": "2026-11-09T12:10:59.000Z",
           "images": [
@@ -1652,6 +1658,13 @@
       "name": "Market Drayton Town",
       "handle": "MDTFC",
       "posts": [
+        {
+          "text": "Don’t forget…. Our Vets team are at home this Friday night at the Balufab stadium. \n\nCome along and show your support. The last game you came out in your hundreds to see some faces of the past put on a Drayton shirt again. \n\nAs always the bar will be open \n\nSee you there 🔴⚪️ https://t.co/wPYUdxdCaM",
+          "createdAt": "2026-11-10T11:38:35.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HWws66MXAAAidVB.jpg"
+          ]
+        },
         {
           "text": "?⚪️ NEW SIGNING | LIAM TOMLIN ⚪️? #Pitchero\nhttps://www.pitchero.com/clubs/marketdraytontownfc/news/new-signing-liam-tomlin-3007484.html https://t.co/vqPBBWtYVP",
           "createdAt": "2026-11-09T19:11:04.000Z",
