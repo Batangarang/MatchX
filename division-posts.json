@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-10T12:31:10.003Z",
-  "sinceDate": "2026-11-03T12:30:45.597Z",
+  "generatedAt": "2026-11-10T12:31:12.144Z",
+  "sinceDate": "2026-11-03T12:30:49.048Z",
   "clubs": [
     {
       "name": "Sandbach United",
@@ -178,6 +178,13 @@
       "name": "Eccleshall",
       "handle": "EccleshallFC",
       "posts": [
+        {
+          "text": "MEET THE TEAM BEHIND ECCLESHALL FC!\n\nFrom the boardroom to the touchline, meet the people working behind the scenes to keep our club moving forward.\n\nA huge thank you to everyone who gives their time and dedication! 👏\n\n🦅💙 \n\n#EccleshallFC https://t.co/Y9s1pE0yTU",
+          "createdAt": "2026-11-10T10:30:00.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HWtTxYbXEAAR1nJ.jpg"
+          ]
+        },
         {
           "text": "FOOTBALL ROUND-UP\n\nYou've seen how our First Team got on, but what about the rest of the club?\nIt was another busy round of football across Eccleshall FC, with plenty of action throughout our pathway. Here’s how our sides got on.\n\nReserves 0-2 Newcastle Town\nA tough afternoon for the Reserves, who were unable to find a way past Newcastle Town and had to settle for defeat this time around. On to the next one, lads!\n\nU18 Floodlit 5-2 Stapenhill\nA fantastic result for our U18 Floodlit side, finding the net five times on their way to an impressive victory over Stapenhill.\n\nU16 3-0 Telford Town\nAnother excellent result, with the U16s securing a 3-0 victory and, just as importantly, a clean sheet. A brilliant team performance and three goals to celebrate!\n\nU13 - No Game\nNo fixture for our U13s this time around, so they'll be ready and waiting for their next opportunity to get back out on the pitch.\n\nU12 MJPL 3-3 Coventry Alvis\nGoals aplenty in this one! The U12 MJPL side shared six goals with Coventry Alvis in an entertaining 3-3 draw.\n\nU12 0-2 Cheadle S.M.U Youth\nA difficult result for them on Sunday against Cheadle S.M.U Youth. Plenty for the team to take from the game as they continue their development together.\n\nA SPECIAL SHOUTOUT TO JUKE! 🧤\nOur U16 goalkeeper put in a proper Eccleshall FC shift! After starting his day between the sticks and helping the U16s to a 3-0 win and a clean sheet, he then headed over to warm up with the First Team.\n\nBut his footballing duties still weren't finished! Juke rounded off the day at the local bonfire, helping out at the club's penalty shootout stall, where he faced more than 300 shots throughout the evening!\n\nWe reckon those gloves, and Juke, have earned a well-deserved rest!\n\nA huge well done to Juke, and a massive thank you to every player, coach, manager, parent and volunteer who represents and supports the club each week.\n\nFrom the youth teams through to senior football, every fixture is another part of the Eccleshall FC story.\n\nDifferent teams, different results, one Eccleshall FC.\n\n💙🦅\n\n#EccleshallFC",
           "createdAt": "2026-11-09T20:00:00.000Z",
@@ -384,8 +391,7 @@
             "https://pbs.twimg.com/media/HWNIEhEWYAAVCfH.jpg"
           ]
         }
-      ],
-      "error": "GetXAPI error for @EccleshallFC: Upstream returned an unexpected response — please retry."
+      ]
     },
     {
       "name": "New Mills",
