@@ -1,5 +1,5 @@
 {
-  "scrapedAt": "2026-11-09T04:41:10.838Z",
+  "scrapedAt": "2026-11-10T01:31:28.860Z",
   "clubs": {
     "Eccleshall": {
       "clubUrl": "clubpage.php?id=30",
@@ -14,7 +14,7 @@
     "AFC Bridgnorth": {
       "clubUrl": "clubpage.php?id=936",
       "form": "WWDWDL",
-      "leagueGamesPlayed": 13
+      "leagueGamesPlayed": 14
     },
     "Stafford Town": {
       "clubUrl": "clubpage.php?id=182",
@@ -89,7 +89,7 @@
     "Widnes Town": {
       "clubUrl": "clubpage.php?id=868",
       "form": "DLLLDW",
-      "leagueGamesPlayed": 15
+      "leagueGamesPlayed": 16
     },
     "Telford Town": {
       "clubUrl": "clubpage.php?id=881",
