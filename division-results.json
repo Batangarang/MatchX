@@ -1,15 +1,15 @@
 {
-  "scrapedAt": "2026-11-11T19:31:24.308Z",
+  "scrapedAt": "2026-11-12T15:41:19.225Z",
   "clubs": {
+    "Wolverhampton Casuals": {
+      "clubUrl": "clubpage.php?id=73",
+      "form": "WWWWWW",
+      "leagueGamesPlayed": 14
+    },
     "Eccleshall": {
       "clubUrl": "clubpage.php?id=30",
       "form": "WWWWDL",
       "leagueGamesPlayed": 14
-    },
-    "Wolverhampton Casuals": {
-      "clubUrl": "clubpage.php?id=73",
-      "form": "WWWWWD",
-      "leagueGamesPlayed": 13
     },
     "AFC Bridgnorth": {
       "clubUrl": "clubpage.php?id=936",
@@ -23,8 +23,8 @@
     },
     "Bilston Town": {
       "clubUrl": "clubpage.php?id=355",
-      "form": "DLWWWW",
-      "leagueGamesPlayed": 13
+      "form": "LDLWWW",
+      "leagueGamesPlayed": 14
     },
     "Barnton": {
       "clubUrl": "clubpage.php?id=266",
@@ -43,8 +43,8 @@
     },
     "New Mills": {
       "clubUrl": "clubpage.php?id=91",
-      "form": "LWLDWL",
-      "leagueGamesPlayed": 15
+      "form": "LLWLDW",
+      "leagueGamesPlayed": 16
     },
     "Cheadle Heath Nomads": {
       "clubUrl": "clubpage.php?id=713",
@@ -83,8 +83,8 @@
     },
     "Alsager Town": {
       "clubUrl": "clubpage.php?id=3",
-      "form": "DWLLLL",
-      "leagueGamesPlayed": 15
+      "form": "WDWLLL",
+      "leagueGamesPlayed": 16
     },
     "Widnes Town": {
       "clubUrl": "clubpage.php?id=868",
