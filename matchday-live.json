@@ -1,199 +1,38 @@
 {
-  "generatedAt": "2026-11-07T17:01:10.450Z",
-  "fixtureDate": "2026-11-07",
+  "generatedAt": "2026-11-14T13:30:54.193Z",
+  "fixtureDate": "2026-11-14",
   "kickoff": "15:00",
-  "homeTeam": "Telford Town",
+  "homeTeam": "New Mills",
   "awayTeam": "Sandbach United",
-  "postsUsed": 43,
-  "imagesAnalyzedThisRun": 0,
-  "totalImagesAnalyzed": 22,
+  "postsUsed": 1,
+  "imagesAnalyzedThisRun": 3,
+  "totalImagesAnalyzed": 3,
   "match": {
-    "score": "0-6",
-    "scoreSource": "announced_full_time",
-    "scoreConfirmed": true,
-    "feedScore": "0-6",
-    "scoreDiscrepancy": "Goal reports suggested 0-7 but the confirmed score is 0-6 — 1 unconfirmed goal report(s) ignored.",
-    "unconfirmedGoals": [
-      {
-        "minute": 83,
-        "team": "away",
-        "scorer": "Robbie Hatton"
-      }
-    ],
-    "finalScoreAnnounced": "0-6",
-    "halfTimeScoreAnnounced": "0-3",
-    "htDiscrepancy": "First-half goals suggest HT 0-4, but an announced HT score of 0-3 was also seen.",
-    "matchStage": "full_time",
+    "score": null,
+    "scoreEvidence": null,
+    "finalScoreAnnounced": null,
+    "halfTimeScoreAnnounced": null,
+    "matchStage": "scheduled",
     "lineups": {
       "home": {
-        "players": [
-          "1. Sam Wollaston",
-          "2. Ibrahim Almane",
-          "3. Shakeel Brown",
-          "4. Isaac Cooper",
-          "5. Moussa Koita",
-          "6. Fred Cartwright",
-          "7. Jack Grimshaw",
-          "8. Fred Summerville",
-          "9. Alex Coster",
-          "10. Lewis Dilks",
-          "11. Alex Allen"
-        ],
-        "substitutes": [
-          "12. Georges Dawes",
-          "14. Rhyce Brown",
-          "15. Archie Russell",
-          "16. Renelle Davis-Lawrence",
-          "17. Logan Whittaker"
-        ],
+        "players": [],
+        "substitutes": [],
         "manager": null,
         "officials": []
       },
       "away": {
-        "players": [
-          "Stan Tatters",
-          "Jack Finney",
-          "Niall Cope"
-        ],
-        "substitutes": [
-          "Max Williams",
-          "Oli Bavington"
-        ],
+        "players": [],
+        "substitutes": [],
         "manager": null,
         "officials": []
       }
     },
-    "goals": [
-      {
-        "minute": 4,
-        "team": "away",
-        "scorer": "Birchall",
-        "note": "Ruled offside"
-      },
-      {
-        "minute": 8,
-        "team": "away",
-        "scorer": "Kyle Foley"
-      },
-      {
-        "minute": 13,
-        "team": "away",
-        "scorer": "Kyle Foley"
-      },
-      {
-        "minute": 30,
-        "team": "away",
-        "scorer": "Kieran O'Connell"
-      },
-      {
-        "minute": 64,
-        "team": "away",
-        "scorer": "Kyle Foley"
-      },
-      {
-        "minute": 79,
-        "team": "away",
-        "scorer": "Robbie Birchall"
-      }
-    ],
-    "yellowCards": [
-      {
-        "minute": 52,
-        "team": "away",
-        "player": "Kieran Nolan"
-      },
-      {
-        "minute": 56,
-        "team": "away",
-        "player": "Robbie Hatton"
-      },
-      {
-        "minute": 55,
-        "team": "home",
-        "player": "Alex Allen"
-      },
-      {
-        "minute": 56,
-        "team": "home",
-        "player": "Telford player (number 11)"
-      },
-      {
-        "minute": 70,
-        "team": "away",
-        "player": "Matthew Birchall"
-      },
-      {
-        "minute": 78,
-        "team": "home",
-        "player": "Renelle Davis-Lawrence"
-      }
-    ],
+    "goals": [],
+    "yellowCards": [],
     "redCards": [],
-    "substitutions": [
-      {
-        "minute": null,
-        "team": "away",
-        "playerOff": "Mitch Nolan",
-        "playerOn": "Lieran Nolan"
-      },
-      {
-        "minute": 45,
-        "team": "away",
-        "playerOff": "Mitch Nolan",
-        "playerOn": "Lieran Nolan"
-      },
-      {
-        "minute": 74,
-        "team": "away",
-        "playerOff": "Kieran O'Connell",
-        "playerOn": "Max Williams"
-      },
-      {
-        "minute": 76,
-        "team": "away",
-        "playerOff": "Kyle Foley",
-        "playerOn": "Pollard"
-      },
-      {
-        "minute": 89,
-        "team": "away",
-        "playerOff": "Jacob Vernon",
-        "playerOn": "Oli Bavington"
-      }
-    ],
+    "substitutions": [],
     "sinBins": [],
-    "injuries": [
-      {
-        "minute": null,
-        "team": "away",
-        "player": "Mitch Nolan",
-        "note": "Went off injured just before half-time"
-      },
-      {
-        "minute": 45,
-        "team": "away",
-        "player": "Mitch Nolan",
-        "note": "went off injured at half-time"
-      },
-      {
-        "minute": 46,
-        "team": "away",
-        "player": "Mitch Nolan",
-        "note": "Went off injured just before half-time, replaced by Lieran Nolan"
-      },
-      {
-        "minute": 80,
-        "team": "home",
-        "player": "Keeper",
-        "note": "Went down injured after saving a shot"
-      },
-      {
-        "minute": 80,
-        "team": "home",
-        "player": "Goalkeeper",
-        "note": "Went down injured after saving a low shot"
-      }
-    ],
+    "injuries": [],
     "addedTime": {
       "firstHalf": null,
       "secondHalf": null
@@ -210,49 +49,55 @@
     },
     "roughXG": {
       "firstHalf": {
-        "home": 0.1,
-        "away": 3,
-        "note": "Sandbach scored 3 goals (Foley, unknown, O'Connell) plus a disallowed Birchall offside chance. One early Foley disallowed chance also noted. (raised to reflect goals actually scored)"
+        "home": 0,
+        "away": 0,
+        "note": "No match data available; match is only scheduled at this point."
       },
       "secondHalf": {
-        "home": 0.1,
-        "away": 2.8,
-        "note": "Sandbach scored 3 more goals (Foley hat-trick, Birchall, Hatton) plus a Hatton shot that was saved and a Finney chance that went wide."
+        "home": 0,
+        "away": 0,
+        "note": "No match data available; match is only scheduled at this point."
       },
       "extraTime": {
         "home": 0,
         "away": 0,
-        "note": "No extra time played"
+        "note": "No match data available; match is only scheduled at this point."
       },
       "total": {
-        "home": 0.2,
-        "away": 5.3,
-        "note": "Sandbach United completely dominated with 6 goals scored across both halves. Telford created minimal chances throughout."
+        "home": 0,
+        "away": 0,
+        "note": "No match data available; match is only scheduled at this point."
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
     "matchControl": {
       "firstHalf": {
-        "home": 15,
-        "away": 85,
-        "note": "Sandbach forced the game early and were clearly dominant, scoring 3 goals by half-time with Telford unable to create meaningful chances."
+        "home": 50,
+        "away": 50,
+        "note": "No match data available; match is only scheduled at this point."
       },
       "secondHalf": {
-        "home": 10,
-        "away": 90,
-        "note": "Sandbach continued to control the match completely, adding 3 more goals in the second half. Telford offered minimal resistance."
+        "home": 50,
+        "away": 50,
+        "note": "No match data available; match is only scheduled at this point."
       },
       "extraTime": {
         "home": 50,
         "away": 50,
-        "note": "No extra time played"
+        "note": "No match data available; match is only scheduled at this point."
       },
       "total": {
-        "home": 12,
-        "away": 88,
-        "note": "Sandbach United dominated the entire match from start to finish, securing a comprehensive 6-0 victory with ruthless attacking play and defensive solidity."
+        "home": 50,
+        "away": 50,
+        "note": "No match data available; match is only scheduled at this point."
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
-    }
+    },
+    "unconfirmedGoals": [],
+    "scoreSource": "none",
+    "scoreConfirmed": false,
+    "feedScore": null,
+    "scoreDiscrepancy": null,
+    "htDiscrepancy": null
   }
 }
