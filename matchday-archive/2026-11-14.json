@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-11-14T15:05:33.025Z",
+  "generatedAt": "2026-11-14T15:20:43.012Z",
   "fixtureDate": "2026-11-14",
   "kickoff": "15:00",
   "homeTeam": "New Mills",
   "awayTeam": "Sandbach United",
-  "postsUsed": 5,
+  "postsUsed": 6,
   "imagesAnalyzedThisRun": 0,
   "totalImagesAnalyzed": 4,
   "match": {
@@ -81,47 +81,47 @@
     },
     "roughXG": {
       "firstHalf": {
-        "home": 0,
+        "home": 0.15,
         "away": 0,
-        "note": "Match had just kicked off; no clear chances reported"
+        "note": "New Mills had one chance that was blazed over the bar at 18 mins; very limited information available"
       },
       "secondHalf": {
         "home": 0,
         "away": 0,
-        "note": "No data available"
+        "note": "No match activity reported"
       },
       "extraTime": {
         "home": 0,
         "away": 0,
-        "note": "Match did not reach extra time"
+        "note": "Match did not go to extra time"
       },
       "total": {
-        "home": 0,
+        "home": 0.15,
         "away": 0,
-        "note": "Insufficient data from posts"
+        "note": "Very early stage; minimal data available"
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
     "matchControl": {
       "firstHalf": {
-        "home": 50,
-        "away": 50,
-        "note": "Match only minutes old; no control patterns evident"
+        "home": 55,
+        "away": 45,
+        "note": "New Mills created a chance at 18 mins; limited information available"
       },
       "secondHalf": {
         "home": 50,
         "away": 50,
-        "note": "No data available"
+        "note": "No match activity reported"
       },
       "extraTime": {
         "home": 50,
         "away": 50,
-        "note": "Match did not reach extra time"
+        "note": "Match did not go to extra time"
       },
       "total": {
         "home": 50,
         "away": 50,
-        "note": "Insufficient data from posts"
+        "note": "Very early stage; minimal data available"
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
