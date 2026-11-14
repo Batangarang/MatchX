@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-11-14T16:15:45.250Z",
+  "generatedAt": "2026-11-14T16:20:43.853Z",
   "fixtureDate": "2026-11-14",
   "kickoff": "15:00",
   "homeTeam": "New Mills",
   "awayTeam": "Sandbach United",
-  "postsUsed": 27,
-  "imagesAnalyzedThisRun": 1,
+  "postsUsed": 28,
+  "imagesAnalyzedThisRun": 0,
   "totalImagesAnalyzed": 9,
   "match": {
     "score": "1-5",
@@ -49,11 +49,8 @@
           "Max Williams"
         ],
         "substitutes": [
-          "12. Callum Besford",
-          "13. Joseph Lee",
-          "14. Kieran Nolan",
-          "15. Mason Wilson",
-          "16. Joshua Klein-Davies"
+          "Alfie Carmichael",
+          "Max Williams"
         ],
         "manager": null,
         "officials": []
@@ -105,6 +102,18 @@
         "team": "home",
         "playerOff": "Jimmy Green",
         "playerOn": "Luke Evans"
+      },
+      {
+        "minute": null,
+        "team": "home",
+        "playerOff": "Dec Nolan",
+        "playerOn": "Jack Morris"
+      },
+      {
+        "minute": null,
+        "team": "home",
+        "playerOff": "Malachi Babayale",
+        "playerOn": "Glebs Klujevs"
       }
     ],
     "sinBins": [],
@@ -127,45 +136,45 @@
       "firstHalf": {
         "home": 0.8,
         "away": 1.5,
-        "note": "New Mills scored a spectacular long-range goal; Sandbach had limited chances but equalized. Early dominance by home team. (raised to reflect goals actually scored)"
+        "note": "New Mills had early chance that was blazed over; Sandbach had limited early chances before conceding to Dahou's long-range goal. (raised to reflect goals actually scored)"
       },
       "secondHalf": {
-        "home": 0.2,
-        "away": 2,
-        "note": "Sandbach dominated after half-time, scoring 3 goals in quick succession (47', ~45', 57'). New Mills had one headed chance saved by Hall (53') and one shot from one-on-one (56') that went wide."
+        "home": 0.5,
+        "away": 2.8,
+        "note": "Sandbach dominated second half with multiple goals; New Mills had one shot from Foley that went wide and a corner with a header saved."
       },
       "extraTime": {
         "home": 0,
         "away": 0,
-        "note": "No extra time played."
+        "note": "Match did not go to extra time."
       },
       "total": {
-        "home": 0.8,
+        "home": 1.3,
         "away": 3.8,
-        "note": "Sandbach convincingly outplayed New Mills over the 90 minutes, scoring 5 goals to 1. Home team had one excellent finish early but offered little resistance thereafter. (raised to reflect goals actually scored)"
+        "note": "Sandbach's 5 goals (4 in second half) indicates strong attacking play and clinical finishing. New Mills' 1 goal from long range early on with limited further chances. (raised to reflect goals actually scored)"
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
     "matchControl": {
       "firstHalf": {
-        "home": 60,
-        "away": 40,
-        "note": "New Mills created early pressure, including the opening goal at 23'. Sandbach responded to equalize and then took the lead by half-time."
+        "home": 55,
+        "away": 45,
+        "note": "New Mills had early chances and took the lead, but Sandbach equalized and went ahead by half-time."
       },
       "secondHalf": {
-        "home": 20,
-        "away": 80,
-        "note": "Sandbach completely dominated the second half, scoring three quick goals and maintaining control. New Mills offered minimal threat."
+        "home": 25,
+        "away": 75,
+        "note": "Sandbach completely dominated the second half, scoring 3 more goals with New Mills unable to mount sustained pressure."
       },
       "extraTime": {
         "home": 50,
         "away": 50,
-        "note": "No extra time played."
+        "note": "Match did not go to extra time."
       },
       "total": {
-        "home": 35,
-        "away": 65,
-        "note": "Sandbach controlled the match overall, particularly in the second half. New Mills made a bright start but faded significantly."
+        "home": 40,
+        "away": 60,
+        "note": "Overall match control favored Sandbach, particularly in the second half where they were dominant."
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
