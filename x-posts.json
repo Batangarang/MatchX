@@ -1,5 +1,5 @@
 {
-  "scrapedAt": "2026-11-14T14:55:20.199Z",
+  "scrapedAt": "2026-11-14T15:00:52.811Z",
   "username": "SandbachFC_1st",
   "posts": [
     {
@@ -8,6 +8,12 @@
       "images": [
         "https://pbs.twimg.com/media/HV_RIFZW4AA6luy.png"
       ],
+      "isMatchday": true
+    },
+    {
+      "text": "🟠🟠 v 🔵⚪️\n\nNew Mills v Sandbach United\n\n@NewMillsFC \n\nGame underway here at Church Lane as The Bach take on New Mills in the 2nd round of the Edward Case Cup. It’s a lovely crisp day and ideal conditions for a decent game of football ⚽️ \n\n0 0",
+      "createdAt": "2026-11-14T14:59:54.000Z",
+      "images": [],
       "isMatchday": true
     },
     {
@@ -60,14 +66,6 @@
       "text": "🔵⚪️ v 🟡🟡\n\nTelford Town v Sandbach United\n\nNearly 6 as Hatton gets away from his man and his low shot is saved by the keepers feet who has now gone down injured\n\n0 5\n\n80 mins",
       "createdAt": "2026-11-07T16:41:03.000Z",
       "images": [],
-      "isMatchday": true
-    },
-    {
-      "text": "0-5 https://t.co/t3k9HfkoEj",
-      "createdAt": "2026-11-07T16:40:04.000Z",
-      "images": [
-        "https://pbs.twimg.com/media/HWiVKGjXcAAA7Ns.jpg"
-      ],
       "isMatchday": true
     }
   ]
