@@ -1,5 +1,5 @@
 {
-  "scrapedAt": "2026-11-14T18:30:42.161Z",
+  "scrapedAt": "2026-11-14T19:35:18.069Z",
   "username": "SandbachFC_1st",
   "posts": [
     {
@@ -8,6 +8,12 @@
       "images": [
         "https://pbs.twimg.com/media/HV_RIFZW4AA6luy.png"
       ],
+      "isMatchday": true
+    },
+    {
+      "text": "Players interview the bosses today (after JKD has checked his hair first) as The Bach progress into the Quarter Finals of the Edward Case Cup following an emphatic 1 7 win away at New Mills. The Bach face Alsager away in the next round, Saturday 30 January. @Jkleindavies https://t.co/p5hZxzp8rI",
+      "createdAt": "2026-11-14T18:34:16.000Z",
+      "images": [],
       "isMatchday": true
     },
     {
@@ -62,14 +68,6 @@
       "text": "🟠🟠 v 🔵⚪️\n\nNew Mills v Sandbach United\n\n@NewMillsFC \n\nKieran Nolan and Mason Wilson replace Alfie Carmichael and Stan Tatters\n\n1 5\n\n69 mins",
       "createdAt": "2026-11-14T16:26:12.000Z",
       "images": [],
-      "isMatchday": true
-    },
-    {
-      "text": "1-5 https://t.co/tNgowM4zzr",
-      "createdAt": "2026-11-14T16:14:07.000Z",
-      "images": [
-        "https://pbs.twimg.com/media/HXGSWIVXQAA7jS3.jpg"
-      ],
       "isMatchday": true
     }
   ]
