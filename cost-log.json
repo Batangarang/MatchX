@@ -11011,14 +11011,14 @@
       "aiCostGBP": 0.0068
     },
     {
-      "script": "x-posts",
-      "timestamp": "2026-11-14T15:50:24.666Z",
-      "getxapiCalls": 1,
-      "claudeCalls": 0,
-      "inputTokens": 0,
-      "outputTokens": 0,
-      "xCostGBP": 0.0008,
-      "aiCostGBP": 0
+      "script": "matchday-live",
+      "timestamp": "2026-11-14T15:50:41.989Z",
+      "getxapiCalls": 2,
+      "claudeCalls": 1,
+      "inputTokens": 2926,
+      "outputTokens": 989,
+      "xCostGBP": 0.0015,
+      "aiCostGBP": 0.0059
     }
   ]
 }
