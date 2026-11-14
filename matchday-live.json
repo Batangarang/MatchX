@@ -1,28 +1,69 @@
 {
-  "generatedAt": "2026-11-14T13:30:54.193Z",
+  "generatedAt": "2026-11-14T14:15:51.009Z",
   "fixtureDate": "2026-11-14",
   "kickoff": "15:00",
   "homeTeam": "New Mills",
   "awayTeam": "Sandbach United",
-  "postsUsed": 1,
-  "imagesAnalyzedThisRun": 3,
-  "totalImagesAnalyzed": 3,
+  "postsUsed": 2,
+  "imagesAnalyzedThisRun": 1,
+  "totalImagesAnalyzed": 4,
   "match": {
     "score": null,
-    "scoreEvidence": null,
+    "scoreSource": "none",
+    "scoreConfirmed": false,
+    "feedScore": null,
+    "scoreDiscrepancy": null,
+    "unconfirmedGoals": [],
     "finalScoreAnnounced": null,
     "halfTimeScoreAnnounced": null,
+    "htDiscrepancy": null,
     "matchStage": "scheduled",
     "lineups": {
       "home": {
-        "players": [],
-        "substitutes": [],
+        "players": [
+          "1. George Byrne",
+          "2. Declan Nolan",
+          "3. Malachi Babayale",
+          "4. Marcello Arhin",
+          "5. Joshua Lowe",
+          "6. Macaulay Eyre",
+          "7. Finlay Dooner",
+          "8. Samuel Wrigley",
+          "9. James Green",
+          "10. Adam Dahou",
+          "11. Keaton Mulvey"
+        ],
+        "substitutes": [
+          "12. Jack Morris",
+          "14. Glebs Klujevs",
+          "15. Luke Evans",
+          "16. Tom Beswick",
+          "17. Bobby Page"
+        ],
         "manager": null,
         "officials": []
       },
       "away": {
-        "players": [],
-        "substitutes": [],
+        "players": [
+          "1. Gregory Hall",
+          "2. Jacob Vernon",
+          "3. Max Williams",
+          "4. Jordan Stafford",
+          "5. Jack Finney",
+          "6. Stanley Tatters",
+          "7. Matthew Birchall",
+          "8. Niall Cope",
+          "9. Alfie Carmichael",
+          "10. Robbie Hatton",
+          "11. Kyle Foley"
+        ],
+        "substitutes": [
+          "12. Callum Besford",
+          "13. Joseph Lee",
+          "14. Kieran Nolan",
+          "15. Mason Wilson",
+          "16. Joshua Klein-Davies"
+        ],
         "manager": null,
         "officials": []
       }
@@ -51,22 +92,22 @@
       "firstHalf": {
         "home": 0,
         "away": 0,
-        "note": "No match data available; match is only scheduled at this point."
+        "note": "Match not yet played; no data available."
       },
       "secondHalf": {
         "home": 0,
         "away": 0,
-        "note": "No match data available; match is only scheduled at this point."
+        "note": "Match not yet played; no data available."
       },
       "extraTime": {
         "home": 0,
         "away": 0,
-        "note": "No match data available; match is only scheduled at this point."
+        "note": "Match not yet played; no data available."
       },
       "total": {
         "home": 0,
         "away": 0,
-        "note": "No match data available; match is only scheduled at this point."
+        "note": "Match not yet played; no data available."
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
@@ -74,30 +115,24 @@
       "firstHalf": {
         "home": 50,
         "away": 50,
-        "note": "No match data available; match is only scheduled at this point."
+        "note": "Match not yet played; no data available."
       },
       "secondHalf": {
         "home": 50,
         "away": 50,
-        "note": "No match data available; match is only scheduled at this point."
+        "note": "Match not yet played; no data available."
       },
       "extraTime": {
         "home": 50,
         "away": 50,
-        "note": "No match data available; match is only scheduled at this point."
+        "note": "Match not yet played; no data available."
       },
       "total": {
         "home": 50,
         "away": 50,
-        "note": "No match data available; match is only scheduled at this point."
+        "note": "Match not yet played; no data available."
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
-    },
-    "unconfirmedGoals": [],
-    "scoreSource": "none",
-    "scoreConfirmed": false,
-    "feedScore": null,
-    "scoreDiscrepancy": null,
-    "htDiscrepancy": null
+    }
   }
 }
