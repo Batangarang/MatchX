@@ -288,5 +288,31 @@
     "side": "away",
     "handle": "SandbachFC_1st",
     "isDuplicateCommentary": true
+  },
+  {
+    "text": "Sandbach 7-1",
+    "createdAt": "2026-11-14T16:48:19.000Z",
+    "images": [],
+    "side": "home",
+    "handle": "NewMillsFC",
+    "isDuplicateCommentary": true
+  },
+  {
+    "text": "1-7 https://t.co/8sfcPs4wSY",
+    "createdAt": "2026-11-14T16:49:50.000Z",
+    "images": [
+      "https://pbs.twimg.com/media/HXGahXoW8AAMjyH.jpg"
+    ],
+    "side": "away",
+    "handle": "SandbachFC_1st",
+    "isDuplicateCommentary": false
+  },
+  {
+    "text": "🟠🟠 v🔵🟡\n\nNew Mills v Sandbach United\n\nAnd it’s super 7 for The Bach, as a delightful passage of play see Mason get the ball to Besford, who back heels it to Matty Birchall and he does the keeper with a delightful close range chip, great move and an audacious finish.\n\n1 7\n\nFT",
+    "createdAt": "2026-11-14T16:50:27.000Z",
+    "images": [],
+    "side": "away",
+    "handle": "SandbachFC_1st",
+    "isDuplicateCommentary": true
   }
 ]

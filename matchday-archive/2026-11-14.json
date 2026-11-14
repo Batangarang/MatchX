@@ -1,21 +1,21 @@
 {
-  "generatedAt": "2026-11-14T16:45:44.777Z",
+  "generatedAt": "2026-11-14T16:50:44.290Z",
   "fixtureDate": "2026-11-14",
   "kickoff": "15:00",
   "homeTeam": "New Mills",
   "awayTeam": "Sandbach United",
-  "postsUsed": 34,
+  "postsUsed": 37,
   "imagesAnalyzedThisRun": 1,
-  "totalImagesAnalyzed": 10,
+  "totalImagesAnalyzed": 11,
   "match": {
-    "score": "1-6",
+    "score": "1-7",
     "scoreSource": "match_feed_stated",
     "scoreConfirmed": true,
-    "feedScore": "1-6",
-    "scoreDiscrepancy": "Goal reports suggested 1-7 but the confirmed score is 1-6 — 1 unconfirmed goal report(s) ignored.",
+    "feedScore": "1-7",
+    "scoreDiscrepancy": "Goal reports suggested 1-8 but the confirmed score is 1-7 — 1 unconfirmed goal report(s) ignored.",
     "unconfirmedGoals": [
       {
-        "minute": 38,
+        "minute": 84,
         "team": "away",
         "scorer": "Unknown"
       }
@@ -94,9 +94,14 @@
         "scorer": "Alfie Carmichael"
       },
       {
-        "minute": 84,
+        "minute": null,
         "team": "away",
-        "scorer": "Unknown"
+        "scorer": "Unknown (Sandbach scored to make it 3-1)"
+      },
+      {
+        "minute": null,
+        "team": "away",
+        "scorer": "Matthew Birchall"
       }
     ],
     "yellowCards": [
@@ -182,24 +187,24 @@
     },
     "roughXG": {
       "firstHalf": {
-        "home": 0.8,
+        "home": 1.2,
         "away": 0.8,
-        "note": "New Mills scored an excellent long-range goal but Sandbach dominated the closing stages of the half with two goals. Mixed chances early on. (raised to reflect goals actually scored)"
+        "note": "New Mills scored a 40-yard striking goal and had another chance; Sandbach equalized but with less clear creation (raised to reflect goals actually scored)"
       },
       "secondHalf": {
-        "home": 0.6,
-        "away": 2.8,
-        "note": "Sandbach dominated completely in the second half, scoring four more goals with multiple clear chances including one-on-ones. New Mills had limited opportunities and some good defending from their keeper Hall."
+        "home": 0.8,
+        "away": 3.5,
+        "note": "Sandbach dominated with 5 second-half goals; New Mills created some chances but largely subdued"
       },
       "extraTime": {
         "home": 0,
         "away": 0,
-        "note": "Match did not go to extra time."
+        "note": "No extra time played"
       },
       "total": {
-        "home": 1.4,
-        "away": 4.5,
-        "note": "Sandbach's second-half dominance with multiple high-quality chances and clinical finishing resulted in a 1-6 scoreline. (raised to reflect goals actually scored)"
+        "home": 2,
+        "away": 5.3,
+        "note": "New Mills scored 1 goal; Sandbach scored 6 goals across both halves (raised to reflect goals actually scored)"
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
@@ -207,22 +212,22 @@
       "firstHalf": {
         "home": 55,
         "away": 45,
-        "note": "New Mills created early chances and took the lead with a well-taken long-range goal, but Sandbach equalized and took the lead before half-time."
+        "note": "New Mills took the lead with a well-taken goal but Sandbach equalized, suggesting competitive play"
       },
       "secondHalf": {
-        "home": 20,
-        "away": 80,
-        "note": "Sandbach completely dominated the second half, scoring four goals to one. New Mills created limited chances despite a few opportunities. Sandbach controlled the match."
+        "home": 25,
+        "away": 75,
+        "note": "Sandbach dominated decisively in the second half, scoring 5 goals to New Mills' 0"
       },
       "extraTime": {
         "home": 50,
         "away": 50,
-        "note": "Match did not go to extra time."
+        "note": "No extra time played"
       },
       "total": {
         "home": 35,
         "away": 65,
-        "note": "Sandbach's dominant second-half performance gave them clear overall control, despite a competitive first half."
+        "note": "Sandbach controlled the match overall, particularly in the second half"
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
