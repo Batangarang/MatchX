@@ -2,16 +2,6 @@
   "entries": [
     {
       "script": "matchday-live",
-      "timestamp": "2026-10-10T14:31:00.396Z",
-      "getxapiCalls": 2,
-      "claudeCalls": 1,
-      "inputTokens": 4744,
-      "outputTokens": 924,
-      "xCostGBP": 0.0015,
-      "aiCostGBP": 0.007
-    },
-    {
-      "script": "matchday-live",
       "timestamp": "2026-10-10T14:35:25.508Z",
       "getxapiCalls": 2,
       "claudeCalls": 0,
@@ -11019,6 +11009,16 @@
       "outputTokens": 727,
       "xCostGBP": 0.0015,
       "aiCostGBP": 0.0042
+    },
+    {
+      "script": "x-posts",
+      "timestamp": "2026-11-14T14:35:18.037Z",
+      "getxapiCalls": 1,
+      "claudeCalls": 0,
+      "inputTokens": 0,
+      "outputTokens": 0,
+      "xCostGBP": 0.0008,
+      "aiCostGBP": 0
     }
   ]
 }
