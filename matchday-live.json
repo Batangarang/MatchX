@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-11-14T14:15:51.009Z",
+  "generatedAt": "2026-11-14T14:30:53.049Z",
   "fixtureDate": "2026-11-14",
   "kickoff": "15:00",
   "homeTeam": "New Mills",
   "awayTeam": "Sandbach United",
-  "postsUsed": 2,
-  "imagesAnalyzedThisRun": 1,
+  "postsUsed": 3,
+  "imagesAnalyzedThisRun": 0,
   "totalImagesAnalyzed": 4,
   "match": {
     "score": null,
@@ -45,17 +45,8 @@
       },
       "away": {
         "players": [
-          "1. Gregory Hall",
-          "2. Jacob Vernon",
-          "3. Max Williams",
-          "4. Jordan Stafford",
-          "5. Jack Finney",
-          "6. Stanley Tatters",
-          "7. Matthew Birchall",
-          "8. Niall Cope",
-          "9. Alfie Carmichael",
-          "10. Robbie Hatton",
-          "11. Kyle Foley"
+          "Alfie Carmichael",
+          "Max Williams"
         ],
         "substitutes": [
           "12. Callum Besford",
@@ -92,22 +83,22 @@
       "firstHalf": {
         "home": 0,
         "away": 0,
-        "note": "Match not yet played; no data available."
+        "note": "No match data available; pre-match posts only"
       },
       "secondHalf": {
         "home": 0,
         "away": 0,
-        "note": "Match not yet played; no data available."
+        "note": "No match data available; pre-match posts only"
       },
       "extraTime": {
         "home": 0,
         "away": 0,
-        "note": "Match not yet played; no data available."
+        "note": "No match data available"
       },
       "total": {
         "home": 0,
         "away": 0,
-        "note": "Match not yet played; no data available."
+        "note": "No match data available; pre-match posts only"
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
@@ -115,22 +106,22 @@
       "firstHalf": {
         "home": 50,
         "away": 50,
-        "note": "Match not yet played; no data available."
+        "note": "No match data available; pre-match posts only"
       },
       "secondHalf": {
         "home": 50,
         "away": 50,
-        "note": "Match not yet played; no data available."
+        "note": "No match data available; pre-match posts only"
       },
       "extraTime": {
         "home": 50,
         "away": 50,
-        "note": "Match not yet played; no data available."
+        "note": "No match data available"
       },
       "total": {
         "home": 50,
         "away": 50,
-        "note": "Match not yet played; no data available."
+        "note": "No match data available; pre-match posts only"
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
