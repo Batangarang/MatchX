@@ -1,17 +1,17 @@
 {
-  "generatedAt": "2026-11-14T15:25:37.412Z",
+  "generatedAt": "2026-11-14T15:40:43.896Z",
   "fixtureDate": "2026-11-14",
   "kickoff": "15:00",
   "homeTeam": "New Mills",
   "awayTeam": "Sandbach United",
-  "postsUsed": 8,
-  "imagesAnalyzedThisRun": 0,
-  "totalImagesAnalyzed": 4,
+  "postsUsed": 11,
+  "imagesAnalyzedThisRun": 1,
+  "totalImagesAnalyzed": 5,
   "match": {
-    "score": "1-0",
+    "score": "1-1",
     "scoreSource": "match_feed_stated",
     "scoreConfirmed": true,
-    "feedScore": "1-0",
+    "feedScore": "1-1",
     "scoreDiscrepancy": null,
     "unconfirmedGoals": [],
     "finalScoreAnnounced": null,
@@ -64,6 +64,11 @@
         "minute": 23,
         "team": "home",
         "scorer": "Adam Dahou"
+      },
+      {
+        "minute": null,
+        "team": "away",
+        "scorer": "Kyle Foley"
       }
     ],
     "yellowCards": [],
@@ -88,46 +93,46 @@
     "roughXG": {
       "firstHalf": {
         "home": 1.2,
-        "away": 0.1,
-        "note": "New Mills scored a 40-yard strike; Sandbach had one off-target chance mentioned. Limited information available at 23 minutes."
+        "away": 0.8,
+        "note": "New Mills scored a 40-yard effort; Sandbach had one chance blazed over the bar before equalising."
       },
       "secondHalf": {
         "home": 0,
         "away": 0,
-        "note": "Match ongoing; no second-half data available."
+        "note": "No second-half action reported in posts."
       },
       "extraTime": {
         "home": 0,
         "away": 0,
-        "note": "No extra time played."
+        "note": "Match did not reach extra time based on available data."
       },
       "total": {
         "home": 1.2,
-        "away": 0.1,
-        "note": "Based on first-half chances only; match still in progress."
+        "away": 0.8,
+        "note": "Two goals scored in first half; limited detail on overall chances."
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
     "matchControl": {
       "firstHalf": {
-        "home": 60,
-        "away": 40,
-        "note": "New Mills took the lead with a long-range effort; Sandbach had limited clear chances in opening 23 minutes."
+        "home": 55,
+        "away": 45,
+        "note": "New Mills scored first with a well-taken 40-yarder; Sandbach had limited early chances before equalising."
       },
       "secondHalf": {
         "home": 50,
         "away": 50,
-        "note": "Match ongoing; no second-half data available."
+        "note": "No second-half action reported."
       },
       "extraTime": {
         "home": 50,
         "away": 50,
-        "note": "No extra time played."
+        "note": "Match did not reach extra time based on available data."
       },
       "total": {
         "home": 55,
         "away": 45,
-        "note": "Inferred from first-half play and scoreline; match still in progress."
+        "note": "Inferred from tone and early dominance by New Mills before Sandbach's equaliser."
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }

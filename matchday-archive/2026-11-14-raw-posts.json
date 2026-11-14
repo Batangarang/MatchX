@@ -68,5 +68,31 @@
     "side": "home",
     "handle": "NewMillsFC",
     "isDuplicateCommentary": false
+  },
+  {
+    "text": "1-1 https://t.co/HPee7xYrWS",
+    "createdAt": "2026-11-14T15:38:15.000Z",
+    "images": [
+      "https://pbs.twimg.com/media/HXGKIy5WMAErhgc.jpg"
+    ],
+    "side": "away",
+    "handle": "SandbachFC_1st",
+    "isDuplicateCommentary": false
+  },
+  {
+    "text": "Equaliser Sandbach New Mills 1-1 Sandbach https://t.co/Pxr4eOqTrU",
+    "createdAt": "2026-11-14T15:38:20.000Z",
+    "images": [],
+    "side": "home",
+    "handle": "NewMillsFC",
+    "isDuplicateCommentary": false
+  },
+  {
+    "text": "🟠🟠 v 🔵⚪️\n\nNew Mills v Sandbach United\n\n@NewMillsFC \n\nAnd it’s 1 1 as Finney slips in Foley, who beats the defender and puts his shot past the keeper and into the far corner. Get in!\n\n1 1\n\n38 mins",
+    "createdAt": "2026-11-14T15:39:28.000Z",
+    "images": [],
+    "side": "away",
+    "handle": "SandbachFC_1st",
+    "isDuplicateCommentary": true
   }
 ]
