@@ -262,5 +262,31 @@
     "side": "away",
     "handle": "SandbachFC_1st",
     "isDuplicateCommentary": false
+  },
+  {
+    "text": "1-6 https://t.co/FEMlk6llE8",
+    "createdAt": "2026-11-14T16:42:58.000Z",
+    "images": [
+      "https://pbs.twimg.com/media/HXGY8ucWIAAy7Tl.jpg"
+    ],
+    "side": "away",
+    "handle": "SandbachFC_1st",
+    "isDuplicateCommentary": false
+  },
+  {
+    "text": "Sandbach 6-1",
+    "createdAt": "2026-11-14T16:43:13.000Z",
+    "images": [],
+    "side": "home",
+    "handle": "NewMillsFC",
+    "isDuplicateCommentary": true
+  },
+  {
+    "text": "🟠🟠 v 🔵⚪️\n\nNew Mills v Sandbach United\n\n@NewMillsFC \n\nBesford works the ball to Mason Wilson who takes a touch and slots a crisp shot into the bottom corner for his first and deserved goal for the Bach, hopefully the first of many. All Bach today!\n\n1 6\n\n86 mins",
+    "createdAt": "2026-11-14T16:44:13.000Z",
+    "images": [],
+    "side": "away",
+    "handle": "SandbachFC_1st",
+    "isDuplicateCommentary": true
   }
 ]
