@@ -1,17 +1,17 @@
 {
-  "generatedAt": "2026-11-14T15:40:43.896Z",
+  "generatedAt": "2026-11-14T15:45:48.464Z",
   "fixtureDate": "2026-11-14",
   "kickoff": "15:00",
   "homeTeam": "New Mills",
   "awayTeam": "Sandbach United",
-  "postsUsed": 11,
-  "imagesAnalyzedThisRun": 1,
-  "totalImagesAnalyzed": 5,
+  "postsUsed": 16,
+  "imagesAnalyzedThisRun": 2,
+  "totalImagesAnalyzed": 7,
   "match": {
-    "score": "1-1",
+    "score": "1-2",
     "scoreSource": "match_feed_stated",
     "scoreConfirmed": true,
-    "feedScore": "1-1",
+    "feedScore": "1-2",
     "scoreDiscrepancy": null,
     "unconfirmedGoals": [],
     "finalScoreAnnounced": null,
@@ -69,9 +69,20 @@
         "minute": null,
         "team": "away",
         "scorer": "Kyle Foley"
+      },
+      {
+        "minute": 42,
+        "team": "away",
+        "scorer": "Kyle Foley"
       }
     ],
-    "yellowCards": [],
+    "yellowCards": [
+      {
+        "minute": 40,
+        "team": "home",
+        "player": "Unknown"
+      }
+    ],
     "redCards": [],
     "substitutions": [],
     "sinBins": [],
@@ -93,46 +104,46 @@
     "roughXG": {
       "firstHalf": {
         "home": 1.2,
-        "away": 0.8,
-        "note": "New Mills scored a 40-yard effort; Sandbach had one chance blazed over the bar before equalising."
+        "away": 1.5,
+        "note": "New Mills had an early chance blazed over; Sandbach scored twice by 42 minutes. Limited detail in posts."
       },
       "secondHalf": {
         "home": 0,
         "away": 0,
-        "note": "No second-half action reported in posts."
+        "note": "No second half data available."
       },
       "extraTime": {
         "home": 0,
         "away": 0,
-        "note": "Match did not reach extra time based on available data."
+        "note": "Match did not go to extra time."
       },
       "total": {
         "home": 1.2,
-        "away": 0.8,
-        "note": "Two goals scored in first half; limited detail on overall chances."
+        "away": 1.5,
+        "note": "Rough estimate based on limited social media commentary. Sandbach scored 2 goals; New Mills 1 goal."
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
     "matchControl": {
       "firstHalf": {
-        "home": 55,
-        "away": 45,
-        "note": "New Mills scored first with a well-taken 40-yarder; Sandbach had limited early chances before equalising."
+        "home": 45,
+        "away": 55,
+        "note": "New Mills took early lead but Sandbach equalized and took the lead by half-time (42 mins)."
       },
       "secondHalf": {
         "home": 50,
         "away": 50,
-        "note": "No second-half action reported."
+        "note": "No second half data available."
       },
       "extraTime": {
         "home": 50,
         "away": 50,
-        "note": "Match did not reach extra time based on available data."
+        "note": "Match did not go to extra time."
       },
       "total": {
-        "home": 55,
-        "away": 45,
-        "note": "Inferred from tone and early dominance by New Mills before Sandbach's equaliser."
+        "home": 45,
+        "away": 55,
+        "note": "Sandbach ahead 2-1 at 42 minutes; home team struggled after conceding."
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
