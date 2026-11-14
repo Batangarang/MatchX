@@ -1,17 +1,17 @@
 {
-  "generatedAt": "2026-11-14T16:10:45.266Z",
+  "generatedAt": "2026-11-14T16:15:45.250Z",
   "fixtureDate": "2026-11-14",
   "kickoff": "15:00",
   "homeTeam": "New Mills",
   "awayTeam": "Sandbach United",
-  "postsUsed": 23,
+  "postsUsed": 27,
   "imagesAnalyzedThisRun": 1,
-  "totalImagesAnalyzed": 8,
+  "totalImagesAnalyzed": 9,
   "match": {
-    "score": "1-4",
+    "score": "1-5",
     "scoreSource": "match_feed_stated",
     "scoreConfirmed": true,
-    "feedScore": "1-4",
+    "feedScore": "1-5",
     "scoreDiscrepancy": null,
     "unconfirmedGoals": [],
     "finalScoreAnnounced": null,
@@ -84,6 +84,11 @@
         "minute": 47,
         "team": "away",
         "scorer": "Alfie Carmichael"
+      },
+      {
+        "minute": 57,
+        "team": "away",
+        "scorer": "Alfie Carmichael"
       }
     ],
     "yellowCards": [
@@ -122,12 +127,12 @@
       "firstHalf": {
         "home": 0.8,
         "away": 1.5,
-        "note": "New Mills scored a well-taken goal (40-yarder that dipped wickedly). Sandbach equalized and then took the lead before half-time. (raised to reflect goals actually scored)"
+        "note": "New Mills scored a spectacular long-range goal; Sandbach had limited chances but equalized. Early dominance by home team. (raised to reflect goals actually scored)"
       },
       "secondHalf": {
         "home": 0.2,
         "away": 2,
-        "note": "Sandbach dominated the second half, scoring at least two goals. Hall made a flying save to keep the score at 1-4."
+        "note": "Sandbach dominated after half-time, scoring 3 goals in quick succession (47', ~45', 57'). New Mills had one headed chance saved by Hall (53') and one shot from one-on-one (56') that went wide."
       },
       "extraTime": {
         "home": 0,
@@ -136,21 +141,21 @@
       },
       "total": {
         "home": 0.8,
-        "away": 3,
-        "note": "New Mills scored 1 goal (Adam Dahou, 40-yard effort). Sandbach scored 4 goals (one unidentified in first half, Foley in 42nd minute, one unidentified in first half, Alfie Carmichael in 47th minute). xG reflects the goals scored and relative dominance shown in the posts. (raised to reflect goals actually scored)"
+        "away": 3.8,
+        "note": "Sandbach convincingly outplayed New Mills over the 90 minutes, scoring 5 goals to 1. Home team had one excellent finish early but offered little resistance thereafter. (raised to reflect goals actually scored)"
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
     "matchControl": {
       "firstHalf": {
-        "home": 55,
-        "away": 45,
-        "note": "New Mills started brightly with a 40-yard goal early on, but Sandbach equalized and took the lead by half-time."
+        "home": 60,
+        "away": 40,
+        "note": "New Mills created early pressure, including the opening goal at 23'. Sandbach responded to equalize and then took the lead by half-time."
       },
       "secondHalf": {
         "home": 20,
         "away": 80,
-        "note": "Sandbach dominated completely, scoring multiple goals. New Mills appeared overwhelmed defensively."
+        "note": "Sandbach completely dominated the second half, scoring three quick goals and maintaining control. New Mills offered minimal threat."
       },
       "extraTime": {
         "home": 50,
@@ -160,7 +165,7 @@
       "total": {
         "home": 35,
         "away": 65,
-        "note": "Sandbach controlled the match, particularly in the second half, and won 4-1."
+        "note": "Sandbach controlled the match overall, particularly in the second half. New Mills made a bright start but faded significantly."
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
