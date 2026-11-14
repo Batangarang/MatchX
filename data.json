@@ -1,5 +1,5 @@
 {
-  "scrapedAt": "2026-11-14T21:30:49.561Z",
+  "scrapedAt": "2026-11-14T22:30:50.927Z",
   "nextFixture": {
     "date": "Sat 21/11/26",
     "opposition": "Shawbury United",
@@ -417,13 +417,13 @@
     },
     {
       "date": "Sat 30/01/27",
-      "opposition": "Barnton",
-      "opponentUrl": "clubpage.php?id=266",
+      "opposition": "Alsager Town",
+      "opponentUrl": "clubpage.php?id=3",
       "homeAway": "A",
       "kickoff": "15:00",
       "score": null,
       "scorers": null,
-      "competitionNote": null
+      "competitionNote": "The Edward Case Cup QF"
     },
     {
       "date": "Sat 13/02/27",
@@ -531,6 +531,16 @@
       "opponentUrl": "clubpage.php?id=91",
       "homeAway": "A",
       "kickoff": "15:00",
+      "score": null,
+      "scorers": null,
+      "competitionNote": null
+    },
+    {
+      "date": "TBC",
+      "opposition": "Barnton",
+      "opponentUrl": "clubpage.php?id=266",
+      "homeAway": "A",
+      "kickoff": "",
       "score": null,
       "scorers": null,
       "competitionNote": null
