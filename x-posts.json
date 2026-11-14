@@ -1,5 +1,5 @@
 {
-  "scrapedAt": "2026-11-14T14:20:32.413Z",
+  "scrapedAt": "2026-11-14T14:30:44.853Z",
   "username": "SandbachFC_1st",
   "posts": [
     {
@@ -8,6 +8,12 @@
       "images": [
         "https://pbs.twimg.com/media/HV_RIFZW4AA6luy.png"
       ],
+      "isMatchday": true
+    },
+    {
+      "text": "🟠🟠 v 🔵⚪️\n\nNew Mills v Sandbach United\n\nAlfie Carmichael makes his debut today for The Bach and Max Williams starts. Let’s go Bach and keep the cup run going!",
+      "createdAt": "2026-11-14T14:26:57.000Z",
+      "images": [],
       "isMatchday": true
     },
     {
@@ -62,12 +68,6 @@
       "images": [
         "https://pbs.twimg.com/media/HWiVKGjXcAAA7Ns.jpg"
       ],
-      "isMatchday": true
-    },
-    {
-      "text": "🔵⚪️ v 🟡🟡\n\nTelford Town v Sandbach United\n\nKieran Nolan now with a screamer that the keeper parries away.\n\nAnd then it’s 5 as Pollard gets in, finds Birchall who makes no mistake and blasts another in for The Bach!\n\n0 5\n\n79 mins",
-      "createdAt": "2026-11-07T16:39:55.000Z",
-      "images": [],
       "isMatchday": true
     }
   ]
