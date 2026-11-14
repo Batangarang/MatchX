@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-11-14T16:31:06.520Z",
+  "generatedAt": "2026-11-14T16:40:47.250Z",
   "fixtureDate": "2026-11-14",
   "kickoff": "15:00",
   "homeTeam": "New Mills",
   "awayTeam": "Sandbach United",
-  "postsUsed": 29,
+  "postsUsed": 31,
   "imagesAnalyzedThisRun": 0,
   "totalImagesAnalyzed": 9,
   "match": {
@@ -132,10 +132,35 @@
         "team": "away",
         "playerOff": "Stan Tatters",
         "playerOn": "Mason Wilson"
+      },
+      {
+        "minute": 58,
+        "team": "home",
+        "playerOff": "Dec Nolan",
+        "playerOn": "Jack Morris"
+      },
+      {
+        "minute": 58,
+        "team": "home",
+        "playerOff": "Malachi Babayale",
+        "playerOn": "Glebs Klujevs"
+      },
+      {
+        "minute": 83,
+        "team": "away",
+        "playerOff": "Foley",
+        "playerOn": "Callum Besford"
       }
     ],
     "sinBins": [],
-    "injuries": [],
+    "injuries": [
+      {
+        "minute": 75,
+        "team": "away",
+        "player": "Cope",
+        "note": "hit in the face from corner"
+      }
+    ],
     "addedTime": {
       "firstHalf": null,
       "secondHalf": null
@@ -154,22 +179,22 @@
       "firstHalf": {
         "home": 0.8,
         "away": 0.8,
-        "note": "New Mills had one shot that blazed over; Sandbach broke through with Foley's goal. (raised to reflect goals actually scored)"
+        "note": "New Mills scored one good 40-yard effort; one blocked chance for Sandbach (raised to reflect goals actually scored)"
       },
       "secondHalf": {
-        "home": 0.3,
+        "home": 1.2,
         "away": 2.5,
-        "note": "Sandbach dominated with multiple goals from Alfie Carmichael and Foley; New Mills had a header saved and limited chances."
+        "note": "New Mills had multiple chances including a one-on-one miss and corner header saved; Sandbach's Alfie Carmichael scored twice (one close-range, one from half-chance), Foley had a one-on-one that went wide"
       },
       "extraTime": {
         "home": 0,
         "away": 0,
-        "note": "No extra time played."
+        "note": "Match did not go to extra time"
       },
       "total": {
-        "home": 0.8,
+        "home": 2,
         "away": 3.8,
-        "note": "Sandbach won convincingly 5-1 with multiple clinical finishes; New Mills had limited clear chances. (raised to reflect goals actually scored)"
+        "note": "Home scored 1, away scored 5; estimates reflect actual goals plus reasonable chance quality (raised to reflect goals actually scored)"
       },
       "disclaimer": "Rough estimate inferred from social media commentary, not real shot data — not an accurate xG figure."
     },
@@ -177,22 +202,22 @@
       "firstHalf": {
         "home": 55,
         "away": 45,
-        "note": "New Mills started well with early chance and opening goal, but Sandbach equalized and took control."
+        "note": "New Mills took early lead and appeared to have initial dominance with one chance early; Sandbach responded with equalizer near end of half"
       },
       "secondHalf": {
-        "home": 20,
-        "away": 80,
-        "note": "Sandbach dominated completely, scoring four goals while New Mills had minimal attacking threat."
+        "home": 30,
+        "away": 70,
+        "note": "Sandbach dominated decisively with four quick goals in early second half; New Mills created some chances but were largely overrun"
       },
       "extraTime": {
         "home": 50,
         "away": 50,
-        "note": "No extra time played."
+        "note": "No extra time played"
       },
       "total": {
-        "home": 35,
-        "away": 65,
-        "note": "Despite initial New Mills pressure, Sandbach controlled the match from mid-first-half onwards and won decisively."
+        "home": 40,
+        "away": 60,
+        "note": "Sandbach United controlled the match overall, particularly the second half, despite New Mills' early goal"
       },
       "disclaimer": "Inferred from tone/content of posts only, not real possession or shot data."
     }
