@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-14T22:31:13.814Z",
-  "sinceDate": "2026-11-07T22:30:44.521Z",
+  "generatedAt": "2026-11-15T03:01:18.710Z",
+  "sinceDate": "2026-11-08T03:00:55.860Z",
   "clubs": [
     {
       "name": "Sandbach United",
@@ -591,6 +591,11 @@
       "name": "Stafford Town",
       "handle": "StaffordTown1st",
       "posts": [
+        {
+          "text": "⚽️ Post Match Reaction! ⚽️\n\nOur match reporter, Owen, caught up with the Gaffer after today’s cup exit. https://t.co/32pDtTu5xZ",
+          "createdAt": "2026-11-14T23:13:45.000Z",
+          "images": []
+        },
         {
           "text": "Town exit the Edward Case Cup in the 2nd round https://t.co/QZZjXj0Rkz",
           "createdAt": "2026-11-14T16:58:16.000Z",
@@ -2430,11 +2435,6 @@
           "images": [
             "https://pbs.twimg.com/media/HWm3TmYWQAAf4gw.jpg"
           ]
-        },
-        {
-          "text": "Goals from Cookie and Leo Wood today as we secured victory over Foley Meir at Brinsford Lane 🟢 https://t.co/s9RpskQJoG",
-          "createdAt": "2026-11-07T22:33:42.000Z",
-          "images": []
         }
       ]
     },
