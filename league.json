@@ -1,5 +1,5 @@
 {
-  "scrapedAt": "2026-11-15T05:30:55.900Z",
+  "scrapedAt": "2026-11-15T06:31:30.456Z",
   "division": "First Division South",
   "standings": [
     {
@@ -44,7 +44,7 @@
       "goalDifference": "24",
       "points": "31",
       "clubUrl": "clubpage.php?id=30",
-      "form": "WWWWDL",
+      "form": "LWWWWD",
       "formIncludesCup": false
     },
     {
@@ -74,7 +74,7 @@
       "goalDifference": "20",
       "points": "30",
       "clubUrl": "clubpage.php?id=355",
-      "form": "LDLWWW",
+      "form": "WLDLWW",
       "formIncludesCup": false
     },
     {
@@ -104,7 +104,7 @@
       "goalDifference": "20",
       "points": "26",
       "clubUrl": "clubpage.php?id=816",
-      "form": "WLWWWW",
+      "form": "WWLWWW",
       "formIncludesCup": false
     },
     {
@@ -134,7 +134,7 @@
       "goalDifference": "0",
       "points": "22",
       "clubUrl": "clubpage.php?id=635",
-      "form": "WWDWLL",
+      "form": "LWWDWL",
       "formIncludesCup": false
     },
     {
@@ -164,7 +164,7 @@
       "goalDifference": "-7",
       "points": "19",
       "clubUrl": "clubpage.php?id=713",
-      "form": "DDWWDL",
+      "form": "LDDWWD",
       "formIncludesCup": false
     },
     {
@@ -179,7 +179,7 @@
       "goalDifference": "-3",
       "points": "18",
       "clubUrl": "clubpage.php?id=459",
-      "form": "LDDDLD",
+      "form": "WLDDDL",
       "formIncludesCup": false
     },
     {
@@ -209,7 +209,7 @@
       "goalDifference": "-12",
       "points": "17",
       "clubUrl": "clubpage.php?id=224",
-      "form": "LLDLDL",
+      "form": "WLLDLD",
       "formIncludesCup": false
     },
     {
@@ -224,7 +224,7 @@
       "goalDifference": "-22",
       "points": "16",
       "clubUrl": "clubpage.php?id=191",
-      "form": "LLDLDL",
+      "form": "DLLDLD",
       "formIncludesCup": false
     },
     {
@@ -239,7 +239,7 @@
       "goalDifference": "-10",
       "points": "15",
       "clubUrl": "clubpage.php?id=898",
-      "form": "LLWLDL",
+      "form": "LLLWLD",
       "formIncludesCup": false
     },
     {
@@ -254,7 +254,7 @@
       "goalDifference": "-15",
       "points": "15",
       "clubUrl": "clubpage.php?id=591",
-      "form": "LWLWLL",
+      "form": "LLWLWL",
       "formIncludesCup": false
     },
     {
@@ -284,7 +284,7 @@
       "goalDifference": "-30",
       "points": "10",
       "clubUrl": "clubpage.php?id=881",
-      "form": "LLLLDL",
+      "form": "WLLLLD",
       "formIncludesCup": false
     },
     {
@@ -299,7 +299,7 @@
       "goalDifference": "-28",
       "points": "8",
       "clubUrl": "clubpage.php?id=868",
-      "form": "DLLLDW",
+      "form": "DDLLLD",
       "formIncludesCup": false
     }
   ]

@@ -1,5 +1,5 @@
 {
-  "scrapedAt": "2026-11-14T09:31:25.262Z",
+  "scrapedAt": "2026-11-15T06:31:29.680Z",
   "clubs": {
     "Wolverhampton Casuals": {
       "clubUrl": "clubpage.php?id=73",
@@ -8,38 +8,38 @@
     },
     "Eccleshall": {
       "clubUrl": "clubpage.php?id=30",
-      "form": "WWWWDL",
-      "leagueGamesPlayed": 14
+      "form": "LWWWWD",
+      "leagueGamesPlayed": 15
     },
     "AFC Bridgnorth": {
       "clubUrl": "clubpage.php?id=936",
       "form": "WWDWDL",
       "leagueGamesPlayed": 14
     },
+    "Bilston Town": {
+      "clubUrl": "clubpage.php?id=355",
+      "form": "WLDLWW",
+      "leagueGamesPlayed": 15
+    },
     "Stafford Town": {
       "clubUrl": "clubpage.php?id=182",
       "form": "LWDDWD",
       "leagueGamesPlayed": 16
     },
-    "Bilston Town": {
-      "clubUrl": "clubpage.php?id=355",
-      "form": "LDLWWW",
-      "leagueGamesPlayed": 14
+    "Allscott Heath": {
+      "clubUrl": "clubpage.php?id=816",
+      "form": "WWLWWW",
+      "leagueGamesPlayed": 16
     },
     "Barnton": {
       "clubUrl": "clubpage.php?id=266",
       "form": "WDWWWW",
       "leagueGamesPlayed": 15
     },
-    "Allscott Heath": {
-      "clubUrl": "clubpage.php?id=816",
-      "form": "WLWWWW",
-      "leagueGamesPlayed": 15
-    },
     "Dawley Town": {
       "clubUrl": "clubpage.php?id=635",
-      "form": "WWDWLL",
-      "leagueGamesPlayed": 15
+      "form": "LWWDWL",
+      "leagueGamesPlayed": 16
     },
     "New Mills": {
       "clubUrl": "clubpage.php?id=91",
@@ -48,53 +48,53 @@
     },
     "Cheadle Heath Nomads": {
       "clubUrl": "clubpage.php?id=713",
-      "form": "DDWWDL",
-      "leagueGamesPlayed": 18
+      "form": "LDDWWD",
+      "leagueGamesPlayed": 19
+    },
+    "Brereton Social": {
+      "clubUrl": "clubpage.php?id=459",
+      "form": "WLDDDL",
+      "leagueGamesPlayed": 16
     },
     "Shawbury United": {
       "clubUrl": "clubpage.php?id=792",
       "form": "WLDLWL",
       "leagueGamesPlayed": 15
     },
-    "Brereton Social": {
-      "clubUrl": "clubpage.php?id=459",
-      "form": "LDDDLD",
-      "leagueGamesPlayed": 15
-    },
-    "Foley Meir": {
-      "clubUrl": "clubpage.php?id=898",
-      "form": "LLWLDL",
-      "leagueGamesPlayed": 15
-    },
-    "Crewe": {
-      "clubUrl": "clubpage.php?id=591",
-      "form": "LWLWLL",
-      "leagueGamesPlayed": 14
+    "Market Drayton Town": {
+      "clubUrl": "clubpage.php?id=224",
+      "form": "WLLDLD",
+      "leagueGamesPlayed": 17
     },
     "Wednesfield Community": {
       "clubUrl": "clubpage.php?id=191",
-      "form": "LLDLDL",
-      "leagueGamesPlayed": 15
-    },
-    "Market Drayton Town": {
-      "clubUrl": "clubpage.php?id=224",
-      "form": "LLDLDL",
+      "form": "DLLDLD",
       "leagueGamesPlayed": 16
+    },
+    "Foley Meir": {
+      "clubUrl": "clubpage.php?id=898",
+      "form": "LLLWLD",
+      "leagueGamesPlayed": 16
+    },
+    "Crewe": {
+      "clubUrl": "clubpage.php?id=591",
+      "form": "LLWLWL",
+      "leagueGamesPlayed": 15
     },
     "Alsager Town": {
       "clubUrl": "clubpage.php?id=3",
       "form": "WDWLLL",
       "leagueGamesPlayed": 16
     },
-    "Widnes Town": {
-      "clubUrl": "clubpage.php?id=868",
-      "form": "DLLLDW",
-      "leagueGamesPlayed": 16
-    },
     "Telford Town": {
       "clubUrl": "clubpage.php?id=881",
-      "form": "LLLLDL",
-      "leagueGamesPlayed": 15
+      "form": "WLLLLD",
+      "leagueGamesPlayed": 16
+    },
+    "Widnes Town": {
+      "clubUrl": "clubpage.php?id=868",
+      "form": "DDLLLD",
+      "leagueGamesPlayed": 17
     }
   }
 }
