@@ -10981,13 +10981,13 @@
       "aiCostGBP": 0
     },
     {
-      "script": "x-posts",
-      "timestamp": "2026-11-16T19:30:45.391Z",
-      "getxapiCalls": 1,
+      "script": "division-posts",
+      "timestamp": "2026-11-16T19:30:59.054Z",
+      "getxapiCalls": 20,
       "claudeCalls": 0,
       "inputTokens": 0,
       "outputTokens": 0,
-      "xCostGBP": 0.0008,
+      "xCostGBP": 0.015,
       "aiCostGBP": 0
     }
   ]
