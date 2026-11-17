@@ -1,5 +1,5 @@
 {
-  "scrapedAt": "2026-11-17T21:40:41.867Z",
+  "scrapedAt": "2026-11-17T22:35:44.972Z",
   "division": "First Division South",
   "standings": [
     {
@@ -49,21 +49,6 @@
     },
     {
       "position": 4,
-      "team": "AFC Bridgnorth",
-      "played": "13",
-      "won": "9",
-      "drawn": "3",
-      "lost": "1",
-      "for": "35",
-      "against": "15",
-      "goalDifference": "20",
-      "points": "30",
-      "clubUrl": "clubpage.php?id=936",
-      "form": "WWDWDL",
-      "formIncludesCup": false
-    },
-    {
-      "position": 5,
       "team": "Bilston Town",
       "played": "15",
       "won": "9",
@@ -75,6 +60,21 @@
       "points": "30",
       "clubUrl": "clubpage.php?id=355",
       "form": "WLDLWW",
+      "formIncludesCup": false
+    },
+    {
+      "position": 5,
+      "team": "AFC Bridgnorth",
+      "played": "14",
+      "won": "9",
+      "drawn": "3",
+      "lost": "2",
+      "for": "36",
+      "against": "18",
+      "goalDifference": "18",
+      "points": "30",
+      "clubUrl": "clubpage.php?id=936",
+      "form": "WWDWDL",
       "formIncludesCup": false
     },
     {
@@ -154,6 +154,21 @@
     },
     {
       "position": 11,
+      "team": "Shawbury United",
+      "played": "16",
+      "won": "6",
+      "drawn": "2",
+      "lost": "8",
+      "for": "22",
+      "against": "32",
+      "goalDifference": "-10",
+      "points": "20",
+      "clubUrl": "clubpage.php?id=792",
+      "form": "WLDLWL",
+      "formIncludesCup": false
+    },
+    {
+      "position": 12,
       "team": "Cheadle Heath Nomads",
       "played": "18",
       "won": "4",
@@ -168,7 +183,7 @@
       "formIncludesCup": false
     },
     {
-      "position": 12,
+      "position": 13,
       "team": "Brereton Social",
       "played": "16",
       "won": "4",
@@ -180,21 +195,6 @@
       "points": "18",
       "clubUrl": "clubpage.php?id=459",
       "form": "WLDDDL",
-      "formIncludesCup": false
-    },
-    {
-      "position": 13,
-      "team": "Shawbury United",
-      "played": "15",
-      "won": "5",
-      "drawn": "2",
-      "lost": "8",
-      "for": "19",
-      "against": "31",
-      "goalDifference": "-12",
-      "points": "17",
-      "clubUrl": "clubpage.php?id=792",
-      "form": "WLDLWL",
       "formIncludesCup": false
     },
     {
