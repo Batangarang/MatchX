@@ -1,5 +1,5 @@
 {
-  "scrapedAt": "2026-11-17T20:41:45.464Z",
+  "scrapedAt": "2026-11-18T17:31:48.044Z",
   "clubs": {
     "Wolverhampton Casuals": {
       "clubUrl": "clubpage.php?id=73",
@@ -11,14 +11,14 @@
       "form": "LWWWWD",
       "leagueGamesPlayed": 15
     },
-    "AFC Bridgnorth": {
-      "clubUrl": "clubpage.php?id=936",
-      "form": "WWDWDL",
-      "leagueGamesPlayed": 14
-    },
     "Bilston Town": {
       "clubUrl": "clubpage.php?id=355",
       "form": "WLDLWW",
+      "leagueGamesPlayed": 15
+    },
+    "AFC Bridgnorth": {
+      "clubUrl": "clubpage.php?id=936",
+      "form": "LWWDWD",
       "leagueGamesPlayed": 15
     },
     "Stafford Town": {
@@ -46,6 +46,11 @@
       "form": "LLWLDW",
       "leagueGamesPlayed": 17
     },
+    "Shawbury United": {
+      "clubUrl": "clubpage.php?id=792",
+      "form": "WWLDLW",
+      "leagueGamesPlayed": 16
+    },
     "Cheadle Heath Nomads": {
       "clubUrl": "clubpage.php?id=713",
       "form": "LDDWWD",
@@ -55,11 +60,6 @@
       "clubUrl": "clubpage.php?id=459",
       "form": "WLDDDL",
       "leagueGamesPlayed": 16
-    },
-    "Shawbury United": {
-      "clubUrl": "clubpage.php?id=792",
-      "form": "WLDLWL",
-      "leagueGamesPlayed": 15
     },
     "Market Drayton Town": {
       "clubUrl": "clubpage.php?id=224",
