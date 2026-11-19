@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-19T13:31:01.409Z",
-  "sinceDate": "2026-11-12T13:30:50.540Z",
+  "generatedAt": "2026-11-19T13:31:12.862Z",
+  "sinceDate": "2026-11-12T13:31:00.083Z",
   "clubs": [
     {
       "name": "Sandbach United",
@@ -1696,8 +1696,15 @@
     {
       "name": "AFC Bridgnorth",
       "handle": "AFCBridgnorth",
-      "posts": [],
-      "error": "GetXAPI error for @AFCBridgnorth: Upstream returned an unexpected response — please retry."
+      "posts": [
+        {
+          "text": "Next up we welcome Wednesfield to the Crown Meadow on Saturday.\nCome along and support what should be a great game ⚽️ https://t.co/j58c95bDfW",
+          "createdAt": "2026-11-19T13:21:06.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HXfaqLdXgAAT_ps.jpg"
+          ]
+        }
+      ]
     },
     {
       "name": "Brereton Social",
