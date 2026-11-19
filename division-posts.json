@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-19T09:01:12.134Z",
-  "sinceDate": "2026-11-12T09:01:01.255Z",
+  "generatedAt": "2026-11-19T13:31:01.409Z",
+  "sinceDate": "2026-11-12T13:30:50.540Z",
   "clubs": [
     {
       "name": "Sandbach United",
@@ -412,13 +412,6 @@
           "createdAt": "2026-11-13T10:00:00.000Z",
           "images": [
             "https://pbs.twimg.com/media/HW8GaA4XkAA_R98.jpg"
-          ]
-        },
-        {
-          "text": "🏇 RACE NIGHT IS COMING! 💙💛\n\nAll horses SOLD! Thank you for your support!\n\n💷 £1 tote bets (18+)\n🍽️ Food included\n🎟️ Tickets from £5\n\n📅 Sat 21 Nov\n📍 Eccleshall Cricket Club\n🕖 Doors 7pm\n\n📩 DM us for tickets!\n\n💙🦅\n\n#EccleshallFC https://t.co/rDR0ky1NZF",
-          "createdAt": "2026-11-12T10:00:03.000Z",
-          "images": [
-            "https://pbs.twimg.com/media/HWzMaZ4W0AA0Gh-.jpg"
           ]
         }
       ]
@@ -1377,13 +1370,6 @@
           "images": [
             "https://pbs.twimg.com/media/HXEn3cKWUAAGJCk.jpg"
           ]
-        },
-        {
-          "text": "This weekend 🤩\n\nWe’re looking forward to welcoming you to the Peter Ford Stadium.\n\nTo avoid delays on match day, we advise buying tickets ahead using this link: https://tickts.co.uk/organiser/allscottheathfc\n\nProgrammes and pin badges also available via the link! https://t.co/2mww922thw",
-          "createdAt": "2026-11-12T10:28:16.000Z",
-          "images": [
-            "https://pbs.twimg.com/media/HW6wASCWMAAvQv8.jpg"
-          ]
         }
       ]
     },
@@ -1710,7 +1696,8 @@
     {
       "name": "AFC Bridgnorth",
       "handle": "AFCBridgnorth",
-      "posts": []
+      "posts": [],
+      "error": "GetXAPI error for @AFCBridgnorth: Upstream returned an unexpected response — please retry."
     },
     {
       "name": "Brereton Social",
@@ -1959,6 +1946,13 @@
       "name": "Market Drayton Town",
       "handle": "MDTFC",
       "posts": [
+        {
+          "text": "Interested in sports photography?\nBuilding a portfolio? \n\nWe’re looking for a photographer for our game vs Stafford this weekend.\nSaturday 21st Nov\n3pm kick off\nTF9 3SL\n\nIf you can help, drop us a message 🙏🏽 https://t.co/SrCR5fRaFx",
+          "createdAt": "2026-11-19T10:39:51.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HXe1ySeWUAA0BiC.jpg"
+          ]
+        },
         {
           "text": "FOLEY MEIR 0-1 MARKET DRAYTON TOWN #Pitchero\nhttps://www.pitchero.com/clubs/marketdraytontownfc/news/foley-meir-0-1-market-drayton-town-3008828.html https://t.co/kD0BL1YEWe",
           "createdAt": "2026-11-18T12:57:14.000Z",
@@ -2359,6 +2353,11 @@
       "handle": "WolvesCassies",
       "posts": [
         {
+          "text": "Goals from last night's 2-1 victory away at Lichfield City in the Staffordshire Senior Cup 🟢 https://t.co/r0GvKFiLWJ",
+          "createdAt": "2026-11-19T10:44:55.000Z",
+          "images": []
+        },
+        {
           "text": "FULL TIME: Lichfield City 1 - 2 Wolverhampton Casuals\n#LICWOL https://t.co/xR0YkpNC57",
           "createdAt": "2026-11-18T21:46:04.000Z",
           "images": [
@@ -2584,6 +2583,13 @@
       "name": "Foley Meir",
       "handle": "foley_fc",
       "posts": [
+        {
+          "text": "𝗡𝗘𝗫𝗧 𝗨𝗣 | 𝗗𝗔𝗪𝗟𝗘𝗬 𝗧𝗢𝗪𝗡 💛🩶\n\nWe’re back on the road this Saturday as we make the trip to Dawley Town for another important North West Counties League Division One South fixture.\n\nThe lads will be looking to come back to The Meir with all three points.\n\nIf you’re making the journey, we’ll see you there!\n\n🆚 @DawleyTownFC \n📅 Saturday 21st November\n🕑 2:00pm Kick-Off\n📍 Hamer Leisure Theatre of Jockeys\n\n🎟️ Adults £4 | Concessions £2\n\n#UpTheFoley | #NWCFL | #GTA6",
+          "createdAt": "2026-11-19T09:09:57.000Z",
+          "images": [
+            "https://pbs.twimg.com/media/HXehNBxXcAEXKrj.jpg"
+          ]
+        },
         {
           "text": "🍻 @QPR FANS WELCOME AT FOLEY! 🍻 Saturday 5th December 2026\n\nTravelling to @stokecity ? We’ll be opening the Foley Meir clubhouse for Queens Park Rangers travelling fans. \n\nRe tweets appreciated \n\n🕰️ Open @ 11am\n🍺 Pre-match beers\n🍔 Food van on site\n⚽ Proper non-league hospitality\n🚘 Free Parking available \n\nWe’re looking forward to welcoming travelling fans from the capital. \n\n#qpr #grassroots @QPRTravels @QPRPod @qprfc_mad @QPRFANSCLUB @liveqprfc @qprman100 @TonyIncenzo",
           "createdAt": "2026-11-16T08:43:14.000Z",
