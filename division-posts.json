@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-20T03:01:12.873Z",
-  "sinceDate": "2026-11-13T03:00:58.308Z",
+  "generatedAt": "2026-11-20T03:01:13.634Z",
+  "sinceDate": "2026-11-13T03:01:03.305Z",
   "clubs": [
     {
       "name": "Sandbach United",
@@ -407,8 +407,7 @@
             "https://pbs.twimg.com/media/HW8GaA4XkAA_R98.jpg"
           ]
         }
-      ],
-      "error": "GetXAPI error for @EccleshallFC: Could not authenticate you"
+      ]
     },
     {
       "name": "New Mills",
@@ -970,8 +969,7 @@
     {
       "name": "Widnes Town",
       "handle": "Widnes_FC",
-      "posts": [],
-      "error": "GetXAPI error for @Widnes_FC: Could not authenticate you"
+      "posts": []
     },
     {
       "name": "Wednesfield Community",
