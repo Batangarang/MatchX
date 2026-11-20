@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-19T22:30:56.250Z",
-  "sinceDate": "2026-11-12T22:30:42.944Z",
+  "generatedAt": "2026-11-20T03:01:12.873Z",
+  "sinceDate": "2026-11-13T03:00:58.308Z",
   "clubs": [
     {
       "name": "Sandbach United",
@@ -407,7 +407,8 @@
             "https://pbs.twimg.com/media/HW8GaA4XkAA_R98.jpg"
           ]
         }
-      ]
+      ],
+      "error": "GetXAPI error for @EccleshallFC: Could not authenticate you"
     },
     {
       "name": "New Mills",
@@ -519,16 +520,8 @@
             "https://pbs.twimg.com/media/HXEgVpxWAAAsQYQ.jpg",
             "https://pbs.twimg.com/media/HXEgVp9XcAA8DQF.jpg"
           ]
-        },
-        {
-          "text": "Up next \n\nAttention now turns to Saturday where we take a break from the league and focus on the Edward Case Cup. We host the league leaders @SandbachFC_1st down at Church lane \n\nYour support will be needed as we look to make it into the hat for the next round \n\n#UptheMillers https://t.co/Vx1hOZLmpi",
-          "createdAt": "2026-11-12T18:53:05.000Z",
-          "images": [
-            "https://pbs.twimg.com/media/HW8ji3MWMAAREBQ.jpg"
-          ]
         }
-      ],
-      "error": "GetXAPI error for @NewMillsFC: Could not authenticate you"
+      ]
     },
     {
       "name": "Stafford Town",
@@ -938,8 +931,7 @@
             "https://pbs.twimg.com/media/HW-8nZEXIAA05pi.jpg"
           ]
         }
-      ],
-      "error": "GetXAPI error for @TelfordTownFC: Could not authenticate you"
+      ]
     },
     {
       "name": "Crewe",
@@ -978,7 +970,8 @@
     {
       "name": "Widnes Town",
       "handle": "Widnes_FC",
-      "posts": []
+      "posts": [],
+      "error": "GetXAPI error for @Widnes_FC: Could not authenticate you"
     },
     {
       "name": "Wednesfield Community",
