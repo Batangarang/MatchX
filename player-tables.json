@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-21T10:31:00.102Z",
+  "generatedAt": "2026-11-21T11:30:56.858Z",
   "division": "First Division South",
   "appearances": [
     {
@@ -195,7 +195,212 @@
       "total": "14"
     }
   ],
-  "goalscorers": [],
+  "goalscorers": [
+    {
+      "rank": "1",
+      "player": "Nicky Parker",
+      "club": "Eccleshall",
+      "total": "13"
+    },
+    {
+      "rank": "2",
+      "player": "Ross Jones",
+      "club": "Dawley Town",
+      "total": "13"
+    },
+    {
+      "rank": "-",
+      "player": "Kyle Foley",
+      "club": "Sandbach United",
+      "total": "10"
+    },
+    {
+      "rank": "4",
+      "player": "Ben Davies",
+      "club": "Allscott Heath",
+      "total": "13"
+    },
+    {
+      "rank": "-",
+      "player": "Harry Dixon",
+      "club": "Bilston Town",
+      "total": "11"
+    },
+    {
+      "rank": "-",
+      "player": "Kieran Cook",
+      "club": "Wolverhampton Casuals",
+      "total": "11"
+    },
+    {
+      "rank": "7",
+      "player": "Suar Dedja",
+      "club": "AFC Bridgnorth",
+      "total": "9"
+    },
+    {
+      "rank": "8",
+      "player": "Callum Parker",
+      "club": "Stafford Town",
+      "total": "9"
+    },
+    {
+      "rank": "-",
+      "player": "Nehemia Zazi",
+      "club": "AFC Bridgnorth",
+      "total": "6"
+    },
+    {
+      "rank": "10",
+      "player": "Jordan Deer",
+      "club": "Ashville",
+      "total": "8"
+    },
+    {
+      "rank": "-",
+      "player": "Jordan Crump",
+      "club": "Bilston Town",
+      "total": "8"
+    },
+    {
+      "rank": "-",
+      "player": "Lewis McGill",
+      "club": "New Mills",
+      "total": "7"
+    },
+    {
+      "rank": "-",
+      "player": "George Cross",
+      "club": "Allscott Heath",
+      "total": "6"
+    },
+    {
+      "rank": "-",
+      "player": "Will Frankish",
+      "club": "Glossop North End",
+      "total": "4"
+    },
+    {
+      "rank": "-",
+      "player": "Callum Knowles",
+      "club": "Wolverhampton Casuals",
+      "total": "4"
+    },
+    {
+      "rank": "-",
+      "player": "Joshua Maris",
+      "club": "Crewe",
+      "total": "2"
+    },
+    {
+      "rank": "17",
+      "player": "Chigozie Ewelike",
+      "club": "Cheadle Heath Nomads",
+      "total": "7"
+    },
+    {
+      "rank": "18",
+      "player": "Robbie Hatton",
+      "club": "Sandbach United",
+      "total": "7"
+    },
+    {
+      "rank": "-",
+      "player": "Kieran OConnell",
+      "club": "Sandbach United",
+      "total": "7"
+    },
+    {
+      "rank": "-",
+      "player": "Sam Preece",
+      "club": "AFC Bridgnorth",
+      "total": "6"
+    },
+    {
+      "rank": "-",
+      "player": "Thomas Stanton",
+      "club": "Barnton",
+      "total": "6"
+    },
+    {
+      "rank": "-",
+      "player": "Eshan Greer",
+      "club": "Stafford Town",
+      "total": "6"
+    },
+    {
+      "rank": "-",
+      "player": "Darragh Bustin",
+      "club": "Bilston Town",
+      "total": "5"
+    },
+    {
+      "rank": "-",
+      "player": "Matthew Birchall",
+      "club": "Sandbach United",
+      "total": "5"
+    },
+    {
+      "rank": "-",
+      "player": "Sam Lynch",
+      "club": "Stafford Town",
+      "total": "5"
+    },
+    {
+      "rank": "-",
+      "player": "Patryk Mazurkiewicz",
+      "club": "Stafford Town",
+      "total": "5"
+    },
+    {
+      "rank": "-",
+      "player": "Ablay Sowe",
+      "club": "Shawbury United",
+      "total": "4"
+    },
+    {
+      "rank": "28",
+      "player": "Benjamin Summers",
+      "club": "Allscott Heath",
+      "total": "6"
+    },
+    {
+      "rank": "-",
+      "player": "Fraser Geddes",
+      "club": "Alsager Town",
+      "total": "6"
+    },
+    {
+      "rank": "-",
+      "player": "Liam Kirton",
+      "club": "Wolverhampton Casuals",
+      "total": "5"
+    },
+    {
+      "rank": "-",
+      "player": "Jamie King",
+      "club": "Market Drayton Town",
+      "total": "3"
+    },
+    {
+      "rank": "-",
+      "player": "Callum Sandle",
+      "club": "Barnton",
+      "total": "2"
+    },
+    {
+      "rank": "-",
+      "player": "Maxwell Chimenes",
+      "club": "Eccleshall",
+      "total": "2"
+    },
+    {
+      "rank": "-",
+      "player": "Harry Woodburn",
+      "club": "Shawbury United",
+      "total": "2"
+    }
+  ],
   "manOfTheMatch": [
     {
       "rank": "1",
@@ -259,6 +464,12 @@
     },
     {
       "rank": "-",
+      "player": "Jack Boswell",
+      "club": "Shawbury United",
+      "total": "4"
+    },
+    {
+      "rank": "-",
       "player": "Daniel Clarkson",
       "club": "Stafford Town",
       "total": "4"
@@ -270,7 +481,7 @@
       "total": "4"
     },
     {
-      "rank": "13",
+      "rank": "14",
       "player": "Mitchell Evans",
       "club": "AFC Bridgnorth",
       "total": "3"
@@ -357,12 +568,6 @@
       "rank": "-",
       "player": "Callum Jakovlevs",
       "club": "New Mills",
-      "total": "3"
-    },
-    {
-      "rank": "-",
-      "player": "Jack Boswell",
-      "club": "Shawbury United",
       "total": "3"
     },
     {
