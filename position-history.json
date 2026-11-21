@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-07T17:40:43.387Z",
+  "generatedAt": "2026-11-21T17:30:54.996Z",
   "history": [
     {
       "gamesPlayed": 1,
@@ -192,6 +192,18 @@
       "cumGoalsFor": 44,
       "cumGoalsAgainst": 22,
       "cumGoalDifference": 22
+    },
+    {
+      "gamesPlayed": 17,
+      "date": "Sat 21/11/26",
+      "opponent": "Shawbury United",
+      "position": 1,
+      "points": 37,
+      "gameGoalsFor": 3,
+      "gameGoalsAgainst": 0,
+      "cumGoalsFor": 47,
+      "cumGoalsAgainst": 22,
+      "cumGoalDifference": 25
     }
   ]
 }

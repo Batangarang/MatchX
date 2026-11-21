@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-21T16:31:03.768Z",
+  "generatedAt": "2026-11-21T17:30:57.806Z",
   "games": [
     {
       "opponent": "Wednesfield Community",
@@ -54,14 +54,20 @@
       "score": "1-0",
       "attendance": 237,
       "date": "Sat 17/10/26"
+    },
+    {
+      "opponent": "Shawbury United",
+      "score": "3-0",
+      "attendance": 131,
+      "date": "Sat 21/11/26"
     }
   ],
-  "average": 169,
+  "average": 165,
   "lowest": {
-    "opponent": "Wednesfield Community",
-    "score": "2-1",
-    "attendance": 132,
-    "date": "Sat 01/08/26"
+    "opponent": "Shawbury United",
+    "score": "3-0",
+    "attendance": 131,
+    "date": "Sat 21/11/26"
   },
   "highest": {
     "opponent": "Alsager Town",
