@@ -1,5 +1,5 @@
 {
-  "scrapedAt": "2026-11-21T17:30:54.955Z",
+  "scrapedAt": "2026-11-21T18:31:30.000Z",
   "division": "First Division South",
   "standings": [
     {
@@ -185,13 +185,13 @@
     {
       "position": 13,
       "team": "Cheadle Heath Nomads",
-      "played": "18",
+      "played": "19",
       "won": "4",
       "drawn": "7",
-      "lost": "7",
-      "for": "25",
-      "against": "32",
-      "goalDifference": "-7",
+      "lost": "8",
+      "for": "26",
+      "against": "34",
+      "goalDifference": "-8",
       "points": "19",
       "clubUrl": "clubpage.php?id=713",
       "form": "LDDWWD",
@@ -199,6 +199,21 @@
     },
     {
       "position": 14,
+      "team": "Crewe",
+      "played": "16",
+      "won": "6",
+      "drawn": "0",
+      "lost": "10",
+      "for": "18",
+      "against": "32",
+      "goalDifference": "-14",
+      "points": "18",
+      "clubUrl": "clubpage.php?id=591",
+      "form": "LLWLWL",
+      "formIncludesCup": false
+    },
+    {
+      "position": 15,
       "team": "Market Drayton Town",
       "played": "17",
       "won": "5",
@@ -213,7 +228,7 @@
       "formIncludesCup": false
     },
     {
-      "position": 15,
+      "position": 16,
       "team": "Wednesfield Community",
       "played": "17",
       "won": "4",
@@ -228,7 +243,7 @@
       "formIncludesCup": false
     },
     {
-      "position": 16,
+      "position": 17,
       "team": "Foley Meir",
       "played": "16",
       "won": "4",
@@ -240,21 +255,6 @@
       "points": "15",
       "clubUrl": "clubpage.php?id=898",
       "form": "LLLWLD",
-      "formIncludesCup": false
-    },
-    {
-      "position": 17,
-      "team": "Crewe",
-      "played": "15",
-      "won": "5",
-      "drawn": "0",
-      "lost": "10",
-      "for": "16",
-      "against": "31",
-      "goalDifference": "-15",
-      "points": "15",
-      "clubUrl": "clubpage.php?id=591",
-      "form": "LLWLWL",
       "formIncludesCup": false
     },
     {
