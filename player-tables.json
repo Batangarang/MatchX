@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-22T09:31:04.655Z",
+  "generatedAt": "2026-11-22T10:30:57.509Z",
   "division": "First Division South",
   "appearances": [
     {
@@ -236,22 +236,34 @@
       "rank": "7",
       "player": "Suar Dedja",
       "club": "AFC Bridgnorth",
-      "total": "9"
-    },
-    {
-      "rank": "8",
-      "player": "Callum Parker",
-      "club": "Stafford Town",
-      "total": "9"
+      "total": "10"
     },
     {
       "rank": "-",
       "player": "Nehemia Zazi",
       "club": "AFC Bridgnorth",
-      "total": "6"
+      "total": "8"
+    },
+    {
+      "rank": "9",
+      "player": "Callum Parker",
+      "club": "Stafford Town",
+      "total": "10"
     },
     {
       "rank": "10",
+      "player": "Joshua Maris",
+      "club": "Crewe",
+      "total": "3"
+    },
+    {
+      "rank": "11",
+      "player": "Robbie Hatton",
+      "club": "Sandbach United",
+      "total": "9"
+    },
+    {
+      "rank": "-",
       "player": "Jordan Deer",
       "club": "Ashville",
       "total": "8"
@@ -287,25 +299,25 @@
       "total": "4"
     },
     {
-      "rank": "-",
-      "player": "Joshua Maris",
-      "club": "Crewe",
-      "total": "2"
-    },
-    {
-      "rank": "17",
+      "rank": "18",
       "player": "Chigozie Ewelike",
       "club": "Cheadle Heath Nomads",
       "total": "7"
     },
     {
-      "rank": "18",
-      "player": "Robbie Hatton",
-      "club": "Sandbach United",
+      "rank": "-",
+      "player": "Eshan Greer",
+      "club": "Stafford Town",
       "total": "7"
     },
     {
       "rank": "-",
+      "player": "Matthew Birchall",
+      "club": "Sandbach United",
+      "total": "6"
+    },
+    {
+      "rank": "21",
       "player": "Kieran OConnell",
       "club": "Sandbach United",
       "total": "7"
@@ -324,20 +336,8 @@
     },
     {
       "rank": "-",
-      "player": "Eshan Greer",
-      "club": "Stafford Town",
-      "total": "6"
-    },
-    {
-      "rank": "-",
       "player": "Darragh Bustin",
       "club": "Bilston Town",
-      "total": "5"
-    },
-    {
-      "rank": "-",
-      "player": "Matthew Birchall",
-      "club": "Sandbach United",
       "total": "5"
     },
     {
@@ -476,12 +476,18 @@
     },
     {
       "rank": "-",
+      "player": "Daniel Cooper",
+      "club": "Stafford Town",
+      "total": "4"
+    },
+    {
+      "rank": "-",
       "player": "Kieran Cook",
       "club": "Wolverhampton Casuals",
       "total": "4"
     },
     {
-      "rank": "14",
+      "rank": "15",
       "player": "Mitchell Evans",
       "club": "AFC Bridgnorth",
       "total": "3"
@@ -536,6 +542,12 @@
     },
     {
       "rank": "-",
+      "player": "George Colville",
+      "club": "Cheadle Heath Nomads",
+      "total": "3"
+    },
+    {
+      "rank": "-",
       "player": "Chigozie Ewelike",
       "club": "Cheadle Heath Nomads",
       "total": "3"
@@ -572,8 +584,8 @@
     },
     {
       "rank": "-",
-      "player": "Daniel Cooper",
-      "club": "Stafford Town",
+      "player": "Ablay Sowe",
+      "club": "Shawbury United",
       "total": "3"
     },
     {
