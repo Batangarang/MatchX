@@ -1,5 +1,5 @@
 {
-  "scrapedAt": "2026-11-24T21:30:54.752Z",
+  "scrapedAt": "2026-11-24T22:31:00.871Z",
   "division": "First Division South",
   "standings": [
     {
@@ -94,6 +94,21 @@
     },
     {
       "position": 7,
+      "team": "Barnton",
+      "played": "14",
+      "won": "8",
+      "drawn": "4",
+      "lost": "2",
+      "for": "30",
+      "against": "18",
+      "goalDifference": "12",
+      "points": "28",
+      "clubUrl": "clubpage.php?id=266",
+      "form": "WDWWWW",
+      "formIncludesCup": false
+    },
+    {
+      "position": 8,
       "team": "Allscott Heath",
       "played": "16",
       "won": "8",
@@ -105,21 +120,6 @@
       "points": "26",
       "clubUrl": "clubpage.php?id=816",
       "form": "WWLWWW",
-      "formIncludesCup": false
-    },
-    {
-      "position": 8,
-      "team": "Barnton",
-      "played": "13",
-      "won": "7",
-      "drawn": "4",
-      "lost": "2",
-      "for": "29",
-      "against": "18",
-      "goalDifference": "11",
-      "points": "25",
-      "clubUrl": "clubpage.php?id=266",
-      "form": "WDWWWW",
       "formIncludesCup": false
     },
     {
@@ -260,13 +260,13 @@
     {
       "position": 18,
       "team": "Alsager Town",
-      "played": "15",
+      "played": "16",
       "won": "3",
       "drawn": "2",
-      "lost": "10",
+      "lost": "11",
       "for": "21",
-      "against": "35",
-      "goalDifference": "-14",
+      "against": "36",
+      "goalDifference": "-15",
       "points": "11",
       "clubUrl": "clubpage.php?id=3",
       "form": "WDWLLL",
