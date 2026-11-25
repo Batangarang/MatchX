@@ -1,5 +1,5 @@
 {
-  "scrapedAt": "2026-11-24T20:31:31.049Z",
+  "scrapedAt": "2026-11-25T17:31:47.823Z",
   "clubs": {
     "Wolverhampton Casuals": {
       "clubUrl": "clubpage.php?id=73",
@@ -26,15 +26,15 @@
       "form": "WLDLWW",
       "leagueGamesPlayed": 15
     },
+    "Barnton": {
+      "clubUrl": "clubpage.php?id=266",
+      "form": "WWDWWW",
+      "leagueGamesPlayed": 16
+    },
     "Allscott Heath": {
       "clubUrl": "clubpage.php?id=816",
       "form": "WWLWWW",
       "leagueGamesPlayed": 16
-    },
-    "Barnton": {
-      "clubUrl": "clubpage.php?id=266",
-      "form": "WDWWWW",
-      "leagueGamesPlayed": 15
     },
     "Dawley Town": {
       "clubUrl": "clubpage.php?id=635",
@@ -83,8 +83,8 @@
     },
     "Alsager Town": {
       "clubUrl": "clubpage.php?id=3",
-      "form": "WDWLLL",
-      "leagueGamesPlayed": 17
+      "form": "LWDWLL",
+      "leagueGamesPlayed": 18
     },
     "Telford Town": {
       "clubUrl": "clubpage.php?id=881",
