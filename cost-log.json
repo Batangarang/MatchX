@@ -2,16 +2,6 @@
   "entries": [
     {
       "script": "division-posts",
-      "timestamp": "2026-10-23T04:01:11.913Z",
-      "getxapiCalls": 21,
-      "claudeCalls": 0,
-      "inputTokens": 0,
-      "outputTokens": 0,
-      "xCostGBP": 0.0158,
-      "aiCostGBP": 0
-    },
-    {
-      "script": "division-posts",
       "timestamp": "2026-10-23T08:31:01.816Z",
       "getxapiCalls": 21,
       "claudeCalls": 0,
@@ -10293,6 +10283,16 @@
     {
       "script": "division-posts",
       "timestamp": "2026-11-27T04:01:07.106Z",
+      "getxapiCalls": 20,
+      "claudeCalls": 0,
+      "inputTokens": 0,
+      "outputTokens": 0,
+      "xCostGBP": 0.015,
+      "aiCostGBP": 0
+    },
+    {
+      "script": "division-posts",
+      "timestamp": "2026-11-27T08:30:55.629Z",
       "getxapiCalls": 20,
       "claudeCalls": 0,
       "inputTokens": 0,
